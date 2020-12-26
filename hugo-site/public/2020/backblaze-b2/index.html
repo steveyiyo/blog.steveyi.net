@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  
+  
+  
+  <link rel="prev" href="http://blog.steveyi.net/2020/github-pages-ssl/" />
+  <link rel="next" href="http://blog.steveyi.net/2020/backblaze-b2-compatible-s3-api/" />
+  <link rel="canonical" href="http://blog.steveyi.net/2020/backblaze-b2/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Backblaze B2 低價的雲端數據存儲服務 | 酷小易
+       
+  </title>
+  <meta name="title" content="Backblaze B2 低價的雲端數據存儲服務 | 酷小易">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http:\/\/blog.steveyi.net\/"
+    },
+    "articleSection" : "posts",
+    "name" : "Backblaze B2 低價的雲端數據存儲服務",
+    "headline" : "Backblaze B2 低價的雲端數據存儲服務",
+    "description" : "之前學習建站之時，考量到一個問題！\n如果今天我的流量暴漲，文章變多，我的圖片空間及流量會不會也跟著變多\n所以在網路上搜尋了一些對象存處服務，找到了一間便宜的對象存處提供商－Backblaze\n什麼是對象存處 對象存處是一種數據存儲，其中每個數據單元存儲為稱為對象的離散單元。\n對象靜態文件，類似於pdf，mp3檔，圖片或影片\u0026hellip;等文件。\n這些對象實際上可以是任何類型的數據和任何大小的數據。\n對象存儲中的所有對像都存儲在單個平面地址空間中，而沒有文件夾層次結構。\n比較知名的提供商有 AWS S3、Google Cloud Storage、Backblaze B2、DigitalOcean Space\u0026hellip;等等\n那這次要介紹的則是Backblaze B2\nBackblaze B2的優勢 Backblaze B2 的價格是 Amazon S3的¼倍\n搭配CloudFlare CDN免流量費\n支持S3 API\n註冊帳號 首先，進入官網後，點擊右上角的Sign Up\n接著輸入帳號密碼，選擇資料放置區域(基本上選擇美西)\n接著到電子郵件中驗證帳號！完成\n創建Bucket 登入帳號後，點擊中間的Creat a Bucket\n接著輸入Bucket名稱，不可以跟別人重複\n接著選擇Public(如果你用於備份, 私人檔案的話，就選擇Private)\n接著我們就會看見剛剛創建的Bucket了\n創建App Key 雖然說在網頁上我們就可以上傳檔案了，但是網頁只支持到500MB的檔案\n超過就必須要使用API上傳了，所以這邊我們來教大家怎麼建立App Key\n首先，點擊左方的App Keys\n接著我們點擊 Add a New Application Key\n輸入App Key名稱，允許訪問的Bucket\n接著點選Create a new key\n接著會產生API資訊，將S3 EndPoint, Key ID及applicationKay記下來\n上傳\/下載檔案 在Windows\/Mac上傳或下載有很多種工具可以做，我比較推薦使用Cyberduck\n如果是Linux的話，我認為Rclone是一個好選擇\nPS.可以選擇S3 API或是Backblaze API進行連接",
+    "inLanguage" : "zh-TW",
+    "author" : "",
+    "creator" : "",
+    "publisher": "",
+    "accountablePerson" : "",
+    "copyrightHolder" : "",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-05-11 09:35:00 \u002b0000 \u002b0000",
+    "dateModified" : "2020-05-11 09:35:00 \u002b0000 \u002b0000",
+    "url" : "http:\/\/blog.steveyi.net\/2020\/backblaze-b2\/",
+    "wordCount" : "76",
+    "keywords" : [ "對象存處","網站日誌", "酷小易"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://blog.steveyi.net/">酷小易</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">文章</a>
+                
+                <a class="menu-item" href="https://steveyi.net/" title="">關於我</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://blog.steveyi.net/">酷小易</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">文章</a>
+                
+                <a class="menu-item" href="https://steveyi.net/" title="">關於我</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Backblaze B2 低價的雲端數據存儲服務</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="http://blog.steveyi.net/" rel="author"></a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-05-11 itemprop="datePublished">May 11, 2020</time>
+                </span>
+                in
+                
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>之前學習建站之時，考量到一個問題！<br>
+如果今天我的流量暴漲，文章變多，我的圖片空間及流量會不會也跟著變多<br>
+所以在網路上搜尋了一些對象存處服務，找到了一間便宜的對象存處提供商－<a href="https://www.backblaze.com/">Backblaze</a></p>
+<h2 id="什麼是對象存處">什麼是對象存處</h2>
+<p>對象存處是一種數據存儲，其中每個數據單元存儲為稱為對象的離散單元。<br>
+對象靜態文件，類似於pdf，mp3檔，圖片或影片&hellip;等文件。<br>
+這些對象實際上可以是任何類型的數據和任何大小的數據。<br>
+對象存儲中的所有對像都存儲在單個平面地址空間中，而沒有文件夾層次結構。</p>
+<p>比較知名的提供商有 <a href="https://aws.amazon.com/s3/">AWS S3</a>、<a href="https://cloud.google.com/storage">Google Cloud Storage</a>、<a href="https://www.backblaze.com/b2/cloud-storage.html">Backblaze B2</a>、<a href="https://www.digitalocean.com/products/spaces/">DigitalOcean Space</a>&hellip;等等</p>
+<p>那這次要介紹的則是Backblaze B2</p>
+<h2 id="backblaze-b2的優勢">Backblaze B2的優勢</h2>
+<p><a href="https://www.backblaze.com/b2/cloud-storage-pricing.html">Backblaze B2 的價格是 Amazon S3的¼倍<br>
+</a><a href="https://www.cloudflare.com/bandwidth-alliance/backblaze/">搭配CloudFlare CDN免流量費<br>
+</a><a href="https://www.backblaze.com/blog/backblaze-b2-s3-compatible-api/">支持S3 API</a></p>
+<h2 id="註冊帳號">註冊帳號</h2>
+<p>首先，進入官網後，點擊右上角的Sign Up</p>
+<p><img src="https://static.yiy.tw/media/blog/2020051108120980.png" alt=""></p>
+<p>接著輸入帳號密碼，選擇資料放置區域(基本上選擇美西)</p>
+<p><img src="https://static.yiy.tw/media/blog/2020051108143529.png" alt=""></p>
+<p>接著到電子郵件中驗證帳號！完成</p>
+<p><img src="https://static.yiy.tw/media/blog/2020051108170997.png" alt=""></p>
+<h2 id="創建bucket">創建Bucket</h2>
+<p>登入帳號後，點擊中間的Creat a Bucket</p>
+<p>接著輸入Bucket名稱，不可以跟別人重複<br>
+接著選擇Public(如果你用於備份, 私人檔案的話，就選擇Private)</p>
+<p><img src="https://static.yiy.tw/media/blog/2020051108354195.png" alt=""></p>
+<p>接著我們就會看見剛剛創建的Bucket了</p>
+<p><img src="https://static.yiy.tw/media/blog/2020051109002920.png" alt=""></p>
+<h2 id="創建app-key">創建App Key</h2>
+<p>雖然說在網頁上我們就可以上傳檔案了，但是網頁只支持到500MB的檔案<br>
+超過就必須要使用API上傳了，所以這邊我們來教大家怎麼建立App Key</p>
+<p>首先，點擊左方的App Keys</p>
+<p><img src="https://static.yiy.tw/media/blog/2020051109051012.png" alt=""></p>
+<p>接著我們點擊 Add a New Application Key</p>
+<p><img src="https://static.yiy.tw/media/blog/2020051109090292.png" alt=""></p>
+<p>輸入App Key名稱，允許訪問的Bucket<br>
+接著點選Create a new key</p>
+<p><img src="https://static.yiy.tw/media/blog/2020051109160381.png" alt=""></p>
+<p>接著會產生API資訊，將S3 EndPoint, Key ID及applicationKay記下來</p>
+<p><img src="https://static.yiy.tw/media/blog/2020051109185118.png" alt=""></p>
+<h2 id="上傳下載檔案">上傳/下載檔案</h2>
+<p>在Windows/Mac上傳或下載有很多種工具可以做，我比較推薦使用<a href="https://cyberduck.io/">Cyberduck</a><br>
+如果是Linux的話，我認為<a href="https://rclone.org">Rclone</a>是一個好選擇</p>
+<p>PS.可以選擇S3 API或是Backblaze API進行連接</p>
+<h2 id="總結">總結</h2>
+<p>Backblaze真的是我找到最實惠的靜態存處服務<br>
+價格超優！而且可以搭配Cloudflare綁定自訂網域及CDN<br>
+不知道大家有沒有發現，本站的圖片皆是放置在Backblaze 並啟用Cloudflare CDN加速唷！</p>
+
+    </div>
+
+    <div class="post-copyright">
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=http://blog.steveyi.net/2020/backblaze-b2/>http://blog.steveyi.net/2020/backblaze-b2/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="http://blog.steveyi.net/tags/%E5%B0%8D%E8%B1%A1%E5%AD%98%E8%99%95/">
+                    #對象存處</a></span>
+            
+            <span class="tag"><a href="http://blog.steveyi.net/tags/%E7%B6%B2%E7%AB%99%E6%97%A5%E8%AA%8C/">
+                    #網站日誌</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="http://blog.steveyi.net/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="http://blog.steveyi.net/2020/github-pages-ssl/" class="prev" rel="prev" title="Github Pages 綁定自訂網域及SSL"><i class="iconfont icon-left"></i>&nbsp;Github Pages 綁定自訂網域及SSL</a>
+         
+        
+        <a href="http://blog.steveyi.net/2020/backblaze-b2-compatible-s3-api/" class="next" rel="next" title="Backblaze B2 支援S3 API了！">Backblaze B2 支援S3 API了！&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

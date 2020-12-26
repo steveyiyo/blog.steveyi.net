@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  
+  
+  
+  <link rel="prev" href="http://blog.steveyi.net/2020/macos-catalina-on-unsupport-mac/" />
+  <link rel="next" href="http://blog.steveyi.net/2020/html-gmail/" />
+  <link rel="canonical" href="http://blog.steveyi.net/2020/macbook-without-a-battery/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           淺談Mac筆記型電腦的電池和效能的影響 | 酷小易
+       
+  </title>
+  <meta name="title" content="淺談Mac筆記型電腦的電池和效能的影響 | 酷小易">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http:\/\/blog.steveyi.net\/"
+    },
+    "articleSection" : "posts",
+    "name" : "淺談Mac筆記型電腦的電池和效能的影響",
+    "headline" : "淺談Mac筆記型電腦的電池和效能的影響",
+    "description" : "筆者從小使用PC，直到家人幾年前買了一台MacBook Pro （額\u0026hellip;對，不是我的，只是我借用時間比較長😂）\n筆者第一台筆記型電腦是IBM的ThinkPad T43，接手時，電池因老化變得沒什麼用處（從開機到沒電休眠的續航大約3分42秒），所以大部分時候都把電池拔除來減輕重量，除非要在插座間移動才裝上。在這台電腦，以及後續我用的幾部PC筆記型電腦移除電池並插電使用都沒有任何明顯可見的降頻，只是後來換的PC筆記型電腦因為規格太文書，用幾年後跟不上軟體肥大的速度，容易當機，甚至多次在我存簡報時當機導致儲存失敗所以後來都借用家人的MacBok Pro。\n直到家人那台Pro 2017卡鍵待送修，跟親戚借了塵封已久、電池無法充電的MacBook Air 2011來使用，原本以為只是不能拔掉電源而已，沒想到開機後用起來非常卡頓，根本不像是2代1.6GHz intel Core i5處理器該有的水準。在四處都看得到電池需要維修的警告後，我懷疑卡頓來自電池效能太低，系統做的降頻處理，就像iPhone上的效能管理一樣。\n我使用了intel(R) Power Gadget看了一下，不出我所料，頻率被鎖定在最高(Core MAX)0.9GHz。\n後來在網路上找到Apple關於電腦沒裝電池降頻的說明（原本的網頁早已消失）：\n If the battery is removed from a MacBook or MacBook Pro, the computer will automatically reduce the processor speed (to 1Ghz).\nThis prevents the computer from shutting down if it demands more power than the A\/C adaptor alone can provide.\nAdditional information:\nImportant: It is strongly recommended that you do not use your MacBook or MacBook Pro while the battery is removed.",
+    "inLanguage" : "zh-TW",
+    "author" : "",
+    "creator" : "",
+    "publisher": "",
+    "accountablePerson" : "",
+    "copyrightHolder" : "",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-08-18 13:16:25 \u002b0000 \u002b0000",
+    "dateModified" : "2020-08-18 13:16:25 \u002b0000 \u002b0000",
+    "url" : "http:\/\/blog.steveyi.net\/2020\/macbook-without-a-battery\/",
+    "wordCount" : "131",
+    "keywords" : [ "生活小知識", "酷小易"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://blog.steveyi.net/">酷小易</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">文章</a>
+                
+                <a class="menu-item" href="https://steveyi.net/" title="">關於我</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://blog.steveyi.net/">酷小易</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">文章</a>
+                
+                <a class="menu-item" href="https://steveyi.net/" title="">關於我</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">淺談Mac筆記型電腦的電池和效能的影響</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="http://blog.steveyi.net/" rel="author"></a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-08-18 itemprop="datePublished">August 18, 2020</time>
+                </span>
+                in
+                
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>筆者從小使用PC，直到家人幾年前買了一台MacBook Pro （額&hellip;對，不是我的，只是我借用時間比較長😂）</p>
+<p>筆者第一台筆記型電腦是IBM的ThinkPad T43，接手時，電池因老化變得沒什麼用處（從開機到沒電休眠的續航大約3分42秒），所以大部分時候都把電池拔除來減輕重量，除非要在插座間移動才裝上。在這台電腦，以及後續我用的幾部PC筆記型電腦移除電池並插電使用都沒有任何明顯可見的降頻，只是後來換的PC筆記型電腦因為規格太文書，用幾年後跟不上軟體肥大的速度，容易當機，甚至多次在我存簡報時當機導致儲存失敗所以後來都借用家人的MacBok Pro。</p>
+<p>直到家人那台Pro 2017卡鍵待送修，跟親戚借了塵封已久、電池無法充電的MacBook Air 2011來使用，原本以為只是不能拔掉電源而已，沒想到開機後用起來非常卡頓，根本不像是2代1.6GHz intel Core i5處理器該有的水準。在四處都看得到電池需要維修的警告後，我懷疑卡頓來自電池效能太低，系統做的降頻處理，就像<a href="https://support.apple.com/zh-tw/HT208387" title="https://support.apple.com/zh-tw/HT208387">iPhone上的效能管理</a>一樣。</p>
+<p><img src="https://static.yiy.tw/media/blog/2020081811411362.png" alt=""></p>
+<p>我使用了<a href="https://software.intel.com/sites/default/files/managed/91/6b/Intel%20Power%20Gadget.dmg" title="https://software.intel.com/sites/default/files/managed/91/6b/Intel%20Power%20Gadget.dmg">intel(R) Power Gadget</a>看了一下，不出我所料，頻率被鎖定在最高(Core MAX)0.9GHz。</p>
+<p><img src="https://static.yiy.tw/media/blog/2020081813104832.jpg" alt=""></p>
+<p>後來在網路上找到Apple關於電腦沒裝電池降頻的說明（原本的網頁早已消失）：</p>
+<blockquote>
+<p>If the battery is removed from a MacBook or MacBook Pro, the computer will automatically reduce the processor speed (to 1Ghz).<br>
+This prevents the computer from shutting down if it demands more power than the A/C adaptor alone can provide.<br>
+Additional information:<br>
+Important: It is strongly recommended that you do not use your MacBook or MacBook Pro while the battery is removed. Accidently bumping the A/C adaptor could disconnect power and shutdown the computer. Any information that was not saved on your computer would be lost.</p>
+<p>中文翻譯：<br>
+如果電池從MacBook或是MacBook Pro移除，電腦會自動降低處理器頻率(到1GHz)。<br>
+這防止電腦所需的電源超出電源供應器的負荷。額外資訊：<br>
+重要：強烈建議您不要在MacBook或是MacBook Pro移除電池時使用。意外扯到電源供應器會讓電腦斷電並關機。任何未儲存在電腦裡的資訊都會遺失。</p>
+</blockquote>
+<p>這麼看起來這顆「建議進行維修」的電池對系統來說，是跟沒電池一樣的。</p>
+<h2 id="那我們如何可以檢查電池狀態呢">那我們如何可以檢查電池狀態呢？</h2>
+<p>我們可以打開「」(蘋果選單)後，按住option同時點擊「系統資訊」，之後在選單點選「電源」找到電池的各項資訊，其中電池循環使用次數是一個非常重要的指標。有關於循環次數的資訊可以參考<a href="https://support.apple.com/zh-tw/HT201585" title="https://support.apple.com/zh-tw/HT201585">Apple官網</a>。</p>
+<p>如果狀態不是標示「正常」，那麼筆者認為還是修一修吧。<br>
+畢竟電腦用一用被電池搞到關機，不只沒存檔案的文件會遺失以外，連帶硬碟也有可能因為非正常斷電而損壞，到時資料不見更是得不償失。而且MagSafe設計雖然本意是防摔(而且筆者很喜歡)，但也就是說沒裝電池的時候踢到一下就關機了<br>
+另外，即使睡眠模式設為Deep Sleep，無法蓄電的電池在睡眠也需要電源，拔除電源後睡眠暫存的狀態也會全部遺失。</p>
+<p><img src="https://static.yiy.tw/media/blog/2020081812235896.png" alt=""></p>
+<h2 id="在此處我們得出一個結論">在此處我們得出一個結論</h2>
+<p>PC不插電池基本上不會受到影響，<br>
+Mac不插電池或是電池被系統視為需要維修，則會嚴重影響使用體驗。</p>
+<p>如果在網路拍賣網站看到「電池已拆除」的Mac筆記型電腦，以為沒電池就可以撿便宜的朋友們，在購買前請思考一下更換電池需要的成本吧！除非你可以接受你買的電腦在這極低頻率下的運作速度和使用體驗。</p>
+<p>8/21更新：<br>
+經過筆者實測發現，使用舊版的OS X可以在CPU一樣被降頻的情況下獲得更好的使用體驗。<br>
+所以等待更換電池的期間（或是根本不想換電池的話）可以考慮試試看舊版的OS X。<br>
+筆者是使用OS X 10.9.5 &ldquo;Mavericks&quot;作為等待電池期間主要使用的作業系統，不過舊版OS X的應用程式相容性比較差，就請自行斟酌啦</p>
+<p><img src="https://static.yiy.tw/media/blog/2020082115435852.png" alt=""></p>
+
+    </div>
+
+    <div class="post-copyright">
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=http://blog.steveyi.net/2020/macbook-without-a-battery/>http://blog.steveyi.net/2020/macbook-without-a-battery/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="http://blog.steveyi.net/tags/%E7%94%9F%E6%B4%BB%E5%B0%8F%E7%9F%A5%E8%AD%98/">
+                    #生活小知識</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="http://blog.steveyi.net/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="http://blog.steveyi.net/2020/macos-catalina-on-unsupport-mac/" class="prev" rel="prev" title="在官方不支援macOS Catalina的裝置安裝macOS Catalina"><i class="iconfont icon-left"></i>&nbsp;在官方不支援macOS Catalina的裝置安裝macOS Catalina</a>
+         
+        
+        <a href="http://blog.steveyi.net/2020/html-gmail/" class="next" rel="next" title="使用傳統版Gmail加快老舊裝置和低速網路的郵件載入速度">使用傳統版Gmail加快老舊裝置和低速網路的郵件載入速度&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

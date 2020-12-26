@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  
+  
+  
+  <link rel="prev" href="http://blog.steveyi.net/2020/ip-set-rdns-with-ripe-and-he-dns/" />
+  <link rel="next" href="http://blog.steveyi.net/2020/hot-to-set-cloudflare-spectrum/" />
+  <link rel="canonical" href="http://blog.steveyi.net/2020/use-bird6-broadcast-ipv6-vultr/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           在Vultr使用Bird6廣播IPv6 | 酷小易
+       
+  </title>
+  <meta name="title" content="在Vultr使用Bird6廣播IPv6 | 酷小易">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http:\/\/blog.steveyi.net\/"
+    },
+    "articleSection" : "posts",
+    "name" : "在Vultr使用Bird6廣播IPv6",
+    "headline" : "在Vultr使用Bird6廣播IPv6",
+    "description" : "之前跟大家分享過 為IP設定反向DNS(PTR紀錄)，那這次就來分享一下在Vultr廣播IP吧！\n設置AS號碼及IP前綴 首先，我們要先開通BGP的功能！\n點擊這裡前往Vultr BGP頁面\n進入此頁面後，我們點擊Get Started\n選擇 I have my own IP space 及 I have own my ASN (如果沒有ASN不用選擇)\nLOA的部分 可以參考這份範例文件\n接著其他保持預設就好\n接著點Start，來驗證IP地址或ASN號碼\n系統會寄一封電子郵件到Whois的Email，進行驗證！\n驗證完後呢，我們就等待工作人員設置\n廣播 這次是使用Ubuntu 18.04來廣播的，CentOS及Debian應該大同小異\n首先我們先安裝幾個套件\n apt-get update -y apt-get install bird6 -y  安裝完成後，我們進入 \/etc\/bird 資料夾\n cd \/etc\/bird  刪除 bird6.conf\n sudo rm -rf bird6.conf  接著我們新增一個新的配置\n router id 0.0.0.0; #將0.0.0.0改成你的主機IPv4\nprotocol bgp vultr\n{\nlocal as 209557;\nsource address 改成主機IPv6;",
+    "inLanguage" : "zh-TW",
+    "author" : "",
+    "creator" : "",
+    "publisher": "",
+    "accountablePerson" : "",
+    "copyrightHolder" : "",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-04-10 02:21:55 \u002b0000 \u002b0000",
+    "dateModified" : "2020-04-10 02:21:55 \u002b0000 \u002b0000",
+    "url" : "http:\/\/blog.steveyi.net\/2020\/use-bird6-broadcast-ipv6-vultr\/",
+    "wordCount" : "103",
+    "keywords" : [ "BGP","伺服器", "酷小易"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://blog.steveyi.net/">酷小易</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">文章</a>
+                
+                <a class="menu-item" href="https://steveyi.net/" title="">關於我</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://blog.steveyi.net/">酷小易</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">文章</a>
+                
+                <a class="menu-item" href="https://steveyi.net/" title="">關於我</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">在Vultr使用Bird6廣播IPv6</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="http://blog.steveyi.net/" rel="author"></a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-04-10 itemprop="datePublished">April 10, 2020</time>
+                </span>
+                in
+                
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p><img src="https://static.yiy.tw/media/blog/2020/04/vu-00.png" alt=""></p>
+<p>之前跟大家分享過 <a href="https://blog.steveyi.net/ip-set-rdns-with-ripe-and-he-dns/">為IP設定反向DNS(PTR紀錄)</a>，那這次就來分享一下在<a href="https://vultr.com">Vultr</a>廣播IP吧！</p>
+<h1 id="設置as號碼及ip前綴"><strong>設置AS號碼及IP前綴</strong></h1>
+<p>首先，我們要先開通BGP的功能！<br>
+<a href="https://my.vultr.com/network/#network-bgp">點擊這裡前往Vultr BGP頁面</a><br>
+進入此頁面後，我們點擊Get Started</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/vu-01-1920x961.png" alt=""></p>
+<p>選擇 I have my own IP space 及 I have own my ASN (如果沒有ASN不用選擇)<br>
+LOA的部分 可以參考這份範例文件<br>
+接著其他保持預設就好</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/vu-02.png" alt=""></p>
+<p>接著點Start，來驗證IP地址或ASN號碼</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/vu-03-1920x362.png" alt=""></p>
+<p>系統會寄一封電子郵件到Whois的Email，進行驗證！</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/vu-04.png" alt=""></p>
+<p>驗證完後呢，我們就等待工作人員設置</p>
+<h1 id="廣播"><strong>廣播</strong></h1>
+<p>這次是使用Ubuntu 18.04來廣播的，CentOS及Debian應該大同小異</p>
+<p>首先我們先安裝幾個套件</p>
+<ul>
+<li>apt-get update -y</li>
+<li>apt-get install bird6 -y</li>
+</ul>
+<p>安裝完成後，我們進入 /etc/bird 資料夾</p>
+<ul>
+<li>cd /etc/bird</li>
+</ul>
+<p>刪除 bird6.conf</p>
+<ul>
+<li>sudo rm -rf bird6.conf</li>
+</ul>
+<p>接著我們新增一個新的配置</p>
+<blockquote>
+<p>router id 0.0.0.0; #將0.0.0.0改成你的主機IPv4</p>
+<p>protocol bgp vultr<br>
+{<br>
+   local as 209557;<br>
+   source address 改成主機IPv6;<br>
+   import none;<br>
+   export all;<br>
+   graceful restart on;<br>
+   multihop 2;<br>
+   neighbor 2001:19f0:ffff::1 as 64515; #Vultr的IP及私有AS號<br>
+   password &ldquo;123456789&rdquo;; #之前設定的BGP密碼<br>
+}<br>
+protocol static<br>
+{<br>
+    route 要廣播的IP段帶cidr via 主機IP不帶cidr;<br>
+}<br>
+protocol device <br>
+{<br>
+    scan time 5;<br>
+}</p>
+</blockquote>
+<p>設置好後，我們重啟bird6</p>
+<ul>
+<li>service bird6 restart</li>
+</ul>
+<p>接著我們就可以嘗試追蹤路由看看囉！</p>
+
+    </div>
+
+    <div class="post-copyright">
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=http://blog.steveyi.net/2020/use-bird6-broadcast-ipv6-vultr/>http://blog.steveyi.net/2020/use-bird6-broadcast-ipv6-vultr/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="http://blog.steveyi.net/tags/bgp/">
+                    #BGP</a></span>
+            
+            <span class="tag"><a href="http://blog.steveyi.net/tags/%E4%BC%BA%E6%9C%8D%E5%99%A8/">
+                    #伺服器</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="http://blog.steveyi.net/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="http://blog.steveyi.net/2020/ip-set-rdns-with-ripe-and-he-dns/" class="prev" rel="prev" title="RIPE為IP設定反向DNS(PTR紀錄)"><i class="iconfont icon-left"></i>&nbsp;RIPE為IP設定反向DNS(PTR紀錄)</a>
+         
+        
+        <a href="http://blog.steveyi.net/2020/hot-to-set-cloudflare-spectrum/" class="next" rel="next" title="Cloudflare 新服務 spectrum設定教學">Cloudflare 新服務 spectrum設定教學&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AWS on 酷小易</title>
+    <link>http://blog.steveyi.net/tags/aws/</link>
+    <description>Recent content in AWS on 酷小易</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Mon, 06 Apr 2020 14:38:57 +0000</lastBuildDate><atom:link href="http://blog.steveyi.net/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[教學] AWS Route 53 代管DNS</title>
+      <link>http://blog.steveyi.net/2020/aws-route53/</link>
+      <pubDate>Mon, 06 Apr 2020 14:38:57 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/aws-route53/</guid>
+      <description>從2017年註冊了第一個網域之後，DNS代管商一直是我在研究的一個部分！
+今天來推薦一下由AWS推出的DNS代管服務 - Route 53
+前置作業：
+AWS帳號
+網域
+建立託管區域 首先，進入AWS主控台搜尋 Route 53
+接著點擊左上角的託管區域
+點擊左上角的，建立託管區域 接著在右方自己的網域名稱
+接著系統就會建立一個託管區域囉！（這邊先將NS紀錄記起來，下個步驟會用到）
+設定DNS伺服器 那我們剛剛已經在AWS Route 53建立了DNS託管區域，接著我們要到網域註冊商來設定DNS伺服器！
+首先，打開網域管理頁面（本篇以Gandi示範），並找到名稱伺服器或是Nameservers
+點擊變更後，將原本的紀錄刪除，並將AWS Route 53自動產生的NS紀錄貼上去
+接著就等待生效囉！大約24-48小時生效（實際上應該5-10分鐘生效xD）</description>
+    </item>
+    
+    <item>
+      <title>[教學] 關閉AWS帳戶</title>
+      <link>http://blog.steveyi.net/2019/close-aws-account/</link>
+      <pubDate>Thu, 15 Aug 2019 09:51:53 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2019/close-aws-account/</guid>
+      <description>進入 AWS主控台 點擊右上角的 我的帳戶 或是點擊下方超連結
+https://console.aws.amazon.com/billing/home?#/account
+滑動到最下方 將詳閱事項打勾 接著點擊 關閉帳戶
+就完成關閉帳戶的手續啦！</description>
+    </item>
+    
+  </channel>
+</rss>

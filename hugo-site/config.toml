@@ -1,4 +1,43 @@
 baseURL = "http://blog.steveyi.net/"
 languageCode = "zh-TW"
-title = "我是小易 | 分享酷事情"
-theme = "gohugo-theme-ananke"
+title = "酷小易"
+theme = "hugo_themes"
+
+paginate = 12
+enableEmoji = true
+enableRobotsTXT = true
+googleAnalytics = ""
+
+preserveTaxonomyNames = true
+
+[blackfriday]
+  hrefTargetBlank = true
+  nofollowLinks = true
+  noreferrerLinks = true
+
+[Permalinks]
+ posts = "/:year/:filename/"
+
+[menu]
+  [[menu.main]]
+    name = "文章"
+    url = "/posts/"
+    weight = 1
+
+  [[menu.main]]
+    name = "關於我"
+    url = "https://steveyi.net/"
+    weight = 2
+
+[params]
+    home_mode = "post" # post or other
+
+    google_verification = ""
+   
+    description = "" # site description
+    keywords = "" # site keywords
+
+[params.social]
+    GitHub = "steveyiyo"
+    Twitter = "steveyiyo"
+    Telegram = "steveyi"

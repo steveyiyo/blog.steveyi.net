@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  
+  
+  
+  <link rel="prev" href="http://blog.steveyi.net/2020/how-to-install-wireguard/" />
+  <link rel="next" href="http://blog.steveyi.net/2020/scrcpy-android-apk/" />
+  <link rel="canonical" href="http://blog.steveyi.net/2020/scrcpy-android/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           使用Scrcpy，由電腦操作Android手機 | 酷小易
+       
+  </title>
+  <meta name="title" content="使用Scrcpy，由電腦操作Android手機 | 酷小易">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http:\/\/blog.steveyi.net\/"
+    },
+    "articleSection" : "posts",
+    "name" : "使用Scrcpy，由電腦操作Android手機",
+    "headline" : "使用Scrcpy，由電腦操作Android手機",
+    "description" : "前情提要：由於筆者的手機螢幕忽然壞掉了，液晶會顯示但沒有背光照亮，需要用強光照射才能勉強查看畫面，但筆者依然需要使用該手機來搬移裡面重要資料以及測試Android程式等，所以一定要想辦法讓它可以操作！ (因為筆者目前主要使用iPhone)\n（只能在強光照射下隱約看到畫面）\n需求:PC或是Mac、配備Android 5.0或更高版本的裝置\n(官方說Linux也可以，但筆者沒有Linux電腦可以寫教學，因此建議您前往官方教學查看)\nAndroid裝置需要先打開USB偵錯   打開Android手機，找到關於手機的地方連戳版本號或是建置號碼，或是MIUI版本號\n(每一支手機的做法不同這裡不列舉)\n  直到按到寫說「不需要了，您已經是開發人員」後，打開開發人員選項\n  (每支手機「開發人員選項」放的位置也不一樣，例如小米放在「設定\u0026gt;更多設定」內)\n  接下來請打開開發人員選項，把USB偵錯(又稱USB調試)打開，如果是小米手機的話請一併打開安全設定，這個動作需要插入SIM卡並連接網路（MIUI的要求）\nUSB安裝建議打開，畢竟Scrcpy拖拉安裝安裝功能滿好用的(詳見這篇)\n   「安全設定」彈窗請一路按下一步，記得要插SIM卡\n(不然按到後來會跳出請插卡的提示） 如果遇到陌生電腦記得在手機上面按允許偵錯唷 接下來請到電腦進行環境安裝  PC環境安裝  請下載最新版工具包並且解壓縮（筆者習慣解壓縮到C槽目錄下）\n也可以跟ADB驅動安裝檔一起裝在隨身碟帶著走唷  \n 到adb.clockworkmod.com按下白色的Download按鈕安裝ADB驅動  (如果有安裝過ADB驅動程式者請直接跳過這部分)\n 一路按下右下角的Next，預設選項夠我們用了   要求權限的話就給他唄，請按「是」   裝完請按Close   打開Scrcpy所在資料夾，找到scrcpy-noconsole.exe並雙擊執行它，便可以操作了   控制方式  主要操作 : 滑鼠左鍵\u0026gt;點擊 . 滑鼠中鍵\u0026gt;回主畫面 . 滑鼠右鍵\u0026gt;返回    其他功能快捷鍵↓\n動作\n快捷鍵\n全螢幕模式\nCtrl\u002bf\n調整視窗 1:1 比例",
+    "inLanguage" : "zh-TW",
+    "author" : "",
+    "creator" : "",
+    "publisher": "",
+    "accountablePerson" : "",
+    "copyrightHolder" : "",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-05-19 15:41:11 \u002b0000 \u002b0000",
+    "dateModified" : "2020-05-19 15:41:11 \u002b0000 \u002b0000",
+    "url" : "http:\/\/blog.steveyi.net\/2020\/scrcpy-android\/",
+    "wordCount" : "128",
+    "keywords" : [ "Android", "酷小易"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://blog.steveyi.net/">酷小易</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">文章</a>
+                
+                <a class="menu-item" href="https://steveyi.net/" title="">關於我</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://blog.steveyi.net/">酷小易</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">文章</a>
+                
+                <a class="menu-item" href="https://steveyi.net/" title="">關於我</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">使用Scrcpy，由電腦操作Android手機</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="http://blog.steveyi.net/" rel="author"></a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-05-19 itemprop="datePublished">May 19, 2020</time>
+                </span>
+                in
+                
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>前情提要：由於筆者的手機螢幕忽然壞掉了，液晶會顯示但沒有背光照亮，需要用強光照射才能勉強查看畫面，但筆者依然需要使用該手機來搬移裡面重要資料以及測試Android程式等，所以一定要想辦法讓它可以操作！  (因為筆者目前主要使用iPhone)</p>
+<p><img src="https://static.yiy.tw/media/blog/2020051917331789.jpg" alt=""></p>
+<p><em>（只能在強光照射下隱約看到畫面）</em></p>
+<p>需求:PC或是Mac、配備Android 5.0或更高版本的裝置</p>
+<p>(官方說Linux也可以，但筆者沒有Linux電腦可以寫教學，因此建議您前往<a href="https://github.com/Genymobile/scrcpy">官方教學</a>查看)</p>
+<h2 id="android裝置需要先打開usb偵錯">Android裝置需要先打開USB偵錯</h2>
+<ul>
+<li>
+<p>打開Android手機，找到關於手機的地方連戳版本號或是建置號碼，或是MIUI版本號<br>
+(每一支手機的做法不同這裡不列舉)</p>
+</li>
+<li>
+<p>直到按到寫說「不需要了，您已經是開發人員」後，打開開發人員選項</p>
+</li>
+</ul>
+<p>(每支手機「開發人員選項」放的位置也不一樣，例如小米放在「設定&gt;更多設定」內)</p>
+<p><img src="https://static.yiy.tw/media/blog/2020051915343656.jpg" alt=""></p>
+<ul>
+<li>
+<p>接下來請打開開發人員選項，把USB偵錯(又稱USB調試)打開，如果是小米手機的話請一併打開安全設定，這個動作需要插入SIM卡並連接網路（MIUI的要求）</p>
+<p>USB安裝建議打開，畢竟Scrcpy拖拉安裝安裝功能滿好用的(<a href="http://blog.steveyi.net/scrcpy-android-apk">詳見這篇</a>)</p>
+</li>
+</ul>
+<p><img src="https://static.yiy.tw/media/blog/2020051915351328.jpg" alt=""></p>
+<p><img src="https://static.yiy.tw/media/blog/2020052609195565.jpg" alt=""></p>
+<ul>
+<li>「安全設定」彈窗請一路按下一步，記得要插SIM卡<br>
+(不然按到後來會跳出請插卡的提示）</li>
+<li>如果遇到陌生電腦記得在手機上面按允許偵錯唷</li>
+<li>接下來請到電腦進行環境安裝</li>
+</ul>
+<h2 id="pc環境安裝">PC環境安裝</h2>
+<ul>
+<li>請下載最新版<a href="https://github.com/Genymobile/scrcpy#windows">工具包</a>並且解壓縮（筆者習慣解壓縮到C槽目錄下）<br>
+也可以跟ADB驅動安裝檔一起裝在隨身碟帶著走唷</li>
+</ul>
+<p><a href="https://github.com/Genymobile/scrcpy#windows"><img src="https://static.yiy.tw/media/blog/2020051915360349.png" alt=""></a></p>
+<p><img src="https://static.yiy.tw/media/blog/2020051915362241.png" alt=""></p>
+<ul>
+<li>到<a href="https://adb.clockworkmod.com/">adb.clockworkmod.com</a>按下白色的Download按鈕安裝ADB驅動</li>
+</ul>
+<p>(如果有安裝過ADB驅動程式者請直接跳過這部分)</p>
+<ul>
+<li>一路按下右下角的Next，預設選項夠我們用了</li>
+</ul>
+<p><img src="https://static.yiy.tw/media/blog/2020051915363719.png" alt=""></p>
+<ul>
+<li>要求權限的話就給他唄，請按「是」</li>
+</ul>
+<p><img src="https://static.yiy.tw/media/blog/2020051915371217.png" alt=""></p>
+<ul>
+<li>裝完請按Close</li>
+</ul>
+<p><img src="https://static.yiy.tw/media/blog/2020051915371930.png" alt=""></p>
+<ul>
+<li>打開Scrcpy所在資料夾，找到scrcpy-noconsole.exe並雙擊執行它，便可以操作了</li>
+</ul>
+<p><img src="https://static.yiy.tw/media/blog/2020052000172131.png" alt=""></p>
+<p><img src="https://static.yiy.tw/media/blog/2020052000290950.png" alt=""></p>
+<ul>
+<li><strong>控制方式</strong>
+<ul>
+<li>主要操作 : 滑鼠左鍵&gt;點擊 .  滑鼠中鍵&gt;回主畫面 . 滑鼠右鍵&gt;返回</li>
+</ul>
+</li>
+</ul>
+<p>其他功能快捷鍵↓</p>
+<p>動作</p>
+<p>快捷鍵</p>
+<p>全螢幕模式</p>
+<p>Ctrl+f</p>
+<p>調整視窗 1:1 比例</p>
+<p>Ctrl+g</p>
+<p>調整視窗將黑邊去除</p>
+<p>Ctrl+x</p>
+<p>主畫面</p>
+<p>Ctrl+h </p>
+<p>返回</p>
+<p>Ctrl+b</p>
+<p>多工</p>
+<p>Ctrl+s</p>
+<p>菜單鍵</p>
+<p>Ctrl+m</p>
+<p>音量上鍵</p>
+<p>Ctrl+↑</p>
+<p>音量下鍵</p>
+<p>Ctrl+↓ </p>
+<p>電源鍵</p>
+<p>Ctrl+p</p>
+<p>點亮螢幕</p>
+<p>鎖屏時滑鼠右鍵</p>
+<p>從電腦安裝 apk 檔案</p>
+<p>拖拉APK檔案</p>
+<h2 id="mac環境安裝">Mac環境安裝</h2>
+<ul>
+<li>請先安裝 Homebrew，如果有安裝過的話請跳過此步驟
+<ul>
+<li>打開終端機（系統內建的工具程式）</li>
+<li>輸入<br>
+<code>/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)&quot;</code></li>
+<li>接下來照著指示執行</li>
+</ul>
+</li>
+<li>透過Homebrew安裝Scrcpy及其驅動
+<ul>
+<li>完成後輸入<br>
+<code>brew cask install android-platform-tools</code></li>
+<li>完成後輸入<br>
+<code>brew install scrcpy</code></li>
+</ul>
+</li>
+<li>需要使用時則打開終端機輸入<code>scrcpy</code>即可使用<br>
+終端機視窗可以最小化，留下操作畫面沒關係</li>
+</ul>
+<p><img src="https://static.yiy.tw/media/blog/2020051915380923.png" alt=""></p>
+<ul>
+<li><strong>控制方式</strong></li>
+</ul>
+<p>主要操作 : 滑鼠左鍵&gt;點擊 .  滑鼠中鍵&gt;回主畫面 . 滑鼠右鍵&gt;返回</p>
+<p>其他功能快捷鍵↓</p>
+<p>動作</p>
+<p>快捷鍵</p>
+<p>全螢幕模式</p>
+<p>Command+f</p>
+<p>調整視窗 1:1 比例</p>
+<p>Command+g</p>
+<p>調整視窗將黑邊去除</p>
+<p>Command+x</p>
+<p>主畫面</p>
+<p>Command+h </p>
+<p>返回</p>
+<p>Command+b</p>
+<p>多工</p>
+<p>Command+s</p>
+<p>菜單鍵</p>
+<p>Command+m</p>
+<p>音量上鍵</p>
+<p>Command+↑</p>
+<p>音量下鍵</p>
+<p>Command+↓ </p>
+<p>電源鍵</p>
+<p>Command+p</p>
+<p>點亮螢幕</p>
+<p>鎖屏時滑鼠右鍵</p>
+<p>從電腦安裝 apk 檔案</p>
+<p>拖拉APK檔案</p>
+<h2 id="使用效果">使用效果</h2>
+<p><img src="https://static.yiy.tw/media/blog/2020051916163290.jpeg" alt=""></p>
+
+    </div>
+
+    <div class="post-copyright">
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=http://blog.steveyi.net/2020/scrcpy-android/>http://blog.steveyi.net/2020/scrcpy-android/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="http://blog.steveyi.net/tags/android/">
+                    #Android</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="http://blog.steveyi.net/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="http://blog.steveyi.net/2020/how-to-install-wireguard/" class="prev" rel="prev" title="在Linux系統上安裝Wireguard"><i class="iconfont icon-left"></i>&nbsp;在Linux系統上安裝Wireguard</a>
+         
+        
+        <a href="http://blog.steveyi.net/2020/scrcpy-android-apk/" class="next" rel="next" title="使用Scrcpy輕鬆安裝APK檔案到手機內">使用Scrcpy輕鬆安裝APK檔案到手機內&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

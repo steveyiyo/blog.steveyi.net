@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  
+  
+  
+  <link rel="prev" href="http://blog.steveyi.net/2020/github-static-website/" />
+  <link rel="next" href="http://blog.steveyi.net/2020/backblaze-b2/" />
+  <link rel="canonical" href="http://blog.steveyi.net/2020/github-pages-ssl/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Github Pages 綁定自訂網域及SSL | 酷小易
+       
+  </title>
+  <meta name="title" content="Github Pages 綁定自訂網域及SSL | 酷小易">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http:\/\/blog.steveyi.net\/"
+    },
+    "articleSection" : "posts",
+    "name" : "Github Pages 綁定自訂網域及SSL",
+    "headline" : "Github Pages 綁定自訂網域及SSL",
+    "description" : "上篇跟大家分享了 透過Github託管靜態網站，這篇文章就來分享一下綁定自訂網域及開啟SSL的過程吧！\n首先，進入Github Repository的設定\n輸入自訂的網域，接著點擊Save\n右側會有一個 xxxxx.github.io. 的子網域，先記起來 等等會用到\n接著我們進入DNS服務商來設定DNS紀錄（這邊是用AWS Route 53）\n設定CNAME紀錄\n值為上方的 xxxxx.github.io.\n大約等待2-3分鐘，就會生效囉！\n接著回到Github Pages設定，等待DNS生效（大約15分鐘）\n勾選Enforce HTTPS，系統就會自動部署SSL憑證\n這樣就完成部署囉！\nDemo: https:\/\/git-demo.yiy.tw",
+    "inLanguage" : "zh-TW",
+    "author" : "",
+    "creator" : "",
+    "publisher": "",
+    "accountablePerson" : "",
+    "copyrightHolder" : "",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-04-23 05:19:40 \u002b0000 \u002b0000",
+    "dateModified" : "2020-04-23 05:19:40 \u002b0000 \u002b0000",
+    "url" : "http:\/\/blog.steveyi.net\/2020\/github-pages-ssl\/",
+    "wordCount" : "23",
+    "keywords" : [ "免費資源","網域","網站日誌", "酷小易"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://blog.steveyi.net/">酷小易</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">文章</a>
+                
+                <a class="menu-item" href="https://steveyi.net/" title="">關於我</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://blog.steveyi.net/">酷小易</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">文章</a>
+                
+                <a class="menu-item" href="https://steveyi.net/" title="">關於我</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Github Pages 綁定自訂網域及SSL</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="http://blog.steveyi.net/" rel="author"></a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-04-23 itemprop="datePublished">April 23, 2020</time>
+                </span>
+                in
+                
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>上篇跟大家分享了 <a href="https://blog.steveyi.net/github-static-website/">透過Github託管靜態網站</a>，這篇文章就來分享一下綁定自訂網域及開啟SSL的過程吧！</p>
+<p>首先，進入Github Repository的設定<br>
+輸入自訂的網域，接著點擊Save<br>
+右側會有一個 xxxxx.github.io. 的子網域，先記起來 等等會用到</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/github-pages-ssl-1-1920x1142.jpg" alt=""></p>
+<p>接著我們進入DNS服務商來設定DNS紀錄（這邊是用AWS Route 53）</p>
+<p>設定CNAME紀錄<br>
+值為上方的 xxxxx.github.io.</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/github-pages-ssl-2.png" alt=""></p>
+<p>大約等待2-3分鐘，就會生效囉！</p>
+<p>接著回到Github Pages設定，等待DNS生效（大約15分鐘）<br>
+勾選Enforce HTTPS，系統就會自動部署SSL憑證</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/github-pages-ssl-3.png" alt=""></p>
+<p>這樣就完成部署囉！</p>
+<p>Demo: <a href="https://git-demo.yiy.tw">https://git-demo.yiy.tw</a></p>
+
+    </div>
+
+    <div class="post-copyright">
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=http://blog.steveyi.net/2020/github-pages-ssl/>http://blog.steveyi.net/2020/github-pages-ssl/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="http://blog.steveyi.net/tags/%E5%85%8D%E8%B2%BB%E8%B3%87%E6%BA%90/">
+                    #免費資源</a></span>
+            
+            <span class="tag"><a href="http://blog.steveyi.net/tags/%E7%B6%B2%E5%9F%9F/">
+                    #網域</a></span>
+            
+            <span class="tag"><a href="http://blog.steveyi.net/tags/%E7%B6%B2%E7%AB%99%E6%97%A5%E8%AA%8C/">
+                    #網站日誌</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="http://blog.steveyi.net/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="http://blog.steveyi.net/2020/github-static-website/" class="prev" rel="prev" title="透過Github託管靜態網頁 - Github Pages"><i class="iconfont icon-left"></i>&nbsp;透過Github託管靜態網頁 - Github Pages</a>
+         
+        
+        <a href="http://blog.steveyi.net/2020/backblaze-b2/" class="next" rel="next" title="Backblaze B2 低價的雲端數據存儲服務">Backblaze B2 低價的雲端數據存儲服務&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

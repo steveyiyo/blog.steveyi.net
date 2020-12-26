@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  
+  
+  
+  <link rel="prev" href="http://blog.steveyi.net/2020/ifttt-forward-to-line/" />
+  <link rel="next" href="http://blog.steveyi.net/2020/ip-set-rdns-with-ripe-and-he-dns/" />
+  <link rel="canonical" href="http://blog.steveyi.net/2020/usb-reverse-tethering/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           透過電腦使用USB傳送網際網路連線給手機  (USB Reverse Tethering) | 酷小易
+       
+  </title>
+  <meta name="title" content="透過電腦使用USB傳送網際網路連線給手機  (USB Reverse Tethering) | 酷小易">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http:\/\/blog.steveyi.net\/"
+    },
+    "articleSection" : "posts",
+    "name" : "透過電腦使用USB傳送網際網路連線給手機  (USB Reverse Tethering)",
+    "headline" : "透過電腦使用USB傳送網際網路連線給手機  (USB Reverse Tethering)",
+    "description" : "本篇教學使用搭載Android 5.0.2，Wi-Fi和藍芽損壞的手機搭配Windows 10做示範。\n請注意:不一定保證每一隻手機都相容，就算相容還是有一些App不認得此類型連接方式 (它們通常只認得行動數據和Wi-Fi連接)\n本篇著重於使用Windows平台進行的部分，所以不討論其他作業系統，其他作業系統理應當也是差不多才對。請讓電腦先安裝手機的驅動程式\n(外部連結: https:\/\/mobileai.net\/2016\/09\/22\/google-adb-driver\/ )\nHTC Sense 6或更早版本的Sense，有內建此功能而無須操作以下教學\n(設定\u0026gt;更多\u0026gt;可攜式熱點和數據連線\u0026gt;USB網路設定\u0026gt;透過電腦傳送)\n首先請先到GitHub下載Gnirehtet\nhttps:\/\/github.com\/Genymobile\/gnirehtet#rust\n找到Windows後按下下載之後解壓縮\n\n解壓縮後會得到三個檔案\n請將gnirehtet.apk安裝到手機上(安裝完在桌面找不到是正常的)\n不清楚apk怎麼安裝的話網路上有很多教學可以參考，在這裡先不贅述\n接下來請在手機上開啟開發人員選項\n不同品牌手機有不同開啟方法\n以HTC手機為例，打開設定\u0026gt;關於手機\u0026gt;軟體版本\u0026gt;更多，接著狂戳\u0026quot;建置號碼\u0026quot;\n直到跳出Toast訊息\u0026quot;不需要了，您已經是開發人員\u0026quot;\n完成後請點擊\u0026quot;開發人員選項\u0026quot;\n之後勾選USB偵錯並確認\n如果詢問是否允許，請允許，如果懶得每次都按允許的話，可以勾選\u0026quot;永遠允許從此電腦進行\u0026quot;\n然後請將手機設定密碼(設定\u0026gt;安全性\u0026gt;螢幕鎖定方式\u0026gt;選擇圖形，PIN碼或密碼)\n否則有些情況下無法上網\n如果任何步驟執行時跳出新增VPN連線的請求，請按下允許\n接下來請將手機連接到電腦，並點擊電腦上的gnirehtet-run.cmd\n如果執行時跳出新增VPN連線的請求，請按下確定\n接下來會看到電腦有字很多字在跑，關掉這個視窗等同斷線，所以沒有要看它的連線紀錄的話請最小化\n(按右上角的 - )就好\n接下來手機就可以上網囉\nSpotify串流音樂也是可以的\n如果需要斷線，可以在通知點選\u0026quot;Stop Gnirehtet”\n注意:有一些網路環境(如校園網路或工作場域網路等)可能會因某些考量而封鎖相關連線，所以可能會造成無法上網(如下圖)，此時換成別的網路就行囉\n免責聲明:\n如果有因本教學造成任何爭議，本作者一蓋不負責\n對於非本作者創作之相關資訊，或是非本作者控制或測試之獨立網站，不得解釋本作者為其推薦或背書。\n© iambjlu",
+    "inLanguage" : "zh-TW",
+    "author" : "",
+    "creator" : "",
+    "publisher": "",
+    "accountablePerson" : "",
+    "copyrightHolder" : "",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-04-07 04:57:33 \u002b0000 \u002b0000",
+    "dateModified" : "2020-04-07 04:57:33 \u002b0000 \u002b0000",
+    "url" : "http:\/\/blog.steveyi.net\/2020\/usb-reverse-tethering\/",
+    "wordCount" : "45",
+    "keywords" : [ "Android", "酷小易"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://blog.steveyi.net/">酷小易</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">文章</a>
+                
+                <a class="menu-item" href="https://steveyi.net/" title="">關於我</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://blog.steveyi.net/">酷小易</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">文章</a>
+                
+                <a class="menu-item" href="https://steveyi.net/" title="">關於我</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">透過電腦使用USB傳送網際網路連線給手機  (USB Reverse Tethering)</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="http://blog.steveyi.net/" rel="author"></a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-04-07 itemprop="datePublished">April 7, 2020</time>
+                </span>
+                in
+                
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p><img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-.png" alt=""></p>
+<p>本篇教學使用搭載Android 5.0.2，Wi-Fi和藍芽損壞的手機搭配Windows 10做示範。</p>
+<p>請注意:不一定保證每一隻手機都相容，就算相容還是有一些App不認得此類型連接方式 (它們通常只認得行動數據和Wi-Fi連接)</p>
+<p>本篇著重於使用Windows平台進行的部分，所以不討論其他作業系統，其他作業系統理應當也是差不多才對。請讓電腦先安裝手機的驅動程式</p>
+<p>(外部連結: <a href="https://mobileai.net/2016/09/22/google-adb-driver/">https://mobileai.net/2016/09/22/google-adb-driver/</a> )</p>
+<p>HTC Sense 6或更早版本的Sense，有內建此功能而無須操作以下教學</p>
+<p>(設定&gt;更多&gt;可攜式熱點和數據連線&gt;USB網路設定&gt;透過電腦傳送)</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-1.png" alt=""></p>
+<p>首先請先到GitHub下載Gnirehtet</p>
+<p><a href="https://github.com/Genymobile/gnirehtet#rust">https://github.com/Genymobile/gnirehtet#rust</a></p>
+<p>找到Windows後按下下載之後解壓縮</p>
+<p><a href="https://github.com/Genymobile/gnirehtet#rust"><img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-2.png" alt=""></a></p>
+<p>解壓縮後會得到三個檔案</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-3.png" alt=""></p>
+<p>請將gnirehtet.apk安裝到手機上(安裝完在桌面找不到是正常的)</p>
+<p>不清楚apk怎麼安裝的話網路上有很多教學可以參考，在這裡先不贅述</p>
+<p>接下來請在手機上開啟開發人員選項</p>
+<p>不同品牌手機有不同開啟方法</p>
+<p>以HTC手機為例，打開設定&gt;關於手機&gt;軟體版本&gt;更多，接著狂戳&quot;建置號碼&quot;</p>
+<p>直到跳出Toast訊息&quot;不需要了，您已經是開發人員&quot;</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-4.png" alt=""></p>
+<p>完成後請點擊&quot;開發人員選項&quot;</p>
+<p>之後勾選USB偵錯並確認</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-5.png" alt=""></p>
+<p>如果詢問是否允許，請允許，如果懶得每次都按允許的話，可以勾選&quot;永遠允許從此電腦進行&quot;</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-6.png" alt=""></p>
+<p>然後請將手機設定密碼(設定&gt;安全性&gt;螢幕鎖定方式&gt;選擇圖形，PIN碼或密碼)</p>
+<p>否則有些情況下無法上網</p>
+<p>如果任何步驟執行時跳出新增VPN連線的請求，請按下允許</p>
+<p>接下來請將手機連接到電腦，並點擊電腦上的gnirehtet-run.cmd</p>
+<p>如果執行時跳出新增VPN連線的請求，請按下確定</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-7.png" alt=""></p>
+<p>接下來會看到電腦有字很多字在跑，關掉這個視窗等同斷線，所以沒有要看它的連線紀錄的話請最小化</p>
+<p>(按右上角的 - )就好</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-8.png" alt=""></p>
+<p>接下來手機就可以上網囉</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-9.png" alt=""></p>
+<p>Spotify串流音樂也是可以的</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-10.png" alt=""></p>
+<p>如果需要斷線，可以在通知點選&quot;Stop Gnirehtet”</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-11.png" alt=""></p>
+<p>注意:有一些網路環境(如校園網路或工作場域網路等)可能會因某些考量而封鎖相關連線，所以可能會造成無法上網(如下圖)，此時換成別的網路就行囉</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-12.png" alt=""></p>
+<p>免責聲明:</p>
+<p>如果有因本教學造成任何爭議，本作者一蓋不負責</p>
+<p>對於非本作者創作之相關資訊，或是非本作者控制或測試之獨立網站，不得解釋本作者為其推薦或背書。</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/cc.png" alt=""></p>
+<p>© iambjlu</p>
+
+    </div>
+
+    <div class="post-copyright">
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=http://blog.steveyi.net/2020/usb-reverse-tethering/>http://blog.steveyi.net/2020/usb-reverse-tethering/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="http://blog.steveyi.net/tags/android/">
+                    #Android</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="http://blog.steveyi.net/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="http://blog.steveyi.net/2020/ifttt-forward-to-line/" class="prev" rel="prev" title="使用IFTTT將未接來電、簡訊轉送至LINE"><i class="iconfont icon-left"></i>&nbsp;使用IFTTT將未接來電、簡訊轉送至LINE</a>
+         
+        
+        <a href="http://blog.steveyi.net/2020/ip-set-rdns-with-ripe-and-he-dns/" class="next" rel="next" title="RIPE為IP設定反向DNS(PTR紀錄)">RIPE為IP設定反向DNS(PTR紀錄)&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

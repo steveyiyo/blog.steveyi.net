@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>未分類 on 酷小易</title>
+    <link>http://blog.steveyi.net/tags/%E6%9C%AA%E5%88%86%E9%A1%9E/</link>
+    <description>Recent content in 未分類 on 酷小易</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Mon, 20 Jul 2020 07:50:55 +0000</lastBuildDate><atom:link href="http://blog.steveyi.net/tags/%E6%9C%AA%E5%88%86%E9%A1%9E/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>小易部落格iOS版App開放下載囉！</title>
+      <link>http://blog.steveyi.net/2020/ios-app/</link>
+      <pubDate>Mon, 20 Jul 2020 07:50:55 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/ios-app/</guid>
+      <description>這個App可以讓您輕鬆查看最新的小易部落格文章唷！
+讓我們來看看要怎麼安裝吧
+Android版請見這篇
+首先先使用Safari打開您現在正在瀏覽的這個網頁，然後按這裡下載描述檔。
+按下允許下載後，請按「關閉」，然後打開「設定」並照著系統的指示安裝即可～
+接下來就會在主畫面看到圖標了
+如果日後需要移除，請打開設定並照著下方步驟即可移除</description>
+    </item>
+    
+  </channel>
+</rss>

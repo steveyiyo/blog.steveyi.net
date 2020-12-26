@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  
+  
+  
+  <link rel="prev" href="http://blog.steveyi.net/2020/dynamic-lyrics-android/" />
+  <link rel="next" href="http://blog.steveyi.net/2020/no-win10-update/" />
+  <link rel="canonical" href="http://blog.steveyi.net/2020/frrouting-install/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           FRRouting 入坑指南兼心得(1) | 酷小易
+       
+  </title>
+  <meta name="title" content="FRRouting 入坑指南兼心得(1) | 酷小易">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http:\/\/blog.steveyi.net\/"
+    },
+    "articleSection" : "posts",
+    "name" : "FRRouting 入坑指南兼心得(1)",
+    "headline" : "FRRouting 入坑指南兼心得(1)",
+    "description" : "很久沒有來分享了！最近仍然在學習BGP知識及測試之前一直使用bird1來廣播BGP，後來在跟朋友Peer時，一直無法建立對等（很玄，但卻可以跟IX建立\n最近則卸載了Bird1，改安裝ffrouting是從Quagga fork來的，慢慢發展成現在\n同時，他也是一個很強大的路由套件（其指令類似於Cisco或Quagga）\n於是，就摸索了一下\n整理了一些心得使用者指南(英文): http:\/\/docs.frrouting.org\/en\/latest\/\nGitHub專案: https:\/\/github.com\/FRRouting\/frr\/releases\n首先，我們要先來安裝ffrouting\n\\# 更新套件 apt update -y apt upgrade -y apt install -y curl gnupg2 traceroute # 安裝FRRouting curl -s [https:\/\/deb.frrouting.org\/frr\/keys.asc](https:\/\/deb.frrouting.org\/frr\/keys.asc) | sudo apt-key add - FRRVER=\u0026quot;frr-stable\u0026quot; echo deb [https:\/\/deb.frrouting.org\/frr](https:\/\/deb.frrouting.org\/frr) $(lsb\\_release -s -c) $FRRVER | sudo tee -a \/etc\/apt\/sources.list.d\/frr.list sudo apt update -y \u0026amp;\u0026amp; sudo apt install -y frr frr-pythontools # 開啟IP forwarding echo \u0026quot; net.ipv4.conf.all.forwarding = 1 net.ipv6.conf.all.disable\\_ipv6 = 0 net.ipv6.conf.default.disable\\_ipv6 = 0 net.",
+    "inLanguage" : "zh-TW",
+    "author" : "",
+    "creator" : "",
+    "publisher": "",
+    "accountablePerson" : "",
+    "copyrightHolder" : "",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-07-12 13:07:14 \u002b0000 \u002b0000",
+    "dateModified" : "2020-07-12 13:07:14 \u002b0000 \u002b0000",
+    "url" : "http:\/\/blog.steveyi.net\/2020\/frrouting-install\/",
+    "wordCount" : "113",
+    "keywords" : [ "BGP","伺服器", "酷小易"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://blog.steveyi.net/">酷小易</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">文章</a>
+                
+                <a class="menu-item" href="https://steveyi.net/" title="">關於我</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://blog.steveyi.net/">酷小易</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">文章</a>
+                
+                <a class="menu-item" href="https://steveyi.net/" title="">關於我</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">FRRouting 入坑指南兼心得(1)</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="http://blog.steveyi.net/" rel="author"></a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-07-12 itemprop="datePublished">July 12, 2020</time>
+                </span>
+                in
+                
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>很久沒有來分享了！最近仍然在學習BGP知識及測試之前一直使用bird1來廣播BGP，後來在跟朋友Peer時，一直無法建立對等（很玄，但卻可以跟IX建立</p>
+<p>最近則卸載了Bird1，改安裝<a href="https://frrouting.org/">ffrouting</a>是從Quagga fork來的，慢慢發展成現在<br>
+同時，他也是一個很強大的路由套件（其指令類似於Cisco或Quagga）</p>
+<p>於是，就摸索了一下<br>
+整理了一些心得使用者指南(英文): <a href="http://docs.frrouting.org/en/latest/">http://docs.frrouting.org/en/latest/</a><br>
+GitHub專案: <a href="https://github.com/FRRouting/frr/releases">https://github.com/FRRouting/frr/releases</a></p>
+<p>首先，我們要先來安裝ffrouting</p>
+<pre><code>\# 更新套件
+apt update -y
+apt upgrade -y
+apt install -y curl gnupg2 traceroute
+# 安裝FRRouting
+curl -s [https://deb.frrouting.org/frr/keys.asc](https://deb.frrouting.org/frr/keys.asc) | sudo apt-key add -
+FRRVER=&quot;frr-stable&quot;
+echo deb [https://deb.frrouting.org/frr](https://deb.frrouting.org/frr) $(lsb\_release -s -c) $FRRVER | sudo tee -a /etc/apt/sources.list.d/frr.list
+sudo apt update -y &amp;&amp; sudo apt install -y frr frr-pythontools
+# 開啟IP forwarding
+echo &quot;
+net.ipv4.conf.all.forwarding = 1
+net.ipv6.conf.all.disable\_ipv6 = 0
+net.ipv6.conf.default.disable\_ipv6 = 0
+net.ipv6.conf.lo.disable\_ipv6 = 0
+net.ipv6.conf.default.forwarding = 1
+net.ipv6.conf.all.forwarding = 1
+net.ipv6.conf.all.proxy\_ndp = 1
+net.ipv6.conf.all.accept\_ra = 2
+&quot; | tee -a /etc/sysctl.conf
+
+sysctl -p
+
+# 啟動frrouting所有功能
+sed -i &quot;s/=no/=yes/g&quot; /etc/frr/daemons
+service frr restart
+# 進入frrouting互動cli
+sudo vtysh
+</code></pre><p>進入互動cli，不出意外的話<br>
+應該會看到下面這樣</p>
+<p>接著就可以進行配置了<br>
+鍵入 config 進入設置界面關於進階設置，下篇再來分享吧！</p>
+
+    </div>
+
+    <div class="post-copyright">
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=http://blog.steveyi.net/2020/frrouting-install/>http://blog.steveyi.net/2020/frrouting-install/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="http://blog.steveyi.net/tags/bgp/">
+                    #BGP</a></span>
+            
+            <span class="tag"><a href="http://blog.steveyi.net/tags/%E4%BC%BA%E6%9C%8D%E5%99%A8/">
+                    #伺服器</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="http://blog.steveyi.net/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="http://blog.steveyi.net/2020/dynamic-lyrics-android/" class="prev" rel="prev" title="幫Spotify或其他音樂軟體加上實時歌詞的方法(Android)"><i class="iconfont icon-left"></i>&nbsp;幫Spotify或其他音樂軟體加上實時歌詞的方法(Android)</a>
+         
+        
+        <a href="http://blog.steveyi.net/2020/no-win10-update/" class="next" rel="next" title="輕鬆免工具關閉Windows 10自動更新">輕鬆免工具關閉Windows 10自動更新&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  
+  
+  
+  <link rel="prev" href="http://blog.steveyi.net/2020/teamviewer-android/" />
+  <link rel="next" href="http://blog.steveyi.net/2020/yin-zhi-ti-sheng/" />
+  <link rel="canonical" href="http://blog.steveyi.net/2020/tunnel-broker-bgp/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           在Ubuntu系統下架設Tunnel Broker服務(v4 to v6) | 酷小易
+       
+  </title>
+  <meta name="title" content="在Ubuntu系統下架設Tunnel Broker服務(v4 to v6) | 酷小易">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http:\/\/blog.steveyi.net\/"
+    },
+    "articleSection" : "posts",
+    "name" : "在Ubuntu系統下架設Tunnel Broker服務(v4 to v6)",
+    "headline" : "在Ubuntu系統下架設Tunnel Broker服務(v4 to v6)",
+    "description" : "前言 之前拿到了一個自治號碼(AS Number)，也拿到了1個 \/44 及兩個 \/48 的iPv6\n恰好最近想到之前有使用過HE.Net的tunnel broker服務\n這次就來架設一下sit隧道的tunnel broker服務！本篇不會說明ipv6的取得方式，請自行詢問主機提供商\n本篇將使用開源工具-IPv6-in-IPv4 Tunnel\n配置工具 首先，將工具下載下來\ngit clone [https:\/\/github.com\/sskaje\/6in4.git](https:\/\/github.com\/sskaje\/6in4) 我們進入項目的etc資料夾，並修改config.ini\nnano config.ini 依序編輯 IPV6_NETWORK, IPV6_CIDR, INTERFACE, BIND_IP(有多iPv4需要)\n接著輸入 Crtl \u002b X 來保存\n修改系統設定來允許iPv6轉發 nano \/etc\/sysctl.conf 在最下方添加下方這項net.ipv6.conf.all.forwarding = 1 Crtl \u002b X 保存 sysctl -p 防火牆 iptables -I INPUT -p 41 --j ACCEPT iptables -I OUTPUT -p 41 --j ACCEPT iptables -I FORWARD -p 41 --j ACCEPT 使用工具建立伺服端(新增隧道) 假設隧道ID為1，伺服端IPv4為1.1.1.1 用戶端IPv4為8.8.8.8]\n配置文件中設置的IPv6子網為 2a0e:b107:7e0::，子網路遮罩為48(必須為8的倍數)工具會自動分割出 一個用於隧道的 \/64子網及一個用於用戶路由的 \/64子網",
+    "inLanguage" : "zh-TW",
+    "author" : "",
+    "creator" : "",
+    "publisher": "",
+    "accountablePerson" : "",
+    "copyrightHolder" : "",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-05-31 16:56:41 \u002b0000 \u002b0000",
+    "dateModified" : "2020-05-31 16:56:41 \u002b0000 \u002b0000",
+    "url" : "http:\/\/blog.steveyi.net\/2020\/tunnel-broker-bgp\/",
+    "wordCount" : "100",
+    "keywords" : [ "VPS","伺服器","網域", "酷小易"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://blog.steveyi.net/">酷小易</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">文章</a>
+                
+                <a class="menu-item" href="https://steveyi.net/" title="">關於我</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://blog.steveyi.net/">酷小易</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">文章</a>
+                
+                <a class="menu-item" href="https://steveyi.net/" title="">關於我</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">在Ubuntu系統下架設Tunnel Broker服務(v4 to v6)</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="http://blog.steveyi.net/" rel="author"></a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-05-31 itemprop="datePublished">May 31, 2020</time>
+                </span>
+                in
+                
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <h3 id="前言">前言</h3>
+<p>之前拿到了一個自治號碼(AS Number)，也拿到了1個 /44 及兩個 /48 的iPv6<br>
+恰好最近想到之前有使用過HE.Net的tunnel broker服務<br>
+這次就來架設一下sit隧道的tunnel broker服務！本篇不會說明ipv6的取得方式，請自行詢問主機提供商</p>
+<p>本篇將使用開源工具-<a href="https://github.com/sskaje/6in4.git">IPv6-in-IPv4 Tunnel</a></p>
+<h3 id="配置工具">配置工具</h3>
+<p>首先，將工具下載下來</p>
+<pre><code>git clone [https://github.com/sskaje/6in4.git](https://github.com/sskaje/6in4)
+</code></pre><p><img src="https://static.yiy.tw/media/blog/2020053018041378.jpg" alt=""></p>
+<p>我們進入項目的etc資料夾，並修改config.ini</p>
+<pre><code>nano config.ini
+</code></pre><p><img src="https://static.yiy.tw/media/blog/2020053018044764.jpg" alt=""></p>
+<p>依序編輯 IPV6_NETWORK, IPV6_CIDR, INTERFACE, BIND_IP(有多iPv4需要)</p>
+<p><img src="https://static.yiy.tw/media/blog/2020053018050652.jpg" alt=""></p>
+<p>接著輸入 Crtl + X 來保存</p>
+<h3 id="修改系統設定來允許ipv6轉發">修改系統設定來允許iPv6轉發</h3>
+<pre><code>nano /etc/sysctl.conf  
+  
+在最下方添加下方這項net.ipv6.conf.all.forwarding = 1  
+  
+Crtl + X 保存  
+sysctl -p
+</code></pre><h3 id="防火牆">防火牆</h3>
+<pre><code>iptables -I INPUT -p 41 --j ACCEPT  
+iptables -I OUTPUT -p 41 --j ACCEPT  
+iptables -I FORWARD -p 41 --j ACCEPT
+</code></pre><h3 id="使用工具建立伺服端新增隧道">使用工具建立伺服端(新增隧道)</h3>
+<p>假設隧道ID為1，伺服端IPv4為1.1.1.1 用戶端IPv4為8.8.8.8]</p>
+<p>配置文件中設置的IPv6子網為 2a0e:b107:7e0::，子網路遮罩為48(必須為8的倍數)工具會自動分割出 一個用於隧道的 /64子網及一個用於用戶路由的 /64子網</p>
+<p>如果用戶端需要給其下級設備分配的話，建議伺服端的子網 應大於 /64，這樣才能產生 /64的下級子網，以保證SLAAC的運作。</p>
+<p><img src="https://static.yiy.tw/media/blog/2020053018052119.jpg" alt=""></p>
+<p>接著我們就可以至用戶端配置了！(配置過程可以參考<a href="https://tunnelbroker.net/">https://tunnelbroker.net/</a>)</p>
+<h3 id="報錯sipcalc-required">報錯：sipcalc required</h3>
+<p>我在第一次新增隧道時，遇到了這個問題<br>
+解決方式如下</p>
+<pre><code>CentOS:  
+yum install sipcalc  
+Ubuntu/Debian:  
+apt-get install sipcalc
+</code></pre><h3 id="測試結果">測試結果</h3>
+<p><a href="https://test-ipv6.com/">https://test-ipv6.com/</a> 測試結果</p>
+<p><img src="https://static.yiy.tw/media/blog/2020053018053577.png" alt=""></p>
+<p>路由追蹤</p>
+<p><img src="https://static.yiy.tw/media/blog/2020053018054471.jpg" alt=""></p>
+<p>完成！</p>
+<h3 id="參考資料">參考資料：</h3>
+<p><a href="https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sithttps://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/https://github.com/sskaje/6in4https://www.ciscopress.com/articles/article.asp?p=2154680">https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sit</a><br>
+<a href="https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sithttps://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/https://github.com/sskaje/6in4https://www.ciscopress.com/articles/article.asp?p=2154680">https://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/</a><br>
+<a href="https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sithttps://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/https://github.com/sskaje/6in4https://www.ciscopress.com/articles/article.asp?p=2154680">https://github.com/sskaje/6in4</a><br>
+<a href="https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sithttps://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/https://github.com/sskaje/6in4https://www.ciscopress.com/articles/article.asp?p=2154680">https://www.ciscopress.com/articles/article.asp?p=2154680</a></p>
+
+    </div>
+
+    <div class="post-copyright">
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=http://blog.steveyi.net/2020/tunnel-broker-bgp/>http://blog.steveyi.net/2020/tunnel-broker-bgp/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="http://blog.steveyi.net/tags/vps/">
+                    #VPS</a></span>
+            
+            <span class="tag"><a href="http://blog.steveyi.net/tags/%E4%BC%BA%E6%9C%8D%E5%99%A8/">
+                    #伺服器</a></span>
+            
+            <span class="tag"><a href="http://blog.steveyi.net/tags/%E7%B6%B2%E5%9F%9F/">
+                    #網域</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="http://blog.steveyi.net/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="http://blog.steveyi.net/2020/teamviewer-android/" class="prev" rel="prev" title="使用TeamViewer遠端操作Android手機"><i class="iconfont icon-left"></i>&nbsp;使用TeamViewer遠端操作Android手機</a>
+         
+        
+        <a href="http://blog.steveyi.net/2020/yin-zhi-ti-sheng/" class="next" rel="next" title="讓手機音質提升的小技巧">讓手機音質提升的小技巧&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  
+  
+  
+  <link rel="prev" href="http://blog.steveyi.net/2020/usb-reverse-tethering/" />
+  <link rel="next" href="http://blog.steveyi.net/2020/use-bird6-broadcast-ipv6-vultr/" />
+  <link rel="canonical" href="http://blog.steveyi.net/2020/ip-set-rdns-with-ripe-and-he-dns/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           RIPE為IP設定反向DNS(PTR紀錄) | 酷小易
+       
+  </title>
+  <meta name="title" content="RIPE為IP設定反向DNS(PTR紀錄) | 酷小易">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http:\/\/blog.steveyi.net\/"
+    },
+    "articleSection" : "posts",
+    "name" : "RIPE為IP設定反向DNS(PTR紀錄)",
+    "headline" : "RIPE為IP設定反向DNS(PTR紀錄)",
+    "description" : "反向dns紀錄\n一直以來都很想設定rDNS，看了許多次RIPE官方的文檔還是沒搞懂\n恰好這次有位大佬指導我去設定，其實一點都不難呢\n順便分享一下設定過程\n本篇以RIPE及HE FREE DNS作為範例，其他RIR基本上大同小異\n建立DNS NameServers 首先，登入HE FREE DNS，點擊左方的Add a new reverse\n輸入你的IP前綴，後方記得加上cidr(子網路掩碼)\n接著我們先設定一個PTR紀錄\n關於IP的轉換為網域名稱，可以使用這個工具 點我前往\n由於HE跟RIPE會互相檢查DNS授權，所以我們必須要先請HE開通DNS區域\n我們可以發送郵件到 dnsadmin#he.net [#換成@]\nSubject: About PTR records (改成你的IPv6前綴網域)\nContent:\nHello, I want set PTR records with my ipv6 address(改成你的IPv6前綴)\nRIPE require DNS delegation check\nPlease check it :)\nThanks!\n當HE開通後，我們就可以到RIPE設定了！\n設定DNS伺服器 首先，我們進入LIR Portal\n點擊左邊的Create an Object，選擇domain\n接著輸入要設定的ipv6 前綴\n接著依序輸入HE的DNS Server 及 Admin-c tech-c zone-c\u0026hellip;等等\nns1.he.net ns2.he.net ns3.he.ne ns4.he.net ns5.he.net\n完成後按Submit就會開始建立了",
+    "inLanguage" : "zh-TW",
+    "author" : "",
+    "creator" : "",
+    "publisher": "",
+    "accountablePerson" : "",
+    "copyrightHolder" : "",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-04-08 06:38:54 \u002b0000 \u002b0000",
+    "dateModified" : "2020-04-08 06:38:54 \u002b0000 \u002b0000",
+    "url" : "http:\/\/blog.steveyi.net\/2020\/ip-set-rdns-with-ripe-and-he-dns\/",
+    "wordCount" : "80",
+    "keywords" : [ "BGP","伺服器","網域", "酷小易"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://blog.steveyi.net/">酷小易</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">文章</a>
+                
+                <a class="menu-item" href="https://steveyi.net/" title="">關於我</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://blog.steveyi.net/">酷小易</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">文章</a>
+                
+                <a class="menu-item" href="https://steveyi.net/" title="">關於我</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">RIPE為IP設定反向DNS(PTR紀錄)</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="http://blog.steveyi.net/" rel="author"></a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-04-08 itemprop="datePublished">April 8, 2020</time>
+                </span>
+                in
+                
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p><img src="https://static.yiy.tw/media/blog/2020/04/set-rdns-he.png" alt=""></p>
+<p>反向dns紀錄</p>
+<p>一直以來都很想設定rDNS，看了許多次RIPE官方的文檔還是沒搞懂<br>
+恰好這次有位大佬指導我去設定，其實一點都不難呢<br>
+順便分享一下設定過程</p>
+<p>本篇以<a href="https://ripe.net">RIPE</a>及<a href="http://dns.he.net">HE FREE DNS</a>作為範例，其他RIR基本上大同小異</p>
+<h1 id="建立dns-nameservers"><strong>建立DNS NameServers</strong></h1>
+<p>首先，登入<a href="http://dns.he.net/">HE FREE DNS</a>，點擊左方的Add a new reverse</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/he-01.png" alt=""></p>
+<p>輸入你的IP前綴，後方記得加上cidr(子網路掩碼)</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/he-02.png" alt=""></p>
+<p>接著我們先設定一個PTR紀錄<br>
+關於IP的轉換為網域名稱，可以使用這個工具 <a href="https://www.securebit.ch/tools/network/arpa">點我前往</a></p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/he-03.jpg" alt=""></p>
+<p>由於HE跟RIPE會互相檢查DNS授權，所以我們必須要先請HE開通DNS區域<br>
+我們可以發送郵件到 dnsadmin#he.net [#換成@]</p>
+<p>Subject: About PTR records (改成你的IPv6前綴網域)</p>
+<p>Content:<br>
+Hello, I want set PTR records with my ipv6 address(改成你的IPv6前綴)<br>
+RIPE require DNS delegation check<br>
+Please check it :)<br>
+Thanks!</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/he-04-1920x908.png" alt=""></p>
+<p>當HE開通後，我們就可以到RIPE設定了！</p>
+<h1 id="設定dns伺服器"><strong>設定DNS伺服器</strong></h1>
+<p>首先，我們進入<a href="https://lirportal.ripe.net/">LIR Portal</a></p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/he-05-1920x864.png" alt=""></p>
+<p>點擊左邊的Create an Object，選擇domain</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/he-07-1920x864.png" alt=""></p>
+<p>接著輸入要設定的ipv6 前綴</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/he-06-1920x797.png" alt=""></p>
+<p>接著依序輸入HE的DNS Server 及 Admin-c tech-c zone-c&hellip;等等<br>
+ns1.he.net ns2.he.net ns3.he.ne ns4.he.net ns5.he.net</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/he-08-1920x1013.png" alt=""></p>
+<p>完成後按Submit就會開始建立了</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/he-09.png" alt=""></p>
+<p>當出現這個畫面時，代表建立完成囉！</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/he-10.png" alt=""></p>
+<p>接著後續步驟就跟一般網域的DNS設定相同囉！</p>
+<p>需要特別注意的是 反向DNS是要設定PTR紀錄，正向則要設定A或AAAA紀錄<br>
+名稱的話則可以使用這個工具 <a href="https://www.securebit.ch/tools/network/arpa">點我前往</a> 來轉換/查看</p>
+<p>PS.如果需要查看DNS是否生效，可以使用<a href="https://dns.google">Google Public DNS</a>查詢</p>
+
+    </div>
+
+    <div class="post-copyright">
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=http://blog.steveyi.net/2020/ip-set-rdns-with-ripe-and-he-dns/>http://blog.steveyi.net/2020/ip-set-rdns-with-ripe-and-he-dns/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="http://blog.steveyi.net/tags/bgp/">
+                    #BGP</a></span>
+            
+            <span class="tag"><a href="http://blog.steveyi.net/tags/%E4%BC%BA%E6%9C%8D%E5%99%A8/">
+                    #伺服器</a></span>
+            
+            <span class="tag"><a href="http://blog.steveyi.net/tags/%E7%B6%B2%E5%9F%9F/">
+                    #網域</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="http://blog.steveyi.net/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="http://blog.steveyi.net/2020/usb-reverse-tethering/" class="prev" rel="prev" title="透過電腦使用USB傳送網際網路連線給手機  (USB Reverse Tethering)"><i class="iconfont icon-left"></i>&nbsp;透過電腦使用USB傳送網際網路連線給手機  (USB Reverse Tethering)</a>
+         
+        
+        <a href="http://blog.steveyi.net/2020/use-bird6-broadcast-ipv6-vultr/" class="next" rel="next" title="在Vultr使用Bird6廣播IPv6">在Vultr使用Bird6廣播IPv6&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

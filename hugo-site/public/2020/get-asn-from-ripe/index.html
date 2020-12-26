@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  
+  
+  
+  <link rel="prev" href="http://blog.steveyi.net/2020/create-object-in-ripe-database/" />
+  <link rel="next" href="http://blog.steveyi.net/2020/autodraw/" />
+  <link rel="canonical" href="http://blog.steveyi.net/2020/get-asn-from-ripe/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           從RIPE申請屬於自己的ASN | 酷小易
+       
+  </title>
+  <meta name="title" content="從RIPE申請屬於自己的ASN | 酷小易">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http:\/\/blog.steveyi.net\/"
+    },
+    "articleSection" : "posts",
+    "name" : "從RIPE申請屬於自己的ASN",
+    "headline" : "從RIPE申請屬於自己的ASN",
+    "description" : "今天來講一下透過LIR在RIPE取得自己的ASN\n首先，可能有些人會很好奇\n為什麼要選擇RIPE呢？選擇APNIC, ARIN不好嗎？\n筆者有兩個ASN，分別是RIPE及APNIC下的\n當筆者在改一些whois時，RIPE可以直接進入網頁修改\n但APNIC則需要發送郵件\u0026hellip;\u0026hellip;比較麻煩(其實好像也差不多)\n不過，APNIC與RIPE兩個管理機構也是有差別的\nRIPE需要驗證真實身份(個人申請需要發送護照或其他證明文件)\nAPNIC則不需要任何證明文件\n那麼，我們就開始申請吧\n尋找LIR（贊助者） 首先，我們需要找到一位RIPE會員(LIR)做自己的sponsor\n我們只要在Google上搜尋「lir service」就會看到非常多的相關服務\n那小易嘗試過 Securebit 及 Openfactory 的服務，主要差別就是\u0026hellip;\nSecurebit 快(1-5天) 貴 提供的PA 沒有MNT權限\nOpenfactory 慢(1-20天) 便宜 提供的PA 有MNT權限\n所以，個人比較推薦Openfactory啦！（除非你想要申請16-bit ASN）\n準備申請資料 我們找到LIR之後，透過Email或其他管道聯繫後，我們就可以來準備一下申請資料了\n根據小易的經驗，大部分LIR都需要這些東西（因為他們需要提交給RIPE）\n真實英文姓名(First \u002b Last name)，也就是護照上的名稱\nPostal address（真實地址）\n護照的複印\/掃描圖片（有時候可能需要身份證照片）\n接著還需要兩個對等方，也就是我們常說的\u0026quot;Peer Partner\u0026quot;\n如果各位不介意的話，可以直接填寫我的資訊\nAS60614(TSUNGYI YU) peering_at_steveyi.net\nAS209557(TSUNGYI YU) peering_at_steveyi.net\n然後由於我們是在RIPE申請的，所以我們還需要準備一些對象紀錄\nMAINTAINER, PERSON \/ ROLE, and ORGANIZATION object\n然後ORG object中的\u0026quot;org-name\u0026quot;必須要是真實姓名（護照名稱）\n關於申請的過程及方式，可以參考一下 這篇文章\n那一切都準備好後，LIR會準備一分用戶協議，簽名完，LIR就會把你的請求轉交給RIPE啦！\n當提交請求給RIPE時，大約1-3天就會發放ASN了\n當拿到ASN之後，我們就可以來廣播自己的網路啦！\n那我們下一篇會再詳細地與大家分享廣播網路的細節",
+    "inLanguage" : "zh-TW",
+    "author" : "",
+    "creator" : "",
+    "publisher": "",
+    "accountablePerson" : "",
+    "copyrightHolder" : "",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-11-21 08:39:28 \u002b0000 \u002b0000",
+    "dateModified" : "2020-11-21 08:39:28 \u002b0000 \u002b0000",
+    "url" : "http:\/\/blog.steveyi.net\/2020\/get-asn-from-ripe\/",
+    "wordCount" : "67",
+    "keywords" : [ "ASN","BGP","網際網路","路由協議", "酷小易"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://blog.steveyi.net/">酷小易</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">文章</a>
+                
+                <a class="menu-item" href="https://steveyi.net/" title="">關於我</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://blog.steveyi.net/">酷小易</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">文章</a>
+                
+                <a class="menu-item" href="https://steveyi.net/" title="">關於我</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">從RIPE申請屬於自己的ASN</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="http://blog.steveyi.net/" rel="author"></a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-11-21 itemprop="datePublished">November 21, 2020</time>
+                </span>
+                in
+                
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>今天來講一下透過LIR在RIPE取得自己的ASN</p>
+<p>首先，可能有些人會很好奇</p>
+<p><em><strong>為什麼要選擇RIPE呢？選擇APNIC, ARIN不好嗎？</strong></em></p>
+<p>筆者有兩個ASN，分別是RIPE及APNIC下的<br>
+當筆者在改一些whois時，RIPE可以直接進入網頁修改<br>
+但APNIC則需要發送郵件&hellip;&hellip;比較麻煩(其實好像也差不多)</p>
+<p>不過，APNIC與RIPE兩個管理機構也是有差別的<br>
+RIPE需要驗證真實身份(個人申請需要發送護照或其他證明文件)<br>
+APNIC則不需要任何證明文件</p>
+<p>那麼，我們就開始申請吧</p>
+<h1 id="尋找lir贊助者"><strong>尋找LIR（贊助者）</strong></h1>
+<p>首先，我們需要找到一位RIPE會員(LIR)做自己的sponsor<br>
+我們只要在Google上搜尋「lir service」就會看到非常多的相關服務</p>
+<p><img src="https://static.yiy.tw/media/blog/2020111814292492.png" alt=""></p>
+<p>那小易嘗試過 Securebit 及 <a href="https://freetransit.ch/">Openfactory</a> 的服務，主要差別就是&hellip;</p>
+<p>Securebit 快(1-5天) 貴 提供的PA 沒有MNT權限<br>
+<a href="https://freetransit.ch/">Openfactory</a> 慢(1-20天) 便宜 提供的PA 有MNT權限</p>
+<p>所以，個人比較推薦<a href="https://freetransit.ch/">Openfactory</a>啦！（除非你想要申請16-bit ASN）</p>
+<h1 id="準備申請資料"><strong>準備申請資料</strong></h1>
+<p>我們找到LIR之後，透過Email或其他管道聯繫後，我們就可以來準備一下申請資料了<br>
+根據小易的經驗，大部分LIR都需要這些東西（因為他們需要提交給RIPE）</p>
+<p>真實英文姓名(First + Last name)，也就是護照上的名稱<br>
+Postal address（真實地址）<br>
+護照的複印/掃描圖片（有時候可能需要身份證照片）</p>
+<p>接著還需要兩個對等方，也就是我們常說的&quot;Peer Partner&quot;<br>
+如果各位不介意的話，可以直接填寫我的資訊</p>
+<p>AS60614(TSUNGYI YU)
+peering_at_steveyi.net</p>
+<p>AS209557(TSUNGYI YU)
+peering_at_steveyi.net</p>
+<p>然後由於我們是在RIPE申請的，所以我們還需要準備一些對象紀錄<br>
+MAINTAINER, PERSON / ROLE, and ORGANIZATION object<br>
+然後ORG object中的&quot;org-name&quot;必須要是真實姓名（護照名稱）<br>
+關於申請的過程及方式，可以參考一下 <a href="https://blog.steveyi.net/create-object-in-ripe-database/">這篇文章</a></p>
+<p>那一切都準備好後，LIR會準備一分用戶協議，簽名完，LIR就會把你的請求轉交給RIPE啦！<br>
+當提交請求給RIPE時，大約1-3天就會發放ASN了</p>
+<p>當拿到ASN之後，我們就可以來廣播自己的網路啦！<br>
+那我們下一篇會再詳細地與大家分享廣播網路的細節</p>
+
+    </div>
+
+    <div class="post-copyright">
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=http://blog.steveyi.net/2020/get-asn-from-ripe/>http://blog.steveyi.net/2020/get-asn-from-ripe/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="http://blog.steveyi.net/tags/asn/">
+                    #ASN</a></span>
+            
+            <span class="tag"><a href="http://blog.steveyi.net/tags/bgp/">
+                    #BGP</a></span>
+            
+            <span class="tag"><a href="http://blog.steveyi.net/tags/%E7%B6%B2%E9%9A%9B%E7%B6%B2%E8%B7%AF/">
+                    #網際網路</a></span>
+            
+            <span class="tag"><a href="http://blog.steveyi.net/tags/%E8%B7%AF%E7%94%B1%E5%8D%94%E8%AD%B0/">
+                    #路由協議</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="http://blog.steveyi.net/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="http://blog.steveyi.net/2020/create-object-in-ripe-database/" class="prev" rel="prev" title="在RIPE DataBase建立Object"><i class="iconfont icon-left"></i>&nbsp;在RIPE DataBase建立Object</a>
+         
+        
+        <a href="http://blog.steveyi.net/2020/autodraw/" class="next" rel="next" title="AutoDraw 自動繪圖吧！">AutoDraw 自動繪圖吧！&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

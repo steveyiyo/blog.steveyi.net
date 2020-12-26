@@ -1,0 +1,1614 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on 酷小易</title>
+    <link>http://blog.steveyi.net/posts/</link>
+    <description>Recent content in Posts on 酷小易</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Sat, 28 Nov 2020 04:39:14 +0000</lastBuildDate><atom:link href="http://blog.steveyi.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>利用redeb來備份已安裝插件的deb檔</title>
+      <link>http://blog.steveyi.net/2020/use-redeb-to-backup-jb-tweaks/</link>
+      <pubDate>Sat, 28 Nov 2020 04:39:14 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/use-redeb-to-backup-jb-tweaks/</guid>
+      <description>就在很久之前，筆者就有遇過插件在其他軟體源消失導致無法安裝想要的插件。但是因為在其他裝置有安裝該插件而能把該插件deb檔備份出來並安裝在我想要安裝該插件的裝置裡，在此分享給有想要備份插件的人！
+   redeb與備份出來的deb檔（以打包Zebra為例）
+需要利用到的插件/程式：
+Redeb - deb重新打包備份插件（軟體源：https://wiety.github.io/cydia/ ）
+OpenSSH - 讓電腦可以ssh進去裝置裡並下指令
+FileZilla - SFTP存取裝置 (Windows部分也可用WinSCP)
+終端機 - 下達ssh指令（Windows使用者請用PuTTY)
+前置作業： 首先先在插件管理器（這邊以Zebra為例）上加入此軟體源： https://wiety.github.io/cydia/
+往下滑進去&amp;quot;Wiety&amp;rsquo;s beta repository&amp;quot;並找到redeb, 安裝它
+安裝OpenSSH (有安裝的可以跳過此步驟）
+安裝完這兩個插件後就可以移到電腦了
+電腦端的操作： 這邊要先注意一下，行動裝置與電腦皆要連接在同一個區網下，不然會連不上ssh!
+先在要做ssh連線的裝置端確認內網IP位置（設定-&amp;gt;Wi-Fi-&amp;gt;在連線的Wi-Fi上按 &amp;ldquo;i&amp;quot;即可查詢）
+筆者有自己製作簡易捷徑去查詢內網IP.
+在電腦上打開終端機（Windows使用者請安裝PuTTY, 筆者這邊使用macOS)
+在終端機打上 ssh root@192.168.31.46 (紅色部分更換為自己的內網IP)
+打上要連線裝置的ssh密碼 (預設密碼是alpine. 這邊建議如果還在用預設密碼的，請更改成自訂的密碼！）
+在終端機上打入redeb, 會跳出圖左的訊息，這是因為我們沒預先指定好插件ID, 這邊鍵入&amp;quot;y&amp;rdquo;. redeb會列出所有插件的ID（圖右）
+      這邊就是鍵入欲備份的插件ID, 這邊以Zebra為例，插件ID &amp;ldquo;206&amp;rdquo;
+執行完成後，終端機會長這樣：
+完成後，這邊就可以把剛打包好的deb檔從裝置中提起出來。接下來打開FileZilla並一樣ssh連線至剛剛做完deb打包的裝置。
+在Filza中，按左上方的按鈕會打開該畫面，新增一個站台並把伺服器型態更改成SFTP. 最後把主機名稱（欲連線裝置的IP）, 使用者 (root) 跟密碼打上去並按下連線
+連線完成後，備份完成的deb檔位址在：
+/private/var/mobile/Documents/Redeb/debs 在資料夾裡面的檔案就是剛剛備份的deb檔，這樣就完工了！</description>
+    </item>
+    
+    <item>
+      <title>[有趣測試] 測驗看看你是不是木耳！</title>
+      <link>http://blog.steveyi.net/2020/are-you-mu-er/</link>
+      <pubDate>Wed, 25 Nov 2020 02:31:14 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/are-you-mu-er/</guid>
+      <description>這個網站會以隨機順序提供六組音樂，每組包含128Kbps MP3/320Kbps MP3/未壓縮的WAV音檔，測驗看看你能不能聽出哪個是音質最好的音檔，選擇後會產生正確答案。
+連結在下方。
+貼心提醒：
+- 可以把音量調高聽看看細節
+- 細節可以從高音部分比較明顯聽出（所以裝置的選擇很重要！）
+-這不是什麼正式的測驗，不過至少可以參考一下啦w
+點我前往測試 測驗結果分析結果是，如果你能答對四個或以上，那麼你就不是木耳囉</description>
+    </item>
+    
+    <item>
+      <title>AutoDraw 自動繪圖吧！</title>
+      <link>http://blog.steveyi.net/2020/autodraw/</link>
+      <pubDate>Wed, 25 Nov 2020 02:25:44 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/autodraw/</guid>
+      <description>(本文由小易及蘿蔔共同編輯)
+ 前幾天，小易在上課的時候，老師介紹到了一個有趣的網站
+AutoDraw是一個由Google所開發的網站
+Google從1998年就註冊這個網域了(或是其他人註冊轉賣給Google的)~
+我居然現在才知道這個網站
+小易也很好奇，這個有趣的東西是如何運作的
+於是玩了一下，也稍微搜尋了一下相關資料
+就有搜尋到一篇文章，寫著 Machine learning, plus a dash of artistic flair(機器學習，並帶有一些藝術氣息)
+那我們初次進入網頁後，我們會看到一個空白的區塊
+我們可以選擇左邊的AutoDraw(就是帶魔法的那個筆)
+接下來可以用電腦在上面畫圖，如果用「並行」搭配Apple Pencil，效果更好哦～
+畫圖會發現神奇的事情發生了：隨便話一個圖就會有很多選項可以幫圖片做修正
+下次有空來玩玩看吧～
+或是使用iPad直接到AutoDraw去畫也是可以的</description>
+    </item>
+    
+    <item>
+      <title>從RIPE申請屬於自己的ASN</title>
+      <link>http://blog.steveyi.net/2020/get-asn-from-ripe/</link>
+      <pubDate>Sat, 21 Nov 2020 08:39:28 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/get-asn-from-ripe/</guid>
+      <description>今天來講一下透過LIR在RIPE取得自己的ASN
+首先，可能有些人會很好奇
+為什麼要選擇RIPE呢？選擇APNIC, ARIN不好嗎？
+筆者有兩個ASN，分別是RIPE及APNIC下的
+當筆者在改一些whois時，RIPE可以直接進入網頁修改
+但APNIC則需要發送郵件&amp;hellip;&amp;hellip;比較麻煩(其實好像也差不多)
+不過，APNIC與RIPE兩個管理機構也是有差別的
+RIPE需要驗證真實身份(個人申請需要發送護照或其他證明文件)
+APNIC則不需要任何證明文件
+那麼，我們就開始申請吧
+尋找LIR（贊助者） 首先，我們需要找到一位RIPE會員(LIR)做自己的sponsor
+我們只要在Google上搜尋「lir service」就會看到非常多的相關服務
+那小易嘗試過 Securebit 及 Openfactory 的服務，主要差別就是&amp;hellip;
+Securebit 快(1-5天) 貴 提供的PA 沒有MNT權限
+Openfactory 慢(1-20天) 便宜 提供的PA 有MNT權限
+所以，個人比較推薦Openfactory啦！（除非你想要申請16-bit ASN）
+準備申請資料 我們找到LIR之後，透過Email或其他管道聯繫後，我們就可以來準備一下申請資料了
+根據小易的經驗，大部分LIR都需要這些東西（因為他們需要提交給RIPE）
+真實英文姓名(First + Last name)，也就是護照上的名稱
+Postal address（真實地址）
+護照的複印/掃描圖片（有時候可能需要身份證照片）
+接著還需要兩個對等方，也就是我們常說的&amp;quot;Peer Partner&amp;quot;
+如果各位不介意的話，可以直接填寫我的資訊
+AS60614(TSUNGYI YU) peering_at_steveyi.net
+AS209557(TSUNGYI YU) peering_at_steveyi.net
+然後由於我們是在RIPE申請的，所以我們還需要準備一些對象紀錄
+MAINTAINER, PERSON / ROLE, and ORGANIZATION object
+然後ORG object中的&amp;quot;org-name&amp;quot;必須要是真實姓名（護照名稱）
+關於申請的過程及方式，可以參考一下 這篇文章
+那一切都準備好後，LIR會準備一分用戶協議，簽名完，LIR就會把你的請求轉交給RIPE啦！
+當提交請求給RIPE時，大約1-3天就會發放ASN了
+當拿到ASN之後，我們就可以來廣播自己的網路啦！
+那我們下一篇會再詳細地與大家分享廣播網路的細節</description>
+    </item>
+    
+    <item>
+      <title>在RIPE DataBase建立Object</title>
+      <link>http://blog.steveyi.net/2020/create-object-in-ripe-database/</link>
+      <pubDate>Sat, 21 Nov 2020 08:37:20 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/create-object-in-ripe-database/</guid>
+      <description>在本篇文章中，將與大家分享如何在RIPE DataBase註冊MAINTAINER, PERSON / ROLE, and ORGANIZATION object
+這些對象也是註冊ASN必要的，如果要申請ASN，可以參考這篇教學
+那首先，我們要先註冊RIPE的帳號 註冊網站在這
+註冊完成之後，我們進入RIPE Datebase，然後點擊 &amp;ldquo;Create an Object&amp;rdquo;（建立一個物件Object）
+然後我們選擇第一個 &amp;ldquo;role and maintainer pair&amp;rdquo;
+第一個填寫mnter，他將會是 &amp;ldquo;mnt-by&amp;rdquo;
+role隨意輸入
+address寫自己家裡地址
+email寫自己的電子郵箱地址
+註冊完成後，你會拿到一個role與mnter，這邊要記住 primary key
+我們等等會用到
+建立好後，我們需要在回去role，新增一個 &amp;ldquo;abuse-mailbox&amp;rdquo; 濫用投訴信箱，等等ORG object需要使用
+完成後，我們回到 &amp;ldquo;Create an Object&amp;rdquo;（建立一個物件Object）的步驟
+這次選擇建立 organisation
+完成後，我們點擊Submit
+我們需要更改的內容有
+&amp;ldquo;org-name&amp;rdquo;: 填寫自己的真實英文姓名(護照上的)
+&amp;ldquo;address&amp;rdquo;: 地址
+&amp;ldquo;e-mail&amp;rdquo;: 電子郵件地址
+&amp;ldquo;abuse-c&amp;rdquo;: 剛剛我們建立的role
+&amp;ldquo;mnt-ref&amp;rdquo;: 剛剛我們建立的mnter
+完成後，我們點擊Submit
+就完成啦
+最後，我們只需要將ORG的編號給LIR，就可以啦！
+如果還是不懂的話，可以參考RIPE的影片！https://www.ripe.net/support/training/videos/ripe-database</description>
+    </item>
+    
+    <item>
+      <title>利用WireGuard建立大內網</title>
+      <link>http://blog.steveyi.net/2020/usingwireguard-to-make-intranet/</link>
+      <pubDate>Fri, 20 Nov 2020 18:31:04 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/usingwireguard-to-make-intranet/</guid>
+      <description>Hi 大家好，今天來分享一下如何使用WireGuard建立大內網
+之前有與大家分享過 在Linux系統上安裝Wireguard，那這次我們要利用WireGuard來建立大內網
+為什麼筆者稱這次要建立&amp;quot;大內網&amp;quot;呢？
+因為筆者也許多不同地方的網路，想藉由這次機會，來把他們都加進同一個局域網
+這樣也可以解決一些連線問題，比如筆者常常連線回到家中的電腦
+但因為公網IP只有幾個，當機器太多時，就需要設定內網穿透
+但筆者架設了內網之後，在外面只需要連入VPN，在其他網路區域，就可以存取所有網路設備了（這也類似於一般企業的遠端存取）
+那麼，我們一樣需要有一個主伺服器當網關。不過，我們不使用NAT TO NAT，而是透過私網IP來進行互連
+我們的情境是這樣：
+A辦公室 路由器 10.121.208.254/24
+B辦公室 路由器 10.121.209.254/24
+C辦公室 路由器 10.121.210.254/24
+VPN路由器 10.121.211.254/24
+首先，由於我們這次是純粹架設大內網，以WireGuard搭配靜態路由為主。所以先不講到路由協議（不過下次會介紹）
+我們需要有一個主路由器，並透過它來連接A,B,C辦公室的路由器
+所以會變成下面這樣
+VPN &amp;lt;-&amp;gt; A
+VPN &amp;lt;-&amp;gt; B
+VPN &amp;lt;-&amp;gt; C
+當A的用戶想去C時(10.121.208.1 &amp;lt;-&amp;gt; 10.121.210.2) 路線會變成&amp;hellip;
+User-A -&amp;gt; 10.121.208.254 -&amp;gt; 10.121.211.254 -&amp;gt; 10.121.210.254 -&amp;gt; 10.121.210.2(User-C)
+也就是 User-A -&amp;gt; A的路由器 -&amp;gt; VPN Gateway -&amp;gt; C的路由器 -&amp;gt; User-C
+那我們搞懂原理，就來實作啦！
+首先，我先先準備好私鑰及公鑰（公鑰是由私鑰算過來的）
+A&amp;rsquo;s Public key: WGokwN2HtiX+naa7hdvUaXoXk5tkzXQtMge4v9DKlVw=
+B&amp;rsquo;s Public key: fVNXw6EpC65DmIsY/XsWXL6EXLU9oFW7CL5cZr82Di8=</description>
+    </item>
+    
+    <item>
+      <title>Windows 10打開電腦(喚醒)後自動校正時間</title>
+      <link>http://blog.steveyi.net/2020/ntp-clock-autoset/</link>
+      <pubDate>Fri, 20 Nov 2020 15:52:24 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/ntp-clock-autoset/</guid>
+      <description>時鐘對電腦來說是一個非常重要的東西，並不是只在狀態欄(或工作列)顯示時間那麼單純而已，時鐘不正確(與真實世界實際時間偏差太多)的話，可能會造成電腦發生一些奇怪的現象，例如:不能看網頁(憑證問題)，如果時間差太多甚至會造成軟體當掉。各種程式登入逾時也是很容易在時間偏差太大時發生的事情
+時間錯誤造成的憑證問題導致無法正常瀏覽網頁
+各種程式的登入逾時，iTunes就是其中之一
+講到這裡，大家應該都想到了系統內建的自動校正時間功能
+系統的校正功能，筆者從來沒看過它自動幫我更正時間，每次都是去按[立即更新]才幫我更正時間 (它不會是每次喚醒電腦就對時，據說要好幾天才會更正一次)
+偏偏筆者的雙A牌PC(筆記型電腦)和以前使用的PC桌機(CMOS沒電)，不論有沒有插電，只要Windows沒在運作(睡眠、休眠、關機、當機)，時鐘就會停止計算時間，每次開電腦都是看到上次關掉電腦的日期(或是被重設)，打開後還要手動調整實在很麻煩，因此研究了時鐘的自動校正功能，每逢開機就校正一次。
+此處使用到的應用程式是國家時間與頻率標準實驗室推出的 NTPClock
+雖然有點古老，但功能至今依然正常
+NTPClock安裝教學 首先請點這裡下載NTPClock，下載後請不要急著打開。
+請先將程式移至&amp;quot;C:\NTPClock&amp;quot;資料夾(自己建立該資料夾)，然後在該程式按右鍵，選擇[相容性]，然後依序更改圖片圈起來的參數再打開
+開啟時請允許權限，否則無法變更時間
+接下來程式會縮小在系統托盤，圖標點右鍵可以結束。
+設定開機自動使用NTPClock校正時間 圖片太小的話可以右鍵在新分頁打開
+依照NTPClock的預設設定，每次開啟該程式就會校正一次系統時間
+因此我們要用&amp;quot;工作排程器&amp;quot;設定每次解鎖電腦時會自動&amp;quot;以管理員權限&amp;quot;啟動NTPClock
+首先請先在Windows搜尋找到&amp;quot;工作排程器&amp;quot;
+接下來請到觸發程序的地方，調整紅色框起來的地方的設定如圖
+到動作的地方，調整紅色框起來的地方的設定如圖
+到條件的地方，調整紅色框起來的地方的設定如圖
+更正圖片錯誤的部分：取消勾選「只有在電腦是使用AC電源時才啟用這個工作」
+到設定的地方，調整紅色框起來的地方的設定如圖
+接下來要設定當鎖定、登出、關掉電腦(睡眠、休眠、關機)時關掉NTPClock
+(不然如果不是關機或登出的話，每次打開電腦就會多開一個NTPClock，然後多開幾次電腦之後工作列就滿了)
+接下來請到觸發程序的地方，調整紅色框起來的地方的設定如圖
+到動作的地方，調整紅色框起來的地方的設定如圖
+到條件的地方，調整紅色框起來的地方的設定如圖
+更正圖片錯誤的部分：取消勾選「只有在電腦是使用AC電源時才啟用這個工作」
+到設定的地方，調整紅色框起來的地方的設定如圖
+接下來每次打開電腦就會自動對時囉~
+如果電腦關掉後時間會跑掉的話，以後每次打開電腦都不用手動改時間了!</description>
+    </item>
+    
+    <item>
+      <title>透過iperf3來測試內網速度</title>
+      <link>http://blog.steveyi.net/2020/iperf3/</link>
+      <pubDate>Sun, 08 Nov 2020 13:26:11 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/iperf3/</guid>
+      <description>不久前，筆者換了新的交換機。為了測試內網的傳輸速度，筆者發現了這款工具 - iperf3
+這是一個支援Ｗindows, Linux, macOS的測試程式，主要是透過指令來操作
+筆者也常常用來測試兩個不同地區伺服器的速度
+那麼，以下分享一下安裝方法
+首先，進入iperf3官網後，找到對應的系統(如果是Windows就選擇Windows, macOS則選擇macos, Linux亦同&amp;hellip;)
+會下載一個 .zip 的檔案，將其解壓縮
+並打開命令控制字元（macOS及Linux則是Terminal也可以透過SSH進行操作），輸入 cd &amp;lt;資料夾路徑&amp;gt;，接著輸入 iperf3 指令
+iperf3 -s #用於伺服端的
+iperf3 -c &amp;lt;伺服端IP&amp;gt; #用於客戶端的
+就會開始跑測速啦！
+大家比較需要注意的點是，在內網的話，需要確認內網是互通的(同一個LAN就是互通的)
+我們也可以使用ping指令去測試網路是否通的，在部分設備上（如Windows），可能預設將ICMP屏蔽了。需要特別到防火牆裡面開啟</description>
+    </item>
+    
+    <item>
+      <title>iOS和macaOS上超好用的內建Spotlight搜尋小技巧</title>
+      <link>http://blog.steveyi.net/2020/apple-spotlight/</link>
+      <pubDate>Sun, 18 Oct 2020 09:02:50 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/apple-spotlight/</guid>
+      <description>不少人都買了iPhone, iPad, iPod touch或Mac，卻不知道內建的Spotlight有許多好用的功能，讓我們來看看吧！
+ Spotlight的使用方法(早期的版本可能不太一樣)：
+iOS/iPadOS是在主畫面往下拉、macOS則是按下選單列(右上角)的放大鏡，或是按下「command」+「空白鍵」
+ 註：Spotlight搜尋跟Siri的功能都是逐版進步的，所以有些比較舊的版本可能就沒有某些功能了，筆者以iOS/iPadOS 14和macOS Catalina作為示範。
+1.找裝置內的資料
+舉凡簡訊、檔案、備忘錄、聯絡人、聯絡人的電話、地點、郵件、App什麼的都有！甚至還會可以搜尋網路上的東西！
+舉例來說，筆者把OPENPOINT的App放在「眼不見為淨」資料夾裡，也會寫出來，另外也會看到一些相關的東西
+如果尋找的是聯絡資訊裡的電話號碼的話也是可以的
+2.換算單位
+各種單位幾乎都可以換算哦！
+還可以指定單位
+也可以換算貨幣
+3.iPad沒有內建計算機，但又要算數字？
+沒關係，用Spotight就可以算了哦！
+4.字典
+看到哪個很困難的字嗎？搜尋就會有結果了！
+如果維基百科有資料也會出現
+5.電影、音樂等
+連結到iTunes Store、Apple Music或Apple TV+，如果有訂閱的話超方便的(雖然筆者沒訂閱啦&amp;hellip;)
+Spotlight搜尋功能非常多，筆者也沒用完全部的功能過XD
+大家都來玩玩看吧</description>
+    </item>
+    
+    <item>
+      <title>使用Xbox遊戲列提升Windows的遊戲體驗</title>
+      <link>http://blog.steveyi.net/2020/xbox-game-bar/</link>
+      <pubDate>Wed, 07 Oct 2020 02:09:56 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/xbox-game-bar/</guid>
+      <description>Xbox遊戲列是Windows 10的一個功能，具有錄影和直播、顯示效能、控制Spotify音樂等功能，還可以釘選在螢幕上。最棒的是，遊戲列會把系統資源集中在遊戲上，因此如果電腦配置不是很頂級的玩家玩起來會更順暢!
+註: 筆者以Windows 10 (2004版) 和Xbox遊戲列(v5.420)作為示範，不同版本可能長得不太一樣。
+首先，請先打開你的遊戲，或是要開啟遊戲列的應用程式，然後按下Win鍵(command鍵)+G
+打開選單後按下齒輪，然後勾選&amp;quot;記住這是個遊戲&amp;quot;
+另外，Xbox遊戲列中的眾多小工具也都是可以釘選的，比如說筆者覺得非常好用的&amp;quot;效能&amp;quot;。
+&amp;ldquo;效能&amp;ldquo;這個小工具就算不是在遊戲中也很好用，這樣就不用安裝其他軟體來顯示效能了。
+提醒:
+在設定的齒輪旁邊有一個啟用點閱率/停用點閱率的功能，這個功能是控制釘選時，小工具能不能操作。(停用=小工具只能看，不能操作；啟用則反之)</description>
+    </item>
+    
+    <item>
+      <title>使用&#34;備份與還原&#34;備份Windows 7以上的PC</title>
+      <link>http://blog.steveyi.net/2020/windows-backup/</link>
+      <pubDate>Fri, 28 Aug 2020 09:09:08 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/windows-backup/</guid>
+      <description>Mac裡面有一個&amp;quot;時光機&amp;quot;可以簡單易用地備份整部電腦，而Windows裡面也藏著類似的功能哦！
+簡單來說就是會將整台電腦、磁碟機或資料夾（視設定而定）備份起來，第一次會完整備份，所以會花比較久的時間；第二次以後會只備份「在上次備份完更動過」或「在上次備份完新建立」的檔案，以節省空間和時間。
+首先請先打開開始，找到&amp;quot;Windows系統&amp;quot;，然後打開控制台
+接下來請進到系統及安全性&amp;gt;備份與還原
+按下&amp;quot;設定備份&amp;quot;，然後照著指示選擇備份的設定跟排程
+另外，建議不要跟啟動磁碟用同一個硬碟，以免到時硬碟壞了，備份也沒用。
+接下來就可以開始備份
+下一頁會告訴各位如何還原唷!
+備份完成後，視設定可能備份整個啟動磁碟或資料夾
+如果要復原整個啟動磁碟的話，筆者沒有實驗過，可以參考微軟官方文章
+如果要復原單一個資料夾或是磁碟區的話，請在該磁碟區上按下右鍵，然後選擇「內容」，並找到「以前的版本」之後選擇要還原的時間點
+如果選擇開啟舊檔，則可以看到以前備份的檔案，可以拉出來做使用；
+如果選擇還原，則會將整個磁碟區或資料夾覆蓋掉，這個筆者沒試過。
+以下是開啟舊檔後的樣子
+這樣以後再也不怕誤刪檔案囉！
+但還是要注意備份週期的問題，假如每週備份一次，但還來不及備份就被刪掉也是沒辦法囉</description>
+    </item>
+    
+    <item>
+      <title>從終端機更改Mac的主機名稱</title>
+      <link>http://blog.steveyi.net/2020/mac-hostname/</link>
+      <pubDate>Sat, 22 Aug 2020 08:25:56 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/mac-hostname/</guid>
+      <description>打開終端機時，我們會看到一串字是「使用者@主機名稱」，例如John@Johns-MacBook
+主機名稱理論上是可以從系統偏好設定裡頭的「共享」去更改，但是不曉得是不是系統的Bug，筆者使用的電腦卻不能更改，為此搜尋了幾天終於得出了答案，可以從終端機更改主機名稱
+首先請先打開終端機，然後輸入下面這串
+注意：請將下方的&amp;quot;MacHostName&amp;quot;帶換成你要的主機名稱，只能包含英文數字和連字號(-)，並且盡量不要太長
+sudo scutil --set HostName MacHostName 接下來請輸入密碼（看不到很正常）然後按下return
+接下來關掉終端機再打開就會看到新的名稱囉！</description>
+    </item>
+    
+    <item>
+      <title>使用傳統版Gmail加快老舊裝置和低速網路的郵件載入速度</title>
+      <link>http://blog.steveyi.net/2020/html-gmail/</link>
+      <pubDate>Fri, 21 Aug 2020 15:32:52 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/html-gmail/</guid>
+      <description>筆者有一部老舊的PC，配備1GB記憶體以及Windows XP做輕度文書使用(Windows XP只需128MB記憶體即可操作)，瀏覽一些網站仍可應付，有些大型網站則要載入很久或是無法正常使用。如果是一般的文章網頁還可以，問題來了，筆者想用Gmail網頁版收發郵件，但在網路暢通的情況下載入標準Gmail網頁需要將近一分鐘，捲動郵件更是一場災難，後來筆者發現網頁底部會有一個不明顯的傳統版Gmail超連結，不太會有人注意到它。
+註：該部PC後來有點故障，所以不會用它來示範本篇教學。
+筆者將連結放在這裡，有需要的可以拷貝拿去用
+Gmail傳統版
+點開連結後，請按下我要使用「HTML版Gmail」
+進入之後會發現少漂亮的圖示和華麗的動畫，雖然視覺效果不這麼吸引人，但在網路不佳或是電腦運作不快的環境可是非常有用啊！
+這是傳統版Gmail的網頁，雖然看起來陽春但大部分功能都還在。
+這是標準的Gmail網頁，在效能良好的裝置和良好的網路環境可以獲得很好的視覺效果和使用體驗，但老舊裝置以及網路頻寬不足的情況下就要等很久。</description>
+    </item>
+    
+    <item>
+      <title>淺談Mac筆記型電腦的電池和效能的影響</title>
+      <link>http://blog.steveyi.net/2020/macbook-without-a-battery/</link>
+      <pubDate>Tue, 18 Aug 2020 13:16:25 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/macbook-without-a-battery/</guid>
+      <description>筆者從小使用PC，直到家人幾年前買了一台MacBook Pro （額&amp;hellip;對，不是我的，只是我借用時間比較長😂）
+筆者第一台筆記型電腦是IBM的ThinkPad T43，接手時，電池因老化變得沒什麼用處（從開機到沒電休眠的續航大約3分42秒），所以大部分時候都把電池拔除來減輕重量，除非要在插座間移動才裝上。在這台電腦，以及後續我用的幾部PC筆記型電腦移除電池並插電使用都沒有任何明顯可見的降頻，只是後來換的PC筆記型電腦因為規格太文書，用幾年後跟不上軟體肥大的速度，容易當機，甚至多次在我存簡報時當機導致儲存失敗所以後來都借用家人的MacBok Pro。
+直到家人那台Pro 2017卡鍵待送修，跟親戚借了塵封已久、電池無法充電的MacBook Air 2011來使用，原本以為只是不能拔掉電源而已，沒想到開機後用起來非常卡頓，根本不像是2代1.6GHz intel Core i5處理器該有的水準。在四處都看得到電池需要維修的警告後，我懷疑卡頓來自電池效能太低，系統做的降頻處理，就像iPhone上的效能管理一樣。
+我使用了intel(R) Power Gadget看了一下，不出我所料，頻率被鎖定在最高(Core MAX)0.9GHz。
+後來在網路上找到Apple關於電腦沒裝電池降頻的說明（原本的網頁早已消失）：
+ If the battery is removed from a MacBook or MacBook Pro, the computer will automatically reduce the processor speed (to 1Ghz).
+This prevents the computer from shutting down if it demands more power than the A/C adaptor alone can provide.
+Additional information:
+Important: It is strongly recommended that you do not use your MacBook or MacBook Pro while the battery is removed.</description>
+    </item>
+    
+    <item>
+      <title>在官方不支援macOS Catalina的裝置安裝macOS Catalina</title>
+      <link>http://blog.steveyi.net/2020/macos-catalina-on-unsupport-mac/</link>
+      <pubDate>Tue, 18 Aug 2020 10:41:18 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/macos-catalina-on-unsupport-mac/</guid>
+      <description>有些電腦明明還可以好好的、正常使用，但可能因為官方的多重考量(不管是效能上、商業上、或是功能上之類的考量)，而被官方從升級名單中一代一代的移除，豈不是覺得很可惜嗎
+這時候，有一位dosdude1做了Catalina Patcher解決了這個問題。
+這是官方的支援名單:
+螢幕快照擷取自Apple官網
+下方這是Catalina Patcher的支援名單，與OS X El Captain系統要求一致:
+
+螢幕快照擷取自Apple官網
+本篇教學以MacBook Air 2011作為示範，與其他機型操作步驟差不多。
+ 注意:
+-如果電腦支援官方High Sierra的話，請先升級High Sierra再操作此篇。
+-畢竟Catalina Patcher不是Apple官方所調整釋出的，難免會有一些已知或未知的bug，可以接受的話再進行操作。
+-Catalina Patcher已知問題:如果電腦搭配AMD Radeon 5000系列或6000系列的顯示卡，顯示卡無法使用硬體加速，操作起來就卡卡的，毛玻璃效果會被停用，比較華麗的動態效果也會很卡頓，也不能執行一些需要硬體加速的程式，像是iMovie之類的
+ 操作步驟：
+請先前往Catalina Patcher的網站按下Download Latest Version並下載最新版
+下載完成後打開映像檔會看到一個App，將它點開。
+然後進到「系統偏好設定」內的「安全性與隱私權」強制打開
+然後按下白色的「打開」按鈕
+然後請一路按下Continue，需要時請輸入密碼允許進行更動
+請按下右邊的「Download a copy」藍色按鈕
+然後按下「Start Download」
+下載完成後可以選擇直接安裝(左)、製作可開機安裝程式的隨身碟(中)，或是製作ISO映像檔(右)
+選擇Install to This Machine的話是直接安裝到機器上，要關閉SIP安全保護，這個筆者沒試過。
+選擇Create a Bootable Installer就是製作可開機安裝程式的隨身碟。
+選擇Create an ISO image是製作映像檔可供燒錄DVD使用。
+筆者以Create a Bootable Installer作為本篇文章的示範
+按下Create a Bootable Installer之後可以選擇要安裝到哪裡，完成後按下Start再按Yes，然後再輸入密碼就會開始清除隨身碟上的資料並製作可開機安裝程式隨身碟了
+完成以後重新啟動時按住option會看到macOS Base System，按下去會開機到macOS Catalina的macOS工具程式。
+接下來請按下「重新安裝macOS」
+進入安裝程式後請按下「繼續」，並同意條款。
+接下來選擇要安裝在哪個磁碟或卷宗
+接下來可能升級完成後會開機，如果進度條卡住而且沒有寫安裝剩餘時間可以試著強制關機(隨身碟還不用拔掉)，然後再次開機同時按option選擇macOS Base System來開機</description>
+    </item>
+    
+    <item>
+      <title>macOS重灌不求人！使用內建回復功能輕鬆重灌Mac電腦</title>
+      <link>http://blog.steveyi.net/2020/macos-recovery/</link>
+      <pubDate>Sat, 15 Aug 2020 07:25:12 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/macos-recovery/</guid>
+      <description>很多時候很多種原因我們需要重灌作業系統，比如說系統裝了太多東西覺得變慢 懶得一個一個刪掉、或是換了新的磁碟機、升級Beta版想要降回來穩定發行版、或是系統升級過程中意外斷電等原因。Mac內建了一個好用的工具程式可以協助我們重灌。
+開始教學囉 首先請先將電腦開機，在蘋果圖像出現前按住command + R ，如果有韌體密碼會在此步驟要求解鎖。
+電腦會先嘗試使用內建的復原磁區開機，如果沒有找到復原磁區的話會使用Internet回復。
+Internet回復會使用Wi-Fi或乙太網路，如果找不到可用的網路就會出現驚嘆號的地球符號。
+*如果使用的第三方鍵盤找不到command鍵，請把Windows符號鍵當作command使用。
+螢幕快照擷取自Apple官網
+如果沒有出現上圖畫面的話，接下來會照常以蘋果圖像開機
+開機完成後會看到可以選擇語言
+選完語言後會看到macOS工具程式
+如果是因為系統升級失敗(例如升級過程意外拔到插頭等)、刪錯kext驅動，請跳過磁碟工具程式的部分，直接前往第三頁，這會保留系統卷宗的資料和應用程式。
+如果是想重灌（不保留系統卷宗資料）或是更換新的磁碟機，請繼續前往第二頁。
+接下來要使用磁碟工具程式清除資料
+選擇系統的啟動磁碟或卷宗，命名並選擇格式然後按下清除
+如果有看到APFS格式選項（10.13以上才有)，建議選擇APFS。
+沒有的話就選Mac OS 擴充格式。
+完成後就可以把這視窗關掉，回到macOS工具程式了
+接下來就是重新安裝系統的時候了，請選擇重新安裝macOS
+接下來請按「繼續」，然後會看到使用條款。
+不同意使用條款就不能安裝。
+然後請選擇安裝於剛剛清除的磁區或卷宗
+接下來就等候安裝吧！
+安裝完會有基本設定，本篇就不贅述了，祝大家使用愉快～</description>
+    </item>
+    
+    <item>
+      <title>透過BGP組建不同網段互通</title>
+      <link>http://blog.steveyi.net/2020/bgp-network-peer/</link>
+      <pubDate>Tue, 11 Aug 2020 18:56:26 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/bgp-network-peer/</guid>
+      <description>小時候常常為了家中的網路管理而困擾，舉例來說，我家有三個樓層 三個路由器
+我想讓三個路由器後的設備可以互通，但是如果我三台路由器都打開DHCP Server的話，三台將會是獨立的網段而不互通
+後來發現如果使用bridge(橋接)的方式將一台路由器當作DHCP Server，其他的當作AP或Switch，就可以達到網段相同且可以互通了！
+不過，這次我們要做的是&amp;quot;異地組網&amp;quot;，很難去做到使用同一個的DHCP Server來連接，所以就會有兩個網段
+那之前有跟大家分享過 FRRouting 入坑指南兼心得(1)，我們也可以透過BGP及隧道來組建不同區域網段互通
+讓我們開始吧！
+首先，我們需要先準備一些東西
+路由器須為Linux系統(如果是ROS或Cisco IOS也可以)
+路由套件(推薦使用Frrouting, bird)
+本篇將以Frrouting作為示範
+首先，雙方路由器必須支持BGP，否則只能使用NAT設備來進行互通了
+我們先在雙方路由器配置好路由器IP
+以下為範例
+Router-A 的IPv4為 10.0.1.1/24 DHCP 分配 10.0.1.2 - 10.0.1.254
+Router-B 的IPv4為 10.0.2.1/24 DHCP 分配 10.0.2.2 - 10.0.2.254
+那我們在路由器A向B廣播 network 10.0.1.0/24
+相對應的，路由器B向A廣播 network 10.0.2.0/24
+接著確認雙方BGP Session通了之後，我們檢查系統路由表ip route
+應該就會看到下方這樣
+10.0.1.0/24 via 對方的隧道IP dev tun0 proto bgp metric 20 
+接著就可以嘗試使用mtr或ping看對方路由器後的網段設備是否有連通囉！
+給大家參考一下frrouting的配置文件
+路由器A
+Current configuration: ! frr version 7.3.1 frr defaults traditional hostname gateway-tw log syslog informational service integrated-vtysh-config !</description>
+    </item>
+    
+    <item>
+      <title>使用CloudReady體驗ChromiumOS作業系統，老電腦重獲新生!</title>
+      <link>http://blog.steveyi.net/2020/cloudready/</link>
+      <pubDate>Mon, 10 Aug 2020 15:10:52 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/cloudready/</guid>
+      <description>不曉得各位有沒有一種經驗，電腦老舊了，連文書處理和基本的瀏覽網頁都卡頓，但又不想使用太老舊的作業系統(官方停止提供新功能了，連瀏覽器也不提供更新支援了)，這時便可以下載最新版的CloudReady家用版來使用囉!既有最新版的瀏覽器，也有不少Web App能使用；也因為是基於瀏覽器的作業系統，因此資源占用比許多作業系統都少，也不用怕不習慣使用Linux作業系統(安裝軟體的方式很不一樣，使用邏輯也差很多，而且一直使用命令行也不是很直覺的用法)，所以，只要電腦支援64位元，幾乎都可以用CloudReady(試過家裡唯一一台32位元電腦，無法使用32位元版的CloudReady開機)
+開始吧!
+準備材料有:
+ 8GB隨身碟(資料會洗掉，請先移除資料) 要安裝的電腦  首先請先到官網按下[DOWNLOAD 64-BIT IMAGE]下載64位元版安裝檔(32位元版已停止支援)
+無論使用何種系統，請不要選擇USB Maker，因為筆者和朋友測試多次，很容易製作失敗
+請將下載後的檔案(*.zip)解壓縮後會得到一個(*.bin)檔案
+接下來請使用Chrome開啟這個連結，並安裝後開啟
+插上隨身碟之後按齒輪，並按下[Use local image]
+選擇剛剛解壓縮出來的BIN(*.bin)檔案
+然後插入並選擇剛剛準備好的隨身碟
+接下來按兩次藍色按鈕，並授予使用者帳戶控制的權限，等待完成
+如果過程中跳出USB磁碟機需要格式化的視窗，請按下取消!
+完成之後請將電腦關機，依照電腦製造商提供的方法進入BIOS設定、開機選單或Mac開機管理程式，並選擇使用剛剛製作好的隨身碟開機(視情況可能需要輸入BIOS密碼或是韌體密碼)
+本篇以PC作為示範，所以使用Boot Menu選擇USB磁碟機(隨身碟名字可能不一樣)
+再來會進入開機畫面
+開機完成後可以選擇語言和聯網等基礎設定
+設定完成後可以按下藍色的開始使用
+右下角按下後會展開控制中心（下半部）和通知中心（上半部）
+控制中心可以控制各式開關、關機、鎖定、打開系統偏好設定
+按下Install OS便可以安裝到硬碟，以後開機就不用依賴這個隨身碟了，但是會將硬碟資料清空，請謹慎操作。
+左下角的圓形按鈕是啟動台，可以找Chromium應用程式商店下載各式Chrome App和擴充功能。
+值得一提的是，下載的Chrome App會和帳戶同步，意指重新安裝或者是到別台CloudReady電腦、Chromebit、Chromebox或是Chromebook上都會同步安裝
+在設定裡面可以調整各種選項，裡面的設定值也會同步
+有一個App叫做「檔案」，功能相當於Finder和檔案總管，可以管理檔案
+而且也會自動串接Google雲端硬碟，非常方便。
+大致介紹完畢囉！祝各位用得愉快～
+螢幕快照的快速鍵是Ctrl+F5，會存在下載資料夾
+其餘快速鍵幾乎都跟Windows差不多，可以參考這篇官方文章</description>
+    </item>
+    
+    <item>
+      <title>使用Android手機作為Mac的網路連線來源的方法</title>
+      <link>http://blog.steveyi.net/2020/horndis/</link>
+      <pubDate>Sat, 08 Aug 2020 07:23:53 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/horndis/</guid>
+      <description>有時因為某些原因，不想使用Wi-Fi上網或使用Wi-Fi個人熱點時，或是電腦的無線網路卡受到周遭物品的遮蔽時，甚至是黑蘋果電腦沒有相容無線網卡等情況下，將Android手機作為網路接收器是一個好主意。
+macOS需求為10.11(El Captain)以上，本篇筆者使用macOS 10.13(High Sierra)作為示範
+只要Android手機連得到Wi-Fi或是行動數據連線，而且有USB數據連線的功能，都可以執行以下教學提到的內容。
+請注意，手機一直24小時掛著電源可能會造成膨脹，需要時再接上電腦。
+首先請先打開這個網址，前往作者的下載頁面，點擊下圖紅色框起來的那個按鈕
+
+接下來請在左下角的下載進度條按下「保留」，這是因為電腦將這個套件誤判為病毒。
+進到安裝程式後請一路按下「繼續」
+如果遇到需要輸入密碼的介面，請輸入密碼來授予權限
+安裝完成後，請將手機插上電腦的USB連接埠，並且打開USB數據連線
+到系統偏好設定裡，打開網路偏好設定
+接下來就會在裡面看到手機有沒有連線囉</description>
+    </item>
+    
+    <item>
+      <title>小易部落格iOS版App開放下載囉！</title>
+      <link>http://blog.steveyi.net/2020/ios-app/</link>
+      <pubDate>Mon, 20 Jul 2020 07:50:55 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/ios-app/</guid>
+      <description>這個App可以讓您輕鬆查看最新的小易部落格文章唷！
+讓我們來看看要怎麼安裝吧
+Android版請見這篇
+首先先使用Safari打開您現在正在瀏覽的這個網頁，然後按這裡下載描述檔。
+按下允許下載後，請按「關閉」，然後打開「設定」並照著系統的指示安裝即可～
+接下來就會在主畫面看到圖標了
+如果日後需要移除，請打開設定並照著下方步驟即可移除</description>
+    </item>
+    
+    <item>
+      <title>輕鬆免工具關閉Windows 10自動更新</title>
+      <link>http://blog.steveyi.net/2020/no-win10-update/</link>
+      <pubDate>Sat, 18 Jul 2020 14:37:57 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/no-win10-update/</guid>
+      <description>由於Windows 10更新時常占用筆者電腦的儲存空間，而且常常會有一些莫名其妙的問題出現(例如Windows 內建搜尋功能無法使用等)，所以自己發現了一個有效阻擋更新的方法。
+請先打開 開始&amp;gt;設定&amp;gt;更新與安全性
+接下來進入Windows Update設定後請按下[進階選項]
+如果有可用更新的話，建議可以先更新完再進行接下來的操作
+接下來請將[允許從計量付費連線下載]關閉
+然後請打開網路選單，如果是USB個人熱點或是有線網路，請按兩下目前使用的連線
+( 以圖片舉例為[網路2] )
+在下個畫面再按兩下[網路2]
+然後將連線設為[計量付費連線]，就完成了
+如果是使用無線網路，則請按下[內容]
+接下來請設為計量付費連線就可以囉
+上網時記得做這小小的動作就可以輕鬆避免Windows 10自動更新囉~
+如果需要更新的時候進來Windows Update按[下載]就可以囉</description>
+    </item>
+    
+    <item>
+      <title>FRRouting 入坑指南兼心得(1)</title>
+      <link>http://blog.steveyi.net/2020/frrouting-install/</link>
+      <pubDate>Sun, 12 Jul 2020 13:07:14 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/frrouting-install/</guid>
+      <description>很久沒有來分享了！最近仍然在學習BGP知識及測試之前一直使用bird1來廣播BGP，後來在跟朋友Peer時，一直無法建立對等（很玄，但卻可以跟IX建立
+最近則卸載了Bird1，改安裝ffrouting是從Quagga fork來的，慢慢發展成現在
+同時，他也是一個很強大的路由套件（其指令類似於Cisco或Quagga）
+於是，就摸索了一下
+整理了一些心得使用者指南(英文): http://docs.frrouting.org/en/latest/
+GitHub專案: https://github.com/FRRouting/frr/releases
+首先，我們要先來安裝ffrouting
+\# 更新套件 apt update -y apt upgrade -y apt install -y curl gnupg2 traceroute # 安裝FRRouting curl -s [https://deb.frrouting.org/frr/keys.asc](https://deb.frrouting.org/frr/keys.asc) | sudo apt-key add - FRRVER=&amp;quot;frr-stable&amp;quot; echo deb [https://deb.frrouting.org/frr](https://deb.frrouting.org/frr) $(lsb\_release -s -c) $FRRVER | sudo tee -a /etc/apt/sources.list.d/frr.list sudo apt update -y &amp;amp;&amp;amp; sudo apt install -y frr frr-pythontools # 開啟IP forwarding echo &amp;quot; net.ipv4.conf.all.forwarding = 1 net.ipv6.conf.all.disable\_ipv6 = 0 net.ipv6.conf.default.disable\_ipv6 = 0 net.</description>
+    </item>
+    
+    <item>
+      <title>幫Spotify或其他音樂軟體加上實時歌詞的方法(Android)</title>
+      <link>http://blog.steveyi.net/2020/dynamic-lyrics-android/</link>
+      <pubDate>Sat, 11 Jul 2020 10:00:12 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/dynamic-lyrics-android/</guid>
+      <description>上次有一篇介紹各家串流平台的免費會員比較，各位可以發現實時歌詞很多家平台都有
+但Spotify根據筆者測試只有Premium用戶能用或是有些平台沒有歌詞服務，稍嫌可惜
+這時想要聽著Spotify或其他沒歌詞的平台的免費音樂，但又覺得沒歌詞不能一起唱很麻煩嗎 這時候照這篇文章做就可以解決這個問題囉
+這篇文章適用Android用戶，iOS/iPadOS用戶在另外一篇唷
+注意：Musixmatch for Android的原理是讀取通知，所以有些中文的專輯版音樂被Youtube Music等平台轉為英文名時，可能產生誤判情形，此時就只能改用其他平台或是關掉Floating Lyrics了，如果是MV或是影片大概就辨識不到了
+如果使用小米/Redmi/黑鯊/POCO手機的用戶，請將應用程式從最近應用上鎖，並將省電策略設為無限制，可以參考這邊
+開始吧 首先請先下載Musixmatch
+下載完成後請打開並註冊或登入Musixmatch的帳號
+如果有詢問是否加入Musixmatch Premium會員，可以關掉
+接下來請允許所需的權限
+接下來視需要，登入Spotify或是音樂庫
+此處以Spotify示範
+輸入帳號密碼
+然後滑到最底部按綠色的「同意」按鈕
+在Spotify或其他平台隨便播放一首歌，如果跳出這視窗，請按「別再顯示」
+接下來會跳出Floating Lyrics的實時歌詞視窗
+如果支援實時歌詞的歌曲就會自己跳，如果只支援靜態歌詞就需要自己用手滑，不支援歌詞的話也會出現在這邊
+按下Floating Lyrics視窗裡，歌名右邊的圓形按鈕可以更改樣式
+比如說更改顏色或是展開歌詞
+按下圓形按鈕右邊的三個點按鈕可以看到選單有更多功能
+點選「在App內顯示」就可以整個畫面充滿歌詞
+打開通知中心可以看到隱藏Floating Lyrics的按鈕
+接下來可以測試其他應用程式（但不是每款音樂App都支援）
+筆者在Friday音樂隨便播放一首歌，程式本身沒有這首歌的歌詞，此時Musixmatch便非常實用
+在Youtube Music測試，不少專輯版音樂都能用，但如前面所述，部分中文歌會產生誤判的情形（我也不知道到底為什麼中文歌名要寫英文）
+舉例來說，以下這首歌曲是鄧紫棋的「好想好想妳」
+但歌詞卻誤判為另一首(我完全沒聽過的)歌曲，這時我只好關掉Floating Lyrics，或是改用選單的歌詞辨識功能</description>
+    </item>
+    
+    <item>
+      <title>幫Spotify加上實時歌詞(iOS/iPadOS)</title>
+      <link>http://blog.steveyi.net/2020/no-premium-spotify-dynamic-lyrics/</link>
+      <pubDate>Sat, 11 Jul 2020 07:31:26 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/no-premium-spotify-dynamic-lyrics/</guid>
+      <description>上次有一篇介紹各家串流平台的免費會員比較，各位可以發現實時歌詞很多家平台都有
+但Spotify根據筆者測試只有Premium用戶能用，稍嫌可惜
+這時想要聽著Spotify的免費音樂，但又覺得沒歌詞不能一起唱很麻煩嗎
+這時候照這篇文章做就可以解決這個問題囉
+這篇文章適用iOS/iPadOS用戶，Android用戶在另外一篇唷
+開始吧 首先請先下載Musixmatch
+下載完成後請打開並註冊或登入Musixmatch的帳號
+如果有詢問是否加入Musixmatch Premium會員，可以按左上角「ㄨ」關掉
+完成後請授權Spotify，按下綠色的按鈕
+接下來滑到最下面按綠色的「同意」
+這時候可以隨便播一首歌
+然後回到Musixmatch，轉到「音樂」頁面或是「首頁」會看到正在播放的音樂
+按下去會展開
+如果有支援實時歌詞，會跟著音樂跑，如果只支援靜態歌詞，則可能需要自己用手滑，最怕是有些音樂沒支援歌詞
+左下角也有翻譯功能喔（如果有人翻譯的話）
+如果使用iPad還可以搭配SpiltView邊看歌詞邊放專輯封面展示
+或是使用iPad的Spilt View邊看歌詞邊做其他事（例如：瀏覽網頁）
+也可以在桌面左邊新增小工具
+桌面上就會有歌詞囉</description>
+    </item>
+    
+    <item>
+      <title>PVE入門心得-安裝篇</title>
+      <link>http://blog.steveyi.net/2020/pve-install/</link>
+      <pubDate>Tue, 07 Jul 2020 05:33:14 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/pve-install/</guid>
+      <description>玩虛擬機有一段時間了，不過是在Windows系統下裝VMware Workstation玩xD
+後來閒置了幾台電腦，恰好也查詢到PVE(Proxmox VE)這個開源虛擬系統，於是 我們就來安裝玩玩吧!
+前期準備:
+Proxmox VE 安裝碟
+高核心且空閒的電腦(不然跑起來會很卡)
+首先，我們先到官方網站下載PVE的ISO檔案 官網載點
+點擊左方的 Proxmox VE 6.2 ISO Installer 來下載(6.2是版本號，右方則是種子下載)
+下載好之後，我們將檔案寫入USB中，做成安裝碟
+這邊推薦使用Etcher來寫入，官網連結
+做好安裝碟之後，我們進入BIOS，並調整開機順序(將安裝碟設為第一順位)
+接著我們就可以進行安裝了!
+首先，選擇第一個 Install Proxmox VE
+接著同意服務條款
+選擇硬碟
+選擇國家及時區
+設置root密碼及電子郵件地址
+設置主機名稱及網路(這邊建議一次就設定好，不然後續修改IP有點麻煩)
+全部完成後，就點擊Install來進行安裝!
+安裝完成後，我們使用 https://你的IP:8006 就可以進入管理面板囉!
+下一篇，我們將與大家分享一些配置的過程</description>
+    </item>
+    
+    <item>
+      <title>[2020最新] 各大串流平台免費會員比較</title>
+      <link>http://blog.steveyi.net/2020/free-streaming-music-compare/</link>
+      <pubDate>Sun, 05 Jul 2020 12:51:26 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/free-streaming-music-compare/</guid>
+      <description>蘿蔔這幾年來一直在尋找免費好用的串流音樂平台，也因此幾乎所有台灣常見的平台都有用過，所以接下來一一為大家介紹
+首先我先說一下，蘿蔔是台灣人，所以文章介紹的有些平台不見得能在其他國家或地區使用；或是有些平台改版了，這篇文章可能會來不及更新，請見諒
+再來要說的是，我們不鼓勵使用盜版或破解版，首先是音樂平台和音樂創作者沒辦法收到錢（例如串流音樂平台上面廣告贊助的費用），而好音樂就沒辦法受到鼓勵，裝置也可能被病毒或是間諜程式入侵，而且還可能會有法律責任產生
+說完了那我們開始介紹吧
+Spotify 一個老牌的串流音樂平台，整體以播放清單為主，有Spotify Connect可以無縫更換聆聽裝置，最近剛陸續開放歌詞功能，不過似乎只有Premium能用。
+免費會員在平板電腦和電腦App、電腦版網頁可以隨選即播，有穿插廣告，音質不能設為「最高」。
+如果在手機和iPod touch上則是限隨機播放，每小時只能跳過六首歌（部分指定的個人化播放清單可隨選即播，不在此限）。
+有趣的是筆者的大螢幕手機被視為平板，賺到隨選即播🤣
+KKBOX 串流音樂服務的元老，比Spotify還早推出，中文曲庫比Spotify多，有動態歌詞。
+會員註冊完會有三天體驗會員幾乎全功能都能用，體驗會員過期後會成為一般會員，但每個裝置能登入的體驗會員帳號次數有限。
+一般會員音質不能設為最高(320kbps)，每天會有一則廣告，看完後可以免費聽20首歌曲，用完後每首歌只能預覽30秒。
+網路上有時會不定期發布體驗序號。
+MyMusic 會員註冊完會有7天體驗會員全功能都能用，體驗會員過期後會成為一般會員。
+一般會員音質只能設為一般(128kbps)，只有指定的幾張歌單可以完整聽，其他歌曲都只能預覽30秒。網路上有時會不定期發布體驗序號。
+Friday 音樂 無廣告、有動態歌詞
+會員註冊完會有7天體驗會員全功能都能用，體驗會員過期後會成為一般會員。
+一般會員音質只能設為一般(128kbps)，每天只能播放五首歌，用完後都只能預覽30秒。
+網路上有時會不定期發布體驗序號。
+Apple Music 跟蘋果生態系整合度非常高，有很漂亮的動態歌詞
+（需升級至iOS/iPad OS 13以上，iOS 10以上只有靜態歌詞）
+需要先付錢才能送三個月試用，Android版App帶給我的感受不是很順手；Android版使用上也常常遇到Bug，但如果使用iPhone的話可以直接在Apple Watch上面呼叫Siri點歌確實很方便，網路上偶爾也會發布歌手或電台贊助的免費體驗序號。
+官方說明的系統需求是iOS 8.4/Android 5.0/iTunes 12.2以上
+網易雲音樂 如果需要全曲庫聽到飽要用翻牆軟體（如：穿梭VPN），沒翻牆的話會反灰如圖，動態歌詞，隨選即播，無穿插廣告，但大部分歌曲音質只能設128Kbps，有少部分歌曲可以下載，也有一些獨家音樂，英文歌偏少。
+蝦米音樂 常常簽到可以領體驗會員，但曲庫筆者感覺上比網易雲跟QQ音樂少，有些歌要用翻牆軟體（如：穿梭VPN等），有動態歌詞，部分歌曲可以下載，英文歌偏少。
+QQ音樂 曲庫幾乎都要用翻牆軟體（如：穿梭VPN等），有動態歌詞（逐字），英文歌偏少。
+MixerBox 3 基於Youtube做成的MV播放器，但iOS每次離開App就要從控制中心按一次播放；Android則會有一個小視窗懸浮著，略為不便，而且因為是MV，所以有些穿插對話的MV會影響聽歌體驗。有些人會開台一起聽歌，而探索頁面常常可以找到適合自己的音樂，音樂鬧鐘功能可以讓起床變有趣
+Youtube Music App不能背景播放，雖然有其他的方法（iPadOS和iOS/Android），但不管什麼方法每播完一首歌就跳廣告實在很煩，而且廣告的品質也不及Spotify。
+而iOS版的App給我的體驗很差（用起來的Bug比Android版的Apple Music還多，比如說暫停一下，後台就被殺了又要重新載入一次）。
+有設計歌詞的區塊，但沒幾首歌支援的。
+不含Youtube的話曲庫不算多，但配合Youtube上的影片後，曲庫可說是非常龐大；但也因此搜尋介面很亂，有專輯版音樂，也有MV、第三方上傳的音樂影片（版權灰色地帶，時常被下架），也有播放清單。
+另外令人匪夷所思的是系統語言是中文的情況下，有些中文歌都只寫英文歌名，非常奇葩
+以上就是蘿蔔介紹台灣比較常見的串流音樂平台，有些版權比較屬於灰色地帶的就先不介紹了，畢竟「我是小易」的編輯們也無法保證其合法性
+看完這些介紹，各位有打算使用哪個串流音樂平台了嗎？</description>
+    </item>
+    
+    <item>
+      <title>LINE聊天訊息自動分類好友、群組、官方帳號</title>
+      <link>http://blog.steveyi.net/2020/line-xun-xi-fen-lei/</link>
+      <pubDate>Fri, 03 Jul 2020 12:25:49 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/line-xun-xi-fen-lei/</guid>
+      <description>LINE分類完之後找訊息大概會方便很多&amp;hellip;
+ 這功能目前只有Android有加入，iOS應該過一段時間也會加入
+請確認LINE版本是Google Play上的最新版本
+ 首先，請先打開LINE並到主頁頁面
+接下來點選右上角的齒輪，找到LINE Lab然後打勾
+接下來就會自動分類囉</description>
+    </item>
+    
+    <item>
+      <title>無需訂閱Youtube Music Premium也能讓Android的裝置享有背景播放的功能(Youtube也適用哦！)</title>
+      <link>http://blog.steveyi.net/2020/youtube-background-playing-android/</link>
+      <pubDate>Fri, 19 Jun 2020 15:58:18 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/youtube-background-playing-android/</guid>
+      <description>此處主要由Android手機作為示範，Android 平板也可以用一樣的方法唷
+iOS/iPadOS也可以用類似的方法，請見此篇
+讓我們開始吧 首先請先用Chrome瀏覽器(有內建Google Play服務的裝置幾乎都有，沒有的可以去下載)打開Youtube Music首頁，別急著播放音樂，按下右上方的三個點點，然後勾選「電腦版網站」
+接下來請隨意播放一首歌
+開始播放後可以回到桌面、鎖定螢幕、或是切換到其他App，您會發現音樂繼續播放，且通知中心可以控制播放、暫停及快轉
+到這邊就完成拉
+以後要聽音樂直接在Chrome上面打開Youtube Music，切換成電腦版網站就可以拉～
+Youtube也要允許背景播放的話也是一樣的方法唷！
+筆者順便測試了幾個品牌的Android手機
+目前也沒遇到不能用的！</description>
+    </item>
+    
+    <item>
+      <title>無需訂閱Youtube Music Premium也能讓iOS/iPadOS的裝置享有背景播放的功能(Youtube也適用哦！)</title>
+      <link>http://blog.steveyi.net/2020/youtube-background-ios/</link>
+      <pubDate>Fri, 19 Jun 2020 14:39:47 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/youtube-background-ios/</guid>
+      <description>此處主要由iPad作為示範，iPhone也可以用一樣的方法唷
+Android也可以用類似的方法，之後會再發一篇教學，敬請關注「我是小易」後續的文章吧！
+後續更新：Android版教學在此
+ 筆者最近一直在找好用的免費串流音樂服務，發現其實電腦上的Youtube Music App(其實就是嵌入網頁拉XD)還不錯用，可惜行動版App跟網頁就都不能背景播放了(訂閱Premium的話就是App版可以，但網頁還是不行唷)
+後來筆者發現了一個iOS 13/iPadOS 13的好功能
+(比較舊的iOS也有，但功能不是那麼完善，各位也可以試試看)
+ 讓我們開始吧 首先請先用內建的Safari瀏覽器打開Youtube Music首頁(請按住選擇在新標籤頁打開)，別急著播放音樂，按下左上方的AA，然後按下「切換為電腦版網頁」
+(iOS 12或更早版本的切換電腦版按鈕在動作選單內，也就是重新整理按鈕旁邊那個按鈕)
+註：這邊不建議使用第三方瀏覽器的原因是有些第三方瀏覽器功能不如內建的穩定，記憶體有時會被系統回收凍結，導致音樂無緣無故暫停
+iOS 13/iPadOS 13以上的電腦版網頁切換開關在左上方的「AA」內
+iOS 12或更早版本的電腦版網頁切換開關在動作選單內
+接下來網頁會重新載入，此時再按一次AA，點選網站設定，把開關打開，這樣以後就會自動以電腦版網頁載入了(iOS 12或更早版本不支援此操作)
+接下來可以回到桌面、鎖定螢幕、或是切換到其他App，您會發現音樂繼續播放，且控制中心和通知中心可以控制播放、暫停及快轉
+如果控制中心和通知中心沒出現控制介面或是控制介面標題只寫YouTube Music，而希望寫出歌名的話，就回到網頁多按幾下播放/暫停按鈕就好了
+回到網頁也可以控制上一首和下一首、切換歌曲等電腦版可以做的操作
+到這邊就完成拉
+以後要聽音樂直接在Safari上面打開Youtube Music就可以拉～
+Youtube也要允許背景播放的話也是一樣的方法唷！
+筆者也有在iPhone上測試過，可以用～
+iPhone也可以背景播放唷
+iPhone的Youtube Music網頁也能跟電腦網頁有幾乎一樣的功能囉
+筆者試了一下，年代有點久遠的iOS 10也能用哦</description>
+    </item>
+    
+    <item>
+      <title>在忘記管理員帳號的Mac上新增新的管理員帳號</title>
+      <link>http://blog.steveyi.net/2020/iforgot-mac-password/</link>
+      <pubDate>Thu, 04 Jun 2020 05:54:21 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/iforgot-mac-password/</guid>
+      <description>之前筆者借用的一台iMac用到放假的時候，放在一個安全的地方，然後回家（搬不回去）。
+過了一個多月再回來發現竟然忘了密碼（很誇張但是是真的，一直想不起來之前的密碼），幸好我在回家前就已經把資料都備份好了。
+這可以重灌，但是因為筆者事情有點多所以沒空可以慢慢重灌，所以便找到了這麼一個方法，比重灌來的快多了，而且舊的帳號之後可以用新帳號去刪掉，App基本上也不用重新下載
+（當時有點忙所以這篇是後來寫出來的，就不是用iMac示範了）
+ 注意：
+請不要將這篇用在不屬於你的(除非擁有者授權你的)電腦上，如果產生糾紛，筆者不負任何責任。
+如果要確保自己的電腦不會被macOS工具程式修改，請設定韌體密碼，但忘記密碼的話就也沒救了，只能尋求Apple官方協助了
+ 首先請先將電腦關機後，再將電腦開機。
+在電腦開機時同時按⌘(command)和R，您會看到macOS工具程式。
+請在選單列的「工具程式」打開終端機
+進入終端機後，請依序輸入以下指令，每行輸入完後要按 return 確認執行：
+掛載磁碟機：
+mount -uw / 讓電腦當作沒有開過設定精靈，讓下次開機出現設定精靈：
+rm /var/db/.AppleSetupDone 立即重新啟動：
+shutdown -r now 接下來開機應該會看到設定精靈
+接下來就可以設定使用者帳號囉
+接下來進入系統後，請登入並從選單打開系統偏好設定
+接下來請打開「使用者與群組」
+接下來請按鎖頭，並輸入剛剛的新帳號和新密碼
+接下來在選單選擇要刪掉的使用者，並按下「-」按鈕之後，選擇檔案的處理方式後，按下刪除使用者，舊的使用者就消失囉～</description>
+    </item>
+    
+    <item>
+      <title>使用IFTTT讓手機在離開家裡時關閉無線網路</title>
+      <link>http://blog.steveyi.net/2020/ifttt-zhi-dong-guan-wifi/</link>
+      <pubDate>Wed, 03 Jun 2020 04:43:06 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/ifttt-zhi-dong-guan-wifi/</guid>
+      <description>由於筆者離開家裡的時候，常常忘記關掉Wi-Fi，所以就找出了這樣一個方法
+首先我們會需要做準備工作，依照不同的裝置類型會有不同的方法
+如果是小米或是Redmi、黑鯊、POCO手機的使用者 請先將IFTTT從最近應用程式中鎖定並允許自啟動、省電策略設為無限制，如果不是則請跳過此段。
+按住IFTTT預覽圖後會跳出下圖的選單
+接下來請確認IFTTT旁邊有小鎖頭之後，打開應用詳情，允許自啟動並將省電策略設為無限制，以免後台被殺。
+如果是Android 6.0至8.0
+(不含小米或是Redmi、黑鯊、POCO手機的使用者) 安裝完成後請先至系統設定&amp;gt;電池(或電源)
+依照不同操作系統可能有不同的操作方式，以Google手機為例，需先按下右上角三個點之後點選電池效能最佳化
+然後在選單內找到IFTTT，選擇不要最佳化，以免後臺程序無法運行造成功能失常
+如果是Android 9.0至10.0
+(不含小米或是Redmi、黑鯊、POCO手機的使用者) 請到系統設定&amp;gt;應用程式和通知&amp;gt;特殊應用程式存取權
+依照不同操作系統可能有不同的操作方式
+以Google手機為例:
+然後點選電池效能最佳化
+找到IFTTT之後選擇不要最佳化
+準備工作完成
+下一頁就開始進行設定囉！千萬別錯過～ 使用前，需要先註冊或登入IFTTT (ifttt.com)
+接下來他會推薦一個IFTTT的範例，按下X跳過
+接下來請打開IFTTT應用程式
+接下來請登入本文章一開始所使用的帳號
+按下Got it和Get More
+接下來請按下Create
+先按This，選擇Android Device
+接下來選擇圈起來的選項
+接下來請輸入要觸發的WiFi名稱
+然後按That，也是選擇Android Device，然後選擇Turn off WiFi
+確認無誤後請按下Finish
+筆者建議把Recieve notifications when this runs的開關打開，這樣運作時IFTTT便會提醒你說Wi-Fi被關掉了
+如果要求位置資訊，請一律允許，不然他沒辦法正常運行
+Connected就表示已開啟
+效果示範如下
+小米和黑鯊、Redmi、POCO手機每次運行時都會彈窗詢問是否允許，我們可以從應用詳情的地方選擇權限管理
+接下來找到「開啟WLAN」，並設為始終允許
+ 到這裡就完成囉！如果設定Applet執行時跳出通知，就會有下圖的效果哦～
+    至於為什麼不要用Location定位去製作Applet呢？ 因為只要有任何Applet用到Location服務，那IFTTT就會一直存取位置資訊，耗費電量，而且許多品牌的手機進入省電模式就會關掉定位功能，那麼這就沒辦法正常運作了
+只要任何一個Applet有用到Location服務，IFTTT就會一直使用定位</description>
+    </item>
+    
+    <item>
+      <title>解決Telegram在Android開啟深色模式時自動跳回預設主題的問題</title>
+      <link>http://blog.steveyi.net/2020/telegram-dark-mode-theme/</link>
+      <pubDate>Mon, 01 Jun 2020 08:46:56 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/telegram-dark-mode-theme/</guid>
+      <description>如果有在Telegram更改主題的用戶應該會發現，在深Android色模式下每次啟動Telegram都會被改回預設的深藍色主題非常困擾
+在這裡有一個方法，可以有效解決這個問題
+首先請先打開側邊選單，然後按「設定」
+接下來請選擇對話設定
+接下來請找到「自動夜晚模式」並關掉</description>
+    </item>
+    
+    <item>
+      <title>讓手機音質提升的小技巧</title>
+      <link>http://blog.steveyi.net/2020/yin-zhi-ti-sheng/</link>
+      <pubDate>Mon, 01 Jun 2020 03:55:45 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/yin-zhi-ti-sheng/</guid>
+      <description>註：Apple Lightning裝置以及大多數的USB-C裝置(像是Windows電腦等)也適用這篇哦
+在你認為兩百元有找的耳機音質不好的同時，你是否忽略了哪個重要的細節呢？
+雖然也許手機廠牌跟耳機廠牌一致可以得到更好的優化體驗，但不可否認手機內置的DAC(數位音訊轉化為類比訊號提供給耳機的一個重要元件)不一定可以媲美外置的DAC，也許不是耳機太差，而是DAC推不動或是搭配起來不合適
+但人們會問：外置的DAC不是都很大一台嗎?
+沒錯的，專業等級的DAC確實有點龐大，而且價格偏高
+Google隨便搜尋都會看到這種龐大的DAC
+但是筆者是一個講究CP值的人，這種東西音質再好基本上我是不會買的(除非我哪天發大財)
+就在我為了兩百塊有找的3.5mm的耳機音質太差傷腦筋時，忽然想起抽屜裡那完全沒用過的Google USB-C 轉 3.5 毫米轉接頭
+(因為筆者之前使用的Pixel 2尾插有問題只能充電但送不回美國)
+轉接頭插上去後我明顯的感受到了無力的低音瞬間變得有力
+之後還拿雜牌的轉接頭來試聽，音質慘不忍睹，比手機的3.5mm耳機口還慘
+如果搭配手機內建的音質選項，甚至是等化器都調整成自己偏好的，效果會更好
+(但筆者不推薦HTC手機用戶使用「HTC BoomSound配備杜比音效」在耳機上，整個聲音變得不像原來的樣子，沒開的音質反而聽起來比打開好)
+現在來說說為什麼Google的轉接頭有這樣一個神奇的效果，而雜牌轉接頭聽起來如此慘不忍睹了。
+原因在於Pixel 2016和Pixel 3a以外的Google手機和HTC後來的手機，以及2016以後的iPhone一樣，沒有內置耳機的DAC，他們將DAC移植到了轉接頭（等於是採用外置音效卡的設計，所以Google的轉接頭一定自帶DAC）
+雜牌轉接頭雖然可能有DAC，但用料可能不是這麼扎實，聽起來刺耳和低音無力是肯定的，只能說是一分錢一分貨。
+要如何確保自己買的轉接頭支援DAC呢？
+(Apple Lightning接頭的裝置就不用擔心了，一定會有的)
+判別USB-C轉接頭是否有DAC最好的方法就是購買時詢問店員或是賣家，是否支援Pixel 2手機或HTC U11手機
+至於品牌的部分，市面上有很多(像是Apple、Google、HTC、紫米、moshi等)，各位可以自己去探索一下自己喜歡的聲音效果哦～
+後來我去測試了一下，電腦的部分，Windows 10(PC和Mac)可以用，但我手上的轉接頭插到macOS 10.15.5的Mac是沒有反應的(不確定是不是因為不是蘋果的)，供大家參考
+電腦的部分，Windows 10(PC和Mac)可以用
+筆者對這方面有研究過，但還未達專家等級，如果有誤懇請讀者見諒</description>
+    </item>
+    
+    <item>
+      <title>在Ubuntu系統下架設Tunnel Broker服務(v4 to v6)</title>
+      <link>http://blog.steveyi.net/2020/tunnel-broker-bgp/</link>
+      <pubDate>Sun, 31 May 2020 16:56:41 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/tunnel-broker-bgp/</guid>
+      <description>前言 之前拿到了一個自治號碼(AS Number)，也拿到了1個 /44 及兩個 /48 的iPv6
+恰好最近想到之前有使用過HE.Net的tunnel broker服務
+這次就來架設一下sit隧道的tunnel broker服務！本篇不會說明ipv6的取得方式，請自行詢問主機提供商
+本篇將使用開源工具-IPv6-in-IPv4 Tunnel
+配置工具 首先，將工具下載下來
+git clone [https://github.com/sskaje/6in4.git](https://github.com/sskaje/6in4) 我們進入項目的etc資料夾，並修改config.ini
+nano config.ini 依序編輯 IPV6_NETWORK, IPV6_CIDR, INTERFACE, BIND_IP(有多iPv4需要)
+接著輸入 Crtl + X 來保存
+修改系統設定來允許iPv6轉發 nano /etc/sysctl.conf 在最下方添加下方這項net.ipv6.conf.all.forwarding = 1 Crtl + X 保存 sysctl -p 防火牆 iptables -I INPUT -p 41 --j ACCEPT iptables -I OUTPUT -p 41 --j ACCEPT iptables -I FORWARD -p 41 --j ACCEPT 使用工具建立伺服端(新增隧道) 假設隧道ID為1，伺服端IPv4為1.1.1.1 用戶端IPv4為8.8.8.8]
+配置文件中設置的IPv6子網為 2a0e:b107:7e0::，子網路遮罩為48(必須為8的倍數)工具會自動分割出 一個用於隧道的 /64子網及一個用於用戶路由的 /64子網</description>
+    </item>
+    
+    <item>
+      <title>使用TeamViewer遠端操作Android手機</title>
+      <link>http://blog.steveyi.net/2020/teamviewer-android/</link>
+      <pubDate>Tue, 26 May 2020 10:09:17 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/teamviewer-android/</guid>
+      <description>需要用到Android手機但常常忘記帶出門嗎？
+這時候TeamViewer就很好用了！
+但要將其從系統的自動殺後台清單移除
+遠端操作功能適用Android 5~Android 8
+（第一次可能會詢問是否允許，可以選永久允許）
+Android 9以上適用遠端查看
+（Android 9以上每次使用都要在手機上按一次允許，比較適合當作無線顯示到電腦的工具）
+示範設備：Android 6.0的HTC手機 with HTC Sense
+1.首先請先到Play商店下載Host
+2.下載遠端控制插件
+3.登入或註冊一個TeamViewer帳號
+這樣就可以在其他登入相同帳號的手機、平板或電腦遠端操作囉～
+雖然不是太順但還是堪用啦
+儀表板頁面可以顯示手機資訊，遠端控制頁面可以按圈起來的地方放大
+可以用手機控制手機唷</description>
+    </item>
+    
+    <item>
+      <title>使用Scrcpy輕鬆安裝APK檔案到手機內</title>
+      <link>http://blog.steveyi.net/2020/scrcpy-android-apk/</link>
+      <pubDate>Wed, 20 May 2020 08:52:47 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/scrcpy-android-apk/</guid>
+      <description>首先我們會先需要安裝Scrcpy並打開它。
+安裝方法在此
+如果使用的是小米手機(如果不是的話請跳過這部分)，
+請先到「設定」&amp;gt;「更多設定」&amp;gt;「開發人員選項」，允許USB安裝
+這個動作需要插入SIM卡（MIUI的要求）
+請把準備好的APK的Finder或是檔案總管視窗開在一旁，將檔案拉進Scrcpy視窗
+（手機畫面可以是任何地方，不一定要開在程式集的畫面）
+然後Mac用戶的話應該會看到終端機視窗內出現文字
+Request to install...
+以及
+Performing Push Install...
+此時手機正在安裝APK，安裝所需時間視手機速度而定
+如果使用的是小米手機，那麼請在手機上允許安裝，否則會被系統攔截而安裝失敗
+完成時Mac終端機視窗會寫「Success」表示安裝成功
+實測安裝完的程式也能正常開啟的</description>
+    </item>
+    
+    <item>
+      <title>使用Scrcpy，由電腦操作Android手機</title>
+      <link>http://blog.steveyi.net/2020/scrcpy-android/</link>
+      <pubDate>Tue, 19 May 2020 15:41:11 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/scrcpy-android/</guid>
+      <description>前情提要：由於筆者的手機螢幕忽然壞掉了，液晶會顯示但沒有背光照亮，需要用強光照射才能勉強查看畫面，但筆者依然需要使用該手機來搬移裡面重要資料以及測試Android程式等，所以一定要想辦法讓它可以操作！ (因為筆者目前主要使用iPhone)
+（只能在強光照射下隱約看到畫面）
+需求:PC或是Mac、配備Android 5.0或更高版本的裝置
+(官方說Linux也可以，但筆者沒有Linux電腦可以寫教學，因此建議您前往官方教學查看)
+Android裝置需要先打開USB偵錯   打開Android手機，找到關於手機的地方連戳版本號或是建置號碼，或是MIUI版本號
+(每一支手機的做法不同這裡不列舉)
+  直到按到寫說「不需要了，您已經是開發人員」後，打開開發人員選項
+  (每支手機「開發人員選項」放的位置也不一樣，例如小米放在「設定&amp;gt;更多設定」內)
+  接下來請打開開發人員選項，把USB偵錯(又稱USB調試)打開，如果是小米手機的話請一併打開安全設定，這個動作需要插入SIM卡並連接網路（MIUI的要求）
+USB安裝建議打開，畢竟Scrcpy拖拉安裝安裝功能滿好用的(詳見這篇)
+   「安全設定」彈窗請一路按下一步，記得要插SIM卡
+(不然按到後來會跳出請插卡的提示） 如果遇到陌生電腦記得在手機上面按允許偵錯唷 接下來請到電腦進行環境安裝  PC環境安裝  請下載最新版工具包並且解壓縮（筆者習慣解壓縮到C槽目錄下）
+也可以跟ADB驅動安裝檔一起裝在隨身碟帶著走唷  
+ 到adb.clockworkmod.com按下白色的Download按鈕安裝ADB驅動  (如果有安裝過ADB驅動程式者請直接跳過這部分)
+ 一路按下右下角的Next，預設選項夠我們用了   要求權限的話就給他唄，請按「是」   裝完請按Close   打開Scrcpy所在資料夾，找到scrcpy-noconsole.exe並雙擊執行它，便可以操作了   控制方式  主要操作 : 滑鼠左鍵&amp;gt;點擊 . 滑鼠中鍵&amp;gt;回主畫面 . 滑鼠右鍵&amp;gt;返回    其他功能快捷鍵↓
+動作
+快捷鍵
+全螢幕模式
+Ctrl+f
+調整視窗 1:1 比例</description>
+    </item>
+    
+    <item>
+      <title>在Linux系統上安裝Wireguard</title>
+      <link>http://blog.steveyi.net/2020/how-to-install-wireguard/</link>
+      <pubDate>Sat, 16 May 2020 11:51:52 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/how-to-install-wireguard/</guid>
+      <description>Wireguard是一個點對點加密網路
+一直以來，我都使用它來管理我所有的雲端主機
+今天就來分享一下安裝方法吧！
+安裝指令請參考 https://www.wireguard.com/install/
+首先，進入Wireguard安裝資料夾
+如果找不到的話，請建立一下
+cd /etc/wireguard 接著，我們使用指令來產生公私鑰，並使用cat查看公私鑰內容
+wg genkey | tee privatekey | wg pubkey &amp;gt; publickey 接著我們將公私鑰記下來，我們建立一個配置文件
+nano wg0.conf 進入nano 編輯器後，我們將下方代碼貼上，並修改公私鑰
+[Interface] Address = 192.168.200.1/24 //這邊可以自定網段 SaveConfig = true ListenPort = 51820 PrivateKey = 修改為私鑰 [Peer] PublicKey = 對方的公鑰 AllowedIPs = 192.168.200.2/24 //對方的網段 接著輸入 Crtl + X 在輸入y 退出編輯器
+接著使用指令，來存檔並啟用wireguard
+wg-quick save wg0 wg-quick down wg0 wg-quick up wg0 PS.開機自動啟動指令
+systemctl enable wg-quick@wg0 接著可以嘗試ping看看，如果有響應的話
+代表成功了！</description>
+    </item>
+    
+    <item>
+      <title>Cloud Identity 驗證網域及建立帳號</title>
+      <link>http://blog.steveyi.net/2020/cloud-identity-setting/</link>
+      <pubDate>Fri, 15 May 2020 20:35:49 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/cloud-identity-setting/</guid>
+      <description>在上一篇文，我們成功建立了Cloud Identity免費版
+在這篇文章，我們將要進行驗證網域的步驟
+首先，登入G Suite管理面板
+點擊驗證網域所有權
+接著可以選擇DNS或HTML驗證（這邊推薦使用HTML驗證）
+我使用DNS驗證了2-3次，都錯誤QQ（可能是Google系統的Bug）
+若驗證超過兩分鐘，代表&amp;hellip;你得重新驗證了xD
+驗證完成後，我們就可以建立使用者囉！
+由於目前我還不需要建立使用者（Cloud Identity免費版可以建立50個使用者）
+之後有需要的話，在到G Suite管理面板建立即可
+接著我們可以進入Google Cloud Platform
+由於剛創建帳號，我們需要同意一下服務條款
+完成！
+PS.剛進入GCP沒看到機構，可能是因為剛創建好帳號 系統還在建立中
+等待5-10分鐘應該就可以了！</description>
+    </item>
+    
+    <item>
+      <title>建立Cloud Identity帳戶</title>
+      <link>http://blog.steveyi.net/2020/create-cloud-identity/</link>
+      <pubDate>Fri, 15 May 2020 20:35:11 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/create-cloud-identity/</guid>
+      <description>首先，進入Cloud Identity申請頁面 點擊下一頁
+接著輸入公司名稱(可以隨意輸入)，員工數量(隨意選擇) 把它當作一個團隊
+選擇地點（設定好就不能修改了），其實作用不大
+設定目前的電子郵件地址（一些申請的郵件會寄到這裡）
+輸入要設定的網域（不得使用於其他 G Suite服務）
+接著建立使用者
+機器人驗證
+當出現這個頁面時，代表註冊完成了！
+接著我們需要驗證網域
+請看下一篇文章 - Cloud Identity 驗證網域及建立帳號</description>
+    </item>
+    
+    <item>
+      <title>刪除G suite組織</title>
+      <link>http://blog.steveyi.net/2020/delete-gsuite/</link>
+      <pubDate>Fri, 15 May 2020 18:17:25 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/delete-gsuite/</guid>
+      <description>之前有跟大家分享註冊G Suite帳號的方式，最近想將 Cloud Identity免費版 的G Suite組織刪除
+由於完全沒有刪除過G Suite組織，所以稍微爬文了一下
+大致整理了一下刪除的方式
+重要提醒：
+刪除前，請先取消約期授權並刪除所有GCP專案
+刪除後，所有組織資料會被清除
+首先，進入G Suite控制台，點擊公司資料
+接著點擊帳戶管理
+接著點擊 刪除帳號
+接著會提示你，這個步驟無法復原
+打勾後點擊 刪除帳號
+接著帳號就刪除囉！</description>
+    </item>
+    
+    <item>
+      <title>Backblaze B2 支援S3 API了！</title>
+      <link>http://blog.steveyi.net/2020/backblaze-b2-compatible-s3-api/</link>
+      <pubDate>Thu, 14 May 2020 03:08:02 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/backblaze-b2-compatible-s3-api/</guid>
+      <description>前幾天打開Backblaze後，看到一行大大的字
+沒錯！S3 API跟Backblaze B2兼容啦！
+S3 API是目前市面上最流行的協定，很多軟硬體都兼容
+Backblaze B2則是非常棒的雲端存處(低價優勢)
+如何使用S3 API 若存處桶是在2020/05/04前創立的，則要創立一個新的，並將檔案移入(推薦使用Rclone，會自動支援B2 Copy File)
+然後創建一個新的App Key(不要使用主要的喔)
+有關於一些B2的文章介紹:
+Backblaze B2 低價的雲端數據存儲服務
+Backblaze B2和Cloudflare Workers設定自訂域名
+BackBlaze宣布第一個歐洲數據中心啟用</description>
+    </item>
+    
+    <item>
+      <title>Backblaze B2 低價的雲端數據存儲服務</title>
+      <link>http://blog.steveyi.net/2020/backblaze-b2/</link>
+      <pubDate>Mon, 11 May 2020 09:35:00 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/backblaze-b2/</guid>
+      <description>之前學習建站之時，考量到一個問題！
+如果今天我的流量暴漲，文章變多，我的圖片空間及流量會不會也跟著變多
+所以在網路上搜尋了一些對象存處服務，找到了一間便宜的對象存處提供商－Backblaze
+什麼是對象存處 對象存處是一種數據存儲，其中每個數據單元存儲為稱為對象的離散單元。
+對象靜態文件，類似於pdf，mp3檔，圖片或影片&amp;hellip;等文件。
+這些對象實際上可以是任何類型的數據和任何大小的數據。
+對象存儲中的所有對像都存儲在單個平面地址空間中，而沒有文件夾層次結構。
+比較知名的提供商有 AWS S3、Google Cloud Storage、Backblaze B2、DigitalOcean Space&amp;hellip;等等
+那這次要介紹的則是Backblaze B2
+Backblaze B2的優勢 Backblaze B2 的價格是 Amazon S3的¼倍
+搭配CloudFlare CDN免流量費
+支持S3 API
+註冊帳號 首先，進入官網後，點擊右上角的Sign Up
+接著輸入帳號密碼，選擇資料放置區域(基本上選擇美西)
+接著到電子郵件中驗證帳號！完成
+創建Bucket 登入帳號後，點擊中間的Creat a Bucket
+接著輸入Bucket名稱，不可以跟別人重複
+接著選擇Public(如果你用於備份, 私人檔案的話，就選擇Private)
+接著我們就會看見剛剛創建的Bucket了
+創建App Key 雖然說在網頁上我們就可以上傳檔案了，但是網頁只支持到500MB的檔案
+超過就必須要使用API上傳了，所以這邊我們來教大家怎麼建立App Key
+首先，點擊左方的App Keys
+接著我們點擊 Add a New Application Key
+輸入App Key名稱，允許訪問的Bucket
+接著點選Create a new key
+接著會產生API資訊，將S3 EndPoint, Key ID及applicationKay記下來
+上傳/下載檔案 在Windows/Mac上傳或下載有很多種工具可以做，我比較推薦使用Cyberduck
+如果是Linux的話，我認為Rclone是一個好選擇
+PS.可以選擇S3 API或是Backblaze API進行連接</description>
+    </item>
+    
+    <item>
+      <title>Github Pages 綁定自訂網域及SSL</title>
+      <link>http://blog.steveyi.net/2020/github-pages-ssl/</link>
+      <pubDate>Thu, 23 Apr 2020 05:19:40 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/github-pages-ssl/</guid>
+      <description>上篇跟大家分享了 透過Github託管靜態網站，這篇文章就來分享一下綁定自訂網域及開啟SSL的過程吧！
+首先，進入Github Repository的設定
+輸入自訂的網域，接著點擊Save
+右側會有一個 xxxxx.github.io. 的子網域，先記起來 等等會用到
+接著我們進入DNS服務商來設定DNS紀錄（這邊是用AWS Route 53）
+設定CNAME紀錄
+值為上方的 xxxxx.github.io.
+大約等待2-3分鐘，就會生效囉！
+接著回到Github Pages設定，等待DNS生效（大約15分鐘）
+勾選Enforce HTTPS，系統就會自動部署SSL憑證
+這樣就完成部署囉！
+Demo: https://git-demo.yiy.tw</description>
+    </item>
+    
+    <item>
+      <title>透過Github託管靜態網頁 - Github Pages</title>
+      <link>http://blog.steveyi.net/2020/github-static-website/</link>
+      <pubDate>Wed, 22 Apr 2020 14:09:46 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/github-static-website/</guid>
+      <description>首先，進入Github 點擊左方綠色按鈕的 New
+輸入Repository名稱（自定義）
+選擇 Public(公開) 或是 Private(私人)
+點擊Create Repository
+這樣就建立好一個Repository囉！
+接著我們要下載Github Desktop，方便上傳網頁原始檔
+點擊中間的Download for macOS（Windows 則會是 Download for Windows）
+下載完成後，登入Github帳號（Sign in to Github.com）
+接著選擇剛剛建立的Repository
+點擊 Clone
+接著將檔案複製到資料夾中
+回到Github Desktop，輸入Commit changes的資訊
+點擊Commit to master
+接著我們回到網頁，刷新後應該就會看到剛剛上傳的檔案囉！
+接著來設定一下Github Pages
+選擇master branch
+接著就會產生子網域，就可以嘗試進入網站囉！
+下次再來補充綁定自訂網域及SSL的方式吧！</description>
+    </item>
+    
+    <item>
+      <title>Mailgun &#43; Gmail 達成自訂網域郵箱</title>
+      <link>http://blog.steveyi.net/2020/mailgun-gmail-custom-domain-email/</link>
+      <pubDate>Wed, 22 Apr 2020 12:48:48 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/mailgun-gmail-custom-domain-email/</guid>
+      <description>小時候總是很好奇寄件者後方的網域名稱是什麼，後來接觸到網站架設後，註冊了許多網域（現在手上大概6個網域左右)，也慢慢解開了小時候的疑惑
+今天就來分享一下Mailgun + Gmail 自訂網域郵箱的方法吧！
+首先，先註冊Mailgun，預設有5000封信件額度
+PS.如果你是GCP客戶，可以到合作頁面，申請免費30000額度
+註冊之後，我們進入控制台新增網域（預設會有一個網域）
+上方輸入網域名網域名稱，下方勾選Create DKIM Authority 並選擇1024位元(部分DNS服務商不支持2048位元)
+接著設定DNS紀錄，MX紀錄一定要設定（不然會收不到信）
+小提醒：如果你有其他郵件收信服務(如: Gsuite, Office…等)，不要設定MX紀錄，不然原先的服務會收不到信
+設置完後，等待DNS生效 我們就可以來進行下一個步驟了！
+接著我們來設置SMTP帳號
+首先，打開Mailgun控制台
+點擊Domain settings 選擇SMTP credentials
+接著點擊右上角的New SMTP User來建立新帳號
+右上方為密碼！先記起來，等等會用到
+接著我們來設定轉寄郵件
+點擊左方的Receiving，在點擊右上方的Create Route
+接著選擇Match Recipient(指定收件者)，並輸入剛剛建立的電子郵件地址
+下方Forward填寫Gmail的電子郵件地址，存檔！
+PS.如果第一項選擇Cache All，則會轉發所有寄到這個網域下的電子郵件，也就是無限別名
+新增完後，我們打開Gmail 設定→更多設定→帳戶
+點擊 新增另一個電子郵件地址(Add another email address)
+接著輸入名稱(自訂)及電子郵件地址(剛剛建立的那個)
+接著輸入SMTP伺服器(端口選擇587tls) 使用者帳號 密碼
+mailgun的SMTP伺服器是smtp.mailgun.org
+接著驗證電子郵件擁有權（代碼會寄到剛剛設置的Gmail信箱）
+會收到類似這樣的信
+將驗證碼輸入上去就完成囉！
+後記，好香 有網域信箱就是香（？🤩
+工具：G Suite工具箱（檢測DNS問題）</description>
+    </item>
+    
+    <item>
+      <title>Cloudflare 新服務 spectrum設定教學</title>
+      <link>http://blog.steveyi.net/2020/hot-to-set-cloudflare-spectrum/</link>
+      <pubDate>Wed, 15 Apr 2020 08:50:06 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/hot-to-set-cloudflare-spectrum/</guid>
+      <description>今天早上打開FaceBook時，發現Cloudflare推出了一個新服務 - Spectrum
+目前是提供給所有付費用戶使用，不知道未來有沒有機會開放給免費客戶
+官方部落格連結: https://cfl.re/3efcOhv
+正好我有幾個網域有使用Plesk Plus的服務（此服務已下架），算是Cloudflare Pro版本 所以也可以開通這個功能！
+那就來記錄一下設定過程吧
+首先，進入網域設定 上方選擇 Spectrum
+接著點擊 Enable Spectrum
+開通完成後，點擊 Create an application
+選擇SSH(22端口)或是Minecraft(65535端口) (如果是企業版可以使用RDP)
+接著輸入子網域及IP位置，並按Save
+接著我們就可以等待生效囉！
+可以使用終端(dig 網域名稱)或是Google Public DNS查詢CNAME紀錄
+目前這個服務
+Pro版本提供5GB流量/月
+Business版本提供10GB流量/月
+超過1GB，以0.1USD計價
+https://www.cloudflare.com/products/cloudflare-spectrum/
+對於DDOS防禦很頭痛的可以試試看～！</description>
+    </item>
+    
+    <item>
+      <title>在Vultr使用Bird6廣播IPv6</title>
+      <link>http://blog.steveyi.net/2020/use-bird6-broadcast-ipv6-vultr/</link>
+      <pubDate>Fri, 10 Apr 2020 02:21:55 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/use-bird6-broadcast-ipv6-vultr/</guid>
+      <description>之前跟大家分享過 為IP設定反向DNS(PTR紀錄)，那這次就來分享一下在Vultr廣播IP吧！
+設置AS號碼及IP前綴 首先，我們要先開通BGP的功能！
+點擊這裡前往Vultr BGP頁面
+進入此頁面後，我們點擊Get Started
+選擇 I have my own IP space 及 I have own my ASN (如果沒有ASN不用選擇)
+LOA的部分 可以參考這份範例文件
+接著其他保持預設就好
+接著點Start，來驗證IP地址或ASN號碼
+系統會寄一封電子郵件到Whois的Email，進行驗證！
+驗證完後呢，我們就等待工作人員設置
+廣播 這次是使用Ubuntu 18.04來廣播的，CentOS及Debian應該大同小異
+首先我們先安裝幾個套件
+ apt-get update -y apt-get install bird6 -y  安裝完成後，我們進入 /etc/bird 資料夾
+ cd /etc/bird  刪除 bird6.conf
+ sudo rm -rf bird6.conf  接著我們新增一個新的配置
+ router id 0.0.0.0; #將0.0.0.0改成你的主機IPv4
+protocol bgp vultr
+{
+local as 209557;
+source address 改成主機IPv6;</description>
+    </item>
+    
+    <item>
+      <title>RIPE為IP設定反向DNS(PTR紀錄)</title>
+      <link>http://blog.steveyi.net/2020/ip-set-rdns-with-ripe-and-he-dns/</link>
+      <pubDate>Wed, 08 Apr 2020 06:38:54 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/ip-set-rdns-with-ripe-and-he-dns/</guid>
+      <description>反向dns紀錄
+一直以來都很想設定rDNS，看了許多次RIPE官方的文檔還是沒搞懂
+恰好這次有位大佬指導我去設定，其實一點都不難呢
+順便分享一下設定過程
+本篇以RIPE及HE FREE DNS作為範例，其他RIR基本上大同小異
+建立DNS NameServers 首先，登入HE FREE DNS，點擊左方的Add a new reverse
+輸入你的IP前綴，後方記得加上cidr(子網路掩碼)
+接著我們先設定一個PTR紀錄
+關於IP的轉換為網域名稱，可以使用這個工具 點我前往
+由於HE跟RIPE會互相檢查DNS授權，所以我們必須要先請HE開通DNS區域
+我們可以發送郵件到 dnsadmin#he.net [#換成@]
+Subject: About PTR records (改成你的IPv6前綴網域)
+Content:
+Hello, I want set PTR records with my ipv6 address(改成你的IPv6前綴)
+RIPE require DNS delegation check
+Please check it :)
+Thanks!
+當HE開通後，我們就可以到RIPE設定了！
+設定DNS伺服器 首先，我們進入LIR Portal
+點擊左邊的Create an Object，選擇domain
+接著輸入要設定的ipv6 前綴
+接著依序輸入HE的DNS Server 及 Admin-c tech-c zone-c&amp;hellip;等等
+ns1.he.net ns2.he.net ns3.he.ne ns4.he.net ns5.he.net
+完成後按Submit就會開始建立了</description>
+    </item>
+    
+    <item>
+      <title>透過電腦使用USB傳送網際網路連線給手機  (USB Reverse Tethering)</title>
+      <link>http://blog.steveyi.net/2020/usb-reverse-tethering/</link>
+      <pubDate>Tue, 07 Apr 2020 04:57:33 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/usb-reverse-tethering/</guid>
+      <description>本篇教學使用搭載Android 5.0.2，Wi-Fi和藍芽損壞的手機搭配Windows 10做示範。
+請注意:不一定保證每一隻手機都相容，就算相容還是有一些App不認得此類型連接方式 (它們通常只認得行動數據和Wi-Fi連接)
+本篇著重於使用Windows平台進行的部分，所以不討論其他作業系統，其他作業系統理應當也是差不多才對。請讓電腦先安裝手機的驅動程式
+(外部連結: https://mobileai.net/2016/09/22/google-adb-driver/ )
+HTC Sense 6或更早版本的Sense，有內建此功能而無須操作以下教學
+(設定&amp;gt;更多&amp;gt;可攜式熱點和數據連線&amp;gt;USB網路設定&amp;gt;透過電腦傳送)
+首先請先到GitHub下載Gnirehtet
+https://github.com/Genymobile/gnirehtet#rust
+找到Windows後按下下載之後解壓縮
+
+解壓縮後會得到三個檔案
+請將gnirehtet.apk安裝到手機上(安裝完在桌面找不到是正常的)
+不清楚apk怎麼安裝的話網路上有很多教學可以參考，在這裡先不贅述
+接下來請在手機上開啟開發人員選項
+不同品牌手機有不同開啟方法
+以HTC手機為例，打開設定&amp;gt;關於手機&amp;gt;軟體版本&amp;gt;更多，接著狂戳&amp;quot;建置號碼&amp;quot;
+直到跳出Toast訊息&amp;quot;不需要了，您已經是開發人員&amp;quot;
+完成後請點擊&amp;quot;開發人員選項&amp;quot;
+之後勾選USB偵錯並確認
+如果詢問是否允許，請允許，如果懶得每次都按允許的話，可以勾選&amp;quot;永遠允許從此電腦進行&amp;quot;
+然後請將手機設定密碼(設定&amp;gt;安全性&amp;gt;螢幕鎖定方式&amp;gt;選擇圖形，PIN碼或密碼)
+否則有些情況下無法上網
+如果任何步驟執行時跳出新增VPN連線的請求，請按下允許
+接下來請將手機連接到電腦，並點擊電腦上的gnirehtet-run.cmd
+如果執行時跳出新增VPN連線的請求，請按下確定
+接下來會看到電腦有字很多字在跑，關掉這個視窗等同斷線，所以沒有要看它的連線紀錄的話請最小化
+(按右上角的 - )就好
+接下來手機就可以上網囉
+Spotify串流音樂也是可以的
+如果需要斷線，可以在通知點選&amp;quot;Stop Gnirehtet”
+注意:有一些網路環境(如校園網路或工作場域網路等)可能會因某些考量而封鎖相關連線，所以可能會造成無法上網(如下圖)，此時換成別的網路就行囉
+免責聲明:
+如果有因本教學造成任何爭議，本作者一蓋不負責
+對於非本作者創作之相關資訊，或是非本作者控制或測試之獨立網站，不得解釋本作者為其推薦或背書。
+© iambjlu</description>
+    </item>
+    
+    <item>
+      <title>使用IFTTT將未接來電、簡訊轉送至LINE</title>
+      <link>http://blog.steveyi.net/2020/ifttt-forward-to-line/</link>
+      <pubDate>Tue, 07 Apr 2020 04:56:37 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/ifttt-forward-to-line/</guid>
+      <description>準備工作
+首先，需要先註冊或登入IFTTT (ifttt.com)
+接下來他會推薦一個IFTTT的範例，按下X跳過
+在左上角搜尋框輸入LINE
+然後在Services裡面選擇LINE
+按下Connect然後登入帳號
+請登入要接收通知(被提醒)的帳號!!
+然後按下綠色按確認連動帳號
+接下來應該會看到以下訊息
+接下來請移駕到收到訊息/未接來電要轉發的手機並安裝IFTTT
+注意:此篇文章提及之功能只支援Android手機
+如果是Android 5.1.1或更低版本，請跳過關閉電池最佳化的段落
+準備工作&amp;ndash;關閉電池最佳化
+如果是Android 6.0至8.0，安裝完成後請先至系統設定&amp;gt;電池(或電源)
+依照不同操作系統可能有不同的操作方式，以Google手機為例，需先按下右上角三個點之後點選電池效能最佳化
+然後在選單內找到IFTTT，選擇不要最佳化，以免後臺程序無法運行造成功能失常
+如果是Android 9.0至10.0，請到系統設定&amp;gt;應用程式和通知&amp;gt;特殊應用程式存取權
+依照不同操作系統可能有不同的操作方式
+以Google手機為例:
+然後點選電池效能最佳化
+找到IFTTT之後選擇不要最佳化
+準備工作&amp;ndash;關閉電池最佳化段落結束
+接下來請打開IFTTT應用程式
+接下來請登入本文章一開始所使用的帳號
+按下Got it和Get More
+準備工作教學完畢
+==========我是分隔線==========
+簡訊轉送
+往下滑找到 Create Your Own
+接下來按下This
+選擇Android SMS
+之後選擇之後選擇 [ Any new SMS received ]
+接下來請在That的地方選擇LINE後選擇 [ Send message ]
+接收對象可以是群組，也可以是私人訊息
+在這邊以群組作為示範
+使用群組提醒前請先將LINE Noitfy的帳號邀請到群組中
+接下來可以自己拼湊想要的文字了
+弄完請按下方黑色的Continue之後按Finish
+Receive notifications when this runs 的意思是這件事發生時要不要收到通知
+我個人是沒開拉，但這個就自己決定吧
+接下來如果被要求權限請不要拒絕!!!
+否則功能無法正常運作!!!
+Connected的開關就是這項功能的開關
+不想用的時候可以關起來，隨時都可以再打開</description>
+    </item>
+    
+    <item>
+      <title>[教學] AWS Route 53 代管DNS</title>
+      <link>http://blog.steveyi.net/2020/aws-route53/</link>
+      <pubDate>Mon, 06 Apr 2020 14:38:57 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/aws-route53/</guid>
+      <description>從2017年註冊了第一個網域之後，DNS代管商一直是我在研究的一個部分！
+今天來推薦一下由AWS推出的DNS代管服務 - Route 53
+前置作業：
+AWS帳號
+網域
+建立託管區域 首先，進入AWS主控台搜尋 Route 53
+接著點擊左上角的託管區域
+點擊左上角的，建立託管區域 接著在右方自己的網域名稱
+接著系統就會建立一個託管區域囉！（這邊先將NS紀錄記起來，下個步驟會用到）
+設定DNS伺服器 那我們剛剛已經在AWS Route 53建立了DNS託管區域，接著我們要到網域註冊商來設定DNS伺服器！
+首先，打開網域管理頁面（本篇以Gandi示範），並找到名稱伺服器或是Nameservers
+點擊變更後，將原本的紀錄刪除，並將AWS Route 53自動產生的NS紀錄貼上去
+接著就等待生效囉！大約24-48小時生效（實際上應該5-10分鐘生效xD）</description>
+    </item>
+    
+    <item>
+      <title>在 Gandi 購買網域</title>
+      <link>http://blog.steveyi.net/2020/register-domain-at-gandi/</link>
+      <pubDate>Fri, 03 Apr 2020 18:40:19 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/register-domain-at-gandi/</guid>
+      <description>之前有跟大家分享將網域從 Google 移轉至 Gandi 的過程 點我看文章
+本篇就來分享一下 在 Gandi 購買網域的過程吧！
+前置準備：
+錢（用來註冊網域的費用）
+首先，我們打開 Gandi 的官網
+搜尋你想要的網域，接著將其加入購物車
+接著就可以結帳啦
+Gandi 支持很多付款方式：信用卡、銀聯、PayPal、轉帳、比特幣(BitCoin)
+其中 Paypal 必須為非台灣帳戶才可以付款
+付款完成後，系統就會建立網域資料 可以在這裡查看狀態
+建立完成後，會收到一封電子郵件通知
+接著就可以前往控制台管理你的網域囉！</description>
+    </item>
+    
+    <item>
+      <title>將網域從 Google Domains 轉出至 Gandi</title>
+      <link>http://blog.steveyi.net/2020/transfer-domain-from-google-to-gandi/</link>
+      <pubDate>Thu, 02 Apr 2020 02:55:55 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/transfer-domain-from-google-to-gandi/</guid>
+      <description>這幾天收到Google Domains的通知信，通知網域即將要續費了
+正好前陣子打算將所有網域轉移到 Gandi 統一管理，趁著這次機會
+來分享一下如何將網域 轉出/轉入
+事前準備：
+已註冊的網域(要轉出的)
+錢(將網域轉入其他註冊商需要續費)
+首先，先至 Google Domains 解鎖網域 並取得轉出授權碼
+必須呈現 unlocked 才可以轉出
+會產生一組授權碼（要保存好）
+取得授權碼後，系統會詢問是要轉到其他Google帳戶還是其他網域註冊商
+我們要選擇「轉出至其他網域註冊商」
+接著需要輸入一下Google帳號的密碼
+輸入完成後，就會產生驗證碼了！（請小心保管，不要洩漏）
+接著我們到 Gandi，我們將剛剛複製的授權碼貼上（前置付款過程可以參考 這篇文章）
+將授權碼貼上，同意條款，我們就可以進行付款了！
+完成付款後，我們可以到客戶面板中查看轉移狀態
+當系統跑轉移流程後，需要到 Email 接受轉移
+記得按接受&amp;hellip; 當初我就是按錯，等了一陣子才收到新的Email xD
+授權轉移後，你的網域就成功轉移啦！
+PS.如果出現註冊商拒絕了這次移轉
+可能是因為你拒絕了電子郵件轉移授權、網域到期年限超過10年、或&amp;hellip;總總原因
+如果你的網域不存在上方問題，建議你聯繫原本網域的註冊商客服</description>
+    </item>
+    
+    <item>
+      <title>申請G Suite帳號</title>
+      <link>http://blog.steveyi.net/2020/register-gsuite/</link>
+      <pubDate>Wed, 01 Apr 2020 03:13:48 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/register-gsuite/</guid>
+      <description>相信大家應該都有使用過Gmail
+今天要來介紹的 G Suite 是由Google推出的企業服務，不過一般使用者也是可以申請的！
+事前準備： 網域(非必要)
+信用卡/金融卡
+開始註冊： 1.首先，我們先打開G Suite的官網(https://gsuite.google.com)
+2.接著，點擊&amp;quot;開始免費試用&amp;quot;
+3.上方輸入公司名稱(或是你自己想一個名字)
+員工人數自行選擇(我是選1)
+國家/地區自行選擇(建議照實寫，防止後續無法付款 我選台灣)
+4.接著設定網域（如果沒有網域的話，請點擊第三個選項）
+5.接著確認網域，點擊下一頁
+6.接著就&amp;hellip;自己選擇囉！
+7.接著建立管理者帳號
+使用者名稱，密碼自定
+網域則為我們剛剛選擇的
+設定完成後，點擊&amp;quot;同意並繼續&amp;quot;！
+接著就可以進入管理員管理面板囉！
+我們下次再來跟大家分享網域驗證等相關設定唷！</description>
+    </item>
+    
+    <item>
+      <title>我的第一個ASN號</title>
+      <link>http://blog.steveyi.net/2020/first-asn/</link>
+      <pubDate>Thu, 27 Feb 2020 06:59:19 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/first-asn/</guid>
+      <description>去年，意外的接觸到了BGP，就下定決心！希望未來可以有自己的IP位置及ASN號碼
+今年春節時，恰好發現了一個瑞士的LIR，跟他購買了一個ASN號碼(75法郎)，還多送一個ipv6 /48．(基本上跟LIR購買ASN，都會送一個ipv6 /48。)
+PS.不過不是每個LIR都會送IP位置的，建議大家可以在購買前問問LIR
+BGP是什麼？ 邊界網關協議（英語：Border Gateway Protocol，縮寫：BGP）是互聯網上一個核心的去中心化自治路由協議。
+它通過維護IP路由表或&amp;quot;前綴&amp;quot;表來實現自治系統（AS）之間的可達性，屬於矢量路由協議
+維基百科
+AS是什麼？ 自治系統或自治域（英文：Autonomous system, AS）是指在網際網路中，一個（有時是多個）實體管轄下的所有IP網路和路由器的組合，它們對網際網路執行共同的路由策略。
+維基百科
+RIR是誰？ 就是區域網際網路註冊機構啦！(像亞洲就是APNIC，台灣則為TWNIC)
+維基百科
+取得ASN號碼及IP段 想要擁有自己的IP段就必須要先有自治號碼(ASN)，註冊ASN的流程就是&amp;hellip;
+付錢給RIR加入會員，跟RIR申請ASN號碼及IP段
+引用一句話：ASN號碼及IP段是免費的，我們只收會員費用
+入會費大約：1400澳幣(聽朋友說的)
+所以說，一般人應該不會花錢加入會員(除非你是土豪&amp;hellip;xDD)
+必須要找LIR來幫忙申請ASN及IP段了
+PS.LIR就是付錢加入RIR的會員
+基本上我們只要在搜尋引擎搜索
+關鍵字 : Lir Service
+就可以找到了
+這邊也分享一下國外論壇整理的LIR名單: 點我前往 (推薦註冊RIRE的，方便管理)
+PS.每個LIR的價格不同，可以多多比價，我註冊的時候是75法郎
+這裡註冊以RIPE為例子 因為我註冊的就是RIPE
+RIPE的註冊類型分為兩種:
+個人: 需要護照(或其他證件)、地址、電話號碼、電子郵件等
+公司: 需要公司註冊證書（營業執照）、地址、電話號碼、電子郵件等
+PS.未滿十八歲註冊需要監護人的同意書
+接著就等RIP分配號碼，就可以來組建自己的BGP網路了
+歡迎大家來跟我建立Peer，前提是我先搞懂Linux路由&amp;hellip;xDD</description>
+    </item>
+    
+    <item>
+      <title>Backblaze B2和Cloudflare Workers設定自訂域名</title>
+      <link>http://blog.steveyi.net/2020/b2-cfworkers/</link>
+      <pubDate>Wed, 26 Feb 2020 20:36:28 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2020/b2-cfworkers/</guid>
+      <description>前言 當初架設網站的時候，考量到了圖片的存儲以及流量的問題
+本來是將圖片跟網站放在同一個網站伺服器下的，但後來發現伺服器空間常常不足夠（因為系統會自動備份，導致空間不足）
+後來將圖片放在OneDrive商業版，並搭配OneList來使用，但畢竟是非官方的API，當API請求速率過快，圖片就載入不出來了．
+當初OneDrive失敗後，又將圖片放到Google Drive上，並搭配rclone使用，
+但是&amp;hellip;網站載入爆慢呀！（而且流量也爆了）
+最後就發現Backblaze B2這個東西了XD
+Backblaze是什麼? Backblaze是一家數據存儲提供商，提供兩種產品
+B2 Cloud Storage(一種類似於Amazon S3的對象存儲服務)
+Cloud Backup(無限空間的電腦備份服務)
+其中 B2 Cloud Storage 主打低價 (搭配Cloudflare CDN流量免費)，Cloud Backup主打無限空間備份
+更多內容可以參考 Backblaze官網
+需要運用到的資源 Cloudflare CDN
+Cloudflare DNS
+Cloudflare Workers
+Backblaze B2
+教學開始 1.首先，進入Cloudflare後 點擊 +Add a Site 新增一個網域
+2.新增完之後，我們點擊右方的Workers
+來進入Cloudflare Workers
+接著我們點擊上方的 Create a Worker 來建立一個新的Worker
+3.將文章下方的程式碼貼到左邊的Script
+並修改 b2Domain b2Bucket b2UrlPath
+完成後我們點擊下方的Save and Deploy
+4.接著我們進入剛剛新增好的網域
+新增一個CNAME紀錄(下方是A紀錄&amp;hellip;忘了改xDD)
+5.新增CNAME紀錄後，我們點擊上方的Workers
+接著點擊 Add route
+6.接著這邊我們來設定一下
+Route的部分填寫 剛剛新增的子網域/*
+ex: img.steveyi.net/*</description>
+    </item>
+    
+    <item>
+      <title>32位元iOS裝置免電腦免SHSH 降級到8.4.1</title>
+      <link>http://blog.steveyi.net/2019/backtoios841/</link>
+      <pubDate>Mon, 30 Dec 2019 13:26:02 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2019/backtoios841/</guid>
+      <description>有時會因爲蘋果的部分問題，會在各種環節出狀況，如果有任何錯誤請改天再試
+蘋果的漏洞不是非常穩定，有一天我試了三次都不能用，改天再弄，一次就成功了，這有點碰運氣
+iOS裝置如果很慢，降級會比較流暢
+(A5裝置非常有感，A6、A6X裝置則差異不大但仍有比較快一點點)
+雖然還是偶爾會LAG一下但是至少改善滿多的
+例如轉場動畫不會像原本那麼卡頓
+  適用裝置： iOS 9.0～10.3.3，有越獄的以下列出裝置 有附各版本越獄教學 iPhone 4S iPhone 5 iPod Touch 5 iPad 2 iPad 3 iPad 4 iPad Mini 1代 [iPhone 5C不適用]  *如有發生問題本人恕不負責*
+※其實我用到現在都沒事，上面那句希望只是備而不用
+*請先做好iTunes備份*
+*中途若失敗或反悔可以使用DFU回到原版本或再試一次*
+*請先清除所有內容和設定後再進行！*
+講了這麼多，來開工吧
+——————分隔線——————
+ (如果已經越獄，請跳過此段) 越獄方法整理[來自瘋先生網站] 10.X～10.3.3 9.3.5 9.1~9.3.4 9.0.X 降級完的8.4.1在文章底部  ——————分隔線——————
+此處以iPad 2(原9.3.5)做為示範
+如果有Apple ID雙重認證，建議關閉雙重認證或註冊一組新的，並且要記得密碼，不然後續登入很麻煩！
+降級前請將螢幕鎖定密碼關閉！！！否則可能會造成降級後無法解鎖裝置
+1.越獄後使用iFile或Filza File Manager打開下方路徑的檔案
+/System/Library/CoreServices/SystemVersion.plist
+打錯了如果重開可能導致系統損毀需要重刷！
+打錯也別擔心如果沒有重開的話只要更正存檔就可以放心重開了
+Product Version改 6.1.3
+ProductBuildVersion改 10B329
+2.存檔修改後記得確認版本號無誤才可重開
+3.重新啟動，重啟跑完進度條需要一段時間，開完機之後請重設裝置，設定精靈的地方隨便設，只要能進到主畫面就行了（不要還原任何的備份！），重設的地方在
+設定-&amp;gt;一般-&amp;gt;重置-&amp;gt;清除所有內容和設定 重設之後進到設定檢查更新，會看到更新的地方有iOS 8.4.1的更新，點下去，並安裝</description>
+    </item>
+    
+    <item>
+      <title>專為GCP打造的Windows 10 DD鏡像</title>
+      <link>http://blog.steveyi.net/2019/gcp-windows-dd/</link>
+      <pubDate>Tue, 27 Aug 2019 15:07:49 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2019/gcp-windows-dd/</guid>
+      <description>前陣子為了要在GCP使用VPS，於是在一段時間裡製作了 Windows DD 鏡像
+分別是：
+1，中文繁體版 Windows 10 工作站專業版
+2，英文版 Windows 10 工作站專業版(尚未上傳)
+鏡像具備以下特點   集成 Virtio 驅動以及 Google Virtio Ethernet Adapter 的網卡驅動，因此適用於GCP的VPS伺服器
+  無需 VNC 交互直接無人值守安裝，DD 完成即可遠程登錄桌面
+  基於 VOL 版製作，因此可用 KMS 方式激活系統
+  開啟 Windows 遠程桌面
+中文繁體版
+載點1: http://static.yiy.tw/mirror/dd/win10.gz
+載點2: https://drive.yiy.tw/Mirror/DD/win10.gz
+遠端登入資訊
+帳號: Administrator
+密碼: steveyigame.com
+  </description>
+    </item>
+    
+    <item>
+      <title>[教學] 關閉AWS帳戶</title>
+      <link>http://blog.steveyi.net/2019/close-aws-account/</link>
+      <pubDate>Thu, 15 Aug 2019 09:51:53 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/2019/close-aws-account/</guid>
+      <description>進入 AWS主控台 點擊右上角的 我的帳戶 或是點擊下方超連結
+https://console.aws.amazon.com/billing/home?#/account
+滑動到最下方 將詳閱事項打勾 接著點擊 關閉帳戶
+就完成關閉帳戶的手續啦！</description>
+    </item>
+    
+  </channel>
+</rss>

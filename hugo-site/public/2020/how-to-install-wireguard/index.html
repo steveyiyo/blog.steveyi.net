@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  
+  
+  
+  <link rel="prev" href="http://blog.steveyi.net/2020/cloud-identity-setting/" />
+  <link rel="next" href="http://blog.steveyi.net/2020/scrcpy-android/" />
+  <link rel="canonical" href="http://blog.steveyi.net/2020/how-to-install-wireguard/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           在Linux系統上安裝Wireguard | 酷小易
+       
+  </title>
+  <meta name="title" content="在Linux系統上安裝Wireguard | 酷小易">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http:\/\/blog.steveyi.net\/"
+    },
+    "articleSection" : "posts",
+    "name" : "在Linux系統上安裝Wireguard",
+    "headline" : "在Linux系統上安裝Wireguard",
+    "description" : "Wireguard是一個點對點加密網路\n一直以來，我都使用它來管理我所有的雲端主機\n今天就來分享一下安裝方法吧！\n安裝指令請參考 https:\/\/www.wireguard.com\/install\/\n首先，進入Wireguard安裝資料夾\n如果找不到的話，請建立一下\ncd \/etc\/wireguard 接著，我們使用指令來產生公私鑰，並使用cat查看公私鑰內容\nwg genkey | tee privatekey | wg pubkey \u0026gt; publickey 接著我們將公私鑰記下來，我們建立一個配置文件\nnano wg0.conf 進入nano 編輯器後，我們將下方代碼貼上，並修改公私鑰\n[Interface] Address = 192.168.200.1\/24 \/\/這邊可以自定網段 SaveConfig = true ListenPort = 51820 PrivateKey = 修改為私鑰 [Peer] PublicKey = 對方的公鑰 AllowedIPs = 192.168.200.2\/24 \/\/對方的網段 接著輸入 Crtl \u002b X 在輸入y 退出編輯器\n接著使用指令，來存檔並啟用wireguard\nwg-quick save wg0 wg-quick down wg0 wg-quick up wg0 PS.開機自動啟動指令\nsystemctl enable wg-quick@wg0 接著可以嘗試ping看看，如果有響應的話\n代表成功了！",
+    "inLanguage" : "zh-TW",
+    "author" : "",
+    "creator" : "",
+    "publisher": "",
+    "accountablePerson" : "",
+    "copyrightHolder" : "",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-05-16 11:51:52 \u002b0000 \u002b0000",
+    "dateModified" : "2020-05-16 11:51:52 \u002b0000 \u002b0000",
+    "url" : "http:\/\/blog.steveyi.net\/2020\/how-to-install-wireguard\/",
+    "wordCount" : "69",
+    "keywords" : [ "BGP","伺服器", "酷小易"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://blog.steveyi.net/">酷小易</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">文章</a>
+                
+                <a class="menu-item" href="https://steveyi.net/" title="">關於我</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://blog.steveyi.net/">酷小易</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">文章</a>
+                
+                <a class="menu-item" href="https://steveyi.net/" title="">關於我</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">在Linux系統上安裝Wireguard</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="http://blog.steveyi.net/" rel="author"></a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-05-16 itemprop="datePublished">May 16, 2020</time>
+                </span>
+                in
+                
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p><a href="https://wireguard.com">Wireguard</a>是一個點對點加密網路</p>
+<p>一直以來，我都使用它來管理我所有的雲端主機</p>
+<p>今天就來分享一下安裝方法吧！</p>
+<p>安裝指令請參考 <a href="https://www.wireguard.com/install/">https://www.wireguard.com/install/</a></p>
+<p>首先，進入Wireguard安裝資料夾<br>
+如果找不到的話，請建立一下</p>
+<pre><code>cd /etc/wireguard
+</code></pre><p><img src="https://static.yiy.tw/media/blog/2020051611394599.png" alt=""></p>
+<p>接著，我們使用指令來產生公私鑰，並使用cat查看公私鑰內容</p>
+<pre><code>wg genkey | tee privatekey | wg pubkey &gt; publickey
+</code></pre><p><img src="https://static.yiy.tw/media/blog/2020051611445527.png" alt=""></p>
+<p>接著我們將公私鑰記下來，我們建立一個配置文件</p>
+<pre><code>nano wg0.conf
+</code></pre><p>進入nano 編輯器後，我們將下方代碼貼上，並修改公私鑰</p>
+<pre><code>[Interface]
+Address = 192.168.200.1/24 //這邊可以自定網段
+SaveConfig = true
+ListenPort = 51820
+PrivateKey = 修改為私鑰
+
+[Peer]
+PublicKey = 對方的公鑰
+AllowedIPs = 192.168.200.2/24 //對方的網段
+</code></pre><p>接著輸入 Crtl + X 在輸入y 退出編輯器</p>
+<p>接著使用指令，來存檔並啟用wireguard</p>
+<pre><code>wg-quick save wg0
+wg-quick down wg0
+wg-quick up wg0
+</code></pre><p>PS.開機自動啟動指令</p>
+<pre><code>systemctl enable wg-quick@wg0
+</code></pre><p>接著可以嘗試ping看看，如果有響應的話</p>
+<p>代表成功了！</p>
+<p><img src="https://static.yiy.tw/media/blog/2020051612102187.png" alt=""></p>
+
+    </div>
+
+    <div class="post-copyright">
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=http://blog.steveyi.net/2020/how-to-install-wireguard/>http://blog.steveyi.net/2020/how-to-install-wireguard/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="http://blog.steveyi.net/tags/bgp/">
+                    #BGP</a></span>
+            
+            <span class="tag"><a href="http://blog.steveyi.net/tags/%E4%BC%BA%E6%9C%8D%E5%99%A8/">
+                    #伺服器</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="http://blog.steveyi.net/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="http://blog.steveyi.net/2020/cloud-identity-setting/" class="prev" rel="prev" title="Cloud Identity 驗證網域及建立帳號"><i class="iconfont icon-left"></i>&nbsp;Cloud Identity 驗證網域及建立帳號</a>
+         
+        
+        <a href="http://blog.steveyi.net/2020/scrcpy-android/" class="next" rel="next" title="使用Scrcpy，由電腦操作Android手機">使用Scrcpy，由電腦操作Android手機&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

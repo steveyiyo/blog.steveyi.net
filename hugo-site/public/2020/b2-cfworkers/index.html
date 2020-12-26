@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  
+  
+  
+  <link rel="prev" href="http://blog.steveyi.net/2019/backtoios841/" />
+  <link rel="next" href="http://blog.steveyi.net/2020/first-asn/" />
+  <link rel="canonical" href="http://blog.steveyi.net/2020/b2-cfworkers/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Backblaze B2和Cloudflare Workers設定自訂域名 | 酷小易
+       
+  </title>
+  <meta name="title" content="Backblaze B2和Cloudflare Workers設定自訂域名 | 酷小易">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http:\/\/blog.steveyi.net\/"
+    },
+    "articleSection" : "posts",
+    "name" : "Backblaze B2和Cloudflare Workers設定自訂域名",
+    "headline" : "Backblaze B2和Cloudflare Workers設定自訂域名",
+    "description" : "前言 當初架設網站的時候，考量到了圖片的存儲以及流量的問題\n本來是將圖片跟網站放在同一個網站伺服器下的，但後來發現伺服器空間常常不足夠（因為系統會自動備份，導致空間不足）\n後來將圖片放在OneDrive商業版，並搭配OneList來使用，但畢竟是非官方的API，當API請求速率過快，圖片就載入不出來了．\n當初OneDrive失敗後，又將圖片放到Google Drive上，並搭配rclone使用，\n但是\u0026hellip;網站載入爆慢呀！（而且流量也爆了）\n最後就發現Backblaze B2這個東西了XD\nBackblaze是什麼? Backblaze是一家數據存儲提供商，提供兩種產品\nB2 Cloud Storage(一種類似於Amazon S3的對象存儲服務)\nCloud Backup(無限空間的電腦備份服務)\n其中 B2 Cloud Storage 主打低價 (搭配Cloudflare CDN流量免費)，Cloud Backup主打無限空間備份\n更多內容可以參考 Backblaze官網\n需要運用到的資源 Cloudflare CDN\nCloudflare DNS\nCloudflare Workers\nBackblaze B2\n教學開始 1.首先，進入Cloudflare後 點擊 \u002bAdd a Site 新增一個網域\n2.新增完之後，我們點擊右方的Workers\n來進入Cloudflare Workers\n接著我們點擊上方的 Create a Worker 來建立一個新的Worker\n3.將文章下方的程式碼貼到左邊的Script\n並修改 b2Domain b2Bucket b2UrlPath\n完成後我們點擊下方的Save and Deploy\n4.接著我們進入剛剛新增好的網域\n新增一個CNAME紀錄(下方是A紀錄\u0026hellip;忘了改xDD)\n5.新增CNAME紀錄後，我們點擊上方的Workers\n接著點擊 Add route\n6.接著這邊我們來設定一下\nRoute的部分填寫 剛剛新增的子網域\/*\nex: img.steveyi.net\/*",
+    "inLanguage" : "zh-TW",
+    "author" : "",
+    "creator" : "",
+    "publisher": "",
+    "accountablePerson" : "",
+    "copyrightHolder" : "",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-02-26 20:36:28 \u002b0000 \u002b0000",
+    "dateModified" : "2020-02-26 20:36:28 \u002b0000 \u002b0000",
+    "url" : "http:\/\/blog.steveyi.net\/2020\/b2-cfworkers\/",
+    "wordCount" : "98",
+    "keywords" : [ "伺服器","網站日誌", "酷小易"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://blog.steveyi.net/">酷小易</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">文章</a>
+                
+                <a class="menu-item" href="https://steveyi.net/" title="">關於我</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="http://blog.steveyi.net/">酷小易</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">文章</a>
+                
+                <a class="menu-item" href="https://steveyi.net/" title="">關於我</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Backblaze B2和Cloudflare Workers設定自訂域名</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="http://blog.steveyi.net/" rel="author"></a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-02-26 itemprop="datePublished">February 26, 2020</time>
+                </span>
+                in
+                
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <h1 id="前言"><strong>前言</strong></h1>
+<p>當初架設網站的時候，考量到了圖片的存儲以及流量的問題</p>
+<p>本來是將圖片跟網站放在同一個網站伺服器下的，但後來發現伺服器空間常常不足夠（因為系統會自動備份，導致空間不足）</p>
+<p>後來將圖片放在<a href="https://onedrive.com">OneDrive</a>商業版，並搭配<a href="https://github.com/MoeClub/OneList/">OneList</a>來使用，但畢竟是非官方的API，當API請求速率過快，圖片就載入不出來了．</p>
+<p>當初<a href="https://onedrive.com">OneDrive</a>失敗後，又將圖片放到<a href="https://drive.google.com">Google Drive</a>上，並搭配<a href="https://rclone.org">rclone</a>使用，<br>
+但是&hellip;網站載入爆慢呀！（而且流量也爆了）<br>
+最後就發現<a href="https://www.backblaze.com/b2/cloud-storage.html">Backblaze B2</a>這個東西了XD</p>
+<h1 id="backblaze是什麼">Backblaze是什麼?</h1>
+<p>Backblaze是一家數據存儲提供商，提供兩種產品<br>
+<a href="https://www.backblaze.com/b2/cloud-storage.html">B2 Cloud Storage</a>(一種類似於Amazon S3的對象存儲服務)<br>
+<a href="https://www.backblaze.com/cloud-backup.html">Cloud Backup</a>(無限空間的電腦備份服務)</p>
+<p>其中 <a href="https://www.backblaze.com/b2/cloud-storage.html">B2 Cloud Storage</a> 主打低價 (搭配Cloudflare CDN流量免費)，<a href="https://www.backblaze.com/cloud-backup.html">Cloud Backup</a>主打無限空間備份</p>
+<p>更多內容可以參考 <a href="https://www.backblaze.com">Backblaze官網</a></p>
+<h1 id="需要運用到的資源"><strong>需要運用到的資源</strong></h1>
+<p>Cloudflare CDN</p>
+<p>Cloudflare DNS</p>
+<p>Cloudflare Workers</p>
+<p>Backblaze B2</p>
+<h1 id="教學開始"><strong>教學開始</strong></h1>
+<p>1.首先，進入Cloudflare後 點擊 +Add a Site 新增一個網域</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/B2-CFWorkers-01-1920x1082.png" alt=""></p>
+<p>2.新增完之後，我們點擊右方的Workers<br>
+來進入Cloudflare Workers<br>
+接著我們點擊上方的 Create a Worker 來建立一個新的Worker</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/B2-CFWorkers-02-1920x407.png" alt=""></p>
+<p>3.將文章下方的程式碼貼到左邊的Script<br>
+並修改 b2Domain b2Bucket b2UrlPath<br>
+完成後我們點擊下方的Save and Deploy</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/B2-CFWorkers-03-1920x967.png" alt=""></p>
+<p>4.接著我們進入剛剛新增好的網域<br>
+新增一個CNAME紀錄(下方是A紀錄&hellip;忘了改xDD)</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/B2-CFWorkers-04-1920x469.png" alt=""></p>
+<p>5.新增CNAME紀錄後，我們點擊上方的Workers<br>
+接著點擊 Add route</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/B2-CFWorkers-05-1920x693.png" alt=""></p>
+<p>6.接著這邊我們來設定一下<br>
+Route的部分填寫 剛剛新增的子網域/*<br>
+ex: img.steveyi.net/*<br>
+Worker選擇剛剛新增的Worker</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/B2-CFWorkers-06.png" alt=""></p>
+<p>接著就大功告成啦！</p>
+<h1 id="cloudflare-workers程式碼">Cloudflare Workers程式碼：</h1>
+<p>參考資料：</p>
+<ol>
+<li><a href="https://jross.me/free-personal-image-hosting-with-backblaze-b2-and-cloudflare-workers/">Using Backblaze B2 and Cloudflare Workers for free image hosting</a></li>
+<li><a href="https://www.cloudflare.com/bandwidth-alliance/backblaze/">Bandwidth Alliance | BACKBLAZE</a></li>
+<li><a href="https://www.backblaze.com/blog/backblaze-and-cloudflare-partner-to-provide-free-data-transfer/">Backblaze and Cloudflare Partner to Provide Free Data Transfer</a></li>
+</ol>
+
+    </div>
+
+    <div class="post-copyright">
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=http://blog.steveyi.net/2020/b2-cfworkers/>http://blog.steveyi.net/2020/b2-cfworkers/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="http://blog.steveyi.net/tags/%E4%BC%BA%E6%9C%8D%E5%99%A8/">
+                    #伺服器</a></span>
+            
+            <span class="tag"><a href="http://blog.steveyi.net/tags/%E7%B6%B2%E7%AB%99%E6%97%A5%E8%AA%8C/">
+                    #網站日誌</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="http://blog.steveyi.net/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="http://blog.steveyi.net/2019/backtoios841/" class="prev" rel="prev" title="32位元iOS裝置免電腦免SHSH 降級到8.4.1"><i class="iconfont icon-left"></i>&nbsp;32位元iOS裝置免電腦免SHSH 降級到8.4.1</a>
+         
+        
+        <a href="http://blog.steveyi.net/2020/first-asn/" class="next" rel="next" title="我的第一個ASN號">我的第一個ASN號&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>
