@@ -1,0 +1,96 @@
+---
+title: 'Backblaze B2 低價的雲端數據存儲服務'
+date: Mon, 11 May 2020 09:35:00 +0000
+draft: false
+tags: ['對象存處', '網站日誌']
+---
+
+之前學習建站之時，考量到一個問題！  
+如果今天我的流量暴漲，文章變多，我的圖片空間及流量會不會也跟著變多  
+所以在網路上搜尋了一些對象存處服務，找到了一間便宜的對象存處提供商－[Backblaze](https://www.backblaze.com/)
+
+什麼是對象存處
+-------
+
+對象存處是一種數據存儲，其中每個數據單元存儲為稱為對象的離散單元。  
+對象靜態文件，類似於pdf，mp3檔，圖片或影片...等文件。  
+這些對象實際上可以是任何類型的數據和任何大小的數據。  
+對象存儲中的所有對像都存儲在單個平面地址空間中，而沒有文件夾層次結構。
+
+比較知名的提供商有 [AWS S3](https://aws.amazon.com/s3/)、[Google Cloud Storage](https://cloud.google.com/storage)、[Backblaze B2](https://www.backblaze.com/b2/cloud-storage.html)、[DigitalOcean Space](https://www.digitalocean.com/products/spaces/)...等等
+
+那這次要介紹的則是Backblaze B2
+
+Backblaze B2的優勢
+---------------
+
+[Backblaze B2 的價格是 Amazon S3的¼倍  
+](https://www.backblaze.com/b2/cloud-storage-pricing.html)[搭配CloudFlare CDN免流量費  
+](https://www.cloudflare.com/bandwidth-alliance/backblaze/)[支持S3 API](https://www.backblaze.com/blog/backblaze-b2-s3-compatible-api/)
+
+註冊帳號
+----
+
+首先，進入官網後，點擊右上角的Sign Up
+
+![](https://static.yiy.tw/media/blog/2020051108120980.png)
+
+接著輸入帳號密碼，選擇資料放置區域(基本上選擇美西)
+
+![](https://static.yiy.tw/media/blog/2020051108143529.png)
+
+接著到電子郵件中驗證帳號！完成
+
+![](https://static.yiy.tw/media/blog/2020051108170997.png)
+
+創建Bucket
+--------
+
+登入帳號後，點擊中間的Creat a Bucket
+
+接著輸入Bucket名稱，不可以跟別人重複  
+接著選擇Public(如果你用於備份, 私人檔案的話，就選擇Private)
+
+![](https://static.yiy.tw/media/blog/2020051108354195.png)
+
+接著我們就會看見剛剛創建的Bucket了
+
+![](https://static.yiy.tw/media/blog/2020051109002920.png)
+
+創建App Key
+---------
+
+雖然說在網頁上我們就可以上傳檔案了，但是網頁只支持到500MB的檔案  
+超過就必須要使用API上傳了，所以這邊我們來教大家怎麼建立App Key
+
+首先，點擊左方的App Keys
+
+![](https://static.yiy.tw/media/blog/2020051109051012.png)
+
+接著我們點擊 Add a New Application Key
+
+![](https://static.yiy.tw/media/blog/2020051109090292.png)
+
+輸入App Key名稱，允許訪問的Bucket  
+接著點選Create a new key
+
+![](https://static.yiy.tw/media/blog/2020051109160381.png)
+
+接著會產生API資訊，將S3 EndPoint, Key ID及applicationKay記下來
+
+![](https://static.yiy.tw/media/blog/2020051109185118.png)
+
+上傳/下載檔案
+-------
+
+在Windows/Mac上傳或下載有很多種工具可以做，我比較推薦使用[Cyberduck](https://cyberduck.io/)  
+如果是Linux的話，我認為[Rclone](https://rclone.org)是一個好選擇
+
+PS.可以選擇S3 API或是Backblaze API進行連接
+
+總結
+--
+
+Backblaze真的是我找到最實惠的靜態存處服務  
+價格超優！而且可以搭配Cloudflare綁定自訂網域及CDN  
+不知道大家有沒有發現，本站的圖片皆是放置在Backblaze 並啟用Cloudflare CDN加速唷！

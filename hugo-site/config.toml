@@ -1,0 +1,4 @@
+baseURL = "http://blog.steveyi.net/"
+languageCode = "zh-TW"
+title = "我是小易 | 分享酷事情"
+theme = "gohugo-theme-ananke"
