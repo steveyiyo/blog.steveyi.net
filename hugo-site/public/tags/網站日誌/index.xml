@@ -6,309 +6,134 @@
     <description>Recent content in 網站日誌 on 酷小易</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
+    <copyright>&amp;copy; 2018 - 2021 &lt;a href=&#34;https://steveyi.net&#34;&gt;小易&lt;/a&gt; 版權所有</copyright>
     <lastBuildDate>Mon, 20 Jul 2020 07:50:55 +0000</lastBuildDate><atom:link href="http://blog.steveyi.net/tags/%E7%B6%B2%E7%AB%99%E6%97%A5%E8%AA%8C/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>小易部落格iOS版App開放下載囉！</title>
-      <link>http://blog.steveyi.net/2020/ios-app/</link>
+      <link>http://blog.steveyi.net/posts/ios-app/</link>
       <pubDate>Mon, 20 Jul 2020 07:50:55 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/ios-app/</guid>
+      <guid>http://blog.steveyi.net/posts/ios-app/</guid>
       <description>這個App可以讓您輕鬆查看最新的小易部落格文章唷！
 讓我們來看看要怎麼安裝吧
 Android版請見這篇
 首先先使用Safari打開您現在正在瀏覽的這個網頁，然後按這裡下載描述檔。
-按下允許下載後，請按「關閉」，然後打開「設定」並照著系統的指示安裝即可～
-接下來就會在主畫面看到圖標了
-如果日後需要移除，請打開設定並照著下方步驟即可移除</description>
+按下允許下載後，請按「關閉」，然後打開「設定」並照著系統的指示安裝即可～</description>
     </item>
     
     <item>
       <title>Cloud Identity 驗證網域及建立帳號</title>
-      <link>http://blog.steveyi.net/2020/cloud-identity-setting/</link>
+      <link>http://blog.steveyi.net/posts/cloud-identity-setting/</link>
       <pubDate>Fri, 15 May 2020 20:35:49 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/cloud-identity-setting/</guid>
+      <guid>http://blog.steveyi.net/posts/cloud-identity-setting/</guid>
       <description>在上一篇文，我們成功建立了Cloud Identity免費版
 在這篇文章，我們將要進行驗證網域的步驟
-首先，登入G Suite管理面板
-點擊驗證網域所有權
-接著可以選擇DNS或HTML驗證（這邊推薦使用HTML驗證）
-我使用DNS驗證了2-3次，都錯誤QQ（可能是Google系統的Bug）
-若驗證超過兩分鐘，代表&amp;hellip;你得重新驗證了xD
-驗證完成後，我們就可以建立使用者囉！
-由於目前我還不需要建立使用者（Cloud Identity免費版可以建立50個使用者）
-之後有需要的話，在到G Suite管理面板建立即可
-接著我們可以進入Google Cloud Platform
-由於剛創建帳號，我們需要同意一下服務條款
-完成！
-PS.剛進入GCP沒看到機構，可能是因為剛創建好帳號 系統還在建立中
-等待5-10分鐘應該就可以了！</description>
+首先，登入G Suite管理面板</description>
     </item>
     
     <item>
       <title>建立Cloud Identity帳戶</title>
-      <link>http://blog.steveyi.net/2020/create-cloud-identity/</link>
+      <link>http://blog.steveyi.net/posts/create-cloud-identity/</link>
       <pubDate>Fri, 15 May 2020 20:35:11 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/create-cloud-identity/</guid>
+      <guid>http://blog.steveyi.net/posts/create-cloud-identity/</guid>
       <description>首先，進入Cloud Identity申請頁面 點擊下一頁
-接著輸入公司名稱(可以隨意輸入)，員工數量(隨意選擇) 把它當作一個團隊
-選擇地點（設定好就不能修改了），其實作用不大
-設定目前的電子郵件地址（一些申請的郵件會寄到這裡）
-輸入要設定的網域（不得使用於其他 G Suite服務）
-接著建立使用者
-機器人驗證
-當出現這個頁面時，代表註冊完成了！
-接著我們需要驗證網域
-請看下一篇文章 - Cloud Identity 驗證網域及建立帳號</description>
+接著輸入公司名稱(可以隨意輸入)，員工數量(隨意選擇) 把它當作一個團隊</description>
     </item>
     
     <item>
       <title>刪除G suite組織</title>
-      <link>http://blog.steveyi.net/2020/delete-gsuite/</link>
+      <link>http://blog.steveyi.net/posts/delete-gsuite/</link>
       <pubDate>Fri, 15 May 2020 18:17:25 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/delete-gsuite/</guid>
-      <description>之前有跟大家分享註冊G Suite帳號的方式，最近想將 Cloud Identity免費版 的G Suite組織刪除
-由於完全沒有刪除過G Suite組織，所以稍微爬文了一下
-大致整理了一下刪除的方式
-重要提醒：
-刪除前，請先取消約期授權並刪除所有GCP專案
-刪除後，所有組織資料會被清除
-首先，進入G Suite控制台，點擊公司資料
-接著點擊帳戶管理
-接著點擊 刪除帳號
-接著會提示你，這個步驟無法復原
-打勾後點擊 刪除帳號
-接著帳號就刪除囉！</description>
+      <guid>http://blog.steveyi.net/posts/delete-gsuite/</guid>
+      <description>之前有跟大家分享註冊G Suite帳號的方式，最近想將 Cloud Identity免費版 的G Suite組織刪除</description>
     </item>
     
     <item>
       <title>Backblaze B2 低價的雲端數據存儲服務</title>
-      <link>http://blog.steveyi.net/2020/backblaze-b2/</link>
+      <link>http://blog.steveyi.net/posts/backblaze-b2/</link>
       <pubDate>Mon, 11 May 2020 09:35:00 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/backblaze-b2/</guid>
+      <guid>http://blog.steveyi.net/posts/backblaze-b2/</guid>
       <description>之前學習建站之時，考量到一個問題！
 如果今天我的流量暴漲，文章變多，我的圖片空間及流量會不會也跟著變多
 所以在網路上搜尋了一些對象存處服務，找到了一間便宜的對象存處提供商－Backblaze
-什麼是對象存處 對象存處是一種數據存儲，其中每個數據單元存儲為稱為對象的離散單元。
-對象靜態文件，類似於pdf，mp3檔，圖片或影片&amp;hellip;等文件。
-這些對象實際上可以是任何類型的數據和任何大小的數據。
-對象存儲中的所有對像都存儲在單個平面地址空間中，而沒有文件夾層次結構。
-比較知名的提供商有 AWS S3、Google Cloud Storage、Backblaze B2、DigitalOcean Space&amp;hellip;等等
-那這次要介紹的則是Backblaze B2
-Backblaze B2的優勢 Backblaze B2 的價格是 Amazon S3的¼倍
-搭配CloudFlare CDN免流量費
-支持S3 API
-註冊帳號 首先，進入官網後，點擊右上角的Sign Up
-接著輸入帳號密碼，選擇資料放置區域(基本上選擇美西)
-接著到電子郵件中驗證帳號！完成
-創建Bucket 登入帳號後，點擊中間的Creat a Bucket
-接著輸入Bucket名稱，不可以跟別人重複
-接著選擇Public(如果你用於備份, 私人檔案的話，就選擇Private)
-接著我們就會看見剛剛創建的Bucket了
-創建App Key 雖然說在網頁上我們就可以上傳檔案了，但是網頁只支持到500MB的檔案
-超過就必須要使用API上傳了，所以這邊我們來教大家怎麼建立App Key
-首先，點擊左方的App Keys
-接著我們點擊 Add a New Application Key
-輸入App Key名稱，允許訪問的Bucket
-接著點選Create a new key
-接著會產生API資訊，將S3 EndPoint, Key ID及applicationKay記下來
-上傳/下載檔案 在Windows/Mac上傳或下載有很多種工具可以做，我比較推薦使用Cyberduck
-如果是Linux的話，我認為Rclone是一個好選擇
-PS.可以選擇S3 API或是Backblaze API進行連接</description>
+什麼是對象存處 對象存處是一種數據存儲，其中每個數據單元存儲為稱為對象的離散單元。</description>
     </item>
     
     <item>
       <title>Github Pages 綁定自訂網域及SSL</title>
-      <link>http://blog.steveyi.net/2020/github-pages-ssl/</link>
+      <link>http://blog.steveyi.net/posts/github-pages-ssl/</link>
       <pubDate>Thu, 23 Apr 2020 05:19:40 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/github-pages-ssl/</guid>
+      <guid>http://blog.steveyi.net/posts/github-pages-ssl/</guid>
       <description>上篇跟大家分享了 透過Github託管靜態網站，這篇文章就來分享一下綁定自訂網域及開啟SSL的過程吧！
 首先，進入Github Repository的設定
-輸入自訂的網域，接著點擊Save
-右側會有一個 xxxxx.github.io. 的子網域，先記起來 等等會用到
-接著我們進入DNS服務商來設定DNS紀錄（這邊是用AWS Route 53）
-設定CNAME紀錄
-值為上方的 xxxxx.github.io.
-大約等待2-3分鐘，就會生效囉！
-接著回到Github Pages設定，等待DNS生效（大約15分鐘）
-勾選Enforce HTTPS，系統就會自動部署SSL憑證
-這樣就完成部署囉！
-Demo: https://git-demo.yiy.tw</description>
+輸入自訂的網域，接著點擊Save</description>
     </item>
     
     <item>
       <title>透過Github託管靜態網頁 - Github Pages</title>
-      <link>http://blog.steveyi.net/2020/github-static-website/</link>
+      <link>http://blog.steveyi.net/posts/github-static-website/</link>
       <pubDate>Wed, 22 Apr 2020 14:09:46 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/github-static-website/</guid>
+      <guid>http://blog.steveyi.net/posts/github-static-website/</guid>
       <description>首先，進入Github 點擊左方綠色按鈕的 New
 輸入Repository名稱（自定義）
-選擇 Public(公開) 或是 Private(私人)
-點擊Create Repository
-這樣就建立好一個Repository囉！
-接著我們要下載Github Desktop，方便上傳網頁原始檔
-點擊中間的Download for macOS（Windows 則會是 Download for Windows）
-下載完成後，登入Github帳號（Sign in to Github.com）
-接著選擇剛剛建立的Repository
-點擊 Clone
-接著將檔案複製到資料夾中
-回到Github Desktop，輸入Commit changes的資訊
-點擊Commit to master
-接著我們回到網頁，刷新後應該就會看到剛剛上傳的檔案囉！
-接著來設定一下Github Pages
-選擇master branch
-接著就會產生子網域，就可以嘗試進入網站囉！
-下次再來補充綁定自訂網域及SSL的方式吧！</description>
+選擇 Public(公開) 或是 Private(私人)</description>
     </item>
     
     <item>
       <title>Mailgun &#43; Gmail 達成自訂網域郵箱</title>
-      <link>http://blog.steveyi.net/2020/mailgun-gmail-custom-domain-email/</link>
+      <link>http://blog.steveyi.net/posts/mailgun-gmail-custom-domain-email/</link>
       <pubDate>Wed, 22 Apr 2020 12:48:48 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/mailgun-gmail-custom-domain-email/</guid>
+      <guid>http://blog.steveyi.net/posts/mailgun-gmail-custom-domain-email/</guid>
       <description>小時候總是很好奇寄件者後方的網域名稱是什麼，後來接觸到網站架設後，註冊了許多網域（現在手上大概6個網域左右)，也慢慢解開了小時候的疑惑
-今天就來分享一下Mailgun + Gmail 自訂網域郵箱的方法吧！
-首先，先註冊Mailgun，預設有5000封信件額度
-PS.如果你是GCP客戶，可以到合作頁面，申請免費30000額度
-註冊之後，我們進入控制台新增網域（預設會有一個網域）
-上方輸入網域名網域名稱，下方勾選Create DKIM Authority 並選擇1024位元(部分DNS服務商不支持2048位元)
-接著設定DNS紀錄，MX紀錄一定要設定（不然會收不到信）
-小提醒：如果你有其他郵件收信服務(如: Gsuite, Office…等)，不要設定MX紀錄，不然原先的服務會收不到信
-設置完後，等待DNS生效 我們就可以來進行下一個步驟了！
-接著我們來設置SMTP帳號
-首先，打開Mailgun控制台
-點擊Domain settings 選擇SMTP credentials
-接著點擊右上角的New SMTP User來建立新帳號
-右上方為密碼！先記起來，等等會用到
-接著我們來設定轉寄郵件
-點擊左方的Receiving，在點擊右上方的Create Route
-接著選擇Match Recipient(指定收件者)，並輸入剛剛建立的電子郵件地址
-下方Forward填寫Gmail的電子郵件地址，存檔！
-PS.如果第一項選擇Cache All，則會轉發所有寄到這個網域下的電子郵件，也就是無限別名
-新增完後，我們打開Gmail 設定→更多設定→帳戶
-點擊 新增另一個電子郵件地址(Add another email address)
-接著輸入名稱(自訂)及電子郵件地址(剛剛建立的那個)
-接著輸入SMTP伺服器(端口選擇587tls) 使用者帳號 密碼
-mailgun的SMTP伺服器是smtp.mailgun.org
-接著驗證電子郵件擁有權（代碼會寄到剛剛設置的Gmail信箱）
-會收到類似這樣的信
-將驗證碼輸入上去就完成囉！
-後記，好香 有網域信箱就是香（？🤩
-工具：G Suite工具箱（檢測DNS問題）</description>
+今天就來分享一下Mailgun + Gmail 自訂網域郵箱的方法吧！</description>
     </item>
     
     <item>
       <title>[教學] AWS Route 53 代管DNS</title>
-      <link>http://blog.steveyi.net/2020/aws-route53/</link>
+      <link>http://blog.steveyi.net/posts/aws-route53/</link>
       <pubDate>Mon, 06 Apr 2020 14:38:57 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/aws-route53/</guid>
+      <guid>http://blog.steveyi.net/posts/aws-route53/</guid>
       <description>從2017年註冊了第一個網域之後，DNS代管商一直是我在研究的一個部分！
-今天來推薦一下由AWS推出的DNS代管服務 - Route 53
-前置作業：
-AWS帳號
-網域
-建立託管區域 首先，進入AWS主控台搜尋 Route 53
-接著點擊左上角的託管區域
-點擊左上角的，建立託管區域 接著在右方自己的網域名稱
-接著系統就會建立一個託管區域囉！（這邊先將NS紀錄記起來，下個步驟會用到）
-設定DNS伺服器 那我們剛剛已經在AWS Route 53建立了DNS託管區域，接著我們要到網域註冊商來設定DNS伺服器！
-首先，打開網域管理頁面（本篇以Gandi示範），並找到名稱伺服器或是Nameservers
-點擊變更後，將原本的紀錄刪除，並將AWS Route 53自動產生的NS紀錄貼上去
-接著就等待生效囉！大約24-48小時生效（實際上應該5-10分鐘生效xD）</description>
+今天來推薦一下由AWS推出的DNS代管服務 - Route 53</description>
     </item>
     
     <item>
       <title>在 Gandi 購買網域</title>
-      <link>http://blog.steveyi.net/2020/register-domain-at-gandi/</link>
+      <link>http://blog.steveyi.net/posts/register-domain-at-gandi/</link>
       <pubDate>Fri, 03 Apr 2020 18:40:19 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/register-domain-at-gandi/</guid>
-      <description>之前有跟大家分享將網域從 Google 移轉至 Gandi 的過程 點我看文章
-本篇就來分享一下 在 Gandi 購買網域的過程吧！
-前置準備：
-錢（用來註冊網域的費用）
-首先，我們打開 Gandi 的官網
-搜尋你想要的網域，接著將其加入購物車
-接著就可以結帳啦
-Gandi 支持很多付款方式：信用卡、銀聯、PayPal、轉帳、比特幣(BitCoin)
-其中 Paypal 必須為非台灣帳戶才可以付款
-付款完成後，系統就會建立網域資料 可以在這裡查看狀態
-建立完成後，會收到一封電子郵件通知
-接著就可以前往控制台管理你的網域囉！</description>
+      <guid>http://blog.steveyi.net/posts/register-domain-at-gandi/</guid>
+      <description>之前有跟大家分享將網域從 Google 移轉至 Gandi 的過程 點我看文章</description>
     </item>
     
     <item>
       <title>將網域從 Google Domains 轉出至 Gandi</title>
-      <link>http://blog.steveyi.net/2020/transfer-domain-from-google-to-gandi/</link>
+      <link>http://blog.steveyi.net/posts/transfer-domain-from-google-to-gandi/</link>
       <pubDate>Thu, 02 Apr 2020 02:55:55 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/transfer-domain-from-google-to-gandi/</guid>
+      <guid>http://blog.steveyi.net/posts/transfer-domain-from-google-to-gandi/</guid>
       <description>這幾天收到Google Domains的通知信，通知網域即將要續費了
-正好前陣子打算將所有網域轉移到 Gandi 統一管理，趁著這次機會
-來分享一下如何將網域 轉出/轉入
-事前準備：
-已註冊的網域(要轉出的)
-錢(將網域轉入其他註冊商需要續費)
-首先，先至 Google Domains 解鎖網域 並取得轉出授權碼
-必須呈現 unlocked 才可以轉出
-會產生一組授權碼（要保存好）
-取得授權碼後，系統會詢問是要轉到其他Google帳戶還是其他網域註冊商
-我們要選擇「轉出至其他網域註冊商」
-接著需要輸入一下Google帳號的密碼
-輸入完成後，就會產生驗證碼了！（請小心保管，不要洩漏）
-接著我們到 Gandi，我們將剛剛複製的授權碼貼上（前置付款過程可以參考 這篇文章）
-將授權碼貼上，同意條款，我們就可以進行付款了！
-完成付款後，我們可以到客戶面板中查看轉移狀態
-當系統跑轉移流程後，需要到 Email 接受轉移
-記得按接受&amp;hellip; 當初我就是按錯，等了一陣子才收到新的Email xD
-授權轉移後，你的網域就成功轉移啦！
-PS.如果出現註冊商拒絕了這次移轉
-可能是因為你拒絕了電子郵件轉移授權、網域到期年限超過10年、或&amp;hellip;總總原因
-如果你的網域不存在上方問題，建議你聯繫原本網域的註冊商客服</description>
+正好前陣子打算將所有網域轉移到 Gandi 統一管理，趁著這次機會</description>
     </item>
     
     <item>
       <title>Backblaze B2和Cloudflare Workers設定自訂域名</title>
-      <link>http://blog.steveyi.net/2020/b2-cfworkers/</link>
+      <link>http://blog.steveyi.net/posts/b2-cfworkers/</link>
       <pubDate>Wed, 26 Feb 2020 20:36:28 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/b2-cfworkers/</guid>
+      <guid>http://blog.steveyi.net/posts/b2-cfworkers/</guid>
       <description>前言 當初架設網站的時候，考量到了圖片的存儲以及流量的問題
 本來是將圖片跟網站放在同一個網站伺服器下的，但後來發現伺服器空間常常不足夠（因為系統會自動備份，導致空間不足）
 後來將圖片放在OneDrive商業版，並搭配OneList來使用，但畢竟是非官方的API，當API請求速率過快，圖片就載入不出來了．
-當初OneDrive失敗後，又將圖片放到Google Drive上，並搭配rclone使用，
-但是&amp;hellip;網站載入爆慢呀！（而且流量也爆了）
-最後就發現Backblaze B2這個東西了XD
-Backblaze是什麼? Backblaze是一家數據存儲提供商，提供兩種產品
-B2 Cloud Storage(一種類似於Amazon S3的對象存儲服務)
-Cloud Backup(無限空間的電腦備份服務)
-其中 B2 Cloud Storage 主打低價 (搭配Cloudflare CDN流量免費)，Cloud Backup主打無限空間備份
-更多內容可以參考 Backblaze官網
-需要運用到的資源 Cloudflare CDN
-Cloudflare DNS
-Cloudflare Workers
-Backblaze B2
-教學開始 1.首先，進入Cloudflare後 點擊 +Add a Site 新增一個網域
-2.新增完之後，我們點擊右方的Workers
-來進入Cloudflare Workers
-接著我們點擊上方的 Create a Worker 來建立一個新的Worker
-3.將文章下方的程式碼貼到左邊的Script
-並修改 b2Domain b2Bucket b2UrlPath
-完成後我們點擊下方的Save and Deploy
-4.接著我們進入剛剛新增好的網域
-新增一個CNAME紀錄(下方是A紀錄&amp;hellip;忘了改xDD)
-5.新增CNAME紀錄後，我們點擊上方的Workers
-接著點擊 Add route
-6.接著這邊我們來設定一下
-Route的部分填寫 剛剛新增的子網域/*
-ex: img.steveyi.net/*</description>
+當初OneDrive失敗後，又將圖片放到Google Drive上，並搭配rclone使用，</description>
     </item>
     
   </channel>

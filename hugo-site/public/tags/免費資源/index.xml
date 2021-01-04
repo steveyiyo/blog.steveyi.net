@@ -6,417 +6,179 @@
     <description>Recent content in 免費資源 on 酷小易</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
+    <copyright>&amp;copy; 2018 - 2021 &lt;a href=&#34;https://steveyi.net&#34;&gt;小易&lt;/a&gt; 版權所有</copyright>
     <lastBuildDate>Wed, 25 Nov 2020 02:31:14 +0000</lastBuildDate><atom:link href="http://blog.steveyi.net/tags/%E5%85%8D%E8%B2%BB%E8%B3%87%E6%BA%90/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[有趣測試] 測驗看看你是不是木耳！</title>
-      <link>http://blog.steveyi.net/2020/are-you-mu-er/</link>
+      <link>http://blog.steveyi.net/posts/are-you-mu-er/</link>
       <pubDate>Wed, 25 Nov 2020 02:31:14 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/are-you-mu-er/</guid>
+      <guid>http://blog.steveyi.net/posts/are-you-mu-er/</guid>
       <description>這個網站會以隨機順序提供六組音樂，每組包含128Kbps MP3/320Kbps MP3/未壓縮的WAV音檔，測驗看看你能不能聽出哪個是音質最好的音檔，選擇後會產生正確答案。
 連結在下方。
-貼心提醒：
-- 可以把音量調高聽看看細節
-- 細節可以從高音部分比較明顯聽出（所以裝置的選擇很重要！）
--這不是什麼正式的測驗，不過至少可以參考一下啦w
-點我前往測試 測驗結果分析結果是，如果你能答對四個或以上，那麼你就不是木耳囉</description>
+貼心提醒：</description>
     </item>
     
     <item>
       <title>AutoDraw 自動繪圖吧！</title>
-      <link>http://blog.steveyi.net/2020/autodraw/</link>
+      <link>http://blog.steveyi.net/posts/autodraw/</link>
       <pubDate>Wed, 25 Nov 2020 02:25:44 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/autodraw/</guid>
+      <guid>http://blog.steveyi.net/posts/autodraw/</guid>
       <description>(本文由小易及蘿蔔共同編輯)
  前幾天，小易在上課的時候，老師介紹到了一個有趣的網站
-AutoDraw是一個由Google所開發的網站
-Google從1998年就註冊這個網域了(或是其他人註冊轉賣給Google的)~
-我居然現在才知道這個網站
-小易也很好奇，這個有趣的東西是如何運作的
-於是玩了一下，也稍微搜尋了一下相關資料
-就有搜尋到一篇文章，寫著 Machine learning, plus a dash of artistic flair(機器學習，並帶有一些藝術氣息)
-那我們初次進入網頁後，我們會看到一個空白的區塊
-我們可以選擇左邊的AutoDraw(就是帶魔法的那個筆)
-接下來可以用電腦在上面畫圖，如果用「並行」搭配Apple Pencil，效果更好哦～
-畫圖會發現神奇的事情發生了：隨便話一個圖就會有很多選項可以幫圖片做修正
-下次有空來玩玩看吧～
-或是使用iPad直接到AutoDraw去畫也是可以的</description>
+AutoDraw是一個由Google所開發的網站</description>
     </item>
     
     <item>
       <title>Windows 10打開電腦(喚醒)後自動校正時間</title>
-      <link>http://blog.steveyi.net/2020/ntp-clock-autoset/</link>
+      <link>http://blog.steveyi.net/posts/ntp-clock-autoset/</link>
       <pubDate>Fri, 20 Nov 2020 15:52:24 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/ntp-clock-autoset/</guid>
+      <guid>http://blog.steveyi.net/posts/ntp-clock-autoset/</guid>
       <description>時鐘對電腦來說是一個非常重要的東西，並不是只在狀態欄(或工作列)顯示時間那麼單純而已，時鐘不正確(與真實世界實際時間偏差太多)的話，可能會造成電腦發生一些奇怪的現象，例如:不能看網頁(憑證問題)，如果時間差太多甚至會造成軟體當掉。各種程式登入逾時也是很容易在時間偏差太大時發生的事情
 時間錯誤造成的憑證問題導致無法正常瀏覽網頁
 各種程式的登入逾時，iTunes就是其中之一
 講到這裡，大家應該都想到了系統內建的自動校正時間功能
-系統的校正功能，筆者從來沒看過它自動幫我更正時間，每次都是去按[立即更新]才幫我更正時間 (它不會是每次喚醒電腦就對時，據說要好幾天才會更正一次)
-偏偏筆者的雙A牌PC(筆記型電腦)和以前使用的PC桌機(CMOS沒電)，不論有沒有插電，只要Windows沒在運作(睡眠、休眠、關機、當機)，時鐘就會停止計算時間，每次開電腦都是看到上次關掉電腦的日期(或是被重設)，打開後還要手動調整實在很麻煩，因此研究了時鐘的自動校正功能，每逢開機就校正一次。
-此處使用到的應用程式是國家時間與頻率標準實驗室推出的 NTPClock
-雖然有點古老，但功能至今依然正常
-NTPClock安裝教學 首先請點這裡下載NTPClock，下載後請不要急著打開。
-請先將程式移至&amp;quot;C:\NTPClock&amp;quot;資料夾(自己建立該資料夾)，然後在該程式按右鍵，選擇[相容性]，然後依序更改圖片圈起來的參數再打開
-開啟時請允許權限，否則無法變更時間
-接下來程式會縮小在系統托盤，圖標點右鍵可以結束。
-設定開機自動使用NTPClock校正時間 圖片太小的話可以右鍵在新分頁打開
-依照NTPClock的預設設定，每次開啟該程式就會校正一次系統時間
-因此我們要用&amp;quot;工作排程器&amp;quot;設定每次解鎖電腦時會自動&amp;quot;以管理員權限&amp;quot;啟動NTPClock
-首先請先在Windows搜尋找到&amp;quot;工作排程器&amp;quot;
-接下來請到觸發程序的地方，調整紅色框起來的地方的設定如圖
-到動作的地方，調整紅色框起來的地方的設定如圖
-到條件的地方，調整紅色框起來的地方的設定如圖
-更正圖片錯誤的部分：取消勾選「只有在電腦是使用AC電源時才啟用這個工作」
-到設定的地方，調整紅色框起來的地方的設定如圖
-接下來要設定當鎖定、登出、關掉電腦(睡眠、休眠、關機)時關掉NTPClock
-(不然如果不是關機或登出的話，每次打開電腦就會多開一個NTPClock，然後多開幾次電腦之後工作列就滿了)
-接下來請到觸發程序的地方，調整紅色框起來的地方的設定如圖
-到動作的地方，調整紅色框起來的地方的設定如圖
-到條件的地方，調整紅色框起來的地方的設定如圖
-更正圖片錯誤的部分：取消勾選「只有在電腦是使用AC電源時才啟用這個工作」
-到設定的地方，調整紅色框起來的地方的設定如圖
-接下來每次打開電腦就會自動對時囉~
-如果電腦關掉後時間會跑掉的話，以後每次打開電腦都不用手動改時間了!</description>
+系統的校正功能，筆者從來沒看過它自動幫我更正時間，每次都是去按[立即更新]才幫我更正時間 (它不會是每次喚醒電腦就對時，據說要好幾天才會更正一次)</description>
     </item>
     
     <item>
       <title>使用Xbox遊戲列提升Windows的遊戲體驗</title>
-      <link>http://blog.steveyi.net/2020/xbox-game-bar/</link>
+      <link>http://blog.steveyi.net/posts/xbox-game-bar/</link>
       <pubDate>Wed, 07 Oct 2020 02:09:56 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/xbox-game-bar/</guid>
+      <guid>http://blog.steveyi.net/posts/xbox-game-bar/</guid>
       <description>Xbox遊戲列是Windows 10的一個功能，具有錄影和直播、顯示效能、控制Spotify音樂等功能，還可以釘選在螢幕上。最棒的是，遊戲列會把系統資源集中在遊戲上，因此如果電腦配置不是很頂級的玩家玩起來會更順暢!
-註: 筆者以Windows 10 (2004版) 和Xbox遊戲列(v5.420)作為示範，不同版本可能長得不太一樣。
-首先，請先打開你的遊戲，或是要開啟遊戲列的應用程式，然後按下Win鍵(command鍵)+G
-打開選單後按下齒輪，然後勾選&amp;quot;記住這是個遊戲&amp;quot;
-另外，Xbox遊戲列中的眾多小工具也都是可以釘選的，比如說筆者覺得非常好用的&amp;quot;效能&amp;quot;。
-&amp;ldquo;效能&amp;ldquo;這個小工具就算不是在遊戲中也很好用，這樣就不用安裝其他軟體來顯示效能了。
-提醒:
-在設定的齒輪旁邊有一個啟用點閱率/停用點閱率的功能，這個功能是控制釘選時，小工具能不能操作。(停用=小工具只能看，不能操作；啟用則反之)</description>
+註: 筆者以Windows 10 (2004版) 和Xbox遊戲列(v5.</description>
     </item>
     
     <item>
       <title>使用&#34;備份與還原&#34;備份Windows 7以上的PC</title>
-      <link>http://blog.steveyi.net/2020/windows-backup/</link>
+      <link>http://blog.steveyi.net/posts/windows-backup/</link>
       <pubDate>Fri, 28 Aug 2020 09:09:08 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/windows-backup/</guid>
+      <guid>http://blog.steveyi.net/posts/windows-backup/</guid>
       <description>Mac裡面有一個&amp;quot;時光機&amp;quot;可以簡單易用地備份整部電腦，而Windows裡面也藏著類似的功能哦！
 簡單來說就是會將整台電腦、磁碟機或資料夾（視設定而定）備份起來，第一次會完整備份，所以會花比較久的時間；第二次以後會只備份「在上次備份完更動過」或「在上次備份完新建立」的檔案，以節省空間和時間。
 首先請先打開開始，找到&amp;quot;Windows系統&amp;quot;，然後打開控制台
 接下來請進到系統及安全性&amp;gt;備份與還原
-按下&amp;quot;設定備份&amp;quot;，然後照著指示選擇備份的設定跟排程
-另外，建議不要跟啟動磁碟用同一個硬碟，以免到時硬碟壞了，備份也沒用。
-接下來就可以開始備份
-下一頁會告訴各位如何還原唷!
-備份完成後，視設定可能備份整個啟動磁碟或資料夾
-如果要復原整個啟動磁碟的話，筆者沒有實驗過，可以參考微軟官方文章
-如果要復原單一個資料夾或是磁碟區的話，請在該磁碟區上按下右鍵，然後選擇「內容」，並找到「以前的版本」之後選擇要還原的時間點
-如果選擇開啟舊檔，則可以看到以前備份的檔案，可以拉出來做使用；
-如果選擇還原，則會將整個磁碟區或資料夾覆蓋掉，這個筆者沒試過。
-以下是開啟舊檔後的樣子
-這樣以後再也不怕誤刪檔案囉！
-但還是要注意備份週期的問題，假如每週備份一次，但還來不及備份就被刪掉也是沒辦法囉</description>
+按下&amp;quot;設定備份&amp;quot;，然後照著指示選擇備份的設定跟排程</description>
     </item>
     
     <item>
       <title>使用傳統版Gmail加快老舊裝置和低速網路的郵件載入速度</title>
-      <link>http://blog.steveyi.net/2020/html-gmail/</link>
+      <link>http://blog.steveyi.net/posts/html-gmail/</link>
       <pubDate>Fri, 21 Aug 2020 15:32:52 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/html-gmail/</guid>
+      <guid>http://blog.steveyi.net/posts/html-gmail/</guid>
       <description>筆者有一部老舊的PC，配備1GB記憶體以及Windows XP做輕度文書使用(Windows XP只需128MB記憶體即可操作)，瀏覽一些網站仍可應付，有些大型網站則要載入很久或是無法正常使用。如果是一般的文章網頁還可以，問題來了，筆者想用Gmail網頁版收發郵件，但在網路暢通的情況下載入標準Gmail網頁需要將近一分鐘，捲動郵件更是一場災難，後來筆者發現網頁底部會有一個不明顯的傳統版Gmail超連結，不太會有人注意到它。
 註：該部PC後來有點故障，所以不會用它來示範本篇教學。
-筆者將連結放在這裡，有需要的可以拷貝拿去用
-Gmail傳統版
-點開連結後，請按下我要使用「HTML版Gmail」
-進入之後會發現少漂亮的圖示和華麗的動畫，雖然視覺效果不這麼吸引人，但在網路不佳或是電腦運作不快的環境可是非常有用啊！
-這是傳統版Gmail的網頁，雖然看起來陽春但大部分功能都還在。
-這是標準的Gmail網頁，在效能良好的裝置和良好的網路環境可以獲得很好的視覺效果和使用體驗，但老舊裝置以及網路頻寬不足的情況下就要等很久。</description>
+筆者將連結放在這裡，有需要的可以拷貝拿去用</description>
     </item>
     
     <item>
       <title>在官方不支援macOS Catalina的裝置安裝macOS Catalina</title>
-      <link>http://blog.steveyi.net/2020/macos-catalina-on-unsupport-mac/</link>
+      <link>http://blog.steveyi.net/posts/macos-catalina-on-unsupport-mac/</link>
       <pubDate>Tue, 18 Aug 2020 10:41:18 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/macos-catalina-on-unsupport-mac/</guid>
+      <guid>http://blog.steveyi.net/posts/macos-catalina-on-unsupport-mac/</guid>
       <description>有些電腦明明還可以好好的、正常使用，但可能因為官方的多重考量(不管是效能上、商業上、或是功能上之類的考量)，而被官方從升級名單中一代一代的移除，豈不是覺得很可惜嗎
 這時候，有一位dosdude1做了Catalina Patcher解決了這個問題。
 這是官方的支援名單:
-螢幕快照擷取自Apple官網
-下方這是Catalina Patcher的支援名單，與OS X El Captain系統要求一致:
-
-螢幕快照擷取自Apple官網
-本篇教學以MacBook Air 2011作為示範，與其他機型操作步驟差不多。
- 注意:
--如果電腦支援官方High Sierra的話，請先升級High Sierra再操作此篇。
--畢竟Catalina Patcher不是Apple官方所調整釋出的，難免會有一些已知或未知的bug，可以接受的話再進行操作。
--Catalina Patcher已知問題:如果電腦搭配AMD Radeon 5000系列或6000系列的顯示卡，顯示卡無法使用硬體加速，操作起來就卡卡的，毛玻璃效果會被停用，比較華麗的動態效果也會很卡頓，也不能執行一些需要硬體加速的程式，像是iMovie之類的
- 操作步驟：
-請先前往Catalina Patcher的網站按下Download Latest Version並下載最新版
-下載完成後打開映像檔會看到一個App，將它點開。
-然後進到「系統偏好設定」內的「安全性與隱私權」強制打開
-然後按下白色的「打開」按鈕
-然後請一路按下Continue，需要時請輸入密碼允許進行更動
-請按下右邊的「Download a copy」藍色按鈕
-然後按下「Start Download」
-下載完成後可以選擇直接安裝(左)、製作可開機安裝程式的隨身碟(中)，或是製作ISO映像檔(右)
-選擇Install to This Machine的話是直接安裝到機器上，要關閉SIP安全保護，這個筆者沒試過。
-選擇Create a Bootable Installer就是製作可開機安裝程式的隨身碟。
-選擇Create an ISO image是製作映像檔可供燒錄DVD使用。
-筆者以Create a Bootable Installer作為本篇文章的示範
-按下Create a Bootable Installer之後可以選擇要安裝到哪裡，完成後按下Start再按Yes，然後再輸入密碼就會開始清除隨身碟上的資料並製作可開機安裝程式隨身碟了
-完成以後重新啟動時按住option會看到macOS Base System，按下去會開機到macOS Catalina的macOS工具程式。
-接下來請按下「重新安裝macOS」
-進入安裝程式後請按下「繼續」，並同意條款。
-接下來選擇要安裝在哪個磁碟或卷宗
-接下來可能升級完成後會開機，如果進度條卡住而且沒有寫安裝剩餘時間可以試著強制關機(隨身碟還不用拔掉)，然後再次開機同時按option選擇macOS Base System來開機</description>
+螢幕快照擷取自Apple官網</description>
     </item>
     
     <item>
       <title>使用CloudReady體驗ChromiumOS作業系統，老電腦重獲新生!</title>
-      <link>http://blog.steveyi.net/2020/cloudready/</link>
+      <link>http://blog.steveyi.net/posts/cloudready/</link>
       <pubDate>Mon, 10 Aug 2020 15:10:52 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/cloudready/</guid>
+      <guid>http://blog.steveyi.net/posts/cloudready/</guid>
       <description>不曉得各位有沒有一種經驗，電腦老舊了，連文書處理和基本的瀏覽網頁都卡頓，但又不想使用太老舊的作業系統(官方停止提供新功能了，連瀏覽器也不提供更新支援了)，這時便可以下載最新版的CloudReady家用版來使用囉!既有最新版的瀏覽器，也有不少Web App能使用；也因為是基於瀏覽器的作業系統，因此資源占用比許多作業系統都少，也不用怕不習慣使用Linux作業系統(安裝軟體的方式很不一樣，使用邏輯也差很多，而且一直使用命令行也不是很直覺的用法)，所以，只要電腦支援64位元，幾乎都可以用CloudReady(試過家裡唯一一台32位元電腦，無法使用32位元版的CloudReady開機)
 開始吧!
 準備材料有:
- 8GB隨身碟(資料會洗掉，請先移除資料) 要安裝的電腦  首先請先到官網按下[DOWNLOAD 64-BIT IMAGE]下載64位元版安裝檔(32位元版已停止支援)
-無論使用何種系統，請不要選擇USB Maker，因為筆者和朋友測試多次，很容易製作失敗
-請將下載後的檔案(*.zip)解壓縮後會得到一個(*.bin)檔案
-接下來請使用Chrome開啟這個連結，並安裝後開啟
-插上隨身碟之後按齒輪，並按下[Use local image]
-選擇剛剛解壓縮出來的BIN(*.bin)檔案
-然後插入並選擇剛剛準備好的隨身碟
-接下來按兩次藍色按鈕，並授予使用者帳戶控制的權限，等待完成
-如果過程中跳出USB磁碟機需要格式化的視窗，請按下取消!
-完成之後請將電腦關機，依照電腦製造商提供的方法進入BIOS設定、開機選單或Mac開機管理程式，並選擇使用剛剛製作好的隨身碟開機(視情況可能需要輸入BIOS密碼或是韌體密碼)
-本篇以PC作為示範，所以使用Boot Menu選擇USB磁碟機(隨身碟名字可能不一樣)
-再來會進入開機畫面
-開機完成後可以選擇語言和聯網等基礎設定
-設定完成後可以按下藍色的開始使用
-右下角按下後會展開控制中心（下半部）和通知中心（上半部）
-控制中心可以控制各式開關、關機、鎖定、打開系統偏好設定
-按下Install OS便可以安裝到硬碟，以後開機就不用依賴這個隨身碟了，但是會將硬碟資料清空，請謹慎操作。
-左下角的圓形按鈕是啟動台，可以找Chromium應用程式商店下載各式Chrome App和擴充功能。
-值得一提的是，下載的Chrome App會和帳戶同步，意指重新安裝或者是到別台CloudReady電腦、Chromebit、Chromebox或是Chromebook上都會同步安裝
-在設定裡面可以調整各種選項，裡面的設定值也會同步
-有一個App叫做「檔案」，功能相當於Finder和檔案總管，可以管理檔案
-而且也會自動串接Google雲端硬碟，非常方便。
-大致介紹完畢囉！祝各位用得愉快～
-螢幕快照的快速鍵是Ctrl+F5，會存在下載資料夾
-其餘快速鍵幾乎都跟Windows差不多，可以參考這篇官方文章</description>
+ 8GB隨身碟(資料會洗掉，請先移除資料) 要安裝的電腦  首先請先到官網按下[DOWNLOAD 64-BIT IMAGE]下載64位元版安裝檔(32位元版已停止支援)</description>
     </item>
     
     <item>
       <title>使用Android手機作為Mac的網路連線來源的方法</title>
-      <link>http://blog.steveyi.net/2020/horndis/</link>
+      <link>http://blog.steveyi.net/posts/horndis/</link>
       <pubDate>Sat, 08 Aug 2020 07:23:53 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/horndis/</guid>
+      <guid>http://blog.steveyi.net/posts/horndis/</guid>
       <description>有時因為某些原因，不想使用Wi-Fi上網或使用Wi-Fi個人熱點時，或是電腦的無線網路卡受到周遭物品的遮蔽時，甚至是黑蘋果電腦沒有相容無線網卡等情況下，將Android手機作為網路接收器是一個好主意。
-macOS需求為10.11(El Captain)以上，本篇筆者使用macOS 10.13(High Sierra)作為示範
-只要Android手機連得到Wi-Fi或是行動數據連線，而且有USB數據連線的功能，都可以執行以下教學提到的內容。
-請注意，手機一直24小時掛著電源可能會造成膨脹，需要時再接上電腦。
-首先請先打開這個網址，前往作者的下載頁面，點擊下圖紅色框起來的那個按鈕
-
-接下來請在左下角的下載進度條按下「保留」，這是因為電腦將這個套件誤判為病毒。
-進到安裝程式後請一路按下「繼續」
-如果遇到需要輸入密碼的介面，請輸入密碼來授予權限
-安裝完成後，請將手機插上電腦的USB連接埠，並且打開USB數據連線
-到系統偏好設定裡，打開網路偏好設定
-接下來就會在裡面看到手機有沒有連線囉</description>
+macOS需求為10.11(El Captain)以上，本篇筆者使用macOS 10.13(High Sierra)作為示範</description>
     </item>
     
     <item>
       <title>幫Spotify或其他音樂軟體加上實時歌詞的方法(Android)</title>
-      <link>http://blog.steveyi.net/2020/dynamic-lyrics-android/</link>
+      <link>http://blog.steveyi.net/posts/dynamic-lyrics-android/</link>
       <pubDate>Sat, 11 Jul 2020 10:00:12 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/dynamic-lyrics-android/</guid>
+      <guid>http://blog.steveyi.net/posts/dynamic-lyrics-android/</guid>
       <description>上次有一篇介紹各家串流平台的免費會員比較，各位可以發現實時歌詞很多家平台都有
 但Spotify根據筆者測試只有Premium用戶能用或是有些平台沒有歌詞服務，稍嫌可惜
 這時想要聽著Spotify或其他沒歌詞的平台的免費音樂，但又覺得沒歌詞不能一起唱很麻煩嗎 這時候照這篇文章做就可以解決這個問題囉
-這篇文章適用Android用戶，iOS/iPadOS用戶在另外一篇唷
-注意：Musixmatch for Android的原理是讀取通知，所以有些中文的專輯版音樂被Youtube Music等平台轉為英文名時，可能產生誤判情形，此時就只能改用其他平台或是關掉Floating Lyrics了，如果是MV或是影片大概就辨識不到了
-如果使用小米/Redmi/黑鯊/POCO手機的用戶，請將應用程式從最近應用上鎖，並將省電策略設為無限制，可以參考這邊
-開始吧 首先請先下載Musixmatch
-下載完成後請打開並註冊或登入Musixmatch的帳號
-如果有詢問是否加入Musixmatch Premium會員，可以關掉
-接下來請允許所需的權限
-接下來視需要，登入Spotify或是音樂庫
-此處以Spotify示範
-輸入帳號密碼
-然後滑到最底部按綠色的「同意」按鈕
-在Spotify或其他平台隨便播放一首歌，如果跳出這視窗，請按「別再顯示」
-接下來會跳出Floating Lyrics的實時歌詞視窗
-如果支援實時歌詞的歌曲就會自己跳，如果只支援靜態歌詞就需要自己用手滑，不支援歌詞的話也會出現在這邊
-按下Floating Lyrics視窗裡，歌名右邊的圓形按鈕可以更改樣式
-比如說更改顏色或是展開歌詞
-按下圓形按鈕右邊的三個點按鈕可以看到選單有更多功能
-點選「在App內顯示」就可以整個畫面充滿歌詞
-打開通知中心可以看到隱藏Floating Lyrics的按鈕
-接下來可以測試其他應用程式（但不是每款音樂App都支援）
-筆者在Friday音樂隨便播放一首歌，程式本身沒有這首歌的歌詞，此時Musixmatch便非常實用
-在Youtube Music測試，不少專輯版音樂都能用，但如前面所述，部分中文歌會產生誤判的情形（我也不知道到底為什麼中文歌名要寫英文）
-舉例來說，以下這首歌曲是鄧紫棋的「好想好想妳」
-但歌詞卻誤判為另一首(我完全沒聽過的)歌曲，這時我只好關掉Floating Lyrics，或是改用選單的歌詞辨識功能</description>
+這篇文章適用Android用戶，iOS/iPadOS用戶在另外一篇唷</description>
     </item>
     
     <item>
       <title>幫Spotify加上實時歌詞(iOS/iPadOS)</title>
-      <link>http://blog.steveyi.net/2020/no-premium-spotify-dynamic-lyrics/</link>
+      <link>http://blog.steveyi.net/posts/no-premium-spotify-dynamic-lyrics/</link>
       <pubDate>Sat, 11 Jul 2020 07:31:26 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/no-premium-spotify-dynamic-lyrics/</guid>
+      <guid>http://blog.steveyi.net/posts/no-premium-spotify-dynamic-lyrics/</guid>
       <description>上次有一篇介紹各家串流平台的免費會員比較，各位可以發現實時歌詞很多家平台都有
 但Spotify根據筆者測試只有Premium用戶能用，稍嫌可惜
 這時想要聽著Spotify的免費音樂，但又覺得沒歌詞不能一起唱很麻煩嗎
 這時候照這篇文章做就可以解決這個問題囉
-這篇文章適用iOS/iPadOS用戶，Android用戶在另外一篇唷
-開始吧 首先請先下載Musixmatch
-下載完成後請打開並註冊或登入Musixmatch的帳號
-如果有詢問是否加入Musixmatch Premium會員，可以按左上角「ㄨ」關掉
-完成後請授權Spotify，按下綠色的按鈕
-接下來滑到最下面按綠色的「同意」
-這時候可以隨便播一首歌
-然後回到Musixmatch，轉到「音樂」頁面或是「首頁」會看到正在播放的音樂
-按下去會展開
-如果有支援實時歌詞，會跟著音樂跑，如果只支援靜態歌詞，則可能需要自己用手滑，最怕是有些音樂沒支援歌詞
-左下角也有翻譯功能喔（如果有人翻譯的話）
-如果使用iPad還可以搭配SpiltView邊看歌詞邊放專輯封面展示
-或是使用iPad的Spilt View邊看歌詞邊做其他事（例如：瀏覽網頁）
-也可以在桌面左邊新增小工具
-桌面上就會有歌詞囉</description>
+這篇文章適用iOS/iPadOS用戶，Android用戶在另外一篇唷</description>
     </item>
     
     <item>
       <title>[2020最新] 各大串流平台免費會員比較</title>
-      <link>http://blog.steveyi.net/2020/free-streaming-music-compare/</link>
+      <link>http://blog.steveyi.net/posts/free-streaming-music-compare/</link>
       <pubDate>Sun, 05 Jul 2020 12:51:26 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/free-streaming-music-compare/</guid>
+      <guid>http://blog.steveyi.net/posts/free-streaming-music-compare/</guid>
       <description>蘿蔔這幾年來一直在尋找免費好用的串流音樂平台，也因此幾乎所有台灣常見的平台都有用過，所以接下來一一為大家介紹
 首先我先說一下，蘿蔔是台灣人，所以文章介紹的有些平台不見得能在其他國家或地區使用；或是有些平台改版了，這篇文章可能會來不及更新，請見諒
 再來要說的是，我們不鼓勵使用盜版或破解版，首先是音樂平台和音樂創作者沒辦法收到錢（例如串流音樂平台上面廣告贊助的費用），而好音樂就沒辦法受到鼓勵，裝置也可能被病毒或是間諜程式入侵，而且還可能會有法律責任產生
 說完了那我們開始介紹吧
-Spotify 一個老牌的串流音樂平台，整體以播放清單為主，有Spotify Connect可以無縫更換聆聽裝置，最近剛陸續開放歌詞功能，不過似乎只有Premium能用。
-免費會員在平板電腦和電腦App、電腦版網頁可以隨選即播，有穿插廣告，音質不能設為「最高」。
-如果在手機和iPod touch上則是限隨機播放，每小時只能跳過六首歌（部分指定的個人化播放清單可隨選即播，不在此限）。
-有趣的是筆者的大螢幕手機被視為平板，賺到隨選即播🤣
-KKBOX 串流音樂服務的元老，比Spotify還早推出，中文曲庫比Spotify多，有動態歌詞。
-會員註冊完會有三天體驗會員幾乎全功能都能用，體驗會員過期後會成為一般會員，但每個裝置能登入的體驗會員帳號次數有限。
-一般會員音質不能設為最高(320kbps)，每天會有一則廣告，看完後可以免費聽20首歌曲，用完後每首歌只能預覽30秒。
-網路上有時會不定期發布體驗序號。
-MyMusic 會員註冊完會有7天體驗會員全功能都能用，體驗會員過期後會成為一般會員。
-一般會員音質只能設為一般(128kbps)，只有指定的幾張歌單可以完整聽，其他歌曲都只能預覽30秒。網路上有時會不定期發布體驗序號。
-Friday 音樂 無廣告、有動態歌詞
-會員註冊完會有7天體驗會員全功能都能用，體驗會員過期後會成為一般會員。
-一般會員音質只能設為一般(128kbps)，每天只能播放五首歌，用完後都只能預覽30秒。
-網路上有時會不定期發布體驗序號。
-Apple Music 跟蘋果生態系整合度非常高，有很漂亮的動態歌詞
-（需升級至iOS/iPad OS 13以上，iOS 10以上只有靜態歌詞）
-需要先付錢才能送三個月試用，Android版App帶給我的感受不是很順手；Android版使用上也常常遇到Bug，但如果使用iPhone的話可以直接在Apple Watch上面呼叫Siri點歌確實很方便，網路上偶爾也會發布歌手或電台贊助的免費體驗序號。
-官方說明的系統需求是iOS 8.4/Android 5.0/iTunes 12.2以上
-網易雲音樂 如果需要全曲庫聽到飽要用翻牆軟體（如：穿梭VPN），沒翻牆的話會反灰如圖，動態歌詞，隨選即播，無穿插廣告，但大部分歌曲音質只能設128Kbps，有少部分歌曲可以下載，也有一些獨家音樂，英文歌偏少。
-蝦米音樂 常常簽到可以領體驗會員，但曲庫筆者感覺上比網易雲跟QQ音樂少，有些歌要用翻牆軟體（如：穿梭VPN等），有動態歌詞，部分歌曲可以下載，英文歌偏少。
-QQ音樂 曲庫幾乎都要用翻牆軟體（如：穿梭VPN等），有動態歌詞（逐字），英文歌偏少。
-MixerBox 3 基於Youtube做成的MV播放器，但iOS每次離開App就要從控制中心按一次播放；Android則會有一個小視窗懸浮著，略為不便，而且因為是MV，所以有些穿插對話的MV會影響聽歌體驗。有些人會開台一起聽歌，而探索頁面常常可以找到適合自己的音樂，音樂鬧鐘功能可以讓起床變有趣
-Youtube Music App不能背景播放，雖然有其他的方法（iPadOS和iOS/Android），但不管什麼方法每播完一首歌就跳廣告實在很煩，而且廣告的品質也不及Spotify。
-而iOS版的App給我的體驗很差（用起來的Bug比Android版的Apple Music還多，比如說暫停一下，後台就被殺了又要重新載入一次）。
-有設計歌詞的區塊，但沒幾首歌支援的。
-不含Youtube的話曲庫不算多，但配合Youtube上的影片後，曲庫可說是非常龐大；但也因此搜尋介面很亂，有專輯版音樂，也有MV、第三方上傳的音樂影片（版權灰色地帶，時常被下架），也有播放清單。
-另外令人匪夷所思的是系統語言是中文的情況下，有些中文歌都只寫英文歌名，非常奇葩
-以上就是蘿蔔介紹台灣比較常見的串流音樂平台，有些版權比較屬於灰色地帶的就先不介紹了，畢竟「我是小易」的編輯們也無法保證其合法性
-看完這些介紹，各位有打算使用哪個串流音樂平台了嗎？</description>
+Spotify 一個老牌的串流音樂平台，整體以播放清單為主，有Spotify Connect可以無縫更換聆聽裝置，最近剛陸續開放歌詞功能，不過似乎只有Premium能用。</description>
     </item>
     
     <item>
       <title>Github Pages 綁定自訂網域及SSL</title>
-      <link>http://blog.steveyi.net/2020/github-pages-ssl/</link>
+      <link>http://blog.steveyi.net/posts/github-pages-ssl/</link>
       <pubDate>Thu, 23 Apr 2020 05:19:40 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/github-pages-ssl/</guid>
+      <guid>http://blog.steveyi.net/posts/github-pages-ssl/</guid>
       <description>上篇跟大家分享了 透過Github託管靜態網站，這篇文章就來分享一下綁定自訂網域及開啟SSL的過程吧！
 首先，進入Github Repository的設定
-輸入自訂的網域，接著點擊Save
-右側會有一個 xxxxx.github.io. 的子網域，先記起來 等等會用到
-接著我們進入DNS服務商來設定DNS紀錄（這邊是用AWS Route 53）
-設定CNAME紀錄
-值為上方的 xxxxx.github.io.
-大約等待2-3分鐘，就會生效囉！
-接著回到Github Pages設定，等待DNS生效（大約15分鐘）
-勾選Enforce HTTPS，系統就會自動部署SSL憑證
-這樣就完成部署囉！
-Demo: https://git-demo.yiy.tw</description>
+輸入自訂的網域，接著點擊Save</description>
     </item>
     
     <item>
       <title>透過Github託管靜態網頁 - Github Pages</title>
-      <link>http://blog.steveyi.net/2020/github-static-website/</link>
+      <link>http://blog.steveyi.net/posts/github-static-website/</link>
       <pubDate>Wed, 22 Apr 2020 14:09:46 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/github-static-website/</guid>
+      <guid>http://blog.steveyi.net/posts/github-static-website/</guid>
       <description>首先，進入Github 點擊左方綠色按鈕的 New
 輸入Repository名稱（自定義）
-選擇 Public(公開) 或是 Private(私人)
-點擊Create Repository
-這樣就建立好一個Repository囉！
-接著我們要下載Github Desktop，方便上傳網頁原始檔
-點擊中間的Download for macOS（Windows 則會是 Download for Windows）
-下載完成後，登入Github帳號（Sign in to Github.com）
-接著選擇剛剛建立的Repository
-點擊 Clone
-接著將檔案複製到資料夾中
-回到Github Desktop，輸入Commit changes的資訊
-點擊Commit to master
-接著我們回到網頁，刷新後應該就會看到剛剛上傳的檔案囉！
-接著來設定一下Github Pages
-選擇master branch
-接著就會產生子網域，就可以嘗試進入網站囉！
-下次再來補充綁定自訂網域及SSL的方式吧！</description>
+選擇 Public(公開) 或是 Private(私人)</description>
     </item>
     
     <item>
       <title>Mailgun &#43; Gmail 達成自訂網域郵箱</title>
-      <link>http://blog.steveyi.net/2020/mailgun-gmail-custom-domain-email/</link>
+      <link>http://blog.steveyi.net/posts/mailgun-gmail-custom-domain-email/</link>
       <pubDate>Wed, 22 Apr 2020 12:48:48 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/mailgun-gmail-custom-domain-email/</guid>
+      <guid>http://blog.steveyi.net/posts/mailgun-gmail-custom-domain-email/</guid>
       <description>小時候總是很好奇寄件者後方的網域名稱是什麼，後來接觸到網站架設後，註冊了許多網域（現在手上大概6個網域左右)，也慢慢解開了小時候的疑惑
-今天就來分享一下Mailgun + Gmail 自訂網域郵箱的方法吧！
-首先，先註冊Mailgun，預設有5000封信件額度
-PS.如果你是GCP客戶，可以到合作頁面，申請免費30000額度
-註冊之後，我們進入控制台新增網域（預設會有一個網域）
-上方輸入網域名網域名稱，下方勾選Create DKIM Authority 並選擇1024位元(部分DNS服務商不支持2048位元)
-接著設定DNS紀錄，MX紀錄一定要設定（不然會收不到信）
-小提醒：如果你有其他郵件收信服務(如: Gsuite, Office…等)，不要設定MX紀錄，不然原先的服務會收不到信
-設置完後，等待DNS生效 我們就可以來進行下一個步驟了！
-接著我們來設置SMTP帳號
-首先，打開Mailgun控制台
-點擊Domain settings 選擇SMTP credentials
-接著點擊右上角的New SMTP User來建立新帳號
-右上方為密碼！先記起來，等等會用到
-接著我們來設定轉寄郵件
-點擊左方的Receiving，在點擊右上方的Create Route
-接著選擇Match Recipient(指定收件者)，並輸入剛剛建立的電子郵件地址
-下方Forward填寫Gmail的電子郵件地址，存檔！
-PS.如果第一項選擇Cache All，則會轉發所有寄到這個網域下的電子郵件，也就是無限別名
-新增完後，我們打開Gmail 設定→更多設定→帳戶
-點擊 新增另一個電子郵件地址(Add another email address)
-接著輸入名稱(自訂)及電子郵件地址(剛剛建立的那個)
-接著輸入SMTP伺服器(端口選擇587tls) 使用者帳號 密碼
-mailgun的SMTP伺服器是smtp.mailgun.org
-接著驗證電子郵件擁有權（代碼會寄到剛剛設置的Gmail信箱）
-會收到類似這樣的信
-將驗證碼輸入上去就完成囉！
-後記，好香 有網域信箱就是香（？🤩
-工具：G Suite工具箱（檢測DNS問題）</description>
+今天就來分享一下Mailgun + Gmail 自訂網域郵箱的方法吧！</description>
     </item>
     
   </channel>

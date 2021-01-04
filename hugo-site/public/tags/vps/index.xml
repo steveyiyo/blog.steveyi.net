@@ -6,80 +6,36 @@
     <description>Recent content in VPS on 酷小易</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
+    <copyright>&amp;copy; 2018 - 2021 &lt;a href=&#34;https://steveyi.net&#34;&gt;小易&lt;/a&gt; 版權所有</copyright>
     <lastBuildDate>Fri, 20 Nov 2020 18:31:04 +0000</lastBuildDate><atom:link href="http://blog.steveyi.net/tags/vps/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>利用WireGuard建立大內網</title>
-      <link>http://blog.steveyi.net/2020/usingwireguard-to-make-intranet/</link>
+      <link>http://blog.steveyi.net/posts/usingwireguard-to-make-intranet/</link>
       <pubDate>Fri, 20 Nov 2020 18:31:04 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/usingwireguard-to-make-intranet/</guid>
+      <guid>http://blog.steveyi.net/posts/usingwireguard-to-make-intranet/</guid>
       <description>Hi 大家好，今天來分享一下如何使用WireGuard建立大內網
 之前有與大家分享過 在Linux系統上安裝Wireguard，那這次我們要利用WireGuard來建立大內網
-為什麼筆者稱這次要建立&amp;quot;大內網&amp;quot;呢？
-因為筆者也許多不同地方的網路，想藉由這次機會，來把他們都加進同一個局域網
-這樣也可以解決一些連線問題，比如筆者常常連線回到家中的電腦
-但因為公網IP只有幾個，當機器太多時，就需要設定內網穿透
-但筆者架設了內網之後，在外面只需要連入VPN，在其他網路區域，就可以存取所有網路設備了（這也類似於一般企業的遠端存取）
-那麼，我們一樣需要有一個主伺服器當網關。不過，我們不使用NAT TO NAT，而是透過私網IP來進行互連
-我們的情境是這樣：
-A辦公室 路由器 10.121.208.254/24
-B辦公室 路由器 10.121.209.254/24
-C辦公室 路由器 10.121.210.254/24
-VPN路由器 10.121.211.254/24
-首先，由於我們這次是純粹架設大內網，以WireGuard搭配靜態路由為主。所以先不講到路由協議（不過下次會介紹）
-我們需要有一個主路由器，並透過它來連接A,B,C辦公室的路由器
-所以會變成下面這樣
-VPN &amp;lt;-&amp;gt; A
-VPN &amp;lt;-&amp;gt; B
-VPN &amp;lt;-&amp;gt; C
-當A的用戶想去C時(10.121.208.1 &amp;lt;-&amp;gt; 10.121.210.2) 路線會變成&amp;hellip;
-User-A -&amp;gt; 10.121.208.254 -&amp;gt; 10.121.211.254 -&amp;gt; 10.121.210.254 -&amp;gt; 10.121.210.2(User-C)
-也就是 User-A -&amp;gt; A的路由器 -&amp;gt; VPN Gateway -&amp;gt; C的路由器 -&amp;gt; User-C
-那我們搞懂原理，就來實作啦！
-首先，我先先準備好私鑰及公鑰（公鑰是由私鑰算過來的）
-A&amp;rsquo;s Public key: WGokwN2HtiX+naa7hdvUaXoXk5tkzXQtMge4v9DKlVw=
-B&amp;rsquo;s Public key: fVNXw6EpC65DmIsY/XsWXL6EXLU9oFW7CL5cZr82Di8=</description>
+為什麼筆者稱這次要建立&amp;quot;大內網&amp;quot;呢？</description>
     </item>
     
     <item>
       <title>在Ubuntu系統下架設Tunnel Broker服務(v4 to v6)</title>
-      <link>http://blog.steveyi.net/2020/tunnel-broker-bgp/</link>
+      <link>http://blog.steveyi.net/posts/tunnel-broker-bgp/</link>
       <pubDate>Sun, 31 May 2020 16:56:41 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/tunnel-broker-bgp/</guid>
-      <description>前言 之前拿到了一個自治號碼(AS Number)，也拿到了1個 /44 及兩個 /48 的iPv6
-恰好最近想到之前有使用過HE.Net的tunnel broker服務
-這次就來架設一下sit隧道的tunnel broker服務！本篇不會說明ipv6的取得方式，請自行詢問主機提供商
-本篇將使用開源工具-IPv6-in-IPv4 Tunnel
-配置工具 首先，將工具下載下來
-git clone [https://github.com/sskaje/6in4.git](https://github.com/sskaje/6in4) 我們進入項目的etc資料夾，並修改config.ini
-nano config.ini 依序編輯 IPV6_NETWORK, IPV6_CIDR, INTERFACE, BIND_IP(有多iPv4需要)
-接著輸入 Crtl + X 來保存
-修改系統設定來允許iPv6轉發 nano /etc/sysctl.conf 在最下方添加下方這項net.ipv6.conf.all.forwarding = 1 Crtl + X 保存 sysctl -p 防火牆 iptables -I INPUT -p 41 --j ACCEPT iptables -I OUTPUT -p 41 --j ACCEPT iptables -I FORWARD -p 41 --j ACCEPT 使用工具建立伺服端(新增隧道) 假設隧道ID為1，伺服端IPv4為1.1.1.1 用戶端IPv4為8.8.8.8]
-配置文件中設置的IPv6子網為 2a0e:b107:7e0::，子網路遮罩為48(必須為8的倍數)工具會自動分割出 一個用於隧道的 /64子網及一個用於用戶路由的 /64子網</description>
+      <guid>http://blog.steveyi.net/posts/tunnel-broker-bgp/</guid>
+      <description>前言 之前拿到了一個自治號碼(AS Number)，也拿到了1個 /44 及兩個 /48 的iPv6</description>
     </item>
     
     <item>
       <title>專為GCP打造的Windows 10 DD鏡像</title>
-      <link>http://blog.steveyi.net/2019/gcp-windows-dd/</link>
+      <link>http://blog.steveyi.net/posts/gcp-windows-dd/</link>
       <pubDate>Tue, 27 Aug 2019 15:07:49 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2019/gcp-windows-dd/</guid>
+      <guid>http://blog.steveyi.net/posts/gcp-windows-dd/</guid>
       <description>前陣子為了要在GCP使用VPS，於是在一段時間裡製作了 Windows DD 鏡像
-分別是：
-1，中文繁體版 Windows 10 工作站專業版
-2，英文版 Windows 10 工作站專業版(尚未上傳)
-鏡像具備以下特點   集成 Virtio 驅動以及 Google Virtio Ethernet Adapter 的網卡驅動，因此適用於GCP的VPS伺服器
-  無需 VNC 交互直接無人值守安裝，DD 完成即可遠程登錄桌面
-  基於 VOL 版製作，因此可用 KMS 方式激活系統
-  開啟 Windows 遠程桌面
-中文繁體版
-載點1: http://static.yiy.tw/mirror/dd/win10.gz
-載點2: https://drive.yiy.tw/Mirror/DD/win10.gz
-遠端登入資訊
-帳號: Administrator
-密碼: steveyigame.com
-  </description>
+分別是：</description>
     </item>
     
   </channel>

@@ -6,307 +6,138 @@
     <description>Recent content in 伺服器 on 酷小易</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
+    <copyright>&amp;copy; 2018 - 2021 &lt;a href=&#34;https://steveyi.net&#34;&gt;小易&lt;/a&gt; 版權所有</copyright>
     <lastBuildDate>Fri, 20 Nov 2020 18:31:04 +0000</lastBuildDate><atom:link href="http://blog.steveyi.net/tags/%E4%BC%BA%E6%9C%8D%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>利用WireGuard建立大內網</title>
-      <link>http://blog.steveyi.net/2020/usingwireguard-to-make-intranet/</link>
+      <link>http://blog.steveyi.net/posts/usingwireguard-to-make-intranet/</link>
       <pubDate>Fri, 20 Nov 2020 18:31:04 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/usingwireguard-to-make-intranet/</guid>
+      <guid>http://blog.steveyi.net/posts/usingwireguard-to-make-intranet/</guid>
       <description>Hi 大家好，今天來分享一下如何使用WireGuard建立大內網
 之前有與大家分享過 在Linux系統上安裝Wireguard，那這次我們要利用WireGuard來建立大內網
-為什麼筆者稱這次要建立&amp;quot;大內網&amp;quot;呢？
-因為筆者也許多不同地方的網路，想藉由這次機會，來把他們都加進同一個局域網
-這樣也可以解決一些連線問題，比如筆者常常連線回到家中的電腦
-但因為公網IP只有幾個，當機器太多時，就需要設定內網穿透
-但筆者架設了內網之後，在外面只需要連入VPN，在其他網路區域，就可以存取所有網路設備了（這也類似於一般企業的遠端存取）
-那麼，我們一樣需要有一個主伺服器當網關。不過，我們不使用NAT TO NAT，而是透過私網IP來進行互連
-我們的情境是這樣：
-A辦公室 路由器 10.121.208.254/24
-B辦公室 路由器 10.121.209.254/24
-C辦公室 路由器 10.121.210.254/24
-VPN路由器 10.121.211.254/24
-首先，由於我們這次是純粹架設大內網，以WireGuard搭配靜態路由為主。所以先不講到路由協議（不過下次會介紹）
-我們需要有一個主路由器，並透過它來連接A,B,C辦公室的路由器
-所以會變成下面這樣
-VPN &amp;lt;-&amp;gt; A
-VPN &amp;lt;-&amp;gt; B
-VPN &amp;lt;-&amp;gt; C
-當A的用戶想去C時(10.121.208.1 &amp;lt;-&amp;gt; 10.121.210.2) 路線會變成&amp;hellip;
-User-A -&amp;gt; 10.121.208.254 -&amp;gt; 10.121.211.254 -&amp;gt; 10.121.210.254 -&amp;gt; 10.121.210.2(User-C)
-也就是 User-A -&amp;gt; A的路由器 -&amp;gt; VPN Gateway -&amp;gt; C的路由器 -&amp;gt; User-C
-那我們搞懂原理，就來實作啦！
-首先，我先先準備好私鑰及公鑰（公鑰是由私鑰算過來的）
-A&amp;rsquo;s Public key: WGokwN2HtiX+naa7hdvUaXoXk5tkzXQtMge4v9DKlVw=
-B&amp;rsquo;s Public key: fVNXw6EpC65DmIsY/XsWXL6EXLU9oFW7CL5cZr82Di8=</description>
+為什麼筆者稱這次要建立&amp;quot;大內網&amp;quot;呢？</description>
     </item>
     
     <item>
       <title>透過iperf3來測試內網速度</title>
-      <link>http://blog.steveyi.net/2020/iperf3/</link>
+      <link>http://blog.steveyi.net/posts/iperf3/</link>
       <pubDate>Sun, 08 Nov 2020 13:26:11 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/iperf3/</guid>
+      <guid>http://blog.steveyi.net/posts/iperf3/</guid>
       <description>不久前，筆者換了新的交換機。為了測試內網的傳輸速度，筆者發現了這款工具 - iperf3
-這是一個支援Ｗindows, Linux, macOS的測試程式，主要是透過指令來操作
-筆者也常常用來測試兩個不同地區伺服器的速度
-那麼，以下分享一下安裝方法
-首先，進入iperf3官網後，找到對應的系統(如果是Windows就選擇Windows, macOS則選擇macos, Linux亦同&amp;hellip;)
-會下載一個 .zip 的檔案，將其解壓縮
-並打開命令控制字元（macOS及Linux則是Terminal也可以透過SSH進行操作），輸入 cd &amp;lt;資料夾路徑&amp;gt;，接著輸入 iperf3 指令
-iperf3 -s #用於伺服端的
-iperf3 -c &amp;lt;伺服端IP&amp;gt; #用於客戶端的
-就會開始跑測速啦！
-大家比較需要注意的點是，在內網的話，需要確認內網是互通的(同一個LAN就是互通的)
-我們也可以使用ping指令去測試網路是否通的，在部分設備上（如Windows），可能預設將ICMP屏蔽了。需要特別到防火牆裡面開啟</description>
+這是一個支援Ｗindows, Linux, macOS的測試程式，主要是透過指令來操作</description>
     </item>
     
     <item>
       <title>FRRouting 入坑指南兼心得(1)</title>
-      <link>http://blog.steveyi.net/2020/frrouting-install/</link>
+      <link>http://blog.steveyi.net/posts/frrouting-install/</link>
       <pubDate>Sun, 12 Jul 2020 13:07:14 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/frrouting-install/</guid>
+      <guid>http://blog.steveyi.net/posts/frrouting-install/</guid>
       <description>很久沒有來分享了！最近仍然在學習BGP知識及測試之前一直使用bird1來廣播BGP，後來在跟朋友Peer時，一直無法建立對等（很玄，但卻可以跟IX建立
 最近則卸載了Bird1，改安裝ffrouting是從Quagga fork來的，慢慢發展成現在
 同時，他也是一個很強大的路由套件（其指令類似於Cisco或Quagga）
-於是，就摸索了一下
-整理了一些心得使用者指南(英文): http://docs.frrouting.org/en/latest/
-GitHub專案: https://github.com/FRRouting/frr/releases
-首先，我們要先來安裝ffrouting
-\# 更新套件 apt update -y apt upgrade -y apt install -y curl gnupg2 traceroute # 安裝FRRouting curl -s [https://deb.frrouting.org/frr/keys.asc](https://deb.frrouting.org/frr/keys.asc) | sudo apt-key add - FRRVER=&amp;quot;frr-stable&amp;quot; echo deb [https://deb.frrouting.org/frr](https://deb.frrouting.org/frr) $(lsb\_release -s -c) $FRRVER | sudo tee -a /etc/apt/sources.list.d/frr.list sudo apt update -y &amp;amp;&amp;amp; sudo apt install -y frr frr-pythontools # 開啟IP forwarding echo &amp;quot; net.ipv4.conf.all.forwarding = 1 net.ipv6.conf.all.disable\_ipv6 = 0 net.ipv6.conf.default.disable\_ipv6 = 0 net.</description>
+於是，就摸索了一下</description>
     </item>
     
     <item>
       <title>PVE入門心得-安裝篇</title>
-      <link>http://blog.steveyi.net/2020/pve-install/</link>
+      <link>http://blog.steveyi.net/posts/pve-install/</link>
       <pubDate>Tue, 07 Jul 2020 05:33:14 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/pve-install/</guid>
+      <guid>http://blog.steveyi.net/posts/pve-install/</guid>
       <description>玩虛擬機有一段時間了，不過是在Windows系統下裝VMware Workstation玩xD
-後來閒置了幾台電腦，恰好也查詢到PVE(Proxmox VE)這個開源虛擬系統，於是 我們就來安裝玩玩吧!
-前期準備:
-Proxmox VE 安裝碟
-高核心且空閒的電腦(不然跑起來會很卡)
-首先，我們先到官方網站下載PVE的ISO檔案 官網載點
-點擊左方的 Proxmox VE 6.2 ISO Installer 來下載(6.2是版本號，右方則是種子下載)
-下載好之後，我們將檔案寫入USB中，做成安裝碟
-這邊推薦使用Etcher來寫入，官網連結
-做好安裝碟之後，我們進入BIOS，並調整開機順序(將安裝碟設為第一順位)
-接著我們就可以進行安裝了!
-首先，選擇第一個 Install Proxmox VE
-接著同意服務條款
-選擇硬碟
-選擇國家及時區
-設置root密碼及電子郵件地址
-設置主機名稱及網路(這邊建議一次就設定好，不然後續修改IP有點麻煩)
-全部完成後，就點擊Install來進行安裝!
-安裝完成後，我們使用 https://你的IP:8006 就可以進入管理面板囉!
-下一篇，我們將與大家分享一些配置的過程</description>
+後來閒置了幾台電腦，恰好也查詢到PVE(Proxmox VE)這個開源虛擬系統，於是 我們就來安裝玩玩吧!</description>
     </item>
     
     <item>
       <title>在Ubuntu系統下架設Tunnel Broker服務(v4 to v6)</title>
-      <link>http://blog.steveyi.net/2020/tunnel-broker-bgp/</link>
+      <link>http://blog.steveyi.net/posts/tunnel-broker-bgp/</link>
       <pubDate>Sun, 31 May 2020 16:56:41 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/tunnel-broker-bgp/</guid>
-      <description>前言 之前拿到了一個自治號碼(AS Number)，也拿到了1個 /44 及兩個 /48 的iPv6
-恰好最近想到之前有使用過HE.Net的tunnel broker服務
-這次就來架設一下sit隧道的tunnel broker服務！本篇不會說明ipv6的取得方式，請自行詢問主機提供商
-本篇將使用開源工具-IPv6-in-IPv4 Tunnel
-配置工具 首先，將工具下載下來
-git clone [https://github.com/sskaje/6in4.git](https://github.com/sskaje/6in4) 我們進入項目的etc資料夾，並修改config.ini
-nano config.ini 依序編輯 IPV6_NETWORK, IPV6_CIDR, INTERFACE, BIND_IP(有多iPv4需要)
-接著輸入 Crtl + X 來保存
-修改系統設定來允許iPv6轉發 nano /etc/sysctl.conf 在最下方添加下方這項net.ipv6.conf.all.forwarding = 1 Crtl + X 保存 sysctl -p 防火牆 iptables -I INPUT -p 41 --j ACCEPT iptables -I OUTPUT -p 41 --j ACCEPT iptables -I FORWARD -p 41 --j ACCEPT 使用工具建立伺服端(新增隧道) 假設隧道ID為1，伺服端IPv4為1.1.1.1 用戶端IPv4為8.8.8.8]
-配置文件中設置的IPv6子網為 2a0e:b107:7e0::，子網路遮罩為48(必須為8的倍數)工具會自動分割出 一個用於隧道的 /64子網及一個用於用戶路由的 /64子網</description>
+      <guid>http://blog.steveyi.net/posts/tunnel-broker-bgp/</guid>
+      <description>前言 之前拿到了一個自治號碼(AS Number)，也拿到了1個 /44 及兩個 /48 的iPv6</description>
     </item>
     
     <item>
       <title>在Linux系統上安裝Wireguard</title>
-      <link>http://blog.steveyi.net/2020/how-to-install-wireguard/</link>
+      <link>http://blog.steveyi.net/posts/how-to-install-wireguard/</link>
       <pubDate>Sat, 16 May 2020 11:51:52 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/how-to-install-wireguard/</guid>
+      <guid>http://blog.steveyi.net/posts/how-to-install-wireguard/</guid>
       <description>Wireguard是一個點對點加密網路
 一直以來，我都使用它來管理我所有的雲端主機
 今天就來分享一下安裝方法吧！
-安裝指令請參考 https://www.wireguard.com/install/
-首先，進入Wireguard安裝資料夾
-如果找不到的話，請建立一下
-cd /etc/wireguard 接著，我們使用指令來產生公私鑰，並使用cat查看公私鑰內容
-wg genkey | tee privatekey | wg pubkey &amp;gt; publickey 接著我們將公私鑰記下來，我們建立一個配置文件
-nano wg0.conf 進入nano 編輯器後，我們將下方代碼貼上，並修改公私鑰
-[Interface] Address = 192.168.200.1/24 //這邊可以自定網段 SaveConfig = true ListenPort = 51820 PrivateKey = 修改為私鑰 [Peer] PublicKey = 對方的公鑰 AllowedIPs = 192.168.200.2/24 //對方的網段 接著輸入 Crtl + X 在輸入y 退出編輯器
-接著使用指令，來存檔並啟用wireguard
-wg-quick save wg0 wg-quick down wg0 wg-quick up wg0 PS.開機自動啟動指令
-systemctl enable wg-quick@wg0 接著可以嘗試ping看看，如果有響應的話
-代表成功了！</description>
+安裝指令請參考 https://www.wireguard.com/install/</description>
     </item>
     
     <item>
       <title>Backblaze B2 支援S3 API了！</title>
-      <link>http://blog.steveyi.net/2020/backblaze-b2-compatible-s3-api/</link>
+      <link>http://blog.steveyi.net/posts/backblaze-b2-compatible-s3-api/</link>
       <pubDate>Thu, 14 May 2020 03:08:02 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/backblaze-b2-compatible-s3-api/</guid>
+      <guid>http://blog.steveyi.net/posts/backblaze-b2-compatible-s3-api/</guid>
       <description>前幾天打開Backblaze後，看到一行大大的字
 沒錯！S3 API跟Backblaze B2兼容啦！
-S3 API是目前市面上最流行的協定，很多軟硬體都兼容
-Backblaze B2則是非常棒的雲端存處(低價優勢)
-如何使用S3 API 若存處桶是在2020/05/04前創立的，則要創立一個新的，並將檔案移入(推薦使用Rclone，會自動支援B2 Copy File)
-然後創建一個新的App Key(不要使用主要的喔)
-有關於一些B2的文章介紹:
-Backblaze B2 低價的雲端數據存儲服務
-Backblaze B2和Cloudflare Workers設定自訂域名
-BackBlaze宣布第一個歐洲數據中心啟用</description>
+S3 API是目前市面上最流行的協定，很多軟硬體都兼容</description>
     </item>
     
     <item>
       <title>Cloudflare 新服務 spectrum設定教學</title>
-      <link>http://blog.steveyi.net/2020/hot-to-set-cloudflare-spectrum/</link>
+      <link>http://blog.steveyi.net/posts/hot-to-set-cloudflare-spectrum/</link>
       <pubDate>Wed, 15 Apr 2020 08:50:06 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/hot-to-set-cloudflare-spectrum/</guid>
+      <guid>http://blog.steveyi.net/posts/hot-to-set-cloudflare-spectrum/</guid>
       <description>今天早上打開FaceBook時，發現Cloudflare推出了一個新服務 - Spectrum
 目前是提供給所有付費用戶使用，不知道未來有沒有機會開放給免費客戶
-官方部落格連結: https://cfl.re/3efcOhv
-正好我有幾個網域有使用Plesk Plus的服務（此服務已下架），算是Cloudflare Pro版本 所以也可以開通這個功能！
-那就來記錄一下設定過程吧
-首先，進入網域設定 上方選擇 Spectrum
-接著點擊 Enable Spectrum
-開通完成後，點擊 Create an application
-選擇SSH(22端口)或是Minecraft(65535端口) (如果是企業版可以使用RDP)
-接著輸入子網域及IP位置，並按Save
-接著我們就可以等待生效囉！
-可以使用終端(dig 網域名稱)或是Google Public DNS查詢CNAME紀錄
-目前這個服務
-Pro版本提供5GB流量/月
-Business版本提供10GB流量/月
-超過1GB，以0.1USD計價
-https://www.cloudflare.com/products/cloudflare-spectrum/
-對於DDOS防禦很頭痛的可以試試看～！</description>
+官方部落格連結: https://cfl.</description>
     </item>
     
     <item>
       <title>在Vultr使用Bird6廣播IPv6</title>
-      <link>http://blog.steveyi.net/2020/use-bird6-broadcast-ipv6-vultr/</link>
+      <link>http://blog.steveyi.net/posts/use-bird6-broadcast-ipv6-vultr/</link>
       <pubDate>Fri, 10 Apr 2020 02:21:55 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/use-bird6-broadcast-ipv6-vultr/</guid>
+      <guid>http://blog.steveyi.net/posts/use-bird6-broadcast-ipv6-vultr/</guid>
       <description>之前跟大家分享過 為IP設定反向DNS(PTR紀錄)，那這次就來分享一下在Vultr廣播IP吧！
 設置AS號碼及IP前綴 首先，我們要先開通BGP的功能！
-點擊這裡前往Vultr BGP頁面
-進入此頁面後，我們點擊Get Started
-選擇 I have my own IP space 及 I have own my ASN (如果沒有ASN不用選擇)
-LOA的部分 可以參考這份範例文件
-接著其他保持預設就好
-接著點Start，來驗證IP地址或ASN號碼
-系統會寄一封電子郵件到Whois的Email，進行驗證！
-驗證完後呢，我們就等待工作人員設置
-廣播 這次是使用Ubuntu 18.04來廣播的，CentOS及Debian應該大同小異
-首先我們先安裝幾個套件
- apt-get update -y apt-get install bird6 -y  安裝完成後，我們進入 /etc/bird 資料夾
- cd /etc/bird  刪除 bird6.conf
- sudo rm -rf bird6.conf  接著我們新增一個新的配置
- router id 0.0.0.0; #將0.0.0.0改成你的主機IPv4
-protocol bgp vultr
-{
-local as 209557;
-source address 改成主機IPv6;</description>
+點擊這裡前往Vultr BGP頁面</description>
     </item>
     
     <item>
       <title>RIPE為IP設定反向DNS(PTR紀錄)</title>
-      <link>http://blog.steveyi.net/2020/ip-set-rdns-with-ripe-and-he-dns/</link>
+      <link>http://blog.steveyi.net/posts/ip-set-rdns-with-ripe-and-he-dns/</link>
       <pubDate>Wed, 08 Apr 2020 06:38:54 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/ip-set-rdns-with-ripe-and-he-dns/</guid>
+      <guid>http://blog.steveyi.net/posts/ip-set-rdns-with-ripe-and-he-dns/</guid>
       <description>反向dns紀錄
 一直以來都很想設定rDNS，看了許多次RIPE官方的文檔還是沒搞懂
 恰好這次有位大佬指導我去設定，其實一點都不難呢
 順便分享一下設定過程
-本篇以RIPE及HE FREE DNS作為範例，其他RIR基本上大同小異
-建立DNS NameServers 首先，登入HE FREE DNS，點擊左方的Add a new reverse
-輸入你的IP前綴，後方記得加上cidr(子網路掩碼)
-接著我們先設定一個PTR紀錄
-關於IP的轉換為網域名稱，可以使用這個工具 點我前往
-由於HE跟RIPE會互相檢查DNS授權，所以我們必須要先請HE開通DNS區域
-我們可以發送郵件到 dnsadmin#he.net [#換成@]
-Subject: About PTR records (改成你的IPv6前綴網域)
-Content:
-Hello, I want set PTR records with my ipv6 address(改成你的IPv6前綴)
-RIPE require DNS delegation check
-Please check it :)
-Thanks!
-當HE開通後，我們就可以到RIPE設定了！
-設定DNS伺服器 首先，我們進入LIR Portal
-點擊左邊的Create an Object，選擇domain
-接著輸入要設定的ipv6 前綴
-接著依序輸入HE的DNS Server 及 Admin-c tech-c zone-c&amp;hellip;等等
-ns1.he.net ns2.he.net ns3.he.ne ns4.he.net ns5.he.net
-完成後按Submit就會開始建立了</description>
+本篇以RIPE及HE FREE DNS作為範例，其他RIR基本上大同小異</description>
     </item>
     
     <item>
       <title>Backblaze B2和Cloudflare Workers設定自訂域名</title>
-      <link>http://blog.steveyi.net/2020/b2-cfworkers/</link>
+      <link>http://blog.steveyi.net/posts/b2-cfworkers/</link>
       <pubDate>Wed, 26 Feb 2020 20:36:28 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/b2-cfworkers/</guid>
+      <guid>http://blog.steveyi.net/posts/b2-cfworkers/</guid>
       <description>前言 當初架設網站的時候，考量到了圖片的存儲以及流量的問題
 本來是將圖片跟網站放在同一個網站伺服器下的，但後來發現伺服器空間常常不足夠（因為系統會自動備份，導致空間不足）
 後來將圖片放在OneDrive商業版，並搭配OneList來使用，但畢竟是非官方的API，當API請求速率過快，圖片就載入不出來了．
-當初OneDrive失敗後，又將圖片放到Google Drive上，並搭配rclone使用，
-但是&amp;hellip;網站載入爆慢呀！（而且流量也爆了）
-最後就發現Backblaze B2這個東西了XD
-Backblaze是什麼? Backblaze是一家數據存儲提供商，提供兩種產品
-B2 Cloud Storage(一種類似於Amazon S3的對象存儲服務)
-Cloud Backup(無限空間的電腦備份服務)
-其中 B2 Cloud Storage 主打低價 (搭配Cloudflare CDN流量免費)，Cloud Backup主打無限空間備份
-更多內容可以參考 Backblaze官網
-需要運用到的資源 Cloudflare CDN
-Cloudflare DNS
-Cloudflare Workers
-Backblaze B2
-教學開始 1.首先，進入Cloudflare後 點擊 +Add a Site 新增一個網域
-2.新增完之後，我們點擊右方的Workers
-來進入Cloudflare Workers
-接著我們點擊上方的 Create a Worker 來建立一個新的Worker
-3.將文章下方的程式碼貼到左邊的Script
-並修改 b2Domain b2Bucket b2UrlPath
-完成後我們點擊下方的Save and Deploy
-4.接著我們進入剛剛新增好的網域
-新增一個CNAME紀錄(下方是A紀錄&amp;hellip;忘了改xDD)
-5.新增CNAME紀錄後，我們點擊上方的Workers
-接著點擊 Add route
-6.接著這邊我們來設定一下
-Route的部分填寫 剛剛新增的子網域/*
-ex: img.steveyi.net/*</description>
+當初OneDrive失敗後，又將圖片放到Google Drive上，並搭配rclone使用，</description>
     </item>
     
     <item>
       <title>專為GCP打造的Windows 10 DD鏡像</title>
-      <link>http://blog.steveyi.net/2019/gcp-windows-dd/</link>
+      <link>http://blog.steveyi.net/posts/gcp-windows-dd/</link>
       <pubDate>Tue, 27 Aug 2019 15:07:49 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2019/gcp-windows-dd/</guid>
+      <guid>http://blog.steveyi.net/posts/gcp-windows-dd/</guid>
       <description>前陣子為了要在GCP使用VPS，於是在一段時間裡製作了 Windows DD 鏡像
-分別是：
-1，中文繁體版 Windows 10 工作站專業版
-2，英文版 Windows 10 工作站專業版(尚未上傳)
-鏡像具備以下特點   集成 Virtio 驅動以及 Google Virtio Ethernet Adapter 的網卡驅動，因此適用於GCP的VPS伺服器
-  無需 VNC 交互直接無人值守安裝，DD 完成即可遠程登錄桌面
-  基於 VOL 版製作，因此可用 KMS 方式激活系統
-  開啟 Windows 遠程桌面
-中文繁體版
-載點1: http://static.yiy.tw/mirror/dd/win10.gz
-載點2: https://drive.yiy.tw/Mirror/DD/win10.gz
-遠端登入資訊
-帳號: Administrator
-密碼: steveyigame.com
-  </description>
+分別是：</description>
     </item>
     
   </channel>

@@ -6,60 +6,29 @@
     <description>Recent content in 對象存處 on 酷小易</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
+    <copyright>&amp;copy; 2018 - 2021 &lt;a href=&#34;https://steveyi.net&#34;&gt;小易&lt;/a&gt; 版權所有</copyright>
     <lastBuildDate>Thu, 14 May 2020 03:08:02 +0000</lastBuildDate><atom:link href="http://blog.steveyi.net/tags/%E5%B0%8D%E8%B1%A1%E5%AD%98%E8%99%95/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Backblaze B2 支援S3 API了！</title>
-      <link>http://blog.steveyi.net/2020/backblaze-b2-compatible-s3-api/</link>
+      <link>http://blog.steveyi.net/posts/backblaze-b2-compatible-s3-api/</link>
       <pubDate>Thu, 14 May 2020 03:08:02 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/backblaze-b2-compatible-s3-api/</guid>
+      <guid>http://blog.steveyi.net/posts/backblaze-b2-compatible-s3-api/</guid>
       <description>前幾天打開Backblaze後，看到一行大大的字
 沒錯！S3 API跟Backblaze B2兼容啦！
-S3 API是目前市面上最流行的協定，很多軟硬體都兼容
-Backblaze B2則是非常棒的雲端存處(低價優勢)
-如何使用S3 API 若存處桶是在2020/05/04前創立的，則要創立一個新的，並將檔案移入(推薦使用Rclone，會自動支援B2 Copy File)
-然後創建一個新的App Key(不要使用主要的喔)
-有關於一些B2的文章介紹:
-Backblaze B2 低價的雲端數據存儲服務
-Backblaze B2和Cloudflare Workers設定自訂域名
-BackBlaze宣布第一個歐洲數據中心啟用</description>
+S3 API是目前市面上最流行的協定，很多軟硬體都兼容</description>
     </item>
     
     <item>
       <title>Backblaze B2 低價的雲端數據存儲服務</title>
-      <link>http://blog.steveyi.net/2020/backblaze-b2/</link>
+      <link>http://blog.steveyi.net/posts/backblaze-b2/</link>
       <pubDate>Mon, 11 May 2020 09:35:00 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/backblaze-b2/</guid>
+      <guid>http://blog.steveyi.net/posts/backblaze-b2/</guid>
       <description>之前學習建站之時，考量到一個問題！
 如果今天我的流量暴漲，文章變多，我的圖片空間及流量會不會也跟著變多
 所以在網路上搜尋了一些對象存處服務，找到了一間便宜的對象存處提供商－Backblaze
-什麼是對象存處 對象存處是一種數據存儲，其中每個數據單元存儲為稱為對象的離散單元。
-對象靜態文件，類似於pdf，mp3檔，圖片或影片&amp;hellip;等文件。
-這些對象實際上可以是任何類型的數據和任何大小的數據。
-對象存儲中的所有對像都存儲在單個平面地址空間中，而沒有文件夾層次結構。
-比較知名的提供商有 AWS S3、Google Cloud Storage、Backblaze B2、DigitalOcean Space&amp;hellip;等等
-那這次要介紹的則是Backblaze B2
-Backblaze B2的優勢 Backblaze B2 的價格是 Amazon S3的¼倍
-搭配CloudFlare CDN免流量費
-支持S3 API
-註冊帳號 首先，進入官網後，點擊右上角的Sign Up
-接著輸入帳號密碼，選擇資料放置區域(基本上選擇美西)
-接著到電子郵件中驗證帳號！完成
-創建Bucket 登入帳號後，點擊中間的Creat a Bucket
-接著輸入Bucket名稱，不可以跟別人重複
-接著選擇Public(如果你用於備份, 私人檔案的話，就選擇Private)
-接著我們就會看見剛剛創建的Bucket了
-創建App Key 雖然說在網頁上我們就可以上傳檔案了，但是網頁只支持到500MB的檔案
-超過就必須要使用API上傳了，所以這邊我們來教大家怎麼建立App Key
-首先，點擊左方的App Keys
-接著我們點擊 Add a New Application Key
-輸入App Key名稱，允許訪問的Bucket
-接著點選Create a new key
-接著會產生API資訊，將S3 EndPoint, Key ID及applicationKay記下來
-上傳/下載檔案 在Windows/Mac上傳或下載有很多種工具可以做，我比較推薦使用Cyberduck
-如果是Linux的話，我認為Rclone是一個好選擇
-PS.可以選擇S3 API或是Backblaze API進行連接</description>
+什麼是對象存處 對象存處是一種數據存儲，其中每個數據單元存儲為稱為對象的離散單元。</description>
     </item>
     
   </channel>

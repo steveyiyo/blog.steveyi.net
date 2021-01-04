@@ -6,246 +6,97 @@
     <description>Recent content in BGP on 酷小易</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
+    <copyright>&amp;copy; 2018 - 2021 &lt;a href=&#34;https://steveyi.net&#34;&gt;小易&lt;/a&gt; 版權所有</copyright>
     <lastBuildDate>Sat, 21 Nov 2020 08:39:28 +0000</lastBuildDate><atom:link href="http://blog.steveyi.net/tags/bgp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>從RIPE申請屬於自己的ASN</title>
-      <link>http://blog.steveyi.net/2020/get-asn-from-ripe/</link>
+      <link>http://blog.steveyi.net/posts/get-asn-from-ripe/</link>
       <pubDate>Sat, 21 Nov 2020 08:39:28 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/get-asn-from-ripe/</guid>
+      <guid>http://blog.steveyi.net/posts/get-asn-from-ripe/</guid>
       <description>今天來講一下透過LIR在RIPE取得自己的ASN
 首先，可能有些人會很好奇
 為什麼要選擇RIPE呢？選擇APNIC, ARIN不好嗎？
-筆者有兩個ASN，分別是RIPE及APNIC下的
-當筆者在改一些whois時，RIPE可以直接進入網頁修改
-但APNIC則需要發送郵件&amp;hellip;&amp;hellip;比較麻煩(其實好像也差不多)
-不過，APNIC與RIPE兩個管理機構也是有差別的
-RIPE需要驗證真實身份(個人申請需要發送護照或其他證明文件)
-APNIC則不需要任何證明文件
-那麼，我們就開始申請吧
-尋找LIR（贊助者） 首先，我們需要找到一位RIPE會員(LIR)做自己的sponsor
-我們只要在Google上搜尋「lir service」就會看到非常多的相關服務
-那小易嘗試過 Securebit 及 Openfactory 的服務，主要差別就是&amp;hellip;
-Securebit 快(1-5天) 貴 提供的PA 沒有MNT權限
-Openfactory 慢(1-20天) 便宜 提供的PA 有MNT權限
-所以，個人比較推薦Openfactory啦！（除非你想要申請16-bit ASN）
-準備申請資料 我們找到LIR之後，透過Email或其他管道聯繫後，我們就可以來準備一下申請資料了
-根據小易的經驗，大部分LIR都需要這些東西（因為他們需要提交給RIPE）
-真實英文姓名(First + Last name)，也就是護照上的名稱
-Postal address（真實地址）
-護照的複印/掃描圖片（有時候可能需要身份證照片）
-接著還需要兩個對等方，也就是我們常說的&amp;quot;Peer Partner&amp;quot;
-如果各位不介意的話，可以直接填寫我的資訊
-AS60614(TSUNGYI YU) peering_at_steveyi.net
-AS209557(TSUNGYI YU) peering_at_steveyi.net
-然後由於我們是在RIPE申請的，所以我們還需要準備一些對象紀錄
-MAINTAINER, PERSON / ROLE, and ORGANIZATION object
-然後ORG object中的&amp;quot;org-name&amp;quot;必須要是真實姓名（護照名稱）
-關於申請的過程及方式，可以參考一下 這篇文章
-那一切都準備好後，LIR會準備一分用戶協議，簽名完，LIR就會把你的請求轉交給RIPE啦！
-當提交請求給RIPE時，大約1-3天就會發放ASN了
-當拿到ASN之後，我們就可以來廣播自己的網路啦！
-那我們下一篇會再詳細地與大家分享廣播網路的細節</description>
+筆者有兩個ASN，分別是RIPE及APNIC下的</description>
     </item>
     
     <item>
       <title>在RIPE DataBase建立Object</title>
-      <link>http://blog.steveyi.net/2020/create-object-in-ripe-database/</link>
+      <link>http://blog.steveyi.net/posts/create-object-in-ripe-database/</link>
       <pubDate>Sat, 21 Nov 2020 08:37:20 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/create-object-in-ripe-database/</guid>
-      <description>在本篇文章中，將與大家分享如何在RIPE DataBase註冊MAINTAINER, PERSON / ROLE, and ORGANIZATION object
-這些對象也是註冊ASN必要的，如果要申請ASN，可以參考這篇教學
-那首先，我們要先註冊RIPE的帳號 註冊網站在這
-註冊完成之後，我們進入RIPE Datebase，然後點擊 &amp;ldquo;Create an Object&amp;rdquo;（建立一個物件Object）
-然後我們選擇第一個 &amp;ldquo;role and maintainer pair&amp;rdquo;
-第一個填寫mnter，他將會是 &amp;ldquo;mnt-by&amp;rdquo;
-role隨意輸入
-address寫自己家裡地址
-email寫自己的電子郵箱地址
-註冊完成後，你會拿到一個role與mnter，這邊要記住 primary key
-我們等等會用到
-建立好後，我們需要在回去role，新增一個 &amp;ldquo;abuse-mailbox&amp;rdquo; 濫用投訴信箱，等等ORG object需要使用
-完成後，我們回到 &amp;ldquo;Create an Object&amp;rdquo;（建立一個物件Object）的步驟
-這次選擇建立 organisation
-完成後，我們點擊Submit
-我們需要更改的內容有
-&amp;ldquo;org-name&amp;rdquo;: 填寫自己的真實英文姓名(護照上的)
-&amp;ldquo;address&amp;rdquo;: 地址
-&amp;ldquo;e-mail&amp;rdquo;: 電子郵件地址
-&amp;ldquo;abuse-c&amp;rdquo;: 剛剛我們建立的role
-&amp;ldquo;mnt-ref&amp;rdquo;: 剛剛我們建立的mnter
-完成後，我們點擊Submit
-就完成啦
-最後，我們只需要將ORG的編號給LIR，就可以啦！
-如果還是不懂的話，可以參考RIPE的影片！https://www.ripe.net/support/training/videos/ripe-database</description>
+      <guid>http://blog.steveyi.net/posts/create-object-in-ripe-database/</guid>
+      <description>在本篇文章中，將與大家分享如何在RIPE DataBase註冊MAINTAINER, PERSON / ROLE, and ORGANIZATION object</description>
     </item>
     
     <item>
       <title>透過BGP組建不同網段互通</title>
-      <link>http://blog.steveyi.net/2020/bgp-network-peer/</link>
+      <link>http://blog.steveyi.net/posts/bgp-network-peer/</link>
       <pubDate>Tue, 11 Aug 2020 18:56:26 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/bgp-network-peer/</guid>
+      <guid>http://blog.steveyi.net/posts/bgp-network-peer/</guid>
       <description>小時候常常為了家中的網路管理而困擾，舉例來說，我家有三個樓層 三個路由器
 我想讓三個路由器後的設備可以互通，但是如果我三台路由器都打開DHCP Server的話，三台將會是獨立的網段而不互通
-後來發現如果使用bridge(橋接)的方式將一台路由器當作DHCP Server，其他的當作AP或Switch，就可以達到網段相同且可以互通了！
-不過，這次我們要做的是&amp;quot;異地組網&amp;quot;，很難去做到使用同一個的DHCP Server來連接，所以就會有兩個網段
-那之前有跟大家分享過 FRRouting 入坑指南兼心得(1)，我們也可以透過BGP及隧道來組建不同區域網段互通
-讓我們開始吧！
-首先，我們需要先準備一些東西
-路由器須為Linux系統(如果是ROS或Cisco IOS也可以)
-路由套件(推薦使用Frrouting, bird)
-本篇將以Frrouting作為示範
-首先，雙方路由器必須支持BGP，否則只能使用NAT設備來進行互通了
-我們先在雙方路由器配置好路由器IP
-以下為範例
-Router-A 的IPv4為 10.0.1.1/24 DHCP 分配 10.0.1.2 - 10.0.1.254
-Router-B 的IPv4為 10.0.2.1/24 DHCP 分配 10.0.2.2 - 10.0.2.254
-那我們在路由器A向B廣播 network 10.0.1.0/24
-相對應的，路由器B向A廣播 network 10.0.2.0/24
-接著確認雙方BGP Session通了之後，我們檢查系統路由表ip route
-應該就會看到下方這樣
-10.0.1.0/24 via 對方的隧道IP dev tun0 proto bgp metric 20 
-接著就可以嘗試使用mtr或ping看對方路由器後的網段設備是否有連通囉！
-給大家參考一下frrouting的配置文件
-路由器A
-Current configuration: ! frr version 7.3.1 frr defaults traditional hostname gateway-tw log syslog informational service integrated-vtysh-config !</description>
+後來發現如果使用bridge(橋接)的方式將一台路由器當作DHCP Server，其他的當作AP或Switch，就可以達到網段相同且可以互通了！</description>
     </item>
     
     <item>
       <title>FRRouting 入坑指南兼心得(1)</title>
-      <link>http://blog.steveyi.net/2020/frrouting-install/</link>
+      <link>http://blog.steveyi.net/posts/frrouting-install/</link>
       <pubDate>Sun, 12 Jul 2020 13:07:14 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/frrouting-install/</guid>
+      <guid>http://blog.steveyi.net/posts/frrouting-install/</guid>
       <description>很久沒有來分享了！最近仍然在學習BGP知識及測試之前一直使用bird1來廣播BGP，後來在跟朋友Peer時，一直無法建立對等（很玄，但卻可以跟IX建立
 最近則卸載了Bird1，改安裝ffrouting是從Quagga fork來的，慢慢發展成現在
 同時，他也是一個很強大的路由套件（其指令類似於Cisco或Quagga）
-於是，就摸索了一下
-整理了一些心得使用者指南(英文): http://docs.frrouting.org/en/latest/
-GitHub專案: https://github.com/FRRouting/frr/releases
-首先，我們要先來安裝ffrouting
-\# 更新套件 apt update -y apt upgrade -y apt install -y curl gnupg2 traceroute # 安裝FRRouting curl -s [https://deb.frrouting.org/frr/keys.asc](https://deb.frrouting.org/frr/keys.asc) | sudo apt-key add - FRRVER=&amp;quot;frr-stable&amp;quot; echo deb [https://deb.frrouting.org/frr](https://deb.frrouting.org/frr) $(lsb\_release -s -c) $FRRVER | sudo tee -a /etc/apt/sources.list.d/frr.list sudo apt update -y &amp;amp;&amp;amp; sudo apt install -y frr frr-pythontools # 開啟IP forwarding echo &amp;quot; net.ipv4.conf.all.forwarding = 1 net.ipv6.conf.all.disable\_ipv6 = 0 net.ipv6.conf.default.disable\_ipv6 = 0 net.</description>
+於是，就摸索了一下</description>
     </item>
     
     <item>
       <title>在Linux系統上安裝Wireguard</title>
-      <link>http://blog.steveyi.net/2020/how-to-install-wireguard/</link>
+      <link>http://blog.steveyi.net/posts/how-to-install-wireguard/</link>
       <pubDate>Sat, 16 May 2020 11:51:52 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/how-to-install-wireguard/</guid>
+      <guid>http://blog.steveyi.net/posts/how-to-install-wireguard/</guid>
       <description>Wireguard是一個點對點加密網路
 一直以來，我都使用它來管理我所有的雲端主機
 今天就來分享一下安裝方法吧！
-安裝指令請參考 https://www.wireguard.com/install/
-首先，進入Wireguard安裝資料夾
-如果找不到的話，請建立一下
-cd /etc/wireguard 接著，我們使用指令來產生公私鑰，並使用cat查看公私鑰內容
-wg genkey | tee privatekey | wg pubkey &amp;gt; publickey 接著我們將公私鑰記下來，我們建立一個配置文件
-nano wg0.conf 進入nano 編輯器後，我們將下方代碼貼上，並修改公私鑰
-[Interface] Address = 192.168.200.1/24 //這邊可以自定網段 SaveConfig = true ListenPort = 51820 PrivateKey = 修改為私鑰 [Peer] PublicKey = 對方的公鑰 AllowedIPs = 192.168.200.2/24 //對方的網段 接著輸入 Crtl + X 在輸入y 退出編輯器
-接著使用指令，來存檔並啟用wireguard
-wg-quick save wg0 wg-quick down wg0 wg-quick up wg0 PS.開機自動啟動指令
-systemctl enable wg-quick@wg0 接著可以嘗試ping看看，如果有響應的話
-代表成功了！</description>
+安裝指令請參考 https://www.wireguard.com/install/</description>
     </item>
     
     <item>
       <title>在Vultr使用Bird6廣播IPv6</title>
-      <link>http://blog.steveyi.net/2020/use-bird6-broadcast-ipv6-vultr/</link>
+      <link>http://blog.steveyi.net/posts/use-bird6-broadcast-ipv6-vultr/</link>
       <pubDate>Fri, 10 Apr 2020 02:21:55 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/use-bird6-broadcast-ipv6-vultr/</guid>
+      <guid>http://blog.steveyi.net/posts/use-bird6-broadcast-ipv6-vultr/</guid>
       <description>之前跟大家分享過 為IP設定反向DNS(PTR紀錄)，那這次就來分享一下在Vultr廣播IP吧！
 設置AS號碼及IP前綴 首先，我們要先開通BGP的功能！
-點擊這裡前往Vultr BGP頁面
-進入此頁面後，我們點擊Get Started
-選擇 I have my own IP space 及 I have own my ASN (如果沒有ASN不用選擇)
-LOA的部分 可以參考這份範例文件
-接著其他保持預設就好
-接著點Start，來驗證IP地址或ASN號碼
-系統會寄一封電子郵件到Whois的Email，進行驗證！
-驗證完後呢，我們就等待工作人員設置
-廣播 這次是使用Ubuntu 18.04來廣播的，CentOS及Debian應該大同小異
-首先我們先安裝幾個套件
- apt-get update -y apt-get install bird6 -y  安裝完成後，我們進入 /etc/bird 資料夾
- cd /etc/bird  刪除 bird6.conf
- sudo rm -rf bird6.conf  接著我們新增一個新的配置
- router id 0.0.0.0; #將0.0.0.0改成你的主機IPv4
-protocol bgp vultr
-{
-local as 209557;
-source address 改成主機IPv6;</description>
+點擊這裡前往Vultr BGP頁面</description>
     </item>
     
     <item>
       <title>RIPE為IP設定反向DNS(PTR紀錄)</title>
-      <link>http://blog.steveyi.net/2020/ip-set-rdns-with-ripe-and-he-dns/</link>
+      <link>http://blog.steveyi.net/posts/ip-set-rdns-with-ripe-and-he-dns/</link>
       <pubDate>Wed, 08 Apr 2020 06:38:54 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/ip-set-rdns-with-ripe-and-he-dns/</guid>
+      <guid>http://blog.steveyi.net/posts/ip-set-rdns-with-ripe-and-he-dns/</guid>
       <description>反向dns紀錄
 一直以來都很想設定rDNS，看了許多次RIPE官方的文檔還是沒搞懂
 恰好這次有位大佬指導我去設定，其實一點都不難呢
 順便分享一下設定過程
-本篇以RIPE及HE FREE DNS作為範例，其他RIR基本上大同小異
-建立DNS NameServers 首先，登入HE FREE DNS，點擊左方的Add a new reverse
-輸入你的IP前綴，後方記得加上cidr(子網路掩碼)
-接著我們先設定一個PTR紀錄
-關於IP的轉換為網域名稱，可以使用這個工具 點我前往
-由於HE跟RIPE會互相檢查DNS授權，所以我們必須要先請HE開通DNS區域
-我們可以發送郵件到 dnsadmin#he.net [#換成@]
-Subject: About PTR records (改成你的IPv6前綴網域)
-Content:
-Hello, I want set PTR records with my ipv6 address(改成你的IPv6前綴)
-RIPE require DNS delegation check
-Please check it :)
-Thanks!
-當HE開通後，我們就可以到RIPE設定了！
-設定DNS伺服器 首先，我們進入LIR Portal
-點擊左邊的Create an Object，選擇domain
-接著輸入要設定的ipv6 前綴
-接著依序輸入HE的DNS Server 及 Admin-c tech-c zone-c&amp;hellip;等等
-ns1.he.net ns2.he.net ns3.he.ne ns4.he.net ns5.he.net
-完成後按Submit就會開始建立了</description>
+本篇以RIPE及HE FREE DNS作為範例，其他RIR基本上大同小異</description>
     </item>
     
     <item>
       <title>我的第一個ASN號</title>
-      <link>http://blog.steveyi.net/2020/first-asn/</link>
+      <link>http://blog.steveyi.net/posts/first-asn/</link>
       <pubDate>Thu, 27 Feb 2020 06:59:19 +0000</pubDate>
       
-      <guid>http://blog.steveyi.net/2020/first-asn/</guid>
+      <guid>http://blog.steveyi.net/posts/first-asn/</guid>
       <description>去年，意外的接觸到了BGP，就下定決心！希望未來可以有自己的IP位置及ASN號碼
 今年春節時，恰好發現了一個瑞士的LIR，跟他購買了一個ASN號碼(75法郎)，還多送一個ipv6 /48．(基本上跟LIR購買ASN，都會送一個ipv6 /48。)
-PS.不過不是每個LIR都會送IP位置的，建議大家可以在購買前問問LIR
-BGP是什麼？ 邊界網關協議（英語：Border Gateway Protocol，縮寫：BGP）是互聯網上一個核心的去中心化自治路由協議。
-它通過維護IP路由表或&amp;quot;前綴&amp;quot;表來實現自治系統（AS）之間的可達性，屬於矢量路由協議
-維基百科
-AS是什麼？ 自治系統或自治域（英文：Autonomous system, AS）是指在網際網路中，一個（有時是多個）實體管轄下的所有IP網路和路由器的組合，它們對網際網路執行共同的路由策略。
-維基百科
-RIR是誰？ 就是區域網際網路註冊機構啦！(像亞洲就是APNIC，台灣則為TWNIC)
-維基百科
-取得ASN號碼及IP段 想要擁有自己的IP段就必須要先有自治號碼(ASN)，註冊ASN的流程就是&amp;hellip;
-付錢給RIR加入會員，跟RIR申請ASN號碼及IP段
-引用一句話：ASN號碼及IP段是免費的，我們只收會員費用
-入會費大約：1400澳幣(聽朋友說的)
-所以說，一般人應該不會花錢加入會員(除非你是土豪&amp;hellip;xDD)
-必須要找LIR來幫忙申請ASN及IP段了
-PS.LIR就是付錢加入RIR的會員
-基本上我們只要在搜尋引擎搜索
-關鍵字 : Lir Service
-就可以找到了
-這邊也分享一下國外論壇整理的LIR名單: 點我前往 (推薦註冊RIRE的，方便管理)
-PS.每個LIR的價格不同，可以多多比價，我註冊的時候是75法郎
-這裡註冊以RIPE為例子 因為我註冊的就是RIPE
-RIPE的註冊類型分為兩種:
-個人: 需要護照(或其他證件)、地址、電話號碼、電子郵件等
-公司: 需要公司註冊證書（營業執照）、地址、電話號碼、電子郵件等
-PS.未滿十八歲註冊需要監護人的同意書
-接著就等RIP分配號碼，就可以來組建自己的BGP網路了
-歡迎大家來跟我建立Peer，前提是我先搞懂Linux路由&amp;hellip;xDD</description>
+PS.不過不是每個LIR都會送IP位置的，建議大家可以在購買前問問LIR</description>
     </item>
     
   </channel>
