@@ -1,34 +1,32 @@
-baseURL = "http://blog.steveyi.net/"
-languageCode = "zh-TW"
-title = "酷小易"
-theme = "hugo_themes"
-copyright = "&copy; 2018 - 2021 <a href=\"https://steveyi.net\">小易</a> 版權所有"
+baseurl = "https://example.com"
+languageCode = "en"
+title = "Hugo Kiss theme"
+theme = "kiss"
+copyright = "&copy; <a href=\"https://github.com/ribice\">Emir Ribic</a> 2017"
 disqusShortname = "shortname"
 googleAnalytics = ""
 Paginate = 5 # Number of posts per page
 enableRobotsTXT = true
 
-summaryLength = 5
-
 [params.rss] # Adding this tag enables RSS feed
 includeContent = true # Includes whole content in rss
-authorName = "SteveYi" # Author full name
-authorEmail = "jackcooku@steveyi.net" # Author email
+authorName = "Emir Ribic" # Author full name
+authorEmail = "ribice@gmail.com" # Author email
 
 [params.assets]
 customCSS = ["css/custom.css"]
 
 [params.info]
-adsense = "4690375706794350" # Adsense ID (ID only, without ca-pub-)
+adsense = "" # Adsense ID (ID only, without ca-pub-)
 enableSocial = true # Adds OpenGraph and Twitter cards
-homeTitle = "酷小易" # Title for home page
+homeTitle = "" # Title for home page
 poweredby = true # Adds powered by hugo and kiss below Copyright
 related = true # Includes related articles at the bottom of the article
 codeCopy = true # Add copy button above code blocks
 taxonomiesCount = true # Add taxonomies count
 
 [params.features]
-disqusOnDemand = false  # Load Disqus comments on click
+disqusOnDemand = true  # Load Disqus comments on click
 
 
 [params.opengraph.facebook]
@@ -40,12 +38,12 @@ pageID = ""
 page = "" # Twitter Page username. If not set, params.social.twitter will be used.
 
 [params.social]
-twitter = "steveyiyo"
-github = "steveyiyo"
-email = "jackcooku@steveyi.net"
-linkedin = "steveyiyo"
-facebook = "jackcooku"
-instagram = "steveyiyo"
+twitter = "ribicemir"
+github = "ribice"
+email = "ribice@gmail.com"
+linkedin = "ribice"
+facebook = "ribice"
+instagram = ""
 codepen = ""
 rss = "index.xml" # Add this to show RSS button in social.
 
@@ -54,10 +52,10 @@ platforms = ["github","facebook","twitter","instagram","email","codepen","linked
 
 [params.matomoAnalytics]
 siteID = 1
-rootURL = "//blog.steveyi.net/"
+rootURL = "//matomo.example.com/"
 
 [params.fathomAnalytics]
-rootURL = "//blog.steveyi.net/"
+rootURL = "//fathom.example.com/"
 
 [taxonomies]
 tag ="tags"
