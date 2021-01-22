@@ -9,7 +9,7 @@ jobs:
   build-deploy:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v1  # v2 does not have submodules option now
+      - uses: actions/checkout@v2
         with:
           submodules: true
 
@@ -24,7 +24,7 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          deploy_key: ${{ secrets.ACTION_KEY }}
-          external_repository: steveyiyo/SteveYi-Blog # <- 改成你自己的 user github page
-          publish_dir: ./public # <- 指定編譯後的成品放置的資料夾
-          publish_branch: main # <- 遠端 repo 的目標分支
+          deploy_key: ${{ secrets.GITHUB_TOKEN }}
+          external_repository: steveyiyo/SteveYi-Blog
+          publish_dir: ./public
+          publish_branch: main
