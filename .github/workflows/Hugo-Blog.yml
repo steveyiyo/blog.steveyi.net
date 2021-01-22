@@ -28,3 +28,4 @@ jobs:
           external_repository: steveyiyo/SteveYi-Blog
           publish_dir: ./docs
           publish_branch: gh-page
+          cname: blog.steveyi.net
