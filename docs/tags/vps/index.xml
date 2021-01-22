@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VPS on 酷小易</title>
+    <link>http://blog.steveyi.net/tags/vps/</link>
+    <description>Recent content in VPS on 酷小易</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-TW</language>
+    <copyright>&amp;copy; 2018 - 2021 &lt;a href=&#34;https://steveyi.net&#34;&gt;小易&lt;/a&gt; 版權所有</copyright>
+    <lastBuildDate>Fri, 20 Nov 2020 18:31:04 +0000</lastBuildDate><atom:link href="http://blog.steveyi.net/tags/vps/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>利用WireGuard建立大內網</title>
+      <link>http://blog.steveyi.net/posts/usingwireguard-to-make-intranet/</link>
+      <pubDate>Fri, 20 Nov 2020 18:31:04 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/usingwireguard-to-make-intranet/</guid>
+      <description>Hi 大家好，今天來分享一下如何使用WireGuard建立大內網
+之前有與大家分享過 在Linux系統上安裝Wireguard，那這次我們要利用WireGuard來建立大內網
+為什麼筆者稱這次要建立&amp;quot;大內網&amp;quot;呢？</description>
+    </item>
+    
+    <item>
+      <title>在Ubuntu系統下架設Tunnel Broker服務(v4 to v6)</title>
+      <link>http://blog.steveyi.net/posts/tunnel-broker-bgp/</link>
+      <pubDate>Sun, 31 May 2020 16:56:41 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/tunnel-broker-bgp/</guid>
+      <description>前言 之前拿到了一個自治號碼(AS Number)，也拿到了1個 /44 及兩個 /48 的iPv6</description>
+    </item>
+    
+    <item>
+      <title>專為GCP打造的Windows 10 DD鏡像</title>
+      <link>http://blog.steveyi.net/posts/gcp-windows-dd/</link>
+      <pubDate>Tue, 27 Aug 2019 15:07:49 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/gcp-windows-dd/</guid>
+      <description>前陣子為了要在GCP使用VPS，於是在一段時間裡製作了 Windows DD 鏡像
+分別是：</description>
+    </item>
+    
+  </channel>
+</rss>

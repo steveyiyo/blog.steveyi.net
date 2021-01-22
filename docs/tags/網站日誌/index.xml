@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>網站日誌 on 酷小易</title>
+    <link>http://blog.steveyi.net/tags/%E7%B6%B2%E7%AB%99%E6%97%A5%E8%AA%8C/</link>
+    <description>Recent content in 網站日誌 on 酷小易</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-TW</language>
+    <copyright>&amp;copy; 2018 - 2021 &lt;a href=&#34;https://steveyi.net&#34;&gt;小易&lt;/a&gt; 版權所有</copyright>
+    <lastBuildDate>Mon, 20 Jul 2020 07:50:55 +0000</lastBuildDate><atom:link href="http://blog.steveyi.net/tags/%E7%B6%B2%E7%AB%99%E6%97%A5%E8%AA%8C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>小易部落格iOS版App開放下載囉！</title>
+      <link>http://blog.steveyi.net/posts/ios-app/</link>
+      <pubDate>Mon, 20 Jul 2020 07:50:55 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/ios-app/</guid>
+      <description>這個App可以讓您輕鬆查看最新的小易部落格文章唷！
+讓我們來看看要怎麼安裝吧
+Android版請見這篇
+首先先使用Safari打開您現在正在瀏覽的這個網頁，然後按這裡下載描述檔。
+按下允許下載後，請按「關閉」，然後打開「設定」並照著系統的指示安裝即可～</description>
+    </item>
+    
+    <item>
+      <title>Cloud Identity 驗證網域及建立帳號</title>
+      <link>http://blog.steveyi.net/posts/cloud-identity-setting/</link>
+      <pubDate>Fri, 15 May 2020 20:35:49 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/cloud-identity-setting/</guid>
+      <description>在上一篇文，我們成功建立了Cloud Identity免費版
+在這篇文章，我們將要進行驗證網域的步驟
+首先，登入G Suite管理面板</description>
+    </item>
+    
+    <item>
+      <title>建立Cloud Identity帳戶</title>
+      <link>http://blog.steveyi.net/posts/create-cloud-identity/</link>
+      <pubDate>Fri, 15 May 2020 20:35:11 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/create-cloud-identity/</guid>
+      <description>首先，進入Cloud Identity申請頁面 點擊下一頁
+接著輸入公司名稱(可以隨意輸入)，員工數量(隨意選擇) 把它當作一個團隊</description>
+    </item>
+    
+    <item>
+      <title>刪除G suite組織</title>
+      <link>http://blog.steveyi.net/posts/delete-gsuite/</link>
+      <pubDate>Fri, 15 May 2020 18:17:25 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/delete-gsuite/</guid>
+      <description>之前有跟大家分享註冊G Suite帳號的方式，最近想將 Cloud Identity免費版 的G Suite組織刪除</description>
+    </item>
+    
+    <item>
+      <title>Backblaze B2 低價的雲端數據存儲服務</title>
+      <link>http://blog.steveyi.net/posts/backblaze-b2/</link>
+      <pubDate>Mon, 11 May 2020 09:35:00 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/backblaze-b2/</guid>
+      <description>之前學習建站之時，考量到一個問題！
+如果今天我的流量暴漲，文章變多，我的圖片空間及流量會不會也跟著變多
+所以在網路上搜尋了一些對象存處服務，找到了一間便宜的對象存處提供商－Backblaze
+什麼是對象存處 對象存處是一種數據存儲，其中每個數據單元存儲為稱為對象的離散單元。</description>
+    </item>
+    
+    <item>
+      <title>Github Pages 綁定自訂網域及SSL</title>
+      <link>http://blog.steveyi.net/posts/github-pages-ssl/</link>
+      <pubDate>Thu, 23 Apr 2020 05:19:40 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/github-pages-ssl/</guid>
+      <description>上篇跟大家分享了 透過Github託管靜態網站，這篇文章就來分享一下綁定自訂網域及開啟SSL的過程吧！
+首先，進入Github Repository的設定
+輸入自訂的網域，接著點擊Save</description>
+    </item>
+    
+    <item>
+      <title>透過Github託管靜態網頁 - Github Pages</title>
+      <link>http://blog.steveyi.net/posts/github-static-website/</link>
+      <pubDate>Wed, 22 Apr 2020 14:09:46 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/github-static-website/</guid>
+      <description>首先，進入Github 點擊左方綠色按鈕的 New
+輸入Repository名稱（自定義）
+選擇 Public(公開) 或是 Private(私人)</description>
+    </item>
+    
+    <item>
+      <title>Mailgun &#43; Gmail 達成自訂網域郵箱</title>
+      <link>http://blog.steveyi.net/posts/mailgun-gmail-custom-domain-email/</link>
+      <pubDate>Wed, 22 Apr 2020 12:48:48 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/mailgun-gmail-custom-domain-email/</guid>
+      <description>小時候總是很好奇寄件者後方的網域名稱是什麼，後來接觸到網站架設後，註冊了許多網域（現在手上大概6個網域左右)，也慢慢解開了小時候的疑惑
+今天就來分享一下Mailgun + Gmail 自訂網域郵箱的方法吧！</description>
+    </item>
+    
+    <item>
+      <title>[教學] AWS Route 53 代管DNS</title>
+      <link>http://blog.steveyi.net/posts/aws-route53/</link>
+      <pubDate>Mon, 06 Apr 2020 14:38:57 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/aws-route53/</guid>
+      <description>從2017年註冊了第一個網域之後，DNS代管商一直是我在研究的一個部分！
+今天來推薦一下由AWS推出的DNS代管服務 - Route 53</description>
+    </item>
+    
+    <item>
+      <title>在 Gandi 購買網域</title>
+      <link>http://blog.steveyi.net/posts/register-domain-at-gandi/</link>
+      <pubDate>Fri, 03 Apr 2020 18:40:19 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/register-domain-at-gandi/</guid>
+      <description>之前有跟大家分享將網域從 Google 移轉至 Gandi 的過程 點我看文章</description>
+    </item>
+    
+    <item>
+      <title>將網域從 Google Domains 轉出至 Gandi</title>
+      <link>http://blog.steveyi.net/posts/transfer-domain-from-google-to-gandi/</link>
+      <pubDate>Thu, 02 Apr 2020 02:55:55 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/transfer-domain-from-google-to-gandi/</guid>
+      <description>這幾天收到Google Domains的通知信，通知網域即將要續費了
+正好前陣子打算將所有網域轉移到 Gandi 統一管理，趁著這次機會</description>
+    </item>
+    
+    <item>
+      <title>Backblaze B2和Cloudflare Workers設定自訂域名</title>
+      <link>http://blog.steveyi.net/posts/b2-cfworkers/</link>
+      <pubDate>Wed, 26 Feb 2020 20:36:28 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/b2-cfworkers/</guid>
+      <description>前言 當初架設網站的時候，考量到了圖片的存儲以及流量的問題
+本來是將圖片跟網站放在同一個網站伺服器下的，但後來發現伺服器空間常常不足夠（因為系統會自動備份，導致空間不足）
+後來將圖片放在OneDrive商業版，並搭配OneList來使用，但畢竟是非官方的API，當API請求速率過快，圖片就載入不出來了．
+當初OneDrive失敗後，又將圖片放到Google Drive上，並搭配rclone使用，</description>
+    </item>
+    
+  </channel>
+</rss>

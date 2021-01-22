@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Google on 酷小易</title>
+    <link>http://blog.steveyi.net/tags/google/</link>
+    <description>Recent content in Google on 酷小易</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-TW</language>
+    <copyright>&amp;copy; 2018 - 2021 &lt;a href=&#34;https://steveyi.net&#34;&gt;小易&lt;/a&gt; 版權所有</copyright>
+    <lastBuildDate>Tue, 19 Jan 2021 13:00:00 +0000</lastBuildDate><atom:link href="http://blog.steveyi.net/tags/google/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Google廣告 – 原來你在Google眼中的形象是這樣的…</title>
+      <link>http://blog.steveyi.net/posts/google-adssettings/</link>
+      <pubDate>Tue, 19 Jan 2021 13:00:00 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/google-adssettings/</guid>
+      <description>原本這篇去年12月就要發布的，但剛好遇到伺服器維護就一直沒發XD
+有一天筆者在修改Google帳戶資料時，意外發現了「廣告設定」這個地方點開有還滿多資訊的。
+資料的來源包括登入狀態下的Google和Youtube各種紀錄，以及Google帳號申請時填寫的基本資料
+可以推測出興趣、年齡、家庭收入、感情狀況、雇主等，甚至是小孩數量
+不過推測出來的東西也會時常變動，也不是完全準確，不介意的話可以當笑話看看就好🤣 （筆者曾經在三天內看到自己的收入出現「中間偏高、中間偏低、高、低」的極端起伏）</description>
+    </item>
+    
+    <item>
+      <title>在Linux環境下無腦串接Google雲端硬碟</title>
+      <link>http://blog.steveyi.net/posts/linux-mount-googledrive-not-required-brain/</link>
+      <pubDate>Tue, 19 Jan 2021 12:25:49 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/linux-mount-googledrive-not-required-brain/</guid>
+      <description>此篇教學使用的是 google-drive-ocamlfuse 這個軟體，筆者使用的環境是基於Ubuntu的Zorin OS 15.2系統作為示範。</description>
+    </item>
+    
+    <item>
+      <title>使用傳統版Gmail加快老舊裝置和低速網路的郵件載入速度</title>
+      <link>http://blog.steveyi.net/posts/html-gmail/</link>
+      <pubDate>Fri, 21 Aug 2020 15:32:52 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/html-gmail/</guid>
+      <description>筆者有一部老舊的PC，配備1GB記憶體以及Windows XP做輕度文書使用(Windows XP只需128MB記憶體即可操作)，瀏覽一些網站仍可應付，有些大型網站則要載入很久或是無法正常使用。如果是一般的文章網頁還可以，問題來了，筆者想用Gmail網頁版收發郵件，但在網路暢通的情況下載入標準Gmail網頁需要將近一分鐘，捲動郵件更是一場災難，後來筆者發現網頁底部會有一個不明顯的傳統版Gmail超連結，不太會有人注意到它。
+註：該部PC後來有點故障，所以不會用它來示範本篇教學。
+筆者將連結放在這裡，有需要的可以拷貝拿去用</description>
+    </item>
+    
+    <item>
+      <title>使用CloudReady體驗ChromiumOS作業系統，老電腦重獲新生!</title>
+      <link>http://blog.steveyi.net/posts/cloudready/</link>
+      <pubDate>Mon, 10 Aug 2020 15:10:52 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/cloudready/</guid>
+      <description>不曉得各位有沒有一種經驗，電腦老舊了，連文書處理和基本的瀏覽網頁都卡頓，但又不想使用太老舊的作業系統(官方停止提供新功能了，連瀏覽器也不提供更新支援了)，這時便可以下載最新版的CloudReady家用版來使用囉!既有最新版的瀏覽器，也有不少Web App能使用；也因為是基於瀏覽器的作業系統，因此資源占用比許多作業系統都少，也不用怕不習慣使用Linux作業系統(安裝軟體的方式很不一樣，使用邏輯也差很多，而且一直使用命令行也不是很直覺的用法)，所以，只要電腦支援64位元，幾乎都可以用CloudReady(試過家裡唯一一台32位元電腦，無法使用32位元版的CloudReady開機)
+開始吧!
+準備材料有:
+ 8GB隨身碟(資料會洗掉，請先移除資料) 要安裝的電腦  首先請先到官網按下[DOWNLOAD 64-BIT IMAGE]下載64位元版安裝檔(32位元版已停止支援)</description>
+    </item>
+    
+    <item>
+      <title>Cloud Identity 驗證網域及建立帳號</title>
+      <link>http://blog.steveyi.net/posts/cloud-identity-setting/</link>
+      <pubDate>Fri, 15 May 2020 20:35:49 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/cloud-identity-setting/</guid>
+      <description>在上一篇文，我們成功建立了Cloud Identity免費版
+在這篇文章，我們將要進行驗證網域的步驟
+首先，登入G Suite管理面板</description>
+    </item>
+    
+    <item>
+      <title>建立Cloud Identity帳戶</title>
+      <link>http://blog.steveyi.net/posts/create-cloud-identity/</link>
+      <pubDate>Fri, 15 May 2020 20:35:11 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/create-cloud-identity/</guid>
+      <description>首先，進入Cloud Identity申請頁面 點擊下一頁
+接著輸入公司名稱(可以隨意輸入)，員工數量(隨意選擇) 把它當作一個團隊</description>
+    </item>
+    
+    <item>
+      <title>刪除G suite組織</title>
+      <link>http://blog.steveyi.net/posts/delete-gsuite/</link>
+      <pubDate>Fri, 15 May 2020 18:17:25 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/delete-gsuite/</guid>
+      <description>之前有跟大家分享註冊G Suite帳號的方式，最近想將 Cloud Identity免費版 的G Suite組織刪除</description>
+    </item>
+    
+    <item>
+      <title>申請G Suite帳號</title>
+      <link>http://blog.steveyi.net/posts/register-gsuite/</link>
+      <pubDate>Wed, 01 Apr 2020 03:13:48 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/register-gsuite/</guid>
+      <description>相信大家應該都有使用過Gmail
+今天要來介紹的 G Suite 是由Google推出的企業服務，不過一般使用者也是可以申請的！</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>iOS on 酷小易</title>
+    <link>http://blog.steveyi.net/tags/ios/</link>
+    <description>Recent content in iOS on 酷小易</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-TW</language>
+    <copyright>&amp;copy; 2018 - 2021 &lt;a href=&#34;https://steveyi.net&#34;&gt;小易&lt;/a&gt; 版權所有</copyright>
+    <lastBuildDate>Sat, 28 Nov 2020 04:39:14 +0000</lastBuildDate><atom:link href="http://blog.steveyi.net/tags/ios/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>利用redeb來備份已安裝插件的deb檔</title>
+      <link>http://blog.steveyi.net/posts/use-redeb-to-backup-jb-tweaks/</link>
+      <pubDate>Sat, 28 Nov 2020 04:39:14 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/use-redeb-to-backup-jb-tweaks/</guid>
+      <description>就在很久之前，筆者就有遇過插件在其他軟體源消失導致無法安裝想要的插件。但是因為在其他裝置有安裝該插件而能把該插件deb檔備份出來並安裝在我想要安裝該插件的裝置裡，在此分享給有想要備份插件的人！
+   redeb與備份出來的deb檔（以打包Zebra為例）</description>
+    </item>
+    
+    <item>
+      <title>iOS和macaOS上超好用的內建Spotlight搜尋小技巧</title>
+      <link>http://blog.steveyi.net/posts/apple-spotlight/</link>
+      <pubDate>Sun, 18 Oct 2020 09:02:50 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/apple-spotlight/</guid>
+      <description>不少人都買了iPhone, iPad, iPod touch或Mac，卻不知道內建的Spotlight有許多好用的功能，讓我們來看看吧！
+ Spotlight的使用方法(早期的版本可能不太一樣)：</description>
+    </item>
+    
+    <item>
+      <title>小易部落格iOS版App開放下載囉！</title>
+      <link>http://blog.steveyi.net/posts/ios-app/</link>
+      <pubDate>Mon, 20 Jul 2020 07:50:55 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/ios-app/</guid>
+      <description>這個App可以讓您輕鬆查看最新的小易部落格文章唷！
+讓我們來看看要怎麼安裝吧
+Android版請見這篇
+首先先使用Safari打開您現在正在瀏覽的這個網頁，然後按這裡下載描述檔。
+按下允許下載後，請按「關閉」，然後打開「設定」並照著系統的指示安裝即可～</description>
+    </item>
+    
+    <item>
+      <title>幫Spotify加上實時歌詞(iOS/iPadOS)</title>
+      <link>http://blog.steveyi.net/posts/no-premium-spotify-dynamic-lyrics/</link>
+      <pubDate>Sat, 11 Jul 2020 07:31:26 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/no-premium-spotify-dynamic-lyrics/</guid>
+      <description>上次有一篇介紹各家串流平台的免費會員比較，各位可以發現實時歌詞很多家平台都有
+但Spotify根據筆者測試只有Premium用戶能用，稍嫌可惜
+這時想要聽著Spotify的免費音樂，但又覺得沒歌詞不能一起唱很麻煩嗎
+這時候照這篇文章做就可以解決這個問題囉
+這篇文章適用iOS/iPadOS用戶，Android用戶在另外一篇唷</description>
+    </item>
+    
+    <item>
+      <title>[2020最新] 各大串流平台免費會員比較</title>
+      <link>http://blog.steveyi.net/posts/free-streaming-music-compare/</link>
+      <pubDate>Sun, 05 Jul 2020 12:51:26 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/free-streaming-music-compare/</guid>
+      <description>蘿蔔這幾年來一直在尋找免費好用的串流音樂平台，也因此幾乎所有台灣常見的平台都有用過，所以接下來一一為大家介紹
+首先我先說一下，蘿蔔是台灣人，所以文章介紹的有些平台不見得能在其他國家或地區使用；或是有些平台改版了，這篇文章可能會來不及更新，請見諒
+再來要說的是，我們不鼓勵使用盜版或破解版，首先是音樂平台和音樂創作者沒辦法收到錢（例如串流音樂平台上面廣告贊助的費用），而好音樂就沒辦法受到鼓勵，裝置也可能被病毒或是間諜程式入侵，而且還可能會有法律責任產生
+說完了那我們開始介紹吧
+Spotify 一個老牌的串流音樂平台，整體以播放清單為主，有Spotify Connect可以無縫更換聆聽裝置，最近剛陸續開放歌詞功能，不過似乎只有Premium能用。</description>
+    </item>
+    
+    <item>
+      <title>無需訂閱Youtube Music Premium也能讓iOS/iPadOS的裝置享有背景播放的功能(Youtube也適用哦！)</title>
+      <link>http://blog.steveyi.net/posts/youtube-background-ios/</link>
+      <pubDate>Fri, 19 Jun 2020 14:39:47 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/youtube-background-ios/</guid>
+      <description>此處主要由iPad作為示範，iPhone也可以用一樣的方法唷
+Android也可以用類似的方法，之後會再發一篇教學，敬請關注「我是小易」後續的文章吧！
+後續更新：Android版教學在此
+ 筆者最近一直在找好用的免費串流音樂服務，發現其實電腦上的Youtube Music App(其實就是嵌入網頁拉XD)還不錯用，可惜行動版App跟網頁就都不能背景播放了(訂閱Premium的話就是App版可以，但網頁還是不行唷)</description>
+    </item>
+    
+    <item>
+      <title>讓手機音質提升的小技巧</title>
+      <link>http://blog.steveyi.net/posts/yin-zhi-ti-sheng/</link>
+      <pubDate>Mon, 01 Jun 2020 03:55:45 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/yin-zhi-ti-sheng/</guid>
+      <description>註：Apple Lightning裝置以及大多數的USB-C裝置(像是Windows電腦等)也適用這篇哦
+在你認為兩百元有找的耳機音質不好的同時，你是否忽略了哪個重要的細節呢？
+雖然也許手機廠牌跟耳機廠牌一致可以得到更好的優化體驗，但不可否認手機內置的DAC(數位音訊轉化為類比訊號提供給耳機的一個重要元件)不一定可以媲美外置的DAC，也許不是耳機太差，而是DAC推不動或是搭配起來不合適
+但人們會問：外置的DAC不是都很大一台嗎?</description>
+    </item>
+    
+    <item>
+      <title>32位元iOS裝置免電腦免SHSH 降級到8.4.1</title>
+      <link>http://blog.steveyi.net/posts/backtoios841/</link>
+      <pubDate>Mon, 30 Dec 2019 13:26:02 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/backtoios841/</guid>
+      <description>有時會因爲蘋果的部分問題，會在各種環節出狀況，如果有任何錯誤請改天再試
+蘋果的漏洞不是非常穩定，有一天我試了三次都不能用，改天再弄，一次就成功了，這有點碰運氣
+iOS裝置如果很慢，降級會比較流暢
+(A5裝置非常有感，A6、A6X裝置則差異不大但仍有比較快一點點)</description>
+    </item>
+    
+  </channel>
+</rss>

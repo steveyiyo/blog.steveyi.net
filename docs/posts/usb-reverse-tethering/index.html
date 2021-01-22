@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="zh-TW">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>透過電腦使用USB傳送網際網路連線給手機  (USB Reverse Tethering) | 酷小易</title>
+
+<meta property='og:title' content='透過電腦使用USB傳送網際網路連線給手機  (USB Reverse Tethering) - 酷小易'>
+<meta property='og:description' content='本篇教學使用搭載Android 5.0.2，Wi-Fi和藍芽損壞的手機搭配Windows 10做示範。
+請注意:不一定保證每一隻手機都相容，就算相容還是有一些App不認得此類型連接方式 (它們通常只認得行動數據和Wi-Fi連接)'>
+<meta property='og:url' content='http://blog.steveyi.net/posts/usb-reverse-tethering/'>
+<meta property='og:site_name' content='酷小易'>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/1ec8db9c1cd57aee84467f250353bf12?s=256'><meta property='article:author' content='https://facebook.com/jackcooku'><meta property='article:section' content='Posts'><meta property='article:tag' content='Android'><meta property='article:published_time' content='2020-04-07T04:57:33Z'/><meta property='article:modified_time' content='2020-04-07T04:57:33Z'/><meta name='twitter:card' content='summary'><meta name='twitter:site' content='@steveyiyo'><meta name='twitter:creator' content='@steveyiyo'>
+
+
+<link href="http://blog.steveyi.net/index.xml" rel="alternate" type="application/rss+xml" title="酷小易" />
+
+<link rel="stylesheet" href="/css/style.css"/><link rel='stylesheet' href='http://blog.steveyi.net/css/custom.css'><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="canonical" href="http://blog.steveyi.net/posts/usb-reverse-tethering/">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<section class="section">
+  <div class="container">
+    <nav id="nav-main" class="nav">
+      <div id="nav-name" class="nav-left">
+        <a id="nav-anchor" class="nav-item" href="http://blog.steveyi.net/">
+          <h1 id="nav-heading" class="title is-4">酷小易</h1>
+        </a>
+      </div>
+      <div class="nav-right">
+        <nav id="nav-items" class="nav-item level is-mobile"><a class="level-item" aria-label="github" href='https://github.com/steveyiyo'
+            target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+    
+  </svg></i>
+            </span>
+          </a><a class="level-item" aria-label="facebook" href='https://facebook.com/jackcooku'
+            target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+    
+  </svg></i>
+            </span>
+          </a><a class="level-item" aria-label="twitter" href='https://twitter.com/steveyiyo'
+            target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+    
+  </svg></i>
+            </span>
+          </a><a class="level-item" aria-label="instagram" href='https://instagram.com/steveyiyo'
+            target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+    <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+    
+  </svg></i>
+            </span>
+          </a><a class="level-item" aria-label="email" href='mailto:jackcooku@steveyi.net'
+            target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+    <polyline points="22,6 12,13 2,6"/>
+    
+  </svg></i>
+            </span>
+          </a><a class="level-item" aria-label="linkedin" href='https://linkedin.com/in/steveyiyo'
+            target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path stroke-width="1.8" d="m5.839218,4.101561c0,1.211972 -0.974141,2.194011 -2.176459,2.194011s-2.176459,-0.982039 -2.176459,-2.194011c0,-1.211094 0.974141,-2.194011 2.176459,-2.194011s2.176459,0.982917 2.176459,2.194011zm0.017552,3.94922l-4.388022,0l0,14.04167l4.388022,0l0,-14.04167zm7.005038,0l-4.359939,0l0,14.04167l4.360816,0l0,-7.370999c0,-4.098413 5.291077,-4.433657 5.291077,0l0,7.370999l4.377491,0l0,-8.89101c0,-6.915523 -7.829986,-6.66365 -9.669445,-3.259423l0,-1.891237z"/>
+    
+  </svg></i>
+            </span>
+          </a></nav>
+      </div>
+    </nav>
+
+    <nav class="nav">
+      
+
+      
+    </nav>
+
+  </div>
+  <script src="/js/navicon-shift.js"></script>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="subtitle tags is-6 is-pulled-right">
+      
+      
+<a class="subtitle is-6" href="/tags/android/">#Android</a>
+
+
+
+
+      
+    </div>
+    <h2 class="subtitle is-6">April 7, 2020</h2>
+    <h1 class="title">透過電腦使用USB傳送網際網路連線給手機  (USB Reverse Tethering)</h1>
+    
+    <div class="content">
+      <p><img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-.png" alt=""></p>
+<p>本篇教學使用搭載Android 5.0.2，Wi-Fi和藍芽損壞的手機搭配Windows 10做示範。</p>
+<p>請注意:不一定保證每一隻手機都相容，就算相容還是有一些App不認得此類型連接方式 (它們通常只認得行動數據和Wi-Fi連接)</p>
+<p>本篇著重於使用Windows平台進行的部分，所以不討論其他作業系統，其他作業系統理應當也是差不多才對。請讓電腦先安裝手機的驅動程式</p>
+<p>(外部連結: <a href="https://mobileai.net/2016/09/22/google-adb-driver/">https://mobileai.net/2016/09/22/google-adb-driver/</a> )</p>
+<p>HTC Sense 6或更早版本的Sense，有內建此功能而無須操作以下教學</p>
+<p>(設定&gt;更多&gt;可攜式熱點和數據連線&gt;USB網路設定&gt;透過電腦傳送)</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-1.png" alt=""></p>
+<p>首先請先到GitHub下載Gnirehtet</p>
+<p><a href="https://github.com/Genymobile/gnirehtet#rust">https://github.com/Genymobile/gnirehtet#rust</a></p>
+<p>找到Windows後按下下載之後解壓縮</p>
+<p><a href="https://github.com/Genymobile/gnirehtet#rust"><img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-2.png" alt=""></a></p>
+<p>解壓縮後會得到三個檔案</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-3.png" alt=""></p>
+<p>請將gnirehtet.apk安裝到手機上(安裝完在桌面找不到是正常的)</p>
+<p>不清楚apk怎麼安裝的話網路上有很多教學可以參考，在這裡先不贅述</p>
+<p>接下來請在手機上開啟開發人員選項</p>
+<p>不同品牌手機有不同開啟方法</p>
+<p>以HTC手機為例，打開設定&gt;關於手機&gt;軟體版本&gt;更多，接著狂戳&quot;建置號碼&quot;</p>
+<p>直到跳出Toast訊息&quot;不需要了，您已經是開發人員&quot;</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-4.png" alt=""></p>
+<p>完成後請點擊&quot;開發人員選項&quot;</p>
+<p>之後勾選USB偵錯並確認</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-5.png" alt=""></p>
+<p>如果詢問是否允許，請允許，如果懶得每次都按允許的話，可以勾選&quot;永遠允許從此電腦進行&quot;</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-6.png" alt=""></p>
+<p>然後請將手機設定密碼(設定&gt;安全性&gt;螢幕鎖定方式&gt;選擇圖形，PIN碼或密碼)</p>
+<p>否則有些情況下無法上網</p>
+<p>如果任何步驟執行時跳出新增VPN連線的請求，請按下允許</p>
+<p>接下來請將手機連接到電腦，並點擊電腦上的gnirehtet-run.cmd</p>
+<p>如果執行時跳出新增VPN連線的請求，請按下確定</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-7.png" alt=""></p>
+<p>接下來會看到電腦有字很多字在跑，關掉這個視窗等同斷線，所以沒有要看它的連線紀錄的話請最小化</p>
+<p>(按右上角的 - )就好</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-8.png" alt=""></p>
+<p>接下來手機就可以上網囉</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-9.png" alt=""></p>
+<p>Spotify串流音樂也是可以的</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-10.png" alt=""></p>
+<p>如果需要斷線，可以在通知點選&quot;Stop Gnirehtet”</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-11.png" alt=""></p>
+<p>注意:有一些網路環境(如校園網路或工作場域網路等)可能會因某些考量而封鎖相關連線，所以可能會造成無法上網(如下圖)，此時換成別的網路就行囉</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-12.png" alt=""></p>
+<p>免責聲明:</p>
+<p>如果有因本教學造成任何爭議，本作者一蓋不負責</p>
+<p>對於非本作者創作之相關資訊，或是非本作者控制或測試之獨立網站，不得解釋本作者為其推薦或背書。</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/cc.png" alt=""></p>
+<p>© iambjlu</p>
+
+      
+      <div class="related">
+</div>
+      
+    </div>
+    
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <aside><div id="disqus_thread"></div></aside>
+  
+    <script type="text/javascript">
+      var disqus_shortname = 'shortname';
+      function disqus() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+  
+      disqus();
+  
+
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; 2018 - 2021 <a href="https://steveyi.net">小易</a> 版權所有</p>
+    
+      <p>由 <a href="https://gohugo.io/">Hugo</a> 及 <a href="https://github.com/ribice/kiss">Kiss</a> 產生</p>
+    
+  </div>
+</section>
+
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="\/\/blog.steveyi.net\/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript>
+  <img src="//blog.steveyi.net/piwik.php?idsite=1&amp;rec=1" style="border:0" alt="" />
+</noscript>
+
+<script>
+    (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+            (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+    })(document, window, '\/\/blog.steveyi.net\/tracker.js', 'fathom');
+    fathom('trackPageview');
+</script>
+</body>
+</html>
+

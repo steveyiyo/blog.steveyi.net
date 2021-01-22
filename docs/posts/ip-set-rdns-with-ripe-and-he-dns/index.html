@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="zh-TW">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>RIPE為IP設定反向DNS(PTR紀錄) | 酷小易</title>
+
+<meta property='og:title' content='RIPE為IP設定反向DNS(PTR紀錄) - 酷小易'>
+<meta property='og:description' content='反向dns紀錄
+一直以來都很想設定rDNS，看了許多次RIPE官方的文檔還是沒搞懂
+恰好這次有位大佬指導我去設定，其實一點都不難呢
+順便分享一下設定過程
+本篇以RIPE及HE FREE DNS作為範例，其他RIR基本上大同小異'>
+<meta property='og:url' content='http://blog.steveyi.net/posts/ip-set-rdns-with-ripe-and-he-dns/'>
+<meta property='og:site_name' content='酷小易'>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/1ec8db9c1cd57aee84467f250353bf12?s=256'><meta property='article:author' content='https://facebook.com/jackcooku'><meta property='article:section' content='Posts'><meta property='article:tag' content='BGP'><meta property='article:tag' content='伺服器'><meta property='article:tag' content='網域'><meta property='article:published_time' content='2020-04-08T06:38:54Z'/><meta property='article:modified_time' content='2020-04-08T06:38:54Z'/><meta name='twitter:card' content='summary'><meta name='twitter:site' content='@steveyiyo'><meta name='twitter:creator' content='@steveyiyo'>
+
+
+<link href="http://blog.steveyi.net/index.xml" rel="alternate" type="application/rss+xml" title="酷小易" />
+
+<link rel="stylesheet" href="/css/style.css"/><link rel='stylesheet' href='http://blog.steveyi.net/css/custom.css'><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="canonical" href="http://blog.steveyi.net/posts/ip-set-rdns-with-ripe-and-he-dns/">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<section class="section">
+  <div class="container">
+    <nav id="nav-main" class="nav">
+      <div id="nav-name" class="nav-left">
+        <a id="nav-anchor" class="nav-item" href="http://blog.steveyi.net/">
+          <h1 id="nav-heading" class="title is-4">酷小易</h1>
+        </a>
+      </div>
+      <div class="nav-right">
+        <nav id="nav-items" class="nav-item level is-mobile"><a class="level-item" aria-label="github" href='https://github.com/steveyiyo'
+            target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+    
+  </svg></i>
+            </span>
+          </a><a class="level-item" aria-label="facebook" href='https://facebook.com/jackcooku'
+            target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+    
+  </svg></i>
+            </span>
+          </a><a class="level-item" aria-label="twitter" href='https://twitter.com/steveyiyo'
+            target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+    
+  </svg></i>
+            </span>
+          </a><a class="level-item" aria-label="instagram" href='https://instagram.com/steveyiyo'
+            target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+    <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+    
+  </svg></i>
+            </span>
+          </a><a class="level-item" aria-label="email" href='mailto:jackcooku@steveyi.net'
+            target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+    <polyline points="22,6 12,13 2,6"/>
+    
+  </svg></i>
+            </span>
+          </a><a class="level-item" aria-label="linkedin" href='https://linkedin.com/in/steveyiyo'
+            target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path stroke-width="1.8" d="m5.839218,4.101561c0,1.211972 -0.974141,2.194011 -2.176459,2.194011s-2.176459,-0.982039 -2.176459,-2.194011c0,-1.211094 0.974141,-2.194011 2.176459,-2.194011s2.176459,0.982917 2.176459,2.194011zm0.017552,3.94922l-4.388022,0l0,14.04167l4.388022,0l0,-14.04167zm7.005038,0l-4.359939,0l0,14.04167l4.360816,0l0,-7.370999c0,-4.098413 5.291077,-4.433657 5.291077,0l0,7.370999l4.377491,0l0,-8.89101c0,-6.915523 -7.829986,-6.66365 -9.669445,-3.259423l0,-1.891237z"/>
+    
+  </svg></i>
+            </span>
+          </a></nav>
+      </div>
+    </nav>
+
+    <nav class="nav">
+      
+
+      
+    </nav>
+
+  </div>
+  <script src="/js/navicon-shift.js"></script>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="subtitle tags is-6 is-pulled-right">
+      
+      
+<a class="subtitle is-6" href="/tags/bgp/">#BGP</a>
+
+
+
+  
+  | <a class="subtitle is-6" href="/tags/%E4%BC%BA%E6%9C%8D%E5%99%A8/">#伺服器</a>
+  
+  | <a class="subtitle is-6" href="/tags/%E7%B6%B2%E5%9F%9F/">#網域</a>
+  
+
+
+      
+    </div>
+    <h2 class="subtitle is-6">April 8, 2020</h2>
+    <h1 class="title">RIPE為IP設定反向DNS(PTR紀錄)</h1>
+    
+    <div class="content">
+      <p><img src="https://static.yiy.tw/media/blog/2020/04/set-rdns-he.png" alt=""></p>
+<p>反向dns紀錄</p>
+<p>一直以來都很想設定rDNS，看了許多次RIPE官方的文檔還是沒搞懂<br>
+恰好這次有位大佬指導我去設定，其實一點都不難呢<br>
+順便分享一下設定過程</p>
+<p>本篇以<a href="https://ripe.net">RIPE</a>及<a href="http://dns.he.net">HE FREE DNS</a>作為範例，其他RIR基本上大同小異</p>
+<h1 id="建立dns-nameservers"><strong>建立DNS NameServers</strong></h1>
+<p>首先，登入<a href="http://dns.he.net/">HE FREE DNS</a>，點擊左方的Add a new reverse</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/he-01.png" alt=""></p>
+<p>輸入你的IP前綴，後方記得加上cidr(子網路掩碼)</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/he-02.png" alt=""></p>
+<p>接著我們先設定一個PTR紀錄<br>
+關於IP的轉換為網域名稱，可以使用這個工具 <a href="https://www.securebit.ch/tools/network/arpa">點我前往</a></p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/he-03.jpg" alt=""></p>
+<p>由於HE跟RIPE會互相檢查DNS授權，所以我們必須要先請HE開通DNS區域<br>
+我們可以發送郵件到 dnsadmin#he.net [#換成@]</p>
+<p>Subject: About PTR records (改成你的IPv6前綴網域)</p>
+<p>Content:<br>
+Hello, I want set PTR records with my ipv6 address(改成你的IPv6前綴)<br>
+RIPE require DNS delegation check<br>
+Please check it :)<br>
+Thanks!</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/he-04-1920x908.png" alt=""></p>
+<p>當HE開通後，我們就可以到RIPE設定了！</p>
+<h1 id="設定dns伺服器"><strong>設定DNS伺服器</strong></h1>
+<p>首先，我們進入<a href="https://lirportal.ripe.net/">LIR Portal</a></p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/he-05-1920x864.png" alt=""></p>
+<p>點擊左邊的Create an Object，選擇domain</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/he-07-1920x864.png" alt=""></p>
+<p>接著輸入要設定的ipv6 前綴</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/he-06-1920x797.png" alt=""></p>
+<p>接著依序輸入HE的DNS Server 及 Admin-c tech-c zone-c&hellip;等等<br>
+ns1.he.net ns2.he.net ns3.he.ne ns4.he.net ns5.he.net</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/he-08-1920x1013.png" alt=""></p>
+<p>完成後按Submit就會開始建立了</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/he-09.png" alt=""></p>
+<p>當出現這個畫面時，代表建立完成囉！</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/he-10.png" alt=""></p>
+<p>接著後續步驟就跟一般網域的DNS設定相同囉！</p>
+<p>需要特別注意的是 反向DNS是要設定PTR紀錄，正向則要設定A或AAAA紀錄<br>
+名稱的話則可以使用這個工具 <a href="https://www.securebit.ch/tools/network/arpa">點我前往</a> 來轉換/查看</p>
+<p>PS.如果需要查看DNS是否生效，可以使用<a href="https://dns.google">Google Public DNS</a>查詢</p>
+
+      
+      <div class="related">
+
+<h3>更多文章：</h3>
+<ul>
+	
+	<li><a href="/posts/aws-route53/">[教學] AWS Route 53 代管DNS</a></li>
+	
+	<li><a href="/posts/register-domain-at-gandi/">在 Gandi 購買網域</a></li>
+	
+	<li><a href="/posts/first-asn/">我的第一個ASN號</a></li>
+	
+	<li><a href="/posts/b2-cfworkers/">Backblaze B2和Cloudflare Workers設定自訂域名</a></li>
+	
+	<li><a href="/posts/gcp-windows-dd/">專為GCP打造的Windows 10 DD鏡像</a></li>
+	
+</ul>
+</div>
+      
+    </div>
+    
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <aside><div id="disqus_thread"></div></aside>
+  
+    <script type="text/javascript">
+      var disqus_shortname = 'shortname';
+      function disqus() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+  
+      disqus();
+  
+
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; 2018 - 2021 <a href="https://steveyi.net">小易</a> 版權所有</p>
+    
+      <p>由 <a href="https://gohugo.io/">Hugo</a> 及 <a href="https://github.com/ribice/kiss">Kiss</a> 產生</p>
+    
+  </div>
+</section>
+
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="\/\/blog.steveyi.net\/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript>
+  <img src="//blog.steveyi.net/piwik.php?idsite=1&amp;rec=1" style="border:0" alt="" />
+</noscript>
+
+<script>
+    (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+            (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+    })(document, window, '\/\/blog.steveyi.net\/tracker.js', 'fathom');
+    fathom('trackPageview');
+</script>
+</body>
+</html>
+

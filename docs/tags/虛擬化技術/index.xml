@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>虛擬化技術 on 酷小易</title>
+    <link>http://blog.steveyi.net/tags/%E8%99%9B%E6%93%AC%E5%8C%96%E6%8A%80%E8%A1%93/</link>
+    <description>Recent content in 虛擬化技術 on 酷小易</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-TW</language>
+    <copyright>&amp;copy; 2018 - 2021 &lt;a href=&#34;https://steveyi.net&#34;&gt;小易&lt;/a&gt; 版權所有</copyright>
+    <lastBuildDate>Tue, 07 Jul 2020 05:33:14 +0000</lastBuildDate><atom:link href="http://blog.steveyi.net/tags/%E8%99%9B%E6%93%AC%E5%8C%96%E6%8A%80%E8%A1%93/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PVE入門心得-安裝篇</title>
+      <link>http://blog.steveyi.net/posts/pve-install/</link>
+      <pubDate>Tue, 07 Jul 2020 05:33:14 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/pve-install/</guid>
+      <description>玩虛擬機有一段時間了，不過是在Windows系統下裝VMware Workstation玩xD
+後來閒置了幾台電腦，恰好也查詢到PVE(Proxmox VE)這個開源虛擬系統，於是 我們就來安裝玩玩吧!</description>
+    </item>
+    
+  </channel>
+</rss>

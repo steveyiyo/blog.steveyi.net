@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>生活小知識 on 酷小易</title>
+    <link>http://blog.steveyi.net/tags/%E7%94%9F%E6%B4%BB%E5%B0%8F%E7%9F%A5%E8%AD%98/</link>
+    <description>Recent content in 生活小知識 on 酷小易</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-TW</language>
+    <copyright>&amp;copy; 2018 - 2021 &lt;a href=&#34;https://steveyi.net&#34;&gt;小易&lt;/a&gt; 版權所有</copyright>
+    <lastBuildDate>Tue, 19 Jan 2021 13:00:00 +0000</lastBuildDate><atom:link href="http://blog.steveyi.net/tags/%E7%94%9F%E6%B4%BB%E5%B0%8F%E7%9F%A5%E8%AD%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Google廣告 – 原來你在Google眼中的形象是這樣的…</title>
+      <link>http://blog.steveyi.net/posts/google-adssettings/</link>
+      <pubDate>Tue, 19 Jan 2021 13:00:00 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/google-adssettings/</guid>
+      <description>原本這篇去年12月就要發布的，但剛好遇到伺服器維護就一直沒發XD
+有一天筆者在修改Google帳戶資料時，意外發現了「廣告設定」這個地方點開有還滿多資訊的。
+資料的來源包括登入狀態下的Google和Youtube各種紀錄，以及Google帳號申請時填寫的基本資料
+可以推測出興趣、年齡、家庭收入、感情狀況、雇主等，甚至是小孩數量
+不過推測出來的東西也會時常變動，也不是完全準確，不介意的話可以當笑話看看就好🤣 （筆者曾經在三天內看到自己的收入出現「中間偏高、中間偏低、高、低」的極端起伏）</description>
+    </item>
+    
+    <item>
+      <title>在Linux環境下無腦串接Google雲端硬碟</title>
+      <link>http://blog.steveyi.net/posts/linux-mount-googledrive-not-required-brain/</link>
+      <pubDate>Tue, 19 Jan 2021 12:25:49 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/linux-mount-googledrive-not-required-brain/</guid>
+      <description>此篇教學使用的是 google-drive-ocamlfuse 這個軟體，筆者使用的環境是基於Ubuntu的Zorin OS 15.2系統作為示範。</description>
+    </item>
+    
+    <item>
+      <title>[有趣測試] 測驗看看你是不是木耳！</title>
+      <link>http://blog.steveyi.net/posts/are-you-mu-er/</link>
+      <pubDate>Wed, 25 Nov 2020 02:31:14 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/are-you-mu-er/</guid>
+      <description>這個網站會以隨機順序提供六組音樂，每組包含128Kbps MP3/320Kbps MP3/未壓縮的WAV音檔，測驗看看你能不能聽出哪個是音質最好的音檔，選擇後會產生正確答案。
+連結在下方。
+貼心提醒：</description>
+    </item>
+    
+    <item>
+      <title>AutoDraw 自動繪圖吧！</title>
+      <link>http://blog.steveyi.net/posts/autodraw/</link>
+      <pubDate>Wed, 25 Nov 2020 02:25:44 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/autodraw/</guid>
+      <description>(本文由小易及蘿蔔共同編輯)
+ 前幾天，小易在上課的時候，老師介紹到了一個有趣的網站
+AutoDraw是一個由Google所開發的網站</description>
+    </item>
+    
+    <item>
+      <title>Windows 10打開電腦(喚醒)後自動校正時間</title>
+      <link>http://blog.steveyi.net/posts/ntp-clock-autoset/</link>
+      <pubDate>Fri, 20 Nov 2020 15:52:24 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/ntp-clock-autoset/</guid>
+      <description>時鐘對電腦來說是一個非常重要的東西，並不是只在狀態欄(或工作列)顯示時間那麼單純而已，時鐘不正確(與真實世界實際時間偏差太多)的話，可能會造成電腦發生一些奇怪的現象，例如:不能看網頁(憑證問題)，如果時間差太多甚至會造成軟體當掉。各種程式登入逾時也是很容易在時間偏差太大時發生的事情
+時間錯誤造成的憑證問題導致無法正常瀏覽網頁
+各種程式的登入逾時，iTunes就是其中之一
+講到這裡，大家應該都想到了系統內建的自動校正時間功能
+系統的校正功能，筆者從來沒看過它自動幫我更正時間，每次都是去按[立即更新]才幫我更正時間 (它不會是每次喚醒電腦就對時，據說要好幾天才會更正一次)</description>
+    </item>
+    
+    <item>
+      <title>iOS和macaOS上超好用的內建Spotlight搜尋小技巧</title>
+      <link>http://blog.steveyi.net/posts/apple-spotlight/</link>
+      <pubDate>Sun, 18 Oct 2020 09:02:50 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/apple-spotlight/</guid>
+      <description>不少人都買了iPhone, iPad, iPod touch或Mac，卻不知道內建的Spotlight有許多好用的功能，讓我們來看看吧！
+ Spotlight的使用方法(早期的版本可能不太一樣)：</description>
+    </item>
+    
+    <item>
+      <title>使用Xbox遊戲列提升Windows的遊戲體驗</title>
+      <link>http://blog.steveyi.net/posts/xbox-game-bar/</link>
+      <pubDate>Wed, 07 Oct 2020 02:09:56 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/xbox-game-bar/</guid>
+      <description>Xbox遊戲列是Windows 10的一個功能，具有錄影和直播、顯示效能、控制Spotify音樂等功能，還可以釘選在螢幕上。最棒的是，遊戲列會把系統資源集中在遊戲上，因此如果電腦配置不是很頂級的玩家玩起來會更順暢!
+註: 筆者以Windows 10 (2004版) 和Xbox遊戲列(v5.</description>
+    </item>
+    
+    <item>
+      <title>使用&#34;備份與還原&#34;備份Windows 7以上的PC</title>
+      <link>http://blog.steveyi.net/posts/windows-backup/</link>
+      <pubDate>Fri, 28 Aug 2020 09:09:08 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/windows-backup/</guid>
+      <description>Mac裡面有一個&amp;quot;時光機&amp;quot;可以簡單易用地備份整部電腦，而Windows裡面也藏著類似的功能哦！
+簡單來說就是會將整台電腦、磁碟機或資料夾（視設定而定）備份起來，第一次會完整備份，所以會花比較久的時間；第二次以後會只備份「在上次備份完更動過」或「在上次備份完新建立」的檔案，以節省空間和時間。
+首先請先打開開始，找到&amp;quot;Windows系統&amp;quot;，然後打開控制台
+接下來請進到系統及安全性&amp;gt;備份與還原
+按下&amp;quot;設定備份&amp;quot;，然後照著指示選擇備份的設定跟排程</description>
+    </item>
+    
+    <item>
+      <title>從終端機更改Mac的主機名稱</title>
+      <link>http://blog.steveyi.net/posts/mac-hostname/</link>
+      <pubDate>Sat, 22 Aug 2020 08:25:56 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/mac-hostname/</guid>
+      <description>打開終端機時，我們會看到一串字是「使用者@主機名稱」，例如John@Johns-MacBook
+主機名稱理論上是可以從系統偏好設定裡頭的「共享」去更改，但是不曉得是不是系統的Bug，筆者使用的電腦卻不能更改，為此搜尋了幾天終於得出了答案，可以從終端機更改主機名稱
+首先請先打開終端機，然後輸入下面這串
+注意：請將下方的&amp;quot;MacHostName&amp;quot;帶換成你要的主機名稱，只能包含英文數字和連字號(-)，並且盡量不要太長
+sudo scutil --set HostName MacHostName 接下來請輸入密碼（看不到很正常）然後按下return</description>
+    </item>
+    
+    <item>
+      <title>使用傳統版Gmail加快老舊裝置和低速網路的郵件載入速度</title>
+      <link>http://blog.steveyi.net/posts/html-gmail/</link>
+      <pubDate>Fri, 21 Aug 2020 15:32:52 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/html-gmail/</guid>
+      <description>筆者有一部老舊的PC，配備1GB記憶體以及Windows XP做輕度文書使用(Windows XP只需128MB記憶體即可操作)，瀏覽一些網站仍可應付，有些大型網站則要載入很久或是無法正常使用。如果是一般的文章網頁還可以，問題來了，筆者想用Gmail網頁版收發郵件，但在網路暢通的情況下載入標準Gmail網頁需要將近一分鐘，捲動郵件更是一場災難，後來筆者發現網頁底部會有一個不明顯的傳統版Gmail超連結，不太會有人注意到它。
+註：該部PC後來有點故障，所以不會用它來示範本篇教學。
+筆者將連結放在這裡，有需要的可以拷貝拿去用</description>
+    </item>
+    
+    <item>
+      <title>淺談Mac筆記型電腦的電池和效能的影響</title>
+      <link>http://blog.steveyi.net/posts/macbook-without-a-battery/</link>
+      <pubDate>Tue, 18 Aug 2020 13:16:25 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/macbook-without-a-battery/</guid>
+      <description>筆者從小使用PC，直到家人幾年前買了一台MacBook Pro （額&amp;hellip;對，不是我的，只是我借用時間比較長😂）
+筆者第一台筆記型電腦是IBM的ThinkPad T43，接手時，電池因老化變得沒什麼用處（從開機到沒電休眠的續航大約3分42秒），所以大部分時候都把電池拔除來減輕重量，除非要在插座間移動才裝上。在這台電腦，以及後續我用的幾部PC筆記型電腦移除電池並插電使用都沒有任何明顯可見的降頻，只是後來換的PC筆記型電腦因為規格太文書，用幾年後跟不上軟體肥大的速度，容易當機，甚至多次在我存簡報時當機導致儲存失敗所以後來都借用家人的MacBok Pro。</description>
+    </item>
+    
+    <item>
+      <title>在官方不支援macOS Catalina的裝置安裝macOS Catalina</title>
+      <link>http://blog.steveyi.net/posts/macos-catalina-on-unsupport-mac/</link>
+      <pubDate>Tue, 18 Aug 2020 10:41:18 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/macos-catalina-on-unsupport-mac/</guid>
+      <description>有些電腦明明還可以好好的、正常使用，但可能因為官方的多重考量(不管是效能上、商業上、或是功能上之類的考量)，而被官方從升級名單中一代一代的移除，豈不是覺得很可惜嗎
+這時候，有一位dosdude1做了Catalina Patcher解決了這個問題。
+這是官方的支援名單:
+螢幕快照擷取自Apple官網</description>
+    </item>
+    
+    <item>
+      <title>macOS重灌不求人！使用內建回復功能輕鬆重灌Mac電腦</title>
+      <link>http://blog.steveyi.net/posts/macos-recovery/</link>
+      <pubDate>Sat, 15 Aug 2020 07:25:12 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/macos-recovery/</guid>
+      <description>很多時候很多種原因我們需要重灌作業系統，比如說系統裝了太多東西覺得變慢 懶得一個一個刪掉、或是換了新的磁碟機、升級Beta版想要降回來穩定發行版、或是系統升級過程中意外斷電等原因。Mac內建了一個好用的工具程式可以協助我們重灌。
+開始教學囉 首先請先將電腦開機，在蘋果圖像出現前按住command + R ，如果有韌體密碼會在此步驟要求解鎖。</description>
+    </item>
+    
+    <item>
+      <title>使用CloudReady體驗ChromiumOS作業系統，老電腦重獲新生!</title>
+      <link>http://blog.steveyi.net/posts/cloudready/</link>
+      <pubDate>Mon, 10 Aug 2020 15:10:52 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/cloudready/</guid>
+      <description>不曉得各位有沒有一種經驗，電腦老舊了，連文書處理和基本的瀏覽網頁都卡頓，但又不想使用太老舊的作業系統(官方停止提供新功能了，連瀏覽器也不提供更新支援了)，這時便可以下載最新版的CloudReady家用版來使用囉!既有最新版的瀏覽器，也有不少Web App能使用；也因為是基於瀏覽器的作業系統，因此資源占用比許多作業系統都少，也不用怕不習慣使用Linux作業系統(安裝軟體的方式很不一樣，使用邏輯也差很多，而且一直使用命令行也不是很直覺的用法)，所以，只要電腦支援64位元，幾乎都可以用CloudReady(試過家裡唯一一台32位元電腦，無法使用32位元版的CloudReady開機)
+開始吧!
+準備材料有:
+ 8GB隨身碟(資料會洗掉，請先移除資料) 要安裝的電腦  首先請先到官網按下[DOWNLOAD 64-BIT IMAGE]下載64位元版安裝檔(32位元版已停止支援)</description>
+    </item>
+    
+    <item>
+      <title>使用Android手機作為Mac的網路連線來源的方法</title>
+      <link>http://blog.steveyi.net/posts/horndis/</link>
+      <pubDate>Sat, 08 Aug 2020 07:23:53 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/horndis/</guid>
+      <description>有時因為某些原因，不想使用Wi-Fi上網或使用Wi-Fi個人熱點時，或是電腦的無線網路卡受到周遭物品的遮蔽時，甚至是黑蘋果電腦沒有相容無線網卡等情況下，將Android手機作為網路接收器是一個好主意。
+macOS需求為10.11(El Captain)以上，本篇筆者使用macOS 10.13(High Sierra)作為示範</description>
+    </item>
+    
+    <item>
+      <title>輕鬆免工具關閉Windows 10自動更新</title>
+      <link>http://blog.steveyi.net/posts/no-win10-update/</link>
+      <pubDate>Sat, 18 Jul 2020 14:37:57 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/no-win10-update/</guid>
+      <description>由於Windows 10更新時常占用筆者電腦的儲存空間，而且常常會有一些莫名其妙的問題出現(例如Windows 內建搜尋功能無法使用等)，所以自己發現了一個有效阻擋更新的方法。
+請先打開 開始&amp;gt;設定&amp;gt;更新與安全性</description>
+    </item>
+    
+    <item>
+      <title>幫Spotify或其他音樂軟體加上實時歌詞的方法(Android)</title>
+      <link>http://blog.steveyi.net/posts/dynamic-lyrics-android/</link>
+      <pubDate>Sat, 11 Jul 2020 10:00:12 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/dynamic-lyrics-android/</guid>
+      <description>上次有一篇介紹各家串流平台的免費會員比較，各位可以發現實時歌詞很多家平台都有
+但Spotify根據筆者測試只有Premium用戶能用或是有些平台沒有歌詞服務，稍嫌可惜
+這時想要聽著Spotify或其他沒歌詞的平台的免費音樂，但又覺得沒歌詞不能一起唱很麻煩嗎 這時候照這篇文章做就可以解決這個問題囉
+這篇文章適用Android用戶，iOS/iPadOS用戶在另外一篇唷</description>
+    </item>
+    
+    <item>
+      <title>幫Spotify加上實時歌詞(iOS/iPadOS)</title>
+      <link>http://blog.steveyi.net/posts/no-premium-spotify-dynamic-lyrics/</link>
+      <pubDate>Sat, 11 Jul 2020 07:31:26 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/no-premium-spotify-dynamic-lyrics/</guid>
+      <description>上次有一篇介紹各家串流平台的免費會員比較，各位可以發現實時歌詞很多家平台都有
+但Spotify根據筆者測試只有Premium用戶能用，稍嫌可惜
+這時想要聽著Spotify的免費音樂，但又覺得沒歌詞不能一起唱很麻煩嗎
+這時候照這篇文章做就可以解決這個問題囉
+這篇文章適用iOS/iPadOS用戶，Android用戶在另外一篇唷</description>
+    </item>
+    
+    <item>
+      <title>[2020最新] 各大串流平台免費會員比較</title>
+      <link>http://blog.steveyi.net/posts/free-streaming-music-compare/</link>
+      <pubDate>Sun, 05 Jul 2020 12:51:26 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/free-streaming-music-compare/</guid>
+      <description>蘿蔔這幾年來一直在尋找免費好用的串流音樂平台，也因此幾乎所有台灣常見的平台都有用過，所以接下來一一為大家介紹
+首先我先說一下，蘿蔔是台灣人，所以文章介紹的有些平台不見得能在其他國家或地區使用；或是有些平台改版了，這篇文章可能會來不及更新，請見諒
+再來要說的是，我們不鼓勵使用盜版或破解版，首先是音樂平台和音樂創作者沒辦法收到錢（例如串流音樂平台上面廣告贊助的費用），而好音樂就沒辦法受到鼓勵，裝置也可能被病毒或是間諜程式入侵，而且還可能會有法律責任產生
+說完了那我們開始介紹吧
+Spotify 一個老牌的串流音樂平台，整體以播放清單為主，有Spotify Connect可以無縫更換聆聽裝置，最近剛陸續開放歌詞功能，不過似乎只有Premium能用。</description>
+    </item>
+    
+    <item>
+      <title>LINE聊天訊息自動分類好友、群組、官方帳號</title>
+      <link>http://blog.steveyi.net/posts/line-xun-xi-fen-lei/</link>
+      <pubDate>Fri, 03 Jul 2020 12:25:49 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/line-xun-xi-fen-lei/</guid>
+      <description>LINE分類完之後找訊息大概會方便很多&amp;hellip;
+ 這功能目前只有Android有加入，iOS應該過一段時間也會加入
+請確認LINE版本是Google Play上的最新版本</description>
+    </item>
+    
+    <item>
+      <title>無需訂閱Youtube Music Premium也能讓Android的裝置享有背景播放的功能(Youtube也適用哦！)</title>
+      <link>http://blog.steveyi.net/posts/youtube-background-playing-android/</link>
+      <pubDate>Fri, 19 Jun 2020 15:58:18 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/youtube-background-playing-android/</guid>
+      <description>此處主要由Android手機作為示範，Android 平板也可以用一樣的方法唷
+iOS/iPadOS也可以用類似的方法，請見此篇
+讓我們開始吧 首先請先用Chrome瀏覽器(有內建Google Play服務的裝置幾乎都有，沒有的可以去下載)打開Youtube Music首頁，別急著播放音樂，按下右上方的三個點點，然後勾選「電腦版網站」</description>
+    </item>
+    
+    <item>
+      <title>無需訂閱Youtube Music Premium也能讓iOS/iPadOS的裝置享有背景播放的功能(Youtube也適用哦！)</title>
+      <link>http://blog.steveyi.net/posts/youtube-background-ios/</link>
+      <pubDate>Fri, 19 Jun 2020 14:39:47 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/youtube-background-ios/</guid>
+      <description>此處主要由iPad作為示範，iPhone也可以用一樣的方法唷
+Android也可以用類似的方法，之後會再發一篇教學，敬請關注「我是小易」後續的文章吧！
+後續更新：Android版教學在此
+ 筆者最近一直在找好用的免費串流音樂服務，發現其實電腦上的Youtube Music App(其實就是嵌入網頁拉XD)還不錯用，可惜行動版App跟網頁就都不能背景播放了(訂閱Premium的話就是App版可以，但網頁還是不行唷)</description>
+    </item>
+    
+    <item>
+      <title>在忘記管理員帳號的Mac上新增新的管理員帳號</title>
+      <link>http://blog.steveyi.net/posts/iforgot-mac-password/</link>
+      <pubDate>Thu, 04 Jun 2020 05:54:21 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/iforgot-mac-password/</guid>
+      <description>之前筆者借用的一台iMac用到放假的時候，放在一個安全的地方，然後回家（搬不回去）。
+過了一個多月再回來發現竟然忘了密碼（很誇張但是是真的，一直想不起來之前的密碼），幸好我在回家前就已經把資料都備份好了。
+這可以重灌，但是因為筆者事情有點多所以沒空可以慢慢重灌，所以便找到了這麼一個方法，比重灌來的快多了，而且舊的帳號之後可以用新帳號去刪掉，App基本上也不用重新下載
+（當時有點忙所以這篇是後來寫出來的，就不是用iMac示範了）
+ 注意：</description>
+    </item>
+    
+    <item>
+      <title>使用IFTTT讓手機在離開家裡時關閉無線網路</title>
+      <link>http://blog.steveyi.net/posts/ifttt-zhi-dong-guan-wifi/</link>
+      <pubDate>Wed, 03 Jun 2020 04:43:06 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/ifttt-zhi-dong-guan-wifi/</guid>
+      <description>由於筆者離開家裡的時候，常常忘記關掉Wi-Fi，所以就找出了這樣一個方法
+首先我們會需要做準備工作，依照不同的裝置類型會有不同的方法
+如果是小米或是Redmi、黑鯊、POCO手機的使用者 請先將IFTTT從最近應用程式中鎖定並允許自啟動、省電策略設為無限制，如果不是則請跳過此段。
+按住IFTTT預覽圖後會跳出下圖的選單</description>
+    </item>
+    
+    <item>
+      <title>解決Telegram在Android開啟深色模式時自動跳回預設主題的問題</title>
+      <link>http://blog.steveyi.net/posts/telegram-dark-mode-theme/</link>
+      <pubDate>Mon, 01 Jun 2020 08:46:56 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/telegram-dark-mode-theme/</guid>
+      <description>如果有在Telegram更改主題的用戶應該會發現，在深Android色模式下每次啟動Telegram都會被改回預設的深藍色主題非常困擾
+在這裡有一個方法，可以有效解決這個問題
+首先請先打開側邊選單，然後按「設定」
+接下來請選擇對話設定
+接下來請找到「自動夜晚模式」並關掉</description>
+    </item>
+    
+    <item>
+      <title>讓手機音質提升的小技巧</title>
+      <link>http://blog.steveyi.net/posts/yin-zhi-ti-sheng/</link>
+      <pubDate>Mon, 01 Jun 2020 03:55:45 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/yin-zhi-ti-sheng/</guid>
+      <description>註：Apple Lightning裝置以及大多數的USB-C裝置(像是Windows電腦等)也適用這篇哦
+在你認為兩百元有找的耳機音質不好的同時，你是否忽略了哪個重要的細節呢？
+雖然也許手機廠牌跟耳機廠牌一致可以得到更好的優化體驗，但不可否認手機內置的DAC(數位音訊轉化為類比訊號提供給耳機的一個重要元件)不一定可以媲美外置的DAC，也許不是耳機太差，而是DAC推不動或是搭配起來不合適
+但人們會問：外置的DAC不是都很大一台嗎?</description>
+    </item>
+    
+    <item>
+      <title>使用TeamViewer遠端操作Android手機</title>
+      <link>http://blog.steveyi.net/posts/teamviewer-android/</link>
+      <pubDate>Tue, 26 May 2020 10:09:17 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/teamviewer-android/</guid>
+      <description>需要用到Android手機但常常忘記帶出門嗎？
+這時候TeamViewer就很好用了！
+但要將其從系統的自動殺後台清單移除
+遠端操作功能適用Android 5~Android 8</description>
+    </item>
+    
+    <item>
+      <title>使用IFTTT將未接來電、簡訊轉送至LINE</title>
+      <link>http://blog.steveyi.net/posts/ifttt-forward-to-line/</link>
+      <pubDate>Tue, 07 Apr 2020 04:56:37 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/ifttt-forward-to-line/</guid>
+      <description>準備工作
+首先，需要先註冊或登入IFTTT (ifttt.com)
+接下來他會推薦一個IFTTT的範例，按下X跳過
+在左上角搜尋框輸入LINE</description>
+    </item>
+    
+  </channel>
+</rss>

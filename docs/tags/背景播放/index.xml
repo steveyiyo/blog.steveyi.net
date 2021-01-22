@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>背景播放 on 酷小易</title>
+    <link>http://blog.steveyi.net/tags/%E8%83%8C%E6%99%AF%E6%92%AD%E6%94%BE/</link>
+    <description>Recent content in 背景播放 on 酷小易</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-TW</language>
+    <copyright>&amp;copy; 2018 - 2021 &lt;a href=&#34;https://steveyi.net&#34;&gt;小易&lt;/a&gt; 版權所有</copyright>
+    <lastBuildDate>Fri, 19 Jun 2020 14:39:47 +0000</lastBuildDate><atom:link href="http://blog.steveyi.net/tags/%E8%83%8C%E6%99%AF%E6%92%AD%E6%94%BE/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>無需訂閱Youtube Music Premium也能讓iOS/iPadOS的裝置享有背景播放的功能(Youtube也適用哦！)</title>
+      <link>http://blog.steveyi.net/posts/youtube-background-ios/</link>
+      <pubDate>Fri, 19 Jun 2020 14:39:47 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/youtube-background-ios/</guid>
+      <description>此處主要由iPad作為示範，iPhone也可以用一樣的方法唷
+Android也可以用類似的方法，之後會再發一篇教學，敬請關注「我是小易」後續的文章吧！
+後續更新：Android版教學在此
+ 筆者最近一直在找好用的免費串流音樂服務，發現其實電腦上的Youtube Music App(其實就是嵌入網頁拉XD)還不錯用，可惜行動版App跟網頁就都不能背景播放了(訂閱Premium的話就是App版可以，但網頁還是不行唷)</description>
+    </item>
+    
+  </channel>
+</rss>

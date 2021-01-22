@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="zh-TW">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>Mailgun &#43; Gmail 達成自訂網域郵箱 | 酷小易</title>
+
+<meta property='og:title' content='Mailgun &#43; Gmail 達成自訂網域郵箱 - 酷小易'>
+<meta property='og:description' content='小時候總是很好奇寄件者後方的網域名稱是什麼，後來接觸到網站架設後，註冊了許多網域（現在手上大概6個網域左右)，也慢慢解開了小時候的疑惑
+今天就來分享一下Mailgun &#43; Gmail 自訂網域郵箱的方法吧！'>
+<meta property='og:url' content='http://blog.steveyi.net/posts/mailgun-gmail-custom-domain-email/'>
+<meta property='og:site_name' content='酷小易'>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/1ec8db9c1cd57aee84467f250353bf12?s=256'><meta property='article:author' content='https://facebook.com/jackcooku'><meta property='article:section' content='Posts'><meta property='article:tag' content='免費資源'><meta property='article:tag' content='網域'><meta property='article:tag' content='網站日誌'><meta property='article:published_time' content='2020-04-22T12:48:48Z'/><meta property='article:modified_time' content='2020-04-22T12:48:48Z'/><meta name='twitter:card' content='summary'><meta name='twitter:site' content='@steveyiyo'><meta name='twitter:creator' content='@steveyiyo'>
+
+
+<link href="http://blog.steveyi.net/index.xml" rel="alternate" type="application/rss+xml" title="酷小易" />
+
+<link rel="stylesheet" href="/css/style.css"/><link rel='stylesheet' href='http://blog.steveyi.net/css/custom.css'><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="canonical" href="http://blog.steveyi.net/posts/mailgun-gmail-custom-domain-email/">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<section class="section">
+  <div class="container">
+    <nav id="nav-main" class="nav">
+      <div id="nav-name" class="nav-left">
+        <a id="nav-anchor" class="nav-item" href="http://blog.steveyi.net/">
+          <h1 id="nav-heading" class="title is-4">酷小易</h1>
+        </a>
+      </div>
+      <div class="nav-right">
+        <nav id="nav-items" class="nav-item level is-mobile"><a class="level-item" aria-label="github" href='https://github.com/steveyiyo'
+            target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+    
+  </svg></i>
+            </span>
+          </a><a class="level-item" aria-label="facebook" href='https://facebook.com/jackcooku'
+            target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+    
+  </svg></i>
+            </span>
+          </a><a class="level-item" aria-label="twitter" href='https://twitter.com/steveyiyo'
+            target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+    
+  </svg></i>
+            </span>
+          </a><a class="level-item" aria-label="instagram" href='https://instagram.com/steveyiyo'
+            target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+    <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+    
+  </svg></i>
+            </span>
+          </a><a class="level-item" aria-label="email" href='mailto:jackcooku@steveyi.net'
+            target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+    <polyline points="22,6 12,13 2,6"/>
+    
+  </svg></i>
+            </span>
+          </a><a class="level-item" aria-label="linkedin" href='https://linkedin.com/in/steveyiyo'
+            target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path stroke-width="1.8" d="m5.839218,4.101561c0,1.211972 -0.974141,2.194011 -2.176459,2.194011s-2.176459,-0.982039 -2.176459,-2.194011c0,-1.211094 0.974141,-2.194011 2.176459,-2.194011s2.176459,0.982917 2.176459,2.194011zm0.017552,3.94922l-4.388022,0l0,14.04167l4.388022,0l0,-14.04167zm7.005038,0l-4.359939,0l0,14.04167l4.360816,0l0,-7.370999c0,-4.098413 5.291077,-4.433657 5.291077,0l0,7.370999l4.377491,0l0,-8.89101c0,-6.915523 -7.829986,-6.66365 -9.669445,-3.259423l0,-1.891237z"/>
+    
+  </svg></i>
+            </span>
+          </a></nav>
+      </div>
+    </nav>
+
+    <nav class="nav">
+      
+
+      
+    </nav>
+
+  </div>
+  <script src="/js/navicon-shift.js"></script>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="subtitle tags is-6 is-pulled-right">
+      
+      
+<a class="subtitle is-6" href="/tags/%E5%85%8D%E8%B2%BB%E8%B3%87%E6%BA%90/">#免費資源</a>
+
+
+
+  
+  | <a class="subtitle is-6" href="/tags/%E7%B6%B2%E5%9F%9F/">#網域</a>
+  
+  | <a class="subtitle is-6" href="/tags/%E7%B6%B2%E7%AB%99%E6%97%A5%E8%AA%8C/">#網站日誌</a>
+  
+
+
+      
+    </div>
+    <h2 class="subtitle is-6">April 22, 2020</h2>
+    <h1 class="title">Mailgun &#43; Gmail 達成自訂網域郵箱</h1>
+    
+    <div class="content">
+      <p><img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-14.jpg" alt=""></p>
+<p>小時候總是很好奇寄件者後方的網域名稱是什麼，後來接觸到網站架設後，註冊了許多網域（現在手上大概6個網域左右)，也慢慢解開了小時候的疑惑</p>
+<p>今天就來分享一下Mailgun + Gmail 自訂網域郵箱的方法吧！</p>
+<p>首先，先註冊<a href="https://www.mailgun.com/">Mailgun</a>，預設有5000封信件額度<br>
+PS.如果你是GCP客戶，可以到<a href="https://www.mailgun.com/google/">合作頁面</a>，申請免費30000額度</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-2-1920x1142.png" alt=""></p>
+<p>註冊之後，我們進入控制台新增網域（預設會有一個網域）</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-3-1920x1142.png" alt=""></p>
+<p>上方輸入網域名網域名稱，下方勾選Create DKIM Authority 並選擇1024位元(部分DNS服務商不支持2048位元)</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-4.png" alt=""></p>
+<p>接著設定DNS紀錄，MX紀錄一定要設定（不然會收不到信）<br>
+小提醒：如果你有其他郵件收信服務(如: Gsuite, Office…等)，不要設定MX紀錄，不然原先的服務會收不到信</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-5-1920x1142.png" alt=""></p>
+<p>設置完後，等待DNS生效 我們就可以來進行下一個步驟了！</p>
+<p>接著我們來設置SMTP帳號</p>
+<p>首先，打開Mailgun控制台<br>
+點擊Domain settings 選擇SMTP credentials</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-6-1920x1142.png" alt=""></p>
+<p>接著點擊右上角的New SMTP User來建立新帳號<br>
+右上方為密碼！先記起來，等等會用到</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-7-1920x1142.jpg" alt=""></p>
+<p>接著我們來設定轉寄郵件</p>
+<p>點擊左方的Receiving，在點擊右上方的Create Route</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-8-1920x1142.jpg" alt=""></p>
+<p>接著選擇Match Recipient(指定收件者)，並輸入剛剛建立的電子郵件地址<br>
+下方Forward填寫Gmail的電子郵件地址，存檔！<br>
+PS.如果第一項選擇Cache All，則會轉發所有寄到這個網域下的電子郵件，也就是無限別名</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-9-1920x1142.jpg" alt=""></p>
+<p>新增完後，我們打開Gmail 設定→更多設定→帳戶<br>
+點擊 <strong>新增另一個電子郵件地址(Add another email address)</strong></p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-1-1920x1142.jpg" alt=""></p>
+<p>接著輸入名稱(自訂)及電子郵件地址(剛剛建立的那個)</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-10.jpg" alt=""></p>
+<p>接著輸入SMTP伺服器(端口選擇587tls) 使用者帳號 密碼<br>
+mailgun的SMTP伺服器是smtp.mailgun.org</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-11.jpg" alt=""></p>
+<p>接著驗證電子郵件擁有權（代碼會寄到剛剛設置的Gmail信箱）</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-12.jpg" alt=""></p>
+<p>會收到類似這樣的信</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-13-1920x1142.jpg" alt=""></p>
+<p>將驗證碼輸入上去就完成囉！</p>
+<p>後記，好香 有網域信箱就是香（？🤩</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-14.jpg" alt=""></p>
+<p>工具：<a href="https://toolbox.googleapps.com/">G Suite工具箱</a>（檢測DNS問題）</p>
+
+      
+      <div class="related">
+
+<h3>更多文章：</h3>
+<ul>
+	
+	<li><a href="/posts/aws-route53/">[教學] AWS Route 53 代管DNS</a></li>
+	
+	<li><a href="/posts/register-domain-at-gandi/">在 Gandi 購買網域</a></li>
+	
+	<li><a href="/posts/ip-set-rdns-with-ripe-and-he-dns/">RIPE為IP設定反向DNS(PTR紀錄)</a></li>
+	
+	<li><a href="/posts/transfer-domain-from-google-to-gandi/">將網域從 Google Domains 轉出至 Gandi</a></li>
+	
+	<li><a href="/posts/b2-cfworkers/">Backblaze B2和Cloudflare Workers設定自訂域名</a></li>
+	
+</ul>
+</div>
+      
+    </div>
+    
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <aside><div id="disqus_thread"></div></aside>
+  
+    <script type="text/javascript">
+      var disqus_shortname = 'shortname';
+      function disqus() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+  
+      disqus();
+  
+
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; 2018 - 2021 <a href="https://steveyi.net">小易</a> 版權所有</p>
+    
+      <p>由 <a href="https://gohugo.io/">Hugo</a> 及 <a href="https://github.com/ribice/kiss">Kiss</a> 產生</p>
+    
+  </div>
+</section>
+
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="\/\/blog.steveyi.net\/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript>
+  <img src="//blog.steveyi.net/piwik.php?idsite=1&amp;rec=1" style="border:0" alt="" />
+</noscript>
+
+<script>
+    (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+            (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+    })(document, window, '\/\/blog.steveyi.net\/tracker.js', 'fathom');
+    fathom('trackPageview');
+</script>
+</body>
+</html>
+

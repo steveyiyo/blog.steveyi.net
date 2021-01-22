@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>伺服器 on 酷小易</title>
+    <link>http://blog.steveyi.net/tags/%E4%BC%BA%E6%9C%8D%E5%99%A8/</link>
+    <description>Recent content in 伺服器 on 酷小易</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-TW</language>
+    <copyright>&amp;copy; 2018 - 2021 &lt;a href=&#34;https://steveyi.net&#34;&gt;小易&lt;/a&gt; 版權所有</copyright>
+    <lastBuildDate>Fri, 20 Nov 2020 18:31:04 +0000</lastBuildDate><atom:link href="http://blog.steveyi.net/tags/%E4%BC%BA%E6%9C%8D%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>利用WireGuard建立大內網</title>
+      <link>http://blog.steveyi.net/posts/usingwireguard-to-make-intranet/</link>
+      <pubDate>Fri, 20 Nov 2020 18:31:04 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/usingwireguard-to-make-intranet/</guid>
+      <description>Hi 大家好，今天來分享一下如何使用WireGuard建立大內網
+之前有與大家分享過 在Linux系統上安裝Wireguard，那這次我們要利用WireGuard來建立大內網
+為什麼筆者稱這次要建立&amp;quot;大內網&amp;quot;呢？</description>
+    </item>
+    
+    <item>
+      <title>透過iperf3來測試內網速度</title>
+      <link>http://blog.steveyi.net/posts/iperf3/</link>
+      <pubDate>Sun, 08 Nov 2020 13:26:11 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/iperf3/</guid>
+      <description>不久前，筆者換了新的交換機。為了測試內網的傳輸速度，筆者發現了這款工具 - iperf3
+這是一個支援Ｗindows, Linux, macOS的測試程式，主要是透過指令來操作</description>
+    </item>
+    
+    <item>
+      <title>FRRouting 入坑指南兼心得(1)</title>
+      <link>http://blog.steveyi.net/posts/frrouting-install/</link>
+      <pubDate>Sun, 12 Jul 2020 13:07:14 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/frrouting-install/</guid>
+      <description>很久沒有來分享了！最近仍然在學習BGP知識及測試之前一直使用bird1來廣播BGP，後來在跟朋友Peer時，一直無法建立對等（很玄，但卻可以跟IX建立
+最近則卸載了Bird1，改安裝ffrouting是從Quagga fork來的，慢慢發展成現在
+同時，他也是一個很強大的路由套件（其指令類似於Cisco或Quagga）
+於是，就摸索了一下</description>
+    </item>
+    
+    <item>
+      <title>PVE入門心得-安裝篇</title>
+      <link>http://blog.steveyi.net/posts/pve-install/</link>
+      <pubDate>Tue, 07 Jul 2020 05:33:14 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/pve-install/</guid>
+      <description>玩虛擬機有一段時間了，不過是在Windows系統下裝VMware Workstation玩xD
+後來閒置了幾台電腦，恰好也查詢到PVE(Proxmox VE)這個開源虛擬系統，於是 我們就來安裝玩玩吧!</description>
+    </item>
+    
+    <item>
+      <title>在Ubuntu系統下架設Tunnel Broker服務(v4 to v6)</title>
+      <link>http://blog.steveyi.net/posts/tunnel-broker-bgp/</link>
+      <pubDate>Sun, 31 May 2020 16:56:41 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/tunnel-broker-bgp/</guid>
+      <description>前言 之前拿到了一個自治號碼(AS Number)，也拿到了1個 /44 及兩個 /48 的iPv6</description>
+    </item>
+    
+    <item>
+      <title>在Linux系統上安裝Wireguard</title>
+      <link>http://blog.steveyi.net/posts/how-to-install-wireguard/</link>
+      <pubDate>Sat, 16 May 2020 11:51:52 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/how-to-install-wireguard/</guid>
+      <description>Wireguard是一個點對點加密網路
+一直以來，我都使用它來管理我所有的雲端主機
+今天就來分享一下安裝方法吧！
+安裝指令請參考 https://www.wireguard.com/install/</description>
+    </item>
+    
+    <item>
+      <title>Backblaze B2 支援S3 API了！</title>
+      <link>http://blog.steveyi.net/posts/backblaze-b2-compatible-s3-api/</link>
+      <pubDate>Thu, 14 May 2020 03:08:02 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/backblaze-b2-compatible-s3-api/</guid>
+      <description>前幾天打開Backblaze後，看到一行大大的字
+沒錯！S3 API跟Backblaze B2兼容啦！
+S3 API是目前市面上最流行的協定，很多軟硬體都兼容</description>
+    </item>
+    
+    <item>
+      <title>Cloudflare 新服務 spectrum設定教學</title>
+      <link>http://blog.steveyi.net/posts/hot-to-set-cloudflare-spectrum/</link>
+      <pubDate>Wed, 15 Apr 2020 08:50:06 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/hot-to-set-cloudflare-spectrum/</guid>
+      <description>今天早上打開FaceBook時，發現Cloudflare推出了一個新服務 - Spectrum
+目前是提供給所有付費用戶使用，不知道未來有沒有機會開放給免費客戶
+官方部落格連結: https://cfl.</description>
+    </item>
+    
+    <item>
+      <title>在Vultr使用Bird6廣播IPv6</title>
+      <link>http://blog.steveyi.net/posts/use-bird6-broadcast-ipv6-vultr/</link>
+      <pubDate>Fri, 10 Apr 2020 02:21:55 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/use-bird6-broadcast-ipv6-vultr/</guid>
+      <description>之前跟大家分享過 為IP設定反向DNS(PTR紀錄)，那這次就來分享一下在Vultr廣播IP吧！
+設置AS號碼及IP前綴 首先，我們要先開通BGP的功能！
+點擊這裡前往Vultr BGP頁面</description>
+    </item>
+    
+    <item>
+      <title>RIPE為IP設定反向DNS(PTR紀錄)</title>
+      <link>http://blog.steveyi.net/posts/ip-set-rdns-with-ripe-and-he-dns/</link>
+      <pubDate>Wed, 08 Apr 2020 06:38:54 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/ip-set-rdns-with-ripe-and-he-dns/</guid>
+      <description>反向dns紀錄
+一直以來都很想設定rDNS，看了許多次RIPE官方的文檔還是沒搞懂
+恰好這次有位大佬指導我去設定，其實一點都不難呢
+順便分享一下設定過程
+本篇以RIPE及HE FREE DNS作為範例，其他RIR基本上大同小異</description>
+    </item>
+    
+    <item>
+      <title>Backblaze B2和Cloudflare Workers設定自訂域名</title>
+      <link>http://blog.steveyi.net/posts/b2-cfworkers/</link>
+      <pubDate>Wed, 26 Feb 2020 20:36:28 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/b2-cfworkers/</guid>
+      <description>前言 當初架設網站的時候，考量到了圖片的存儲以及流量的問題
+本來是將圖片跟網站放在同一個網站伺服器下的，但後來發現伺服器空間常常不足夠（因為系統會自動備份，導致空間不足）
+後來將圖片放在OneDrive商業版，並搭配OneList來使用，但畢竟是非官方的API，當API請求速率過快，圖片就載入不出來了．
+當初OneDrive失敗後，又將圖片放到Google Drive上，並搭配rclone使用，</description>
+    </item>
+    
+    <item>
+      <title>專為GCP打造的Windows 10 DD鏡像</title>
+      <link>http://blog.steveyi.net/posts/gcp-windows-dd/</link>
+      <pubDate>Tue, 27 Aug 2019 15:07:49 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/gcp-windows-dd/</guid>
+      <description>前陣子為了要在GCP使用VPS，於是在一段時間裡製作了 Windows DD 鏡像
+分別是：</description>
+    </item>
+    
+  </channel>
+</rss>

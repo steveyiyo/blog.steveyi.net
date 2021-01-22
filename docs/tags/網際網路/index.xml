@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>網際網路 on 酷小易</title>
+    <link>http://blog.steveyi.net/tags/%E7%B6%B2%E9%9A%9B%E7%B6%B2%E8%B7%AF/</link>
+    <description>Recent content in 網際網路 on 酷小易</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-TW</language>
+    <copyright>&amp;copy; 2018 - 2021 &lt;a href=&#34;https://steveyi.net&#34;&gt;小易&lt;/a&gt; 版權所有</copyright>
+    <lastBuildDate>Tue, 19 Jan 2021 12:25:49 +0000</lastBuildDate><atom:link href="http://blog.steveyi.net/tags/%E7%B6%B2%E9%9A%9B%E7%B6%B2%E8%B7%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在Linux環境下無腦串接Google雲端硬碟</title>
+      <link>http://blog.steveyi.net/posts/linux-mount-googledrive-not-required-brain/</link>
+      <pubDate>Tue, 19 Jan 2021 12:25:49 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/linux-mount-googledrive-not-required-brain/</guid>
+      <description>此篇教學使用的是 google-drive-ocamlfuse 這個軟體，筆者使用的環境是基於Ubuntu的Zorin OS 15.2系統作為示範。</description>
+    </item>
+    
+    <item>
+      <title>從RIPE申請屬於自己的ASN</title>
+      <link>http://blog.steveyi.net/posts/get-asn-from-ripe/</link>
+      <pubDate>Sat, 21 Nov 2020 08:39:28 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/get-asn-from-ripe/</guid>
+      <description>今天來講一下透過LIR在RIPE取得自己的ASN
+首先，可能有些人會很好奇
+為什麼要選擇RIPE呢？選擇APNIC, ARIN不好嗎？
+筆者有兩個ASN，分別是RIPE及APNIC下的</description>
+    </item>
+    
+    <item>
+      <title>在RIPE DataBase建立Object</title>
+      <link>http://blog.steveyi.net/posts/create-object-in-ripe-database/</link>
+      <pubDate>Sat, 21 Nov 2020 08:37:20 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/create-object-in-ripe-database/</guid>
+      <description>在本篇文章中，將與大家分享如何在RIPE DataBase註冊MAINTAINER, PERSON / ROLE, and ORGANIZATION object</description>
+    </item>
+    
+  </channel>
+</rss>

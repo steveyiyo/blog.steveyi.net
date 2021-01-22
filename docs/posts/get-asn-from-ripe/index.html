@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="zh-TW">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>從RIPE申請屬於自己的ASN | 酷小易</title>
+
+<meta property='og:title' content='從RIPE申請屬於自己的ASN - 酷小易'>
+<meta property='og:description' content='今天來講一下透過LIR在RIPE取得自己的ASN
+首先，可能有些人會很好奇
+為什麼要選擇RIPE呢？選擇APNIC, ARIN不好嗎？
+筆者有兩個ASN，分別是RIPE及APNIC下的'>
+<meta property='og:url' content='http://blog.steveyi.net/posts/get-asn-from-ripe/'>
+<meta property='og:site_name' content='酷小易'>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/1ec8db9c1cd57aee84467f250353bf12?s=256'><meta property='article:author' content='https://facebook.com/jackcooku'><meta property='article:section' content='Posts'><meta property='article:tag' content='ASN'><meta property='article:tag' content='BGP'><meta property='article:tag' content='網際網路'><meta property='article:tag' content='路由協議'><meta property='article:published_time' content='2020-11-21T08:39:28Z'/><meta property='article:modified_time' content='2020-11-21T08:39:28Z'/><meta name='twitter:card' content='summary'><meta name='twitter:site' content='@steveyiyo'><meta name='twitter:creator' content='@steveyiyo'>
+
+
+<link href="http://blog.steveyi.net/index.xml" rel="alternate" type="application/rss+xml" title="酷小易" />
+
+<link rel="stylesheet" href="/css/style.css"/><link rel='stylesheet' href='http://blog.steveyi.net/css/custom.css'><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="canonical" href="http://blog.steveyi.net/posts/get-asn-from-ripe/">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<section class="section">
+  <div class="container">
+    <nav id="nav-main" class="nav">
+      <div id="nav-name" class="nav-left">
+        <a id="nav-anchor" class="nav-item" href="http://blog.steveyi.net/">
+          <h1 id="nav-heading" class="title is-4">酷小易</h1>
+        </a>
+      </div>
+      <div class="nav-right">
+        <nav id="nav-items" class="nav-item level is-mobile"><a class="level-item" aria-label="github" href='https://github.com/steveyiyo'
+            target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+    
+  </svg></i>
+            </span>
+          </a><a class="level-item" aria-label="facebook" href='https://facebook.com/jackcooku'
+            target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+    
+  </svg></i>
+            </span>
+          </a><a class="level-item" aria-label="twitter" href='https://twitter.com/steveyiyo'
+            target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+    
+  </svg></i>
+            </span>
+          </a><a class="level-item" aria-label="instagram" href='https://instagram.com/steveyiyo'
+            target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+    <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+    
+  </svg></i>
+            </span>
+          </a><a class="level-item" aria-label="email" href='mailto:jackcooku@steveyi.net'
+            target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+    <polyline points="22,6 12,13 2,6"/>
+    
+  </svg></i>
+            </span>
+          </a><a class="level-item" aria-label="linkedin" href='https://linkedin.com/in/steveyiyo'
+            target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path stroke-width="1.8" d="m5.839218,4.101561c0,1.211972 -0.974141,2.194011 -2.176459,2.194011s-2.176459,-0.982039 -2.176459,-2.194011c0,-1.211094 0.974141,-2.194011 2.176459,-2.194011s2.176459,0.982917 2.176459,2.194011zm0.017552,3.94922l-4.388022,0l0,14.04167l4.388022,0l0,-14.04167zm7.005038,0l-4.359939,0l0,14.04167l4.360816,0l0,-7.370999c0,-4.098413 5.291077,-4.433657 5.291077,0l0,7.370999l4.377491,0l0,-8.89101c0,-6.915523 -7.829986,-6.66365 -9.669445,-3.259423l0,-1.891237z"/>
+    
+  </svg></i>
+            </span>
+          </a></nav>
+      </div>
+    </nav>
+
+    <nav class="nav">
+      
+
+      
+    </nav>
+
+  </div>
+  <script src="/js/navicon-shift.js"></script>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="subtitle tags is-6 is-pulled-right">
+      
+      
+<a class="subtitle is-6" href="/tags/asn/">#ASN</a>
+
+
+
+  
+  | <a class="subtitle is-6" href="/tags/bgp/">#BGP</a>
+  
+  | <a class="subtitle is-6" href="/tags/%E7%B6%B2%E9%9A%9B%E7%B6%B2%E8%B7%AF/">#網際網路</a>
+  
+  | <a class="subtitle is-6" href="/tags/%E8%B7%AF%E7%94%B1%E5%8D%94%E8%AD%B0/">#路由協議</a>
+  
+
+
+      
+    </div>
+    <h2 class="subtitle is-6">November 21, 2020</h2>
+    <h1 class="title">從RIPE申請屬於自己的ASN</h1>
+    
+    <div class="content">
+      <p>今天來講一下透過LIR在RIPE取得自己的ASN</p>
+<p>首先，可能有些人會很好奇</p>
+<p><em><strong>為什麼要選擇RIPE呢？選擇APNIC, ARIN不好嗎？</strong></em></p>
+<p>筆者有兩個ASN，分別是RIPE及APNIC下的<br>
+當筆者在改一些whois時，RIPE可以直接進入網頁修改<br>
+但APNIC則需要發送郵件&hellip;&hellip;比較麻煩(其實好像也差不多)</p>
+<p>不過，APNIC與RIPE兩個管理機構也是有差別的<br>
+RIPE需要驗證真實身份(個人申請需要發送護照或其他證明文件)<br>
+APNIC則不需要任何證明文件</p>
+<p>那麼，我們就開始申請吧</p>
+<h1 id="尋找lir贊助者"><strong>尋找LIR（贊助者）</strong></h1>
+<p>首先，我們需要找到一位RIPE會員(LIR)做自己的sponsor<br>
+我們只要在Google上搜尋「lir service」就會看到非常多的相關服務</p>
+<p><img src="https://static.yiy.tw/media/blog/2020111814292492.png" alt=""></p>
+<p>那小易嘗試過 Securebit 及 <a href="https://freetransit.ch/">Openfactory</a> 的服務，主要差別就是&hellip;</p>
+<p>Securebit 快(1-5天) 貴 提供的PA 沒有MNT權限<br>
+<a href="https://freetransit.ch/">Openfactory</a> 慢(1-20天) 便宜 提供的PA 有MNT權限</p>
+<p>所以，個人比較推薦<a href="https://freetransit.ch/">Openfactory</a>啦！（除非你想要申請16-bit ASN）</p>
+<h1 id="準備申請資料"><strong>準備申請資料</strong></h1>
+<p>我們找到LIR之後，透過Email或其他管道聯繫後，我們就可以來準備一下申請資料了<br>
+根據小易的經驗，大部分LIR都需要這些東西（因為他們需要提交給RIPE）</p>
+<p>真實英文姓名(First + Last name)，也就是護照上的名稱<br>
+Postal address（真實地址）<br>
+護照的複印/掃描圖片（有時候可能需要身份證照片）</p>
+<p>接著還需要兩個對等方，也就是我們常說的&quot;Peer Partner&quot;<br>
+如果各位不介意的話，可以直接填寫我的資訊</p>
+<p>AS60614(TSUNGYI YU)
+peering_at_steveyi.net</p>
+<p>AS209557(TSUNGYI YU)
+peering_at_steveyi.net</p>
+<p>然後由於我們是在RIPE申請的，所以我們還需要準備一些對象紀錄<br>
+MAINTAINER, PERSON / ROLE, and ORGANIZATION object<br>
+然後ORG object中的&quot;org-name&quot;必須要是真實姓名（護照名稱）<br>
+關於申請的過程及方式，可以參考一下 <a href="https://blog.steveyi.net/create-object-in-ripe-database/">這篇文章</a></p>
+<p>那一切都準備好後，LIR會準備一分用戶協議，簽名完，LIR就會把你的請求轉交給RIPE啦！<br>
+當提交請求給RIPE時，大約1-3天就會發放ASN了</p>
+<p>當拿到ASN之後，我們就可以來廣播自己的網路啦！<br>
+那我們下一篇會再詳細地與大家分享廣播網路的細節</p>
+
+      
+      <div class="related">
+
+<h3>更多文章：</h3>
+<ul>
+	
+	<li><a href="/posts/create-object-in-ripe-database/">在RIPE DataBase建立Object</a></li>
+	
+	<li><a href="/posts/bgp-network-peer/">透過BGP組建不同網段互通</a></li>
+	
+	<li><a href="/posts/frrouting-install/">FRRouting 入坑指南兼心得(1)</a></li>
+	
+	<li><a href="/posts/how-to-install-wireguard/">在Linux系統上安裝Wireguard</a></li>
+	
+	<li><a href="/posts/use-bird6-broadcast-ipv6-vultr/">在Vultr使用Bird6廣播IPv6</a></li>
+	
+</ul>
+</div>
+      
+    </div>
+    
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <aside><div id="disqus_thread"></div></aside>
+  
+    <script type="text/javascript">
+      var disqus_shortname = 'shortname';
+      function disqus() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+  
+      disqus();
+  
+
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; 2018 - 2021 <a href="https://steveyi.net">小易</a> 版權所有</p>
+    
+      <p>由 <a href="https://gohugo.io/">Hugo</a> 及 <a href="https://github.com/ribice/kiss">Kiss</a> 產生</p>
+    
+  </div>
+</section>
+
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="\/\/blog.steveyi.net\/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript>
+  <img src="//blog.steveyi.net/piwik.php?idsite=1&amp;rec=1" style="border:0" alt="" />
+</noscript>
+
+<script>
+    (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+            (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+    })(document, window, '\/\/blog.steveyi.net\/tracker.js', 'fathom');
+    fathom('trackPageview');
+</script>
+</body>
+</html>
+

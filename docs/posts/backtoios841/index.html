@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="zh-TW">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>32位元iOS裝置免電腦免SHSH 降級到8.4.1 | 酷小易</title>
+
+<meta property='og:title' content='32位元iOS裝置免電腦免SHSH 降級到8.4.1 - 酷小易'>
+<meta property='og:description' content='有時會因爲蘋果的部分問題，會在各種環節出狀況，如果有任何錯誤請改天再試
+蘋果的漏洞不是非常穩定，有一天我試了三次都不能用，改天再弄，一次就成功了，這有點碰運氣
+iOS裝置如果很慢，降級會比較流暢
+(A5裝置非常有感，A6、A6X裝置則差異不大但仍有比較快一點點)'>
+<meta property='og:url' content='http://blog.steveyi.net/posts/backtoios841/'>
+<meta property='og:site_name' content='酷小易'>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/1ec8db9c1cd57aee84467f250353bf12?s=256'><meta property='article:author' content='https://facebook.com/jackcooku'><meta property='article:section' content='Posts'><meta property='article:tag' content='iOS'><meta property='article:published_time' content='2019-12-30T13:26:02Z'/><meta property='article:modified_time' content='2019-12-30T13:26:02Z'/><meta name='twitter:card' content='summary'><meta name='twitter:site' content='@steveyiyo'><meta name='twitter:creator' content='@steveyiyo'>
+
+
+<link href="http://blog.steveyi.net/index.xml" rel="alternate" type="application/rss+xml" title="酷小易" />
+
+<link rel="stylesheet" href="/css/style.css"/><link rel='stylesheet' href='http://blog.steveyi.net/css/custom.css'><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="canonical" href="http://blog.steveyi.net/posts/backtoios841/">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<section class="section">
+  <div class="container">
+    <nav id="nav-main" class="nav">
+      <div id="nav-name" class="nav-left">
+        <a id="nav-anchor" class="nav-item" href="http://blog.steveyi.net/">
+          <h1 id="nav-heading" class="title is-4">酷小易</h1>
+        </a>
+      </div>
+      <div class="nav-right">
+        <nav id="nav-items" class="nav-item level is-mobile"><a class="level-item" aria-label="github" href='https://github.com/steveyiyo'
+            target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+    
+  </svg></i>
+            </span>
+          </a><a class="level-item" aria-label="facebook" href='https://facebook.com/jackcooku'
+            target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+    
+  </svg></i>
+            </span>
+          </a><a class="level-item" aria-label="twitter" href='https://twitter.com/steveyiyo'
+            target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+    
+  </svg></i>
+            </span>
+          </a><a class="level-item" aria-label="instagram" href='https://instagram.com/steveyiyo'
+            target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+    <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+    
+  </svg></i>
+            </span>
+          </a><a class="level-item" aria-label="email" href='mailto:jackcooku@steveyi.net'
+            target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+    <polyline points="22,6 12,13 2,6"/>
+    
+  </svg></i>
+            </span>
+          </a><a class="level-item" aria-label="linkedin" href='https://linkedin.com/in/steveyiyo'
+            target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path stroke-width="1.8" d="m5.839218,4.101561c0,1.211972 -0.974141,2.194011 -2.176459,2.194011s-2.176459,-0.982039 -2.176459,-2.194011c0,-1.211094 0.974141,-2.194011 2.176459,-2.194011s2.176459,0.982917 2.176459,2.194011zm0.017552,3.94922l-4.388022,0l0,14.04167l4.388022,0l0,-14.04167zm7.005038,0l-4.359939,0l0,14.04167l4.360816,0l0,-7.370999c0,-4.098413 5.291077,-4.433657 5.291077,0l0,7.370999l4.377491,0l0,-8.89101c0,-6.915523 -7.829986,-6.66365 -9.669445,-3.259423l0,-1.891237z"/>
+    
+  </svg></i>
+            </span>
+          </a></nav>
+      </div>
+    </nav>
+
+    <nav class="nav">
+      
+
+      
+    </nav>
+
+  </div>
+  <script src="/js/navicon-shift.js"></script>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="subtitle tags is-6 is-pulled-right">
+      
+      
+<a class="subtitle is-6" href="/tags/ios/">#iOS</a>
+
+
+
+
+      
+    </div>
+    <h2 class="subtitle is-6">December 30, 2019</h2>
+    <h1 class="title">32位元iOS裝置免電腦免SHSH 降級到8.4.1</h1>
+    
+    <div class="content">
+      <p><img src="https://static.yiy.tw/media/blog/2020/04/9564cd1098c2183afddb9be15db99ddf781db6b1-770x439_c.jpeg" alt=""></p>
+<blockquote>
+<p>有時會因爲蘋果的部分問題，會在各種環節出狀況，如果有任何錯誤請改天再試</p>
+<p>蘋果的漏洞不是非常穩定，有一天我試了三次都不能用，改天再弄，一次就成功了，這有點碰運氣</p>
+<p>iOS裝置如果很慢，降級會比較流暢</p>
+<p>(A5裝置非常有感，A6、A6X裝置則差異不大但仍有比較快一點點)</p>
+<p>雖然還是偶爾會LAG一下但是至少改善滿多的</p>
+<p>例如轉場動畫不會像原本那麼卡頓</p>
+</blockquote>
+<ul>
+<li><strong>適用裝置：</strong></li>
+<li>iOS 9.0～10.3.3，有越獄的以下列出裝置</li>
+<li>有附各版本越獄教學</li>
+<li>iPhone 4S</li>
+<li>iPhone 5</li>
+<li>iPod Touch 5</li>
+<li>iPad 2</li>
+<li>iPad 3</li>
+<li>iPad 4</li>
+<li>iPad Mini 1代</li>
+<li>[iPhone 5C不適用]</li>
+</ul>
+<p>*如有發生問題本人恕不負責*</p>
+<p>※其實我用到現在都沒事，上面那句希望只是備而不用</p>
+<p>*請先做好iTunes備份*</p>
+<p>*中途若失敗或反悔可以使用DFU回到原版本或再試一次*</p>
+<p>*請先清除所有內容和設定後再進行！*</p>
+<p>講了這麼多，來開工吧</p>
+<p>——————分隔線——————</p>
+<ul>
+<li>(如果已經越獄，請跳過此段)</li>
+<li>越獄方法整理[來自<a href="https://mrmad.com.tw">瘋先生網站</a>]</li>
+<li><a href="https://www.google.com/url?q=https://mrmad.com.tw/h3lix&amp;sa=D&amp;ust=1577715419051000">10.X～10.3.3</a></li>
+<li><a href="https://www.google.com/url?q=https://mrmad.com.tw/phoenix-jailbreakable&amp;sa=D&amp;ust=1577715419052000">9.3.5</a></li>
+<li><a href="https://www.google.com/url?q=https://mrmad.com.tw/tihmstar-jailbreakme-4-0&amp;sa=D&amp;ust=1577715419052000">9.1~9.3.4</a></li>
+<li><a href="https://www.google.com/url?q=https://mrmad.com.tw/ios9-0-9-1-teachingios9-perfect-jailbreak-jailbreak-assault-pangu-jailbreak-tool-gives-you-the-perfect-escape-update-version-v1-3-1&amp;sa=D&amp;ust=1577715419052000">9.0.X</a></li>
+<li>降級完的8.4.1在文章底部</li>
+</ul>
+<p>——————分隔線——————</p>
+<p>此處以iPad 2(原9.3.5)做為示範</p>
+<p>如果有Apple ID雙重認證，建議<a href="https://www.google.com/url?q=https://support.apple.com/zh-tw/HT202664&amp;sa=D&amp;ust=1577715419053000">關閉雙重認證</a>或<a href="https://www.google.com/url?q=https://appleid.apple.com/account%23!%26page%3Dcreate&amp;sa=D&amp;ust=1577715419053000">註冊一組新的</a>，並且要記得密碼，不然後續登入很麻煩！</p>
+<p>降級前請將螢幕鎖定密碼關閉！！！否則可能會造成降級後無法解鎖裝置</p>
+<p>1.越獄後使用iFile或Filza File Manager打開下方路徑的檔案</p>
+<p>/System/Library/CoreServices/SystemVersion.plist</p>
+<p>打錯了如果重開可能導致系統損毀需要重刷！</p>
+<p>打錯也別擔心如果沒有重開的話只要更正存檔就可以放心重開了</p>
+<p>Product Version改 6.1.3</p>
+<p>ProductBuildVersion改 10B329</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/backtoios841-2.jpg" alt=""></p>
+<p>2.存檔修改後記得確認版本號無誤才可重開</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/backtoios841-1.jpg" alt=""></p>
+<p>3.重新啟動，重啟跑完進度條需要一段時間，開完機之後請重設裝置，設定精靈的地方隨便設，只要能進到主畫面就行了（不要還原任何的備份！），重設的地方在</p>
+<h2 id="設定-一般-重置-清除所有內容和設定">設定-&gt;一般-&gt;重置-&gt;清除所有內容和設定</h2>
+<p>重設之後進到設定檢查更新，會看到更新的地方有iOS 8.4.1的更新，點下去，並安裝</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/backtoios841-3.jpg" alt=""></p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/backtoios841-4.jpg" alt=""></p>
+<p>4.更新完成後請再次清除所有內容和設定</p>
+<p>不然連系統APP都會閃退(例如「設定」內的「更改語言」)</p>
+<p>已知重置的按鈕是可用的</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/backtoios841-5.jpg" alt=""></p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/backtoios841-6.jpg" alt=""></p>
+<p>5.如果有出現「啟用鎖定」的話需要使用這部裝置原來登入的Apple ID 密碼登入，再次設定後，即將完成!</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/backtoios841-7.jpg" alt=""></p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/backtoios841-8.jpg" alt=""></p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/backtoios841-9.jpg" alt=""></p>
+<p>下圖是另一部降級成功的第四代iPad</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/backtoios841-10.jpg" alt=""></p>
+<p>補充連結:</p>
+<ul>
+<li><a href="https://www.google.com/url?q=https://mrmad.com.tw/etason&amp;sa=D&amp;ust=1577715419056000">8.4.1越獄</a></li>
+<li><a href="https://www.google.com/url?q=https://mrmad.com.tw/technique-close-hide-ota&amp;sa=D&amp;ust=1577715419056000">阻擋日後OTA更新的描述檔</a> </li>
+</ul>
+<p>[建議使用，不然哪天自己升回去又要再來一次]</p>
+<p>安裝描述檔後</p>
+<p><img src="https://static.yiy.tw/media/blog/2020/04/backtoios841-11.jpg" alt=""></p>
+<p>backtoios841-11.jpg</p>
+<p>大功告成！</p>
+
+      
+      <div class="related">
+</div>
+      
+    </div>
+    
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <aside><div id="disqus_thread"></div></aside>
+  
+    <script type="text/javascript">
+      var disqus_shortname = 'shortname';
+      function disqus() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+  
+      disqus();
+  
+
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; 2018 - 2021 <a href="https://steveyi.net">小易</a> 版權所有</p>
+    
+      <p>由 <a href="https://gohugo.io/">Hugo</a> 及 <a href="https://github.com/ribice/kiss">Kiss</a> 產生</p>
+    
+  </div>
+</section>
+
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="\/\/blog.steveyi.net\/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript>
+  <img src="//blog.steveyi.net/piwik.php?idsite=1&amp;rec=1" style="border:0" alt="" />
+</noscript>
+
+<script>
+    (function(f, a, t, h, o, m){
+        a[h]=a[h]||function(){
+            (a[h].q=a[h].q||[]).push(arguments)
+        };
+        o=f.createElement('script'),
+        m=f.getElementsByTagName('script')[0];
+        o.async=1; o.src=t; o.id='fathom-script';
+        m.parentNode.insertBefore(o,m)
+    })(document, window, '\/\/blog.steveyi.net\/tracker.js', 'fathom');
+    fathom('trackPageview');
+</script>
+</body>
+</html>
+

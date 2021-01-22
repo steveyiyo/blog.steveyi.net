@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>G-Suite on 酷小易</title>
+    <link>http://blog.steveyi.net/tags/g-suite/</link>
+    <description>Recent content in G-Suite on 酷小易</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-TW</language>
+    <copyright>&amp;copy; 2018 - 2021 &lt;a href=&#34;https://steveyi.net&#34;&gt;小易&lt;/a&gt; 版權所有</copyright>
+    <lastBuildDate>Fri, 21 Aug 2020 15:32:52 +0000</lastBuildDate><atom:link href="http://blog.steveyi.net/tags/g-suite/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用傳統版Gmail加快老舊裝置和低速網路的郵件載入速度</title>
+      <link>http://blog.steveyi.net/posts/html-gmail/</link>
+      <pubDate>Fri, 21 Aug 2020 15:32:52 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/html-gmail/</guid>
+      <description>筆者有一部老舊的PC，配備1GB記憶體以及Windows XP做輕度文書使用(Windows XP只需128MB記憶體即可操作)，瀏覽一些網站仍可應付，有些大型網站則要載入很久或是無法正常使用。如果是一般的文章網頁還可以，問題來了，筆者想用Gmail網頁版收發郵件，但在網路暢通的情況下載入標準Gmail網頁需要將近一分鐘，捲動郵件更是一場災難，後來筆者發現網頁底部會有一個不明顯的傳統版Gmail超連結，不太會有人注意到它。
+註：該部PC後來有點故障，所以不會用它來示範本篇教學。
+筆者將連結放在這裡，有需要的可以拷貝拿去用</description>
+    </item>
+    
+    <item>
+      <title>Cloud Identity 驗證網域及建立帳號</title>
+      <link>http://blog.steveyi.net/posts/cloud-identity-setting/</link>
+      <pubDate>Fri, 15 May 2020 20:35:49 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/cloud-identity-setting/</guid>
+      <description>在上一篇文，我們成功建立了Cloud Identity免費版
+在這篇文章，我們將要進行驗證網域的步驟
+首先，登入G Suite管理面板</description>
+    </item>
+    
+    <item>
+      <title>建立Cloud Identity帳戶</title>
+      <link>http://blog.steveyi.net/posts/create-cloud-identity/</link>
+      <pubDate>Fri, 15 May 2020 20:35:11 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/create-cloud-identity/</guid>
+      <description>首先，進入Cloud Identity申請頁面 點擊下一頁
+接著輸入公司名稱(可以隨意輸入)，員工數量(隨意選擇) 把它當作一個團隊</description>
+    </item>
+    
+    <item>
+      <title>刪除G suite組織</title>
+      <link>http://blog.steveyi.net/posts/delete-gsuite/</link>
+      <pubDate>Fri, 15 May 2020 18:17:25 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/delete-gsuite/</guid>
+      <description>之前有跟大家分享註冊G Suite帳號的方式，最近想將 Cloud Identity免費版 的G Suite組織刪除</description>
+    </item>
+    
+    <item>
+      <title>申請G Suite帳號</title>
+      <link>http://blog.steveyi.net/posts/register-gsuite/</link>
+      <pubDate>Wed, 01 Apr 2020 03:13:48 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/register-gsuite/</guid>
+      <description>相信大家應該都有使用過Gmail
+今天要來介紹的 G Suite 是由Google推出的企業服務，不過一般使用者也是可以申請的！</description>
+    </item>
+    
+  </channel>
+</rss>

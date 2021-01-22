@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AWS on 酷小易</title>
+    <link>http://blog.steveyi.net/tags/aws/</link>
+    <description>Recent content in AWS on 酷小易</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-TW</language>
+    <copyright>&amp;copy; 2018 - 2021 &lt;a href=&#34;https://steveyi.net&#34;&gt;小易&lt;/a&gt; 版權所有</copyright>
+    <lastBuildDate>Mon, 06 Apr 2020 14:38:57 +0000</lastBuildDate><atom:link href="http://blog.steveyi.net/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[教學] AWS Route 53 代管DNS</title>
+      <link>http://blog.steveyi.net/posts/aws-route53/</link>
+      <pubDate>Mon, 06 Apr 2020 14:38:57 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/aws-route53/</guid>
+      <description>從2017年註冊了第一個網域之後，DNS代管商一直是我在研究的一個部分！
+今天來推薦一下由AWS推出的DNS代管服務 - Route 53</description>
+    </item>
+    
+    <item>
+      <title>[教學] 關閉AWS帳戶</title>
+      <link>http://blog.steveyi.net/posts/close-aws-account/</link>
+      <pubDate>Thu, 15 Aug 2019 09:51:53 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/close-aws-account/</guid>
+      <description>進入 AWS主控台 點擊右上角的 我的帳戶 或是點擊下方超連結</description>
+    </item>
+    
+  </channel>
+</rss>
