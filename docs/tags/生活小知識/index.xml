@@ -7,7 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
     <copyright>&amp;copy; 2018 - 2021 &lt;a href=&#34;https://steveyi.net&#34;&gt;小易&lt;/a&gt; 版權所有</copyright>
-    <lastBuildDate>Wed, 25 Nov 2020 02:31:14 +0000</lastBuildDate><atom:link href="http://blog.steveyi.net/tags/%E7%94%9F%E6%B4%BB%E5%B0%8F%E7%9F%A5%E8%AD%98/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Jan 2021 13:00:00 +0000</lastBuildDate><atom:link href="http://blog.steveyi.net/tags/%E7%94%9F%E6%B4%BB%E5%B0%8F%E7%9F%A5%E8%AD%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Google廣告 – 原來你在Google眼中的形象是這樣的…</title>
+      <link>http://blog.steveyi.net/posts/google-adssettings/</link>
+      <pubDate>Tue, 19 Jan 2021 13:00:00 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/google-adssettings/</guid>
+      <description>原本這篇去年12月就要發布的，但剛好遇到伺服器維護就一直沒發XD
+有一天筆者在修改Google帳戶資料時，意外發現了「廣告設定」這個地方點開有還滿多資訊的。
+資料的來源包括登入狀態下的Google和Youtube各種紀錄，以及Google帳號申請時填寫的基本資料
+可以推測出興趣、年齡、家庭收入、感情狀況、雇主等，甚至是小孩數量
+不過推測出來的東西也會時常變動，也不是完全準確，不介意的話可以當笑話看看就好🤣 （筆者曾經在三天內看到自己的收入出現「中間偏高、中間偏低、高、低」的極端起伏）</description>
+    </item>
+    
+    <item>
+      <title>在Linux環境下無腦串接Google雲端硬碟</title>
+      <link>http://blog.steveyi.net/posts/linux-mount-googledrive-not-required-brain/</link>
+      <pubDate>Tue, 19 Jan 2021 12:25:49 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/linux-mount-googledrive-not-required-brain/</guid>
+      <description>此篇教學使用的是 google-drive-ocamlfuse 這個軟體，筆者使用的環境是基於Ubuntu的Zorin OS 15.2系統作為示範。</description>
+    </item>
+    
     <item>
       <title>[有趣測試] 測驗看看你是不是木耳！</title>
       <link>http://blog.steveyi.net/posts/are-you-mu-er/</link>

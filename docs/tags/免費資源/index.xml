@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
     <copyright>&amp;copy; 2018 - 2021 &lt;a href=&#34;https://steveyi.net&#34;&gt;小易&lt;/a&gt; 版權所有</copyright>
-    <lastBuildDate>Wed, 25 Nov 2020 02:31:14 +0000</lastBuildDate><atom:link href="http://blog.steveyi.net/tags/%E5%85%8D%E8%B2%BB%E8%B3%87%E6%BA%90/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Jan 2021 12:25:49 +0000</lastBuildDate><atom:link href="http://blog.steveyi.net/tags/%E5%85%8D%E8%B2%BB%E8%B3%87%E6%BA%90/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在Linux環境下無腦串接Google雲端硬碟</title>
+      <link>http://blog.steveyi.net/posts/linux-mount-googledrive-not-required-brain/</link>
+      <pubDate>Tue, 19 Jan 2021 12:25:49 +0000</pubDate>
+      
+      <guid>http://blog.steveyi.net/posts/linux-mount-googledrive-not-required-brain/</guid>
+      <description>此篇教學使用的是 google-drive-ocamlfuse 這個軟體，筆者使用的環境是基於Ubuntu的Zorin OS 15.2系統作為示範。</description>
+    </item>
+    
     <item>
       <title>[有趣測試] 測驗看看你是不是木耳！</title>
       <link>http://blog.steveyi.net/posts/are-you-mu-er/</link>
