@@ -27,4 +27,4 @@ jobs:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           external_repository: steveyiyo/SteveYi-Blog
           publish_dir: ./public
-          publish_branch: main
+          publish_branch: gh-page
