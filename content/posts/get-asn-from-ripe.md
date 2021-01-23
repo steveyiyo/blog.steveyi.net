@@ -58,7 +58,7 @@ peering_at_steveyi.net
 然後由於我們是在RIPE申請的，所以我們還需要準備一些對象紀錄  
 MAINTAINER, PERSON / ROLE, and ORGANIZATION object  
 然後ORG object中的"org-name"必須要是真實姓名（護照名稱）  
-關於申請的過程及方式，可以參考一下 [這篇文章](https://blog.steveyi.net/create-object-in-ripe-database/)
+關於申請的過程及方式，可以參考一下 [這篇文章](https://blog.steveyi.net/posts/create-object-in-ripe-database/)
 
 那一切都準備好後，LIR會準備一分用戶協議，簽名完，LIR就會把你的請求轉交給RIPE啦！  
 當提交請求給RIPE時，大約1-3天就會發放ASN了
