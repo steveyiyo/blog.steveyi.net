@@ -1,5 +1,5 @@
 ---
-title: 'FRRouting 入坑指南兼心得(1)'
+title: 'FRRouting 安裝教學'
 date: Sun, 12 Jul 2020 13:07:14 +0000
 draft: false
 tags: ['BGP', '伺服器']
@@ -7,11 +7,11 @@ tags: ['BGP', '伺服器']
 
 很久沒有來分享了！最近仍然在學習BGP知識及測試之前一直使用bird1來廣播BGP，後來在跟朋友Peer時，一直無法建立對等（很玄，但卻可以跟IX建立
 
-最近則卸載了Bird1，改安裝[ffrouting](https://frrouting.org/)是從Quagga fork來的，慢慢發展成現在  
-同時，他也是一個很強大的路由套件（其指令類似於Cisco或Quagga）
+最近則卸載了Bird1，改安裝 [FRRouting](https://frrouting.org/) 是從 Quagga Fork 來的，慢慢發展成現在  
+同時，他也是一個很強大的路由套件（其指令類似於 Cisco 或 Quagga ）
 
 於是，就摸索了一下  
-整理了一些心得使用者指南(英文): [http://docs.frrouting.org/en/latest/](http://docs.frrouting.org/en/latest/)  
+整理了一些心得使用者指南(英文): [https://docs.frrouting.org/en/latest/](https://docs.frrouting.org/en/latest/)  
 GitHub專案: [https://github.com/FRRouting/frr/releases](https://github.com/FRRouting/frr/releases)
 
 首先，我們要先來安裝ffrouting
