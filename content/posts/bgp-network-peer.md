@@ -1,7 +1,7 @@
 ---
 title: '透過BGP組建不同網段互通'
 date: Tue, 11 Aug 2020 18:56:26 +0000
-draft: false
+draft: true
 tags: ['BGP']
 ---
 

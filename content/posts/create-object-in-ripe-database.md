@@ -1,5 +1,5 @@
 ---
-title: '在RIPE DataBase建立Object'
+title: '在 RIPE DataBase 建立 Object'
 date: Sat, 21 Nov 2020 08:37:20 +0000
 draft: false
 tags: ['ASN', 'BGP', '網際網路', '路由協議']

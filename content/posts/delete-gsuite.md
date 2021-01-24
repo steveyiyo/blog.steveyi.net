@@ -1,5 +1,5 @@
 ---
-title: '刪除G suite組織'
+title: '刪除 G suite 組織'
 date: Fri, 15 May 2020 18:17:25 +0000
 draft: false
 tags: ['G-Suite', 'GCP', 'Google', '網域', '網站日誌']

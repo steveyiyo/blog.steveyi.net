@@ -1,8 +1,8 @@
 ---
 title: '小易部落格iOS版App開放下載囉！'
 date: Mon, 20 Jul 2020 07:50:55 +0000
-draft: false
-tags: ['iOS', '未分類', '網站日誌']
+draft: true
+tags: ['iOS', '網站日誌']
 ---
 
 這個App可以讓您輕鬆查看最新的小易部落格文章唷！  

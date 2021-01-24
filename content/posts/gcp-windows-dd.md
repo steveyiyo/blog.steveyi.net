@@ -23,7 +23,6 @@ tags: ['VPS', '伺服器']
     
     中文繁體版  
     載點1: [http://static.yiy.tw/mirror/dd/win10.gz](http://static.yiy.tw/mirror/dd/win10.gz)  
-    載點2: [https://drive.yiy.tw/Mirror/DD/win10.gz](https://drive.yiy.tw/Mirror/DD/win10.gz)
     
     遠端登入資訊  
     帳號: Administrator  
