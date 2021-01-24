@@ -5,9 +5,9 @@ draft: false
 tags: ['BGP', '伺服器']
 ---
 
-很久沒有來分享了！最近仍然在學習BGP知識及測試之前一直使用bird1來廣播BGP，後來在跟朋友Peer時，一直無法建立對等（很玄，但卻可以跟IX建立
+很久沒有來分享了！最近仍然在學習BGP知識及測試之前一直使用 Bird1 來廣播 BGP，後來在跟朋友 Peer 時，一直無法建立對等（很玄，但卻可以跟IX建立
 
-最近則卸載了Bird1，改安裝 [FRRouting](https://frrouting.org/) 是從 Quagga Fork 來的，慢慢發展成現在  
+最近則卸載了 Bird1，改安裝 [FRRouting](https://frrouting.org/) 是從 Quagga Fork 來的，慢慢發展成現在  
 同時，他也是一個很強大的路由套件（其指令類似於 Cisco 或 Quagga ）
 
 於是，就摸索了一下  
@@ -22,14 +22,14 @@ apt update -y
 apt upgrade -y
 apt install -y curl gnupg2 traceroute
 ```
-### 安裝FRRouting
+### 安裝 FRRouting
 ```
 curl -s [https://deb.frrouting.org/frr/keys.asc](https://deb.frrouting.org/frr/keys.asc) | sudo apt-key add -
 FRRVER="frr-stable"
 echo deb [https://deb.frrouting.org/frr](https://deb.frrouting.org/frr) $(lsb\_release -s -c) $FRRVER | sudo tee -a /etc/apt/sources.list.d/frr.list
 sudo apt update -y && sudo apt install -y frr frr-pythontools
 ```
-### 開啟IP forwarding
+### 開啟 IP forwarding
 ```
 echo "
 net.ipv4.conf.all.forwarding = 1
@@ -44,18 +44,18 @@ net.ipv6.conf.all.accept\_ra = 2
 
 sysctl -p
 ```
-### 啟動frrouting所有功能
+### 啟動 FRRouting 所有功能
 ```
 sed -i "s/=no/=yes/g" /etc/frr/daemons
 service frr restart
 ```
-### 進入frrouting互動cli
+### 進入 FRRouting 互動cli
 ```
 sudo vtysh
 ```
 
-進入互動cli，不出意外的話  
+進入互動式 Cli，不出意外的話  
 應該會看到下面這樣
 
 接著就可以進行配置了  
-鍵入 config 進入設置界面關於進階設置，下篇再來分享吧！
+鍵入 config 就可以進入設定界面囉！
