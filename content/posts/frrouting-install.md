@@ -16,17 +16,21 @@ GitHub專案: [https://github.com/FRRouting/frr/releases](https://github.com/FRR
 
 首先，我們要先來安裝ffrouting
 
+### 更新套件
 ```
-\# 更新套件
 apt update -y
 apt upgrade -y
 apt install -y curl gnupg2 traceroute
-# 安裝FRRouting
+```
+### 安裝FRRouting
+```
 curl -s [https://deb.frrouting.org/frr/keys.asc](https://deb.frrouting.org/frr/keys.asc) | sudo apt-key add -
 FRRVER="frr-stable"
 echo deb [https://deb.frrouting.org/frr](https://deb.frrouting.org/frr) $(lsb\_release -s -c) $FRRVER | sudo tee -a /etc/apt/sources.list.d/frr.list
 sudo apt update -y && sudo apt install -y frr frr-pythontools
-# 開啟IP forwarding
+```
+### 開啟IP forwarding
+```
 echo "
 net.ipv4.conf.all.forwarding = 1
 net.ipv6.conf.all.disable\_ipv6 = 0
@@ -39,11 +43,14 @@ net.ipv6.conf.all.accept\_ra = 2
 " | tee -a /etc/sysctl.conf
 
 sysctl -p
-
-# 啟動frrouting所有功能
+```
+### 啟動frrouting所有功能
+```
 sed -i "s/=no/=yes/g" /etc/frr/daemons
 service frr restart
-# 進入frrouting互動cli
+```
+### 進入frrouting互動cli
+```
 sudo vtysh
 ```
 

@@ -66,3 +66,5 @@ rtt min/avg/max/mdev = 3.223/3.242/3.259/0.014 ms
 BIRD 比較類似於寫程式的概念(? FRRouting 則是類似於 Cisco 的概念(?
 
 至少我是這樣認為的，但本篇是使用 FRRouting 來進行操作
+
+首先，我們可以先參考 (這篇文章)[https://blog.steveyi.net/posts/frrouting-install/] 來安裝 FRRouting
