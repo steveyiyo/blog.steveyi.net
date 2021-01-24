@@ -14,14 +14,14 @@ tags: ['BGP', '伺服器']
 **設置AS號碼及IP前綴**
 ===============
 
-首先，我們要先開通BGP的功能！  
-[點擊這裡前往Vultr BGP頁面](https://my.vultr.com/network/#network-bgp)  
+首先，我們要先開通BGP的功能！
+[點擊這裡前往Vultr BGP頁面](https://my.vultr.com/network/#network-bgp)
 進入此頁面後，我們點擊 Get Started
 
 ![](https://static.yiy.tw/media/blog/2020/04/vu-01-1920x961.png)
 
-選擇 I have my own IP space 及 I have own my ASN (如果沒有ASN不用選擇)  
-LOA的部分 可以參考這份範例文件  
+選擇 I have my own IP space 及 I have own my ASN (如果沒有ASN不用選擇)
+LOA的部分 可以參考這份範例文件
 接著其他保持預設就好
 
 ![](https://static.yiy.tw/media/blog/2020/04/vu-02.png)
@@ -63,26 +63,26 @@ sudo rm -rf bird6.conf
 接著我們新增一個新的配置
 
 ```
-router id 0.0.0.0; #將0.0.0.0改成你的主機IPv4  
-  
-protocol bgp vultr  
-{  
-   local as 209557;  
-   source address 改成主機IPv6;  
-   import none;  
-   export all;  
-   graceful restart on;  
-   multihop 2;  
-   neighbor 2001:19f0:ffff::1 as 64515; #Vultr的IP及私有AS號  
-   password "123456789"; #之前設定的BGP密碼  
-}  
-protocol static  
-{  
-    route 要廣播的prefix via 閘道IP;  
-}  
-protocol device   
-{  
-    scan time 5;  
+router id 0.0.0.0; # 將0.0.0.0改成你的主機IPv4
+
+protocol bgp vultr
+{
+   local as 209557;
+   source address 改成主機IPv6;
+   import none;
+   export all;
+   graceful restart on;
+   multihop 2;
+   neighbor 2001:19f0:ffff::1 as 64515; # Vultr的IP及私有AS號
+   password "123456789"; # 之前設定的BGP密碼
+}
+protocol static
+{
+    route 要廣播的prefix via 閘道IP;
+}
+protocol device 
+{
+    scan time 5;
 }
 ```
 
