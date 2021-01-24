@@ -56,4 +56,13 @@ rtt min/avg/max/mdev = 3.223/3.242/3.259/0.014 ms
 
 好，看起來通了！
 
-那接著，透過 BGP 協議
+那接著，透過 BGP 協議來組建大內網了！
+
+
+首先，我們必須要在 Linux 上安裝一個 BGP Routing Daemon
+
+在 Linux 系統上，大部分人都使用 (BIRD)[https://bird.network.cz/] 或是 (FRRouting)[https://frrouting.org/]
+
+BIRD 比較類似於寫程式的概念(? FRRouting 則是類似於 Cisco 的概念(?
+
+至少我是這樣認為的，但本篇是使用 FRRouting 來進行操作
