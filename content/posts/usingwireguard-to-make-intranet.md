@@ -57,7 +57,6 @@ VPN's Public Key: Rxcti9/3jLII4JOscHn9/yp5Z8ZROcYk8tugXn/FRHM=
 PrivateKey = <各處的private key>
 Address = <各個路由器的IP，比如說A路由器 10.121.208.254/24>
 
-# Server
 [Peer]
 PublicKey = <VPN Gateway Public Key>
 Endpoint = <VPN Gateway's EndPoint>
@@ -73,7 +72,6 @@ B路由器則是這樣
 PrivateKey = <各處的private key>
 Address = <各個路由器的IP，比如說B路由器 10.121.209.254/24>
 
-# Server
 [Peer]
 PublicKey = <VPN Gateway Public Key>
 Endpoint = <VPN Gateway's EndPoint>
