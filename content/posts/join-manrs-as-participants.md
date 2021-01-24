@@ -24,9 +24,11 @@ MANRS 主要有四個政策，分別是這些
 首先，我們在我們的核心路由器上阻斷了 [RFC1918](https://tools.ietf.org/html/rfc1918/) 定義的私網 IP 位置流量，來自這些 IP位置 的流量並不會往公網發送
 
 其次，我們遵守 [RFC 8212](https://tools.ietf.org/html/rfc8212/)，在沒有明確的路由策略下，我們不會廣播沒有使用的網段。
-並且，我們會從我們的 AS-SET [AS-STEVEYI](https://www.radb.net/query?keywords=AS-STEVEYI) 中產生對應的 IRR 紀錄，並過濾掉不屬於我們的路由
+並且，我們會從我們的 [AS-STEVEYI](https://www.radb.net/query?keywords=AS-STEVEYI) 中產生對應的 IRR 紀錄
+並過濾掉不屬於我們的路由
+
 ![](https://i.imgur.com/3YMIHgZ.png)
 
-我們也會過濾與我們對等的路由，我們會將所有對等方的 AS-SET 或 ASN 加入我們的 AS-SET [AS-STEVEYI-A](https://www.radb.net/query?keywords=AS-STEVEYI-A)，並自動產生對應的 IRR 紀錄，過濾無效的路由
+我們也會過濾與我們對等的路由，我們會將所有對等方的 AS-SET 或 ASN 加入我們的 [AS-STEVEYI-A](https://www.radb.net/query?keywords=AS-STEVEYI-A) 中，並自動產生對應的 IRR 紀錄，過濾無效的路由
 
 我們也歡迎對我們的過濾系統有興趣的網路愛好者/工程師，可以發信至 info_at_steveyi_dot_net 與我們聯繫！
