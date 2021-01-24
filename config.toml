@@ -3,9 +3,9 @@ languageCode = "zh-TW"
 title = "酷小易"
 theme = "hugo_themes"
 copyright = "&copy; 2018 - 2021 <a href=\"https://steveyi.net\">小易</a> 版權所有"
-disqusShortname = "shortname"
+#disqusShortname = "shortname"
 googleAnalytics = ""
-Paginate = 5 # Number of posts per page
+Paginate = 10 # Number of posts per page
 enableRobotsTXT = true
 publishDir = "docs"
 
