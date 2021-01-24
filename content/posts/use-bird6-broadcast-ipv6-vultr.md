@@ -78,7 +78,7 @@ protocol bgp vultr
 }  
 protocol static  
 {  
-    route 要廣播的IP段帶cidr via 主機IP不帶cidr;  
+    route 要廣播的prefix via 閘道IP;  
 }  
 protocol device   
 {  
