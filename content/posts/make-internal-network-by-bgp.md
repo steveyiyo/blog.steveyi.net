@@ -74,7 +74,7 @@ BIRD 比較類似於寫程式的概念(? FRRouting 則是類似於 Cisco 的概�
 vtysh
 ```
 
-接著，我們輸入以下指令，來開通 BGP 功能 PS. 如果沒有公網 ASN，可以使用 Private ASN
+接著，我們輸入以下指令，來開通 BGP 功能 PS. 如果沒有公網 ASN，可以使用 Private ASN 可參考 [RFC 6996](https://tools.ietf.org/html/rfc6996)
 ```
 router bgp 你的ASN
 ```
