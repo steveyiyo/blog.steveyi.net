@@ -1,6 +1,6 @@
 ---
-title: '成為 MANRS 參與者！'
-date: Sun, 24 Jan 2021 22:00:00 +0000
+title: "Join Manrs as Participants"
+date: 2021-01-25T00:03:31+08:00
 draft: false
 tags: ['BGP', 'Network']
 ---
