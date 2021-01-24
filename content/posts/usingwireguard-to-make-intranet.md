@@ -7,7 +7,7 @@ tags: ['VPS', '伺服器']
 
 Hi 大家好，今天來分享一下如何使用WireGuard建立大內網  
   
-之前有與大家分享過 [在Linux系統上安裝Wireguard](https://blog.steveyi.net/how-to-install-wireguard/ "在Linux系統上安裝Wireguard")，那這次我們要利用WireGuard來建立大內網
+之前有與大家分享過 [在Linux系統上安裝Wireguard](https://blog.steveyi.net/posts/how-to-install-wireguard/)，那這次我們要利用WireGuard來建立大內網
 
 為什麼筆者稱這次要建立"大內網"呢？  
 因為筆者也許多不同地方的網路，想藉由這次機會，來把他們都加進同一個局域網
