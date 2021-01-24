@@ -10,11 +10,10 @@ tags: ['BGP', '伺服器']
 最近則卸載了 Bird1，改安裝 [FRRouting](https://frrouting.org/) 是從 Quagga Fork 來的，慢慢發展成現在  
 同時，他也是一個很強大的路由套件（其指令類似於 Cisco 或 Quagga ）
 
-於是，就摸索了一下  
-整理了一些心得使用者指南(英文): [https://docs.frrouting.org/en/latest/](https://docs.frrouting.org/en/latest/)  
-GitHub專案: [https://github.com/FRRouting/frr/releases](https://github.com/FRRouting/frr/releases)
+使用者指南(英文): [https://docs.frrouting.org/en/latest/](https://docs.frrouting.org/en/latest/)  
+GitHub 專案: [https://github.com/FRRouting/frr/releases](https://github.com/FRRouting/frr/releases)
 
-首先，我們要先來安裝ffrouting
+首先，我們要先來安裝 FFRouting
 
 ### 更新套件
 ```
@@ -49,7 +48,7 @@ sysctl -p
 sed -i "s/=no/=yes/g" /etc/frr/daemons
 service frr restart
 ```
-### 進入 FRRouting 互動cli
+### 進入 FRRouting 互動 Cli
 ```
 sudo vtysh
 ```
