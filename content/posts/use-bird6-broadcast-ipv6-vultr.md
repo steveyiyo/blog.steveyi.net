@@ -7,7 +7,9 @@ tags: ['BGP', '伺服器']
 
 ![](https://static.yiy.tw/media/blog/2020/04/vu-00.png)
 
-之前跟大家分享過 [為IP設定反向DNS(PTR紀錄)](https://blog.steveyi.net/ip-set-rdns-with-ripe-and-he-dns/)，那這次就來分享一下在[Vultr](https://vultr.com)廣播IP吧！
+**建議可以參考於 2021年01月24日 的 [透過 BGP 與朋友組成內網](https://blog.steveyi.net/posts/make-internal-network-by-bgp/) 文章**
+
+這次就來分享一下在[Vultr](https://vultr.com)廣播IP吧！
 
 **設置AS號碼及IP前綴**
 ===============

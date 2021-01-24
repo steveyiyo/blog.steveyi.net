@@ -7,7 +7,7 @@ tags: ['ASN', 'BGP', '網際網路', '路由協議']
 
 在本篇文章中，將與大家分享如何在RIPE DataBase註冊MAINTAINER, PERSON / ROLE, and ORGANIZATION object
 
-這些對象也是註冊ASN必要的，如果要申請ASN，可以參考[這篇教學](https://blog.steveyi.net/get-asn-from-ripe/)
+這些對象也是註冊ASN必要的，如果要申請ASN，可以參考[這篇教學](https://blog.steveyi.net/posts/get-asn-from-ripe/)
 
 那首先，我們要先註冊RIPE的帳號 [註冊網站在這](https://access.ripe.net/registration)
 
