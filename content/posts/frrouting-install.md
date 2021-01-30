@@ -23,9 +23,9 @@ apt install -y curl gnupg2 traceroute
 ```
 ### 安裝 FRRouting
 ```
-curl -s [https://deb.frrouting.org/frr/keys.asc](https://deb.frrouting.org/frr/keys.asc) | sudo apt-key add -
+curl -s https://deb.frrouting.org/frr/keys.asc | sudo apt-key add -
 FRRVER="frr-stable"
-echo deb [https://deb.frrouting.org/frr](https://deb.frrouting.org/frr) $(lsb\_release -s -c) $FRRVER | sudo tee -a /etc/apt/sources.list.d/frr.list
+echo deb https://deb.frrouting.org/frr $(lsb\_release -s -c) $FRRVER | sudo tee -a /etc/apt/sources.list.d/frr.list
 sudo apt update -y && sudo apt install -y frr frr-pythontools
 ```
 ### 開啟 IP forwarding
