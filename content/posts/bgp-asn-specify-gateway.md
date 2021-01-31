@@ -1,0 +1,87 @@
+---
+title: "透過 ASN 指定網路出口"
+date: 2021-02-01T02:13:10+08:00
+draft: true
+---
+
+在去年一月時，我申請到了自己的第一個 ASN - [AS209557](https://whois.steveyi.net/whois/AS209557)，也做了很多酷實驗！
+
+今天，我改造了我家的路由，並可以指定 ASN 走哪條路出去
+
+### 首先，先說一下我家的路由器資訊
+
+Ubuntu 20.04 軟路由  
+Bird2 (Internet Routing Daemon)  
+![](https://i.imgur.com/iKW3r01.png)
+
+### 網路環境(包括 VPN 隧道)
+
+中華電信 PPPoe 非固定制 IP 100/40M  
+到 TANet 的 [WireGuard](https://wireguard.com/) Tunnel  
+到 GCP 的 [WireGuard](https://wireguard.com/) Tunnel  
+到 Vultr 的 [WireGuard](https://wireguard.com/) Tunnel  
+
+那主要做法是要將 AS1659 及 AS6939 的網走 TANet
+AS13335 走 GCP    
+其餘的走中華電信  
+整個家中內網處於一個 VRF (vrf_HOME) 中
+
+然後由於我在 Vultr 廣播了一段 /24，分給家裡一段 /28 使用  
+所以 Home-Lab 的設備都給一個公網 IP Address。  
+所以這邊分一個 VRF (vrf_yi) 使用
+
+### 安裝 bird2
+
+首先，我們要先安裝 bird2，這是一個路由進程軟體。  
+可以處理 BGP, OSPF, ISIS, Static Route... 等等的路由
+
+Debian & Ubuntu:
+```
+apt install bird2
+```
+
+CentOS:
+```
+yum install bird2
+```
+
+### BGP Configure
+
+那安裝好之後呢，我們需要透過 eBGP Multihop 收一張全表  
+理論上現有的服務都會要求你必須要有 IANA 承認的 ASN 才可以進行對等
+
+不過，我們也是可以使用 Private ASN 來對等（如果對面允許的話）  
+這邊推薦使用 Vultr 的 VPS 來收全表，詳情可以參考 [在 Vultr 使用 Bird 廣播 IPv6](https://blog.steveyi.net/posts/use-bird6-broadcast-ipv6-vultr/) 這篇文章。
+
+那我們由於是 Multihop，對面所發的路由我們都到不了  
+所以我們將路由放到 table 裡面
+```
+ipv4 table global_v4;
+```
+
+接著，由於我們是要將寫入 VRF 中。我們先建立一個 filter policy  
+如果 ASN 等於 xxx，那麼就將路由改成 xxx。其他不變
+```
+filter policy_routing {
+
+        # TANet
+        if bgp_path.last = 1659 then {
+            gw = 10.121.208.254;
+            accept;
+        }
+
+        # HE
+        if bgp_path.last = 6939 then {
+            gw = 10.121.208.254;
+            accept;
+        }
+ 
+        # CloudFlare
+        if bgp_path.last = 13335 then {
+            gw = 10.121.218.62;
+            accept;
+        }
+
+        reject;
+}
+```
