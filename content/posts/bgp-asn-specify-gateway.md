@@ -1,6 +1,6 @@
 ---
 title: "透過 ASN 指定網路出口"
-date: 2021-02-01T02:13:10+08:00
+date: 2021-02-06T02:13:10+08:00
 draft: false
 image: "https://i.imgur.com/mgyCzFl.png"
 ---
@@ -90,6 +90,7 @@ filter policy_routing {
 ### 最終
 
 由於我又調整網路了，所以目前只設定收兩條路由（
+
 ![](https://i.imgur.com/mgyCzFl.png)
 
 Code 差不多就長這樣，大家也可以試試看  
