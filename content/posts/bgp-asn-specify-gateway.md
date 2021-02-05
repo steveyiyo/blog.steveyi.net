@@ -24,11 +24,9 @@ Bird2 (Internet Routing Daemon)
 那主要做法是要將 AS1659 及 AS6939 的網走 TANet
 AS13335 走 GCP    
 其餘的走中華電信  
-整個家中內網處於一個 VRF (vrf_HOME) 中
-
-然後由於我在 Vultr 廣播了一段 /24，分給家裡一段 /28 使用  
-所以 Home-Lab 的設備都給一個公網 IP Address。  
-所以這邊分一個 VRF (vrf_yi) 使用
+並全部開啟 NAT  
+整個家中內網處於一個 VRF (vrf_HOME) 中  
+PS.但下方文章會直接收入 Kernel
 
 ### 安裝 bird2
 
@@ -48,7 +46,7 @@ yum install bird2
 ### BGP Configure
 
 那安裝好之後呢，我們需要透過 eBGP Multihop 收一張全表  
-理論上現有的服務都會要求你必須要有 IANA 承認的 ASN 才可以進行對等
+理論上現有的網路供應商都會要求你必須要有 IANA 承認的 ASN 才可以進行對等
 
 不過，我們也是可以使用 Private ASN 來對等（如果對面允許的話）  
 這邊推薦使用 Vultr 的 VPS 來收全表，詳情可以參考 [在 Vultr 使用 Bird 廣播 IPv6](https://blog.steveyi.net/posts/use-bird6-broadcast-ipv6-vultr/) 這篇文章。
