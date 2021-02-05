@@ -1,7 +1,7 @@
 ---
 title: "透過 ASN 指定網路出口"
 date: 2021-02-01T02:13:10+08:00
-draft: true
+draft: false
 ---
 
 在去年一月時，我申請到了自己的第一個 ASN - [AS209557](https://whois.steveyi.net/whois/AS209557)，也做了很多酷實驗！
@@ -55,12 +55,14 @@ yum install bird2
 
 那我們由於是 Multihop，對面所發的路由我們都到不了  
 所以我們將路由放到 table 裡面
+
 ```
 ipv4 table global_v4;
 ```
 
 接著，由於我們是要將寫入 VRF 中。我們先建立一個 filter policy  
-如果 ASN 等於 xxx，那麼就將路由改成 xxx。其他不變
+如果 ASN 等於 60614，那麼就將路由改成 10.121.1.2。其他不變... 以此類推
+
 ```
 filter policy_routing {
 
@@ -83,5 +85,75 @@ filter policy_routing {
         }
 
         reject;
+}
+```
+
+### 最終
+
+Code 差不多就長這樣，大家也可以試試看  
+感覺我好像也可以來做個自動設置 eBGP multihop 的酷東西呢(#
+```
+log syslog all;
+router id 59.126.197.29;
+# debug protocols all;
+watchdog warning 5 s;
+watchdog timeout 30 s;
+ipv4 table global_v4;
+ipv4 table policy_v4;
+protocol device {}
+protocol direct { ipv4; }
+ 
+template bgp bgp_feeder {
+    multihop;
+    graceful restart on;
+    ipv4 {
+        table global_v4;
+        import all;
+        export none;
+    };
+}
+ 
+protocol bgp SteveYi_Feed from bgp_feeder {
+	local as 209557;
+    neighbor as 60614;
+    neighbor xxx.xxx.xxx.xxx;
+}
+
+define steveyi_asn = [
+        60614,
+        209557
+];
+
+filter policy_routing {
+    # SteveYi Network Service
+    if bgp_path.last ~ steveyi_asn then {
+        gw = 10.121.217.11;
+        accept;
+    }
+
+    # HE
+    if bgp_path.last = 6939 then {
+        gw = 10.121.218.62;
+        accept;
+    }
+
+    reject;
+}
+
+# 防止 Feed 被 BGP 吃掉
+protocol static
+{
+    ipv4;
+	route 10.120.0.0/14 via 10.121.208.254;
+}
+
+protocol kernel
+{
+    scan time 20;
+    ipv4 {
+        table global_v4;
+        import none;
+        export filter policy_routing;
+    };
 }
 ```
