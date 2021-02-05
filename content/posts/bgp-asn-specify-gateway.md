@@ -21,12 +21,12 @@ Bird2 (Internet Routing Daemon)
 到 GCP 的 [WireGuard](https://wireguard.com/) Tunnel  
 到 Vultr 的 [WireGuard](https://wireguard.com/) Tunnel  
 
-那主要做法是要將 AS1659 及 AS6939 的網走 TANet
+那主要做法是要將 AS1659 及 AS6939 的網走 TANet  
 AS13335 走 GCP    
 其餘的走中華電信  
 並全部開啟 NAT  
 整個家中內網處於一個 VRF (vrf_HOME) 中  
-PS.但下方文章會直接收入 Kernel
+PS.但下方文章會直接收入 Kernel  
 
 ### 安裝 bird2
 
