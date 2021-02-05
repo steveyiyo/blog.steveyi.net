@@ -2,6 +2,7 @@
 title: "透過 ASN 指定網路出口"
 date: 2021-02-01T02:13:10+08:00
 draft: false
+image: "https://i.imgur.com/iKW3r01.png"
 ---
 
 在去年一月時，我申請到了自己的第一個 ASN - [AS209557](https://whois.steveyi.net/whois/AS209557)，也做了很多酷實驗！
