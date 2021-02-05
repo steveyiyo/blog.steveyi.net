@@ -97,7 +97,7 @@ Code 差不多就長這樣，大家也可以試試看
 感覺我好像也可以來做個自動設置 eBGP multihop 的酷東西呢(#
 ```
 log syslog all;
-router id 59.126.197.29;
+router id 10.121.211.254;
 # debug protocols all;
 watchdog warning 5 s;
 watchdog timeout 30 s;
