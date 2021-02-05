@@ -22,7 +22,7 @@ Bird2 (Internet Routing Daemon)
 到 Vultr 的 [WireGuard](https://wireguard.com/) Tunnel  
 
 那主要做法是要將 AS1659 及 AS6939 的網走 TANet  
-AS13335 走 GCP    
+AS60614 走 Vultr    
 其餘的走中華電信  
 並全部開啟 NAT  
 整個家中內網處於一個 VRF (vrf_HOME) 中  
@@ -76,8 +76,8 @@ filter policy_routing {
             accept;
         }
  
-        # CloudFlare
-        if bgp_path.last = 13335 then {
+        # SteveYi Network Service
+        if bgp_path.last = 60614 then {
             gw = 10.121.218.62;
             accept;
         }
