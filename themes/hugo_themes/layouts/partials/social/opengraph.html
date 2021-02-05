@@ -9,6 +9,7 @@
     website
   {{- end -}}
 '> {{- with .Params.image -}}
+<meta property='og:image' content='https://static.yiy.tw/static/img/apple-touch-icon-114x114.png'>
 <meta property='og:image' content='{{ . | absURL }}'> {{- else -}} {{- with .Site.Params.Social.email -}}
 <meta property='og:image' content='https://www.gravatar.com/avatar/
         {{- . | md5 -}}
