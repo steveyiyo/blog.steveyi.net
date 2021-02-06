@@ -163,5 +163,6 @@ protocol kernel
 
 ### 參考文章 & 協助夥伴
 
-感謝 [James](https://swineson.me/) 的 [在家也要玩BGP（1.5）：我的双线分流规则](https://blog.swineson.me/zh/bgp-at-home-1-5-my-filter-rules/)  
+感謝 [James Swineson](https://swineson.me/) 的 [在家也要玩BGP（1.5）：我的双线分流规则](https://blog.swineson.me/zh/bgp-at-home-1-5-my-filter-rules/)  
 感謝 [奈特](https://who.nat.moe/) 提供 bird2 上的使用協助及技巧
+感謝 [Licson](https://licson.net/), [Nato Laboratory](https://internet.nat.moe/), [James Swineson](https://swineson.me/) 提供的 BGP Full Table
