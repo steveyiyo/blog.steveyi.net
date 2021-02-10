@@ -2,7 +2,7 @@
 title: "將部落格從 WordPress 轉移到 Hugo"
 date: 2021-02-10T14:27:17+08:00
 draft: false
-image: ""
+image: "https://i.imgur.com/1a3dW0f.png"
 ---
 
 從 2018 年註冊了第一個網域 - [steveyigame.com](https://whois.steveyi.net/whois/steveyigame.com)後  
