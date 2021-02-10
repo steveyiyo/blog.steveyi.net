@@ -5,8 +5,8 @@ draft: false
 image: "https://i.imgur.com/1a3dW0f.png"
 ---
 
-從 2018 年註冊了第一個網域 - [steveyigame.com](https://whois.steveyi.net/whois/steveyigame.com)後  
-我嘗試架設了第一個 WordPress 部落格 - 小易在此  
+從 2018 年註冊了第一個網域 - [steveyigame.com](https://whois.steveyi.net/whois/steveyigame.com) 後  
+我嘗試架設了第一個 WordPress 部落格
 
 當時也正好學習使用 Linux 系統，順帶了解到 **雲端硬碟(像是 Google Drive)** 及 **檔案伺服器** 的差異
 
