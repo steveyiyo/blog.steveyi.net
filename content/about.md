@@ -8,3 +8,10 @@ draft: false
 我從國中時開始接觸網域名稱及 Linux 系統，當時是 2018 年。
 
 第一個部落格是 WordPress，同時也是我學習 PHP 的時候
+
+本站所有文章以 MIT License 釋出
+
+本著作係採用創用 CC 姓名標示-相同方式分享 4.0 國際 授權條款授權.  
+詳情請參考：[http://creativecommons.org/licenses/by-sa/4.0/](http://creativecommons.org/licenses/by-sa/4.0/)
+
+![](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png)

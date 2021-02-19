@@ -29,7 +29,7 @@ codeCopy = true # Add copy button above code blocks
 taxonomiesCount = true # Add taxonomies count
 
 [params.features]
-disqusOnDemand = false  # Load Disqus comments on click 
+disqusOnDemand = false  # Load Disqus comments on click
 
 [params.opengraph.facebook]
 admins = [] # array of Facebook IDs
