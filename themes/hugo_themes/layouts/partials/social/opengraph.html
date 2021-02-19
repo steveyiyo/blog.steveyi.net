@@ -9,10 +9,8 @@
     website
   {{- end -}}
 '> {{- with .Params.image -}}
-<meta property='og:image' content='{{ . | absURL }}'> {{- else -}} {{- with .Site.Params.Social.email -}}
-<meta property='og:image' content='https://www.gravatar.com/avatar/
-        {{- . | md5 -}}
-        ?s=256'> {{- end -}} {{- with .Params.audios -}} {{- range first 6 . -}}
+<meta property='og:image' content='{{ . | absURL }}'> {{- else -}} {{- with ".Site.Params.Social.email" -}}
+<meta property='og:image' content='https://static.yiy.tw/media/yi/life/image03.jpg'> {{- end -}} {{- with .Params.audios -}} {{- range first 6 . -}}
 <meta property='og:audio' content='{{ . | absURL }}'> {{- end -}} {{- end -}} {{- with .Params.videos -}} {{- range first 6 . -}}
 <meta property='og:video' content='{{ . | absURL }}'> {{- end -}} {{- end -}} {{- if .IsPage -}} {{- with .Site.Params.Social.facebook -}}
 <meta property='article:author' content='https://facebook.com/{{ . }}'> {{- end -}} {{- end -}} {{- with .Site.Params.opengraph.facebook.pageid -}}
