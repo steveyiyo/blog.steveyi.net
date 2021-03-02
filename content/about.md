@@ -23,10 +23,11 @@ draft: false
 2021 年初，希望部落格變成靜態網頁。  
 於是將部落格更換到 Hugo，目前本站是由 Hugo 所產生的
 
-在這個網站中，你會看到我的實驗筆記記錄以及心得分享或是...其他意想不到的內容(?  
+在這個網站中，你會看到我的實驗筆記記錄以及心得分享或是... 其他意想不到的內容(?  
 若發現文章有錯誤，或有任何問題的話。歡迎發郵件至 info[at]steveyi_dot_net
 
-本站所有文章以 MIT License 釋出、著作係採用創用 CC 姓名標示-相同方式分享 4.0 國際 授權條款授權。  
+本站所有文章以 MIT License 釋出、著作係採用創用 CC 姓名標示-相同方式分享 4.0 國際 授權條款授權。
+
 詳情請參考：[http://creativecommons.org/licenses/by-sa/4.0/](http://creativecommons.org/licenses/by-sa/4.0/)
 
 ![](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png)
