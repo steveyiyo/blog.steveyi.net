@@ -1,0 +1,34 @@
+baseURL: "https://blog.steveyi.net/"
+languageCode: "zh-TW"
+title: "酷小易"
+theme: "hugo-paper"
+googleAnalytics: ""
+Paginate: 7
+publishDir: "docs"
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+permalinks:
+  posts: "/:filename/"
+  categories: "/categories/:slug/"
+
+author:
+  name: 小易
+  homepage: https://steveyi.net
+menu:
+  main:
+    - identifier: about
+      name: 關於
+      url: /about/
+      weight: 0
+    - identifier: categories
+      name: 分類
+      url: /categories/
+      weight: 10
