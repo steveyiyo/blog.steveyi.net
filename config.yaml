@@ -28,7 +28,11 @@ menu:
       name: 關於
       url: /about/
       weight: 0
-    - identifier: categories
-      name: 分類
-      url: /categories/
+    - identifier: friends
+      name: 友情連結
+      url: https://steveyi.net/friends/
+      weight: 10
+    - identifier: ShortLink
+      name: 短網址
+      url: https://yiy.tw/
       weight: 10
