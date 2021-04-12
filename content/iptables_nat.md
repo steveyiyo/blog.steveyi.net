@@ -20,3 +20,8 @@ draft: false
 ```
 iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE
 ```
+
+另外，如果只想允許某段網段轉換為 NAT，則可以寫成
+```
+iptables -t nat -A POSTROUTING -s 10.121.210.0/24 -o eth1 -j MASQUERADE
+```
