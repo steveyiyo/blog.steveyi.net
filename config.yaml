@@ -1,6 +1,6 @@
 baseURL: "https://blog.steveyi.net/"
 languageCode: "zh-TW"
-title: "酷小易"
+title: "笨小易"
 theme: "hugo-paper"
 googleAnalytics: ""
 Paginate: 7
