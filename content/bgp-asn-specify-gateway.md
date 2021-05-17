@@ -50,7 +50,7 @@ yum install bird2
 理論上現有的網路供應商都會要求你必須要有 IANA 承認的 ASN 才可以進行對等
 
 不過，我們也是可以使用 Private ASN 來對等（如果對面允許的話）  
-這邊推薦使用 Vultr 的 VPS 來收全表，詳情可以參考 [在 Vultr 使用 Bird 廣播 IPv6](https://blog.steveyi.net/posts/use-bird6-broadcast-ipv6-vultr/) 這篇文章。
+這邊推薦使用 Vultr 的 VPS 來收全表，詳情可以參考 [在 Vultr 使用 Bird 廣播 IPv6](https://blog.steveyi.net/use-bird6-broadcast-ipv6-vultr/) 這篇文章。
 
 那我們由於是 Multihop，對面所發的路由我們都到不了  
 所以我們將路由放到 table 裡面

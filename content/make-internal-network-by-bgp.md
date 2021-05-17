@@ -67,7 +67,7 @@ BIRD 比較類似於寫程式的概念(? FRRouting 則是類似於 Cisco 的概�
 
 至少我是這樣認為的，但本篇是使用 FRRouting 來進行操作
 
-首先，我們可以先參考 [這篇文章](https://blog.steveyi.net/posts/frrouting-install/) 來安裝 FRRouting
+首先，我們可以先參考 [這篇文章](https://blog.steveyi.net/frrouting-install/) 來安裝 FRRouting
 
 安裝完成之後，我們進入 Cli
 ```
