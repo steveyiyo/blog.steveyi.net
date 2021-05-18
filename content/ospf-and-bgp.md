@@ -28,7 +28,7 @@ Ex: 10.121.23.242 的設備想要到我的內網下的某台設備 10.121.210.3
 
 ## 什麼是 OSPF？
 
-OSPF 全名 Open Shortest Path First，是一種 IGP 協議，使用 Link State Routing 算法
+OSPF 全名 Open Shortest Path First，是一種 IGP 協議，使用 Link State Routing 算法。
 
 IETF 中的 IGP 開發團隊在 1988 年提出 [RFC 2328](https://datatracker.ietf.org/doc/html/rfc2328)，用於 IPv4 的路由協定。
 
