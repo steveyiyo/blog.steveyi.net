@@ -3,6 +3,7 @@ title: '幫Spotify加上實時歌詞(iOS/iPadOS)'
 date: Sat, 11 Jul 2020 07:31:26 +0000
 draft: false
 tags: ['iOS', '免費資源', '生活小知識']
+Author: 蘿蔔
 ---
 
 上次有一篇介紹[各家串流平台的免費會員比較](https://blog.steveyi.net/free-streaming-music-compare/ "[2020最新] 各大串流平台免費會員比較")，各位可以發現實時歌詞很多家平台都有  

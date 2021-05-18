@@ -3,6 +3,7 @@ title: '使用"備份與還原"備份Windows 7以上的PC'
 date: Fri, 28 Aug 2020 09:09:08 +0000
 draft: false
 tags: ['免費資源', '生活小知識']
+Author: 蘿蔔
 ---
 
 Mac裡面有一個"時光機"可以簡單易用地備份整部電腦，而Windows裡面也藏著類似的功能哦！  

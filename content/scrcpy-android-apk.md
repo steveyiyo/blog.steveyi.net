@@ -3,6 +3,7 @@ title: '使用Scrcpy輕鬆安裝APK檔案到手機內'
 date: Wed, 20 May 2020 08:52:47 +0000
 draft: false
 tags: ['Android']
+Author: 蘿蔔
 ---
 
 ![](https://static.yiy.tw/media/blog/2020052008515768.png)

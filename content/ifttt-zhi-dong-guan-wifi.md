@@ -3,6 +3,7 @@ title: '使用IFTTT讓手機在離開家裡時關閉無線網路'
 date: Wed, 03 Jun 2020 04:43:06 +0000
 draft: false
 tags: ['Android', '生活小知識']
+Author: 蘿蔔
 ---
 
 由於筆者離開家裡的時候，常常忘記關掉Wi-Fi，所以就找出了這樣一個方法

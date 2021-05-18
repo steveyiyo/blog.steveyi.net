@@ -3,6 +3,7 @@ title: '從終端機更改Mac的主機名稱'
 date: Sat, 22 Aug 2020 08:25:56 +0000
 draft: false
 tags: ['生活小知識']
+Author: 蘿蔔
 ---
 
 打開終端機時，我們會看到一串字是「使用者@主機名稱」，例如John@Johns-MacBook  

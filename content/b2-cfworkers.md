@@ -1,5 +1,5 @@
 ---
-title: 'Backblaze B2和Cloudflare Workers設定自訂域名'
+title: 'Backblaze B2 和 Cloudflare Workers 設定自訂域名'
 date: Wed, 26 Feb 2020 20:36:28 +0000
 draft: true
 tags: ['伺服器', '網站日誌']

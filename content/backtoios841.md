@@ -3,6 +3,7 @@ title: '32位元iOS裝置免電腦免SHSH 降級到8.4.1'
 date: Mon, 30 Dec 2019 13:26:02 +0000
 draft: false
 tags: ['iOS']
+Author: 蘿蔔
 ---
 
 ![](https://static.yiy.tw/media/blog/2020/04/9564cd1098c2183afddb9be15db99ddf781db6b1-770x439_c.jpeg)

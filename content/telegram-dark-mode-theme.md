@@ -3,6 +3,7 @@ title: '解決Telegram在Android開啟深色模式時自動跳回預設主題的
 date: Mon, 01 Jun 2020 08:46:56 +0000
 draft: false
 tags: ['Android', '生活小知識']
+Author: 蘿蔔
 ---
 
 如果有在Telegram更改主題的用戶應該會發現，在深Android色模式下每次啟動Telegram都會被改回預設的深藍色主題非常困擾

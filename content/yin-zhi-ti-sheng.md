@@ -3,6 +3,7 @@ title: '讓手機音質提升的小技巧'
 date: Mon, 01 Jun 2020 03:55:45 +0000
 draft: false
 tags: ['Android', 'iOS', '生活小知識']
+Author: 蘿蔔
 ---
 
 註：Apple Lightning裝置以及大多數的USB-C裝置(像是Windows電腦等)也適用這篇哦  

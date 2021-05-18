@@ -3,6 +3,7 @@ title: '無需訂閱Youtube Music Premium也能讓Android的裝置享有背景�
 date: Fri, 19 Jun 2020 15:58:18 +0000
 draft: false
 tags: ['Android', '生活小知識']
+Author: 蘿蔔
 ---
 
 此處主要由Android手機作為示範，Android 平板也可以用一樣的方法唷  

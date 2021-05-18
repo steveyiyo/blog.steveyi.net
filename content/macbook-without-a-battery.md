@@ -3,6 +3,7 @@ title: '淺談Mac筆記型電腦的電池和效能的影響'
 date: Tue, 18 Aug 2020 13:16:25 +0000
 draft: false
 tags: ['生活小知識']
+Author: 蘿蔔
 ---
 
 筆者從小使用PC，直到家人幾年前買了一台MacBook Pro （額...對，不是我的，只是我借用時間比較長😂）

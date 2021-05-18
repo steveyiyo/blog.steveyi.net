@@ -3,6 +3,7 @@ title: 'iOS和macaOS上超好用的內建Spotlight搜尋小技巧'
 date: Sun, 18 Oct 2020 09:02:50 +0000
 draft: false
 tags: ['iOS', '生活小知識']
+Author: 蘿蔔
 ---
 
 不少人都買了iPhone, iPad, iPod touch或Mac，卻不知道內建的Spotlight有許多好用的功能，讓我們來看看吧！

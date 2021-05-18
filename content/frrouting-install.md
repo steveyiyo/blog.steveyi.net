@@ -5,15 +5,16 @@ draft: false
 tags: ['BGP', '伺服器']
 ---
 
-很久沒有來分享了！最近仍然在學習BGP知識及測試之前一直使用 Bird1 來廣播 BGP，後來在跟朋友 Peer 時，一直無法建立對等（很玄，但卻可以跟IX建立）
+很久沒有來分享了！最近仍然在學習 BGP 知識及測試之前一直使用 Bird1 來廣播 BGP，後來在跟朋友 Peer 時，一直無法建立對等（很玄，但卻可以跟 IX 建立）
 
-最近則卸載了 Bird1，改安裝 [FRRouting](https://frrouting.org/) 是從 Quagga Fork 來的，慢慢發展成現在  
-同時，他也是一個很強大的路由套件（ 其指令類似於 Cisco 或 Quagga ）
+於是我將 Bird1 解除安裝了，改安裝 [FRRouting](https://frrouting.org/)。
 
-使用者指南(英文): [https://docs.frrouting.org/en/latest/](https://docs.frrouting.org/en/latest/)  
-GitHub 專案: [https://github.com/FRRouting/frr/releases](https://github.com/FRRouting/frr/releases)
+[FRRouting](https://frrouting.org/) 是從 Quagga Fork 來的路由套件，功能也十分強大（ 其指令類似於 Cisco 或 Quagga ）
 
-首先，我們要先來安裝 FFRouting
+使用者指南（英文）：[https://docs.frrouting.org/en/latest/](https://docs.frrouting.org/en/latest/)  
+GitHub 專案：[https://github.com/FRRouting/frr/releases](https://github.com/FRRouting/frr/releases)
+
+首先，我們要先來安裝 [FRRouting](https://frrouting.org/)
 
 ### 更新套件
 ```

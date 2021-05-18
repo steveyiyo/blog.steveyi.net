@@ -3,6 +3,7 @@ title: '無需訂閱Youtube Music Premium也能讓iOS/iPadOS的裝置享有背�
 date: Fri, 19 Jun 2020 14:39:47 +0000
 draft: false
 tags: ['iOS', 'iOS', 'Youtube', '生活小知識', '背景播放']
+Author: 蘿蔔
 ---
 
 此處主要由iPad作為示範，iPhone也可以用一樣的方法唷  
