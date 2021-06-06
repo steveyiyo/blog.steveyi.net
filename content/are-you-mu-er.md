@@ -16,7 +16,7 @@ Author: 蘿蔔
 
 ![](https://static.yiy.tw/media/blog/2020112501583221.png)
 
-[點我前往測試](https://www.npr.org/sections/therecord/2015/06/02/411473508/how-well-can-you-hear-audio-quality "https://www.npr.org/sections/therecord/2015/06/02/411473508/how-well-can-you-hear-audio-quality")
+[點我前往測試](https://www.npr.org/sections/therecord/2015/06/02/411473508/how-well-can-you-hear-audio-quality)
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 測驗結果分析結果是，如果你能答對四個或以上，那麼你就不是木耳囉
