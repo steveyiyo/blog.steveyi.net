@@ -6,7 +6,19 @@ draft: false
 
 前幾天，我為了調整我實驗室內的網路架構，讓其可以全部走 VPN 出去，並且可以進入到我的大內網，所以在研究策略路由 (PBR)
 
-我本來是使用 Linux 的 ip rule 來建立一個新的路由表。  
+我本來是使用 VRF（三層交換）來隔離我的網路（其實這樣應該算另類的策略路由了吧X），但這樣會導致我沒辦法把我的 Service 監聽在 VRF Interface 內。
+
+導致... 我就不能架設 DoH 在路由器上了
+
+後來，我發現我可以利用其他方式做到 PBR，而不需要透過 VRF 來隔離
+
+## PBR 是什麼？
+
+PBR 全名 Policy Based Routing，是一種可以透過修改下一跳 IP Address 來達到控制路由或封包方向的一種技術
+
+## 在 Linux 下怎麼做到？
+
+Linux 下其實有許多種方式可以做到，比如說透過 Routing Daemon 或是 ``ip link`` 及 ``ip rule`` 的指令去做到
 
 ```
 # 比如說我想要讓 10.121.210.0/24 這條路由放在一張表裡面
@@ -18,15 +30,7 @@ ip route add 0.0.0.0/0 via 10.121.210.0/24 dev VPN-JP table TW
 
 但這樣的話，我每次都開機時都要執行一次 Script。
 
-後來，我則使用了 VRF（三層交換），但這樣會導致我沒辦法把我的 Service 監聽在 VRF Interface 內。
-
-## PBR 是什麼？
-
-PBR 全名 Policy Based Routing，是一種可以透過修改下一跳 IP Address 來達到控制路由或封包方向的一種技術
-
-## 在 Linux 下怎麼做到？
-
-但我又不想要透過 Script 去設定 PBR（現在只有開機自動建立 Tunnel）
+但我又不想要透過 Script 去設定 PBR
 
 ![](https://static.yiy.tw/media/blog/1621326935.png)
 
