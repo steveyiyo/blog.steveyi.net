@@ -5,8 +5,7 @@ draft: true
 tags: ['伺服器', '網站日誌']
 ---
 
-**前言**
-======
+# 前言
 
 當初架設網站的時候，考量到了圖片的存儲以及流量的問題
 
@@ -29,8 +28,7 @@ Backblaze是一家數據存儲提供商，提供兩種產品
   
 更多內容可以參考 [Backblaze官網](https://www.backblaze.com)
 
-**需要運用到的資源**
-============
+# 需要運用到的資源
 
 Cloudflare CDN
 
@@ -40,8 +38,7 @@ Cloudflare Workers
 
 Backblaze B2
 
-**教學開始**
-========
+# 教學開始
 
 1.首先，進入Cloudflare後 點擊 +Add a Site 新增一個網域
 
@@ -79,9 +76,8 @@ Worker選擇剛剛新增的Worker
 接著就大功告成啦！
 
 Cloudflare Workers程式碼：
-======================
 
-參考資料：
+Refence:
 
 1.  [Using Backblaze B2 and Cloudflare Workers for free image hosting](https://jross.me/free-personal-image-hosting-with-backblaze-b2-and-cloudflare-workers/)
 2.  [Bandwidth Alliance | BACKBLAZE](https://www.cloudflare.com/bandwidth-alliance/backblaze/)

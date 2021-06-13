@@ -32,7 +32,7 @@ OSPF 全名 Open Shortest Path First，是一種 IGP 協議，使用 Link State 
 
 IETF 中的 IGP 開發團隊在 1988 年提出 [RFC 2328](https://datatracker.ietf.org/doc/html/rfc2328)，用於 IPv4 的路由協定。
 
-在當時，由於 RIP 單一路徑最多只能支援 15 個網路設備，所以 RIP 路由協定在當時並不適合用於大型的網路環境，所以才會研發 IGRP 路由協定，並且同時開發出 OSPF 協定。 
+在當時，由於 RIP 單一路徑最多只能支 15 個網路設備，所以 RIP 路由協定在當時並不適合用於大型的網路環境，所以才會研發 IGRP 路由協定，並且同時開發出 OSPF 協定。 
 
 目前 OSPF 分為兩種版本
 

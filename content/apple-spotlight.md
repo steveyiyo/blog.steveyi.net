@@ -11,16 +11,14 @@ Author: 蘿蔔
 > Spotlight的使用方法(早期的版本可能不太一樣)：  
 > iOS/iPadOS是在主畫面往下拉、macOS則是按下選單列(右上角)的放大鏡，或是按下「command」+「空白鍵」
 
-註：Spotlight搜尋跟Siri的功能都是逐版進步的，所以有些比較舊的版本可能就沒有某些功能了，筆者以iOS/iPadOS 14和macOS Catalina作為示範。
+註：Spotlight 搜尋跟 Siri 的功能都是逐版進步的，所以有些比較舊的版本可能就沒有某些功能了，筆者以 iOS/iPadOS 14 和 macOS Catalina 作為示範。
 
 1.找裝置內的資料  
 舉凡簡訊、檔案、備忘錄、聯絡人、聯絡人的電話、地點、郵件、App什麼的都有！甚至還會可以搜尋網路上的東西！
 
-舉例來說，筆者把OPENPOINT的App放在「眼不見為淨」資料夾裡，也會寫出來，另外也會看到一些相關的東西
+舉例來說，筆者把 OPENPOINT 的 App 放在「眼不見為淨」資料夾裡，也會寫出來，另外也會看到一些相關的東西
 
 ![](https://static.yiy.tw/media/blog/2020101805554594-scaled.jpeg)
-
-  
 
 如果尋找的是聯絡資訊裡的電話號碼的話也是可以的
 
@@ -57,5 +55,5 @@ Author: 蘿蔔
 
 ![](https://static.yiy.tw/media/blog/2020101808474679.jpg)
 
-Spotlight搜尋功能非常多，筆者也沒用完全部的功能過XD  
+Spotlight 搜尋功能非常多，筆者也沒用完全部的功能過 XD  
 大家都來玩玩看吧
