@@ -1,5 +1,5 @@
 ---
-title: 'macOS重灌不求人！使用內建回復功能輕鬆重灌Mac電腦'
+title: 'macOS 重灌不求人！使用內建回復功能輕鬆重灌 Mac 電腦'
 date: Sat, 15 Aug 2020 07:25:12 +0000
 draft: false
 tags: ['生活小知識']

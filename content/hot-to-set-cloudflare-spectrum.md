@@ -1,5 +1,5 @@
 ---
-title: 'Cloudflare 新服務 spectrum設定教學'
+title: 'Cloudflare 新服務 spectrum 設定教學'
 date: Wed, 15 Apr 2020 08:50:06 +0000
 draft: false
 tags: ['Cloudflare', '伺服器']

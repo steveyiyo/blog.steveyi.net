@@ -1,12 +1,12 @@
 ---
-title: 'iOS和macaOS上超好用的內建Spotlight搜尋小技巧'
+title: 'iOS 和 macaOS 上超好用的內建 Spotlight 搜尋小技巧'
 date: Sun, 18 Oct 2020 09:02:50 +0000
 draft: false
 tags: ['iOS', '生活小知識']
 Author: 蘿蔔
 ---
 
-不少人都買了iPhone, iPad, iPod touch或Mac，卻不知道內建的Spotlight有許多好用的功能，讓我們來看看吧！
+不少人都買了 iPhone, iPad, iPod touch 或 Mac，卻不知道內建的 Spotlight 有許多好用的功能，讓我們來看看吧！
 
 > Spotlight的使用方法(早期的版本可能不太一樣)：  
 > iOS/iPadOS是在主畫面往下拉、macOS則是按下選單列(右上角)的放大鏡，或是按下「command」+「空白鍵」

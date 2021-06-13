@@ -8,7 +8,7 @@ draft: false
 ### 我是誰
 
 我是小易，許多人也習慣叫我的英文名子 - SteveYi  
-彰化人，目前是一個高二生
+居住於彰化，目前是一個高二生
 
 從小學時期就很喜歡虛擬化技術，最初在家裡的電腦上安裝 [Virtual Box](https://www.virtualbox.org/) 及 [VMware Workstation](https://www.vmware.com/products/workstation-pro.html) 程式來虛擬系統使用  
 目前則在伺服器上使用 [PVE](https://pve.proxmox.com/) 來進行虛擬化

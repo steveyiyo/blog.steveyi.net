@@ -1,5 +1,5 @@
 ---
-title: '在Linux環境下無腦串接Google雲端硬碟'
+title: '在 Linux 環境下無腦串接 Google 雲端硬碟'
 date: Tue, 19 Jan 2021 12:25:49 +0000
 draft: false
 tags: ['Google', '免費資源', '生活小知識', '網際網路']

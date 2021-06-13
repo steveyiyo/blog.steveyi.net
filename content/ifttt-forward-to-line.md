@@ -1,5 +1,5 @@
 ---
-title: '使用IFTTT將未接來電、簡訊轉送至LINE'
+title: '使用 IFTTT 將未接來電、簡訊轉送至 LINE'
 date: Tue, 07 Apr 2020 04:56:37 +0000
 draft: false
 tags: ['生活小知識']

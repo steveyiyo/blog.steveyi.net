@@ -1,11 +1,11 @@
 ---
-title: '建立Cloud Identity帳戶'
+title: '建立 Cloud Identity 帳戶'
 date: Fri, 15 May 2020 20:35:11 +0000
 draft: false
 tags: ['G-Suite', 'GCP', 'Google', '網域', '網站日誌']
 ---
 
-首先，進入[Cloud Identity申請頁面](https://gsuite.google.com/signup/gcpidentity/welcome) 點擊下一頁
+首先，進入 [Cloud Identity 申請頁面](https://gsuite.google.com/signup/gcpidentity/welcome) 點擊下一頁
 
 ![](https://static.yiy.tw/media/blog/2020051520063750.png)
 
@@ -21,7 +21,7 @@ tags: ['G-Suite', 'GCP', 'Google', '網域', '網站日誌']
 
 ![](https://static.yiy.tw/media/blog/2020051520072596.png)
 
-輸入要設定的網域（不得使用於其他 G Suite服務）
+輸入要設定的網域（不得使用於其他 G Suite 服務）
 
 ![](https://static.yiy.tw/media/blog/2020051520074395.png)
 

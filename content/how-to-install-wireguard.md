@@ -1,5 +1,5 @@
 ---
-title: '在Linux系統上安裝Wireguard'
+title: '在 Linux 系統上安裝 Wireguard'
 date: Sat, 16 May 2020 11:51:52 +0000
 draft: false
 tags: ['BGP', '伺服器']

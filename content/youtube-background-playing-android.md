@@ -1,5 +1,5 @@
 ---
-title: '無需訂閱Youtube Music Premium也能讓Android的裝置享有背景播放的功能(Youtube也適用哦！)'
+title: '無需訂閱 Youtube Music Premium 也能讓 Android 的裝置享有背景播放的功能 (Youtube 也適用哦！)'
 date: Fri, 19 Jun 2020 15:58:18 +0000
 draft: false
 tags: ['Android', '生活小知識']

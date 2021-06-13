@@ -1,5 +1,5 @@
 ---
-title: '幫Spotify加上實時歌詞(iOS/iPadOS)'
+title: '幫 Spotify 加上實時歌詞 (iOS/iPadOS)'
 date: Sat, 11 Jul 2020 07:31:26 +0000
 draft: false
 tags: ['iOS', '免費資源', '生活小知識']
@@ -7,12 +7,12 @@ Author: 蘿蔔
 ---
 
 上次有一篇介紹[各家串流平台的免費會員比較](https://blog.steveyi.net/free-streaming-music-compare/ "[2020最新] 各大串流平台免費會員比較")，各位可以發現實時歌詞很多家平台都有  
-但Spotify根據筆者測試只有Premium用戶能用，稍嫌可惜  
-這時想要聽著Spotify的免費音樂，但又覺得沒歌詞不能一起唱很麻煩嗎  
+但 Spotify 根據筆者測試只有 Premium 用戶能用，稍嫌可惜  
+這時想要聽著 Spotify 的免費音樂，但又覺得沒歌詞不能一起唱很麻煩嗎  
 這時候照這篇文章做就可以解決這個問題囉
 
   
-這篇文章適用iOS/iPadOS用戶，Android用戶在[另外一篇](https://blog.steveyi.net/no-premium-spotify-dynamic-lyrics/ "不用Premium也可以幫Spotify加上實時歌詞(iOS/iPadOS)")唷
+這篇文章適用 iOS/iPadOS 用戶，Android 用戶在 [另外一篇](https://blog.steveyi.net/no-premium-spotify-dynamic-lyrics/) 唷
 
 開始吧
 ---
