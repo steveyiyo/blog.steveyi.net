@@ -40,7 +40,7 @@ draft: false
 於是將部落格更換到 Hugo，目前本站是由 Hugo 所產生的  
 這代表使用者在載入網頁時，不需要後端處理使用者請求的內容
 
-因為是靜態網站，所以我將其架設於 [Cloudflare Pages](https://pages.cloudflare.com/)，救不需要針對此網站維護任何的後端伺服器了！
+因為是靜態網站，所以我將其架設於 [Cloudflare Pages](https://pages.cloudflare.com/)，就不需要針對此網站維護任何的後端伺服器了！
 
 ### 從社群中學習，回饋於社群
 
@@ -56,8 +56,8 @@ draft: false
 
 ### 與我聯繫
 
-若發現文章有誤（ 歡迎發 [PR](https://github.com/steveyiyo/blog_source/pulls) ），或有任何疑問的話。  
-歡迎發電子郵件至 info[at]steveyi_dot_net
+若發現文章有誤，歡迎發 [PR](https://github.com/steveyiyo/blog_source/pulls)！  
+若有任何疑問的話，歡迎發電子郵件至 info[at]steveyi_dot_net
 
 ### 授權
 
