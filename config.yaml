@@ -2,7 +2,7 @@ baseURL: "https://blog.steveyi.net/"
 languageCode: "zh-TW"
 title: "酷小易"
 theme: "hugo-paper"
-googleAnalytics: ""
+googleAnalytics: "G-CPGWT2M3VT"
 Paginate: 7
 publishDir: "docs"
 
