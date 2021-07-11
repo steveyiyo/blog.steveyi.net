@@ -18,10 +18,10 @@ GitHub 專案：[https://github.com/FRRouting/frr/releases](https://github.com/F
 
 ### 更新套件
 ```
-apt update -y
-apt upgrade -y
+sudo apt update -y
+sudo apt upgrade -y
 # 安裝網路套件及 GPG 套件
-apt install -y curl gnupg2 traceroute
+sudo apt install -y curl gnupg2 traceroute
 ```
 ### 安裝 FRRouting
 ```
@@ -44,13 +44,13 @@ net.ipv6.conf.default.forwarding = 1
 net.ipv6.conf.all.forwarding = 1
 net.ipv6.conf.all.proxy_ndp = 1
 net.ipv6.conf.all.accept_ra = 2
-" | tee -a /etc/sysctl.conf
+" | sudo tee -a /etc/sysctl.conf
 
-sysctl -p
+sudo sysctl -p
 ```
 ### 啟動 FRRouting 所有功能
 ```
-sed -i "s/=no/=yes/g" /etc/frr/daemons
+sudo sed -i "s/=no/=yes/g" /etc/frr/daemons
 service frr restart
 ```
 ### 進入 FRRouting 互動 Cli
