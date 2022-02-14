@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>伺服器 on 小易的部落格</title><link>https://blog.steveyi.net/tags/%E4%BC%BA%E6%9C%8D%E5%99%A8/</link><description>小易的部落格 (伺服器)</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Fri, 20 Nov 2020 18:31:04 +0000</lastBuildDate><atom:link href="https://blog.steveyi.net/tags/%E4%BC%BA%E6%9C%8D%E5%99%A8/index.xml" rel="self" type="application/rss+xml"/><item><title>利用 WireGuard 建立大內網</title><link>https://blog.steveyi.net/posts/using-wireguard-to-make-intranet/</link><pubDate>Fri, 20 Nov 2020 18:31:04 +0000</pubDate><guid>https://blog.steveyi.net/posts/using-wireguard-to-make-intranet/</guid><description>&lt;p>Hi 大家好，今天來分享一下如何使用WireGuard建立大內網&lt;/p>
+&lt;p>之前有與大家分享過 &lt;a href="https://blog.steveyi.net/how-to-install-wireguard/">在 Linux 系統上安裝 Wireguard&lt;/a>，那這次我們要利用 WireGuard 來建立大內網&lt;/p>
+&lt;p>為什麼筆者稱這次要建立&amp;quot;大內網&amp;quot;呢？&lt;br>
+因為筆者也許多不同地方的網路，想藉由這次機會，來把他們都加進同一個局域網&lt;/p>
+&lt;p>這樣也可以解決一些連線問題，比如筆者常常連線回到家中的電腦&lt;br>
+但因為公網IP只有幾個，當機器太多時，就需要設定內網穿透&lt;/p>
+&lt;p>但筆者架設了內網之後，在外面只需要連入VPN，在其他網路區域，就可以存取所有網路設備了（這也類似於一般企業的遠端存取）&lt;/p>
+&lt;p>那麼，我們一樣需要有一個主伺服器當網關。不過，我們不使用 NAT TO NAT，而是透過私網IP來進行互連&lt;/p>
+&lt;p>我們的情境是這樣：&lt;/p>
+&lt;pre tabindex="0">&lt;code>A辦公室 路由器 10.121.208.254/24
+B辦公室 路由器 10.121.209.254/24
+C辦公室 路由器 10.121.210.254/24
+VPN路由器 10.121.211.254/24
+&lt;/code>&lt;/pre>&lt;p>首先，由於我們這次是純粹架設大內網，以WireGuard搭配靜態路由為主。所以先不講到路由協議（不過下次會介紹）&lt;/p>
+&lt;p>我們需要有一個主路由器，並透過它來連接A,B,C辦公室的路由器&lt;/p>
+&lt;p>所以會變成下面這樣&lt;/p>
+&lt;pre tabindex="0">&lt;code>VPN &amp;lt;-&amp;gt; A
+VPN &amp;lt;-&amp;gt; B
+VPN &amp;lt;-&amp;gt; C
+&lt;/code>&lt;/pre>&lt;p>當A的用戶想去C時(10.121.208.1 &amp;lt;-&amp;gt; 10.121.210.2) 路線會變成&amp;hellip;&lt;/p>
+&lt;p>User-A -&amp;gt; 10.121.208.254 -&amp;gt; 10.121.211.254 -&amp;gt; 10.121.210.254 -&amp;gt; 10.121.210.2(User-C)&lt;/p>
+&lt;p>也就是 User-A -&amp;gt; A的路由器 -&amp;gt; VPN Gateway -&amp;gt; C的路由器 -&amp;gt; User-C&lt;/p>
+&lt;p>那我們搞懂原理，就來實作啦！&lt;/p>
+&lt;p>首先，我先先準備好私鑰及公鑰（公鑰是由私鑰算過來的）&lt;/p>
+&lt;p>A&amp;rsquo;s Public key: WGokwN2HtiX+naa7hdvUaXoXk5tkzXQtMge4v9DKlVw=&lt;br>
+B&amp;rsquo;s Public key: fVNXw6EpC65DmIsY/XsWXL6EXLU9oFW7CL5cZr82Di8=&lt;br>
+C&amp;rsquo;s Public key: ORbEFZlR/IWFWaD42Nh00DfYEpCX2CbNmRy/Hc+crVQ=&lt;br>
+VPN&amp;rsquo;s Public Key: Rxcti9/3jLII4JOscHn9/yp5Z8ZROcYk8tugXn/FRHM=&lt;/p>
+&lt;p>那我們就在配置中這樣寫&amp;hellip;&lt;/p>
+&lt;pre tabindex="0">&lt;code>[Interface]
+PrivateKey = &amp;lt;各處的private key&amp;gt;
+Address = &amp;lt;各個路由器的IP，比如說A路由器 10.121.208.254/24&amp;gt;
+[Peer]
+PublicKey = &amp;lt;VPN Gateway Public Key&amp;gt;
+Endpoint = &amp;lt;VPN Gateway's EndPoint&amp;gt;
+AllowedIPs = 10.121.209.0/24,10.121.210.0/24,10.121.211.0/24
+PersistentKeepalive = 10
+&lt;/code>&lt;/pre>&lt;p>我們在個節點這樣配，上方例子是A路由器的&lt;br>
+B路由器則是這樣&lt;/p>
+&lt;pre tabindex="0">&lt;code>[Interface]
+PrivateKey = &amp;lt;各處的private key&amp;gt;
+Address = &amp;lt;各個路由器的IP，比如說B路由器 10.121.209.254/24&amp;gt;
+[Peer]
+PublicKey = &amp;lt;VPN Gateway Public Key&amp;gt;
+Endpoint = &amp;lt;VPN Gateway's EndPoint&amp;gt;
+AllowedIPs = 10.121.208.0/24,10.121.210.0/24,10.121.211.0/24
+PersistentKeepalive = 10
+&lt;/code>&lt;/pre>&lt;p>相Ｎ信C路由器大家應該就會配了&lt;/p>
+&lt;p>最後，大家只需要在每台路由器上執行指令 &lt;code>wg-quick up &amp;lt;wireguard_網卡名稱&amp;gt;&lt;/code> 就可以互通啦！&lt;/p>
+&lt;p>特別注意：這種網路架構，如果VPN Gateway掉線了，那A,B,C也就不能彼此互通了&lt;/p></description></item><item><title>透過 iperf3 來測試內網速度</title><link>https://blog.steveyi.net/posts/iperf3/</link><pubDate>Sun, 08 Nov 2020 13:26:11 +0000</pubDate><guid>https://blog.steveyi.net/posts/iperf3/</guid><description>&lt;p>不久前，筆者換了新的交換機。為了測試內網的傳輸速度，筆者發現了這款工具 - &lt;a href="https://iperf.fr/iperf-download.php">iperf3&lt;/a>&lt;/p>
+&lt;p>這是一個支援 Ｗindows, Linux, macOS 的測試程式，主要是透過指令來操作&lt;br>
+筆者也常常用來測試兩個不同地區伺服器的速度&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020110813145837.png" alt="">&lt;/p>
+&lt;p>那麼，以下分享一下安裝方法&lt;/p>
+&lt;p>首先，進入 &lt;a href="https://iperf.fr/iperf-download.php">iperf3 官網&lt;/a>後，找到對應的系統(如果是 Windows 就選擇 Windows, macOS 則選擇 macos, Linux亦同&amp;hellip;)&lt;/p>
+&lt;p>會下載一個 .zip 的檔案，將其解壓縮&lt;/p>
+&lt;p>並打開命令控制字元（macOS 及 Linux 則是 Terminal 也可以透過 SSH 進行操作），輸入 &lt;code>cd &amp;lt;資料夾路徑&amp;gt;&lt;/code>，接著輸入 iperf3 指令&lt;/p>
+&lt;p>&lt;code>iperf3 -s&lt;/code> #用於伺服端的&lt;br>
+&lt;code>iperf3 -c &amp;lt;伺服端IP&amp;gt;&lt;/code> #用於客戶端的&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020110813255574.png" alt="">&lt;/p>
+&lt;p>就會開始跑測速啦！&lt;/p>
+&lt;p>大家比較需要注意的點是，在內網的話，需要確認內網是互通的(同一個 LAN 就是互通的)&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020110813230558.png" alt="">&lt;/p>
+&lt;p>我們也可以使用 ping 指令去測試網路是否通的，在部分設備上（如 Windows），可能預設將 ICMP 屏蔽了。需要特別到防火牆裡面開啟&lt;/p></description></item><item><title>FRRouting 安裝教學</title><link>https://blog.steveyi.net/posts/frrouting-install/</link><pubDate>Sun, 12 Jul 2020 13:07:14 +0000</pubDate><guid>https://blog.steveyi.net/posts/frrouting-install/</guid><description>&lt;p>很久沒有來分享了！最近仍然在學習 BGP 知識及測試之前一直使用 Bird1 來廣播 BGP，後來在跟朋友 Peer 時，一直無法建立對等（很玄，但卻可以跟 IX 建立）&lt;/p>
+&lt;p>於是我將 Bird1 解除安裝了，改安裝 &lt;a href="https://frrouting.org/">FRRouting&lt;/a>。&lt;/p>
+&lt;p>&lt;a href="https://frrouting.org/">FRRouting&lt;/a> 是從 Quagga Fork 來的路由套件，功能也十分強大（ 其指令類似於 Cisco 或 Quagga ）&lt;/p>
+&lt;p>使用者指南（英文）：&lt;a href="https://docs.frrouting.org/en/latest/">https://docs.frrouting.org/en/latest/&lt;/a>&lt;br>
+GitHub 專案：&lt;a href="https://github.com/FRRouting/frr/releases">https://github.com/FRRouting/frr/releases&lt;/a>&lt;/p>
+&lt;p>首先，我們要先來安裝 &lt;a href="https://frrouting.org/">FRRouting&lt;/a>&lt;/p>
+&lt;h3 id="更新套件" >更新套件
+&lt;span>
+&lt;a href="#%e6%9b%b4%e6%96%b0%e5%a5%97%e4%bb%b6">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h3>&lt;pre tabindex="0">&lt;code>sudo apt update -y
+sudo apt upgrade -y
+# 安裝網路套件及 GPG 套件
+sudo apt install -y curl gnupg2 traceroute
+&lt;/code>&lt;/pre>&lt;h3 id="安裝-frrouting" >安裝 FRRouting
+&lt;span>
+&lt;a href="#%e5%ae%89%e8%a3%9d-frrouting">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h3>&lt;pre tabindex="0">&lt;code># 導入 GPG
+curl -s https://deb.frrouting.org/frr/keys.asc | sudo apt-key add -
+FRRVER=&amp;quot;frr-stable&amp;quot;
+# 寫入軟體源
+echo deb https://deb.frrouting.org/frr $(lsb_release -s -c) $FRRVER | sudo tee -a /etc/apt/sources.list.d/frr.list
+# 安裝 FRRouting
+sudo apt update -y &amp;amp;&amp;amp; sudo apt install -y frr frr-pythontools
+&lt;/code>&lt;/pre>&lt;h3 id="開啟-ip-forwarding" >開啟 IP forwarding
+&lt;span>
+&lt;a href="#%e9%96%8b%e5%95%9f-ip-forwarding">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h3>&lt;pre tabindex="0">&lt;code>echo &amp;quot;
+net.ipv4.conf.all.forwarding = 1
+net.ipv6.conf.all.disable_ipv6 = 0
+net.ipv6.conf.default.disable_ipv6 = 0
+net.ipv6.conf.lo.disable_ipv6 = 0
+net.ipv6.conf.default.forwarding = 1
+net.ipv6.conf.all.forwarding = 1
+net.ipv6.conf.all.proxy_ndp = 1
+net.ipv6.conf.all.accept_ra = 2
+&amp;quot; | sudo tee -a /etc/sysctl.conf
+sudo sysctl -p
+&lt;/code>&lt;/pre>&lt;h3 id="啟動-frrouting-所有功能" >啟動 FRRouting 所有功能
+&lt;span>
+&lt;a href="#%e5%95%9f%e5%8b%95-frrouting-%e6%89%80%e6%9c%89%e5%8a%9f%e8%83%bd">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h3>&lt;pre tabindex="0">&lt;code>sudo sed -i &amp;quot;s/=no/=yes/g&amp;quot; /etc/frr/daemons
+service frr restart
+&lt;/code>&lt;/pre>&lt;h3 id="進入-frrouting-互動-cli" >進入 FRRouting 互動 Cli
+&lt;span>
+&lt;a href="#%e9%80%b2%e5%85%a5-frrouting-%e4%ba%92%e5%8b%95-cli">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h3>&lt;pre tabindex="0">&lt;code>sudo vtysh
+&lt;/code>&lt;/pre>&lt;p>進入互動式 Cli，不出意外的話&lt;br>
+應該會看到下面這樣&lt;/p>
+&lt;p>接著就可以進行配置了&lt;br>
+鍵入 config 就可以進入設定界面囉！&lt;/p></description></item><item><title>PVE入門心得-安裝篇</title><link>https://blog.steveyi.net/posts/pve-install/</link><pubDate>Tue, 07 Jul 2020 05:33:14 +0000</pubDate><guid>https://blog.steveyi.net/posts/pve-install/</guid><description>&lt;p>玩虛擬機有一段時間了，不過是在Windows系統下裝VMware Workstation玩xD&lt;br>
+後來閒置了幾台電腦，恰好也查詢到PVE(Proxmox VE)這個開源虛擬系統，於是 我們就來安裝玩玩吧!&lt;/p>
+&lt;p>前期準備:&lt;/p>
+&lt;p>Proxmox VE 安裝碟&lt;br>
+高核心且空閒的電腦(不然跑起來會很卡)&lt;/p>
+&lt;p>首先，我們先到官方網站下載PVE的ISO檔案 &lt;a href="https://www.proxmox.com/en/downloads">官網載點&lt;/a>&lt;br>
+點擊左方的 &lt;a href="https://www.proxmox.com/en/downloads/item/proxmox-ve-6-2-iso-installer">Proxmox VE 6.2 ISO Installer&lt;/a> 來下載(6.2是版本號，右方則是種子下載)&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070100471381.png" alt="">&lt;/p>
+&lt;p>下載好之後，我們將檔案寫入USB中，做成安裝碟&lt;br>
+這邊推薦使用Etcher來寫入，&lt;a href="https://www.balena.io/etcher/">官網連結&lt;/a>&lt;/p>
+&lt;p>做好安裝碟之後，我們進入BIOS，並調整開機順序(將安裝碟設為第一順位)&lt;/p>
+&lt;p>接著我們就可以進行安裝了!&lt;/p>
+&lt;p>首先，選擇第一個 Install Proxmox VE&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070705281974.png" alt="">&lt;/p>
+&lt;p>接著同意服務條款&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070705274149.png" alt="">&lt;/p>
+&lt;p>選擇硬碟&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070705275335.png" alt="">&lt;/p>
+&lt;p>選擇國家及時區&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070705280757.png" alt="">&lt;/p>
+&lt;p>設置root密碼及電子郵件地址&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070705282498.png" alt="">&lt;/p>
+&lt;p>設置主機名稱及網路(這邊建議一次就設定好，不然後續修改IP有點麻煩)&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070705283457.png" alt="">&lt;/p>
+&lt;p>全部完成後，就點擊Install來進行安裝!&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070705284395.png" alt="">&lt;/p>
+&lt;p>安裝完成後，我們使用 https://你的IP:8006 就可以進入管理面板囉!&lt;/p>
+&lt;p>下一篇，我們將與大家分享一些配置的過程&lt;/p></description></item><item><title>在 Ubuntu 系統下架設 Tunnel Broker 服務 (v4 to v6)</title><link>https://blog.steveyi.net/posts/tunnel-broker-bgp/</link><pubDate>Sun, 31 May 2020 16:56:41 +0000</pubDate><guid>https://blog.steveyi.net/posts/tunnel-broker-bgp/</guid><description>&lt;h3 id="前言" >前言
+&lt;span>
+&lt;a href="#%e5%89%8d%e8%a8%80">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h3>&lt;p>之前拿到了一個自治號碼(AS Number)，也拿到了1個 /44 及兩個 /48 的iPv6&lt;br>
+恰好最近想到之前有使用過HE.Net的tunnel broker服務&lt;br>
+這次就來架設一下sit隧道的tunnel broker服務！本篇不會說明ipv6的取得方式，請自行詢問主機提供商&lt;/p>
+&lt;p>本篇將使用開源工具-&lt;a href="https://github.com/sskaje/6in4.git">IPv6-in-IPv4 Tunnel&lt;/a>&lt;/p>
+&lt;h3 id="配置工具" >配置工具
+&lt;span>
+&lt;a href="#%e9%85%8d%e7%bd%ae%e5%b7%a5%e5%85%b7">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h3>&lt;p>首先，將工具下載下來&lt;/p>
+&lt;pre tabindex="0">&lt;code>git clone [https://github.com/sskaje/6in4.git](https://github.com/sskaje/6in4)
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020053018041378.jpg" alt="">&lt;/p>
+&lt;p>我們進入項目的etc資料夾，並修改config.ini&lt;/p>
+&lt;pre tabindex="0">&lt;code>nano config.ini
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020053018044764.jpg" alt="">&lt;/p>
+&lt;p>依序編輯 IPV6_NETWORK, IPV6_CIDR, INTERFACE, BIND_IP(有多iPv4需要)&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020053018050652.jpg" alt="">&lt;/p>
+&lt;p>接著輸入 Crtl + X 來保存&lt;/p>
+&lt;h3 id="修改系統設定來允許ipv6轉發" >修改系統設定來允許iPv6轉發
+&lt;span>
+&lt;a href="#%e4%bf%ae%e6%94%b9%e7%b3%bb%e7%b5%b1%e8%a8%ad%e5%ae%9a%e4%be%86%e5%85%81%e8%a8%b1ipv6%e8%bd%89%e7%99%bc">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h3>&lt;pre tabindex="0">&lt;code>nano /etc/sysctl.conf
+在最下方添加下方這項net.ipv6.conf.all.forwarding = 1
+Crtl + X 保存
+sysctl -p
+&lt;/code>&lt;/pre>&lt;h3 id="防火牆" >防火牆
+&lt;span>
+&lt;a href="#%e9%98%b2%e7%81%ab%e7%89%86">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h3>&lt;pre tabindex="0">&lt;code>iptables -I INPUT -p 41 --j ACCEPT
+iptables -I OUTPUT -p 41 --j ACCEPT
+iptables -I FORWARD -p 41 --j ACCEPT
+&lt;/code>&lt;/pre>&lt;h3 id="使用工具建立伺服端新增隧道" >使用工具建立伺服端(新增隧道)
+&lt;span>
+&lt;a href="#%e4%bd%bf%e7%94%a8%e5%b7%a5%e5%85%b7%e5%bb%ba%e7%ab%8b%e4%bc%ba%e6%9c%8d%e7%ab%af%e6%96%b0%e5%a2%9e%e9%9a%a7%e9%81%93">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h3>&lt;p>假設隧道ID為1，伺服端IPv4為1.1.1.1 用戶端IPv4為8.8.8.8]&lt;/p>
+&lt;p>配置文件中設置的IPv6子網為 2a0e:b107:7e0::，子網路遮罩為48(必須為8的倍數)工具會自動分割出 一個用於隧道的 /64子網及一個用於用戶路由的 /64子網&lt;/p>
+&lt;p>如果用戶端需要給其下級設備分配的話，建議伺服端的子網 應大於 /64，這樣才能產生 /64的下級子網，以保證SLAAC的運作。&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020053018052119.jpg" alt="">&lt;/p>
+&lt;p>接著我們就可以至用戶端配置了！(配置過程可以參考&lt;a href="https://tunnelbroker.net/">https://tunnelbroker.net/&lt;/a>)&lt;/p>
+&lt;h3 id="報錯sipcalc-required" >報錯：sipcalc required
+&lt;span>
+&lt;a href="#%e5%a0%b1%e9%8c%afsipcalc-required">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h3>&lt;p>我在第一次新增隧道時，遇到了這個問題&lt;br>
+解決方式如下&lt;/p>
+&lt;pre tabindex="0">&lt;code>CentOS:
+yum install sipcalc
+Ubuntu/Debian:
+apt-get install sipcalc
+&lt;/code>&lt;/pre>&lt;h3 id="測試結果" >測試結果
+&lt;span>
+&lt;a href="#%e6%b8%ac%e8%a9%a6%e7%b5%90%e6%9e%9c">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h3>&lt;p>&lt;a href="https://test-ipv6.com/">https://test-ipv6.com/&lt;/a> 測試結果&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020053018053577.png" alt="">&lt;/p>
+&lt;p>路由追蹤&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020053018054471.jpg" alt="">&lt;/p>
+&lt;p>完成！&lt;/p>
+&lt;h3 id="參考資料" >參考資料：
+&lt;span>
+&lt;a href="#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h3>&lt;p>&lt;a href="https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sithttps://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/https://github.com/sskaje/6in4https://www.ciscopress.com/articles/article.asp?p=2154680">https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sit&lt;/a>&lt;br>
+&lt;a href="https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sithttps://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/https://github.com/sskaje/6in4https://www.ciscopress.com/articles/article.asp?p=2154680">https://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/&lt;/a>&lt;br>
+&lt;a href="https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sithttps://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/https://github.com/sskaje/6in4https://www.ciscopress.com/articles/article.asp?p=2154680">https://github.com/sskaje/6in4&lt;/a>&lt;br>
+&lt;a href="https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sithttps://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/https://github.com/sskaje/6in4https://www.ciscopress.com/articles/article.asp?p=2154680">https://www.ciscopress.com/articles/article.asp?p=2154680&lt;/a>&lt;/p></description></item><item><title>在 Linux 系統上安裝 Wireguard</title><link>https://blog.steveyi.net/posts/how-to-install-wireguard/</link><pubDate>Sat, 16 May 2020 11:51:52 +0000</pubDate><guid>https://blog.steveyi.net/posts/how-to-install-wireguard/</guid><description>&lt;p>&lt;a href="https://wireguard.com">Wireguard&lt;/a>是一個點對點加密網路&lt;/p>
+&lt;p>一直以來，我都使用它來管理我所有的雲端主機&lt;/p>
+&lt;p>今天就來分享一下安裝方法吧！&lt;/p>
+&lt;p>安裝指令請參考 &lt;a href="https://www.wireguard.com/install/">https://www.wireguard.com/install/&lt;/a>&lt;/p>
+&lt;p>首先，進入Wireguard安裝資料夾&lt;br>
+如果找不到的話，請建立一下&lt;/p>
+&lt;pre tabindex="0">&lt;code>cd /etc/wireguard
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051611394599.png" alt="">&lt;/p>
+&lt;p>接著，我們使用指令來產生公私鑰，並使用cat查看公私鑰內容&lt;/p>
+&lt;pre tabindex="0">&lt;code>wg genkey | tee privatekey | wg pubkey &amp;gt; publickey
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051611445527.png" alt="">&lt;/p>
+&lt;p>接著我們將公私鑰記下來，我們建立一個配置文件&lt;/p>
+&lt;pre tabindex="0">&lt;code>nano wg0.conf
+&lt;/code>&lt;/pre>&lt;p>進入nano 編輯器後，我們將下方代碼貼上，並修改公私鑰&lt;/p>
+&lt;pre tabindex="0">&lt;code>[Interface]
+Address = 192.168.200.1/24 //這邊可以自定網段
+SaveConfig = true
+ListenPort = 51820
+PrivateKey = 修改為私鑰
+[Peer]
+PublicKey = 對方的公鑰
+AllowedIPs = 192.168.200.2/24 //對方的網段
+&lt;/code>&lt;/pre>&lt;p>接著輸入 Crtl + X 在輸入y 退出編輯器&lt;/p>
+&lt;p>接著使用指令，來存檔並啟用wireguard&lt;/p>
+&lt;pre tabindex="0">&lt;code>wg-quick save wg0
+wg-quick down wg0
+wg-quick up wg0
+&lt;/code>&lt;/pre>&lt;p>PS.開機自動啟動指令&lt;/p>
+&lt;pre tabindex="0">&lt;code>systemctl enable wg-quick@wg0
+&lt;/code>&lt;/pre>&lt;p>接著可以嘗試ping看看，如果有響應的話&lt;/p>
+&lt;p>代表成功了！&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051612102187.png" alt="">&lt;/p></description></item><item><title>Backblaze B2 支援 S3 API 了！</title><link>https://blog.steveyi.net/posts/backblaze-b2-compatible-s3-api/</link><pubDate>Thu, 14 May 2020 03:08:02 +0000</pubDate><guid>https://blog.steveyi.net/posts/backblaze-b2-compatible-s3-api/</guid><description>&lt;p>前幾天打開 Backblaze 後，看到一行大大的字&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051402585860.png" alt="">&lt;/p>
+&lt;p>沒錯！S3 API 跟 Backblaze B2 兼容啦！&lt;/p>
+&lt;p>S3 API 是目前市面上最流行的協定，很多軟硬體都兼容&lt;/p>
+&lt;p>Backblaze B2 則是非常棒的雲端存處(低價優勢)&lt;/p>
+&lt;h2 id="如何使用-s3-api" >如何使用 S3 API
+&lt;span>
+&lt;a href="#%e5%a6%82%e4%bd%95%e4%bd%bf%e7%94%a8-s3-api">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>若存處桶是在 2020/05/04 前創立的，則要創立一個新的，並將檔案移入(推薦使用 &lt;a href="https://rclone.org">Rclone&lt;/a>，會自動支援 &lt;a href="https://www.backblaze.com/b2/docs/b2_copy_file.html">B2 Copy File&lt;/a>)&lt;/p>
+&lt;p>然後創建一個新的 App Key (不要使用主要的喔)&lt;/p>
+&lt;p>有關於一些 B2 的文章介紹:&lt;/p>
+&lt;p>&lt;a href="https://blog.steveyi.net/backblaze-b2/">Backblaze B2 低價的雲端數據存儲服務&lt;/a>&lt;br>
+&lt;a href="https://blog.steveyi.net/b2-cfworkers/">Backblaze B2 和 Cloudflare Workers 設定自訂域名&lt;/a>&lt;br>
+&lt;a href="https://blog.steveyi.net/backblaze-eu-central/">BackBlaze 宣布第一個歐洲數據中心啟用&lt;/a>&lt;/p></description></item><item><title>Cloudflare 新服務 spectrum 設定教學</title><link>https://blog.steveyi.net/posts/hot-to-set-cloudflare-spectrum/</link><pubDate>Wed, 15 Apr 2020 08:50:06 +0000</pubDate><guid>https://blog.steveyi.net/posts/hot-to-set-cloudflare-spectrum/</guid><description>&lt;p>今天早上打開&lt;a href="https://facebook.com/">FaceBook&lt;/a>時，發現&lt;a href="https://cloudflare.com/">Cloudflare&lt;/a>推出了一個新服務 - &lt;a href="https://cfl.re/3efcOhv">Spectrum&lt;/a>&lt;br>
+目前是提供給所有付費用戶使用，不知道未來有沒有機會開放給免費客戶&lt;br>
+官方部落格連結: &lt;a href="https://cfl.re/3efcOhv">https://cfl.re/3efcOhv&lt;/a>&lt;/p>
+&lt;p>正好我有幾個網域有使用Plesk Plus的服務（此服務已下架），算是Cloudflare Pro版本 所以也可以開通這個功能！&lt;/p>
+&lt;p>那就來記錄一下設定過程吧&lt;/p>
+&lt;p>首先，進入網域設定 上方選擇 Spectrum&lt;br>
+接著點擊 Enable &lt;a href="https://cfl.re/3efcOhv">Spectrum&lt;/a>&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020050916443011-1920x1142.png" alt="">&lt;/p>
+&lt;p>開通完成後，點擊 Create an application&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020050916445886-1920x1142.png" alt="">&lt;/p>
+&lt;p>選擇SSH(22端口)或是Minecraft(65535端口) (如果是企業版可以使用RDP)&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020050916452556-1920x1142.png" alt="">&lt;/p>
+&lt;p>接著輸入子網域及IP位置，並按Save&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020050916455234-1920x1142.png" alt="">&lt;/p>
+&lt;p>接著我們就可以等待生效囉！&lt;/p>
+&lt;p>可以使用終端(dig 網域名稱)或是&lt;a href="https://dns.google/">Google Public DNS&lt;/a>查詢CNAME紀錄&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020050916461922-1920x1142.png" alt="">&lt;/p>
+&lt;p>目前這個服務&lt;br>
+Pro版本提供5GB流量/月&lt;br>
+Business版本提供10GB流量/月&lt;br>
+超過1GB，以0.1USD計價&lt;br>
+&lt;a href="https://www.cloudflare.com/products/cloudflare-spectrum/">https://www.cloudflare.com/products/cloudflare-spectrum/&lt;/a>&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020050916464540-1920x1142.png" alt="">&lt;/p>
+&lt;p>對於DDOS防禦很頭痛的可以試試看～！&lt;/p></description></item><item><title>在 Vultr 使用 Bird6 廣播 IPv6</title><link>https://blog.steveyi.net/posts/use-bird6-broadcast-ipv6-vultr/</link><pubDate>Fri, 10 Apr 2020 02:21:55 +0000</pubDate><guid>https://blog.steveyi.net/posts/use-bird6-broadcast-ipv6-vultr/</guid><description>&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/vu-00.png" alt="">&lt;/p>
+&lt;p>&lt;strong>建議可以參考於 2021年01月24日 的 &lt;a href="https://blog.steveyi.net/make-internal-network-by-bgp/">透過 BGP 與朋友組成內網&lt;/a> 文章&lt;/strong>&lt;/p>
+&lt;p>這次就來分享一下在 &lt;a href="https://vultr.com">Vultr&lt;/a> 廣播IP吧！&lt;/p>
+&lt;h1 id="設置as號碼及ip前綴" >&lt;strong>設置AS號碼及IP前綴&lt;/strong>
+&lt;span>
+&lt;a href="#%e8%a8%ad%e7%bd%aeas%e8%99%9f%e7%a2%bc%e5%8f%8aip%e5%89%8d%e7%b6%b4">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h1>&lt;p>首先，我們要先開通BGP的功能！
+&lt;a href="https://my.vultr.com/network/#network-bgp">點擊這裡前往 Vultr BGP 頁面&lt;/a>
+進入此頁面後，我們點擊 Get Started&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/vu-01-1920x961.png" alt="">&lt;/p>
+&lt;p>選擇 I have my own IP space 及 I have own my ASN (如果沒有 ASN 不用選擇)
+LOA的部分 可以參考這份範例文件
+接著其他保持預設就好&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/vu-02.png" alt="">&lt;/p>
+&lt;p>接著點 Start，來驗證 IP 擁有權 或 ASN&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/vu-03-1920x362.png" alt="">&lt;/p>
+&lt;p>系統會寄一封電子郵件到 Whois 的 Email，進行驗證！&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/vu-04.png" alt="">&lt;/p>
+&lt;p>驗證完後呢，我們就等待工作人員設置&lt;/p>
+&lt;h1 id="廣播" >&lt;strong>廣播&lt;/strong>
+&lt;span>
+&lt;a href="#%e5%bb%a3%e6%92%ad">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h1>&lt;p>這次是使用Ubuntu 18.04來廣播的，CentOS及Debian應該大同小異&lt;/p>
+&lt;p>首先我們先安裝幾個套件&lt;/p>
+&lt;pre tabindex="0">&lt;code>apt-get update -y
+apt-get install bird6 -y
+&lt;/code>&lt;/pre>&lt;p>安裝完成後，我們進入 /etc/bird 資料夾&lt;/p>
+&lt;pre tabindex="0">&lt;code>cd /etc/bird
+&lt;/code>&lt;/pre>&lt;p>刪除 bird6.conf&lt;/p>
+&lt;pre tabindex="0">&lt;code>sudo rm -rf bird6.conf
+&lt;/code>&lt;/pre>&lt;p>接著我們新增一個新的配置&lt;/p>
+&lt;pre tabindex="0">&lt;code>router id 0.0.0.0; # 將0.0.0.0改成你的主機IPv4
+protocol bgp vultr
+{
+   local as 209557;
+   source address 改成主機IPv6;
+   import none;
+   export all;
+   graceful restart on;
+   multihop 2;
+   neighbor 2001:19f0:ffff::1 as 64515; # Vultr的IP及私有AS號
+   password &amp;quot;123456789&amp;quot;; # 之前設定的BGP密碼
+}
+protocol static
+{
+    route 要廣播的prefix via 閘道IP;
+}
+protocol device 
+{
+    scan time 5;
+}
+&lt;/code>&lt;/pre>&lt;p>設置好後，我們重啟bird6&lt;/p>
+&lt;pre tabindex="0">&lt;code>service bird6 restart
+&lt;/code>&lt;/pre>&lt;p>接著我們就可以嘗試追蹤路由看看囉！&lt;/p></description></item><item><title>專為 GCP 打造的 Windows 10 DD 鏡像</title><link>https://blog.steveyi.net/posts/gcp-windows-dd/</link><pubDate>Tue, 27 Aug 2019 15:07:49 +0000</pubDate><guid>https://blog.steveyi.net/posts/gcp-windows-dd/</guid><description>&lt;p>前陣子為了要在 GCP 使用 VPS，於是在一段時間裡製作了 Windows DD 鏡像&lt;br>
+分別是：&lt;br>
+1，中文繁體版 Windows 10 工作站專業版&lt;br>
+2，英文版 Windows 10 工作站專業版(尚未上傳)&lt;/p>
+&lt;h2 id="鏡像具備以下特點" >鏡像具備以下特點
+&lt;span>
+&lt;a href="#%e9%8f%a1%e5%83%8f%e5%85%b7%e5%82%99%e4%bb%a5%e4%b8%8b%e7%89%b9%e9%bb%9e">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;ul>
+&lt;li>
+&lt;p>集成 Virtio 驅動以及 Google Virtio Ethernet Adapter 的網卡驅動，因此適用於&lt;a href="http://cloud.google.com">GCP&lt;/a>的 VPS 伺服器&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>無需 VNC 交互直接無人值守安裝，DD 完成即可遠程登錄桌面&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>基於 VOL 版製作，因此可用 KMS 方式激活系統&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>開啟 Windows 遠程桌面&lt;/p>
+&lt;p>中文繁體版&lt;br>
+載點1: &lt;a href="http://static.yiy.tw/mirror/dd/win10.gz">http://static.yiy.tw/mirror/dd/win10.gz&lt;/a>&lt;/p>
+&lt;p>遠端登入資訊&lt;br>
+帳號: Administrator&lt;br>
+密碼: steveyigame.com&lt;/p>
+&lt;/li>
+&lt;/ul></description></item></channel></rss>

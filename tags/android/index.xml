@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Android on 小易的部落格</title><link>https://blog.steveyi.net/tags/android/</link><description>小易的部落格 (Android)</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Sat, 08 Aug 2020 07:23:53 +0000</lastBuildDate><atom:link href="https://blog.steveyi.net/tags/android/index.xml" rel="self" type="application/rss+xml"/><item><title>使用 Android 手機作為 Mac 的網路連線來源的方法</title><link>https://blog.steveyi.net/posts/horndis/</link><pubDate>Sat, 08 Aug 2020 07:23:53 +0000</pubDate><guid>https://blog.steveyi.net/posts/horndis/</guid><description>&lt;p>有時因為某些原因，不想使用Wi-Fi上網或使用Wi-Fi個人熱點時，或是電腦的無線網路卡受到周遭物品的遮蔽時，甚至是黑蘋果電腦沒有相容無線網卡等情況下，將Android手機作為網路接收器是一個好主意。&lt;br>
+macOS需求為10.11(El Captain)以上，本篇筆者使用macOS 10.13(High Sierra)作為示範&lt;br>
+只要Android手機連得到Wi-Fi或是行動數據連線，而且有USB數據連線的功能，都可以執行以下教學提到的內容。&lt;br>
+請注意，手機一直24小時掛著電源可能會造成膨脹，需要時再接上電腦。&lt;/p>
+&lt;p>首先請先打開&lt;a href="https://joshuawise.com/horndis#available_versions">這個網址&lt;/a>，前往作者的下載頁面，點擊下圖紅色框起來的那個按鈕&lt;/p>
+&lt;p>&lt;a href="https://joshuawise.com/horndis#available_versions">&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020080807285442.png" alt="">&lt;/a>&lt;/p>
+&lt;p>接下來請在左下角的下載進度條按下「保留」，這是因為電腦將這個套件誤判為病毒。&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020080806512846.png" alt="">&lt;/p>
+&lt;p>進到安裝程式後請一路按下「繼續」&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020080806513465.png" alt="">&lt;/p>
+&lt;p>如果遇到需要輸入密碼的介面，請輸入密碼來授予權限&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020080806514925.png" alt="">&lt;/p>
+&lt;p>安裝完成後，請將手機插上電腦的USB連接埠，並且打開USB數據連線&lt;/p>
+&lt;p>&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020080807171991-scaled.jpg" alt="">&lt;/p>
+&lt;p>到系統偏好設定裡，打開網路偏好設定&lt;/p>
+&lt;p>&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020080807085471.png" alt="">&lt;/p>
+&lt;p>接下來就會在裡面看到手機有沒有連線囉&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020080806520553.png" alt="">&lt;/p></description></item><item><title>幫 Spotify 或其他音樂軟體加上實時歌詞的方法 (Android)</title><link>https://blog.steveyi.net/posts/dynamic-lyrics-android/</link><pubDate>Sat, 11 Jul 2020 10:00:12 +0000</pubDate><guid>https://blog.steveyi.net/posts/dynamic-lyrics-android/</guid><description>&lt;p>上次有一篇介紹&lt;a href="https://blog.steveyi.net/free-streaming-music-compare/" title="[2020最新] 各大串流平台免費會員比較">各家串流平台的免費會員比較&lt;/a>，各位可以發現實時歌詞很多家平台都有&lt;/p>
+&lt;p>但Spotify根據筆者測試只有Premium用戶能用或是有些平台沒有歌詞服務，稍嫌可惜&lt;/p>
+&lt;p>這時想要聽著Spotify或其他沒歌詞的平台的免費音樂，但又覺得沒歌詞不能一起唱很麻煩嗎 這時候照這篇文章做就可以解決這個問題囉&lt;/p>
+&lt;p>這篇文章適用Android用戶，iOS/iPadOS用戶在&lt;a href="https://blog.steveyi.net/no-premium-spotify-dynamic-lyrics/" title="不用Premium也可以幫Spotify加上實時歌詞(iOS/iPadOS)">另外一篇&lt;/a>唷&lt;/p>
+&lt;p>注意：Musixmatch for Android的原理是讀取通知，所以有些中文的專輯版音樂被Youtube Music等平台轉為英文名時，可能產生誤判情形，此時就只能改用其他平台或是關掉Floating Lyrics了，如果是MV或是影片大概就辨識不到了&lt;/p>
+&lt;p>如果使用小米/Redmi/黑鯊/POCO手機的用戶，請將應用程式從最近應用上鎖，並將省電策略設為無限制，&lt;a href="https://blog.steveyi.net/ifttt-zhi-dong-guan-wifi/#if-miui">可以參考這邊&lt;/a>&lt;/p>
+&lt;h2 id="開始吧" >開始吧
+&lt;span>
+&lt;a href="#%e9%96%8b%e5%a7%8b%e5%90%a7">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>首先請先下載&lt;a href="https://play.google.com/store/apps/details?id=com.musixmatch.android.lyrify">Musixmatch&lt;/a>&lt;br>
+下載完成後請打開並註冊或登入Musixmatch的帳號&lt;br>
+如果有詢問是否加入Musixmatch Premium會員，可以關掉&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020071108253421.jpeg" alt="">&lt;/p>
+&lt;p>接下來請允許所需的權限&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020071108255172.jpeg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020071108260461.jpeg" alt="">&lt;/p>
+&lt;p>接下來視需要，登入Spotify或是音樂庫&lt;/p>
+&lt;p>此處以Spotify示範&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020071108261822.jpeg" alt="">&lt;/p>
+&lt;p>輸入帳號密碼&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020071108263125.jpeg" alt="">&lt;/p>
+&lt;p>然後滑到最底部按綠色的「同意」按鈕&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020071108265846.jpeg" alt="">&lt;/p>
+&lt;p>在Spotify或其他平台隨便播放一首歌，如果跳出這視窗，請按「別再顯示」&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020071108273772.jpeg" alt="">&lt;/p>
+&lt;p>接下來會跳出Floating Lyrics的實時歌詞視窗&lt;br>
+如果支援實時歌詞的歌曲就會自己跳，如果只支援靜態歌詞就需要自己用手滑，不支援歌詞的話也會出現在這邊&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020071108275158.jpeg" alt="">&lt;/p>
+&lt;p>按下Floating Lyrics視窗裡，歌名右邊的圓形按鈕可以更改樣式&lt;br>
+比如說更改顏色或是展開歌詞&lt;/p>
+&lt;p>&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020071108280788.jpeg" alt="">&lt;/p>
+&lt;p>按下圓形按鈕右邊的三個點按鈕可以看到選單有更多功能&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020071108303749.jpeg" alt="">&lt;/p>
+&lt;p>點選「在App內顯示」就可以整個畫面充滿歌詞&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020071108310063.jpeg" alt="">&lt;/p>
+&lt;p>打開通知中心可以看到隱藏Floating Lyrics的按鈕&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020071109554967.png" alt="">&lt;/p>
+&lt;p>接下來可以測試其他應用程式（但不是每款音樂App都支援）&lt;/p>
+&lt;p>筆者在Friday音樂隨便播放一首歌，程式本身沒有這首歌的歌詞，此時Musixmatch便非常實用&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020071109251796.jpeg" alt="">&lt;/p>
+&lt;p>在Youtube Music測試，不少專輯版音樂都能用，但如前面所述，部分中文歌會產生誤判的情形（我也不知道到底為什麼中文歌名要寫英文）&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020071109383934.jpeg" alt="">&lt;/p>
+&lt;p>舉例來說，以下這首歌曲是鄧紫棋的「&lt;a href="https://www.youtube.com/watch?v=G3z9U_1Uue4&amp;amp;feature=share">好想好想妳&lt;/a>」&lt;br>
+但歌詞卻誤判為另一首(我完全沒聽過的)歌曲，這時我只好關掉Floating Lyrics，或是改用選單的歌詞辨識功能&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020071109490666.jpeg" alt="">&lt;/p></description></item><item><title>[2020最新] 各大串流平台免費會員比較</title><link>https://blog.steveyi.net/posts/free-streaming-music-compare/</link><pubDate>Sun, 05 Jul 2020 12:51:26 +0000</pubDate><guid>https://blog.steveyi.net/posts/free-streaming-music-compare/</guid><description>&lt;p>蘿蔔這幾年來一直在尋找免費好用的串流音樂平台，也因此幾乎所有台灣常見的平台都有用過，所以接下來一一為大家介紹&lt;/p>
+&lt;p>首先我先說一下，蘿蔔是台灣人，所以文章介紹的有些平台不見得能在其他國家或地區使用；或是有些平台改版了，這篇文章可能會來不及更新，請見諒&lt;/p>
+&lt;p>再來要說的是，我們不鼓勵使用盜版或破解版，首先是音樂平台和音樂創作者沒辦法收到錢（例如串流音樂平台上面廣告贊助的費用），而好音樂就沒辦法受到鼓勵，裝置也可能被病毒或是間諜程式入侵，而且還可能會有法律責任產生&lt;/p>
+&lt;p>說完了那我們開始介紹吧&lt;/p>
+&lt;h2 id="spotify" >Spotify
+&lt;span>
+&lt;a href="#spotify">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>一個老牌的串流音樂平台，整體以播放清單為主，有Spotify Connect可以無縫更換聆聽裝置，最近剛陸續開放歌詞功能，不過似乎只有Premium能用。&lt;br>
+免費會員在平板電腦和電腦App、電腦版網頁可以隨選即播，有穿插廣告，音質不能設為「最高」。&lt;br>
+如果在手機和iPod touch上則是限隨機播放，每小時只能跳過六首歌（部分指定的個人化播放清單可隨選即播，不在此限）。&lt;br>
+有趣的是筆者的大螢幕手機被視為平板，賺到隨選即播🤣&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070809182757.png" alt="">&lt;/p>
+&lt;h2 id="kkbox" >KKBOX
+&lt;span>
+&lt;a href="#kkbox">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>串流音樂服務的元老，比Spotify還早推出，中文曲庫比Spotify多，有動態歌詞。&lt;br>
+會員註冊完會有三天體驗會員幾乎全功能都能用，體驗會員過期後會成為一般會員，但每個裝置能登入的體驗會員帳號次數有限。&lt;br>
+一般會員音質不能設為最高(320kbps)，每天會有一則廣告，看完後可以免費聽20首歌曲，用完後每首歌只能預覽30秒。&lt;br>
+網路上有時會不定期發布體驗序號。&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070504425055.jpg" alt="">&lt;/p>
+&lt;h2 id="mymusic" >MyMusic
+&lt;span>
+&lt;a href="#mymusic">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>會員註冊完會有7天體驗會員全功能都能用，體驗會員過期後會成為一般會員。&lt;br>
+一般會員音質只能設為一般(128kbps)，只有指定的幾張歌單可以完整聽，其他歌曲都只能預覽30秒。網路上有時會不定期發布體驗序號。&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070504433779.jpg" alt="">&lt;/p>
+&lt;h2 id="friday-音樂" >Friday 音樂
+&lt;span>
+&lt;a href="#friday-%e9%9f%b3%e6%a8%82">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>無廣告、有動態歌詞&lt;br>
+會員註冊完會有7天體驗會員全功能都能用，體驗會員過期後會成為一般會員。&lt;br>
+一般會員音質只能設為一般(128kbps)，每天只能播放五首歌，用完後都只能預覽30秒。&lt;br>
+網路上有時會不定期發布體驗序號。&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070505410044.jpeg" alt="">&lt;/p>
+&lt;h2 id="apple-music" >Apple Music
+&lt;span>
+&lt;a href="#apple-music">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>跟蘋果生態系整合度非常高，有很漂亮的動態歌詞&lt;br>
+（需升級至iOS/iPad OS 13以上，iOS 10以上只有靜態歌詞）&lt;br>
+需要先付錢才能送三個月試用，Android版App帶給我的感受不是很順手；Android版使用上也常常遇到Bug，但如果使用iPhone的話可以直接在Apple Watch上面呼叫Siri點歌確實很方便，網路上偶爾也會發布歌手或電台贊助的免費體驗序號。&lt;br>
+官方說明的系統需求是iOS 8.4/Android 5.0/iTunes 12.2以上&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020072711523343.png" alt="">&lt;/p>
+&lt;h2 id="網易雲音樂" >網易雲音樂
+&lt;span>
+&lt;a href="#%e7%b6%b2%e6%98%93%e9%9b%b2%e9%9f%b3%e6%a8%82">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>如果需要全曲庫聽到飽要用翻牆軟體（如：穿梭VPN），沒翻牆的話會反灰如圖，動態歌詞，隨選即播，無穿插廣告，但大部分歌曲音質只能設128Kbps，有少部分歌曲可以下載，也有一些獨家音樂，英文歌偏少。&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070504432158.jpg" alt="">&lt;/p>
+&lt;h2 id="蝦米音樂" >蝦米音樂
+&lt;span>
+&lt;a href="#%e8%9d%a6%e7%b1%b3%e9%9f%b3%e6%a8%82">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>常常簽到可以領體驗會員，但曲庫筆者感覺上比網易雲跟QQ音樂少，有些歌要用翻牆軟體（如：穿梭VPN等），有動態歌詞，部分歌曲可以下載，英文歌偏少。&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070512114857.png" alt="">&lt;/p>
+&lt;h2 id="qq音樂" >QQ音樂
+&lt;span>
+&lt;a href="#qq%e9%9f%b3%e6%a8%82">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>曲庫幾乎都要用翻牆軟體（如：穿梭VPN等），有動態歌詞（逐字），英文歌偏少。&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070512124991.png" alt="">&lt;/p>
+&lt;h2 id="mixerbox-3" >MixerBox 3
+&lt;span>
+&lt;a href="#mixerbox-3">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>基於Youtube做成的MV播放器，但iOS每次離開App就要從控制中心按一次播放；Android則會有一個小視窗懸浮著，略為不便，而且因為是MV，所以有些穿插對話的MV會影響聽歌體驗。有些人會開台一起聽歌，而探索頁面常常可以找到適合自己的音樂，音樂鬧鐘功能可以讓起床變有趣&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070512135174.png" alt="">&lt;/p>
+&lt;h2 id="youtube-music" >Youtube Music
+&lt;span>
+&lt;a href="#youtube-music">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>App不能背景播放，雖然有其他的方法（&lt;a href="https://blog.steveyi.net/youtube-background-playing-ios/" title="無需訂閱Youtube Music Premium也能讓iOS/iPadOS的裝置享有背景播放的功能(Youtube也適用哦！)">iPadOS和iOS&lt;/a>/&lt;a href="https://blog.steveyi.net/youtube-background-playing-android/" title="無需訂閱Youtube Music Premium也能讓Android的裝置享有背景播放的功能(Youtube也適用哦！)">Android&lt;/a>），但不管什麼方法每播完一首歌就跳廣告實在很煩，而且廣告的品質也不及Spotify。&lt;br>
+而iOS版的App給我的體驗很差（用起來的Bug比Android版的Apple Music還多，比如說暫停一下，後台就被殺了又要重新載入一次）。&lt;br>
+有設計歌詞的區塊，但沒幾首歌支援的。&lt;br>
+不含Youtube的話曲庫不算多，但配合Youtube上的影片後，曲庫可說是非常龐大；但也因此搜尋介面很亂，有專輯版音樂，也有MV、第三方上傳的音樂影片（版權灰色地帶，時常被下架），也有播放清單。&lt;br>
+另外令人匪夷所思的是系統語言是中文的情況下，有些中文歌都只寫英文歌名，非常奇葩&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070512340980.png" alt="">&lt;/p>
+&lt;p>以上就是蘿蔔介紹台灣比較常見的串流音樂平台，有些版權比較屬於灰色地帶的就先不介紹了，畢竟「我是小易」的編輯們也無法保證其合法性&lt;/p>
+&lt;p>看完這些介紹，各位有打算使用哪個串流音樂平台了嗎？&lt;/p></description></item><item><title>LINE 聊天訊息自動分類好友、群組、官方帳號</title><link>https://blog.steveyi.net/posts/line-xun-xi-fen-lei/</link><pubDate>Fri, 03 Jul 2020 12:25:49 +0000</pubDate><guid>https://blog.steveyi.net/posts/line-xun-xi-fen-lei/</guid><description>&lt;p>LINE 分類完之後找訊息大概會方便很多&amp;hellip;&lt;/p>
+&lt;blockquote>
+&lt;p>這功能目前只有Android有加入，iOS應該過一段時間也會加入&lt;br>
+請確認LINE版本是Google Play上的最新版本&lt;/p>
+&lt;/blockquote>
+&lt;p>首先，請先打開 LINE 並到主頁頁面&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070312124374.jpg" alt="">&lt;/p>
+&lt;p>接下來點選右上角的齒輪，找到 LINE Lab 然後打勾&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070312153360.jpg" alt="">&lt;/p>
+&lt;p>接下來就會自動分類囉&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070312202078.gif" alt="">&lt;/p></description></item><item><title>無需訂閱 Youtube Music Premium 也能讓 Android 的裝置享有背景播放的功能 (Youtube 也適用哦！)</title><link>https://blog.steveyi.net/posts/youtube-background-playing-android/</link><pubDate>Fri, 19 Jun 2020 15:58:18 +0000</pubDate><guid>https://blog.steveyi.net/posts/youtube-background-playing-android/</guid><description>&lt;p>此處主要由Android手機作為示範，Android 平板也可以用一樣的方法唷&lt;br>
+iOS/iPadOS也可以用類似的方法，&lt;a href="https://blog.steveyi.net/youtube-background-playing-ios" title="https://blog.steveyi.net/youtube-background-playing-ios">請見此篇&lt;/a>&lt;/p>
+&lt;h3 id="讓我們開始吧" >讓我們開始吧
+&lt;span>
+&lt;a href="#%e8%ae%93%e6%88%91%e5%80%91%e9%96%8b%e5%a7%8b%e5%90%a7">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h3>&lt;p>首先請先用Chrome瀏覽器(有內建Google Play服務的裝置幾乎都有，沒有的可以去&lt;a href="https://www.google.com/search?q=chrome+apk" title="https://www.google.com/search?q=chrome+apk">下載&lt;/a>)打開&lt;a href="https://music.youtube.com/">Youtube Music首頁&lt;/a>，別急著播放音樂，按下右上方的三個點點，然後勾選「電腦版網站」&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020061915465212.png" alt="">&lt;/p>
+&lt;p>接下來請隨意播放一首歌&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020061915473810.png" alt="">&lt;/p>
+&lt;p>開始播放後可以回到桌面、鎖定螢幕、或是切換到其他App，您會發現音樂繼續播放，且通知中心可以控制播放、暫停及快轉&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020061915505855.png" alt="">&lt;/p>
+&lt;p>到這邊就完成拉&lt;br>
+以後要聽音樂直接在Chrome上面打開Youtube Music，切換成電腦版網站就可以拉～&lt;/p>
+&lt;p>Youtube也要允許背景播放的話也是一樣的方法唷！&lt;/p>
+&lt;p>筆者順便測試了幾個品牌的Android手機&lt;br>
+目前也沒遇到不能用的！&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020061915532349.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020061915534442.png" alt="">&lt;/p></description></item><item><title>使用 IFTTT 讓手機在離開家裡時關閉無線網路</title><link>https://blog.steveyi.net/posts/ifttt-zhi-dong-guan-wifi/</link><pubDate>Wed, 03 Jun 2020 04:43:06 +0000</pubDate><guid>https://blog.steveyi.net/posts/ifttt-zhi-dong-guan-wifi/</guid><description>&lt;p>由於筆者離開家裡的時候，常常忘記關掉Wi-Fi，所以就找出了這樣一個方法&lt;/p>
+&lt;p>首先我們會需要做準備工作，依照不同的裝置類型會有不同的方法&lt;/p>
+&lt;h2 id="如果是小米或是redmi黑鯊poco手機的使用者" >如果是小米或是Redmi、黑鯊、POCO手機的使用者
+&lt;span>
+&lt;a href="#%e5%a6%82%e6%9e%9c%e6%98%af%e5%b0%8f%e7%b1%b3%e6%88%96%e6%98%afredmi%e9%bb%91%e9%af%8apoco%e6%89%8b%e6%a9%9f%e7%9a%84%e4%bd%bf%e7%94%a8%e8%80%85">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>請先將IFTTT從最近應用程式中鎖定並允許自啟動、省電策略設為無限制，如果不是則請跳過此段。&lt;br>
+按住IFTTT預覽圖後會跳出下圖的選單&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020060303272613.jpg" alt="">&lt;/p>
+&lt;p>接下來請確認IFTTT旁邊有小鎖頭之後，打開應用詳情，允許自啟動並將省電策略設為無限制，以免後台被殺。&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020060303282266.jpg" alt="">&lt;/p>
+&lt;h2 id="不含小米或是redmi黑鯊poco手機的使用者" >如果是Android 6.0至8.0&lt;br>
+(不含小米或是Redmi、黑鯊、POCO手機的使用者)
+&lt;span>
+&lt;a href="#%e4%b8%8d%e5%90%ab%e5%b0%8f%e7%b1%b3%e6%88%96%e6%98%afredmi%e9%bb%91%e9%af%8apoco%e6%89%8b%e6%a9%9f%e7%9a%84%e4%bd%bf%e7%94%a8%e8%80%85">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>安裝完成後請先至系統設定&amp;gt;電池(或電源)&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-8.png" alt="">&lt;/p>
+&lt;p>依照不同操作系統可能有不同的操作方式，以Google手機為例，需先按下右上角三個點之後點選電池效能最佳化&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-9.png" alt="">&lt;/p>
+&lt;p>然後在選單內找到IFTTT，選擇不要最佳化，以免後臺程序無法運行造成功能失常&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-10.png" alt="">&lt;/p>
+&lt;h2 id="不含小米或是redmi黑鯊poco手機的使用者-1" >如果是Android 9.0至10.0&lt;br>
+(不含小米或是Redmi、黑鯊、POCO手機的使用者)
+&lt;span>
+&lt;a href="#%e4%b8%8d%e5%90%ab%e5%b0%8f%e7%b1%b3%e6%88%96%e6%98%afredmi%e9%bb%91%e9%af%8apoco%e6%89%8b%e6%a9%9f%e7%9a%84%e4%bd%bf%e7%94%a8%e8%80%85-1">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>請到系統設定&amp;gt;應用程式和通知&amp;gt;特殊應用程式存取權&lt;br>
+依照不同操作系統可能有不同的操作方式&lt;br>
+以Google手機為例:&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-11.png" alt="">&lt;/p>
+&lt;p>然後點選電池效能最佳化&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-12.png" alt="">&lt;/p>
+&lt;p>找到IFTTT之後選擇不要最佳化&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-13.png" alt="">&lt;/p>
+&lt;p>準備工作完成&lt;/p>
+&lt;h2 id="下一頁就開始進行設定囉千萬別錯過" >下一頁就開始進行設定囉！千萬別錯過～
+&lt;span>
+&lt;a href="#%e4%b8%8b%e4%b8%80%e9%a0%81%e5%b0%b1%e9%96%8b%e5%a7%8b%e9%80%b2%e8%a1%8c%e8%a8%ad%e5%ae%9a%e5%9b%89%e5%8d%83%e8%90%ac%e5%88%a5%e9%8c%af%e9%81%8e">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>使用前，需要先註冊或登入IFTTT (&lt;a href="https://ifttt.com/">ifttt.com&lt;/a>)&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-1.png" alt="">&lt;/p>
+&lt;p>接下來他會推薦一個IFTTT的範例，按下X跳過&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-2.png" alt="">&lt;/p>
+&lt;p>接下來請打開IFTTT應用程式&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-14.png" alt="">&lt;/p>
+&lt;p>接下來請登入本文章一開始所使用的帳號&lt;/p>
+&lt;p>按下Got it和Get More&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-15.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-16.png" alt="">&lt;/p>
+&lt;p>接下來請按下Create&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020060303435439.png" alt="">&lt;/p>
+&lt;p>先按This，選擇Android Device&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020060303470354.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020060303485738.png" alt="">&lt;/p>
+&lt;p>接下來選擇圈起來的選項&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020060303492575.png" alt="">&lt;/p>
+&lt;p>接下來請輸入要觸發的WiFi名稱&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020060314472031.jpg" alt="">&lt;/p>
+&lt;p>然後按That，也是選擇Android Device，然後選擇Turn off WiFi&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020060303512548.png" alt="">&lt;/p>
+&lt;p>確認無誤後請按下Finish&lt;br>
+筆者建議把Recieve notifications when this runs的開關打開，這樣運作時IFTTT便會提醒你說Wi-Fi被關掉了&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020060314480629.jpg" alt="">&lt;/p>
+&lt;p>如果要求位置資訊，請一律允許，不然他沒辦法正常運行&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/IMG_20200603_120458.jpg" alt="">&lt;/p>
+&lt;p>Connected就表示已開啟&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020060314505188.jpg" alt="">&lt;/p>
+&lt;p>效果示範如下&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020060314511293.gif" alt="">&lt;/p>
+&lt;p>小米和黑鯊、Redmi、POCO手機每次運行時都會彈窗詢問是否允許，我們可以從應用詳情的地方選擇權限管理&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020060314583324.jpg" alt="">&lt;/p>
+&lt;p>接下來找到「開啟WLAN」，並設為始終允許&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020060314593226.jpg" alt="">&lt;/p>
+&lt;blockquote>
+&lt;p>到這裡就完成囉！如果設定Applet執行時跳出通知，就會有下圖的效果哦～&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;img src="https://static.yiy.tw/media/blog/2020061614302349.jpg" alt="">&lt;/li>
+&lt;/ul>
+&lt;h4 id="至於為什麼不要用location定位去製作applet呢" >至於為什麼不要用Location定位去製作Applet呢？
+&lt;span>
+&lt;a href="#%e8%87%b3%e6%96%bc%e7%82%ba%e4%bb%80%e9%ba%bc%e4%b8%8d%e8%a6%81%e7%94%a8location%e5%ae%9a%e4%bd%8d%e5%8e%bb%e8%a3%bd%e4%bd%9capplet%e5%91%a2">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h4>&lt;p>因為只要有任何Applet用到Location服務，那IFTTT就會一直存取位置資訊，耗費電量，而且許多品牌的手機進入省電模式就會關掉定位功能，那麼這就沒辦法正常運作了&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020060307230142.jpg" alt="">&lt;/p>
+&lt;p>只要任何一個Applet有用到Location服務，IFTTT就會一直使用定位&lt;/p></description></item><item><title>解決 Telegram 在 Android 開啟深色模式時自動跳回預設主題的問題</title><link>https://blog.steveyi.net/posts/telegram-dark-mode-theme/</link><pubDate>Mon, 01 Jun 2020 08:46:56 +0000</pubDate><guid>https://blog.steveyi.net/posts/telegram-dark-mode-theme/</guid><description>&lt;p>如果有在Telegram更改主題的用戶應該會發現，在深Android色模式下每次啟動Telegram都會被改回預設的深藍色主題非常困擾&lt;/p>
+&lt;p>在這裡有一個方法，可以有效解決這個問題&lt;/p>
+&lt;p>首先請先打開側邊選單，然後按「設定」&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020060108401587.jpg" alt="">&lt;/p>
+&lt;p>接下來請選擇對話設定&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020060108403955.jpg" alt="">&lt;/p>
+&lt;p>接下來請找到「自動夜晚模式」並關掉&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020060108410457.jpg" alt="">&lt;/p></description></item><item><title>讓手機音質提升的小技巧</title><link>https://blog.steveyi.net/posts/yin-zhi-ti-sheng/</link><pubDate>Mon, 01 Jun 2020 03:55:45 +0000</pubDate><guid>https://blog.steveyi.net/posts/yin-zhi-ti-sheng/</guid><description>&lt;p>註：Apple Lightning裝置以及大多數的USB-C裝置(像是Windows電腦等)也適用這篇哦&lt;/p>
+&lt;p>在你認為兩百元有找的耳機音質不好的同時，你是否忽略了哪個重要的細節呢？&lt;br>
+雖然也許手機廠牌跟耳機廠牌一致可以得到更好的優化體驗，但不可否認手機內置的DAC(數位音訊轉化為類比訊號提供給耳機的一個重要元件)不一定可以媲美外置的DAC，也許不是耳機太差，而是DAC推不動或是搭配起來不合適&lt;/p>
+&lt;p>但人們會問：外置的DAC不是都很大一台嗎?&lt;br>
+沒錯的，專業等級的DAC確實有點龐大，而且價格偏高&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020060102552564.png" alt="">&lt;/p>
+&lt;p>Google隨便搜尋都會看到這種龐大的DAC&lt;/p>
+&lt;p>但是筆者是一個講究CP值的人，這種東西音質再好基本上我是不會買的(除非我哪天發大財)&lt;br>
+就在我為了兩百塊有找的3.5mm的耳機音質太差傷腦筋時，忽然想起抽屜裡那完全沒用過的Google USB-C 轉 3.5 毫米轉接頭&lt;br>
+(因為筆者之前使用的Pixel 2尾插有問題只能充電但送不回美國)&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020060103063749.jpg" alt="">&lt;/p>
+&lt;p>轉接頭插上去後我明顯的感受到了無力的低音瞬間變得有力&lt;br>
+之後還拿雜牌的轉接頭來試聽，音質慘不忍睹，比手機的3.5mm耳機口還慘&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020060103152993-scaled.jpg" alt="">&lt;/p>
+&lt;p>如果搭配手機內建的音質選項，甚至是等化器都調整成自己偏好的，效果會更好&lt;/p>
+&lt;p>(但筆者不推薦HTC手機用戶使用「HTC BoomSound配備杜比音效」在耳機上，整個聲音變得不像原來的樣子，沒開的音質反而聽起來比打開好)&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020060103253098.jpg" alt="">&lt;/p>
+&lt;p>現在來說說為什麼Google的轉接頭有這樣一個神奇的效果，而雜牌轉接頭聽起來如此慘不忍睹了。&lt;/p>
+&lt;p>原因在於Pixel 2016和Pixel 3a以外的Google手機和HTC後來的手機，以及2016以後的iPhone一樣，沒有內置耳機的DAC，他們將DAC移植到了轉接頭（等於是採用外置音效卡的設計，所以Google的轉接頭一定自帶DAC）&lt;/p>
+&lt;p>雜牌轉接頭雖然可能有DAC，但用料可能不是這麼扎實，聽起來刺耳和低音無力是肯定的，只能說是一分錢一分貨。&lt;/p>
+&lt;p>要如何確保自己買的轉接頭支援DAC呢？&lt;br>
+(Apple Lightning接頭的裝置就不用擔心了，一定會有的)&lt;/p>
+&lt;p>判別USB-C轉接頭是否有DAC最好的方法就是購買時詢問店員或是賣家，是否支援Pixel 2手機或HTC U11手機&lt;/p>
+&lt;p>至於品牌的部分，市面上有很多(像是Apple、Google、HTC、紫米、moshi等)，各位可以自己去探索一下自己喜歡的聲音效果哦～&lt;/p>
+&lt;p>後來我去測試了一下，電腦的部分，Windows 10(PC和Mac)可以用，但我手上的轉接頭插到macOS 10.15.5的Mac是沒有反應的(不確定是不是因為不是蘋果的)，供大家參考&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020060300231492.png" alt="">&lt;/p>
+&lt;p>電腦的部分，Windows 10(PC和Mac)可以用&lt;/p>
+&lt;p>筆者對這方面有研究過，但還未達專家等級，如果有誤懇請讀者見諒&lt;/p></description></item><item><title>使用 TeamViewer 遠端操作 Android 手機</title><link>https://blog.steveyi.net/posts/teamviewer-android/</link><pubDate>Tue, 26 May 2020 10:09:17 +0000</pubDate><guid>https://blog.steveyi.net/posts/teamviewer-android/</guid><description>&lt;p>需要用到Android手機但常常忘記帶出門嗎？&lt;br>
+這時候TeamViewer就很好用了！&lt;br>
+但要將其從系統的自動殺後台清單移除&lt;/p>
+&lt;p>遠端操作功能適用Android 5~Android 8&lt;br>
+（第一次可能會詢問是否允許，可以選永久允許）&lt;br>
+Android 9以上適用遠端查看&lt;br>
+（Android 9以上每次使用都要在手機上按一次允許，比較適合當作無線顯示到電腦的工具）&lt;/p>
+&lt;p>示範設備：Android 6.0的HTC手機 with HTC Sense&lt;/p>
+&lt;p>1.首先請先到Play商店下載&lt;a href="https://play.google.com/store/apps/details?id=com.teamviewer.host.market&amp;amp;hl=zh-TW">Host&lt;/a>&lt;/p>
+&lt;p>2.下載遠端控制插件&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020052609581036.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020052609584328.jpg" alt="">&lt;/p>
+&lt;p>3.登入或註冊一個TeamViewer帳號&lt;/p>
+&lt;p>這樣就可以在其他登入相同帳號的手機、平板或電腦遠端操作囉～&lt;br>
+雖然不是太順但還是堪用啦&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020052610083159.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020052610064765.png" alt="">&lt;/p>
+&lt;p>儀表板頁面可以顯示手機資訊，遠端控制頁面可以按圈起來的地方放大&lt;/p>
+&lt;p>&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020052609562446.gif" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020052610054826.png" alt="">&lt;/p>
+&lt;p>可以用手機控制手機唷&lt;/p></description></item><item><title>使用 Scrcpy 輕鬆安裝 APK 檔案到手機內</title><link>https://blog.steveyi.net/posts/scrcpy-android-apk/</link><pubDate>Wed, 20 May 2020 08:52:47 +0000</pubDate><guid>https://blog.steveyi.net/posts/scrcpy-android-apk/</guid><description>&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020052008515768.png" alt="">&lt;/p>
+&lt;p>首先我們會先需要安裝Scrcpy並打開它。&lt;br>
+&lt;a href="https://blog.steveyi.net/scrcpy-android">安裝方法在此&lt;/a>&lt;/p>
+&lt;p>如果使用的是小米手機(如果不是的話請跳過這部分)，&lt;br>
+請先到「設定」&amp;gt;「更多設定」&amp;gt;「開發人員選項」，允許USB安裝&lt;br>
+這個動作需要插入SIM卡（MIUI的要求）&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020052014230696.jpg" alt="">&lt;/p>
+&lt;p>請把準備好的APK的Finder或是檔案總管視窗開在一旁，將檔案拉進Scrcpy視窗&lt;br>
+（手機畫面可以是任何地方，不一定要開在程式集的畫面）&lt;/p>
+&lt;p>&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020052008324389.gif" alt="">&lt;/p>
+&lt;p>然後Mac用戶的話應該會看到終端機視窗內出現文字&lt;br>
+&lt;code>Request to install...&lt;/code>&lt;br>
+以及&lt;br>
+&lt;code>Performing Push Install...&lt;/code>&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020052008374716.png" alt="">&lt;/p>
+&lt;p>此時手機正在安裝APK，安裝所需時間視手機速度而定&lt;/p>
+&lt;p>如果使用的是小米手機，那麼請在手機上允許安裝，否則會被系統攔截而安裝失敗&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020052014251266.jpg" alt="">&lt;/p>
+&lt;p>完成時Mac終端機視窗會寫「&lt;code>Success&lt;/code>」表示安裝成功&lt;br>
+實測安裝完的程式也能正常開啟的&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020052008425289.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020052008464950.gif" alt="">&lt;/p></description></item><item><title>使用 Scrcpy，由電腦操作 Android 手機</title><link>https://blog.steveyi.net/posts/scrcpy-android/</link><pubDate>Tue, 19 May 2020 15:41:11 +0000</pubDate><guid>https://blog.steveyi.net/posts/scrcpy-android/</guid><description>&lt;p>前情提要：由於筆者的手機螢幕忽然壞掉了，液晶會顯示但沒有背光照亮，需要用強光照射才能勉強查看畫面，但筆者依然需要使用該手機來搬移裡面重要資料以及測試Android程式等，所以一定要想辦法讓它可以操作！  (因為筆者目前主要使用iPhone)&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051917331789.jpg" alt="">&lt;/p>
+&lt;p>&lt;em>（只能在強光照射下隱約看到畫面）&lt;/em>&lt;/p>
+&lt;p>需求:PC或是Mac、配備Android 5.0或更高版本的裝置&lt;/p>
+&lt;p>(官方說Linux也可以，但筆者沒有Linux電腦可以寫教學，因此建議您前往&lt;a href="https://github.com/Genymobile/scrcpy">官方教學&lt;/a>查看)&lt;/p>
+&lt;h2 id="android裝置需要先打開usb偵錯" >Android裝置需要先打開USB偵錯
+&lt;span>
+&lt;a href="#android%e8%a3%9d%e7%bd%ae%e9%9c%80%e8%a6%81%e5%85%88%e6%89%93%e9%96%8busb%e5%81%b5%e9%8c%af">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;ul>
+&lt;li>
+&lt;p>打開Android手機，找到關於手機的地方連戳版本號或是建置號碼，或是MIUI版本號&lt;br>
+(每一支手機的做法不同這裡不列舉)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>直到按到寫說「不需要了，您已經是開發人員」後，打開開發人員選項&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>(每支手機「開發人員選項」放的位置也不一樣，例如小米放在「設定&amp;gt;更多設定」內)&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051915343656.jpg" alt="">&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>接下來請打開開發人員選項，把USB偵錯(又稱USB調試)打開，如果是小米手機的話請一併打開安全設定，這個動作需要插入SIM卡並連接網路（MIUI的要求）&lt;/p>
+&lt;p>USB安裝建議打開，畢竟Scrcpy拖拉安裝安裝功能滿好用的(&lt;a href="http://blog.steveyi.net/scrcpy-android-apk">詳見這篇&lt;/a>)&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051915351328.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020052609195565.jpg" alt="">&lt;/p>
+&lt;ul>
+&lt;li>「安全設定」彈窗請一路按下一步，記得要插SIM卡&lt;br>
+(不然按到後來會跳出請插卡的提示）&lt;/li>
+&lt;li>如果遇到陌生電腦記得在手機上面按允許偵錯唷&lt;/li>
+&lt;li>接下來請到電腦進行環境安裝&lt;/li>
+&lt;/ul>
+&lt;h2 id="pc環境安裝" >PC環境安裝
+&lt;span>
+&lt;a href="#pc%e7%92%b0%e5%a2%83%e5%ae%89%e8%a3%9d">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;ul>
+&lt;li>請下載最新版&lt;a href="https://github.com/Genymobile/scrcpy#windows">工具包&lt;/a>並且解壓縮（筆者習慣解壓縮到C槽目錄下）&lt;br>
+也可以跟ADB驅動安裝檔一起裝在隨身碟帶著走唷&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://github.com/Genymobile/scrcpy#windows">&lt;img src="https://static.yiy.tw/media/blog/2020051915360349.png" alt="">&lt;/a>&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051915362241.png" alt="">&lt;/p>
+&lt;ul>
+&lt;li>到&lt;a href="https://adb.clockworkmod.com/">adb.clockworkmod.com&lt;/a>按下白色的Download按鈕安裝ADB驅動&lt;/li>
+&lt;/ul>
+&lt;p>(如果有安裝過ADB驅動程式者請直接跳過這部分)&lt;/p>
+&lt;ul>
+&lt;li>一路按下右下角的Next，預設選項夠我們用了&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051915363719.png" alt="">&lt;/p>
+&lt;ul>
+&lt;li>要求權限的話就給他唄，請按「是」&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051915371217.png" alt="">&lt;/p>
+&lt;ul>
+&lt;li>裝完請按Close&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051915371930.png" alt="">&lt;/p>
+&lt;ul>
+&lt;li>打開Scrcpy所在資料夾，找到scrcpy-noconsole.exe並雙擊執行它，便可以操作了&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020052000172131.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020052000290950.png" alt="">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>控制方式&lt;/strong>
+&lt;ul>
+&lt;li>主要操作 : 滑鼠左鍵&amp;gt;點擊 .  滑鼠中鍵&amp;gt;回主畫面 . 滑鼠右鍵&amp;gt;返回&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>其他功能快捷鍵↓&lt;/p>
+&lt;p>動作&lt;/p>
+&lt;p>快捷鍵&lt;/p>
+&lt;p>全螢幕模式&lt;/p>
+&lt;p>Ctrl+f&lt;/p>
+&lt;p>調整視窗 1:1 比例&lt;/p>
+&lt;p>Ctrl+g&lt;/p>
+&lt;p>調整視窗將黑邊去除&lt;/p>
+&lt;p>Ctrl+x&lt;/p>
+&lt;p>主畫面&lt;/p>
+&lt;p>Ctrl+h &lt;/p>
+&lt;p>返回&lt;/p>
+&lt;p>Ctrl+b&lt;/p>
+&lt;p>多工&lt;/p>
+&lt;p>Ctrl+s&lt;/p>
+&lt;p>菜單鍵&lt;/p>
+&lt;p>Ctrl+m&lt;/p>
+&lt;p>音量上鍵&lt;/p>
+&lt;p>Ctrl+↑&lt;/p>
+&lt;p>音量下鍵&lt;/p>
+&lt;p>Ctrl+↓ &lt;/p>
+&lt;p>電源鍵&lt;/p>
+&lt;p>Ctrl+p&lt;/p>
+&lt;p>點亮螢幕&lt;/p>
+&lt;p>鎖屏時滑鼠右鍵&lt;/p>
+&lt;p>從電腦安裝 apk 檔案&lt;/p>
+&lt;p>拖拉APK檔案&lt;/p>
+&lt;h2 id="mac環境安裝" >Mac環境安裝
+&lt;span>
+&lt;a href="#mac%e7%92%b0%e5%a2%83%e5%ae%89%e8%a3%9d">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;ul>
+&lt;li>請先安裝 Homebrew，如果有安裝過的話請跳過此步驟
+&lt;ul>
+&lt;li>打開終端機（系統內建的工具程式）&lt;/li>
+&lt;li>輸入&lt;br>
+&lt;code>/bin/bash -c &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)&amp;quot;&lt;/code>&lt;/li>
+&lt;li>接下來照著指示執行&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>透過Homebrew安裝Scrcpy及其驅動
+&lt;ul>
+&lt;li>完成後輸入&lt;br>
+&lt;code>brew cask install android-platform-tools&lt;/code>&lt;/li>
+&lt;li>完成後輸入&lt;br>
+&lt;code>brew install scrcpy&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>需要使用時則打開終端機輸入&lt;code>scrcpy&lt;/code>即可使用&lt;br>
+終端機視窗可以最小化，留下操作畫面沒關係&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051915380923.png" alt="">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>控制方式&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>主要操作 : 滑鼠左鍵&amp;gt;點擊 .  滑鼠中鍵&amp;gt;回主畫面 . 滑鼠右鍵&amp;gt;返回&lt;/p>
+&lt;p>其他功能快捷鍵↓&lt;/p>
+&lt;p>動作&lt;/p>
+&lt;p>快捷鍵&lt;/p>
+&lt;p>全螢幕模式&lt;/p>
+&lt;p>Command+f&lt;/p>
+&lt;p>調整視窗 1:1 比例&lt;/p>
+&lt;p>Command+g&lt;/p>
+&lt;p>調整視窗將黑邊去除&lt;/p>
+&lt;p>Command+x&lt;/p>
+&lt;p>主畫面&lt;/p>
+&lt;p>Command+h &lt;/p>
+&lt;p>返回&lt;/p>
+&lt;p>Command+b&lt;/p>
+&lt;p>多工&lt;/p>
+&lt;p>Command+s&lt;/p>
+&lt;p>菜單鍵&lt;/p>
+&lt;p>Command+m&lt;/p>
+&lt;p>音量上鍵&lt;/p>
+&lt;p>Command+↑&lt;/p>
+&lt;p>音量下鍵&lt;/p>
+&lt;p>Command+↓ &lt;/p>
+&lt;p>電源鍵&lt;/p>
+&lt;p>Command+p&lt;/p>
+&lt;p>點亮螢幕&lt;/p>
+&lt;p>鎖屏時滑鼠右鍵&lt;/p>
+&lt;p>從電腦安裝 apk 檔案&lt;/p>
+&lt;p>拖拉APK檔案&lt;/p>
+&lt;h2 id="使用效果" >使用效果
+&lt;span>
+&lt;a href="#%e4%bd%bf%e7%94%a8%e6%95%88%e6%9e%9c">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051916163290.jpeg" alt="">&lt;/p></description></item><item><title>透過電腦使用USB傳送網際網路連線給手機 (USB Reverse Tethering)</title><link>https://blog.steveyi.net/posts/usb-reverse-tethering/</link><pubDate>Tue, 07 Apr 2020 04:57:33 +0000</pubDate><guid>https://blog.steveyi.net/posts/usb-reverse-tethering/</guid><description>&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-.png" alt="">&lt;/p>
+&lt;p>本篇教學使用搭載Android 5.0.2，Wi-Fi和藍芽損壞的手機搭配Windows 10做示範。&lt;/p>
+&lt;p>請注意:不一定保證每一隻手機都相容，就算相容還是有一些App不認得此類型連接方式 (它們通常只認得行動數據和Wi-Fi連接)&lt;/p>
+&lt;p>本篇著重於使用Windows平台進行的部分，所以不討論其他作業系統，其他作業系統理應當也是差不多才對。請讓電腦先安裝手機的驅動程式&lt;/p>
+&lt;p>(外部連結: &lt;a href="https://mobileai.net/2016/09/22/google-adb-driver/">https://mobileai.net/2016/09/22/google-adb-driver/&lt;/a> )&lt;/p>
+&lt;p>HTC Sense 6或更早版本的Sense，有內建此功能而無須操作以下教學&lt;/p>
+&lt;p>(設定&amp;gt;更多&amp;gt;可攜式熱點和數據連線&amp;gt;USB網路設定&amp;gt;透過電腦傳送)&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-1.png" alt="">&lt;/p>
+&lt;p>首先請先到GitHub下載Gnirehtet&lt;/p>
+&lt;p>&lt;a href="https://github.com/Genymobile/gnirehtet#rust">https://github.com/Genymobile/gnirehtet#rust&lt;/a>&lt;/p>
+&lt;p>找到Windows後按下下載之後解壓縮&lt;/p>
+&lt;p>&lt;a href="https://github.com/Genymobile/gnirehtet#rust">&lt;img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-2.png" alt="">&lt;/a>&lt;/p>
+&lt;p>解壓縮後會得到三個檔案&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-3.png" alt="">&lt;/p>
+&lt;p>請將gnirehtet.apk安裝到手機上(安裝完在桌面找不到是正常的)&lt;/p>
+&lt;p>不清楚apk怎麼安裝的話網路上有很多教學可以參考，在這裡先不贅述&lt;/p>
+&lt;p>接下來請在手機上開啟開發人員選項&lt;/p>
+&lt;p>不同品牌手機有不同開啟方法&lt;/p>
+&lt;p>以HTC手機為例，打開設定&amp;gt;關於手機&amp;gt;軟體版本&amp;gt;更多，接著狂戳&amp;quot;建置號碼&amp;quot;&lt;/p>
+&lt;p>直到跳出Toast訊息&amp;quot;不需要了，您已經是開發人員&amp;quot;&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-4.png" alt="">&lt;/p>
+&lt;p>完成後請點擊&amp;quot;開發人員選項&amp;quot;&lt;/p>
+&lt;p>之後勾選USB偵錯並確認&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-5.png" alt="">&lt;/p>
+&lt;p>如果詢問是否允許，請允許，如果懶得每次都按允許的話，可以勾選&amp;quot;永遠允許從此電腦進行&amp;quot;&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-6.png" alt="">&lt;/p>
+&lt;p>然後請將手機設定密碼(設定&amp;gt;安全性&amp;gt;螢幕鎖定方式&amp;gt;選擇圖形，PIN碼或密碼)&lt;/p>
+&lt;p>否則有些情況下無法上網&lt;/p>
+&lt;p>如果任何步驟執行時跳出新增VPN連線的請求，請按下允許&lt;/p>
+&lt;p>接下來請將手機連接到電腦，並點擊電腦上的gnirehtet-run.cmd&lt;/p>
+&lt;p>如果執行時跳出新增VPN連線的請求，請按下確定&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-7.png" alt="">&lt;/p>
+&lt;p>接下來會看到電腦有字很多字在跑，關掉這個視窗等同斷線，所以沒有要看它的連線紀錄的話請最小化&lt;/p>
+&lt;p>(按右上角的 - )就好&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-8.png" alt="">&lt;/p>
+&lt;p>接下來手機就可以上網囉&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-9.png" alt="">&lt;/p>
+&lt;p>Spotify串流音樂也是可以的&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-10.png" alt="">&lt;/p>
+&lt;p>如果需要斷線，可以在通知點選&amp;quot;Stop Gnirehtet”&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-11.png" alt="">&lt;/p>
+&lt;p>注意:有一些網路環境(如校園網路或工作場域網路等)可能會因某些考量而封鎖相關連線，所以可能會造成無法上網(如下圖)，此時換成別的網路就行囉&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/usb-reverse-tethering-12.png" alt="">&lt;/p>
+&lt;p>免責聲明:&lt;/p>
+&lt;p>如果有因本教學造成任何爭議，本作者一蓋不負責&lt;/p>
+&lt;p>對於非本作者創作之相關資訊，或是非本作者控制或測試之獨立網站，不得解釋本作者為其推薦或背書。&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/cc.png" alt="">&lt;/p>
+&lt;p>© iambjlu&lt;/p></description></item></channel></rss>

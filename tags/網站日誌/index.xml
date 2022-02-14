@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>網站日誌 on 小易的部落格</title><link>https://blog.steveyi.net/tags/%E7%B6%B2%E7%AB%99%E6%97%A5%E8%AA%8C/</link><description>小易的部落格 (網站日誌)</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Fri, 15 May 2020 20:35:11 +0000</lastBuildDate><atom:link href="https://blog.steveyi.net/tags/%E7%B6%B2%E7%AB%99%E6%97%A5%E8%AA%8C/index.xml" rel="self" type="application/rss+xml"/><item><title>建立 Cloud Identity 帳戶</title><link>https://blog.steveyi.net/posts/create-cloud-identity/</link><pubDate>Fri, 15 May 2020 20:35:11 +0000</pubDate><guid>https://blog.steveyi.net/posts/create-cloud-identity/</guid><description>&lt;p>首先，進入 &lt;a href="https://gsuite.google.com/signup/gcpidentity/welcome">Cloud Identity 申請頁面&lt;/a> 點擊下一頁&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051520063750.png" alt="">&lt;/p>
+&lt;p>接著輸入公司名稱(可以隨意輸入)，員工數量(隨意選擇) 把它當作一個團隊&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051520064943.png" alt="">&lt;/p>
+&lt;p>選擇地點（設定好就不能修改了），其實作用不大&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051520070636.png" alt="">&lt;/p>
+&lt;p>設定目前的電子郵件地址（一些申請的郵件會寄到這裡）&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051520072596.png" alt="">&lt;/p>
+&lt;p>輸入要設定的網域（不得使用於其他 G Suite 服務）&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051520074395.png" alt="">&lt;/p>
+&lt;p>接著建立使用者&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051520083976.png" alt="">&lt;/p>
+&lt;p>機器人驗證&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051520085633.png" alt="">&lt;/p>
+&lt;p>當出現這個頁面時，代表註冊完成了！&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051520091652.png" alt="">&lt;/p>
+&lt;p>接著我們需要驗證網域&lt;/p>
+&lt;p>請看下一篇文章 - &lt;a href="https://blog.steveyi.net/cloud-identity-setting/">Cloud Identity 驗證網域及建立帳號&lt;/a>&lt;/p></description></item><item><title>刪除 G suite 組織</title><link>https://blog.steveyi.net/posts/delete-gsuite/</link><pubDate>Fri, 15 May 2020 18:17:25 +0000</pubDate><guid>https://blog.steveyi.net/posts/delete-gsuite/</guid><description>&lt;p>之前有跟大家分享&lt;a href="https://blog.steveyi.net/register-gsuite/">註冊G Suite帳號&lt;/a>的方式，最近想將 &lt;a href="https://support.google.com/cloudidentity/answer/7319251?hl=zh-Hant">Cloud Identity免費版&lt;/a> 的G Suite組織刪除&lt;/p>
+&lt;p>由於完全沒有刪除過G Suite組織，所以稍微爬文了一下&lt;br>
+大致整理了一下刪除的方式&lt;/p>
+&lt;p>重要提醒：&lt;br>
+刪除前，請先取消約期授權並刪除所有GCP專案&lt;br>
+刪除後，所有組織資料會被清除&lt;/p>
+&lt;p>首先，進入&lt;a href="https://admin.google.com">G Suite控制台&lt;/a>，點擊公司資料&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051515401915.png" alt="">&lt;/p>
+&lt;p>接著點擊帳戶管理&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051515404022.png" alt="">&lt;/p>
+&lt;p>接著點擊 刪除帳號&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051515411434.png" alt="">&lt;/p>
+&lt;p>接著會提示你，這個步驟無法復原&lt;br>
+打勾後點擊 刪除帳號&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051515413046.png" alt="">&lt;/p>
+&lt;p>接著帳號就刪除囉！&lt;/p></description></item><item><title>Backblaze B2 低價的雲端數據存儲服務</title><link>https://blog.steveyi.net/posts/backblaze-b2/</link><pubDate>Mon, 11 May 2020 09:35:00 +0000</pubDate><guid>https://blog.steveyi.net/posts/backblaze-b2/</guid><description>&lt;p>之前學習建站之時，考量到一個問題！&lt;br>
+如果今天我的流量暴漲，文章變多，我的圖片空間及流量會不會也跟著變多&lt;br>
+所以在網路上搜尋了一些對象存處服務，找到了一間便宜的對象存處提供商－&lt;a href="https://www.backblaze.com/">Backblaze&lt;/a>&lt;/p>
+&lt;h2 id="什麼是對象存處" >什麼是對象存處
+&lt;span>
+&lt;a href="#%e4%bb%80%e9%ba%bc%e6%98%af%e5%b0%8d%e8%b1%a1%e5%ad%98%e8%99%95">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>對象存處是一種數據存儲，其中每個數據單元存儲為稱為對象的離散單元。&lt;br>
+對象靜態文件，類似於 pdf，mp3 檔，圖片或影片&amp;hellip;等文件。&lt;br>
+這些對象實際上可以是任何類型的數據和任何大小的數據。&lt;br>
+對象存儲中的所有對像都存儲在單個平面地址空間中，而沒有文件夾層次結構。&lt;/p>
+&lt;p>比較知名的提供商有 &lt;a href="https://aws.amazon.com/s3/">AWS S3&lt;/a>、&lt;a href="https://cloud.google.com/storage">Google Cloud Storage&lt;/a>、&lt;a href="https://www.backblaze.com/b2/cloud-storage.html">Backblaze B2&lt;/a>、&lt;a href="https://www.digitalocean.com/products/spaces/">DigitalOcean Space&lt;/a>&amp;hellip;等等&lt;/p>
+&lt;p>那這次要介紹的則是 Backblaze B2&lt;/p>
+&lt;h2 id="backblaze-b2-的優勢" >Backblaze B2 的優勢
+&lt;span>
+&lt;a href="#backblaze-b2-%e7%9a%84%e5%84%aa%e5%8b%a2">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>&lt;a href="https://www.backblaze.com/b2/cloud-storage-pricing.html">Backblaze B2 的價格是 Amazon S3 的 ¼ 倍&lt;br>
+&lt;/a>&lt;a href="https://www.cloudflare.com/bandwidth-alliance/backblaze/">搭配 CloudFlare CDN 免流量費&lt;br>
+&lt;/a>&lt;a href="https://www.backblaze.com/blog/backblaze-b2-s3-compatible-api/">支持 S3 API&lt;/a>&lt;/p>
+&lt;h2 id="註冊帳號" >註冊帳號
+&lt;span>
+&lt;a href="#%e8%a8%bb%e5%86%8a%e5%b8%b3%e8%99%9f">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>首先，進入官網後，點擊右上角的 Sign Up&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051108120980.png" alt="">&lt;/p>
+&lt;p>接著輸入帳號密碼，選擇資料放置區域(基本上選擇美西)&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051108143529.png" alt="">&lt;/p>
+&lt;p>接著到電子郵件中驗證帳號！完成&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051108170997.png" alt="">&lt;/p>
+&lt;h2 id="創建-bucket" >創建 Bucket
+&lt;span>
+&lt;a href="#%e5%89%b5%e5%bb%ba-bucket">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>登入帳號後，點擊中間的 Creat a Bucket&lt;/p>
+&lt;p>接著輸入 Bucket 名稱，不可以跟別人重複&lt;br>
+接著選擇 Public (如果你用於備份, 私人檔案的話，就選擇 Private )&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051108354195.png" alt="">&lt;/p>
+&lt;p>接著我們就會看見剛剛創建的 Bucket 了&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051109002920.png" alt="">&lt;/p>
+&lt;h2 id="創建-app-key" >創建 App Key
+&lt;span>
+&lt;a href="#%e5%89%b5%e5%bb%ba-app-key">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>雖然說在網頁上我們就可以上傳檔案了，但是網頁只支持到 500MB 的檔案&lt;br>
+超過就必須要使用 API 上傳了，所以這邊我們來教大家怎麼建立App Key&lt;/p>
+&lt;p>首先，點擊左方的 App Keys&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051109051012.png" alt="">&lt;/p>
+&lt;p>接著我們點擊 Add a New Application Key&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051109090292.png" alt="">&lt;/p>
+&lt;p>輸入 App Key 名稱，允許訪問的 Bucket&lt;br>
+接著點選 Create a new key&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051109160381.png" alt="">&lt;/p>
+&lt;p>接著會產生 API 資訊，將 S3 EndPoint, Key ID 及 applicationKay 記下來&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051109185118.png" alt="">&lt;/p>
+&lt;h2 id="上傳下載檔案" >上傳/下載檔案
+&lt;span>
+&lt;a href="#%e4%b8%8a%e5%82%b3%e4%b8%8b%e8%bc%89%e6%aa%94%e6%a1%88">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>在Windows/Mac上傳或下載有很多種工具可以做，我比較推薦使用 &lt;a href="https://cyberduck.io/">Cyberduck&lt;/a>&lt;br>
+如果是Linux的話，我認為 &lt;a href="https://rclone.org">Rclone&lt;/a> 是一個好選擇&lt;/p>
+&lt;p>PS.可以選擇 S3 API 或是 Backblaze API 進行連接&lt;/p>
+&lt;h2 id="總結" >總結
+&lt;span>
+&lt;a href="#%e7%b8%bd%e7%b5%90">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>Backblaze 真的是我找到最實惠的靜態存處服務&lt;br>
+價格超優！而且可以搭配 Cloudflare 綁定自訂網域及 CDN&lt;br>
+不知道大家有沒有發現，本站的圖片皆是放置在 Backblaze 並啟用 Cloudflare CDN 加速唷！&lt;/p></description></item><item><title>透過 Github 託管靜態網頁 - Github Pages</title><link>https://blog.steveyi.net/posts/github-static-website/</link><pubDate>Wed, 22 Apr 2020 14:09:46 +0000</pubDate><guid>https://blog.steveyi.net/posts/github-static-website/</guid><description>&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/github-static-website-12.png" alt="">&lt;/p>
+&lt;p>首先，進入Github 點擊左方綠色按鈕的 &lt;a href="https://github.com/new">New&lt;/a>&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/github-static-website-1-1920x1142.png" alt="">&lt;/p>
+&lt;p>輸入Repository名稱（自定義）&lt;br>
+選擇 Public(公開) 或是 Private(私人)&lt;br>
+點擊Create Repository&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/github-static-website-2-1920x1142.png" alt="">&lt;/p>
+&lt;p>這樣就建立好一個Repository囉！&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/github-static-website-3-1920x1142.png" alt="">&lt;/p>
+&lt;p>接著我們要下載&lt;a href="https://desktop.github.com/">Github Desktop&lt;/a>，方便上傳網頁原始檔&lt;br>
+點擊中間的Download for macOS（Windows 則會是 Download for Windows）&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/github-static-website-4-1920x1142.png" alt="">&lt;/p>
+&lt;p>下載完成後，登入Github帳號（Sign in to Github.com）&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/github-static-website-5-1920x1383.png" alt="">&lt;/p>
+&lt;p>接著選擇剛剛建立的Repository&lt;br>
+點擊 Clone&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/github-static-website-6-1920x1383.png" alt="">&lt;/p>
+&lt;p>接著將檔案複製到資料夾中&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/github-static-website-7.png" alt="">&lt;/p>
+&lt;p>回到Github Desktop，輸入Commit changes的資訊&lt;br>
+點擊Commit to master&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/github-static-website-8-1920x1383.png" alt="">&lt;/p>
+&lt;p>接著我們回到網頁，刷新後應該就會看到剛剛上傳的檔案囉！&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/github-static-website-9-1920x1142.png" alt="">&lt;/p>
+&lt;p>接著來設定一下Github Pages&lt;br>
+選擇master branch&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/github-static-website-10-1920x1142.png" alt="">&lt;/p>
+&lt;p>接著就會產生子網域，就可以嘗試進入網站囉！&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/github-static-website-12.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/github-static-website-11-1920x1142.png" alt="">&lt;/p>
+&lt;p>下次再來補充綁定自訂網域及SSL的方式吧！&lt;/p></description></item><item><title>Mailgun + Gmail 達成自訂網域郵箱</title><link>https://blog.steveyi.net/posts/mailgun-gmail-custom-domain-email/</link><pubDate>Wed, 22 Apr 2020 12:48:48 +0000</pubDate><guid>https://blog.steveyi.net/posts/mailgun-gmail-custom-domain-email/</guid><description>&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-14.jpg" alt="">&lt;/p>
+&lt;p>小時候總是很好奇寄件者後方的網域名稱是什麼，後來接觸到網站架設後，註冊了許多網域（現在手上大概6個網域左右)，也慢慢解開了小時候的疑惑&lt;/p>
+&lt;p>今天就來分享一下 Mailgun + Gmail 自訂網域郵箱的方法吧！&lt;/p>
+&lt;p>首先，先註冊 &lt;a href="https://www.mailgun.com/">Mailgun&lt;/a>，預設有 5000 封信件額度&lt;br>
+PS.如果你是GCP客戶，可以到 &lt;a href="https://www.mailgun.com/google/">合作頁面&lt;/a>，申請免費 30000 額度&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-2-1920x1142.png" alt="">&lt;/p>
+&lt;p>註冊之後，我們進入控制台新增網域（預設會有一個網域）&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-3-1920x1142.png" alt="">&lt;/p>
+&lt;p>上方輸入網域名網域名稱，下方勾選 Create DKIM Authority 並選擇 1024 位元(部分 DNS 服務商不支持 2048 位元)&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-4.png" alt="">&lt;/p>
+&lt;p>接著設定 DNS 紀錄，MX 紀錄一定要設定（不然會收不到信）&lt;br>
+小提醒：如果你有其他郵件收信服務(如: Gsuite, Office… 等)，不要設定 MX 紀錄，不然原先的服務會收不到信&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-5-1920x1142.png" alt="">&lt;/p>
+&lt;p>設置完後，等待 DNS 生效 我們就可以來進行下一個步驟了！&lt;/p>
+&lt;p>接著我們來設置 SMTP 帳號&lt;/p>
+&lt;p>首先，打開 Mailgun 控制台&lt;br>
+點擊 Domain settings 選擇 SMTP credentials&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-6-1920x1142.png" alt="">&lt;/p>
+&lt;p>接著點擊右上角的 New SMTP User 來建立新帳號&lt;br>
+右上方為密碼！先記起來，等等會用到&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-7-1920x1142.jpg" alt="">&lt;/p>
+&lt;p>接著我們來設定轉寄郵件&lt;/p>
+&lt;p>點擊左方的 Receiving，在點擊右上方的 Create Route&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-8-1920x1142.jpg" alt="">&lt;/p>
+&lt;p>接著選擇 Match Recipient (指定收件者)，並輸入剛剛建立的電子郵件地址&lt;br>
+下方 Forward 填寫 Gmail 的電子郵件地址，存檔！&lt;br>
+PS.如果第一項選擇 Cache All，則會轉發所有寄到這個網域下的電子郵件，也就是無限別名&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-9-1920x1142.jpg" alt="">&lt;/p>
+&lt;p>新增完後，我們打開 Gmail 設定→更多設定→帳戶&lt;br>
+點擊 &lt;strong>新增另一個電子郵件地址 (Add another email address)&lt;/strong>&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-1-1920x1142.jpg" alt="">&lt;/p>
+&lt;p>接著輸入名稱(自訂)及電子郵件地址(剛剛建立的那個)&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-10.jpg" alt="">&lt;/p>
+&lt;p>接著輸入SMTP伺服器(端口選擇 587tls) 使用者帳號 密碼&lt;br>
+mailgun 的 SMTP 伺服器是 smtp.mailgun.org&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-11.jpg" alt="">&lt;/p>
+&lt;p>接著驗證電子郵件擁有權（代碼會寄到剛剛設置的 Gmail 信箱）&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-12.jpg" alt="">&lt;/p>
+&lt;p>會收到類似這樣的信&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-13-1920x1142.jpg" alt="">&lt;/p>
+&lt;p>將驗證碼輸入上去就完成囉！&lt;/p>
+&lt;p>後記，好香 有網域信箱就是香（？🤩&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-14.jpg" alt="">&lt;/p>
+&lt;p>工具：&lt;a href="https://toolbox.googleapps.com/">G Suite工具箱&lt;/a>（檢測 DNS 問題）&lt;/p></description></item><item><title>[教學] AWS Route 53 代管DNS</title><link>https://blog.steveyi.net/posts/aws-route53/</link><pubDate>Mon, 06 Apr 2020 14:38:57 +0000</pubDate><guid>https://blog.steveyi.net/posts/aws-route53/</guid><description>&lt;p>從2017年 &lt;a href="https://diary.steveyi.net">註冊了第一個網域之後&lt;/a>，DNS 代管商一直是我在研究的一個部分！&lt;br>
+今天來推薦一下由 &lt;a href="https://aws.amazon.com">AWS&lt;/a> 推出的 DNS 代管服務 - &lt;a href="https://aws.amazon.com/tw/route53/">Route 53&lt;/a>&lt;/p>
+&lt;p>前置作業：&lt;br>
+&lt;a href="https://blog.steveyi.net/signup-aws-account/">AWS帳號&lt;/a>&lt;br>
+網域&lt;/p>
+&lt;h1 id="建立託管區域" >建立託管區域
+&lt;span>
+&lt;a href="#%e5%bb%ba%e7%ab%8b%e8%a8%97%e7%ae%a1%e5%8d%80%e5%9f%9f">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h1>&lt;p>首先，進入 AWS 主控台搜尋 Route 53&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020050917090249-scaled.jpg" alt="">&lt;/p>
+&lt;p>接著點擊左上角的託管區域&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020050917092329-scaled.jpg" alt="">&lt;/p>
+&lt;p>點擊左上角的，建立託管區域 接著在右方自己的網域名稱&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020050917094366-scaled.jpg" alt="">&lt;/p>
+&lt;p>接著系統就會建立一個託管區域囉！（這邊先將NS紀錄記起來，下個步驟會用到）&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020050917104942.png" alt="">&lt;/p>
+&lt;h1 id="設定-dns-伺服器" >設定 DNS 伺服器
+&lt;span>
+&lt;a href="#%e8%a8%ad%e5%ae%9a-dns-%e4%bc%ba%e6%9c%8d%e5%99%a8">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h1>&lt;p>那我們剛剛已經在 AWS Route 53 建立了 DNS 託管區域，接著我們要到網域註冊商來設定 DNS 伺服器！&lt;/p>
+&lt;p>首先，打開網域管理頁面（本篇以 Gandi 示範），並找到名稱伺服器或是 Nameservers&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020050917101357-scaled.jpg" alt="">&lt;/p>
+&lt;p>點擊變更後，將原本的紀錄刪除，並將 AWS Route 53 自動產生的 NS 紀錄貼上去&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020050917103474.png" alt="">&lt;/p>
+&lt;p>接著就等待生效囉！大約 24-48 小時生效（實際上應該 5-10 分鐘生效 XD）&lt;/p></description></item><item><title>在 Gandi 購買網域</title><link>https://blog.steveyi.net/posts/register-domain-at-gandi/</link><pubDate>Fri, 03 Apr 2020 18:40:19 +0000</pubDate><guid>https://blog.steveyi.net/posts/register-domain-at-gandi/</guid><description>&lt;p>之前有跟大家分享將網域從 Google 移轉至 Gandi 的過程 &lt;a href="https://blog.steveyi.net/transfer-domain-from-google-to-gandi/">點我看文章&lt;/a>&lt;br>
+本篇就來分享一下 在 Gandi 購買網域的過程吧！&lt;/p>
+&lt;p>前置準備：&lt;br>
+錢（用來註冊網域的費用）&lt;/p>
+&lt;p>首先，我們打開 &lt;a href="https://www.gandi.net/">Gandi&lt;/a> 的官網&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/register-domain-at-gandi-01-1920x923.png" alt="">&lt;/p>
+&lt;p>搜尋你想要的網域，接著將其加入購物車&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/register-domain-at-gandi-02-1920x741.jpg" alt="">&lt;/p>
+&lt;p>接著就可以結帳啦&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/register-domain-at-gandi-03-1920x923.png" alt="">&lt;/p>
+&lt;p>Gandi 支持很多付款方式：信用卡、銀聯、PayPal、轉帳、比特幣(BitCoin)&lt;br>
+其中 Paypal 必須為非台灣帳戶才可以付款&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/register-domain-at-gandi-04-1920x923.png" alt="">&lt;/p>
+&lt;p>付款完成後，系統就會建立網域資料 可以在&lt;a href="https://admin.gandi.net/domain/incoming">這裡查看狀態&lt;/a>&lt;/p>
+&lt;p>建立完成後，會收到一封電子郵件通知&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/register-domain-at-gandi-05-1920x1019.jpg" alt="">&lt;/p>
+&lt;p>接著就可以前往&lt;a href="https://admin.gandi.net">控制台&lt;/a>管理你的網域囉！&lt;/p></description></item><item><title>將網域從 Google Domains 轉出至 Gandi</title><link>https://blog.steveyi.net/posts/transfer-domain-from-google-to-gandi/</link><pubDate>Thu, 02 Apr 2020 02:55:55 +0000</pubDate><guid>https://blog.steveyi.net/posts/transfer-domain-from-google-to-gandi/</guid><description>&lt;p>這幾天收到Google Domains的通知信，通知網域即將要續費了&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/transfer-domain-from-google-to-gandi-01-1920x1019.png" alt="">&lt;/p>
+&lt;p>正好前陣子打算將所有網域轉移到 &lt;a href="https://gandi.net">Gandi&lt;/a> 統一管理，趁著這次機會&lt;br>
+來分享一下如何將網域 轉出/轉入&lt;/p>
+&lt;p>事前準備：&lt;br>
+已註冊的網域(要轉出的)&lt;br>
+錢(將網域轉入其他註冊商需要續費)&lt;/p>
+&lt;p>首先，先至 &lt;a href="https://domains.google/">Google Domains&lt;/a> 解鎖網域 並取得轉出授權碼&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/transfer-domain-from-google-to-gandi-02.jpg" alt="">&lt;/p>
+&lt;p>必須呈現 unlocked 才可以轉出&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/transfer-domain-from-google-to-gandi-03-1920x1080.jpg" alt="">&lt;/p>
+&lt;p>會產生一組授權碼（要保存好）&lt;/p>
+&lt;p>取得授權碼後，系統會詢問是要轉到其他Google帳戶還是其他網域註冊商&lt;br>
+我們要選擇「轉出至其他網域註冊商」&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/transfer-domain-from-google-to-gandi-04.jpg" alt="">&lt;/p>
+&lt;p>接著需要輸入一下Google帳號的密碼&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/transfer-domain-from-google-to-gandi-05.jpg" alt="">&lt;/p>
+&lt;p>輸入完成後，就會產生驗證碼了！（請小心保管，不要洩漏）&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/transfer-domain-from-google-to-gandi-06.jpg" alt="">&lt;/p>
+&lt;p>接著我們到 &lt;a href="https://gandi.net">Gandi&lt;/a>，我們將剛剛複製的授權碼貼上（前置付款過程可以參考 &lt;a href="https://blog.steveyi.net/register-domain-at-gandi/">這篇文章&lt;/a>）&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/transfer-domain-from-google-to-gandi-07-1920x945.png" alt="">&lt;/p>
+&lt;p>將授權碼貼上，同意條款，我們就可以進行付款了！&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/transfer-domain-from-google-to-gandi-08-1920x945.png" alt="">&lt;/p>
+&lt;p>完成付款後，我們可以到客戶面板中查看轉移狀態&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/transfer-domain-from-google-to-gandi-09-1920x945.png" alt="">&lt;/p>
+&lt;p>當系統跑轉移流程後，需要到 Email 接受轉移&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/transfer-domain-from-google-to-gandi-10-1920x1032.jpg" alt="">&lt;/p>
+&lt;p>記得按接受&amp;hellip; 當初我就是按錯，等了一陣子才收到新的Email xD&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/transfer-domain-from-google-to-gandi-11.jpg" alt="">&lt;/p>
+&lt;p>授權轉移後，你的網域就成功轉移啦！&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/transfer-domain-from-google-to-gandi-12-1920x1138.png" alt="">&lt;/p>
+&lt;p>PS.如果出現註冊商拒絕了這次移轉&lt;br>
+可能是因為你拒絕了電子郵件轉移授權、網域到期年限超過10年、或&amp;hellip;總總原因&lt;/p>
+&lt;p>如果你的網域不存在上方問題，建議你聯繫原本網域的註冊商客服&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/transfer-domain-from-google-to-gandi-13-1920x945.png" alt="">&lt;/p></description></item></channel></rss>

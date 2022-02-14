@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>背景播放 on 小易的部落格</title><link>https://blog.steveyi.net/tags/%E8%83%8C%E6%99%AF%E6%92%AD%E6%94%BE/</link><description>小易的部落格 (背景播放)</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Fri, 19 Jun 2020 14:39:47 +0000</lastBuildDate><atom:link href="https://blog.steveyi.net/tags/%E8%83%8C%E6%99%AF%E6%92%AD%E6%94%BE/index.xml" rel="self" type="application/rss+xml"/><item><title>無需訂閱 Youtube Music Premium 也能讓 iOS/iPadOS 的裝置享有背景播放的功能 (Youtube 也適用哦！)</title><link>https://blog.steveyi.net/posts/youtube-background-ios/</link><pubDate>Fri, 19 Jun 2020 14:39:47 +0000</pubDate><guid>https://blog.steveyi.net/posts/youtube-background-ios/</guid><description>&lt;p>此處主要由iPad作為示範，iPhone也可以用一樣的方法唷&lt;br>
+Android也可以用類似的方法，之後會再發一篇教學，敬請關注「我是小易」後續的文章吧！&lt;/p>
+&lt;p>後續更新：&lt;a href="https://blog.steveyi.net/youtube-background-playing-android" title="https://blog.steveyi.net/youtube-background-playing-android">Android版教學在此&lt;/a>&lt;/p>
+&lt;blockquote>
+&lt;p>筆者最近一直在找好用的免費串流音樂服務，發現其實電腦上的Youtube Music App(其實就是嵌入網頁拉XD)還不錯用，可惜行動版App跟網頁就都不能背景播放了(訂閱Premium的話就是App版可以，但網頁還是不行唷)&lt;/p>
+&lt;p>後來筆者發現了一個iOS 13/iPadOS 13的好功能&lt;br>
+(比較舊的iOS也有，但功能不是那麼完善，各位也可以試試看)&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="讓我們開始吧" >讓我們開始吧
+&lt;span>
+&lt;a href="#%e8%ae%93%e6%88%91%e5%80%91%e9%96%8b%e5%a7%8b%e5%90%a7">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h3>&lt;p>首先請先用內建的Safari瀏覽器打開&lt;a href="http://music.youtube.com">Youtube Music首頁&lt;/a>(請按住選擇在新標籤頁打開)，別急著播放音樂，按下左上方的AA，然後按下「切換為電腦版網頁」&lt;br>
+(iOS 12或更早版本的切換電腦版按鈕在動作選單內，也就是重新整理按鈕旁邊那個按鈕)&lt;/p>
+&lt;p>註：這邊不建議使用第三方瀏覽器的原因是有些第三方瀏覽器功能不如內建的穩定，記憶體有時會被系統回收凍結，導致音樂無緣無故暫停&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020061914004694.png" alt="">&lt;/p>
+&lt;p>iOS 13/iPadOS 13以上的電腦版網頁切換開關在左上方的「AA」內&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020061916292435.jpeg" alt="">&lt;/p>
+&lt;p>iOS 12或更早版本的電腦版網頁切換開關在動作選單內&lt;/p>
+&lt;p>接下來網頁會重新載入，此時再按一次AA，點選網站設定，把開關打開，這樣以後就會自動以電腦版網頁載入了(iOS 12或更早版本不支援此操作)&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020061914034643.jpeg" alt="">&lt;/p>
+&lt;p>接下來可以回到桌面、鎖定螢幕、或是切換到其他App，您會發現音樂繼續播放，且控制中心和通知中心可以控制播放、暫停及快轉&lt;/p>
+&lt;p>&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020061914571832.jpeg" alt="">&lt;/p>
+&lt;p>如果控制中心和通知中心沒出現控制介面或是控制介面標題只寫YouTube Music，而希望寫出歌名的話，就回到網頁多按幾下播放/暫停按鈕就好了&lt;/p>
+&lt;p>回到網頁也可以控制上一首和下一首、切換歌曲等電腦版可以做的操作&lt;/p>
+&lt;p>&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020061914134138.png" alt="">&lt;/p>
+&lt;p>到這邊就完成拉&lt;br>
+以後要聽音樂直接在Safari上面打開Youtube Music就可以拉～&lt;/p>
+&lt;p>Youtube也要允許背景播放的話也是一樣的方法唷！&lt;/p>
+&lt;p>筆者也有在iPhone上測試過，可以用～&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020061914370286.jpeg" alt="">&lt;/p>
+&lt;p>iPhone也可以背景播放唷&lt;/p>
+&lt;p>&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020061914373657.jpeg" alt="">&lt;/p>
+&lt;p>iPhone的Youtube Music網頁也能跟電腦網頁有幾乎一樣的功能囉&lt;/p>
+&lt;p>筆者試了一下，年代有點久遠的iOS 10也能用哦&lt;/p>
+&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020062707454832.png" alt="">&lt;/p></description></item></channel></rss>
