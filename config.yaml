@@ -1,22 +1,42 @@
-languageCode: "zh-TW"
+languageCode: "tw"
 baseUrl: "https://blog.steveyi.net/"
 title: "SteveYi's Blog"
 theme: "anubis"
 paginate: 10
-disqusShortname: "SteveYi"
+# disqusShortname: ""
 # googleAnalytics: "G-12345"
 enableRobotsTXT: true
 
-# defaultContentLanguage: zh-TW
+defaultContentLanguage: tw
 
 languages:
-  zh-TW:
-    languagedirection: rtl
+  tw:
+    contentDir: content/tw
     title: 小易的部落格
     weight: 2
+    languageName: 正體中文
+    menu:
+      main:
+        - identifier: archive
+          name: 文章列表
+          title: 文章列表
+          url: /posts/
+          weight: 0
+        - identifier: about
+          name: 關於小易
+          title: 關於小易
+          url: /about/
+          weight: 0
+        - identifier: Home Page
+          name: 首頁
+          title: 首頁
+          url: /
+          weight: 10
   en:
+    contentDir: content/en
     title: SteveYi's Blog
     weight: 1
+    languageName: English
 
 menu:
   main:
@@ -26,15 +46,15 @@ menu:
       url: /posts/
       weight: 0
     - identifier: about
-      name: 關於小易
+      name: About
       title: 關於小易
       url: /about/
       weight: 0
     - identifier: Home Page
-      name: 首頁
-      title: 首頁
+      name: Home
+      title: Home Page
       url: /
-      weight: 10
+      weight: 0
 
 params:
   author: "SteveYi"
