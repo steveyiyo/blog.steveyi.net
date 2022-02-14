@@ -2,6 +2,7 @@
 title: "在 Linux 上實現虛擬 WAN 多撥 PPPoe"
 date: 2021-07-19T08:47:55+08:00
 draft: flase
+description: "我將 Linux 做為路由器已經有好一陣子了。最近，我想將中華電信的七個 IP 都用上"
 ---
 
 我將 Linux 做為路由器已經有好一陣子了。  
