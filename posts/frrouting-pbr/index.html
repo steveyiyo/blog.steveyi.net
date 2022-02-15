@@ -125,7 +125,7 @@ ip rule add from 10.121.210.0/24 lookup TW
 ip route add 0.0.0.0/0 via 10.121.210.0/24 dev VPN-JP table TW
 </code></pre><p>但這樣的話，我每次都開機時都要執行一次 Script。</p>
 <p>但我又不想要透過 Script 去設定 PBR</p>
-<p><img src=https://static.yiy.tw/media/blog/1621326935.png alt></p>
+<p><img src=https://static-a1.steveyi.net/media/blog/1621326935.png alt></p>
 <p>於是我查詢了一下 <a href=https://frrouting.org/>FRRouting</a> 這套路由套件有沒有相關功能，沒想到真的有設計 PBR 的功能！</p>
 <p>仔細看完 <a href=https://docs.frrouting.org/en/latest/pbr.html>官方文件</a> 後，我們就馬上來實作啦！</p>
 <p>在此之前，若還沒有安裝 FRRouting 的話，可以參考 <a href=https://blog.steveyi.net/frrouting-install/>這篇文章</a> 來進行安裝唷～</p>
@@ -192,7 +192,7 @@ pbr-map VPN seq 10
  set nexthop-group JP
 !
 </code></pre><p>最終，我們可以輸入指令 <code>show pbr nexthop-groups</code>，來查看目前的規則！</p>
-<p><img src=https://static.yiy.tw/media/blog/1621331786.png alt></p>
+<p><img src=https://static-a1.steveyi.net/media/blog/1621331786.png alt></p>
 </div>
 <div class=post-info>
 <div class="post-date dt-published">2021-05-18</div>

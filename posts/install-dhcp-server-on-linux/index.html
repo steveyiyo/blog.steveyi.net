@@ -112,7 +112,7 @@ option domain-name &#34;network.steveyi.net&#34;; # 網域名稱 option domain-n
 </span>
 </h2><p>首先，我們需要先安裝一個套件，名為 <code>isc-dhcp-server</code></p>
 <pre tabindex=0><code>sudo apt install isc-dhcp-server
-</code></pre><p><img src=https://static.yiy.tw/media/blog/install-dhcp-server-in-linux-01.png alt></p>
+</code></pre><p><img src=https://static-a1.steveyi.net/media/blog/install-dhcp-server-in-linux-01.png alt></p>
 <h2 id=設置-dhcp-server>設置 DHCP Server
 <span>
 <a href=#%e8%a8%ad%e7%bd%ae-dhcp-server><svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/></svg>
@@ -135,7 +135,7 @@ subnet 10.121.210.0 netmask 255.255.255.0 {
 }
 </code></pre><p>接著，我們需要編輯發 DHCP 包的網卡
 <code>/etc/default/isc-dhcp-server</code></p>
-<p><img src=https://static.yiy.tw/media/blog/install-dhcp-server-in-linux-02.png alt></p>
+<p><img src=https://static-a1.steveyi.net/media/blog/install-dhcp-server-in-linux-02.png alt></p>
 <p>最後，輸入 <code>service isc-dhcp-server restart</code><br>
 這樣就完成囉～</p>
 </div>

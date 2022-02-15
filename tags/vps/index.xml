@@ -65,12 +65,12 @@ PersistentKeepalive = 10
 &lt;/span>
 &lt;/h3>&lt;p>首先，將工具下載下來&lt;/p>
 &lt;pre tabindex="0">&lt;code>git clone [https://github.com/sskaje/6in4.git](https://github.com/sskaje/6in4)
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020053018041378.jpg" alt="">&lt;/p>
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020053018041378.jpg" alt="">&lt;/p>
 &lt;p>我們進入項目的etc資料夾，並修改config.ini&lt;/p>
 &lt;pre tabindex="0">&lt;code>nano config.ini
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020053018044764.jpg" alt="">&lt;/p>
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020053018044764.jpg" alt="">&lt;/p>
 &lt;p>依序編輯 IPV6_NETWORK, IPV6_CIDR, INTERFACE, BIND_IP(有多iPv4需要)&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020053018050652.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020053018050652.jpg" alt="">&lt;/p>
 &lt;p>接著輸入 Crtl + X 來保存&lt;/p>
 &lt;h3 id="修改系統設定來允許ipv6轉發" >修改系統設定來允許iPv6轉發
 &lt;span>
@@ -100,7 +100,7 @@ iptables -I FORWARD -p 41 --j ACCEPT
 &lt;/h3>&lt;p>假設隧道ID為1，伺服端IPv4為1.1.1.1 用戶端IPv4為8.8.8.8]&lt;/p>
 &lt;p>配置文件中設置的IPv6子網為 2a0e:b107:7e0::，子網路遮罩為48(必須為8的倍數)工具會自動分割出 一個用於隧道的 /64子網及一個用於用戶路由的 /64子網&lt;/p>
 &lt;p>如果用戶端需要給其下級設備分配的話，建議伺服端的子網 應大於 /64，這樣才能產生 /64的下級子網，以保證SLAAC的運作。&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020053018052119.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020053018052119.jpg" alt="">&lt;/p>
 &lt;p>接著我們就可以至用戶端配置了！(配置過程可以參考&lt;a href="https://tunnelbroker.net/">https://tunnelbroker.net/&lt;/a>)&lt;/p>
 &lt;h3 id="報錯sipcalc-required" >報錯：sipcalc required
 &lt;span>
@@ -121,9 +121,9 @@ apt-get install sipcalc
 &lt;/a>
 &lt;/span>
 &lt;/h3>&lt;p>&lt;a href="https://test-ipv6.com/">https://test-ipv6.com/&lt;/a> 測試結果&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020053018053577.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020053018053577.png" alt="">&lt;/p>
 &lt;p>路由追蹤&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020053018054471.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020053018054471.jpg" alt="">&lt;/p>
 &lt;p>完成！&lt;/p>
 &lt;h3 id="參考資料" >參考資料：
 &lt;span>
@@ -157,7 +157,7 @@ apt-get install sipcalc
 &lt;li>
 &lt;p>開啟 Windows 遠程桌面&lt;/p>
 &lt;p>中文繁體版&lt;br>
-載點1: &lt;a href="http://static.yiy.tw/mirror/dd/win10.gz">http://static.yiy.tw/mirror/dd/win10.gz&lt;/a>&lt;/p>
+載點1: &lt;a href="http://static-a1.steveyi.net/mirror/dd/win10.gz">http://static-a1.steveyi.net/mirror/dd/win10.gz&lt;/a>&lt;/p>
 &lt;p>遠端登入資訊&lt;br>
 帳號: Administrator&lt;br>
 密碼: steveyigame.com&lt;/p>

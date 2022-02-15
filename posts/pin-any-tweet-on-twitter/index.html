@@ -149,35 +149,35 @@ URL 則為https://twitter.com/i/api/1.1/account/pin_tweet.json?tweet_mode=extend
 <div class="content e-content">
 <p>在今天，我滑 Twitter 時，發現了一篇有趣的推文&mldr;<br>
 於是我馬上就跟 <a href=https://edisonlee55.com>@edisonlee55</a> 分享這個趣事</p>
-<p><img src=https://static.yiy.tw/media/blog/pin-any-tweet-on-twitter-00.png alt></p>
+<p><img src=https://static-a1.steveyi.net/media/blog/pin-any-tweet-on-twitter-00.png alt></p>
 <p>很明顯的發現，這個人將別人的推文轉推過來，並置頂在自己的個人頁面</p>
 <p>這看似很正常，但事實上「我們只能置頂自己發的推文」<br>
 當我們點擊我們 retweet 的推文，我們沒有發現「置頂推文」的選項</p>
-<p><img src=https://static.yiy.tw/media/blog/pin-any-tweet-on-twitter-08.png alt></p>
+<p><img src=https://static-a1.steveyi.net/media/blog/pin-any-tweet-on-twitter-08.png alt></p>
 <p>那麼&mldr; 當然要一點偏方了！<br>
 跟 <a href=https://edisonlee55.com>@edisonlee55</a> 進行快速的討論後，我們開始了實驗</p>
 <p>首先，我們將瀏覽器的開發者工具打開<br>
 理論上，點擊右鍵就可以看見了！</p>
-<p><img src=https://static.yiy.tw/media/blog/pin-any-tweet-on-twitter-07.png alt></p>
+<p><img src=https://static-a1.steveyi.net/media/blog/pin-any-tweet-on-twitter-07.png alt></p>
 <p>接著，我們先進入 Network 的地方<br>
 在對我們想要進行 pin 的推文按個愛心</p>
-<p><img src=https://static.yiy.tw/media/blog/pin-any-tweet-on-twitter-06.png alt></p>
+<p><img src=https://static-a1.steveyi.net/media/blog/pin-any-tweet-on-twitter-06.png alt></p>
 <p>好那，我們看到了一個 HTTP POST 到 <a href=https://twitter.com/i/api/1.1/favorites/create.json>create.json</a></p>
-<p><img src=https://static.yiy.tw/media/blog/pin-any-tweet-on-twitter-05.png alt></p>
+<p><img src=https://static-a1.steveyi.net/media/blog/pin-any-tweet-on-twitter-05.png alt></p>
 <p>我們也看到了一個 &ldquo;id&rdquo;，這個 ID 則是 Tweet 的 ID。先將他複製下來，等等會用到<br>
 接著，我們還需要複製 Cookie, x-csrf-token, Bearer Token(Authorization) 等值，我們可以在 <strong>Header</strong> 上看到<br>
 注意！請記得要保存好，不要隨意洩露這些值</p>
 <p>接著，我們打開 Postman，選擇 POST<br>
 URL 則為<code>https://twitter.com/i/api/1.1/account/pin_tweet.json?tweet_mode=extended&id=&lt;id></code></p>
-<p><img src=https://static.yiy.tw/media/blog/pin-any-tweet-on-twitter-04.png alt></p>
+<p><img src=https://static-a1.steveyi.net/media/blog/pin-any-tweet-on-twitter-04.png alt></p>
 <p>將 Header 與 Authorization 都設定好了後，我們點擊 Send<br>
 我在第一次測試的時候，因為我沒有先 retweet 推文，所以系統 return 這個給我</p>
-<p><img src=https://static.yiy.tw/media/blog/pin-any-tweet-on-twitter-03.png alt></p>
+<p><img src=https://static-a1.steveyi.net/media/blog/pin-any-tweet-on-twitter-03.png alt></p>
 <p>完成 retweet 後，我們再執行一次 POST。成功啦！</p>
-<p><img src=https://static.yiy.tw/media/blog/pin-any-tweet-on-twitter-02.png alt></p>
+<p><img src=https://static-a1.steveyi.net/media/blog/pin-any-tweet-on-twitter-02.png alt></p>
 <p>接著，我們打開網站，刷新頁面。<br>
 果然看到成功 pin 起來了</p>
-<p><img src=https://static.yiy.tw/media/blog/pin-any-tweet-on-twitter-01.png alt></p>
+<p><img src=https://static-a1.steveyi.net/media/blog/pin-any-tweet-on-twitter-01.png alt></p>
 </div>
 <div class=post-info>
 <div class="post-date dt-published">2021-04-07</div>

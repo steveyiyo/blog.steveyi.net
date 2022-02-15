@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>對象存處 on 小易的部落格</title><link>https://blog.steveyi.net/tags/%E5%B0%8D%E8%B1%A1%E5%AD%98%E8%99%95/</link><description>小易的部落格 (對象存處)</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Thu, 14 May 2020 03:08:02 +0000</lastBuildDate><atom:link href="https://blog.steveyi.net/tags/%E5%B0%8D%E8%B1%A1%E5%AD%98%E8%99%95/index.xml" rel="self" type="application/rss+xml"/><item><title>Backblaze B2 支援 S3 API 了！</title><link>https://blog.steveyi.net/posts/backblaze-b2-compatible-s3-api/</link><pubDate>Thu, 14 May 2020 03:08:02 +0000</pubDate><guid>https://blog.steveyi.net/posts/backblaze-b2-compatible-s3-api/</guid><description>&lt;p>前幾天打開 Backblaze 後，看到一行大大的字&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051402585860.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051402585860.png" alt="">&lt;/p>
 &lt;p>沒錯！S3 API 跟 Backblaze B2 兼容啦！&lt;/p>
 &lt;p>S3 API 是目前市面上最流行的協定，很多軟硬體都兼容&lt;/p>
 &lt;p>Backblaze B2 則是非常棒的雲端存處(低價優勢)&lt;/p>
@@ -45,11 +45,11 @@
 &lt;/a>
 &lt;/span>
 &lt;/h2>&lt;p>首先，進入官網後，點擊右上角的 Sign Up&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051108120980.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051108120980.png" alt="">&lt;/p>
 &lt;p>接著輸入帳號密碼，選擇資料放置區域(基本上選擇美西)&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051108143529.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051108143529.png" alt="">&lt;/p>
 &lt;p>接著到電子郵件中驗證帳號！完成&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051108170997.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051108170997.png" alt="">&lt;/p>
 &lt;h2 id="創建-bucket" >創建 Bucket
 &lt;span>
 &lt;a href="#%e5%89%b5%e5%bb%ba-bucket">
@@ -59,9 +59,9 @@
 &lt;/h2>&lt;p>登入帳號後，點擊中間的 Creat a Bucket&lt;/p>
 &lt;p>接著輸入 Bucket 名稱，不可以跟別人重複&lt;br>
 接著選擇 Public (如果你用於備份, 私人檔案的話，就選擇 Private )&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051108354195.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051108354195.png" alt="">&lt;/p>
 &lt;p>接著我們就會看見剛剛創建的 Bucket 了&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051109002920.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051109002920.png" alt="">&lt;/p>
 &lt;h2 id="創建-app-key" >創建 App Key
 &lt;span>
 &lt;a href="#%e5%89%b5%e5%bb%ba-app-key">
@@ -71,14 +71,14 @@
 &lt;/h2>&lt;p>雖然說在網頁上我們就可以上傳檔案了，但是網頁只支持到 500MB 的檔案&lt;br>
 超過就必須要使用 API 上傳了，所以這邊我們來教大家怎麼建立App Key&lt;/p>
 &lt;p>首先，點擊左方的 App Keys&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051109051012.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051109051012.png" alt="">&lt;/p>
 &lt;p>接著我們點擊 Add a New Application Key&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051109090292.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051109090292.png" alt="">&lt;/p>
 &lt;p>輸入 App Key 名稱，允許訪問的 Bucket&lt;br>
 接著點選 Create a new key&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051109160381.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051109160381.png" alt="">&lt;/p>
 &lt;p>接著會產生 API 資訊，將 S3 EndPoint, Key ID 及 applicationKay 記下來&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051109185118.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051109185118.png" alt="">&lt;/p>
 &lt;h2 id="上傳下載檔案" >上傳/下載檔案
 &lt;span>
 &lt;a href="#%e4%b8%8a%e5%82%b3%e4%b8%8b%e8%bc%89%e6%aa%94%e6%a1%88">

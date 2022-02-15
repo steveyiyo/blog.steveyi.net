@@ -130,10 +130,10 @@ systemctl enable wg-quick@wg0 接著可以嘗試ping看看，如果有響應的�
 <p>首先，進入Wireguard安裝資料夾<br>
 如果找不到的話，請建立一下</p>
 <pre tabindex=0><code>cd /etc/wireguard
-</code></pre><p><img src=https://static.yiy.tw/media/blog/2020051611394599.png alt></p>
+</code></pre><p><img src=https://static-a1.steveyi.net/media/blog/2020051611394599.png alt></p>
 <p>接著，我們使用指令來產生公私鑰，並使用cat查看公私鑰內容</p>
 <pre tabindex=0><code>wg genkey | tee privatekey | wg pubkey &gt; publickey
-</code></pre><p><img src=https://static.yiy.tw/media/blog/2020051611445527.png alt></p>
+</code></pre><p><img src=https://static-a1.steveyi.net/media/blog/2020051611445527.png alt></p>
 <p>接著我們將公私鑰記下來，我們建立一個配置文件</p>
 <pre tabindex=0><code>nano wg0.conf
 </code></pre><p>進入nano 編輯器後，我們將下方代碼貼上，並修改公私鑰</p>
@@ -155,7 +155,7 @@ wg-quick up wg0
 <pre tabindex=0><code>systemctl enable wg-quick@wg0
 </code></pre><p>接著可以嘗試ping看看，如果有響應的話</p>
 <p>代表成功了！</p>
-<p><img src=https://static.yiy.tw/media/blog/2020051612102187.png alt></p>
+<p><img src=https://static-a1.steveyi.net/media/blog/2020051612102187.png alt></p>
 </div>
 <div class=post-info>
 <div class="post-date dt-published">2020-05-16</div>

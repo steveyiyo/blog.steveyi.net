@@ -9,14 +9,14 @@ sudo apt-get install google-drive-ocamlfuse
 第一次運行的時候它會跳出瀏覽器視窗給用戶登入並選擇帳號，要求權限時請選擇同意。
 成功之後會會跳轉到這個頁面（如下圖），並且在終端機看到這個訊息：&lt;/p>
 &lt;p>Access token retrieved correctly.&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2021011913110433.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2021011913110433.png" alt="">&lt;/p>
 &lt;p>接下來請輸入這串指令，在Home Directory建立一個掛載用的檔案夾&lt;/p>
 &lt;p>mkdir ~/GoogleDrive
 再接下來輸入這串指令就會完成掛載囉！&lt;/p>
 &lt;p>google-drive-ocamlfuse ~/GoogleDrive&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2021011913111963.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2021011913111963.png" alt="">&lt;/p>
 &lt;p>掛載的位置會在Home Directory 底下的Google Drive資料夾&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2021011913113183.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2021011913113183.png" alt="">&lt;/p>
 &lt;p>如果想要退出掛載的話，可以在終端機使用以下指令&lt;/p>
 &lt;p>fusermount -u ~/GoogleDrive
 更多指令如果想要查詢看看，可以終端機輸入這個指令來做查詢&lt;/p>
@@ -28,36 +28,36 @@ sudo apt-get install google-drive-ocamlfuse
 &lt;li>細節可以從高音部分比較明顯聽出（所以裝置的選擇很重要！）&lt;/li>
 &lt;li>這不是什麼正式的測驗，不過至少可以參考一下啦w&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020112501583221.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112501583221.png" alt="">&lt;/p>
 &lt;p>&lt;a href="https://www.npr.org/sections/therecord/2015/06/02/411473508/how-well-can-you-hear-audio-quality">點我前往測試&lt;/a>&lt;/p>
 &lt;p>測驗結果分析結果是，如果你能答對四個或以上，那麼你就不是木耳囉&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020112501563810.jpg" alt="">&lt;/p></description></item><item><title>AutoDraw 自動繪圖吧！</title><link>https://blog.steveyi.net/posts/autodraw/</link><pubDate>Wed, 25 Nov 2020 02:25:44 +0000</pubDate><guid>https://blog.steveyi.net/posts/autodraw/</guid><description>&lt;blockquote>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112501563810.jpg" alt="">&lt;/p></description></item><item><title>AutoDraw 自動繪圖吧！</title><link>https://blog.steveyi.net/posts/autodraw/</link><pubDate>Wed, 25 Nov 2020 02:25:44 +0000</pubDate><guid>https://blog.steveyi.net/posts/autodraw/</guid><description>&lt;blockquote>
 &lt;p>(本文由小易及蘿蔔共同編輯)&lt;/p>
 &lt;/blockquote>
 &lt;p>前幾天，小易在上課的時候，老師介紹到了一個有趣的網站&lt;/p>
 &lt;p>&lt;a href="https://autodraw.com/">AutoDraw&lt;/a>是一個由 Google 所開發的網站&lt;br>
 Google 從 1998 年就註冊這個網域了(或是其他人註冊轉賣給 Google 的)~&lt;br>
 我居然現在才知道這個網站&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020111806485939.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020111806485939.png" alt="">&lt;/p>
 &lt;p>小易也很好奇，這個有趣的東西是如何運作的&lt;br>
 於是玩了一下，也稍微搜尋了一下相關資料&lt;/p>
 &lt;p>就有搜尋到一篇文章，寫著 &lt;strong>&lt;em>Machine learning, plus a dash of artistic flair&lt;/em>&lt;/strong> (機器學習，並帶有一些藝術氣息)&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020111901401467.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020111901401467.png" alt="">&lt;/p>
 &lt;p>那我們初次進入網頁後，我們會看到一個空白的區塊&lt;br>
 我們可以選擇左邊的 AutoDraw (就是帶魔法的那個筆)&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020111918004754.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020111918004754.png" alt="">&lt;/p>
 &lt;p>接下來可以用電腦在上面畫圖，如果用「並行」搭配 Apple Pencil，效果更好哦～&lt;br>
 畫圖會發現神奇的事情發生了：隨便話一個圖就會有很多選項可以幫圖片做修正&lt;br>
 下次有空來玩玩看吧～&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/RPReplay-Final1606267033.gif" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/RPReplay-Final1606267033.gif" alt="">&lt;/p>
 &lt;p>或是使用 iPad 直接到 AutoDraw 去畫也是可以的&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020112501382837.gif" alt="">&lt;/p></description></item><item><title>Windows 10 打開電腦(喚醒)後自動校正時間</title><link>https://blog.steveyi.net/posts/ntp-clock-autoset/</link><pubDate>Fri, 20 Nov 2020 15:52:24 +0000</pubDate><guid>https://blog.steveyi.net/posts/ntp-clock-autoset/</guid><description>&lt;p>時鐘對電腦來說是一個非常重要的東西，並不是只在狀態欄(或工作列)顯示時間那麼單純而已，時鐘不正確(與真實世界實際時間偏差太多)的話，可能會造成電腦發生一些奇怪的現象，例如:不能看網頁(憑證問題)，如果時間差太多甚至會造成軟體當掉。各種程式登入逾時也是很容易在時間偏差太大時發生的事情&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020112014495468.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112501382837.gif" alt="">&lt;/p></description></item><item><title>Windows 10 打開電腦(喚醒)後自動校正時間</title><link>https://blog.steveyi.net/posts/ntp-clock-autoset/</link><pubDate>Fri, 20 Nov 2020 15:52:24 +0000</pubDate><guid>https://blog.steveyi.net/posts/ntp-clock-autoset/</guid><description>&lt;p>時鐘對電腦來說是一個非常重要的東西，並不是只在狀態欄(或工作列)顯示時間那麼單純而已，時鐘不正確(與真實世界實際時間偏差太多)的話，可能會造成電腦發生一些奇怪的現象，例如:不能看網頁(憑證問題)，如果時間差太多甚至會造成軟體當掉。各種程式登入逾時也是很容易在時間偏差太大時發生的事情&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112014495468.png" alt="">&lt;/p>
 &lt;p>時間錯誤造成的憑證問題導致無法正常瀏覽網頁&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020112015550593.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112015550593.png" alt="">&lt;/p>
 &lt;p>各種程式的登入逾時，iTunes就是其中之一&lt;/p>
 &lt;p>講到這裡，大家應該都想到了系統內建的自動校正時間功能&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020112014523058.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112014523058.png" alt="">&lt;/p>
 &lt;p>系統的校正功能，筆者從來沒看過它自動幫我更正時間，每次都是去按[立即更新]才幫我更正時間 (它不會是每次喚醒電腦就對時，據說要好幾天才會更正一次)&lt;/p>
 &lt;p>偏偏筆者的雙A牌PC(筆記型電腦)和以前使用的PC桌機(CMOS沒電)，不論有沒有插電，只要Windows沒在運作(睡眠、休眠、關機、當機)，時鐘就會停止計算時間，每次開電腦都是看到上次關掉電腦的日期(或是被重設)，打開後還要手動調整實在很麻煩，因此研究了時鐘的自動校正功能，每逢開機就校正一次。&lt;/p>
 &lt;p>此處使用到的應用程式是&lt;a href="https://www.stdtime.gov.tw/chinese/home.aspx" title="https://www.stdtime.gov.tw/chinese/home.aspx">國家時間與頻率標準實驗室&lt;/a>推出的 &lt;a href="https://www.stdtime.gov.tw/chinese/exe/NTPClock.exe" title="https://www.stdtime.gov.tw/chinese/exe/NTPClock.exe">NTPClock&lt;/a>&lt;br>
@@ -70,11 +70,11 @@ Google 從 1998 年就註冊這個網域了(或是其他人註冊轉賣給 Googl
 &lt;/span>
 &lt;/h2>&lt;p>首先請點這裡下載&lt;a href="https://www.stdtime.gov.tw/chinese/exe/NTPClock.exe" title="https://www.stdtime.gov.tw/chinese/exe/NTPClock.exe">NTPClock&lt;/a>，下載後請不要急著打開。&lt;br>
 請先將程式移至&amp;quot;C:\NTPClock&amp;quot;資料夾(自己建立該資料夾)，然後在該程式按右鍵，選擇[相容性]，然後依序更改圖片圈起來的參數再打開&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020112015050958.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112015050958.png" alt="">&lt;/p>
 &lt;p>開啟時請允許權限，否則無法變更時間&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020112015075546.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112015075546.png" alt="">&lt;/p>
 &lt;p>接下來程式會縮小在系統托盤，圖標點右鍵可以結束。&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020112015113959.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112015113959.png" alt="">&lt;/p>
 &lt;h2 id="設定開機自動使用ntpclock校正時間" >設定開機自動使用NTPClock校正時間
 &lt;span>
 &lt;a href="#%e8%a8%ad%e5%ae%9a%e9%96%8b%e6%a9%9f%e8%87%aa%e5%8b%95%e4%bd%bf%e7%94%a8ntpclock%e6%a0%a1%e6%ad%a3%e6%99%82%e9%96%93">
@@ -85,80 +85,80 @@ Google 從 1998 年就註冊這個網域了(或是其他人註冊轉賣給 Googl
 &lt;p>依照NTPClock的預設設定，每次開啟該程式就會校正一次系統時間&lt;br>
 因此我們要用&amp;quot;工作排程器&amp;quot;設定每次解鎖電腦時會自動&amp;quot;以管理員權限&amp;quot;啟動NTPClock&lt;/p>
 &lt;p>首先請先在Windows搜尋找到&amp;quot;工作排程器&amp;quot;&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020112015162761.png" alt="">&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020112015362266.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112015162761.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112015362266.png" alt="">&lt;/p>
 &lt;p>接下來請到觸發程序的地方，調整紅色框起來的地方的設定如圖&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020112015253737.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112015253737.png" alt="">&lt;/p>
 &lt;p>到動作的地方，調整紅色框起來的地方的設定如圖&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020112015265857.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112015265857.png" alt="">&lt;/p>
 &lt;p>到條件的地方，調整紅色框起來的地方的設定如圖&lt;/p>
 &lt;p>更正圖片錯誤的部分：取消勾選「只有在電腦是使用AC電源時才啟用這個工作」&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020112015284487.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112015284487.png" alt="">&lt;/p>
 &lt;p>到設定的地方，調整紅色框起來的地方的設定如圖&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020112015293652.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112015293652.png" alt="">&lt;/p>
 &lt;p>接下來要設定當鎖定、登出、關掉電腦(睡眠、休眠、關機)時關掉NTPClock&lt;br>
 (不然如果不是關機或登出的話，每次打開電腦就會多開一個NTPClock，然後多開幾次電腦之後工作列就滿了)&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020112015394495.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112015394495.png" alt="">&lt;/p>
 &lt;p>接下來請到觸發程序的地方，調整紅色框起來的地方的設定如圖&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020112015422241.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112015422241.png" alt="">&lt;/p>
 &lt;p>到動作的地方，調整紅色框起來的地方的設定如圖&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020112015435684.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112015435684.png" alt="">&lt;/p>
 &lt;p>到條件的地方，調整紅色框起來的地方的設定如圖&lt;/p>
 &lt;p>更正圖片錯誤的部分：取消勾選「只有在電腦是使用AC電源時才啟用這個工作」&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020112015284487.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112015284487.png" alt="">&lt;/p>
 &lt;p>到設定的地方，調整紅色框起來的地方的設定如圖&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020112015293652.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112015293652.png" alt="">&lt;/p>
 &lt;p>接下來每次打開電腦就會自動對時囉~&lt;br>
-如果電腦關掉後時間會跑掉的話，以後每次打開電腦都不用手動改時間了!&lt;/p></description></item><item><title>使用 Xbox 遊戲列提升 Windows 的遊戲體驗</title><link>https://blog.steveyi.net/posts/xbox-game-bar/</link><pubDate>Wed, 07 Oct 2020 02:09:56 +0000</pubDate><guid>https://blog.steveyi.net/posts/xbox-game-bar/</guid><description>&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020100701190250.png" alt="">&lt;/p>
+如果電腦關掉後時間會跑掉的話，以後每次打開電腦都不用手動改時間了!&lt;/p></description></item><item><title>使用 Xbox 遊戲列提升 Windows 的遊戲體驗</title><link>https://blog.steveyi.net/posts/xbox-game-bar/</link><pubDate>Wed, 07 Oct 2020 02:09:56 +0000</pubDate><guid>https://blog.steveyi.net/posts/xbox-game-bar/</guid><description>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020100701190250.png" alt="">&lt;/p>
 &lt;p>Xbox遊戲列是Windows 10的一個功能，具有錄影和直播、顯示效能、控制Spotify音樂等功能，還可以釘選在螢幕上。最棒的是，遊戲列會把系統資源集中在遊戲上，因此如果電腦配置不是很頂級的玩家玩起來會更順暢!&lt;/p>
 &lt;p>註: 筆者以Windows 10 (2004版) 和Xbox遊戲列(v5.420)作為示範，不同版本可能長得不太一樣。&lt;/p>
 &lt;p>首先，請先打開你的遊戲，或是要開啟遊戲列的應用程式，然後按下Win鍵(command鍵)+G&lt;br>
 打開選單後按下齒輪，然後勾選&amp;quot;記住這是個遊戲&amp;quot;&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020100701363231.png" alt="">&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020100701404291.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020100701363231.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020100701404291.png" alt="">&lt;/p>
 &lt;p>另外，Xbox遊戲列中的眾多小工具也都是可以釘選的，比如說筆者覺得非常好用的&amp;quot;&lt;a href="https://support.xbox.com/zh-TW/help/friends-social-activity/share-socialize/xbox-game-bar-performance" title="https://support.xbox.com/zh-TW/help/friends-social-activity/share-socialize/xbox-game-bar-performance">效能&lt;/a>&amp;quot;。&lt;br>
 &amp;ldquo;&lt;a href="https://support.xbox.com/zh-TW/help/friends-social-activity/share-socialize/xbox-game-bar-performance" title="https://support.xbox.com/zh-TW/help/friends-social-activity/share-socialize/xbox-game-bar-performance">效能&lt;/a>&amp;ldquo;這個小工具就算不是在遊戲中也很好用，這樣就不用安裝其他軟體來顯示效能了。&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020100701490590.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020100701490590.png" alt="">&lt;/p>
 &lt;p>提醒:&lt;br>
 在設定的齒輪旁邊有一個啟用點閱率/停用點閱率的功能，這個功能是控制釘選時，小工具能不能操作。(停用=小工具只能看，不能操作；啟用則反之)&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020100701584448.png" alt="">&lt;/p></description></item><item><title>使用 "備份與還原" 備份 Windows 7 以上的 PC</title><link>https://blog.steveyi.net/posts/windows-backup/</link><pubDate>Fri, 28 Aug 2020 09:09:08 +0000</pubDate><guid>https://blog.steveyi.net/posts/windows-backup/</guid><description>&lt;p>Mac裡面有一個&amp;quot;時光機&amp;quot;可以簡單易用地備份整部電腦，而Windows裡面也藏著類似的功能哦！&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020100701584448.png" alt="">&lt;/p></description></item><item><title>使用 "備份與還原" 備份 Windows 7 以上的 PC</title><link>https://blog.steveyi.net/posts/windows-backup/</link><pubDate>Fri, 28 Aug 2020 09:09:08 +0000</pubDate><guid>https://blog.steveyi.net/posts/windows-backup/</guid><description>&lt;p>Mac裡面有一個&amp;quot;時光機&amp;quot;可以簡單易用地備份整部電腦，而Windows裡面也藏著類似的功能哦！&lt;/p>
 &lt;p>簡單來說就是會將整台電腦、磁碟機或資料夾（視設定而定）備份起來，第一次會完整備份，所以會花比較久的時間；第二次以後會只備份「在上次備份完更動過」或「在上次備份完新建立」的檔案，以節省空間和時間。&lt;/p>
 &lt;p>首先請先打開開始，找到&amp;quot;Windows系統&amp;quot;，然後打開控制台&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020082808195051.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020082808195051.png" alt="">&lt;/p>
 &lt;p>接下來請進到系統及安全性&amp;gt;備份與還原&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020082808211660.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020082808211660.png" alt="">&lt;/p>
 &lt;p>按下&amp;quot;設定備份&amp;quot;，然後照著指示選擇備份的設定跟排程&lt;br>
 另外，建議不要跟啟動磁碟用同一個硬碟，以免到時硬碟壞了，備份也沒用。&lt;/p>
 &lt;p>接下來就可以開始備份&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020082808264658-scaled.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020082808264658-scaled.jpg" alt="">&lt;/p>
 &lt;p>下一頁會告訴各位如何還原唷!&lt;/p>
 &lt;p>備份完成後，視設定可能備份整個啟動磁碟或資料夾&lt;/p>
 &lt;p>如果要復原整個啟動磁碟的話，筆者沒有實驗過，可以參考&lt;a href="https://support.microsoft.com/zh-tw/help/2138292" title="https://support.microsoft.com/zh-tw/help/2138292">微軟官方文章&lt;/a>&lt;/p>
 &lt;p>如果要復原單一個資料夾或是磁碟區的話，請在該磁碟區上按下右鍵，然後選擇「內容」，並找到「以前的版本」之後選擇要還原的時間點&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020082808590870-scaled.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020082808590870-scaled.jpg" alt="">&lt;/p>
 &lt;p>如果選擇開啟舊檔，則可以看到以前備份的檔案，可以拉出來做使用；&lt;br>
 如果選擇還原，則會將整個磁碟區或資料夾覆蓋掉，這個筆者沒試過。&lt;br>
 以下是開啟舊檔後的樣子&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020082809060089-scaled.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020082809060089-scaled.jpg" alt="">&lt;/p>
 &lt;p>這樣以後再也不怕誤刪檔案囉！&lt;br>
 但還是要注意備份週期的問題，假如每週備份一次，但還來不及備份就被刪掉也是沒辦法囉&lt;/p></description></item><item><title>使用傳統版 Gmail 加快老舊裝置和低速網路的郵件載入速度</title><link>https://blog.steveyi.net/posts/html-gmail/</link><pubDate>Fri, 21 Aug 2020 15:32:52 +0000</pubDate><guid>https://blog.steveyi.net/posts/html-gmail/</guid><description>&lt;p>筆者有一部老舊的PC，配備1GB記憶體以及Windows XP做輕度文書使用(Windows XP只需128MB記憶體即可操作)，瀏覽一些網站仍可應付，有些大型網站則要載入很久或是無法正常使用。如果是一般的文章網頁還可以，問題來了，筆者想用Gmail網頁版收發郵件，但在網路暢通的情況下載入標準Gmail網頁需要將近一分鐘，捲動郵件更是一場災難，後來筆者發現網頁底部會有一個不明顯的傳統版Gmail超連結，不太會有人注意到它。&lt;/p>
 &lt;p>註：該部PC後來有點故障，所以不會用它來示範本篇教學。&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020082115070982.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020082115070982.png" alt="">&lt;/p>
 &lt;p>筆者將連結放在這裡，有需要的可以拷貝拿去用&lt;br>
 &lt;a href="https://mail.google.com/mail/u/0/h/" title="https://mail.google.com/mail/u/0/h/">Gmail傳統版&lt;/a>&lt;/p>
 &lt;p>點開連結後，請按下我要使用「HTML版Gmail」&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020082115124610.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020082115124610.png" alt="">&lt;/p>
 &lt;p>進入之後會發現少漂亮的圖示和華麗的動畫，雖然視覺效果不這麼吸引人，但在網路不佳或是電腦運作不快的環境可是非常有用啊！&lt;/p>
 &lt;p>這是傳統版Gmail的網頁，雖然看起來陽春但大部分功能都還在。&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020082115230812.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020082115230812.png" alt="">&lt;/p>
 &lt;p>這是標準的Gmail網頁，在效能良好的裝置和良好的網路環境可以獲得很好的視覺效果和使用體驗，但老舊裝置以及網路頻寬不足的情況下就要等很久。&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020082115303578.png" alt="">&lt;/p></description></item><item><title>在官方不支援 macOS Catalina 的裝置安裝 macOS Catalina</title><link>https://blog.steveyi.net/posts/macos-catalina-on-unsupport-mac/</link><pubDate>Tue, 18 Aug 2020 10:41:18 +0000</pubDate><guid>https://blog.steveyi.net/posts/macos-catalina-on-unsupport-mac/</guid><description>&lt;p>有些電腦明明還可以好好的、正常使用，但可能因為官方的多重考量(不管是效能上、商業上、或是功能上之類的考量)，而被官方從升級名單中一代一代的移除，豈不是覺得很可惜嗎&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020082115303578.png" alt="">&lt;/p></description></item><item><title>在官方不支援 macOS Catalina 的裝置安裝 macOS Catalina</title><link>https://blog.steveyi.net/posts/macos-catalina-on-unsupport-mac/</link><pubDate>Tue, 18 Aug 2020 10:41:18 +0000</pubDate><guid>https://blog.steveyi.net/posts/macos-catalina-on-unsupport-mac/</guid><description>&lt;p>有些電腦明明還可以好好的、正常使用，但可能因為官方的多重考量(不管是效能上、商業上、或是功能上之類的考量)，而被官方從升級名單中一代一代的移除，豈不是覺得很可惜嗎&lt;/p>
 &lt;p>這時候，有一位&lt;a href="http://dosdude1.com">dosdude1&lt;/a>做了&lt;a href="http://dosdude1.com/catalina" title="dosdude1.com/catalina">Catalina Patcher&lt;/a>解決了這個問題。&lt;/p>
 &lt;p>這是官方的支援名單:&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020081801505962.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081801505962.png" alt="">&lt;/p>
 &lt;p>螢幕快照擷取自&lt;a href="http://apple.com/tw/osx">Apple官網&lt;/a>&lt;/p>
 &lt;p>下方這是Catalina Patcher的支援名單，與OS X El Captain系統要求一致:&lt;/p>
-&lt;p>&lt;a href="https://support.apple.com/zh-tw/HT206886">&lt;img src="https://static.yiy.tw/media/blog/2020081802051786.png" alt="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://support.apple.com/zh-tw/HT206886">&lt;img src="https://static-a1.steveyi.net/media/blog/2020081802051786.png" alt="">&lt;/a>&lt;/p>
 &lt;p>螢幕快照擷取自&lt;a href="https://support.apple.com/zh-tw/HT206886">Apple官網&lt;/a>&lt;/p>
 &lt;p>本篇教學以MacBook Air 2011作為示範，與其他機型操作步驟差不多。&lt;/p>
 &lt;blockquote>
@@ -169,44 +169,44 @@ Google 從 1998 年就註冊這個網域了(或是其他人註冊轉賣給 Googl
 &lt;/blockquote>
 &lt;p>操作步驟：&lt;/p>
 &lt;p>請先前往&lt;a href="http://dosdude1.com/catalina">Catalina Patcher的網站&lt;/a>按下Download Latest Version並下載最新版&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020081802335586.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081802335586.png" alt="">&lt;/p>
 &lt;p>下載完成後打開映像檔會看到一個App，將它點開。&lt;br>
 然後進到「系統偏好設定」內的「安全性與隱私權」強制打開&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020081802485327.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081802485327.png" alt="">&lt;/p>
 &lt;p>然後按下白色的「打開」按鈕&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020081802492691.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081802492691.png" alt="">&lt;/p>
 &lt;p>然後請一路按下Continue，需要時請輸入密碼允許進行更動&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020081802523595.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081802523595.png" alt="">&lt;/p>
 &lt;p>請按下右邊的「Download a copy」藍色按鈕&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020081802533817.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081802533817.png" alt="">&lt;/p>
 &lt;p>然後按下「Start Download」&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020081802550610.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081802550610.png" alt="">&lt;/p>
 &lt;p>下載完成後可以選擇直接安裝(左)、製作可開機安裝程式的隨身碟(中)，或是製作ISO映像檔(右)&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020081803333085.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081803333085.png" alt="">&lt;/p>
 &lt;p>選擇Install to This Machine的話是直接安裝到機器上，要關閉SIP安全保護，這個筆者沒試過。&lt;br>
 選擇Create a Bootable Installer就是製作可開機安裝程式的隨身碟。&lt;br>
 選擇Create an ISO image是製作映像檔可供燒錄DVD使用。&lt;/p>
 &lt;p>筆者以Create a Bootable Installer作為本篇文章的示範&lt;br>
 按下Create a Bootable Installer之後可以選擇要安裝到哪裡，完成後按下Start再按Yes，然後再輸入密碼就會開始清除隨身碟上的資料並製作可開機安裝程式隨身碟了&lt;/p>
 &lt;p>完成以後重新啟動時按住option會看到macOS Base System，按下去會開機到macOS Catalina的macOS工具程式。&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020081810082548-scaled.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081810082548-scaled.jpg" alt="">&lt;/p>
 &lt;p>接下來請按下「重新安裝macOS」&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020081810100644-scaled.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081810100644-scaled.jpg" alt="">&lt;/p>
 &lt;p>進入安裝程式後請按下「繼續」，並同意條款。&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020081810111093-scaled.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081810111093-scaled.jpg" alt="">&lt;/p>
 &lt;p>接下來選擇要安裝在哪個磁碟或卷宗&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020081810121883-scaled.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081810121883-scaled.jpg" alt="">&lt;/p>
 &lt;p>接下來可能升級完成後會開機，如果進度條卡住而且沒有寫安裝剩餘時間可以試著強制關機(隨身碟還不用拔掉)，然後再次開機同時按option選擇macOS Base System來開機&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020081810082548-scaled.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081810082548-scaled.jpg" alt="">&lt;/p>
 &lt;p>然後這次一樣回到macOS工具程式，這次選擇「macOS Post Install」才能解決驅動程式等問題&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020081810100644-scaled.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081810100644-scaled.jpg" alt="">&lt;/p>
 &lt;p>接下來會依照所使用的機型進行安裝，不用手動更改選項，直接按下面的「Apply Patches」即可&lt;/p>
 &lt;p>&lt;img src="https://upload.cc/i1/2020/08/18/mbULt6.jpeg" alt="">&lt;/p>
 &lt;p>完成後會重新啟動電腦，並且會出現歡迎畫面&lt;br>
 接下來如果有需要還原時光機備份或是從其他電腦轉移資料也可以在這裡完成，或是設定完成後打開「系統移轉輔助程式」&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020081810265417.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081810265417.png" alt="">&lt;/p>
 &lt;p>接下來將它設定好就可以正常使用囉&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020081810311541.png" alt="">&lt;/p></description></item><item><title>使用CloudReady體驗ChromiumOS作業系統，老電腦重獲新生!</title><link>https://blog.steveyi.net/posts/cloudready/</link><pubDate>Mon, 10 Aug 2020 15:10:52 +0000</pubDate><guid>https://blog.steveyi.net/posts/cloudready/</guid><description>&lt;p>不曉得各位有沒有一種經驗，電腦老舊了，連文書處理和基本的瀏覽網頁都卡頓，但又不想使用太老舊的作業系統(官方停止提供新功能了，連瀏覽器也不提供更新支援了)，這時便可以下載最新版的CloudReady家用版來使用囉!既有最新版的瀏覽器，也有不少Web App能使用；也因為是基於瀏覽器的作業系統，因此資源占用比許多作業系統都少，也不用怕不習慣使用Linux作業系統(安裝軟體的方式很不一樣，使用邏輯也差很多，而且一直使用命令行也不是很直覺的用法)，所以，只要電腦支援64位元，幾乎都可以用CloudReady(試過家裡唯一一台32位元電腦，無法使用32位元版的CloudReady開機)&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081810311541.png" alt="">&lt;/p></description></item><item><title>使用CloudReady體驗ChromiumOS作業系統，老電腦重獲新生!</title><link>https://blog.steveyi.net/posts/cloudready/</link><pubDate>Mon, 10 Aug 2020 15:10:52 +0000</pubDate><guid>https://blog.steveyi.net/posts/cloudready/</guid><description>&lt;p>不曉得各位有沒有一種經驗，電腦老舊了，連文書處理和基本的瀏覽網頁都卡頓，但又不想使用太老舊的作業系統(官方停止提供新功能了，連瀏覽器也不提供更新支援了)，這時便可以下載最新版的CloudReady家用版來使用囉!既有最新版的瀏覽器，也有不少Web App能使用；也因為是基於瀏覽器的作業系統，因此資源占用比許多作業系統都少，也不用怕不習慣使用Linux作業系統(安裝軟體的方式很不一樣，使用邏輯也差很多，而且一直使用命令行也不是很直覺的用法)，所以，只要電腦支援64位元，幾乎都可以用CloudReady(試過家裡唯一一台32位元電腦，無法使用32位元版的CloudReady開機)&lt;/p>
 &lt;p>開始吧!&lt;/p>
 &lt;p>準備材料有:&lt;/p>
 &lt;ol>
@@ -215,43 +215,43 @@ Google 從 1998 年就註冊這個網域了(或是其他人註冊轉賣給 Googl
 &lt;/ol>
 &lt;p>首先請先到&lt;a href="https://www.neverware.com/freedownload#home-edition-install" title="https://www.neverware.com/freedownload#home-edition-install">官網&lt;/a>按下[DOWNLOAD 64-BIT IMAGE]下載64位元版安裝檔&lt;a href="https://www.neverware.com/blogcontent/2019/7/12/announcement-end-of-support-for-cloudready-home-edition-32bit" title="https://www.neverware.com/blogcontent/2019/7/12/announcement-end-of-support-for-cloudready-home-edition-32bit">(32位元版已停止支援)&lt;/a>&lt;br>
 無論使用何種系統，請不要選擇USB Maker，因為筆者和朋友測試多次，很容易製作失敗&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020081014045049.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081014045049.png" alt="">&lt;/p>
 &lt;p>請將下載後的檔案(*.zip)解壓縮後會得到一個(*.bin)檔案&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020081014081737.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081014081737.png" alt="">&lt;/p>
 &lt;p>接下來請使用Chrome開啟&lt;a href="https://chrome.google.com/webstore/detail/chromebook-recovery-utili/jndclpdbaamdhonoechobihbbiimdgai?utm_source=chrome-app-launcher-info-dialog" title="https://chrome.google.com/webstore/detail/chromebook-recovery-utili/jndclpdbaamdhonoechobihbbiimdgai?utm_source=chrome-app-launcher-info-dialog">這個連結&lt;/a>，並安裝後開啟&lt;/p>
 &lt;p>插上隨身碟之後按齒輪，並按下[Use local image]&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020081014111649.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081014111649.png" alt="">&lt;/p>
 &lt;p>選擇剛剛解壓縮出來的BIN(*.bin)檔案&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020081014135411.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081014135411.png" alt="">&lt;/p>
 &lt;p>然後插入並選擇剛剛準備好的隨身碟&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020081014150721.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081014150721.png" alt="">&lt;/p>
 &lt;p>接下來按兩次藍色按鈕，並授予使用者帳戶控制的權限，等待完成&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020081014165917.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081014165917.png" alt="">&lt;/p>
 &lt;p>如果過程中跳出USB磁碟機需要格式化的視窗，請按下取消!&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020081014261042.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081014261042.png" alt="">&lt;/p>
 &lt;p>完成之後請將電腦關機，依照電腦製造商提供的方法進入BIOS設定、開機選單或Mac開機管理程式，並選擇使用剛剛製作好的隨身碟開機(視情況可能需要輸入BIOS密碼或是&lt;a href="https://support.apple.com/zh-tw/guide/mac-help/mchl126463db/mac" title="https://support.apple.com/zh-tw/guide/mac-help/mchl126463db/mac">韌體密碼&lt;/a>)&lt;/p>
 &lt;p>本篇以PC作為示範，所以使用Boot Menu選擇USB磁碟機(隨身碟名字可能不一樣)&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020081014475160-scaled.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081014475160-scaled.jpg" alt="">&lt;/p>
 &lt;p>再來會進入開機畫面&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020081014493026-scaled.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081014493026-scaled.jpg" alt="">&lt;/p>
 &lt;p>開機完成後可以選擇語言和聯網等基礎設定&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020081014502140-scaled.jpg" alt="">&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020081014503063.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081014502140-scaled.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081014503063.jpg" alt="">&lt;/p>
 &lt;p>設定完成後可以按下藍色的開始使用&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020081014521448.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081014521448.png" alt="">&lt;/p>
 &lt;p>右下角按下後會展開控制中心（下半部）和通知中心（上半部）&lt;br>
 控制中心可以控制各式開關、關機、鎖定、打開系統偏好設定&lt;br>
 按下Install OS便可以安裝到硬碟，以後開機就不用依賴這個隨身碟了，但是會將硬碟資料清空，請謹慎操作。&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020081014532111.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081014532111.png" alt="">&lt;/p>
 &lt;p>左下角的圓形按鈕是啟動台，可以找Chromium應用程式商店下載各式Chrome App和擴充功能。&lt;br>
 值得一提的是，下載的Chrome App會和帳戶同步，意指重新安裝或者是到別台CloudReady電腦、Chromebit、Chromebox或是Chromebook上都會同步安裝&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020081014561142.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081014561142.png" alt="">&lt;/p>
 &lt;p>在設定裡面可以調整各種選項，裡面的設定值也會同步&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020081015000930.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081015000930.png" alt="">&lt;/p>
 &lt;p>有一個App叫做「檔案」，功能相當於Finder和檔案總管，可以管理檔案&lt;br>
 而且也會自動串接Google雲端硬碟，非常方便。&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020081015012368.png" alt="">&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020081015044386.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081015012368.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081015044386.png" alt="">&lt;/p>
 &lt;p>大致介紹完畢囉！祝各位用得愉快～&lt;br>
 螢幕快照的快速鍵是Ctrl+F5，會存在下載資料夾&lt;br>
 其餘快速鍵幾乎都跟Windows差不多，可以參考&lt;a href="https://support.google.com/chromebook/answer/183101?hl=zh-Hant" title="https://support.google.com/chromebook/answer/183101?hl=zh-Hant">這篇官方文章&lt;/a>&lt;/p></description></item><item><title>使用 Android 手機作為 Mac 的網路連線來源的方法</title><link>https://blog.steveyi.net/posts/horndis/</link><pubDate>Sat, 08 Aug 2020 07:23:53 +0000</pubDate><guid>https://blog.steveyi.net/posts/horndis/</guid><description>&lt;p>有時因為某些原因，不想使用Wi-Fi上網或使用Wi-Fi個人熱點時，或是電腦的無線網路卡受到周遭物品的遮蔽時，甚至是黑蘋果電腦沒有相容無線網卡等情況下，將Android手機作為網路接收器是一個好主意。&lt;br>
@@ -261,17 +261,17 @@ macOS需求為10.11(El Captain)以上，本篇筆者使用macOS 10.13(High Sierr
 &lt;p>首先請先打開&lt;a href="https://joshuawise.com/horndis#available_versions">這個網址&lt;/a>，前往作者的下載頁面，點擊下圖紅色框起來的那個按鈕&lt;/p>
 &lt;p>&lt;a href="https://joshuawise.com/horndis#available_versions">&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020080807285442.png" alt="">&lt;/a>&lt;/p>
 &lt;p>接下來請在左下角的下載進度條按下「保留」，這是因為電腦將這個套件誤判為病毒。&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020080806512846.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020080806512846.png" alt="">&lt;/p>
 &lt;p>進到安裝程式後請一路按下「繼續」&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020080806513465.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020080806513465.png" alt="">&lt;/p>
 &lt;p>如果遇到需要輸入密碼的介面，請輸入密碼來授予權限&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020080806514925.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020080806514925.png" alt="">&lt;/p>
 &lt;p>安裝完成後，請將手機插上電腦的USB連接埠，並且打開USB數據連線&lt;/p>
 &lt;p>&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020080807171991-scaled.jpg" alt="">&lt;/p>
 &lt;p>到系統偏好設定裡，打開網路偏好設定&lt;/p>
 &lt;p>&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020080807085471.png" alt="">&lt;/p>
 &lt;p>接下來就會在裡面看到手機有沒有連線囉&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020080806520553.png" alt="">&lt;/p></description></item><item><title>幫 Spotify 或其他音樂軟體加上實時歌詞的方法 (Android)</title><link>https://blog.steveyi.net/posts/dynamic-lyrics-android/</link><pubDate>Sat, 11 Jul 2020 10:00:12 +0000</pubDate><guid>https://blog.steveyi.net/posts/dynamic-lyrics-android/</guid><description>&lt;p>上次有一篇介紹&lt;a href="https://blog.steveyi.net/free-streaming-music-compare/" title="[2020最新] 各大串流平台免費會員比較">各家串流平台的免費會員比較&lt;/a>，各位可以發現實時歌詞很多家平台都有&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020080806520553.png" alt="">&lt;/p></description></item><item><title>幫 Spotify 或其他音樂軟體加上實時歌詞的方法 (Android)</title><link>https://blog.steveyi.net/posts/dynamic-lyrics-android/</link><pubDate>Sat, 11 Jul 2020 10:00:12 +0000</pubDate><guid>https://blog.steveyi.net/posts/dynamic-lyrics-android/</guid><description>&lt;p>上次有一篇介紹&lt;a href="https://blog.steveyi.net/free-streaming-music-compare/" title="[2020最新] 各大串流平台免費會員比較">各家串流平台的免費會員比較&lt;/a>，各位可以發現實時歌詞很多家平台都有&lt;/p>
 &lt;p>但Spotify根據筆者測試只有Premium用戶能用或是有些平台沒有歌詞服務，稍嫌可惜&lt;/p>
 &lt;p>這時想要聽著Spotify或其他沒歌詞的平台的免費音樂，但又覺得沒歌詞不能一起唱很麻煩嗎 這時候照這篇文章做就可以解決這個問題囉&lt;/p>
 &lt;p>這篇文章適用Android用戶，iOS/iPadOS用戶在&lt;a href="https://blog.steveyi.net/no-premium-spotify-dynamic-lyrics/" title="不用Premium也可以幫Spotify加上實時歌詞(iOS/iPadOS)">另外一篇&lt;/a>唷&lt;/p>
@@ -286,39 +286,39 @@ macOS需求為10.11(El Captain)以上，本篇筆者使用macOS 10.13(High Sierr
 &lt;/h2>&lt;p>首先請先下載&lt;a href="https://play.google.com/store/apps/details?id=com.musixmatch.android.lyrify">Musixmatch&lt;/a>&lt;br>
 下載完成後請打開並註冊或登入Musixmatch的帳號&lt;br>
 如果有詢問是否加入Musixmatch Premium會員，可以關掉&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020071108253421.jpeg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071108253421.jpeg" alt="">&lt;/p>
 &lt;p>接下來請允許所需的權限&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020071108255172.jpeg" alt="">&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020071108260461.jpeg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071108255172.jpeg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071108260461.jpeg" alt="">&lt;/p>
 &lt;p>接下來視需要，登入Spotify或是音樂庫&lt;/p>
 &lt;p>此處以Spotify示範&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020071108261822.jpeg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071108261822.jpeg" alt="">&lt;/p>
 &lt;p>輸入帳號密碼&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020071108263125.jpeg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071108263125.jpeg" alt="">&lt;/p>
 &lt;p>然後滑到最底部按綠色的「同意」按鈕&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020071108265846.jpeg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071108265846.jpeg" alt="">&lt;/p>
 &lt;p>在Spotify或其他平台隨便播放一首歌，如果跳出這視窗，請按「別再顯示」&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020071108273772.jpeg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071108273772.jpeg" alt="">&lt;/p>
 &lt;p>接下來會跳出Floating Lyrics的實時歌詞視窗&lt;br>
 如果支援實時歌詞的歌曲就會自己跳，如果只支援靜態歌詞就需要自己用手滑，不支援歌詞的話也會出現在這邊&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020071108275158.jpeg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071108275158.jpeg" alt="">&lt;/p>
 &lt;p>按下Floating Lyrics視窗裡，歌名右邊的圓形按鈕可以更改樣式&lt;br>
 比如說更改顏色或是展開歌詞&lt;/p>
 &lt;p>&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020071108280788.jpeg" alt="">&lt;/p>
 &lt;p>按下圓形按鈕右邊的三個點按鈕可以看到選單有更多功能&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020071108303749.jpeg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071108303749.jpeg" alt="">&lt;/p>
 &lt;p>點選「在App內顯示」就可以整個畫面充滿歌詞&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020071108310063.jpeg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071108310063.jpeg" alt="">&lt;/p>
 &lt;p>打開通知中心可以看到隱藏Floating Lyrics的按鈕&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020071109554967.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071109554967.png" alt="">&lt;/p>
 &lt;p>接下來可以測試其他應用程式（但不是每款音樂App都支援）&lt;/p>
 &lt;p>筆者在Friday音樂隨便播放一首歌，程式本身沒有這首歌的歌詞，此時Musixmatch便非常實用&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020071109251796.jpeg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071109251796.jpeg" alt="">&lt;/p>
 &lt;p>在Youtube Music測試，不少專輯版音樂都能用，但如前面所述，部分中文歌會產生誤判的情形（我也不知道到底為什麼中文歌名要寫英文）&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020071109383934.jpeg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071109383934.jpeg" alt="">&lt;/p>
 &lt;p>舉例來說，以下這首歌曲是鄧紫棋的「&lt;a href="https://www.youtube.com/watch?v=G3z9U_1Uue4&amp;amp;feature=share">好想好想妳&lt;/a>」&lt;br>
 但歌詞卻誤判為另一首(我完全沒聽過的)歌曲，這時我只好關掉Floating Lyrics，或是改用選單的歌詞辨識功能&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020071109490666.jpeg" alt="">&lt;/p></description></item><item><title>幫 Spotify 加上實時歌詞 (iOS/iPadOS)</title><link>https://blog.steveyi.net/posts/no-premium-spotify-dynamic-lyrics/</link><pubDate>Sat, 11 Jul 2020 07:31:26 +0000</pubDate><guid>https://blog.steveyi.net/posts/no-premium-spotify-dynamic-lyrics/</guid><description>&lt;p>上次有一篇介紹&lt;a href="https://blog.steveyi.net/free-streaming-music-compare/" title="[2020最新] 各大串流平台免費會員比較">各家串流平台的免費會員比較&lt;/a>，各位可以發現實時歌詞很多家平台都有&lt;br>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071109490666.jpeg" alt="">&lt;/p></description></item><item><title>幫 Spotify 加上實時歌詞 (iOS/iPadOS)</title><link>https://blog.steveyi.net/posts/no-premium-spotify-dynamic-lyrics/</link><pubDate>Sat, 11 Jul 2020 07:31:26 +0000</pubDate><guid>https://blog.steveyi.net/posts/no-premium-spotify-dynamic-lyrics/</guid><description>&lt;p>上次有一篇介紹&lt;a href="https://blog.steveyi.net/free-streaming-music-compare/" title="[2020最新] 各大串流平台免費會員比較">各家串流平台的免費會員比較&lt;/a>，各位可以發現實時歌詞很多家平台都有&lt;br>
 但 Spotify 根據筆者測試只有 Premium 用戶能用，稍嫌可惜&lt;br>
 這時想要聽著 Spotify 的免費音樂，但又覺得沒歌詞不能一起唱很麻煩嗎&lt;br>
 這時候照這篇文章做就可以解決這個問題囉&lt;/p>
@@ -332,22 +332,22 @@ macOS需求為10.11(El Captain)以上，本篇筆者使用macOS 10.13(High Sierr
 &lt;/h2>&lt;p>首先請先下載&lt;a href="https://apps.apple.com/tw/app/musixmatch/id448278467">Musixmatch&lt;/a>&lt;br>
 下載完成後請打開並註冊或登入Musixmatch的帳號&lt;br>
 如果有詢問是否加入Musixmatch Premium會員，可以按左上角「ㄨ」關掉&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020071106591523.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071106591523.png" alt="">&lt;/p>
 &lt;p>完成後請授權Spotify，按下綠色的按鈕&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020071107003597.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071107003597.png" alt="">&lt;/p>
 &lt;p>接下來滑到最下面按綠色的「同意」&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020071107012072.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071107012072.png" alt="">&lt;/p>
 &lt;p>這時候可以隨便播一首歌&lt;/p>
 &lt;p>&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020071107042389.png" alt="">&lt;/p>
 &lt;p>然後回到Musixmatch，轉到「音樂」頁面或是「首頁」會看到正在播放的音樂&lt;br>
 按下去會展開&lt;/p>
 &lt;p>如果有支援實時歌詞，會跟著音樂跑，如果只支援靜態歌詞，則可能需要自己用手滑，最怕是有些音樂沒支援歌詞&lt;br>
 左下角也有翻譯功能喔（如果有人翻譯的話）&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020071107271010.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071107271010.png" alt="">&lt;/p>
 &lt;p>如果使用iPad還可以搭配SpiltView邊看歌詞邊放專輯封面展示&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020071215492977.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071215492977.png" alt="">&lt;/p>
 &lt;p>或是使用iPad的Spilt View邊看歌詞邊做其他事（例如：瀏覽網頁）&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020071215540769.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071215540769.png" alt="">&lt;/p>
 &lt;p>也可以在桌面左邊新增小工具&lt;/p>
 &lt;p>&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020071107274160.jpeg" alt="IMG_1759.jpeg">&lt;/p>
 &lt;p>桌面上就會有歌詞囉&lt;/p>
@@ -365,7 +365,7 @@ macOS需求為10.11(El Captain)以上，本篇筆者使用macOS 10.13(High Sierr
 免費會員在平板電腦和電腦App、電腦版網頁可以隨選即播，有穿插廣告，音質不能設為「最高」。&lt;br>
 如果在手機和iPod touch上則是限隨機播放，每小時只能跳過六首歌（部分指定的個人化播放清單可隨選即播，不在此限）。&lt;br>
 有趣的是筆者的大螢幕手機被視為平板，賺到隨選即播🤣&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070809182757.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070809182757.png" alt="">&lt;/p>
 &lt;h2 id="kkbox" >KKBOX
 &lt;span>
 &lt;a href="#kkbox">
@@ -376,7 +376,7 @@ macOS需求為10.11(El Captain)以上，本篇筆者使用macOS 10.13(High Sierr
 會員註冊完會有三天體驗會員幾乎全功能都能用，體驗會員過期後會成為一般會員，但每個裝置能登入的體驗會員帳號次數有限。&lt;br>
 一般會員音質不能設為最高(320kbps)，每天會有一則廣告，看完後可以免費聽20首歌曲，用完後每首歌只能預覽30秒。&lt;br>
 網路上有時會不定期發布體驗序號。&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070504425055.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070504425055.jpg" alt="">&lt;/p>
 &lt;h2 id="mymusic" >MyMusic
 &lt;span>
 &lt;a href="#mymusic">
@@ -385,7 +385,7 @@ macOS需求為10.11(El Captain)以上，本篇筆者使用macOS 10.13(High Sierr
 &lt;/span>
 &lt;/h2>&lt;p>會員註冊完會有7天體驗會員全功能都能用，體驗會員過期後會成為一般會員。&lt;br>
 一般會員音質只能設為一般(128kbps)，只有指定的幾張歌單可以完整聽，其他歌曲都只能預覽30秒。網路上有時會不定期發布體驗序號。&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070504433779.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070504433779.jpg" alt="">&lt;/p>
 &lt;h2 id="friday-音樂" >Friday 音樂
 &lt;span>
 &lt;a href="#friday-%e9%9f%b3%e6%a8%82">
@@ -396,7 +396,7 @@ macOS需求為10.11(El Captain)以上，本篇筆者使用macOS 10.13(High Sierr
 會員註冊完會有7天體驗會員全功能都能用，體驗會員過期後會成為一般會員。&lt;br>
 一般會員音質只能設為一般(128kbps)，每天只能播放五首歌，用完後都只能預覽30秒。&lt;br>
 網路上有時會不定期發布體驗序號。&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070505410044.jpeg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070505410044.jpeg" alt="">&lt;/p>
 &lt;h2 id="apple-music" >Apple Music
 &lt;span>
 &lt;a href="#apple-music">
@@ -407,7 +407,7 @@ macOS需求為10.11(El Captain)以上，本篇筆者使用macOS 10.13(High Sierr
 （需升級至iOS/iPad OS 13以上，iOS 10以上只有靜態歌詞）&lt;br>
 需要先付錢才能送三個月試用，Android版App帶給我的感受不是很順手；Android版使用上也常常遇到Bug，但如果使用iPhone的話可以直接在Apple Watch上面呼叫Siri點歌確實很方便，網路上偶爾也會發布歌手或電台贊助的免費體驗序號。&lt;br>
 官方說明的系統需求是iOS 8.4/Android 5.0/iTunes 12.2以上&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020072711523343.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020072711523343.png" alt="">&lt;/p>
 &lt;h2 id="網易雲音樂" >網易雲音樂
 &lt;span>
 &lt;a href="#%e7%b6%b2%e6%98%93%e9%9b%b2%e9%9f%b3%e6%a8%82">
@@ -415,7 +415,7 @@ macOS需求為10.11(El Captain)以上，本篇筆者使用macOS 10.13(High Sierr
 &lt;/a>
 &lt;/span>
 &lt;/h2>&lt;p>如果需要全曲庫聽到飽要用翻牆軟體（如：穿梭VPN），沒翻牆的話會反灰如圖，動態歌詞，隨選即播，無穿插廣告，但大部分歌曲音質只能設128Kbps，有少部分歌曲可以下載，也有一些獨家音樂，英文歌偏少。&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070504432158.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070504432158.jpg" alt="">&lt;/p>
 &lt;h2 id="蝦米音樂" >蝦米音樂
 &lt;span>
 &lt;a href="#%e8%9d%a6%e7%b1%b3%e9%9f%b3%e6%a8%82">
@@ -423,7 +423,7 @@ macOS需求為10.11(El Captain)以上，本篇筆者使用macOS 10.13(High Sierr
 &lt;/a>
 &lt;/span>
 &lt;/h2>&lt;p>常常簽到可以領體驗會員，但曲庫筆者感覺上比網易雲跟QQ音樂少，有些歌要用翻牆軟體（如：穿梭VPN等），有動態歌詞，部分歌曲可以下載，英文歌偏少。&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070512114857.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070512114857.png" alt="">&lt;/p>
 &lt;h2 id="qq音樂" >QQ音樂
 &lt;span>
 &lt;a href="#qq%e9%9f%b3%e6%a8%82">
@@ -431,7 +431,7 @@ macOS需求為10.11(El Captain)以上，本篇筆者使用macOS 10.13(High Sierr
 &lt;/a>
 &lt;/span>
 &lt;/h2>&lt;p>曲庫幾乎都要用翻牆軟體（如：穿梭VPN等），有動態歌詞（逐字），英文歌偏少。&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070512124991.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070512124991.png" alt="">&lt;/p>
 &lt;h2 id="mixerbox-3" >MixerBox 3
 &lt;span>
 &lt;a href="#mixerbox-3">
@@ -439,7 +439,7 @@ macOS需求為10.11(El Captain)以上，本篇筆者使用macOS 10.13(High Sierr
 &lt;/a>
 &lt;/span>
 &lt;/h2>&lt;p>基於Youtube做成的MV播放器，但iOS每次離開App就要從控制中心按一次播放；Android則會有一個小視窗懸浮著，略為不便，而且因為是MV，所以有些穿插對話的MV會影響聽歌體驗。有些人會開台一起聽歌，而探索頁面常常可以找到適合自己的音樂，音樂鬧鐘功能可以讓起床變有趣&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070512135174.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070512135174.png" alt="">&lt;/p>
 &lt;h2 id="youtube-music" >Youtube Music
 &lt;span>
 &lt;a href="#youtube-music">
@@ -451,79 +451,79 @@ macOS需求為10.11(El Captain)以上，本篇筆者使用macOS 10.13(High Sierr
 有設計歌詞的區塊，但沒幾首歌支援的。&lt;br>
 不含Youtube的話曲庫不算多，但配合Youtube上的影片後，曲庫可說是非常龐大；但也因此搜尋介面很亂，有專輯版音樂，也有MV、第三方上傳的音樂影片（版權灰色地帶，時常被下架），也有播放清單。&lt;br>
 另外令人匪夷所思的是系統語言是中文的情況下，有些中文歌都只寫英文歌名，非常奇葩&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070512340980.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070512340980.png" alt="">&lt;/p>
 &lt;p>以上就是蘿蔔介紹台灣比較常見的串流音樂平台，有些版權比較屬於灰色地帶的就先不介紹了，畢竟「我是小易」的編輯們也無法保證其合法性&lt;/p>
-&lt;p>看完這些介紹，各位有打算使用哪個串流音樂平台了嗎？&lt;/p></description></item><item><title>透過 Github 託管靜態網頁 - Github Pages</title><link>https://blog.steveyi.net/posts/github-static-website/</link><pubDate>Wed, 22 Apr 2020 14:09:46 +0000</pubDate><guid>https://blog.steveyi.net/posts/github-static-website/</guid><description>&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/github-static-website-12.png" alt="">&lt;/p>
+&lt;p>看完這些介紹，各位有打算使用哪個串流音樂平台了嗎？&lt;/p></description></item><item><title>透過 Github 託管靜態網頁 - Github Pages</title><link>https://blog.steveyi.net/posts/github-static-website/</link><pubDate>Wed, 22 Apr 2020 14:09:46 +0000</pubDate><guid>https://blog.steveyi.net/posts/github-static-website/</guid><description>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-12.png" alt="">&lt;/p>
 &lt;p>首先，進入Github 點擊左方綠色按鈕的 &lt;a href="https://github.com/new">New&lt;/a>&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/github-static-website-1-1920x1142.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-1-1920x1142.png" alt="">&lt;/p>
 &lt;p>輸入Repository名稱（自定義）&lt;br>
 選擇 Public(公開) 或是 Private(私人)&lt;br>
 點擊Create Repository&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/github-static-website-2-1920x1142.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-2-1920x1142.png" alt="">&lt;/p>
 &lt;p>這樣就建立好一個Repository囉！&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/github-static-website-3-1920x1142.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-3-1920x1142.png" alt="">&lt;/p>
 &lt;p>接著我們要下載&lt;a href="https://desktop.github.com/">Github Desktop&lt;/a>，方便上傳網頁原始檔&lt;br>
 點擊中間的Download for macOS（Windows 則會是 Download for Windows）&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/github-static-website-4-1920x1142.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-4-1920x1142.png" alt="">&lt;/p>
 &lt;p>下載完成後，登入Github帳號（Sign in to Github.com）&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/github-static-website-5-1920x1383.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-5-1920x1383.png" alt="">&lt;/p>
 &lt;p>接著選擇剛剛建立的Repository&lt;br>
 點擊 Clone&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/github-static-website-6-1920x1383.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-6-1920x1383.png" alt="">&lt;/p>
 &lt;p>接著將檔案複製到資料夾中&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/github-static-website-7.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-7.png" alt="">&lt;/p>
 &lt;p>回到Github Desktop，輸入Commit changes的資訊&lt;br>
 點擊Commit to master&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/github-static-website-8-1920x1383.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-8-1920x1383.png" alt="">&lt;/p>
 &lt;p>接著我們回到網頁，刷新後應該就會看到剛剛上傳的檔案囉！&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/github-static-website-9-1920x1142.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-9-1920x1142.png" alt="">&lt;/p>
 &lt;p>接著來設定一下Github Pages&lt;br>
 選擇master branch&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/github-static-website-10-1920x1142.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-10-1920x1142.png" alt="">&lt;/p>
 &lt;p>接著就會產生子網域，就可以嘗試進入網站囉！&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/github-static-website-12.png" alt="">&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/github-static-website-11-1920x1142.png" alt="">&lt;/p>
-&lt;p>下次再來補充綁定自訂網域及SSL的方式吧！&lt;/p></description></item><item><title>Mailgun + Gmail 達成自訂網域郵箱</title><link>https://blog.steveyi.net/posts/mailgun-gmail-custom-domain-email/</link><pubDate>Wed, 22 Apr 2020 12:48:48 +0000</pubDate><guid>https://blog.steveyi.net/posts/mailgun-gmail-custom-domain-email/</guid><description>&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-14.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-12.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-11-1920x1142.png" alt="">&lt;/p>
+&lt;p>下次再來補充綁定自訂網域及SSL的方式吧！&lt;/p></description></item><item><title>Mailgun + Gmail 達成自訂網域郵箱</title><link>https://blog.steveyi.net/posts/mailgun-gmail-custom-domain-email/</link><pubDate>Wed, 22 Apr 2020 12:48:48 +0000</pubDate><guid>https://blog.steveyi.net/posts/mailgun-gmail-custom-domain-email/</guid><description>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-14.jpg" alt="">&lt;/p>
 &lt;p>小時候總是很好奇寄件者後方的網域名稱是什麼，後來接觸到網站架設後，註冊了許多網域（現在手上大概6個網域左右)，也慢慢解開了小時候的疑惑&lt;/p>
 &lt;p>今天就來分享一下 Mailgun + Gmail 自訂網域郵箱的方法吧！&lt;/p>
 &lt;p>首先，先註冊 &lt;a href="https://www.mailgun.com/">Mailgun&lt;/a>，預設有 5000 封信件額度&lt;br>
 PS.如果你是GCP客戶，可以到 &lt;a href="https://www.mailgun.com/google/">合作頁面&lt;/a>，申請免費 30000 額度&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-2-1920x1142.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-2-1920x1142.png" alt="">&lt;/p>
 &lt;p>註冊之後，我們進入控制台新增網域（預設會有一個網域）&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-3-1920x1142.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-3-1920x1142.png" alt="">&lt;/p>
 &lt;p>上方輸入網域名網域名稱，下方勾選 Create DKIM Authority 並選擇 1024 位元(部分 DNS 服務商不支持 2048 位元)&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-4.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-4.png" alt="">&lt;/p>
 &lt;p>接著設定 DNS 紀錄，MX 紀錄一定要設定（不然會收不到信）&lt;br>
 小提醒：如果你有其他郵件收信服務(如: Gsuite, Office… 等)，不要設定 MX 紀錄，不然原先的服務會收不到信&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-5-1920x1142.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-5-1920x1142.png" alt="">&lt;/p>
 &lt;p>設置完後，等待 DNS 生效 我們就可以來進行下一個步驟了！&lt;/p>
 &lt;p>接著我們來設置 SMTP 帳號&lt;/p>
 &lt;p>首先，打開 Mailgun 控制台&lt;br>
 點擊 Domain settings 選擇 SMTP credentials&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-6-1920x1142.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-6-1920x1142.png" alt="">&lt;/p>
 &lt;p>接著點擊右上角的 New SMTP User 來建立新帳號&lt;br>
 右上方為密碼！先記起來，等等會用到&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-7-1920x1142.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-7-1920x1142.jpg" alt="">&lt;/p>
 &lt;p>接著我們來設定轉寄郵件&lt;/p>
 &lt;p>點擊左方的 Receiving，在點擊右上方的 Create Route&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-8-1920x1142.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-8-1920x1142.jpg" alt="">&lt;/p>
 &lt;p>接著選擇 Match Recipient (指定收件者)，並輸入剛剛建立的電子郵件地址&lt;br>
 下方 Forward 填寫 Gmail 的電子郵件地址，存檔！&lt;br>
 PS.如果第一項選擇 Cache All，則會轉發所有寄到這個網域下的電子郵件，也就是無限別名&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-9-1920x1142.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-9-1920x1142.jpg" alt="">&lt;/p>
 &lt;p>新增完後，我們打開 Gmail 設定→更多設定→帳戶&lt;br>
 點擊 &lt;strong>新增另一個電子郵件地址 (Add another email address)&lt;/strong>&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-1-1920x1142.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-1-1920x1142.jpg" alt="">&lt;/p>
 &lt;p>接著輸入名稱(自訂)及電子郵件地址(剛剛建立的那個)&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-10.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-10.jpg" alt="">&lt;/p>
 &lt;p>接著輸入SMTP伺服器(端口選擇 587tls) 使用者帳號 密碼&lt;br>
 mailgun 的 SMTP 伺服器是 smtp.mailgun.org&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-11.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-11.jpg" alt="">&lt;/p>
 &lt;p>接著驗證電子郵件擁有權（代碼會寄到剛剛設置的 Gmail 信箱）&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-12.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-12.jpg" alt="">&lt;/p>
 &lt;p>會收到類似這樣的信&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-13-1920x1142.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-13-1920x1142.jpg" alt="">&lt;/p>
 &lt;p>將驗證碼輸入上去就完成囉！&lt;/p>
 &lt;p>後記，好香 有網域信箱就是香（？🤩&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/mailgungmail-14.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-14.jpg" alt="">&lt;/p>
 &lt;p>工具：&lt;a href="https://toolbox.googleapps.com/">G Suite工具箱&lt;/a>（檢測 DNS 問題）&lt;/p></description></item></channel></rss>

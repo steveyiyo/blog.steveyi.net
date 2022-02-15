@@ -50,17 +50,17 @@ PersistentKeepalive = 10
 &lt;p>特別注意：這種網路架構，如果VPN Gateway掉線了，那A,B,C也就不能彼此互通了&lt;/p></description></item><item><title>透過 iperf3 來測試內網速度</title><link>https://blog.steveyi.net/posts/iperf3/</link><pubDate>Sun, 08 Nov 2020 13:26:11 +0000</pubDate><guid>https://blog.steveyi.net/posts/iperf3/</guid><description>&lt;p>不久前，筆者換了新的交換機。為了測試內網的傳輸速度，筆者發現了這款工具 - &lt;a href="https://iperf.fr/iperf-download.php">iperf3&lt;/a>&lt;/p>
 &lt;p>這是一個支援 Ｗindows, Linux, macOS 的測試程式，主要是透過指令來操作&lt;br>
 筆者也常常用來測試兩個不同地區伺服器的速度&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020110813145837.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020110813145837.png" alt="">&lt;/p>
 &lt;p>那麼，以下分享一下安裝方法&lt;/p>
 &lt;p>首先，進入 &lt;a href="https://iperf.fr/iperf-download.php">iperf3 官網&lt;/a>後，找到對應的系統(如果是 Windows 就選擇 Windows, macOS 則選擇 macos, Linux亦同&amp;hellip;)&lt;/p>
 &lt;p>會下載一個 .zip 的檔案，將其解壓縮&lt;/p>
 &lt;p>並打開命令控制字元（macOS 及 Linux 則是 Terminal 也可以透過 SSH 進行操作），輸入 &lt;code>cd &amp;lt;資料夾路徑&amp;gt;&lt;/code>，接著輸入 iperf3 指令&lt;/p>
 &lt;p>&lt;code>iperf3 -s&lt;/code> #用於伺服端的&lt;br>
 &lt;code>iperf3 -c &amp;lt;伺服端IP&amp;gt;&lt;/code> #用於客戶端的&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020110813255574.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020110813255574.png" alt="">&lt;/p>
 &lt;p>就會開始跑測速啦！&lt;/p>
 &lt;p>大家比較需要注意的點是，在內網的話，需要確認內網是互通的(同一個 LAN 就是互通的)&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020110813230558.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020110813230558.png" alt="">&lt;/p>
 &lt;p>我們也可以使用 ping 指令去測試網路是否通的，在部分設備上（如 Windows），可能預設將 ICMP 屏蔽了。需要特別到防火牆裡面開啟&lt;/p></description></item><item><title>FRRouting 安裝教學</title><link>https://blog.steveyi.net/posts/frrouting-install/</link><pubDate>Sun, 12 Jul 2020 13:07:14 +0000</pubDate><guid>https://blog.steveyi.net/posts/frrouting-install/</guid><description>&lt;p>很久沒有來分享了！最近仍然在學習 BGP 知識及測試之前一直使用 Bird1 來廣播 BGP，後來在跟朋友 Peer 時，一直無法建立對等（很玄，但卻可以跟 IX 建立）&lt;/p>
 &lt;p>於是我將 Bird1 解除安裝了，改安裝 &lt;a href="https://frrouting.org/">FRRouting&lt;/a>。&lt;/p>
 &lt;p>&lt;a href="https://frrouting.org/">FRRouting&lt;/a> 是從 Quagga Fork 來的路由套件，功能也十分強大（ 其指令類似於 Cisco 或 Quagga ）&lt;/p>
@@ -132,25 +132,25 @@ service frr restart
 高核心且空閒的電腦(不然跑起來會很卡)&lt;/p>
 &lt;p>首先，我們先到官方網站下載PVE的ISO檔案 &lt;a href="https://www.proxmox.com/en/downloads">官網載點&lt;/a>&lt;br>
 點擊左方的 &lt;a href="https://www.proxmox.com/en/downloads/item/proxmox-ve-6-2-iso-installer">Proxmox VE 6.2 ISO Installer&lt;/a> 來下載(6.2是版本號，右方則是種子下載)&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070100471381.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070100471381.png" alt="">&lt;/p>
 &lt;p>下載好之後，我們將檔案寫入USB中，做成安裝碟&lt;br>
 這邊推薦使用Etcher來寫入，&lt;a href="https://www.balena.io/etcher/">官網連結&lt;/a>&lt;/p>
 &lt;p>做好安裝碟之後，我們進入BIOS，並調整開機順序(將安裝碟設為第一順位)&lt;/p>
 &lt;p>接著我們就可以進行安裝了!&lt;/p>
 &lt;p>首先，選擇第一個 Install Proxmox VE&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070705281974.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070705281974.png" alt="">&lt;/p>
 &lt;p>接著同意服務條款&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070705274149.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070705274149.png" alt="">&lt;/p>
 &lt;p>選擇硬碟&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070705275335.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070705275335.png" alt="">&lt;/p>
 &lt;p>選擇國家及時區&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070705280757.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070705280757.png" alt="">&lt;/p>
 &lt;p>設置root密碼及電子郵件地址&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070705282498.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070705282498.png" alt="">&lt;/p>
 &lt;p>設置主機名稱及網路(這邊建議一次就設定好，不然後續修改IP有點麻煩)&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070705283457.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070705283457.png" alt="">&lt;/p>
 &lt;p>全部完成後，就點擊Install來進行安裝!&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020070705284395.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070705284395.png" alt="">&lt;/p>
 &lt;p>安裝完成後，我們使用 https://你的IP:8006 就可以進入管理面板囉!&lt;/p>
 &lt;p>下一篇，我們將與大家分享一些配置的過程&lt;/p></description></item><item><title>在 Ubuntu 系統下架設 Tunnel Broker 服務 (v4 to v6)</title><link>https://blog.steveyi.net/posts/tunnel-broker-bgp/</link><pubDate>Sun, 31 May 2020 16:56:41 +0000</pubDate><guid>https://blog.steveyi.net/posts/tunnel-broker-bgp/</guid><description>&lt;h3 id="前言" >前言
 &lt;span>
@@ -170,12 +170,12 @@ service frr restart
 &lt;/span>
 &lt;/h3>&lt;p>首先，將工具下載下來&lt;/p>
 &lt;pre tabindex="0">&lt;code>git clone [https://github.com/sskaje/6in4.git](https://github.com/sskaje/6in4)
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020053018041378.jpg" alt="">&lt;/p>
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020053018041378.jpg" alt="">&lt;/p>
 &lt;p>我們進入項目的etc資料夾，並修改config.ini&lt;/p>
 &lt;pre tabindex="0">&lt;code>nano config.ini
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020053018044764.jpg" alt="">&lt;/p>
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020053018044764.jpg" alt="">&lt;/p>
 &lt;p>依序編輯 IPV6_NETWORK, IPV6_CIDR, INTERFACE, BIND_IP(有多iPv4需要)&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020053018050652.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020053018050652.jpg" alt="">&lt;/p>
 &lt;p>接著輸入 Crtl + X 來保存&lt;/p>
 &lt;h3 id="修改系統設定來允許ipv6轉發" >修改系統設定來允許iPv6轉發
 &lt;span>
@@ -205,7 +205,7 @@ iptables -I FORWARD -p 41 --j ACCEPT
 &lt;/h3>&lt;p>假設隧道ID為1，伺服端IPv4為1.1.1.1 用戶端IPv4為8.8.8.8]&lt;/p>
 &lt;p>配置文件中設置的IPv6子網為 2a0e:b107:7e0::，子網路遮罩為48(必須為8的倍數)工具會自動分割出 一個用於隧道的 /64子網及一個用於用戶路由的 /64子網&lt;/p>
 &lt;p>如果用戶端需要給其下級設備分配的話，建議伺服端的子網 應大於 /64，這樣才能產生 /64的下級子網，以保證SLAAC的運作。&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020053018052119.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020053018052119.jpg" alt="">&lt;/p>
 &lt;p>接著我們就可以至用戶端配置了！(配置過程可以參考&lt;a href="https://tunnelbroker.net/">https://tunnelbroker.net/&lt;/a>)&lt;/p>
 &lt;h3 id="報錯sipcalc-required" >報錯：sipcalc required
 &lt;span>
@@ -226,9 +226,9 @@ apt-get install sipcalc
 &lt;/a>
 &lt;/span>
 &lt;/h3>&lt;p>&lt;a href="https://test-ipv6.com/">https://test-ipv6.com/&lt;/a> 測試結果&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020053018053577.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020053018053577.png" alt="">&lt;/p>
 &lt;p>路由追蹤&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020053018054471.jpg" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020053018054471.jpg" alt="">&lt;/p>
 &lt;p>完成！&lt;/p>
 &lt;h3 id="參考資料" >參考資料：
 &lt;span>
@@ -246,10 +246,10 @@ apt-get install sipcalc
 &lt;p>首先，進入Wireguard安裝資料夾&lt;br>
 如果找不到的話，請建立一下&lt;/p>
 &lt;pre tabindex="0">&lt;code>cd /etc/wireguard
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051611394599.png" alt="">&lt;/p>
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051611394599.png" alt="">&lt;/p>
 &lt;p>接著，我們使用指令來產生公私鑰，並使用cat查看公私鑰內容&lt;/p>
 &lt;pre tabindex="0">&lt;code>wg genkey | tee privatekey | wg pubkey &amp;gt; publickey
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051611445527.png" alt="">&lt;/p>
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051611445527.png" alt="">&lt;/p>
 &lt;p>接著我們將公私鑰記下來，我們建立一個配置文件&lt;/p>
 &lt;pre tabindex="0">&lt;code>nano wg0.conf
 &lt;/code>&lt;/pre>&lt;p>進入nano 編輯器後，我們將下方代碼貼上，並修改公私鑰&lt;/p>
@@ -270,8 +270,8 @@ wg-quick up wg0
 &lt;pre tabindex="0">&lt;code>systemctl enable wg-quick@wg0
 &lt;/code>&lt;/pre>&lt;p>接著可以嘗試ping看看，如果有響應的話&lt;/p>
 &lt;p>代表成功了！&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051612102187.png" alt="">&lt;/p></description></item><item><title>Backblaze B2 支援 S3 API 了！</title><link>https://blog.steveyi.net/posts/backblaze-b2-compatible-s3-api/</link><pubDate>Thu, 14 May 2020 03:08:02 +0000</pubDate><guid>https://blog.steveyi.net/posts/backblaze-b2-compatible-s3-api/</guid><description>&lt;p>前幾天打開 Backblaze 後，看到一行大大的字&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020051402585860.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051612102187.png" alt="">&lt;/p></description></item><item><title>Backblaze B2 支援 S3 API 了！</title><link>https://blog.steveyi.net/posts/backblaze-b2-compatible-s3-api/</link><pubDate>Thu, 14 May 2020 03:08:02 +0000</pubDate><guid>https://blog.steveyi.net/posts/backblaze-b2-compatible-s3-api/</guid><description>&lt;p>前幾天打開 Backblaze 後，看到一行大大的字&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051402585860.png" alt="">&lt;/p>
 &lt;p>沒錯！S3 API 跟 Backblaze B2 兼容啦！&lt;/p>
 &lt;p>S3 API 是目前市面上最流行的協定，很多軟硬體都兼容&lt;/p>
 &lt;p>Backblaze B2 則是非常棒的雲端存處(低價優勢)&lt;/p>
@@ -293,23 +293,23 @@ wg-quick up wg0
 &lt;p>那就來記錄一下設定過程吧&lt;/p>
 &lt;p>首先，進入網域設定 上方選擇 Spectrum&lt;br>
 接著點擊 Enable &lt;a href="https://cfl.re/3efcOhv">Spectrum&lt;/a>&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020050916443011-1920x1142.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020050916443011-1920x1142.png" alt="">&lt;/p>
 &lt;p>開通完成後，點擊 Create an application&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020050916445886-1920x1142.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020050916445886-1920x1142.png" alt="">&lt;/p>
 &lt;p>選擇SSH(22端口)或是Minecraft(65535端口) (如果是企業版可以使用RDP)&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020050916452556-1920x1142.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020050916452556-1920x1142.png" alt="">&lt;/p>
 &lt;p>接著輸入子網域及IP位置，並按Save&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020050916455234-1920x1142.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020050916455234-1920x1142.png" alt="">&lt;/p>
 &lt;p>接著我們就可以等待生效囉！&lt;/p>
 &lt;p>可以使用終端(dig 網域名稱)或是&lt;a href="https://dns.google/">Google Public DNS&lt;/a>查詢CNAME紀錄&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020050916461922-1920x1142.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020050916461922-1920x1142.png" alt="">&lt;/p>
 &lt;p>目前這個服務&lt;br>
 Pro版本提供5GB流量/月&lt;br>
 Business版本提供10GB流量/月&lt;br>
 超過1GB，以0.1USD計價&lt;br>
 &lt;a href="https://www.cloudflare.com/products/cloudflare-spectrum/">https://www.cloudflare.com/products/cloudflare-spectrum/&lt;/a>&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020050916464540-1920x1142.png" alt="">&lt;/p>
-&lt;p>對於DDOS防禦很頭痛的可以試試看～！&lt;/p></description></item><item><title>在 Vultr 使用 Bird6 廣播 IPv6</title><link>https://blog.steveyi.net/posts/use-bird6-broadcast-ipv6-vultr/</link><pubDate>Fri, 10 Apr 2020 02:21:55 +0000</pubDate><guid>https://blog.steveyi.net/posts/use-bird6-broadcast-ipv6-vultr/</guid><description>&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/vu-00.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020050916464540-1920x1142.png" alt="">&lt;/p>
+&lt;p>對於DDOS防禦很頭痛的可以試試看～！&lt;/p></description></item><item><title>在 Vultr 使用 Bird6 廣播 IPv6</title><link>https://blog.steveyi.net/posts/use-bird6-broadcast-ipv6-vultr/</link><pubDate>Fri, 10 Apr 2020 02:21:55 +0000</pubDate><guid>https://blog.steveyi.net/posts/use-bird6-broadcast-ipv6-vultr/</guid><description>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/vu-00.png" alt="">&lt;/p>
 &lt;p>&lt;strong>建議可以參考於 2021年01月24日 的 &lt;a href="https://blog.steveyi.net/make-internal-network-by-bgp/">透過 BGP 與朋友組成內網&lt;/a> 文章&lt;/strong>&lt;/p>
 &lt;p>這次就來分享一下在 &lt;a href="https://vultr.com">Vultr&lt;/a> 廣播IP吧！&lt;/p>
 &lt;h1 id="設置as號碼及ip前綴" >&lt;strong>設置AS號碼及IP前綴&lt;/strong>
@@ -321,15 +321,15 @@ Business版本提供10GB流量/月&lt;br>
 &lt;/h1>&lt;p>首先，我們要先開通BGP的功能！
 &lt;a href="https://my.vultr.com/network/#network-bgp">點擊這裡前往 Vultr BGP 頁面&lt;/a>
 進入此頁面後，我們點擊 Get Started&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/vu-01-1920x961.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/vu-01-1920x961.png" alt="">&lt;/p>
 &lt;p>選擇 I have my own IP space 及 I have own my ASN (如果沒有 ASN 不用選擇)
 LOA的部分 可以參考這份範例文件
 接著其他保持預設就好&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/vu-02.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/vu-02.png" alt="">&lt;/p>
 &lt;p>接著點 Start，來驗證 IP 擁有權 或 ASN&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/vu-03-1920x362.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/vu-03-1920x362.png" alt="">&lt;/p>
 &lt;p>系統會寄一封電子郵件到 Whois 的 Email，進行驗證！&lt;/p>
-&lt;p>&lt;img src="https://static.yiy.tw/media/blog/2020/04/vu-04.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/vu-04.png" alt="">&lt;/p>
 &lt;p>驗證完後呢，我們就等待工作人員設置&lt;/p>
 &lt;h1 id="廣播" >&lt;strong>廣播&lt;/strong>
 &lt;span>
@@ -391,7 +391,7 @@ protocol device 
 &lt;li>
 &lt;p>開啟 Windows 遠程桌面&lt;/p>
 &lt;p>中文繁體版&lt;br>
-載點1: &lt;a href="http://static.yiy.tw/mirror/dd/win10.gz">http://static.yiy.tw/mirror/dd/win10.gz&lt;/a>&lt;/p>
+載點1: &lt;a href="http://static-a1.steveyi.net/mirror/dd/win10.gz">http://static-a1.steveyi.net/mirror/dd/win10.gz&lt;/a>&lt;/p>
 &lt;p>遠端登入資訊&lt;br>
 帳號: Administrator&lt;br>
 密碼: steveyigame.com&lt;/p>

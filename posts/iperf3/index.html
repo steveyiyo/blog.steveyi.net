@@ -120,17 +120,17 @@ iperf3 -c <伺服端IP> #用於客戶端的
 <p>不久前，筆者換了新的交換機。為了測試內網的傳輸速度，筆者發現了這款工具 - <a href=https://iperf.fr/iperf-download.php>iperf3</a></p>
 <p>這是一個支援 Ｗindows, Linux, macOS 的測試程式，主要是透過指令來操作<br>
 筆者也常常用來測試兩個不同地區伺服器的速度</p>
-<p><img src=https://static.yiy.tw/media/blog/2020110813145837.png alt></p>
+<p><img src=https://static-a1.steveyi.net/media/blog/2020110813145837.png alt></p>
 <p>那麼，以下分享一下安裝方法</p>
 <p>首先，進入 <a href=https://iperf.fr/iperf-download.php>iperf3 官網</a>後，找到對應的系統(如果是 Windows 就選擇 Windows, macOS 則選擇 macos, Linux亦同&mldr;)</p>
 <p>會下載一個 .zip 的檔案，將其解壓縮</p>
 <p>並打開命令控制字元（macOS 及 Linux 則是 Terminal 也可以透過 SSH 進行操作），輸入 <code>cd &lt;資料夾路徑></code>，接著輸入 iperf3 指令</p>
 <p><code>iperf3 -s</code> #用於伺服端的<br>
 <code>iperf3 -c &lt;伺服端IP></code> #用於客戶端的</p>
-<p><img src=https://static.yiy.tw/media/blog/2020110813255574.png alt></p>
+<p><img src=https://static-a1.steveyi.net/media/blog/2020110813255574.png alt></p>
 <p>就會開始跑測速啦！</p>
 <p>大家比較需要注意的點是，在內網的話，需要確認內網是互通的(同一個 LAN 就是互通的)</p>
-<p><img src=https://static.yiy.tw/media/blog/2020110813230558.png alt></p>
+<p><img src=https://static-a1.steveyi.net/media/blog/2020110813230558.png alt></p>
 <p>我們也可以使用 ping 指令去測試網路是否通的，在部分設備上（如 Windows），可能預設將 ICMP 屏蔽了。需要特別到防火牆裡面開啟</p>
 </div>
 <div class=post-info>
