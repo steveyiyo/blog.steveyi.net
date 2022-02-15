@@ -7,7 +7,7 @@ tags: ['伺服器', '對象存處', '網域']
 
 前幾天打開 Backblaze 後，看到一行大大的字
 
-![](https://static.yiy.tw/media/blog/2020051402585860.png)
+![](https://static-a1.steveyi.net/media/blog/2020051402585860.png)
 
 沒錯！S3 API 跟 Backblaze B2 兼容啦！
 

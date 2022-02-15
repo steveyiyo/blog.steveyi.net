@@ -12,18 +12,18 @@ Mac裡面有一個"時光機"可以簡單易用地備份整部電腦，而Window
 
 首先請先打開開始，找到"Windows系統"，然後打開控制台
 
-![](https://static.yiy.tw/media/blog/2020082808195051.png)
+![](https://static-a1.steveyi.net/media/blog/2020082808195051.png)
 
 接下來請進到系統及安全性>備份與還原
 
-![](https://static.yiy.tw/media/blog/2020082808211660.png)
+![](https://static-a1.steveyi.net/media/blog/2020082808211660.png)
 
 按下"設定備份"，然後照著指示選擇備份的設定跟排程  
 另外，建議不要跟啟動磁碟用同一個硬碟，以免到時硬碟壞了，備份也沒用。
 
 接下來就可以開始備份
 
-![](https://static.yiy.tw/media/blog/2020082808264658-scaled.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020082808264658-scaled.jpg)
 
 下一頁會告訴各位如何還原唷!  
 
@@ -33,13 +33,13 @@ Mac裡面有一個"時光機"可以簡單易用地備份整部電腦，而Window
 
 如果要復原單一個資料夾或是磁碟區的話，請在該磁碟區上按下右鍵，然後選擇「內容」，並找到「以前的版本」之後選擇要還原的時間點
 
-![](https://static.yiy.tw/media/blog/2020082808590870-scaled.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020082808590870-scaled.jpg)
 
 如果選擇開啟舊檔，則可以看到以前備份的檔案，可以拉出來做使用；  
 如果選擇還原，則會將整個磁碟區或資料夾覆蓋掉，這個筆者沒試過。  
 以下是開啟舊檔後的樣子
 
-![](https://static.yiy.tw/media/blog/2020082809060089-scaled.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020082809060089-scaled.jpg)
 
 這樣以後再也不怕誤刪檔案囉！  
 但還是要注意備份週期的問題，假如每週備份一次，但還來不及備份就被刪掉也是沒辦法囉

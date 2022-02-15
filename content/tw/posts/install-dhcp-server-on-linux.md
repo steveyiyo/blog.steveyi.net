@@ -17,7 +17,7 @@ draft: false
 sudo apt install isc-dhcp-server
 ```
 
-![](https://static.yiy.tw/media/blog/install-dhcp-server-in-linux-01.png)
+![](https://static-a1.steveyi.net/media/blog/install-dhcp-server-in-linux-01.png)
 
 ## 設置 DHCP Server
 
@@ -42,7 +42,7 @@ subnet 10.121.210.0 netmask 255.255.255.0 {
 接著，我們需要編輯發 DHCP 包的網卡
 `/etc/default/isc-dhcp-server`
 
-![](https://static.yiy.tw/media/blog/install-dhcp-server-in-linux-02.png)
+![](https://static-a1.steveyi.net/media/blog/install-dhcp-server-in-linux-02.png)
 
 最後，輸入 `service isc-dhcp-server restart`  
 這樣就完成囉～

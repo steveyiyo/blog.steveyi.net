@@ -10,7 +10,7 @@ tags: ['伺服器']
 這是一個支援 Ｗindows, Linux, macOS 的測試程式，主要是透過指令來操作  
 筆者也常常用來測試兩個不同地區伺服器的速度
 
-![](https://static.yiy.tw/media/blog/2020110813145837.png)
+![](https://static-a1.steveyi.net/media/blog/2020110813145837.png)
 
 那麼，以下分享一下安裝方法
 
@@ -23,12 +23,12 @@ tags: ['伺服器']
 `iperf3 -s` #用於伺服端的  
 `iperf3 -c <伺服端IP>` #用於客戶端的
 
-![](https://static.yiy.tw/media/blog/2020110813255574.png)
+![](https://static-a1.steveyi.net/media/blog/2020110813255574.png)
 
 就會開始跑測速啦！
 
 大家比較需要注意的點是，在內網的話，需要確認內網是互通的(同一個 LAN 就是互通的)
 
-![](https://static.yiy.tw/media/blog/2020110813230558.png)
+![](https://static-a1.steveyi.net/media/blog/2020110813230558.png)
 
 我們也可以使用 ping 指令去測試網路是否通的，在部分設備上（如 Windows），可能預設將 ICMP 屏蔽了。需要特別到防火牆裡面開啟

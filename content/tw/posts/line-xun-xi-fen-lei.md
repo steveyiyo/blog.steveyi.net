@@ -13,12 +13,12 @@ LINE 分類完之後找訊息大概會方便很多...
 
 首先，請先打開 LINE 並到主頁頁面
 
-![](https://static.yiy.tw/media/blog/2020070312124374.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020070312124374.jpg)
 
 接下來點選右上角的齒輪，找到 LINE Lab 然後打勾
 
-![](https://static.yiy.tw/media/blog/2020070312153360.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020070312153360.jpg)
 
 接下來就會自動分類囉
 
-![](https://static.yiy.tw/media/blog/2020070312202078.gif)
+![](https://static-a1.steveyi.net/media/blog/2020070312202078.gif)

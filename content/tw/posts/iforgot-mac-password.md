@@ -55,7 +55,7 @@ shutdown -r now
 
 接下來進入系統後，請登入並從選單打開系統偏好設定
 
-![](https://static.yiy.tw/media/blog/2020060405381524.png)
+![](https://static-a1.steveyi.net/media/blog/2020060405381524.png)
 
 接下來請打開「使用者與群組」
 

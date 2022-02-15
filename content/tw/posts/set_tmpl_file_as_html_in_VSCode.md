@@ -20,15 +20,15 @@ P.S. 裝了相關外掛也只會處理 .html 文件
     }
 ```
 
-![](https://static.yiy.tw/media/blog/1619316651.png)
+![](https://static-a1.steveyi.net/media/blog/1619316651.png)
 
 第二種則是進入設定，點擊文字編輯器，文件。  
 並新增 *.tmpl 為 html
 
-![](https://static.yiy.tw/media/blog/1619316652.png)
+![](https://static-a1.steveyi.net/media/blog/1619316652.png)
 
-![](https://static.yiy.tw/media/blog/1619316653.png)
+![](https://static-a1.steveyi.net/media/blog/1619316653.png)
 
 最終結果就會像這樣啦！
 
-![](https://static.yiy.tw/media/blog/1619316650.png)
+![](https://static-a1.steveyi.net/media/blog/1619316650.png)

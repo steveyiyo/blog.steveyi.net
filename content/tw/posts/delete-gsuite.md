@@ -16,19 +16,19 @@ tags: ['G-Suite', 'GCP', 'Google', '網域', '網站日誌']
 
 首先，進入[G Suite控制台](https://admin.google.com)，點擊公司資料
 
-![](https://static.yiy.tw/media/blog/2020051515401915.png)
+![](https://static-a1.steveyi.net/media/blog/2020051515401915.png)
 
 接著點擊帳戶管理
 
-![](https://static.yiy.tw/media/blog/2020051515404022.png)
+![](https://static-a1.steveyi.net/media/blog/2020051515404022.png)
 
 接著點擊 刪除帳號
 
-![](https://static.yiy.tw/media/blog/2020051515411434.png)
+![](https://static-a1.steveyi.net/media/blog/2020051515411434.png)
 
 接著會提示你，這個步驟無法復原  
 打勾後點擊 刪除帳號
 
-![](https://static.yiy.tw/media/blog/2020051515413046.png)
+![](https://static-a1.steveyi.net/media/blog/2020051515413046.png)
 
 接著帳號就刪除囉！

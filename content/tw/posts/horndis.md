@@ -17,15 +17,15 @@ macOS需求為10.11(El Captain)以上，本篇筆者使用macOS 10.13(High Sierr
 
 接下來請在左下角的下載進度條按下「保留」，這是因為電腦將這個套件誤判為病毒。
 
-![](https://static.yiy.tw/media/blog/2020080806512846.png)
+![](https://static-a1.steveyi.net/media/blog/2020080806512846.png)
 
 進到安裝程式後請一路按下「繼續」
 
-![](https://static.yiy.tw/media/blog/2020080806513465.png)
+![](https://static-a1.steveyi.net/media/blog/2020080806513465.png)
 
 如果遇到需要輸入密碼的介面，請輸入密碼來授予權限
 
-![](https://static.yiy.tw/media/blog/2020080806514925.png)
+![](https://static-a1.steveyi.net/media/blog/2020080806514925.png)
 
 安裝完成後，請將手機插上電腦的USB連接埠，並且打開USB數據連線
 
@@ -37,4 +37,4 @@ macOS需求為10.11(El Captain)以上，本篇筆者使用macOS 10.13(High Sierr
 
 接下來就會在裡面看到手機有沒有連線囉
 
-![](https://static.yiy.tw/media/blog/2020080806520553.png)
+![](https://static-a1.steveyi.net/media/blog/2020080806520553.png)

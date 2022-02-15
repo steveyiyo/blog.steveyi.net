@@ -13,13 +13,13 @@ Author: 蘿蔔
   
 這是官方的支援名單:
 
-![](https://static.yiy.tw/media/blog/2020081801505962.png)
+![](https://static-a1.steveyi.net/media/blog/2020081801505962.png)
 
 螢幕快照擷取自[Apple官網](http://apple.com/tw/osx)
 
 下方這是Catalina Patcher的支援名單，與OS X El Captain系統要求一致:
 
-[![](https://static.yiy.tw/media/blog/2020081802051786.png)](https://support.apple.com/zh-tw/HT206886)
+[![](https://static-a1.steveyi.net/media/blog/2020081802051786.png)](https://support.apple.com/zh-tw/HT206886)
 
 螢幕快照擷取自[Apple官網](https://support.apple.com/zh-tw/HT206886)
 
@@ -34,32 +34,32 @@ Author: 蘿蔔
 
 請先前往[Catalina Patcher的網站](http://dosdude1.com/catalina)按下Download Latest Version並下載最新版
 
-![](https://static.yiy.tw/media/blog/2020081802335586.png)
+![](https://static-a1.steveyi.net/media/blog/2020081802335586.png)
 
 下載完成後打開映像檔會看到一個App，將它點開。  
 然後進到「系統偏好設定」內的「安全性與隱私權」強制打開
 
-![](https://static.yiy.tw/media/blog/2020081802485327.png)
+![](https://static-a1.steveyi.net/media/blog/2020081802485327.png)
 
 然後按下白色的「打開」按鈕
 
-![](https://static.yiy.tw/media/blog/2020081802492691.png)
+![](https://static-a1.steveyi.net/media/blog/2020081802492691.png)
 
 然後請一路按下Continue，需要時請輸入密碼允許進行更動
 
-![](https://static.yiy.tw/media/blog/2020081802523595.png)
+![](https://static-a1.steveyi.net/media/blog/2020081802523595.png)
 
 請按下右邊的「Download a copy」藍色按鈕
 
-![](https://static.yiy.tw/media/blog/2020081802533817.png)
+![](https://static-a1.steveyi.net/media/blog/2020081802533817.png)
 
 然後按下「Start Download」
 
-![](https://static.yiy.tw/media/blog/2020081802550610.png)
+![](https://static-a1.steveyi.net/media/blog/2020081802550610.png)
 
 下載完成後可以選擇直接安裝(左)、製作可開機安裝程式的隨身碟(中)，或是製作ISO映像檔(右)
 
-![](https://static.yiy.tw/media/blog/2020081803333085.png)
+![](https://static-a1.steveyi.net/media/blog/2020081803333085.png)
 
 選擇Install to This Machine的話是直接安裝到機器上，要關閉SIP安全保護，這個筆者沒試過。  
 選擇Create a Bootable Installer就是製作可開機安裝程式的隨身碟。  
@@ -70,27 +70,27 @@ Author: 蘿蔔
 
 完成以後重新啟動時按住option會看到macOS Base System，按下去會開機到macOS Catalina的macOS工具程式。
 
-![](https://static.yiy.tw/media/blog/2020081810082548-scaled.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020081810082548-scaled.jpg)
 
 接下來請按下「重新安裝macOS」
 
-![](https://static.yiy.tw/media/blog/2020081810100644-scaled.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020081810100644-scaled.jpg)
 
 進入安裝程式後請按下「繼續」，並同意條款。
 
-![](https://static.yiy.tw/media/blog/2020081810111093-scaled.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020081810111093-scaled.jpg)
 
 接下來選擇要安裝在哪個磁碟或卷宗
 
-![](https://static.yiy.tw/media/blog/2020081810121883-scaled.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020081810121883-scaled.jpg)
 
 接下來可能升級完成後會開機，如果進度條卡住而且沒有寫安裝剩餘時間可以試著強制關機(隨身碟還不用拔掉)，然後再次開機同時按option選擇macOS Base System來開機
 
-![](https://static.yiy.tw/media/blog/2020081810082548-scaled.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020081810082548-scaled.jpg)
 
 然後這次一樣回到macOS工具程式，這次選擇「macOS Post Install」才能解決驅動程式等問題
 
-![](https://static.yiy.tw/media/blog/2020081810100644-scaled.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020081810100644-scaled.jpg)
 
 接下來會依照所使用的機型進行安裝，不用手動更改選項，直接按下面的「Apply Patches」即可
 
@@ -99,8 +99,8 @@ Author: 蘿蔔
 完成後會重新啟動電腦，並且會出現歡迎畫面  
 接下來如果有需要還原時光機備份或是從其他電腦轉移資料也可以在這裡完成，或是設定完成後打開「系統移轉輔助程式」
 
-![](https://static.yiy.tw/media/blog/2020081810265417.png)
+![](https://static-a1.steveyi.net/media/blog/2020081810265417.png)
 
 接下來將它設定好就可以正常使用囉
 
-![](https://static.yiy.tw/media/blog/2020081810311541.png)
+![](https://static-a1.steveyi.net/media/blog/2020081810311541.png)

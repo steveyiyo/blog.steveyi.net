@@ -22,4 +22,4 @@ sudo scutil --set HostName MacHostName
 
 接下來關掉終端機再打開就會看到新的名稱囉！
 
-![](https://static.yiy.tw/media/blog/2020082208224152.png)
+![](https://static-a1.steveyi.net/media/blog/2020082208224152.png)

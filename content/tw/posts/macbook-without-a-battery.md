@@ -12,11 +12,11 @@ Author: 蘿蔔
 
 直到家人那台Pro 2017卡鍵待送修，跟親戚借了塵封已久、電池無法充電的MacBook Air 2011來使用，原本以為只是不能拔掉電源而已，沒想到開機後用起來非常卡頓，根本不像是2代1.6GHz intel Core i5處理器該有的水準。在四處都看得到電池需要維修的警告後，我懷疑卡頓來自電池效能太低，系統做的降頻處理，就像[iPhone上的效能管理](https://support.apple.com/zh-tw/HT208387 "https://support.apple.com/zh-tw/HT208387")一樣。
 
-![](https://static.yiy.tw/media/blog/2020081811411362.png)
+![](https://static-a1.steveyi.net/media/blog/2020081811411362.png)
 
 我使用了[intel(R) Power Gadget](https://software.intel.com/sites/default/files/managed/91/6b/Intel%20Power%20Gadget.dmg "https://software.intel.com/sites/default/files/managed/91/6b/Intel%20Power%20Gadget.dmg")看了一下，不出我所料，頻率被鎖定在最高(Core MAX)0.9GHz。
 
-![](https://static.yiy.tw/media/blog/2020081813104832.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020081813104832.jpg)
 
 後來在網路上找到Apple關於電腦沒裝電池降頻的說明（原本的網頁早已消失）：
 
@@ -41,7 +41,7 @@ Author: 蘿蔔
 畢竟電腦用一用被電池搞到關機，不只沒存檔案的文件會遺失以外，連帶硬碟也有可能因為非正常斷電而損壞，到時資料不見更是得不償失。而且MagSafe設計雖然本意是防摔(而且筆者很喜歡)，但也就是說沒裝電池的時候踢到一下就關機了  
 另外，即使睡眠模式設為Deep Sleep，無法蓄電的電池在睡眠也需要電源，拔除電源後睡眠暫存的狀態也會全部遺失。
 
-![](https://static.yiy.tw/media/blog/2020081812235896.png)
+![](https://static-a1.steveyi.net/media/blog/2020081812235896.png)
 
 在此處我們得出一個結論
 -----------
@@ -56,4 +56,4 @@ Mac不插電池或是電池被系統視為需要維修，則會嚴重影響使�
 所以等待更換電池的期間（或是根本不想換電池的話）可以考慮試試看舊版的OS X。  
 筆者是使用OS X 10.9.5 "Mavericks"作為等待電池期間主要使用的作業系統，不過舊版OS X的應用程式相容性比較差，就請自行斟酌啦
 
-![](https://static.yiy.tw/media/blog/2020082115435852.png)
+![](https://static-a1.steveyi.net/media/blog/2020082115435852.png)

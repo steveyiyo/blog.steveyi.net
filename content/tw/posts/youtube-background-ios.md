@@ -23,17 +23,17 @@ Android也可以用類似的方法，之後會再發一篇教學，敬請關注�
 
 註：這邊不建議使用第三方瀏覽器的原因是有些第三方瀏覽器功能不如內建的穩定，記憶體有時會被系統回收凍結，導致音樂無緣無故暫停
 
-![](https://static.yiy.tw/media/blog/2020061914004694.png)
+![](https://static-a1.steveyi.net/media/blog/2020061914004694.png)
 
 iOS 13/iPadOS 13以上的電腦版網頁切換開關在左上方的「AA」內
 
-![](https://static.yiy.tw/media/blog/2020061916292435.jpeg)
+![](https://static-a1.steveyi.net/media/blog/2020061916292435.jpeg)
 
 iOS 12或更早版本的電腦版網頁切換開關在動作選單內
 
 接下來網頁會重新載入，此時再按一次AA，點選網站設定，把開關打開，這樣以後就會自動以電腦版網頁載入了(iOS 12或更早版本不支援此操作)
 
-![](https://static.yiy.tw/media/blog/2020061914034643.jpeg)
+![](https://static-a1.steveyi.net/media/blog/2020061914034643.jpeg)
 
 接下來可以回到桌面、鎖定螢幕、或是切換到其他App，您會發現音樂繼續播放，且控制中心和通知中心可以控制播放、暫停及快轉
 
@@ -52,7 +52,7 @@ Youtube也要允許背景播放的話也是一樣的方法唷！
 
 筆者也有在iPhone上測試過，可以用～
 
-![](https://static.yiy.tw/media/blog/2020061914370286.jpeg)
+![](https://static-a1.steveyi.net/media/blog/2020061914370286.jpeg)
 
 iPhone也可以背景播放唷
 
@@ -62,4 +62,4 @@ iPhone的Youtube Music網頁也能跟電腦網頁有幾乎一樣的功能囉
 
 筆者試了一下，年代有點久遠的iOS 10也能用哦
 
-![](https://static.yiy.tw/media/blog/2020062707454832.png)
+![](https://static-a1.steveyi.net/media/blog/2020062707454832.png)

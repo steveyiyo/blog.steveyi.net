@@ -38,7 +38,7 @@ source:         RIPE
 
 接著，我們可以透過 [RADB](https://www.radb.net/) 查詢對應的 Route Object 紀錄
 
-![](https://static.yiy.tw/media/blog/1624742087.png)
+![](https://static-a1.steveyi.net/media/blog/1624742087.png)
 
 我們就可以根據這個規則來建立過濾器了！
 
@@ -60,7 +60,7 @@ $ bgpq3 -4l AS-STEVEYI_v4 AS-STEVEYI -R 24 -m 24
 $ bgpq3 -6l AS-STEVEYI_v6 AS-STEVEYI -R 48 -m 48
 ```
 
-![](https://static.yiy.tw/media/blog/1624742917.png)
+![](https://static-a1.steveyi.net/media/blog/1624742917.png)
 
 接著，我們可以建立一個 `route-map` 來針對某個 BGP Peer 過濾
 

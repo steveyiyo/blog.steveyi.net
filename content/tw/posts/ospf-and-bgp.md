@@ -8,18 +8,18 @@ draft: true
 我們使用 VPN 建立 BGP 互聯，並將這個大內網部署於我各個區域的設備使用  
 P.S. 目前共有 46 條路由左右
 
-![](https://static.yiy.tw/media/blog/1621242200.png)
+![](https://static-a1.steveyi.net/media/blog/1621242200.png)
 
 而我目前則是在一個點與其他人建立 **BGP Peer**，並使用 **Static Route** 處理內部路由
 
 Ex: 10.121.23.242 的設備想要到我的內網下的某台設備 10.121.210.3
 
-![](https://static.yiy.tw/media/blog/1621238898.png)
+![](https://static-a1.steveyi.net/media/blog/1621238898.png)
 
 比如說，我在核心路由器上指一條 10.121.210.0/24 到我放在學校的路由器上  
 而在學校的路由器上，我則與核心路由器建立了 BGP Peer，來收我們的大內網全表
 
-![](https://static.yiy.tw/media/blog/1621244817.png)
+![](https://static-a1.steveyi.net/media/blog/1621244817.png)
 
 這樣確實可以讓我們的網路動，但是！  
 當我們核心路由器故障時，其他人則無法進到我的內網

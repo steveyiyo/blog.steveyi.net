@@ -25,36 +25,36 @@ Author: 蘿蔔
 下載完成後請打開並註冊或登入Musixmatch的帳號  
 如果有詢問是否加入Musixmatch Premium會員，可以關掉
 
-![](https://static.yiy.tw/media/blog/2020071108253421.jpeg)
+![](https://static-a1.steveyi.net/media/blog/2020071108253421.jpeg)
 
 接下來請允許所需的權限
 
-![](https://static.yiy.tw/media/blog/2020071108255172.jpeg)
+![](https://static-a1.steveyi.net/media/blog/2020071108255172.jpeg)
 
-![](https://static.yiy.tw/media/blog/2020071108260461.jpeg)
+![](https://static-a1.steveyi.net/media/blog/2020071108260461.jpeg)
 
 接下來視需要，登入Spotify或是音樂庫
 
 此處以Spotify示範
 
-![](https://static.yiy.tw/media/blog/2020071108261822.jpeg)
+![](https://static-a1.steveyi.net/media/blog/2020071108261822.jpeg)
 
 輸入帳號密碼
 
-![](https://static.yiy.tw/media/blog/2020071108263125.jpeg)
+![](https://static-a1.steveyi.net/media/blog/2020071108263125.jpeg)
 
 然後滑到最底部按綠色的「同意」按鈕
 
-![](https://static.yiy.tw/media/blog/2020071108265846.jpeg)
+![](https://static-a1.steveyi.net/media/blog/2020071108265846.jpeg)
 
 在Spotify或其他平台隨便播放一首歌，如果跳出這視窗，請按「別再顯示」
 
-![](https://static.yiy.tw/media/blog/2020071108273772.jpeg)
+![](https://static-a1.steveyi.net/media/blog/2020071108273772.jpeg)
 
 接下來會跳出Floating Lyrics的實時歌詞視窗  
 如果支援實時歌詞的歌曲就會自己跳，如果只支援靜態歌詞就需要自己用手滑，不支援歌詞的話也會出現在這邊
 
-![](https://static.yiy.tw/media/blog/2020071108275158.jpeg)
+![](https://static-a1.steveyi.net/media/blog/2020071108275158.jpeg)
 
 按下Floating Lyrics視窗裡，歌名右邊的圓形按鈕可以更改樣式  
 比如說更改顏色或是展開歌詞
@@ -63,27 +63,27 @@ Author: 蘿蔔
 
 按下圓形按鈕右邊的三個點按鈕可以看到選單有更多功能
 
-![](https://static.yiy.tw/media/blog/2020071108303749.jpeg)
+![](https://static-a1.steveyi.net/media/blog/2020071108303749.jpeg)
 
 點選「在App內顯示」就可以整個畫面充滿歌詞
 
-![](https://static.yiy.tw/media/blog/2020071108310063.jpeg)
+![](https://static-a1.steveyi.net/media/blog/2020071108310063.jpeg)
 
 打開通知中心可以看到隱藏Floating Lyrics的按鈕
 
-![](https://static.yiy.tw/media/blog/2020071109554967.png)
+![](https://static-a1.steveyi.net/media/blog/2020071109554967.png)
 
 接下來可以測試其他應用程式（但不是每款音樂App都支援）
 
 筆者在Friday音樂隨便播放一首歌，程式本身沒有這首歌的歌詞，此時Musixmatch便非常實用
 
-![](https://static.yiy.tw/media/blog/2020071109251796.jpeg)
+![](https://static-a1.steveyi.net/media/blog/2020071109251796.jpeg)
 
 在Youtube Music測試，不少專輯版音樂都能用，但如前面所述，部分中文歌會產生誤判的情形（我也不知道到底為什麼中文歌名要寫英文）
 
-![](https://static.yiy.tw/media/blog/2020071109383934.jpeg)
+![](https://static-a1.steveyi.net/media/blog/2020071109383934.jpeg)
 
 舉例來說，以下這首歌曲是鄧紫棋的「[好想好想妳](https://www.youtube.com/watch?v=G3z9U_1Uue4&feature=share)」  
 但歌詞卻誤判為另一首(我完全沒聽過的)歌曲，這時我只好關掉Floating Lyrics，或是改用選單的歌詞辨識功能
 
-![](https://static.yiy.tw/media/blog/2020071109490666.jpeg)
+![](https://static-a1.steveyi.net/media/blog/2020071109490666.jpeg)

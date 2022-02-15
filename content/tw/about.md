@@ -15,7 +15,7 @@ draft: false
 
 同時，我也專研於網際網路 (L2 及 L3) 並使用 [AS60614](https://whois.steveyi.net/whois/AS60614) 及 [AS209557](https://whois.steveyi.net/whois/AS209557)
 
-![](https://static.yiy.tw/media/yi/life/image04.jpg)
+![](https://static-a1.steveyi.net/media/yi/life/image04.jpg)
 
 ### 本站的起源故事
 
@@ -32,7 +32,7 @@ draft: false
 深入瞭解了 L3 的魔法，並申請了自己的 ASN 號碼 - [AS60614](https://whois.steveyi.net/whois/AS60614) 及 [AS209557](https://whois.steveyi.net/whois/AS209557)  
 並將擁有的網際網路資源廣播到全球網路上
 
-![](https://static.yiy.tw/media/blog/1614068570.png)
+![](https://static-a1.steveyi.net/media/blog/1614068570.png)
 
 ### 靜態網站的美妙
 

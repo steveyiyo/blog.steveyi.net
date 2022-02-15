@@ -6,7 +6,7 @@ tags: ['iOS']
 Author: 蘿蔔
 ---
 
-![](https://static.yiy.tw/media/blog/2020/04/9564cd1098c2183afddb9be15db99ddf781db6b1-770x439_c.jpeg)
+![](https://static-a1.steveyi.net/media/blog/2020/04/9564cd1098c2183afddb9be15db99ddf781db6b1-770x439_c.jpeg)
 
 > 有時會因爲蘋果的部分問題，會在各種環節出狀況，如果有任何錯誤請改天再試
 > 
@@ -74,11 +74,11 @@ Product Version改 6.1.3
 
 ProductBuildVersion改 10B329
 
-![](https://static.yiy.tw/media/blog/2020/04/backtoios841-2.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020/04/backtoios841-2.jpg)
 
 2.存檔修改後記得確認版本號無誤才可重開
 
-![](https://static.yiy.tw/media/blog/2020/04/backtoios841-1.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020/04/backtoios841-1.jpg)
 
 3.重新啟動，重啟跑完進度條需要一段時間，開完機之後請重設裝置，設定精靈的地方隨便設，只要能進到主畫面就行了（不要還原任何的備份！），重設的地方在
 
@@ -87,9 +87,9 @@ ProductBuildVersion改 10B329
 
 重設之後進到設定檢查更新，會看到更新的地方有iOS 8.4.1的更新，點下去，並安裝
 
-![](https://static.yiy.tw/media/blog/2020/04/backtoios841-3.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020/04/backtoios841-3.jpg)
 
-![](https://static.yiy.tw/media/blog/2020/04/backtoios841-4.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020/04/backtoios841-4.jpg)
 
 4.更新完成後請再次清除所有內容和設定
 
@@ -97,21 +97,21 @@ ProductBuildVersion改 10B329
 
 已知重置的按鈕是可用的
 
-![](https://static.yiy.tw/media/blog/2020/04/backtoios841-5.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020/04/backtoios841-5.jpg)
 
-![](https://static.yiy.tw/media/blog/2020/04/backtoios841-6.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020/04/backtoios841-6.jpg)
 
 5.如果有出現「啟用鎖定」的話需要使用這部裝置原來登入的Apple ID 密碼登入，再次設定後，即將完成!
 
-![](https://static.yiy.tw/media/blog/2020/04/backtoios841-7.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020/04/backtoios841-7.jpg)
 
-![](https://static.yiy.tw/media/blog/2020/04/backtoios841-8.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020/04/backtoios841-8.jpg)
 
-![](https://static.yiy.tw/media/blog/2020/04/backtoios841-9.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020/04/backtoios841-9.jpg)
 
 下圖是另一部降級成功的第四代iPad
 
-![](https://static.yiy.tw/media/blog/2020/04/backtoios841-10.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020/04/backtoios841-10.jpg)
 
 補充連結:
 
@@ -122,7 +122,7 @@ ProductBuildVersion改 10B329
 
 安裝描述檔後
 
-![](https://static.yiy.tw/media/blog/2020/04/backtoios841-11.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020/04/backtoios841-11.jpg)
 
 backtoios841-11.jpg
 

@@ -91,7 +91,7 @@ end
 
 完成後，效果會類似這樣唷！
 
-![](https://static.yiy.tw/media/blog/2020081118552052.png)
+![](https://static-a1.steveyi.net/media/blog/2020081118552052.png)
 
 PS. 其實更簡單的方式是直接在A, B路由器上寫上路由表  
 `ip route add 10.0.1.0/24 via peer_tunnel_ip dev tunnel_interfaces`

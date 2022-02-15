@@ -22,7 +22,7 @@ Spotify
 如果在手機和iPod touch上則是限隨機播放，每小時只能跳過六首歌（部分指定的個人化播放清單可隨選即播，不在此限）。  
 有趣的是筆者的大螢幕手機被視為平板，賺到隨選即播🤣
 
-![](https://static.yiy.tw/media/blog/2020070809182757.png)
+![](https://static-a1.steveyi.net/media/blog/2020070809182757.png)
 
 KKBOX
 -----
@@ -32,7 +32,7 @@ KKBOX
 一般會員音質不能設為最高(320kbps)，每天會有一則廣告，看完後可以免費聽20首歌曲，用完後每首歌只能預覽30秒。  
 網路上有時會不定期發布體驗序號。
 
-![](https://static.yiy.tw/media/blog/2020070504425055.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020070504425055.jpg)
 
 MyMusic
 -------
@@ -40,7 +40,7 @@ MyMusic
 會員註冊完會有7天體驗會員全功能都能用，體驗會員過期後會成為一般會員。  
 一般會員音質只能設為一般(128kbps)，只有指定的幾張歌單可以完整聽，其他歌曲都只能預覽30秒。網路上有時會不定期發布體驗序號。
 
-![](https://static.yiy.tw/media/blog/2020070504433779.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020070504433779.jpg)
 
 Friday 音樂
 ---------
@@ -50,7 +50,7 @@ Friday 音樂
 一般會員音質只能設為一般(128kbps)，每天只能播放五首歌，用完後都只能預覽30秒。  
 網路上有時會不定期發布體驗序號。
 
-![](https://static.yiy.tw/media/blog/2020070505410044.jpeg)
+![](https://static-a1.steveyi.net/media/blog/2020070505410044.jpeg)
 
 Apple Music
 -----------
@@ -60,35 +60,35 @@ Apple Music
 需要先付錢才能送三個月試用，Android版App帶給我的感受不是很順手；Android版使用上也常常遇到Bug，但如果使用iPhone的話可以直接在Apple Watch上面呼叫Siri點歌確實很方便，網路上偶爾也會發布歌手或電台贊助的免費體驗序號。  
 官方說明的系統需求是iOS 8.4/Android 5.0/iTunes 12.2以上
 
-![](https://static.yiy.tw/media/blog/2020072711523343.png)
+![](https://static-a1.steveyi.net/media/blog/2020072711523343.png)
 
 網易雲音樂
 -----
 
 如果需要全曲庫聽到飽要用翻牆軟體（如：穿梭VPN），沒翻牆的話會反灰如圖，動態歌詞，隨選即播，無穿插廣告，但大部分歌曲音質只能設128Kbps，有少部分歌曲可以下載，也有一些獨家音樂，英文歌偏少。
 
-![](https://static.yiy.tw/media/blog/2020070504432158.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020070504432158.jpg)
 
 蝦米音樂
 ----
 
 常常簽到可以領體驗會員，但曲庫筆者感覺上比網易雲跟QQ音樂少，有些歌要用翻牆軟體（如：穿梭VPN等），有動態歌詞，部分歌曲可以下載，英文歌偏少。
 
-![](https://static.yiy.tw/media/blog/2020070512114857.png)
+![](https://static-a1.steveyi.net/media/blog/2020070512114857.png)
 
 QQ音樂
 ----
 
 曲庫幾乎都要用翻牆軟體（如：穿梭VPN等），有動態歌詞（逐字），英文歌偏少。
 
-![](https://static.yiy.tw/media/blog/2020070512124991.png)
+![](https://static-a1.steveyi.net/media/blog/2020070512124991.png)
 
 MixerBox 3
 ----------
 
 基於Youtube做成的MV播放器，但iOS每次離開App就要從控制中心按一次播放；Android則會有一個小視窗懸浮著，略為不便，而且因為是MV，所以有些穿插對話的MV會影響聽歌體驗。有些人會開台一起聽歌，而探索頁面常常可以找到適合自己的音樂，音樂鬧鐘功能可以讓起床變有趣
 
-![](https://static.yiy.tw/media/blog/2020070512135174.png)
+![](https://static-a1.steveyi.net/media/blog/2020070512135174.png)
 
 Youtube Music
 -------------
@@ -99,7 +99,7 @@ App不能背景播放，雖然有其他的方法（[iPadOS和iOS](https://blog.s
 不含Youtube的話曲庫不算多，但配合Youtube上的影片後，曲庫可說是非常龐大；但也因此搜尋介面很亂，有專輯版音樂，也有MV、第三方上傳的音樂影片（版權灰色地帶，時常被下架），也有播放清單。  
 另外令人匪夷所思的是系統語言是中文的情況下，有些中文歌都只寫英文歌名，非常奇葩
 
-![](https://static.yiy.tw/media/blog/2020070512340980.png)
+![](https://static-a1.steveyi.net/media/blog/2020070512340980.png)
 
 以上就是蘿蔔介紹台灣比較常見的串流音樂平台，有些版權比較屬於灰色地帶的就先不介紹了，畢竟「我是小易」的編輯們也無法保證其合法性
 

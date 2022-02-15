@@ -21,7 +21,7 @@ tags: ['VPS', '伺服器', '網域']
 git clone [https://github.com/sskaje/6in4.git](https://github.com/sskaje/6in4)
 ```
 
-![](https://static.yiy.tw/media/blog/2020053018041378.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020053018041378.jpg)
 
 我們進入項目的etc資料夾，並修改config.ini
 
@@ -29,11 +29,11 @@ git clone [https://github.com/sskaje/6in4.git](https://github.com/sskaje/6in4)
 nano config.ini
 ```
 
-![](https://static.yiy.tw/media/blog/2020053018044764.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020053018044764.jpg)
 
 依序編輯 IPV6\_NETWORK, IPV6\_CIDR, INTERFACE, BIND\_IP(有多iPv4需要)
 
-![](https://static.yiy.tw/media/blog/2020053018050652.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020053018050652.jpg)
 
 接著輸入 Crtl + X 來保存
 
@@ -64,7 +64,7 @@ iptables -I FORWARD -p 41 --j ACCEPT
 
 如果用戶端需要給其下級設備分配的話，建議伺服端的子網 應大於 /64，這樣才能產生 /64的下級子網，以保證SLAAC的運作。
 
-![](https://static.yiy.tw/media/blog/2020053018052119.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020053018052119.jpg)
 
 接著我們就可以至用戶端配置了！(配置過程可以參考[https://tunnelbroker.net/](https://tunnelbroker.net/))
 
@@ -84,11 +84,11 @@ apt-get install sipcalc
 
 [https://test-ipv6.com/](https://test-ipv6.com/) 測試結果
 
-![](https://static.yiy.tw/media/blog/2020053018053577.png)
+![](https://static-a1.steveyi.net/media/blog/2020053018053577.png)
 
 路由追蹤
 
-![](https://static.yiy.tw/media/blog/2020053018054471.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020053018054471.jpg)
 
 完成！
 

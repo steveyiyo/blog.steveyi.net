@@ -10,39 +10,39 @@ Author: 蘿蔔
 
 請先打開 開始>設定>更新與安全性
 
-![](https://static.yiy.tw/media/blog/2020071810311417.png)
+![](https://static-a1.steveyi.net/media/blog/2020071810311417.png)
 
 接下來進入Windows Update設定後請按下\[進階選項\]  
 如果有可用更新的話，建議可以先更新完再進行接下來的操作
 
-![](https://static.yiy.tw/media/blog/2020071810332840.png)
+![](https://static-a1.steveyi.net/media/blog/2020071810332840.png)
 
 接下來請將\[允許從計量付費連線下載\]關閉
 
-![](https://static.yiy.tw/media/blog/2020071813212146.png)
+![](https://static-a1.steveyi.net/media/blog/2020071813212146.png)
 
 然後請打開網路選單，如果是USB個人熱點或是有線網路，請按兩下目前使用的連線  
 ( 以圖片舉例為\[網路2\] )
 
-![](https://static.yiy.tw/media/blog/2020071813265947.png)
+![](https://static-a1.steveyi.net/media/blog/2020071813265947.png)
 
 在下個畫面再按兩下\[網路2\]
 
-![](https://static.yiy.tw/media/blog/2020071813281349.png)
+![](https://static-a1.steveyi.net/media/blog/2020071813281349.png)
 
 然後將連線設為\[計量付費連線\]，就完成了
 
-![](https://static.yiy.tw/media/blog/2020071813345785.png)
+![](https://static-a1.steveyi.net/media/blog/2020071813345785.png)
 
 如果是使用無線網路，則請按下\[內容\]
 
-![](https://static.yiy.tw/media/blog/2020071813371023.png)
+![](https://static-a1.steveyi.net/media/blog/2020071813371023.png)
 
 接下來請設為計量付費連線就可以囉
 
-![](https://static.yiy.tw/media/blog/2020071813402994.png)
+![](https://static-a1.steveyi.net/media/blog/2020071813402994.png)
 
 上網時記得做這小小的動作就可以輕鬆避免 Windows 10 自動更新囉~  
 如果需要更新的時候進來 Windows Update 按\[下載\]就可以囉
 
-![](https://static.yiy.tw/media/blog/2020071814305227.png)
+![](https://static-a1.steveyi.net/media/blog/2020071814305227.png)

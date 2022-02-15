@@ -7,7 +7,7 @@ Author: 蘿蔔
 ---
 原本這篇去年12月就要發布的，但剛好遇到伺服器維護就一直沒發XD
 
-![](https://static.yiy.tw/media/blog/2021011914191084.png)
+![](https://static-a1.steveyi.net/media/blog/2021011914191084.png)
 
 有一天筆者在修改Google帳戶資料時，意外發現了「廣告設定」這個地方點開有還滿多資訊的。
 
@@ -20,16 +20,16 @@ Author: 蘿蔔
 
 如果真的不喜歡被Google看透的話，上面的廣告個人化開關可以關掉，或是使用無痕模式進行搜尋
 
-![](https://static.yiy.tw/media/blog/2021011914215023.png)
+![](https://static-a1.steveyi.net/media/blog/2021011914215023.png)
 
 Google對筆者的認識，看看參考就好，反正也不是完全準確🤣
 如果系統猜測的項目不喜歡，也可以隨時按「停用」，也會把該項目丟到「已關閉的項目」裡面，在登入情況下就再也不會看到囉～
 
-![](https://static.yiy.tw/media/blog/2021011914231714.png)
+![](https://static-a1.steveyi.net/media/blog/2021011914231714.png)
 
 已關閉的項目大致上會像下圖這樣，不經意地按掉廣告，或是在各種地方按下「不感興趣」的東西都會在這邊
 
-![](https://static.yiy.tw/media/blog/2021011914235943.png)
+![](https://static-a1.steveyi.net/media/blog/2021011914235943.png)
 
 之前按掉的廣告的冰山一角🤣
 連結放在下方，歡迎大家有空去玩看看吧

@@ -22,7 +22,7 @@ google-drive-ocamlfuse
 
 Access token retrieved correctly.
 
-![](https://static.yiy.tw/media/blog/2021011913110433.png)
+![](https://static-a1.steveyi.net/media/blog/2021011913110433.png)
 
 接下來請輸入這串指令，在Home Directory建立一個掛載用的檔案夾
 
@@ -31,11 +31,11 @@ mkdir ~/GoogleDrive
 
 google-drive-ocamlfuse ~/GoogleDrive
 
-![](https://static.yiy.tw/media/blog/2021011913111963.png)
+![](https://static-a1.steveyi.net/media/blog/2021011913111963.png)
 
 掛載的位置會在Home Directory 底下的Google Drive資料夾
 
-![](https://static.yiy.tw/media/blog/2021011913113183.png)
+![](https://static-a1.steveyi.net/media/blog/2021011913113183.png)
 
 如果想要退出掛載的話，可以在終端機使用以下指令
 

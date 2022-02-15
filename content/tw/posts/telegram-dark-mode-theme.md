@@ -12,12 +12,12 @@ Author: 蘿蔔
 
 首先請先打開側邊選單，然後按「設定」
 
-![](https://static.yiy.tw/media/blog/2020060108401587.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020060108401587.jpg)
 
 接下來請選擇對話設定
 
-![](https://static.yiy.tw/media/blog/2020060108403955.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020060108403955.jpg)
 
 接下來請找到「自動夜晚模式」並關掉
 
-![](https://static.yiy.tw/media/blog/2020060108410457.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020060108410457.jpg)

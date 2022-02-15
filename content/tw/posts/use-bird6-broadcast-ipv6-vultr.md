@@ -5,7 +5,7 @@ draft: false
 tags: ['BGP', '伺服器']
 ---
 
-![](https://static.yiy.tw/media/blog/2020/04/vu-00.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/vu-00.png)
 
 **建議可以參考於 2021年01月24日 的 [透過 BGP 與朋友組成內網](https://blog.steveyi.net/make-internal-network-by-bgp/) 文章**
 
@@ -18,21 +18,21 @@ tags: ['BGP', '伺服器']
 [點擊這裡前往 Vultr BGP 頁面](https://my.vultr.com/network/#network-bgp)
 進入此頁面後，我們點擊 Get Started
 
-![](https://static.yiy.tw/media/blog/2020/04/vu-01-1920x961.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/vu-01-1920x961.png)
 
 選擇 I have my own IP space 及 I have own my ASN (如果沒有 ASN 不用選擇)
 LOA的部分 可以參考這份範例文件
 接著其他保持預設就好
 
-![](https://static.yiy.tw/media/blog/2020/04/vu-02.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/vu-02.png)
 
 接著點 Start，來驗證 IP 擁有權 或 ASN
 
-![](https://static.yiy.tw/media/blog/2020/04/vu-03-1920x362.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/vu-03-1920x362.png)
 
 系統會寄一封電子郵件到 Whois 的 Email，進行驗證！
 
-![](https://static.yiy.tw/media/blog/2020/04/vu-04.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/vu-04.png)
 
 驗證完後呢，我們就等待工作人員設置
 

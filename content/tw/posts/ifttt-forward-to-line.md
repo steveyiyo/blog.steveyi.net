@@ -6,38 +6,38 @@ tags: ['生活小知識']
 Author: 蘿蔔
 ---
 
-![](https://static.yiy.tw/media/blog/2020/04/39743.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020/04/39743.jpg)
 
 **準備工作**  
 首先，需要先註冊或登入IFTTT ([ifttt.com](http://ifttt.com))
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-1.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-1.png)
 
 接下來他會推薦一個IFTTT的範例，按下X跳過
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-2.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-2.png)
 
 在左上角搜尋框輸入LINE
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-3.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-3.png)
 
 然後在Services裡面選擇LINE
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-4.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-4.png)
 
 按下Connect然後登入帳號
 
 請登入要接收通知(被提醒)的帳號!!
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-5.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-5.png)
 
 然後按下綠色按確認連動帳號
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-6.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-6.png)
 
 接下來應該會看到以下訊息
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-7.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-7.png)
 
 接下來請移駕到收到訊息/未接來電要轉發的手機並安裝[IFTTT](https://play.google.com/store/apps/details?id=com.ifttt.ifttt&hl=zh-TW)
 
@@ -49,15 +49,15 @@ Author: 蘿蔔
 
 如果是Android 6.0至8.0，安裝完成後請先至系統設定>電池(或電源)
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-8.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-8.png)
 
 依照不同操作系統可能有不同的操作方式，以Google手機為例，需先按下右上角三個點之後點選電池效能最佳化
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-9.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-9.png)
 
 然後在選單內找到IFTTT，選擇不要最佳化，以免後臺程序無法運行造成功能失常
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-10.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-10.png)
 
 如果是Android 9.0至10.0，請到系統設定>應用程式和通知>特殊應用程式存取權
 
@@ -65,29 +65,29 @@ Author: 蘿蔔
 
 以Google手機為例:
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-11.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-11.png)
 
 然後點選電池效能最佳化
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-12.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-12.png)
 
 找到IFTTT之後選擇不要最佳化
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-13.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-13.png)
 
 準備工作--關閉電池最佳化段落結束
 
 接下來請打開IFTTT應用程式
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-14.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-14.png)
 
 接下來請登入本文章一開始所使用的帳號
 
 按下Got it和Get More
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-15.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-15.png)
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-16.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-16.png)
 
 準備工作教學完畢
 
@@ -97,25 +97,25 @@ Author: 蘿蔔
 
 往下滑找到 Create Your Own
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-17.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-17.png)
 
 接下來按下This
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-18.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-18.png)
 
 選擇Android SMS
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-19.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-19.png)
 
 之後選擇之後選擇 \[  Any new SMS received  \]
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-20.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-20.png)
 
 接下來請在That的地方選擇LINE後選擇 \[  Send message \]
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-21.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-21.png)
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-22.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-22.png)
 
 接收對象可以是群組，也可以是私人訊息
 
@@ -123,11 +123,11 @@ Author: 蘿蔔
 
 使用群組提醒前請先將LINE Noitfy的帳號邀請到群組中
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-23.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-23.png)
 
 接下來可以自己拼湊想要的文字了
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-24.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-24.png)
 
 弄完請按下方黑色的Continue之後按Finish
 
@@ -135,27 +135,27 @@ Receive notifications when this runs 的意思是這件事發生時要不要收�
 
 我個人是沒開拉，但這個就自己決定吧
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-25.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-25.png)
 
 接下來如果被要求權限請不要拒絕!!!
 
 否則功能無法正常運作!!!
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-26.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-26.png)
 
 Connected的開關就是這項功能的開關
 
 不想用的時候可以關起來，隨時都可以再打開
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-27.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-27.png)
 
 接下來收到簡訊
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-28.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-28.png)
 
 過大約十秒到三十秒會在LINE上收到通知
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-29.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-29.png)
 
 簡訊轉送教學完畢
 
@@ -167,31 +167,31 @@ Connected的開關就是這項功能的開關
 
 按下Got it和Get More
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-30.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-30.png)
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-31.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-31.png)
 
 往下滑找到 Create Your Own
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-32.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-32.png)
 
 接下來按下This
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-33.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-33.png)
 
 按下This然後選擇Android Phone Call
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-34.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-34.png)
 
 選擇Any Phone call missed
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-35.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-35.png)
 
 再來請按下That 之後選擇LINE
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-36.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-36.png)
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-37.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-37.png)
 
 接收對象可以是群組，也可以是私人訊息
 
@@ -199,11 +199,11 @@ Connected的開關就是這項功能的開關
 
 使用群組提醒前請先將LINE Noitfy的帳號邀請到群組中
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-38.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-38.png)
 
 完成請按Continue
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-39.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-39.png)
 
 然後按Finish
 
@@ -215,10 +215,10 @@ Connected的開關就是這項功能的開關
 
 不想用的時候可以關起來，隨時都可以再打開
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-40.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-40.png)
 
 接下來，如果有未接來電就會轉發到LINE提醒囉
 
-![](https://static.yiy.tw/media/blog/2020/04/ifttt-forward-to-line-41.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-41.png)
 
 全篇教學結束

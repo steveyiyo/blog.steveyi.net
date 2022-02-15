@@ -27,7 +27,7 @@ APNIC 則不需要任何證明文件
 首先，我們需要找到一位 RIPE 會員 (LIR) 做自己的 Sponsor  
 我們只要在 Google 上搜尋「Lir Service」就會看到非常多的相關服務
 
-![](https://static.yiy.tw/media/blog/2020111814292492.png)
+![](https://static-a1.steveyi.net/media/blog/2020111814292492.png)
 
 那小易嘗試過 [Openfactory](https://freetransit.ch/) 的服務，非常推薦其服務！（雖然比較慢）
 

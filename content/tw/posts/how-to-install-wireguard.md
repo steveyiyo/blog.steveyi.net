@@ -20,7 +20,7 @@ tags: ['BGP', '伺服器']
 cd /etc/wireguard
 ```
 
-![](https://static.yiy.tw/media/blog/2020051611394599.png)
+![](https://static-a1.steveyi.net/media/blog/2020051611394599.png)
 
 接著，我們使用指令來產生公私鑰，並使用cat查看公私鑰內容
 
@@ -28,7 +28,7 @@ cd /etc/wireguard
 wg genkey | tee privatekey | wg pubkey > publickey
 ```
 
-![](https://static.yiy.tw/media/blog/2020051611445527.png)
+![](https://static-a1.steveyi.net/media/blog/2020051611445527.png)
 
 接著我們將公私鑰記下來，我們建立一個配置文件
 
@@ -70,4 +70,4 @@ systemctl enable wg-quick@wg0
 
 代表成功了！
 
-![](https://static.yiy.tw/media/blog/2020051612102187.png)
+![](https://static-a1.steveyi.net/media/blog/2020051612102187.png)

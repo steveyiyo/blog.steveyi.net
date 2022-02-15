@@ -25,26 +25,26 @@ tags: ['G-Suite', 'GCP', 'Google']
 員工人數自行選擇(我是選1)  
 國家/地區自行選擇(建議照實寫，防止後續無法付款 我選台灣)
 
-![](https://static.yiy.tw/media/blog/2020/04/register-gsuite-01.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/register-gsuite-01.png)
 
 4.接著設定網域（如果沒有網域的話，請點擊第三個選項）
 
-![](https://static.yiy.tw/media/blog/2020/04/register-gsuite-02.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/register-gsuite-02.png)
 
 5.接著確認網域，點擊下一頁
 
-![](https://static.yiy.tw/media/blog/2020/04/register-gsuite-03.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/register-gsuite-03.png)
 
 6.接著就...自己選擇囉！
 
-![](https://static.yiy.tw/media/blog/2020/04/register-gsuite-04.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/register-gsuite-04.png)
 
 7.接著建立管理者帳號  
 使用者名稱，密碼自定  
 網域則為我們剛剛選擇的  
 設定完成後，點擊"同意並繼續"！
 
-![](https://static.yiy.tw/media/blog/2020/04/register-gsuite-05.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/register-gsuite-05.png)
 
 接著就可以進入[管理員管理面板](https://admin.google.com)囉！
 

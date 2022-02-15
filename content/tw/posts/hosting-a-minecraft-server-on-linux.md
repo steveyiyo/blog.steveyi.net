@@ -28,7 +28,7 @@ apt upgrade -y
 apt install openjdk-8-jdk byobu -y
 ```
 
-![](https://static.yiy.tw/media/blog/hosting-a-minecraft-server-on-linux-01.png)
+![](https://static-a1.steveyi.net/media/blog/hosting-a-minecraft-server-on-linux-01.png)
 
 ## 部署 Minecraft 伺服器
 
@@ -51,6 +51,6 @@ mv spigot-1.16.5.jar server.jar
 java -Xmx2048M -Xms1024M -jar server.jar nogui
 ```
 
-![](https://static.yiy.tw/media/blog/hosting-a-minecraft-server-on-linux-02.png)
+![](https://static-a1.steveyi.net/media/blog/hosting-a-minecraft-server-on-linux-02.png)
 
 就開啟你的 Minecraft 伺服器囉！

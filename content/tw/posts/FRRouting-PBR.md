@@ -32,7 +32,7 @@ ip route add 0.0.0.0/0 via 10.121.210.0/24 dev VPN-JP table TW
 
 但我又不想要透過 Script 去設定 PBR
 
-![](https://static.yiy.tw/media/blog/1621326935.png)
+![](https://static-a1.steveyi.net/media/blog/1621326935.png)
 
 於是我查詢了一下 [FRRouting](https://frrouting.org/) 這套路由套件有沒有相關功能，沒想到真的有設計 PBR 的功能！
 
@@ -97,4 +97,4 @@ pbr-map VPN seq 10
 ```
 最終，我們可以輸入指令 `show pbr nexthop-groups`，來查看目前的規則！
 
-![](https://static.yiy.tw/media/blog/1621331786.png)
+![](https://static-a1.steveyi.net/media/blog/1621331786.png)

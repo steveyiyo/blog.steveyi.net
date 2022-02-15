@@ -14,7 +14,7 @@ Author: 蘿蔔
 但人們會問：外置的DAC不是都很大一台嗎?  
 沒錯的，專業等級的DAC確實有點龐大，而且價格偏高
 
-![](https://static.yiy.tw/media/blog/2020060102552564.png)
+![](https://static-a1.steveyi.net/media/blog/2020060102552564.png)
 
 Google隨便搜尋都會看到這種龐大的DAC
 
@@ -22,18 +22,18 @@ Google隨便搜尋都會看到這種龐大的DAC
 就在我為了兩百塊有找的3.5mm的耳機音質太差傷腦筋時，忽然想起抽屜裡那完全沒用過的Google USB-C 轉 3.5 毫米轉接頭  
 (因為筆者之前使用的Pixel 2尾插有問題只能充電但送不回美國)
 
-![](https://static.yiy.tw/media/blog/2020060103063749.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020060103063749.jpg)
 
 轉接頭插上去後我明顯的感受到了無力的低音瞬間變得有力  
 之後還拿雜牌的轉接頭來試聽，音質慘不忍睹，比手機的3.5mm耳機口還慘
 
-![](https://static.yiy.tw/media/blog/2020060103152993-scaled.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020060103152993-scaled.jpg)
 
 如果搭配手機內建的音質選項，甚至是等化器都調整成自己偏好的，效果會更好  
   
 (但筆者不推薦HTC手機用戶使用「HTC BoomSound配備杜比音效」在耳機上，整個聲音變得不像原來的樣子，沒開的音質反而聽起來比打開好)
 
-![](https://static.yiy.tw/media/blog/2020060103253098.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020060103253098.jpg)
 
 現在來說說為什麼Google的轉接頭有這樣一個神奇的效果，而雜牌轉接頭聽起來如此慘不忍睹了。
 
@@ -54,7 +54,7 @@ Google隨便搜尋都會看到這種龐大的DAC
 後來我去測試了一下，電腦的部分，Windows 10(PC和Mac)可以用，但我手上的轉接頭插到macOS 10.15.5的Mac是沒有反應的(不確定是不是因為不是蘋果的)，供大家參考  
   
 
-![](https://static.yiy.tw/media/blog/2020060300231492.png)
+![](https://static-a1.steveyi.net/media/blog/2020060300231492.png)
 
 電腦的部分，Windows 10(PC和Mac)可以用
 

@@ -22,7 +22,7 @@ tags: ['VPS', '伺服器']
 *   開啟 Windows 遠程桌面
     
     中文繁體版  
-    載點1: [http://static.yiy.tw/mirror/dd/win10.gz](http://static.yiy.tw/mirror/dd/win10.gz)  
+    載點1: [http://static-a1.steveyi.net/mirror/dd/win10.gz](http://static-a1.steveyi.net/mirror/dd/win10.gz)  
     
     遠端登入資訊  
     帳號: Administrator  

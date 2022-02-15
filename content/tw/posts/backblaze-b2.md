@@ -33,15 +33,15 @@ Backblaze B2 的優勢
 
 首先，進入官網後，點擊右上角的 Sign Up
 
-![](https://static.yiy.tw/media/blog/2020051108120980.png)
+![](https://static-a1.steveyi.net/media/blog/2020051108120980.png)
 
 接著輸入帳號密碼，選擇資料放置區域(基本上選擇美西)
 
-![](https://static.yiy.tw/media/blog/2020051108143529.png)
+![](https://static-a1.steveyi.net/media/blog/2020051108143529.png)
 
 接著到電子郵件中驗證帳號！完成
 
-![](https://static.yiy.tw/media/blog/2020051108170997.png)
+![](https://static-a1.steveyi.net/media/blog/2020051108170997.png)
 
 創建 Bucket
 --------
@@ -51,11 +51,11 @@ Backblaze B2 的優勢
 接著輸入 Bucket 名稱，不可以跟別人重複  
 接著選擇 Public (如果你用於備份, 私人檔案的話，就選擇 Private )
 
-![](https://static.yiy.tw/media/blog/2020051108354195.png)
+![](https://static-a1.steveyi.net/media/blog/2020051108354195.png)
 
 接著我們就會看見剛剛創建的 Bucket 了
 
-![](https://static.yiy.tw/media/blog/2020051109002920.png)
+![](https://static-a1.steveyi.net/media/blog/2020051109002920.png)
 
 創建 App Key
 ---------
@@ -65,20 +65,20 @@ Backblaze B2 的優勢
 
 首先，點擊左方的 App Keys
 
-![](https://static.yiy.tw/media/blog/2020051109051012.png)
+![](https://static-a1.steveyi.net/media/blog/2020051109051012.png)
 
 接著我們點擊 Add a New Application Key
 
-![](https://static.yiy.tw/media/blog/2020051109090292.png)
+![](https://static-a1.steveyi.net/media/blog/2020051109090292.png)
 
 輸入 App Key 名稱，允許訪問的 Bucket  
 接著點選 Create a new key
 
-![](https://static.yiy.tw/media/blog/2020051109160381.png)
+![](https://static-a1.steveyi.net/media/blog/2020051109160381.png)
 
 接著會產生 API 資訊，將 S3 EndPoint, Key ID 及 applicationKay 記下來
 
-![](https://static.yiy.tw/media/blog/2020051109185118.png)
+![](https://static-a1.steveyi.net/media/blog/2020051109185118.png)
 
 上傳/下載檔案
 -------

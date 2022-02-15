@@ -21,15 +21,15 @@ Author: 蘿蔔
 下載完成後請打開並註冊或登入Musixmatch的帳號  
 如果有詢問是否加入Musixmatch Premium會員，可以按左上角「ㄨ」關掉
 
-![](https://static.yiy.tw/media/blog/2020071106591523.png)
+![](https://static-a1.steveyi.net/media/blog/2020071106591523.png)
 
 完成後請授權Spotify，按下綠色的按鈕
 
-![](https://static.yiy.tw/media/blog/2020071107003597.png)
+![](https://static-a1.steveyi.net/media/blog/2020071107003597.png)
 
 接下來滑到最下面按綠色的「同意」
 
-![](https://static.yiy.tw/media/blog/2020071107012072.png)
+![](https://static-a1.steveyi.net/media/blog/2020071107012072.png)
 
 這時候可以隨便播一首歌
 
@@ -41,15 +41,15 @@ Author: 蘿蔔
 如果有支援實時歌詞，會跟著音樂跑，如果只支援靜態歌詞，則可能需要自己用手滑，最怕是有些音樂沒支援歌詞  
 左下角也有翻譯功能喔（如果有人翻譯的話）
 
-![](https://static.yiy.tw/media/blog/2020071107271010.png)
+![](https://static-a1.steveyi.net/media/blog/2020071107271010.png)
 
 如果使用iPad還可以搭配SpiltView邊看歌詞邊放專輯封面展示
 
-![](https://static.yiy.tw/media/blog/2020071215492977.png)
+![](https://static-a1.steveyi.net/media/blog/2020071215492977.png)
 
 或是使用iPad的Spilt View邊看歌詞邊做其他事（例如：瀏覽網頁）
 
-![](https://static.yiy.tw/media/blog/2020071215540769.png)
+![](https://static-a1.steveyi.net/media/blog/2020071215540769.png)
 
 也可以在桌面左邊新增小工具
 

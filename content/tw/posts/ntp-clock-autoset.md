@@ -8,17 +8,17 @@ Author: 蘿蔔
 
 時鐘對電腦來說是一個非常重要的東西，並不是只在狀態欄(或工作列)顯示時間那麼單純而已，時鐘不正確(與真實世界實際時間偏差太多)的話，可能會造成電腦發生一些奇怪的現象，例如:不能看網頁(憑證問題)，如果時間差太多甚至會造成軟體當掉。各種程式登入逾時也是很容易在時間偏差太大時發生的事情
 
-![](https://static.yiy.tw/media/blog/2020112014495468.png)
+![](https://static-a1.steveyi.net/media/blog/2020112014495468.png)
 
 時間錯誤造成的憑證問題導致無法正常瀏覽網頁
 
-![](https://static.yiy.tw/media/blog/2020112015550593.png)
+![](https://static-a1.steveyi.net/media/blog/2020112015550593.png)
 
 各種程式的登入逾時，iTunes就是其中之一
 
 講到這裡，大家應該都想到了系統內建的自動校正時間功能
 
-![](https://static.yiy.tw/media/blog/2020112014523058.png)
+![](https://static-a1.steveyi.net/media/blog/2020112014523058.png)
 
 系統的校正功能，筆者從來沒看過它自動幫我更正時間，每次都是去按\[立即更新\]才幫我更正時間 (它不會是每次喚醒電腦就對時，據說要好幾天才會更正一次)
 
@@ -33,15 +33,15 @@ NTPClock安裝教學
 首先請點這裡下載[NTPClock](https://www.stdtime.gov.tw/chinese/exe/NTPClock.exe "https://www.stdtime.gov.tw/chinese/exe/NTPClock.exe")，下載後請不要急著打開。  
 請先將程式移至"C:\\NTPClock"資料夾(自己建立該資料夾)，然後在該程式按右鍵，選擇\[相容性\]，然後依序更改圖片圈起來的參數再打開  
 
-![](https://static.yiy.tw/media/blog/2020112015050958.png)
+![](https://static-a1.steveyi.net/media/blog/2020112015050958.png)
 
 開啟時請允許權限，否則無法變更時間
 
-![](https://static.yiy.tw/media/blog/2020112015075546.png)
+![](https://static-a1.steveyi.net/media/blog/2020112015075546.png)
 
 接下來程式會縮小在系統托盤，圖標點右鍵可以結束。
 
-![](https://static.yiy.tw/media/blog/2020112015113959.png)
+![](https://static-a1.steveyi.net/media/blog/2020112015113959.png)
 
 設定開機自動使用NTPClock校正時間
 --------------------
@@ -53,50 +53,50 @@ NTPClock安裝教學
 
 首先請先在Windows搜尋找到"工作排程器"
 
-![](https://static.yiy.tw/media/blog/2020112015162761.png)
+![](https://static-a1.steveyi.net/media/blog/2020112015162761.png)
 
-![](https://static.yiy.tw/media/blog/2020112015362266.png)
+![](https://static-a1.steveyi.net/media/blog/2020112015362266.png)
 
 接下來請到觸發程序的地方，調整紅色框起來的地方的設定如圖
 
-![](https://static.yiy.tw/media/blog/2020112015253737.png)
+![](https://static-a1.steveyi.net/media/blog/2020112015253737.png)
 
 到動作的地方，調整紅色框起來的地方的設定如圖
 
-![](https://static.yiy.tw/media/blog/2020112015265857.png)
+![](https://static-a1.steveyi.net/media/blog/2020112015265857.png)
 
 到條件的地方，調整紅色框起來的地方的設定如圖
 
 更正圖片錯誤的部分：取消勾選「只有在電腦是使用AC電源時才啟用這個工作」
 
-![](https://static.yiy.tw/media/blog/2020112015284487.png)
+![](https://static-a1.steveyi.net/media/blog/2020112015284487.png)
 
 到設定的地方，調整紅色框起來的地方的設定如圖
 
-![](https://static.yiy.tw/media/blog/2020112015293652.png)
+![](https://static-a1.steveyi.net/media/blog/2020112015293652.png)
 
 接下來要設定當鎖定、登出、關掉電腦(睡眠、休眠、關機)時關掉NTPClock  
 (不然如果不是關機或登出的話，每次打開電腦就會多開一個NTPClock，然後多開幾次電腦之後工作列就滿了)
 
-![](https://static.yiy.tw/media/blog/2020112015394495.png)
+![](https://static-a1.steveyi.net/media/blog/2020112015394495.png)
 
 接下來請到觸發程序的地方，調整紅色框起來的地方的設定如圖
 
-![](https://static.yiy.tw/media/blog/2020112015422241.png)
+![](https://static-a1.steveyi.net/media/blog/2020112015422241.png)
 
 到動作的地方，調整紅色框起來的地方的設定如圖
 
-![](https://static.yiy.tw/media/blog/2020112015435684.png)
+![](https://static-a1.steveyi.net/media/blog/2020112015435684.png)
 
 到條件的地方，調整紅色框起來的地方的設定如圖
 
 更正圖片錯誤的部分：取消勾選「只有在電腦是使用AC電源時才啟用這個工作」
 
-![](https://static.yiy.tw/media/blog/2020112015284487.png)
+![](https://static-a1.steveyi.net/media/blog/2020112015284487.png)
 
 到設定的地方，調整紅色框起來的地方的設定如圖
 
-![](https://static.yiy.tw/media/blog/2020112015293652.png)
+![](https://static-a1.steveyi.net/media/blog/2020112015293652.png)
 
 接下來每次打開電腦就會自動對時囉~  
 如果電腦關掉後時間會跑掉的話，以後每次打開電腦都不用手動改時間了!

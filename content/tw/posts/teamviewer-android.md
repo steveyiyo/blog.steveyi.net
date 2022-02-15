@@ -21,23 +21,23 @@ Android 9以上適用遠端查看
 
 2.下載遠端控制插件
 
-![](https://static.yiy.tw/media/blog/2020052609581036.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020052609581036.jpg)
 
-![](https://static.yiy.tw/media/blog/2020052609584328.jpg)
+![](https://static-a1.steveyi.net/media/blog/2020052609584328.jpg)
 
 3.登入或註冊一個TeamViewer帳號
 
 這樣就可以在其他登入相同帳號的手機、平板或電腦遠端操作囉～  
 雖然不是太順但還是堪用啦
 
-![](https://static.yiy.tw/media/blog/2020052610083159.png)
+![](https://static-a1.steveyi.net/media/blog/2020052610083159.png)
 
-![](https://static.yiy.tw/media/blog/2020052610064765.png)
+![](https://static-a1.steveyi.net/media/blog/2020052610064765.png)
 
 儀表板頁面可以顯示手機資訊，遠端控制頁面可以按圈起來的地方放大
 
 ![](https://blog.steveyi.net/wp-content/uploads/media/blog/2020052609562446.gif)
 
-![](https://static.yiy.tw/media/blog/2020052610054826.png)
+![](https://static-a1.steveyi.net/media/blog/2020052610054826.png)
 
 可以用手機控制手機唷

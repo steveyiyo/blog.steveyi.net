@@ -42,36 +42,36 @@ Backblaze B2
 
 1.首先，進入Cloudflare後 點擊 +Add a Site 新增一個網域
 
-![](https://static.yiy.tw/media/blog/2020/04/B2-CFWorkers-01-1920x1082.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/B2-CFWorkers-01-1920x1082.png)
 
 2.新增完之後，我們點擊右方的Workers  
 來進入Cloudflare Workers  
 接著我們點擊上方的 Create a Worker 來建立一個新的Worker
 
-![](https://static.yiy.tw/media/blog/2020/04/B2-CFWorkers-02-1920x407.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/B2-CFWorkers-02-1920x407.png)
 
 3.將文章下方的程式碼貼到左邊的Script  
 並修改 b2Domain b2Bucket b2UrlPath  
 完成後我們點擊下方的Save and Deploy
 
-![](https://static.yiy.tw/media/blog/2020/04/B2-CFWorkers-03-1920x967.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/B2-CFWorkers-03-1920x967.png)
 
 4.接著我們進入剛剛新增好的網域  
 新增一個CNAME紀錄(下方是A紀錄...忘了改xDD)
 
-![](https://static.yiy.tw/media/blog/2020/04/B2-CFWorkers-04-1920x469.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/B2-CFWorkers-04-1920x469.png)
 
 5.新增CNAME紀錄後，我們點擊上方的Workers  
 接著點擊 Add route
 
-![](https://static.yiy.tw/media/blog/2020/04/B2-CFWorkers-05-1920x693.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/B2-CFWorkers-05-1920x693.png)
 
 6.接著這邊我們來設定一下  
 Route的部分填寫 剛剛新增的子網域/\*  
 ex: img.steveyi.net/\*  
 Worker選擇剛剛新增的Worker
 
-![](https://static.yiy.tw/media/blog/2020/04/B2-CFWorkers-06.png)
+![](https://static-a1.steveyi.net/media/blog/2020/04/B2-CFWorkers-06.png)
 
 接著就大功告成啦！
 

@@ -16,7 +16,7 @@ Proxmox VE 安裝碟
 首先，我們先到官方網站下載PVE的ISO檔案 [官網載點](https://www.proxmox.com/en/downloads)  
 點擊左方的 [Proxmox VE 6.2 ISO Installer](https://www.proxmox.com/en/downloads/item/proxmox-ve-6-2-iso-installer) 來下載(6.2是版本號，右方則是種子下載)
 
-![](https://static.yiy.tw/media/blog/2020070100471381.png)
+![](https://static-a1.steveyi.net/media/blog/2020070100471381.png)
 
 下載好之後，我們將檔案寫入USB中，做成安裝碟  
 這邊推薦使用Etcher來寫入，[官網連結](https://www.balena.io/etcher/)
@@ -27,31 +27,31 @@ Proxmox VE 安裝碟
 
 首先，選擇第一個 Install Proxmox VE
 
-![](https://static.yiy.tw/media/blog/2020070705281974.png)
+![](https://static-a1.steveyi.net/media/blog/2020070705281974.png)
 
 接著同意服務條款
 
-![](https://static.yiy.tw/media/blog/2020070705274149.png)
+![](https://static-a1.steveyi.net/media/blog/2020070705274149.png)
 
 選擇硬碟
 
-![](https://static.yiy.tw/media/blog/2020070705275335.png)
+![](https://static-a1.steveyi.net/media/blog/2020070705275335.png)
 
 選擇國家及時區
 
-![](https://static.yiy.tw/media/blog/2020070705280757.png)
+![](https://static-a1.steveyi.net/media/blog/2020070705280757.png)
 
 設置root密碼及電子郵件地址
 
-![](https://static.yiy.tw/media/blog/2020070705282498.png)
+![](https://static-a1.steveyi.net/media/blog/2020070705282498.png)
 
 設置主機名稱及網路(這邊建議一次就設定好，不然後續修改IP有點麻煩)
 
-![](https://static.yiy.tw/media/blog/2020070705283457.png)
+![](https://static-a1.steveyi.net/media/blog/2020070705283457.png)
 
 全部完成後，就點擊Install來進行安裝!
 
-![](https://static.yiy.tw/media/blog/2020070705284395.png)
+![](https://static-a1.steveyi.net/media/blog/2020070705284395.png)
 
 安裝完成後，我們使用 https://你的IP:8006 就可以進入管理面板囉!
 
