@@ -5,7 +5,7 @@ draft: false
 tags: ['BGP', 'Server', 'Networl']
 ---
 
-I have long time has not share new post. I still learning some BGP Knowledge and try to use bird1 to make BGP Session with another operators.
+I haven’t posted anything for a long time. I’m still learning some BGP Knowledge and was trying to use bird1 to make BGP Session with another operator.
 
 But I can not make BGP Session Establishment with a operator, so I uninstall bird1 and install [FRRouting](https://frrouting.org/)
 
