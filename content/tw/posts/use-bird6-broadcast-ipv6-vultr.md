@@ -7,21 +7,23 @@ tags: ['BGP', '伺服器']
 
 ![](https://static-a1.steveyi.net/media/blog/2020/04/vu-00.png)
 
-**建議可以參考於 2021年01月24日 的 [透過 BGP 與朋友組成內網](https://blog.steveyi.net/make-internal-network-by-bgp/) 文章**
+**建議可以參考於 2021 年 01 月 24 日 的 [透過 BGP 與朋友組成內網](https://blog.steveyi.net/posts/make-internal-network-by-bgp/) 文章**
 
 這次就來分享一下在 [Vultr](https://vultr.com) 廣播IP吧！
 
-**設置AS號碼及IP前綴**
+**設置 AS 號碼及 IP 前綴**
 ===============
 
-首先，我們要先開通BGP的功能！
+首先，我們要先開通 BGP 的功能！
 [點擊這裡前往 Vultr BGP 頁面](https://my.vultr.com/network/#network-bgp)
 進入此頁面後，我們點擊 Get Started
 
 ![](https://static-a1.steveyi.net/media/blog/2020/04/vu-01-1920x961.png)
 
 選擇 I have my own IP space 及 I have own my ASN (如果沒有 ASN 不用選擇)
-LOA的部分 可以參考這份範例文件
+
+而關於 LOA 的部分，可以參考 [這份](https://www.vultr.com/docs/example-letter-of-authorization-for-bgp-announcements/) 範例文件
+
 接著其他保持預設就好
 
 ![](https://static-a1.steveyi.net/media/blog/2020/04/vu-02.png)
@@ -39,7 +41,7 @@ LOA的部分 可以參考這份範例文件
 **廣播**
 ======
 
-這次是使用Ubuntu 18.04來廣播的，CentOS及Debian應該大同小異
+這次是使用 Ubuntu 18.04 來進行宣告的，CentOS 及 Debian 應該大同小異
 
 首先我們先安裝幾個套件
 
@@ -60,7 +62,7 @@ cd /etc/bird
 sudo rm -rf bird6.conf
 ```
 
-接著我們新增一個新的配置
+接著我們新增一個新的設定檔
 
 ```
 router id 0.0.0.0; # 將0.0.0.0改成你的主機IPv4
@@ -78,7 +80,7 @@ protocol bgp vultr
 }
 protocol static
 {
-    route 要廣播的prefix via 閘道IP;
+    route 要宣告的 prefix via 閘道 IP;
 }
 protocol device 
 {
