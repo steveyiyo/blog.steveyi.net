@@ -62,7 +62,7 @@ PersistentKeepalive = 10
 &lt;p>大家比較需要注意的點是，在內網的話，需要確認內網是互通的(同一個 LAN 就是互通的)&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020110813230558.png" alt="">&lt;/p>
 &lt;p>我們也可以使用 ping 指令去測試網路是否通的，在部分設備上（如 Windows），可能預設將 ICMP 屏蔽了。需要特別到防火牆裡面開啟&lt;/p></description></item><item><title>FRRouting 安裝教學</title><link>https://blog.steveyi.net/posts/frrouting-install/</link><pubDate>Sun, 12 Jul 2020 13:07:14 +0000</pubDate><guid>https://blog.steveyi.net/posts/frrouting-install/</guid><description>&lt;p>很久沒有來分享了！最近仍然在學習 BGP 知識及測試之前一直使用 Bird1 來廣播 BGP，後來在跟朋友 Peer 時，一直無法建立對等（很玄，但卻可以跟 IX 建立）&lt;/p>
-&lt;p>於是我將 Bird1 解除安裝了，改安裝 &lt;a href="https://frrouting.org/">FRRouting&lt;/a>。&lt;/p>
+&lt;p>於是我將 BIRD1 解除安裝了，改安裝 &lt;a href="https://frrouting.org/">FRRouting&lt;/a>。&lt;/p>
 &lt;p>&lt;a href="https://frrouting.org/">FRRouting&lt;/a> 是從 Quagga Fork 來的路由套件，功能也十分強大（ 其指令類似於 Cisco 或 Quagga ）&lt;/p>
 &lt;p>使用者指南（英文）：&lt;a href="https://docs.frrouting.org/en/latest/">https://docs.frrouting.org/en/latest/&lt;/a>&lt;br>
 GitHub 專案：&lt;a href="https://github.com/FRRouting/frr/releases">https://github.com/FRRouting/frr/releases&lt;/a>&lt;/p>
@@ -122,9 +122,7 @@ service frr restart
 &lt;/a>
 &lt;/span>
 &lt;/h3>&lt;pre tabindex="0">&lt;code>sudo vtysh
-&lt;/code>&lt;/pre>&lt;p>進入互動式 Cli，不出意外的話&lt;br>
-應該會看到下面這樣&lt;/p>
-&lt;p>接著就可以進行配置了&lt;br>
+&lt;/code>&lt;/pre>&lt;p>進入互動式 CLI ，不出意外的話，就可以進行配置了&lt;br>
 鍵入 config 就可以進入設定界面囉！&lt;/p></description></item><item><title>PVE入門心得-安裝篇</title><link>https://blog.steveyi.net/posts/pve-install/</link><pubDate>Tue, 07 Jul 2020 05:33:14 +0000</pubDate><guid>https://blog.steveyi.net/posts/pve-install/</guid><description>&lt;p>玩虛擬機有一段時間了，不過是在Windows系統下裝VMware Workstation玩xD&lt;br>
 後來閒置了幾台電腦，恰好也查詢到PVE(Proxmox VE)這個開源虛擬系統，於是 我們就來安裝玩玩吧!&lt;/p>
 &lt;p>前期準備:&lt;/p>

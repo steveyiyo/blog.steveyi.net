@@ -1,4 +1,71 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SteveYi's Blog</title><link>https://blog.steveyi.net/en/</link><description>SteveYi's Blog</description><generator>Hugo -- gohugo.io</generator><language>tw</language><atom:link href="https://blog.steveyi.net/en/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>https://blog.steveyi.net/en/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.steveyi.net/en/about/</guid><description>&lt;p>Happy to see you! Welcome to SteveYi&amp;rsquo;s Blog.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SteveYi's Blog</title><link>https://blog.steveyi.net/en/</link><description>SteveYi's Blog</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Sun, 12 Jul 2020 13:07:14 +0000</lastBuildDate><atom:link href="https://blog.steveyi.net/en/index.xml" rel="self" type="application/rss+xml"/><item><title>FRRouting Install Guide</title><link>https://blog.steveyi.net/en/posts/frrouting-install/</link><pubDate>Sun, 12 Jul 2020 13:07:14 +0000</pubDate><guid>https://blog.steveyi.net/en/posts/frrouting-install/</guid><description>&lt;p>I have long time has not share new post. I still learning some BGP Knowledge and try to use bird1 to make BGP Session with another operators.&lt;/p>
+&lt;p>But I can not make BGP Session Establishment with a operator, so I uninstall bird1 and install &lt;a href="https://frrouting.org/">FRRouting&lt;/a>&lt;/p>
+&lt;h2 id="whats-frrouting" >What&amp;rsquo;s FRRouting?
+&lt;span>
+&lt;a href="#whats-frrouting">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>&lt;a href="https://frrouting.org/">FRRouting&lt;/a> is a routing daemon fork from Quagga, has a lot of features (The commands look like Cisco or Arista :D)&lt;/p>
+&lt;p>User Guide: &lt;a href="https://docs.frrouting.org/en/latest/">https://docs.frrouting.org/en/latest/&lt;/a>&lt;br>
+GitHub Repository: &lt;a href="https://github.com/FRRouting/frr/releases">https://github.com/FRRouting/frr/releases&lt;/a>&lt;/p>
+&lt;p>Let us start to install FRRouting!&lt;/p>
+&lt;h3 id="update-packages" >Update Packages
+&lt;span>
+&lt;a href="#update-packages">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h3>&lt;pre tabindex="0">&lt;code>sudo apt update -y
+sudo apt upgrade -y
+# Install Network Tools and GPG Packages
+sudo apt install -y curl gnupg2 traceroute
+&lt;/code>&lt;/pre>&lt;h3 id="install-frrouting" >Install FRRouting
+&lt;span>
+&lt;a href="#install-frrouting">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h3>&lt;pre tabindex="0">&lt;code># Import GPG Key
+curl -s https://deb.frrouting.org/frr/keys.asc | sudo apt-key add -
+FRRVER=&amp;quot;frr-stable&amp;quot;
+# Add repository mirror
+echo deb https://deb.frrouting.org/frr $(lsb_release -s -c) $FRRVER | sudo tee -a /etc/apt/sources.list.d/frr.list
+# Install FRRouting
+sudo apt update -y &amp;amp;&amp;amp; sudo apt install -y frr frr-pythontools
+&lt;/code>&lt;/pre>&lt;h3 id="enable-ip-forwarding" >Enable IP forwarding
+&lt;span>
+&lt;a href="#enable-ip-forwarding">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h3>&lt;pre tabindex="0">&lt;code>echo &amp;quot;
+net.ipv4.conf.all.forwarding = 1
+net.ipv6.conf.all.disable_ipv6 = 0
+net.ipv6.conf.default.disable_ipv6 = 0
+net.ipv6.conf.lo.disable_ipv6 = 0
+net.ipv6.conf.default.forwarding = 1
+net.ipv6.conf.all.forwarding = 1
+net.ipv6.conf.all.proxy_ndp = 1
+net.ipv6.conf.all.accept_ra = 2
+&amp;quot; | sudo tee -a /etc/sysctl.conf
+sudo sysctl -p
+&lt;/code>&lt;/pre>&lt;h3 id="enable-frrouting-all-features" >Enable FRRouting All features
+&lt;span>
+&lt;a href="#enable-frrouting-all-features">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h3>&lt;pre tabindex="0">&lt;code>sudo sed -i &amp;quot;s/=no/=yes/g&amp;quot; /etc/frr/daemons
+service frr restart
+&lt;/code>&lt;/pre>&lt;h3 id="access-frrouting-cli-mode" >Access FRRouting CLI mode
+&lt;span>
+&lt;a href="#access-frrouting-cli-mode">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h3>&lt;pre tabindex="0">&lt;code>sudo vtysh
+&lt;/code>&lt;/pre>&lt;p>Once you go to the CLI Mode, you can configure the routing with the command &lt;code>config&lt;/code>.&lt;/p></description></item><item><title>About</title><link>https://blog.steveyi.net/en/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.steveyi.net/en/about/</guid><description>&lt;p>Happy to see you! Welcome to SteveYi&amp;rsquo;s Blog.&lt;/p>
 &lt;h3 id="whoami" >whoami
 &lt;span>
 &lt;a href="#whoami">
@@ -6,23 +73,46 @@
 &lt;/a>
 &lt;/span>
 &lt;/h3>&lt;p>I&amp;rsquo;m SteveYi, a CS Student from Taiwan.&lt;/p>
-&lt;p>I love Virtual Technology and usually use Proxmox VE as my Virtual Platform.&lt;/p>
-&lt;p>I also operate &lt;a href="https://whois.steveyi.net/whois/AS60614">AS60614&lt;/a> and &lt;a href="https://whois.steveyi.net/whois/AS209557">AS209557&lt;/a>, run my edge network.&lt;/p>
+&lt;p>I love Virtualizaztion Technology and usually use Proxmox VE as my Virtualization Platform.&lt;/p>
+&lt;p>I also operate &lt;a href="https://whois.steveyi.net/whois/AS60614">AS60614&lt;/a> and &lt;a href="https://whois.steveyi.net/whois/AS209557">AS209557&lt;/a>, running my edge network.&lt;/p>
 &lt;h3 id="learn-from-community-give-back-to-the-community" >Learn from Community, Give back to the community
 &lt;span>
 &lt;a href="#learn-from-community-give-back-to-the-community">
 &lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
 &lt;/a>
 &lt;/span>
-&lt;/h3>&lt;p>When I was fifteen, I started to learn about network engineering (Eg: BGP, OSPF, MPLS or LACP&amp;hellip; Include a lot of Layer 2 &amp;amp; 3 technology) from the community.&lt;/p>
-&lt;p>In 2020, I going to lot of conferences. Eg: &lt;a href="https://coscup.org/">COSCUP&lt;/a>、&lt;a href="https://sitcon.org/">SITCON&lt;/a>、&lt;a href="https://mopcon.org/2020/">MOPCON&lt;/a> and &lt;a href="https://g0v.tw/">g0v summit&lt;/a> more. At the conference, I meet more technology friends, communicated with each other!&lt;/p>
+&lt;/h3>&lt;p>When I was fifteen, I started to learn about network engineering (Eg: BGP, OSPF, MPLS or LACP… Includeing a lot of Layer 2 &amp;amp; 3 technology) from the community.&lt;/p>
+&lt;p>In 2020, I going to lot of conferences. Eg: &lt;a href="https://coscup.org/">COSCUP&lt;/a>, &lt;a href="https://sitcon.org/">SITCON&lt;/a>, &lt;a href="https://mopcon.org/2020/">MOPCON&lt;/a>, &lt;a href="https://g0v.tw/">g0v summit&lt;/a> and more. At the conference, I meetmet more technology friends, and communicated with each other!&lt;/p>
+&lt;h3 id="speech" >Speech
+&lt;span>
+&lt;a href="#speech">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h3>&lt;ul>
+&lt;li>2021 清大 CSST 程式設計討論會
+&lt;ul>
+&lt;li>&lt;a href="https://www.slideshare.net/ZongYiYo/20210607-csst">Part 12 - L3 神奇魔法 路由的奧秘&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>師大附中 CNMS 暑訓
+&lt;ul>
+&lt;li>&lt;a href="">著手打造一個小型 ISP&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2021 SITCON Conference
+&lt;ul>
+&lt;li>&lt;a href="https://sitcon.org/2021/agenda/5860c3e8-a7a6-4c7b-afee-7797e777725e">想上網？大展 L3 路由魔法吧！&lt;/a> w/ &lt;a href="https://sciuridae.me/">Sciuridae Li&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
 &lt;h3 id="contact-with-me" >Contact with me
 &lt;span>
 &lt;a href="#contact-with-me">
 &lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
 &lt;/a>
 &lt;/span>
-&lt;/h3>&lt;p>If you find any wrong with my blog, feel free to let me know or open a pull request on &lt;a href="https://github.com/steveyiyo/blog_source/pulls">GitHub&lt;/a>!&lt;/p>
+&lt;/h3>&lt;p>If you find anything wrong with my blog, feel free to let me know or open a pull request on &lt;a href="https://github.com/steveyiyo/blog_source/pulls">GitHub&lt;/a>!&lt;/p>
 &lt;p>Email: info [at] steveyi [dot] net&lt;/p>
 &lt;h3 id="license" >License
 &lt;span>
@@ -30,6 +120,8 @@
 &lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
 &lt;/a>
 &lt;/span>
-&lt;/h3>&lt;p>All of the posts released by Creative Commons Taiwan, The work is licensed under the Attribution-ShareAlike 4.0 International.&lt;/p>
+&lt;/h3>&lt;p>All of the posts are released by Creative Commons Taiwan, and The work is licensed under the Attribution-ShareAlike 4.0 International.&lt;/p>
 &lt;p>More details please see the &lt;a href="http://creativecommons.org/licenses/by-sa/4.0/">Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)&lt;/a>&lt;/p>
-&lt;p>&lt;img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png" alt="">&lt;/p></description></item><item><title>Hello World!</title><link>https://blog.steveyi.net/en/posts/hello_world/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.steveyi.net/en/posts/hello_world/</guid><description>&lt;p>My Multi-language Site is now Enable!&lt;/p></description></item></channel></rss>
+&lt;p>&lt;img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png" alt="">&lt;/p></description></item><item><title>Multi Language Site is now Enabled!</title><link>https://blog.steveyi.net/en/posts/hello_world/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.steveyi.net/en/posts/hello_world/</guid><description>&lt;p>Today, I have now enabled my multi languages site.&lt;/p>
+&lt;p>I still translate some old posts into English, please wait :)&lt;/p>
+&lt;p>You should see both languages version posts soon.&lt;/p></description></item></channel></rss>

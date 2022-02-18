@@ -1398,7 +1398,7 @@ macOS需求為10.11(El Captain)以上，本篇筆者使用macOS 10.13(High Sierr
 &lt;p>上網時記得做這小小的動作就可以輕鬆避免 Windows 10 自動更新囉~&lt;br>
 如果需要更新的時候進來 Windows Update 按[下載]就可以囉&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071814305227.png" alt="">&lt;/p></description></item><item><title>FRRouting 安裝教學</title><link>https://blog.steveyi.net/posts/frrouting-install/</link><pubDate>Sun, 12 Jul 2020 13:07:14 +0000</pubDate><guid>https://blog.steveyi.net/posts/frrouting-install/</guid><description>&lt;p>很久沒有來分享了！最近仍然在學習 BGP 知識及測試之前一直使用 Bird1 來廣播 BGP，後來在跟朋友 Peer 時，一直無法建立對等（很玄，但卻可以跟 IX 建立）&lt;/p>
-&lt;p>於是我將 Bird1 解除安裝了，改安裝 &lt;a href="https://frrouting.org/">FRRouting&lt;/a>。&lt;/p>
+&lt;p>於是我將 BIRD1 解除安裝了，改安裝 &lt;a href="https://frrouting.org/">FRRouting&lt;/a>。&lt;/p>
 &lt;p>&lt;a href="https://frrouting.org/">FRRouting&lt;/a> 是從 Quagga Fork 來的路由套件，功能也十分強大（ 其指令類似於 Cisco 或 Quagga ）&lt;/p>
 &lt;p>使用者指南（英文）：&lt;a href="https://docs.frrouting.org/en/latest/">https://docs.frrouting.org/en/latest/&lt;/a>&lt;br>
 GitHub 專案：&lt;a href="https://github.com/FRRouting/frr/releases">https://github.com/FRRouting/frr/releases&lt;/a>&lt;/p>
@@ -1458,9 +1458,7 @@ service frr restart
 &lt;/a>
 &lt;/span>
 &lt;/h3>&lt;pre tabindex="0">&lt;code>sudo vtysh
-&lt;/code>&lt;/pre>&lt;p>進入互動式 Cli，不出意外的話&lt;br>
-應該會看到下面這樣&lt;/p>
-&lt;p>接著就可以進行配置了&lt;br>
+&lt;/code>&lt;/pre>&lt;p>進入互動式 CLI ，不出意外的話，就可以進行配置了&lt;br>
 鍵入 config 就可以進入設定界面囉！&lt;/p></description></item><item><title>幫 Spotify 或其他音樂軟體加上實時歌詞的方法 (Android)</title><link>https://blog.steveyi.net/posts/dynamic-lyrics-android/</link><pubDate>Sat, 11 Jul 2020 10:00:12 +0000</pubDate><guid>https://blog.steveyi.net/posts/dynamic-lyrics-android/</guid><description>&lt;p>上次有一篇介紹&lt;a href="https://blog.steveyi.net/free-streaming-music-compare/" title="[2020最新] 各大串流平台免費會員比較">各家串流平台的免費會員比較&lt;/a>，各位可以發現實時歌詞很多家平台都有&lt;/p>
 &lt;p>但Spotify根據筆者測試只有Premium用戶能用或是有些平台沒有歌詞服務，稍嫌可惜&lt;/p>
 &lt;p>這時想要聽著Spotify或其他沒歌詞的平台的免費音樂，但又覺得沒歌詞不能一起唱很麻煩嗎 這時候照這篇文章做就可以解決這個問題囉&lt;/p>
@@ -2899,7 +2897,6 @@ protocol device 
 &lt;p>從小學時期就很喜歡虛擬化技術，最初在家裡的電腦上安裝 &lt;a href="https://www.virtualbox.org/">Virtual Box&lt;/a> 及 &lt;a href="https://www.vmware.com/products/workstation-pro.html">VMware Workstation&lt;/a> 程式來虛擬系統使用&lt;br>
 目前則在伺服器上使用 &lt;a href="https://pve.proxmox.com/">PVE&lt;/a> 來進行虛擬化&lt;/p>
 &lt;p>同時，我也專研於網際網路 (L2 及 L3) 並使用 &lt;a href="https://whois.steveyi.net/whois/AS60614">AS60614&lt;/a> 及 &lt;a href="https://whois.steveyi.net/whois/AS209557">AS209557&lt;/a>&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/yi/life/image04.jpg" alt="">&lt;/p>
 &lt;h3 id="本站的起源故事" >本站的起源故事
 &lt;span>
 &lt;a href="#%e6%9c%ac%e7%ab%99%e7%9a%84%e8%b5%b7%e6%ba%90%e6%95%85%e4%ba%8b">
@@ -2943,6 +2940,29 @@ protocol device 
 在這當中，我的視野增長了不少，也認識了許多專業技術的同好，彼此交流&lt;/p>
 &lt;p>當然，每當有人與我交流技術時，我都盡我所能的去分享&lt;/p>
 &lt;p>所以，在這個網站中，你會看到我的實驗筆記記錄以及心得分享或是一些意想不到的內容唷～&lt;/p>
+&lt;h3 id="演講" >演講
+&lt;span>
+&lt;a href="#%e6%bc%94%e8%ac%9b">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h3>&lt;ul>
+&lt;li>2021 清大 CSST 程式設計討論會
+&lt;ul>
+&lt;li>&lt;a href="https://www.slideshare.net/ZongYiYo/20210607-csst">Part 12 - L3 神奇魔法 路由的奧秘&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>師大附中 CNMS 暑訓
+&lt;ul>
+&lt;li>&lt;a href="">著手打造一個小型 ISP&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>2021 SITCON Conference
+&lt;ul>
+&lt;li>&lt;a href="https://sitcon.org/2021/agenda/5860c3e8-a7a6-4c7b-afee-7797e777725e">想上網？大展 L3 路由魔法吧！&lt;/a> w/ &lt;a href="https://sciuridae.me/">Sciuridae Li&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
 &lt;h3 id="與我聯繫" >與我聯繫
 &lt;span>
 &lt;a href="#%e8%88%87%e6%88%91%e8%81%af%e7%b9%ab">

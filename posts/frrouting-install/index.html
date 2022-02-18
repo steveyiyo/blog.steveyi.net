@@ -6,7 +6,7 @@
 <meta name=referrer content="no-referrer-when-downgrade">
 <title>FRRouting 安裝教學 - 小易的部落格</title>
 <meta name=description content="很久沒有來分享了！最近仍然在學習 BGP 知識及測試之前一直使用 Bird1 來廣播 BGP，後來在跟朋友 Peer 時，一直無法建立對等（很玄，但卻可以跟 IX 建立）
-於是我將 Bird1 解除安裝了，改安裝 FRRouting。
+於是我將 BIRD1 解除安裝了，改安裝 FRRouting。
 FRRouting 是從 Quagga Fork 來的路由套件，功能也十分強大（ 其指令類似於 Cisco 或 Quagga ）
 使用者指南（英文）：https://docs.frrouting.org/en/latest/
 GitHub 專案：https://github.com/FRRouting/frr/releases
@@ -18,7 +18,7 @@ GitHub 專案：https://github.com/FRRouting/frr/releases
 <script src=https://blog.steveyi.net/js/script.min.510c781c39dbb21b4c76d85c82e2bdf4689220adbb7cd61e49e9d293e442fb42.js type=text/javascript integrity="sha256-UQx4HDnbshtMdthcguK99GiSIK27fNYeSenSk+RC+0I="></script>
 <meta property="og:title" content="FRRouting 安裝教學">
 <meta property="og:description" content="很久沒有來分享了！最近仍然在學習 BGP 知識及測試之前一直使用 Bird1 來廣播 BGP，後來在跟朋友 Peer 時，一直無法建立對等（很玄，但卻可以跟 IX 建立）
-於是我將 Bird1 解除安裝了，改安裝 FRRouting。
+於是我將 BIRD1 解除安裝了，改安裝 FRRouting。
 FRRouting 是從 Quagga Fork 來的路由套件，功能也十分強大（ 其指令類似於 Cisco 或 Quagga ）
 使用者指南（英文）：https://docs.frrouting.org/en/latest/
 GitHub 專案：https://github.com/FRRouting/frr/releases
@@ -31,7 +31,7 @@ GitHub 專案：https://github.com/FRRouting/frr/releases
 <meta name=twitter:card content="summary">
 <meta name=twitter:title content="FRRouting 安裝教學">
 <meta name=twitter:description content="很久沒有來分享了！最近仍然在學習 BGP 知識及測試之前一直使用 Bird1 來廣播 BGP，後來在跟朋友 Peer 時，一直無法建立對等（很玄，但卻可以跟 IX 建立）
-於是我將 Bird1 解除安裝了，改安裝 FRRouting。
+於是我將 BIRD1 解除安裝了，改安裝 FRRouting。
 FRRouting 是從 Quagga Fork 來的路由套件，功能也十分強大（ 其指令類似於 Cisco 或 Quagga ）
 使用者指南（英文）：https://docs.frrouting.org/en/latest/
 GitHub 專案：https://github.com/FRRouting/frr/releases
@@ -99,11 +99,21 @@ GitHub 專案：https://github.com/FRRouting/frr/releases
 <div class=post-header>
 <header>
 <h1 class="p-name post-title">FRRouting 安裝教學</h1>
+<span>
+<ul class=post-translations>
+<li>
+<a href=https://blog.steveyi.net/en/posts/frrouting-install/>EN</a>
+</li>
+<li>
+TW
+</li>
+</ul>
+</span>
 </header>
 </div>
 <div class="content e-content">
 <p>很久沒有來分享了！最近仍然在學習 BGP 知識及測試之前一直使用 Bird1 來廣播 BGP，後來在跟朋友 Peer 時，一直無法建立對等（很玄，但卻可以跟 IX 建立）</p>
-<p>於是我將 Bird1 解除安裝了，改安裝 <a href=https://frrouting.org/>FRRouting</a>。</p>
+<p>於是我將 BIRD1 解除安裝了，改安裝 <a href=https://frrouting.org/>FRRouting</a>。</p>
 <p><a href=https://frrouting.org/>FRRouting</a> 是從 Quagga Fork 來的路由套件，功能也十分強大（ 其指令類似於 Cisco 或 Quagga ）</p>
 <p>使用者指南（英文）：<a href=https://docs.frrouting.org/en/latest/>https://docs.frrouting.org/en/latest/</a><br>
 GitHub 專案：<a href=https://github.com/FRRouting/frr/releases>https://github.com/FRRouting/frr/releases</a></p>
@@ -115,6 +125,7 @@ GitHub 專案：<a href=https://github.com/FRRouting/frr/releases>https://github
 </span>
 </h3><pre tabindex=0><code>sudo apt update -y
 sudo apt upgrade -y
+
 # 安裝網路套件及 GPG 套件
 sudo apt install -y curl gnupg2 traceroute
 </code></pre><h3 id=安裝-frrouting>安裝 FRRouting
@@ -125,8 +136,10 @@ sudo apt install -y curl gnupg2 traceroute
 </h3><pre tabindex=0><code># 導入 GPG
 curl -s https://deb.frrouting.org/frr/keys.asc | sudo apt-key add -
 FRRVER=&quot;frr-stable&quot;
+
 # 寫入軟體源
 echo deb https://deb.frrouting.org/frr $(lsb_release -s -c) $FRRVER | sudo tee -a /etc/apt/sources.list.d/frr.list
+
 # 安裝 FRRouting
 sudo apt update -y &amp;&amp; sudo apt install -y frr frr-pythontools
 </code></pre><h3 id=開啟-ip-forwarding>開啟 IP forwarding
@@ -159,9 +172,7 @@ service frr restart
 </a>
 </span>
 </h3><pre tabindex=0><code>sudo vtysh
-</code></pre><p>進入互動式 Cli，不出意外的話<br>
-應該會看到下面這樣</p>
-<p>接著就可以進行配置了<br>
+</code></pre><p>進入互動式 CLI ，不出意外的話，就可以進行配置了<br>
 鍵入 config 就可以進入設定界面囉！</p>
 </div>
 <div class=post-info>
@@ -187,7 +198,7 @@ service frr restart
 </main>
 <footer class=common-footer>
 <ul class=language-select>
-<li><a href=https://blog.steveyi.net/en/>English</a></li>
+<li><a href=https://blog.steveyi.net/en/posts/frrouting-install/>English</a></li>
 <li>正體中文</li>
 </ul>
 <div class=common-footer-bottom>

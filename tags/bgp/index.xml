@@ -196,7 +196,7 @@ email 寫自己的電子郵箱地址&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112108331094.png" alt="">&lt;/p>
 &lt;p>最後，我們只需要將 ORG 的編號給 LIR，就可以啦！&lt;/p>
 &lt;p>如果還是不懂的話，可以參考RIPE的影片！https://www.ripe.net/support/training/videos/ripe-database&lt;/p></description></item><item><title>FRRouting 安裝教學</title><link>https://blog.steveyi.net/posts/frrouting-install/</link><pubDate>Sun, 12 Jul 2020 13:07:14 +0000</pubDate><guid>https://blog.steveyi.net/posts/frrouting-install/</guid><description>&lt;p>很久沒有來分享了！最近仍然在學習 BGP 知識及測試之前一直使用 Bird1 來廣播 BGP，後來在跟朋友 Peer 時，一直無法建立對等（很玄，但卻可以跟 IX 建立）&lt;/p>
-&lt;p>於是我將 Bird1 解除安裝了，改安裝 &lt;a href="https://frrouting.org/">FRRouting&lt;/a>。&lt;/p>
+&lt;p>於是我將 BIRD1 解除安裝了，改安裝 &lt;a href="https://frrouting.org/">FRRouting&lt;/a>。&lt;/p>
 &lt;p>&lt;a href="https://frrouting.org/">FRRouting&lt;/a> 是從 Quagga Fork 來的路由套件，功能也十分強大（ 其指令類似於 Cisco 或 Quagga ）&lt;/p>
 &lt;p>使用者指南（英文）：&lt;a href="https://docs.frrouting.org/en/latest/">https://docs.frrouting.org/en/latest/&lt;/a>&lt;br>
 GitHub 專案：&lt;a href="https://github.com/FRRouting/frr/releases">https://github.com/FRRouting/frr/releases&lt;/a>&lt;/p>
@@ -256,9 +256,7 @@ service frr restart
 &lt;/a>
 &lt;/span>
 &lt;/h3>&lt;pre tabindex="0">&lt;code>sudo vtysh
-&lt;/code>&lt;/pre>&lt;p>進入互動式 Cli，不出意外的話&lt;br>
-應該會看到下面這樣&lt;/p>
-&lt;p>接著就可以進行配置了&lt;br>
+&lt;/code>&lt;/pre>&lt;p>進入互動式 CLI ，不出意外的話，就可以進行配置了&lt;br>
 鍵入 config 就可以進入設定界面囉！&lt;/p></description></item><item><title>在 Linux 系統上安裝 Wireguard</title><link>https://blog.steveyi.net/posts/how-to-install-wireguard/</link><pubDate>Sat, 16 May 2020 11:51:52 +0000</pubDate><guid>https://blog.steveyi.net/posts/how-to-install-wireguard/</guid><description>&lt;p>&lt;a href="https://wireguard.com">Wireguard&lt;/a>是一個點對點加密網路&lt;/p>
 &lt;p>一直以來，我都使用它來管理我所有的雲端主機&lt;/p>
 &lt;p>今天就來分享一下安裝方法吧！&lt;/p>

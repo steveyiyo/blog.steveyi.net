@@ -1398,7 +1398,7 @@ macOS需求為10.11(El Captain)以上，本篇筆者使用macOS 10.13(High Sierr
 &lt;p>上網時記得做這小小的動作就可以輕鬆避免 Windows 10 自動更新囉~&lt;br>
 如果需要更新的時候進來 Windows Update 按[下載]就可以囉&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071814305227.png" alt="">&lt;/p></description></item><item><title>FRRouting 安裝教學</title><link>https://blog.steveyi.net/posts/frrouting-install/</link><pubDate>Sun, 12 Jul 2020 13:07:14 +0000</pubDate><guid>https://blog.steveyi.net/posts/frrouting-install/</guid><description>&lt;p>很久沒有來分享了！最近仍然在學習 BGP 知識及測試之前一直使用 Bird1 來廣播 BGP，後來在跟朋友 Peer 時，一直無法建立對等（很玄，但卻可以跟 IX 建立）&lt;/p>
-&lt;p>於是我將 Bird1 解除安裝了，改安裝 &lt;a href="https://frrouting.org/">FRRouting&lt;/a>。&lt;/p>
+&lt;p>於是我將 BIRD1 解除安裝了，改安裝 &lt;a href="https://frrouting.org/">FRRouting&lt;/a>。&lt;/p>
 &lt;p>&lt;a href="https://frrouting.org/">FRRouting&lt;/a> 是從 Quagga Fork 來的路由套件，功能也十分強大（ 其指令類似於 Cisco 或 Quagga ）&lt;/p>
 &lt;p>使用者指南（英文）：&lt;a href="https://docs.frrouting.org/en/latest/">https://docs.frrouting.org/en/latest/&lt;/a>&lt;br>
 GitHub 專案：&lt;a href="https://github.com/FRRouting/frr/releases">https://github.com/FRRouting/frr/releases&lt;/a>&lt;/p>
@@ -1458,9 +1458,7 @@ service frr restart
 &lt;/a>
 &lt;/span>
 &lt;/h3>&lt;pre tabindex="0">&lt;code>sudo vtysh
-&lt;/code>&lt;/pre>&lt;p>進入互動式 Cli，不出意外的話&lt;br>
-應該會看到下面這樣&lt;/p>
-&lt;p>接著就可以進行配置了&lt;br>
+&lt;/code>&lt;/pre>&lt;p>進入互動式 CLI ，不出意外的話，就可以進行配置了&lt;br>
 鍵入 config 就可以進入設定界面囉！&lt;/p></description></item><item><title>幫 Spotify 或其他音樂軟體加上實時歌詞的方法 (Android)</title><link>https://blog.steveyi.net/posts/dynamic-lyrics-android/</link><pubDate>Sat, 11 Jul 2020 10:00:12 +0000</pubDate><guid>https://blog.steveyi.net/posts/dynamic-lyrics-android/</guid><description>&lt;p>上次有一篇介紹&lt;a href="https://blog.steveyi.net/free-streaming-music-compare/" title="[2020最新] 各大串流平台免費會員比較">各家串流平台的免費會員比較&lt;/a>，各位可以發現實時歌詞很多家平台都有&lt;/p>
 &lt;p>但Spotify根據筆者測試只有Premium用戶能用或是有些平台沒有歌詞服務，稍嫌可惜&lt;/p>
 &lt;p>這時想要聽著Spotify或其他沒歌詞的平台的免費音樂，但又覺得沒歌詞不能一起唱很麻煩嗎 這時候照這篇文章做就可以解決這個問題囉&lt;/p>
