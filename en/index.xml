@@ -1,1 +1,35 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SteveYi's Blog</title><link>https://blog.steveyi.net/en/</link><description>SteveYi's Blog</description><generator>Hugo -- gohugo.io</generator><language>tw</language><atom:link href="https://blog.steveyi.net/en/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://blog.steveyi.net/en/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.steveyi.net/en/about/</guid><description>&lt;p>TBA&lt;/p></description></item><item><title>Hello World!</title><link>https://blog.steveyi.net/en/posts/hello_world/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.steveyi.net/en/posts/hello_world/</guid><description>&lt;p>My Multi-language Site is now Enable!&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SteveYi's Blog</title><link>https://blog.steveyi.net/en/</link><description>SteveYi's Blog</description><generator>Hugo -- gohugo.io</generator><language>tw</language><atom:link href="https://blog.steveyi.net/en/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>https://blog.steveyi.net/en/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.steveyi.net/en/about/</guid><description>&lt;p>Happy to see you! Welcome to SteveYi&amp;rsquo;s Blog.&lt;/p>
+&lt;h3 id="whoami" >whoami
+&lt;span>
+&lt;a href="#whoami">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h3>&lt;p>I&amp;rsquo;m SteveYi, a CS Student from Taiwan.&lt;/p>
+&lt;p>I love Virtual Technology and usually use Proxmox VE as my Virtual Platform.&lt;/p>
+&lt;p>I also operate &lt;a href="https://whois.steveyi.net/whois/AS60614">AS60614&lt;/a> and &lt;a href="https://whois.steveyi.net/whois/AS209557">AS209557&lt;/a>, run my edge network.&lt;/p>
+&lt;h3 id="learn-from-community-give-back-to-the-community" >Learn from Community, Give back to the community
+&lt;span>
+&lt;a href="#learn-from-community-give-back-to-the-community">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h3>&lt;p>When I was fifteen, I started to learn about network engineering (Eg: BGP, OSPF, MPLS or LACP&amp;hellip; Include a lot of Layer 2 &amp;amp; 3 technology) from the community.&lt;/p>
+&lt;p>In 2020, I going to lot of conferences. Eg: &lt;a href="https://coscup.org/">COSCUP&lt;/a>、&lt;a href="https://sitcon.org/">SITCON&lt;/a>、&lt;a href="https://mopcon.org/2020/">MOPCON&lt;/a> and &lt;a href="https://g0v.tw/">g0v&lt;/a> more. At the conference, I meet more technology friends, communicated with each other!&lt;/p>
+&lt;h3 id="contact-with-me" >Contact with me
+&lt;span>
+&lt;a href="#contact-with-me">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h3>&lt;p>If you find any wrong with my blog, feel free to let me know or open a pull request on [GitHub]((&lt;a href="https://github.com/steveyiyo/blog_source/pulls)">https://github.com/steveyiyo/blog_source/pulls)&lt;/a>!&lt;/p>
+&lt;p>Email: info [at] steveyi [dot] net&lt;/p>
+&lt;h3 id="license" >License
+&lt;span>
+&lt;a href="#license">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h3>&lt;p>All of the posts released by MIT License, The work is licensed under the Attribution-ShareAlike 4.0 International.&lt;/p>
+&lt;p>More details please see the &lt;a href="http://creativecommons.org/licenses/by-sa/4.0/">Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)&lt;/a>&lt;/p>
+&lt;p>&lt;img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png" alt="">&lt;/p></description></item><item><title>Hello World!</title><link>https://blog.steveyi.net/en/posts/hello_world/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.steveyi.net/en/posts/hello_world/</guid><description>&lt;p>My Multi-language Site is now Enable!&lt;/p></description></item></channel></rss>

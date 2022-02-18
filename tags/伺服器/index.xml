@@ -310,21 +310,21 @@ Business版本提供10GB流量/月&lt;br>
 &lt;a href="https://www.cloudflare.com/products/cloudflare-spectrum/">https://www.cloudflare.com/products/cloudflare-spectrum/&lt;/a>&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020050916464540-1920x1142.png" alt="">&lt;/p>
 &lt;p>對於DDOS防禦很頭痛的可以試試看～！&lt;/p></description></item><item><title>在 Vultr 使用 Bird6 廣播 IPv6</title><link>https://blog.steveyi.net/posts/use-bird6-broadcast-ipv6-vultr/</link><pubDate>Fri, 10 Apr 2020 02:21:55 +0000</pubDate><guid>https://blog.steveyi.net/posts/use-bird6-broadcast-ipv6-vultr/</guid><description>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/vu-00.png" alt="">&lt;/p>
-&lt;p>&lt;strong>建議可以參考於 2021年01月24日 的 &lt;a href="https://blog.steveyi.net/make-internal-network-by-bgp/">透過 BGP 與朋友組成內網&lt;/a> 文章&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>建議可以參考於 2021 年 01 月 24 日 的 &lt;a href="https://blog.steveyi.net/posts/make-internal-network-by-bgp/">透過 BGP 與朋友組成內網&lt;/a> 文章&lt;/strong>&lt;/p>
 &lt;p>這次就來分享一下在 &lt;a href="https://vultr.com">Vultr&lt;/a> 廣播IP吧！&lt;/p>
-&lt;h1 id="設置as號碼及ip前綴" >&lt;strong>設置AS號碼及IP前綴&lt;/strong>
+&lt;h1 id="設置-as-號碼及-ip-前綴" >&lt;strong>設置 AS 號碼及 IP 前綴&lt;/strong>
 &lt;span>
-&lt;a href="#%e8%a8%ad%e7%bd%aeas%e8%99%9f%e7%a2%bc%e5%8f%8aip%e5%89%8d%e7%b6%b4">
+&lt;a href="#%e8%a8%ad%e7%bd%ae-as-%e8%99%9f%e7%a2%bc%e5%8f%8a-ip-%e5%89%8d%e7%b6%b4">
 &lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
 &lt;/a>
 &lt;/span>
-&lt;/h1>&lt;p>首先，我們要先開通BGP的功能！
+&lt;/h1>&lt;p>首先，我們要先開通 BGP 的功能！
 &lt;a href="https://my.vultr.com/network/#network-bgp">點擊這裡前往 Vultr BGP 頁面&lt;/a>
 進入此頁面後，我們點擊 Get Started&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/vu-01-1920x961.png" alt="">&lt;/p>
-&lt;p>選擇 I have my own IP space 及 I have own my ASN (如果沒有 ASN 不用選擇)
-LOA的部分 可以參考這份範例文件
-接著其他保持預設就好&lt;/p>
+&lt;p>選擇 I have my own IP space 及 I have own my ASN (如果沒有 ASN 不用選擇)&lt;/p>
+&lt;p>而關於 LOA 的部分，可以參考 &lt;a href="https://www.vultr.com/docs/example-letter-of-authorization-for-bgp-announcements/">這份&lt;/a> 範例文件&lt;/p>
+&lt;p>接著其他保持預設就好&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/vu-02.png" alt="">&lt;/p>
 &lt;p>接著點 Start，來驗證 IP 擁有權 或 ASN&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/vu-03-1920x362.png" alt="">&lt;/p>
@@ -337,7 +337,7 @@ LOA的部分 可以參考這份範例文件
 &lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
 &lt;/a>
 &lt;/span>
-&lt;/h1>&lt;p>這次是使用Ubuntu 18.04來廣播的，CentOS及Debian應該大同小異&lt;/p>
+&lt;/h1>&lt;p>這次是使用 Ubuntu 18.04 來進行宣告的，CentOS 及 Debian 應該大同小異&lt;/p>
 &lt;p>首先我們先安裝幾個套件&lt;/p>
 &lt;pre tabindex="0">&lt;code>apt-get update -y
 apt-get install bird6 -y
@@ -345,7 +345,7 @@ apt-get install bird6 -y
 &lt;pre tabindex="0">&lt;code>cd /etc/bird
 &lt;/code>&lt;/pre>&lt;p>刪除 bird6.conf&lt;/p>
 &lt;pre tabindex="0">&lt;code>sudo rm -rf bird6.conf
-&lt;/code>&lt;/pre>&lt;p>接著我們新增一個新的配置&lt;/p>
+&lt;/code>&lt;/pre>&lt;p>接著我們新增一個新的設定檔&lt;/p>
 &lt;pre tabindex="0">&lt;code>router id 0.0.0.0; # 將0.0.0.0改成你的主機IPv4
 protocol bgp vultr
 {
@@ -360,7 +360,7 @@ protocol bgp vultr
 }
 protocol static
 {
-    route 要廣播的prefix via 閘道IP;
+    route 要宣告的 prefix via 閘道 IP;
 }
 protocol device 
 {
