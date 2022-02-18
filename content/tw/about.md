@@ -47,7 +47,7 @@ draft: false
 在我學習的道路上，令我印象深刻的一件事  
 剛開始學網路工程時，遇到了一位好朋友指點我成長，才有現在的我
 
-後來，在 2020 年時，參與了許多社群活動 比如：[COSCUP](https://coscup.org/)、[SITCON](https://sitcon.org/)、[MOPCON](https://mopcon.org/2020/) 及 [g0v](https://g0v.tw/) 社群等  
+後來，在 2020 年時，參與了許多社群活動 比如：[COSCUP](https://coscup.org/)、[SITCON](https://sitcon.org/)、[MOPCON](https://mopcon.org/2020/) 及 [g0v summit](https://g0v.tw/) 社群等  
 在這當中，我的視野增長了不少，也認識了許多專業技術的同好，彼此交流
 
 當然，每當有人與我交流技術時，我都盡我所能的去分享
@@ -61,7 +61,7 @@ draft: false
 
 ### 授權
 
-本站所有文章以 MIT License 釋出、著作係採用創用 CC 姓名標示 - 相同方式分享 4.0 國際授權條款授權。
+本站所有文章採用創用 CC 姓名標示 - 相同方式分享 4.0 國際授權條款授權。
 
 詳情請參考 [Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](http://creativecommons.org/licenses/by-sa/4.0/)
 
