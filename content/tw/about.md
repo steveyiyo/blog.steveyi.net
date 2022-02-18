@@ -15,8 +15,6 @@ draft: false
 
 同時，我也專研於網際網路 (L2 及 L3) 並使用 [AS60614](https://whois.steveyi.net/whois/AS60614) 及 [AS209557](https://whois.steveyi.net/whois/AS209557)
 
-![](https://static-a1.steveyi.net/media/yi/life/image04.jpg)
-
 ### 本站的起源故事
 
 我在國中時（2018 年）開始接觸網域名稱及 Linux 系統  
@@ -53,6 +51,15 @@ draft: false
 當然，每當有人與我交流技術時，我都盡我所能的去分享
 
 所以，在這個網站中，你會看到我的實驗筆記記錄以及心得分享或是一些意想不到的內容唷～
+
+### 演講
+
+- 2021 清大 CSST 程式設計討論會
+  - [Part 12 - L3 神奇魔法 路由的奧秘](https://www.slideshare.net/ZongYiYo/20210607-csst)
+- 師大附中 CNMS 暑訓
+  - [著手打造一個小型 ISP]()
+- 2021 SITCON Conference
+  - [想上網？大展 L3 路由魔法吧！](https://sitcon.org/2021/agenda/5860c3e8-a7a6-4c7b-afee-7797e777725e) w/ [Sciuridae Li](https://sciuridae.me/)
 
 ### 與我聯繫
 

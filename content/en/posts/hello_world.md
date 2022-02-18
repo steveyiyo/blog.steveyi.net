@@ -1,5 +1,10 @@
 ---
-title: "Hello World!"
+title: "Multi Language Site is now Enabled!"
+date: Sat, 19 Feb 2022
 ---
 
-My Multi-language Site is now Enable!
+Today, I have now enabled my multi languages site.
+
+I still translate some old posts into English, please wait :)
+
+You should see both languages version posts soon.
