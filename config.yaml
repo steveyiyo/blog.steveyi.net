@@ -17,7 +17,7 @@ languages:
     languageName: 正體中文
     menu:
       main:
-        - identifier: archive
+        - identifier: posts
           name: 文章列表
           title: 文章列表
           url: /posts/
@@ -40,9 +40,9 @@ languages:
 
 menu:
   main:
-    - identifier: archive
-      name: Archive
-      title: Archive
+    - identifier: posts
+      name: Posts
+      title: Posts
       url: /posts/
       weight: 0
     - identifier: about
