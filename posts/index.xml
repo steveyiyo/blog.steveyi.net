@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 小易的部落格</title><link>https://blog.steveyi.net/posts/</link><description>小易的部落格 (Posts)</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Mon, 19 Jul 2021 08:47:55 +0800</lastBuildDate><atom:link href="https://blog.steveyi.net/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>在 Linux 上實現虛擬 WAN 多撥 PPPoe</title><link>https://blog.steveyi.net/posts/multi-pppoe-in-linux/</link><pubDate>Mon, 19 Jul 2021 08:47:55 +0800</pubDate><guid>https://blog.steveyi.net/posts/multi-pppoe-in-linux/</guid><description>&lt;p>我將 Linux 做為路由器已經有好一陣子了。&lt;br>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 小易的部落格</title><link>http://127.0.0.1:8000/posts/</link><description>小易的部落格 (Posts)</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Mon, 19 Jul 2021 08:47:55 +0800</lastBuildDate><atom:link href="http://127.0.0.1:8000/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>在 Linux 上實現虛擬 WAN 多撥 PPPoe</title><link>http://127.0.0.1:8000/posts/multi-pppoe-in-linux/</link><pubDate>Mon, 19 Jul 2021 08:47:55 +0800</pubDate><guid>http://127.0.0.1:8000/posts/multi-pppoe-in-linux/</guid><description>&lt;p>我將 Linux 做為路由器已經有好一陣子了。&lt;br>
 前幾天，剛好想起來家中網路的 ISP（中華電信），可以透過撥號取得 7 個浮動的 Public IPv4 Address，於是就來實現他了！&lt;/p>
 &lt;h2 id="環境" >環境
 &lt;span>
@@ -67,14 +67,14 @@ ip link add link enp1s0 name wan6 type macvlan
 &lt;p>接著，使用指令 &lt;code>pon &amp;lt;檔案名稱&amp;gt;&lt;/code> 來啟用 PPPoe 連線。&lt;br>
 再下 &lt;code>ip addr&lt;/code> 就可以看到網卡列表。&lt;/p>
 &lt;p>&lt;img src="https://i.imgur.com/yg6Tx59.png" alt="">&lt;/p>
-&lt;p>這樣就大功告成囉！&lt;/p></description></item><item><title>在 Linux 中開啟 VRF 模組</title><link>https://blog.steveyi.net/posts/enable-vrf-linux-krenel/</link><pubDate>Tue, 06 Jul 2021 02:26:41 +0800</pubDate><guid>https://blog.steveyi.net/posts/enable-vrf-linux-krenel/</guid><description>&lt;p>這幾天在裝新的路由器，由於是使用服務商提供的 Image，所以發現 VRF 模組沒有成功加載。&lt;/p>
+&lt;p>這樣就大功告成囉！&lt;/p></description></item><item><title>在 Linux 中開啟 VRF 模組</title><link>http://127.0.0.1:8000/posts/enable-vrf-linux-krenel/</link><pubDate>Tue, 06 Jul 2021 02:26:41 +0800</pubDate><guid>http://127.0.0.1:8000/posts/enable-vrf-linux-krenel/</guid><description>&lt;p>這幾天在裝新的路由器，由於是使用服務商提供的 Image，所以發現 VRF 模組沒有成功加載。&lt;/p>
 &lt;pre tabindex="0">&lt;code class="language-command" data-lang="command">root@eu-router:/opt/tunnel# modprobe vrf
 modprobe: FATAL: Module vrf not found in directory /lib/modules/5.4.0-72-generic
 &lt;/code>&lt;/pre>&lt;p>我的 Linux Kernel 為 &lt;code>5.4.0-72-generic&lt;/code>，這邊安裝一下擴充包。&lt;/p>
 &lt;pre tabindex="0">&lt;code class="language-apt" data-lang="apt">apt install linux-modules-extra-`uname -r`
 &lt;/code>&lt;/pre>&lt;p>接著，在加載一下 VRF，沒有任何回應就代表成功囉！&lt;/p>
 &lt;pre tabindex="0">&lt;code>modprobe vrf
-&lt;/code>&lt;/pre>&lt;p>&lt;a href="https://www.kernel.org/doc/Documentation/networking/vrf.txt">Virtual Routing and Forwarding (VRF)&lt;/a>&lt;/p></description></item><item><title>利用 AS-SET 建立過濾器</title><link>https://blog.steveyi.net/posts/using-as-set-to-make-filter/</link><pubDate>Sun, 27 Jun 2021 05:35:35 +0800</pubDate><guid>https://blog.steveyi.net/posts/using-as-set-to-make-filter/</guid><description>&lt;p>最近，為了跟一些新入坑的朋友們建立 BGP Peer，所以也順便來教他們怎麼使用 AS-SET 過濾。&lt;/p>
+&lt;/code>&lt;/pre>&lt;p>&lt;a href="https://www.kernel.org/doc/Documentation/networking/vrf.txt">Virtual Routing and Forwarding (VRF)&lt;/a>&lt;/p></description></item><item><title>利用 AS-SET 建立過濾器</title><link>http://127.0.0.1:8000/posts/using-as-set-to-make-filter/</link><pubDate>Sun, 27 Jun 2021 05:35:35 +0800</pubDate><guid>http://127.0.0.1:8000/posts/using-as-set-to-make-filter/</guid><description>&lt;p>最近，為了跟一些新入坑的朋友們建立 BGP Peer，所以也順便來教他們怎麼使用 AS-SET 過濾。&lt;/p>
 &lt;h3 id="什麼是-as-set" >什麼是 AS-SET
 &lt;span>
 &lt;a href="#%e4%bb%80%e9%ba%bc%e6%98%af-as-set">
@@ -126,7 +126,7 @@ config
 route-map AS-STEVEYI_v4 permit 5
 match ip address prefix-list AS-STEVEYI_v4
 set community 60614:100
-&lt;/code>&lt;/pre>&lt;p>這樣就完成啦！&lt;/p></description></item><item><title>利用 FRRouting 設定策略路由</title><link>https://blog.steveyi.net/posts/frrouting-pbr/</link><pubDate>Tue, 18 May 2021 16:23:58 +0800</pubDate><guid>https://blog.steveyi.net/posts/frrouting-pbr/</guid><description>&lt;p>前幾天，我為了調整我實驗室內的網路架構，讓其可以全部走 VPN 出去，並且可以進入到我的大內網，所以在研究策略路由 (PBR)&lt;/p>
+&lt;/code>&lt;/pre>&lt;p>這樣就完成啦！&lt;/p></description></item><item><title>利用 FRRouting 設定策略路由</title><link>http://127.0.0.1:8000/posts/frrouting-pbr/</link><pubDate>Tue, 18 May 2021 16:23:58 +0800</pubDate><guid>http://127.0.0.1:8000/posts/frrouting-pbr/</guid><description>&lt;p>前幾天，我為了調整我實驗室內的網路架構，讓其可以全部走 VPN 出去，並且可以進入到我的大內網，所以在研究策略路由 (PBR)&lt;/p>
 &lt;p>我本來是使用 VRF（三層交換）來隔離我的網路（其實這樣應該算另類的策略路由了吧X），但這樣會導致我沒辦法把我的 Service 監聽在 VRF Interface 內。&lt;/p>
 &lt;p>導致&amp;hellip; 我就不能架設 DoH 在路由器上了&lt;/p>
 &lt;p>後來，我發現我可以利用其他方式做到 PBR，而不需要透過 VRF 來隔離&lt;/p>
@@ -215,7 +215,7 @@ match src-ip 10.121.210.0/24
 set nexthop-group JP
 !
 &lt;/code>&lt;/pre>&lt;p>最終，我們可以輸入指令 &lt;code>show pbr nexthop-groups&lt;/code>，來查看目前的規則！&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/1621331786.png" alt="">&lt;/p></description></item><item><title>解決 Ubuntu 上 53 Port 占用問題</title><link>https://blog.steveyi.net/posts/ubuntu-53-port-already-in-use/</link><pubDate>Wed, 12 May 2021 20:58:02 +0800</pubDate><guid>https://blog.steveyi.net/posts/ubuntu-53-port-already-in-use/</guid><description>&lt;p>最近為了在路由器上安裝 DoH Client 並架設 DNS Server 給內網機器使用，發現 Ubuntu 常常會使用 53 Port。&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/1621331786.png" alt="">&lt;/p></description></item><item><title>解決 Ubuntu 上 53 Port 占用問題</title><link>http://127.0.0.1:8000/posts/ubuntu-53-port-already-in-use/</link><pubDate>Wed, 12 May 2021 20:58:02 +0800</pubDate><guid>http://127.0.0.1:8000/posts/ubuntu-53-port-already-in-use/</guid><description>&lt;p>最近為了在路由器上安裝 DoH Client 並架設 DNS Server 給內網機器使用，發現 Ubuntu 常常會使用 53 Port。&lt;/p>
 &lt;p>經過檢查一輪後，發現是 systemd-resolve 所導致的，於是找到這些方法去關閉他！&lt;/p>
 &lt;p>在此之前，如果大家發現 53 Port 被使用，可以先下以下指令來查看是哪個進程去用的。&lt;/p>
 &lt;pre tabindex="0">&lt;code>sudo netstat -pna | grep 53
@@ -238,7 +238,7 @@ DNSStubListener=no
 &lt;pre tabindex="0">&lt;code>sudo ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
 &lt;/code>&lt;/pre>&lt;p>最後，我們先將 systemd-resolved 服務重啟&lt;/p>
 &lt;pre tabindex="0">&lt;code>sudo systemctl restart systemd-resolved
-&lt;/code>&lt;/pre>&lt;p>接著，我們就可以使用 53 Port 囉！&lt;/p></description></item><item><title>在 VSCode 中將 .tmpl 檔案設為 HTML 語法</title><link>https://blog.steveyi.net/posts/set_tmpl_file_as_html_in_vscode/</link><pubDate>Sun, 25 Apr 2021 09:57:13 +0800</pubDate><guid>https://blog.steveyi.net/posts/set_tmpl_file_as_html_in_vscode/</guid><description>&lt;p>前陣子開始學習 Golang 時，使用了 .tmpl 作為網頁模板&lt;/p>
+&lt;/code>&lt;/pre>&lt;p>接著，我們就可以使用 53 Port 囉！&lt;/p></description></item><item><title>在 VSCode 中將 .tmpl 檔案設為 HTML 語法</title><link>http://127.0.0.1:8000/posts/set_tmpl_file_as_html_in_vscode/</link><pubDate>Sun, 25 Apr 2021 09:57:13 +0800</pubDate><guid>http://127.0.0.1:8000/posts/set_tmpl_file_as_html_in_vscode/</guid><description>&lt;p>前陣子開始學習 Golang 時，使用了 .tmpl 作為網頁模板&lt;/p>
 &lt;p>但發現，這樣不會像 HTML 檔案一樣，無法自動處理格式。&lt;br>
 P.S. 裝了相關外掛也只會處理 .html 文件&lt;/p>
 &lt;p>在查詢了一下相關文件後，發現可以修改使用者的設置來處理&lt;br>
@@ -253,7 +253,7 @@ P.S. 裝了相關外掛也只會處理 .html 文件&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/1619316652.png" alt="">&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/1619316653.png" alt="">&lt;/p>
 &lt;p>最終結果就會像這樣啦！&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/1619316650.png" alt="">&lt;/p></description></item><item><title>在 Linux 系統上自架 Minecraft 伺服器</title><link>https://blog.steveyi.net/posts/hosting-a-minecraft-server-on-linux/</link><pubDate>Mon, 12 Apr 2021 17:56:08 +0800</pubDate><guid>https://blog.steveyi.net/posts/hosting-a-minecraft-server-on-linux/</guid><description>&lt;p>最近剛好有朋友也想在 Linux 上架設 Minecraft Server，那這邊就稍微寫一下架設過程好了！&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/1619316650.png" alt="">&lt;/p></description></item><item><title>在 Linux 系統上自架 Minecraft 伺服器</title><link>http://127.0.0.1:8000/posts/hosting-a-minecraft-server-on-linux/</link><pubDate>Mon, 12 Apr 2021 17:56:08 +0800</pubDate><guid>http://127.0.0.1:8000/posts/hosting-a-minecraft-server-on-linux/</guid><description>&lt;p>最近剛好有朋友也想在 Linux 上架設 Minecraft Server，那這邊就稍微寫一下架設過程好了！&lt;/p>
 &lt;h2 id="環境" >環境
 &lt;span>
 &lt;a href="#%e7%92%b0%e5%a2%83">
@@ -296,7 +296,7 @@ mv spigot-1.16.5.jar server.jar
 &lt;/code>&lt;/pre>&lt;p>完成之後，我們寫一個啟動腳本&lt;/p>
 &lt;pre tabindex="0">&lt;code>java -Xmx2048M -Xms1024M -jar server.jar nogui
 &lt;/code>&lt;/pre>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/hosting-a-minecraft-server-on-linux-02.png" alt="">&lt;/p>
-&lt;p>就開啟你的 Minecraft 伺服器囉！&lt;/p></description></item><item><title>在 Linux 上安裝 DHCP 伺服器</title><link>https://blog.steveyi.net/posts/install-dhcp-server-on-linux/</link><pubDate>Sun, 11 Apr 2021 09:37:30 +0800</pubDate><guid>https://blog.steveyi.net/posts/install-dhcp-server-on-linux/</guid><description>&lt;p>我時常用 Linux 系統當作路由器，理由很簡單，因為虛擬機需要。&lt;br>
+&lt;p>就開啟你的 Minecraft 伺服器囉！&lt;/p></description></item><item><title>在 Linux 上安裝 DHCP 伺服器</title><link>http://127.0.0.1:8000/posts/install-dhcp-server-on-linux/</link><pubDate>Sun, 11 Apr 2021 09:37:30 +0800</pubDate><guid>http://127.0.0.1:8000/posts/install-dhcp-server-on-linux/</guid><description>&lt;p>我時常用 Linux 系統當作路由器，理由很簡單，因為虛擬機需要。&lt;br>
 但想了想，既然都這樣做了，何不寫下部落格呢？&lt;/p>
 &lt;p>那麼&amp;hellip; 開始安裝吧！&lt;/p>
 &lt;h2 id="安裝-isc-dhcp-server" >安裝 isc-dhcp-server
@@ -331,7 +331,7 @@ option routers 10.121.210.254;
 &lt;code>/etc/default/isc-dhcp-server&lt;/code>&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/install-dhcp-server-in-linux-02.png" alt="">&lt;/p>
 &lt;p>最後，輸入 &lt;code>service isc-dhcp-server restart&lt;/code>&lt;br>
-這樣就完成囉～&lt;/p></description></item><item><title>將任何 Tweet 置頂到自己的 Twitter 上</title><link>https://blog.steveyi.net/posts/pin-any-tweet-on-twitter/</link><pubDate>Wed, 07 Apr 2021 19:00:27 +0800</pubDate><guid>https://blog.steveyi.net/posts/pin-any-tweet-on-twitter/</guid><description>&lt;p>在今天，我滑 Twitter 時，發現了一篇有趣的推文&amp;hellip;&lt;br>
+這樣就完成囉～&lt;/p></description></item><item><title>將任何 Tweet 置頂到自己的 Twitter 上</title><link>http://127.0.0.1:8000/posts/pin-any-tweet-on-twitter/</link><pubDate>Wed, 07 Apr 2021 19:00:27 +0800</pubDate><guid>http://127.0.0.1:8000/posts/pin-any-tweet-on-twitter/</guid><description>&lt;p>在今天，我滑 Twitter 時，發現了一篇有趣的推文&amp;hellip;&lt;br>
 於是我馬上就跟 &lt;a href="https://edisonlee55.com">@edisonlee55&lt;/a> 分享這個趣事&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/pin-any-tweet-on-twitter-00.png" alt="">&lt;/p>
 &lt;p>很明顯的發現，這個人將別人的推文轉推過來，並置頂在自己的個人頁面&lt;/p>
@@ -361,7 +361,7 @@ URL 則為&lt;code>https://twitter.com/i/api/1.1/account/pin_tweet.json?tweet_mo
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/pin-any-tweet-on-twitter-02.png" alt="">&lt;/p>
 &lt;p>接著，我們打開網站，刷新頁面。&lt;br>
 果然看到成功 pin 起來了&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/pin-any-tweet-on-twitter-01.png" alt="">&lt;/p></description></item><item><title>在 iptables 上設定 NAT</title><link>https://blog.steveyi.net/posts/iptables_nat/</link><pubDate>Mon, 08 Mar 2021 13:20:00 +0800</pubDate><guid>https://blog.steveyi.net/posts/iptables_nat/</guid><description>&lt;p>不久之前，小易將家裡的一台電腦裝上了 Ubuntu 20.04，並把它當成了軟路由在使用。&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/pin-any-tweet-on-twitter-01.png" alt="">&lt;/p></description></item><item><title>在 iptables 上設定 NAT</title><link>http://127.0.0.1:8000/posts/iptables_nat/</link><pubDate>Mon, 08 Mar 2021 13:20:00 +0800</pubDate><guid>http://127.0.0.1:8000/posts/iptables_nat/</guid><description>&lt;p>不久之前，小易將家裡的一台電腦裝上了 Ubuntu 20.04，並把它當成了軟路由在使用。&lt;/p>
 &lt;p>但小易發現了一件事情，就是電腦沒辦法上網RRR！&lt;/p>
 &lt;p>我們透過 mtr 追蹤路由後發現&amp;hellip;&lt;br>
 路由送到 Gateway 就出不去了，於是我們在路由器上抓包發現&lt;br>
@@ -372,7 +372,7 @@ URL 則為&lt;code>https://twitter.com/i/api/1.1/account/pin_tweet.json?tweet_mo
 &lt;pre tabindex="0">&lt;code>iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE
 &lt;/code>&lt;/pre>&lt;p>另外，如果只想允許某段網段轉換為 NAT，則可以寫成&lt;/p>
 &lt;pre tabindex="0">&lt;code>iptables -t nat -A POSTROUTING -s 10.121.210.0/24 -o eth1 -j MASQUERADE
-&lt;/code>&lt;/pre></description></item><item><title>使用 checkm8 Activation Lock 免費版，繞過 iOS 啟用鎖定</title><link>https://blog.steveyi.net/posts/checkm8-bypass/</link><pubDate>Thu, 04 Mar 2021 00:35:46 +0800</pubDate><guid>https://blog.steveyi.net/posts/checkm8-bypass/</guid><description>&lt;p>作者：蘿蔔&lt;/p>
+&lt;/code>&lt;/pre></description></item><item><title>使用 checkm8 Activation Lock 免費版，繞過 iOS 啟用鎖定</title><link>http://127.0.0.1:8000/posts/checkm8-bypass/</link><pubDate>Thu, 04 Mar 2021 00:35:46 +0800</pubDate><guid>http://127.0.0.1:8000/posts/checkm8-bypass/</guid><description>&lt;p>作者：蘿蔔&lt;/p>
 &lt;p>本文章同步發佈於「&lt;a href="https://iambjlu.blogspot.com">蘿蔔ㄉ部落格&lt;/a>」&lt;/p>
 &lt;p>[注意] 請勿用於商業或是非法用途。&lt;/p>
 &lt;p>這個軟體不是筆者所撰寫，如果使用上產生爭議，筆者恕不負責。&lt;br>
@@ -452,7 +452,7 @@ fjs.parentNode.insertBefore(js, fjs);
 &amp;lt;!--Your Chat Plugin code--&amp;gt;
 &amp;lt;div attribution=&amp;quot;install_email&amp;quot; class=&amp;quot;fb-customerchat&amp;quot; page_id=&amp;quot;105835291511389&amp;quot;&amp;gt;
 &amp;lt;/div&amp;gt;
-&lt;/code>&lt;/pre></description></item><item><title>將部落格從 WordPress 轉移到 Hugo</title><link>https://blog.steveyi.net/posts/from-wordpress-to-hugo/</link><pubDate>Wed, 10 Feb 2021 14:27:17 +0800</pubDate><guid>https://blog.steveyi.net/posts/from-wordpress-to-hugo/</guid><description>&lt;p>從 2018 年註冊了第一個網域 - &lt;a href="https://whois.steveyi.net/whois/steveyigame.com">steveyigame.com&lt;/a> 後&lt;br>
+&lt;/code>&lt;/pre></description></item><item><title>將部落格從 WordPress 轉移到 Hugo</title><link>http://127.0.0.1:8000/posts/from-wordpress-to-hugo/</link><pubDate>Wed, 10 Feb 2021 14:27:17 +0800</pubDate><guid>http://127.0.0.1:8000/posts/from-wordpress-to-hugo/</guid><description>&lt;p>從 2018 年註冊了第一個網域 - &lt;a href="https://whois.steveyi.net/whois/steveyigame.com">steveyigame.com&lt;/a> 後&lt;br>
 我嘗試架設了第一個 WordPress 部落格&lt;/p>
 &lt;p>當時也正好學習使用 Linux 系統，順帶了解到 &lt;strong>雲端硬碟(像是 Google Drive)&lt;/strong> 及 &lt;strong>檔案伺服器&lt;/strong> 的差異&lt;/p>
 &lt;h3 id="為什麼要換成-hugo-wordpress-不好嗎" >為什麼要換成 Hugo? WordPress 不好嗎?
@@ -561,7 +561,7 @@ cname: blog.steveyi.net # 若不使用自定義網域，則不需要
 就不會有錯誤了！&lt;/p>
 &lt;p>&lt;img src="https://i.imgur.com/fJiQvwT.png" alt="">&lt;/p>
 &lt;p>同時，我們也可以訪問看看網站能不能瀏覽！&lt;br>
-PS. 有自定義網域的話，記得解析一個 CNAME 到 yourusername.github.io 哦！&lt;/p></description></item><item><title>透過 ASN 指定網路出口</title><link>https://blog.steveyi.net/posts/bgp-asn-specify-gateway/</link><pubDate>Sat, 06 Feb 2021 02:13:10 +0800</pubDate><guid>https://blog.steveyi.net/posts/bgp-asn-specify-gateway/</guid><description>&lt;p>在去年一月時，我申請到了自己的第一個 ASN - &lt;a href="https://whois.steveyi.net/whois/AS209557">AS209557&lt;/a>，也做了很多酷實驗！&lt;/p>
+PS. 有自定義網域的話，記得解析一個 CNAME 到 yourusername.github.io 哦！&lt;/p></description></item><item><title>透過 ASN 指定網路出口</title><link>http://127.0.0.1:8000/posts/bgp-asn-specify-gateway/</link><pubDate>Sat, 06 Feb 2021 02:13:10 +0800</pubDate><guid>http://127.0.0.1:8000/posts/bgp-asn-specify-gateway/</guid><description>&lt;p>在去年一月時，我申請到了自己的第一個 ASN - &lt;a href="https://whois.steveyi.net/whois/AS209557">AS209557&lt;/a>，也做了很多酷實驗！&lt;/p>
 &lt;p>今天，我改造了我家的路由，並可以指定 ASN 走哪條路出去&lt;/p>
 &lt;h3 id="首先先說一下我家的路由器資訊" >首先，先說一下我家的路由器資訊
 &lt;span>
@@ -706,7 +706,7 @@ export filter policy_routing;
 &lt;/span>
 &lt;/h3>&lt;p>感謝 &lt;a href="https://swineson.me/">James Swineson&lt;/a> 的 &lt;a href="https://blog.swineson.me/zh/bgp-at-home-1-5-my-filter-rules/">在家也要玩BGP（1.5）：我的双线分流规则&lt;/a>&lt;br>
 感謝 &lt;a href="https://who.nat.moe/">奈特&lt;/a> 提供 bird2 上的使用協助及技巧&lt;br>
-感謝 &lt;a href="https://licson.net/">Licson&lt;/a>, &lt;a href="https://internet.nat.moe/">Nato Laboratory&lt;/a>, &lt;a href="https://swineson.me/">James Swineson&lt;/a> 提供的 BGP Full Table&lt;/p></description></item><item><title>成為 MANRS 參與者！</title><link>https://blog.steveyi.net/posts/join-manrs-as-participants/</link><pubDate>Mon, 25 Jan 2021 00:03:31 +0800</pubDate><guid>https://blog.steveyi.net/posts/join-manrs-as-participants/</guid><description>&lt;p>在去年年底時，我送出了 &lt;a href="https://network.steveyi.net/">SteveYi Network Service&lt;/a> 的 &lt;a href="https://www.manrs.org/">MANRS&lt;/a> 申請&lt;br>
+感謝 &lt;a href="https://licson.net/">Licson&lt;/a>, &lt;a href="https://internet.nat.moe/">Nato Laboratory&lt;/a>, &lt;a href="https://swineson.me/">James Swineson&lt;/a> 提供的 BGP Full Table&lt;/p></description></item><item><title>成為 MANRS 參與者！</title><link>http://127.0.0.1:8000/posts/join-manrs-as-participants/</link><pubDate>Mon, 25 Jan 2021 00:03:31 +0800</pubDate><guid>http://127.0.0.1:8000/posts/join-manrs-as-participants/</guid><description>&lt;p>在去年年底時，我送出了 &lt;a href="https://network.steveyi.net/">SteveYi Network Service&lt;/a> 的 &lt;a href="https://www.manrs.org/">MANRS&lt;/a> 申請&lt;br>
 今年年初時，我們通過了審核。正式成為 MANRS 的參與者！&lt;br>
 我們的會員介紹在這裏 &lt;a href="https://www.manrs.org/isps/participants/entry/1484/">https://www.manrs.org/isps/participants/entry/1484/&lt;/a>&lt;br>
 那麼，我們就順便來說說 我們如何實施 MANRS 政策&lt;/p>
@@ -725,7 +725,7 @@ export filter policy_routing;
 &lt;/blockquote>
 &lt;p>&lt;img src="https://i.imgur.com/3YMIHgZ.png" alt="">&lt;/p>
 &lt;p>我們也會過濾與我們建立私人對等的對等方路由，我們會將所有對等方的 AS-SET 或 ASN 加進我們的 &lt;a href="https://www.radb.net/query?keywords=AS-STEVEYI-A">AS-STEVEYI-A&lt;/a> 中，並自動產生對應的 IRR 紀錄，過濾無效的路由&lt;/p>
-&lt;p>我們也歡迎對我們的過濾系統有興趣的網路愛好者/工程師，可以發信至 info_at_steveyi_dot_net 與我們聯繫！&lt;/p></description></item><item><title>透過 BGP 與朋友組成內網</title><link>https://blog.steveyi.net/posts/make-internal-network-by-bgp/</link><pubDate>Sun, 24 Jan 2021 02:00:00 +0000</pubDate><guid>https://blog.steveyi.net/posts/make-internal-network-by-bgp/</guid><description>&lt;p>嗨！好久不見！&lt;/p>
+&lt;p>我們也歡迎對我們的過濾系統有興趣的網路愛好者/工程師，可以發信至 info_at_steveyi_dot_net 與我們聯繫！&lt;/p></description></item><item><title>透過 BGP 與朋友組成內網</title><link>http://127.0.0.1:8000/posts/make-internal-network-by-bgp/</link><pubDate>Sun, 24 Jan 2021 02:00:00 +0000</pubDate><guid>http://127.0.0.1:8000/posts/make-internal-network-by-bgp/</guid><description>&lt;p>嗨！好久不見！&lt;/p>
 &lt;p>在 2020 初時，我拿到了第一個 ASN號碼 - &lt;a href="https://bgp.he.net/AS209557/">AS209557&lt;/a>&lt;/p>
 &lt;p>我也使用了 &lt;a href="https://tools.ietf.org/html/rfc1918">RFC 1918&lt;/a> 所定義的 IP Address ，與我一些朋友透過 BGP 及 Internet 隧道 組成了一個大內網&lt;/p>
 &lt;p>那麼，讓我們開始吧！&lt;/p>
@@ -774,7 +774,7 @@ network 192.168.99.0/24
 &lt;p>後記：&lt;/p>
 &lt;p>理論上大概這樣就可以通了！但要特別注意的是，在 ping 對方的時候，記得加上 Source IP Address!! 因為對方可能不會收隧道 IP Address&lt;/p>
 &lt;p>但 FRRouting 在 7.5 版時，加入了 &lt;a href="https://tools.ietf.org/html/rfc8212">RFC 8212&lt;/a>&lt;/p>
-&lt;p>若沒有明確的路由策略，則不會將路由寫入系統路由表中，也不會發路由給對方&lt;/p></description></item><item><title>Google 廣告 – 原來你在 Google 眼中的形象是這樣的…</title><link>https://blog.steveyi.net/posts/google-adssettings/</link><pubDate>Tue, 19 Jan 2021 13:00:00 +0000</pubDate><guid>https://blog.steveyi.net/posts/google-adssettings/</guid><description>&lt;p>原本這篇去年12月就要發布的，但剛好遇到伺服器維護就一直沒發XD&lt;/p>
+&lt;p>若沒有明確的路由策略，則不會將路由寫入系統路由表中，也不會發路由給對方&lt;/p></description></item><item><title>Google 廣告 – 原來你在 Google 眼中的形象是這樣的…</title><link>http://127.0.0.1:8000/posts/google-adssettings/</link><pubDate>Tue, 19 Jan 2021 13:00:00 +0000</pubDate><guid>http://127.0.0.1:8000/posts/google-adssettings/</guid><description>&lt;p>原本這篇去年12月就要發布的，但剛好遇到伺服器維護就一直沒發XD&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2021011914191084.png" alt="">&lt;/p>
 &lt;p>有一天筆者在修改Google帳戶資料時，意外發現了「廣告設定」這個地方點開有還滿多資訊的。&lt;/p>
 &lt;p>資料的來源包括登入狀態下的Google和Youtube各種紀錄，以及Google帳號申請時填寫的基本資料&lt;/p>
@@ -790,7 +790,7 @@ network 192.168.99.0/24
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2021011914235943.png" alt="">&lt;/p>
 &lt;p>之前按掉的廣告的冰山一角🤣
 連結放在下方，歡迎大家有空去玩看看吧&lt;/p>
-&lt;p>&lt;a href="https://adssettings.google.com">https://adssettings.google.com&lt;/a>&lt;/p></description></item><item><title>在 Linux 環境下無腦串接 Google 雲端硬碟</title><link>https://blog.steveyi.net/posts/linux-mount-googledrive-not-required-brain/</link><pubDate>Tue, 19 Jan 2021 12:25:49 +0000</pubDate><guid>https://blog.steveyi.net/posts/linux-mount-googledrive-not-required-brain/</guid><description>&lt;p>此篇教學使用的是 google-drive-ocamlfuse 這個軟體，筆者使用的環境是基於Ubuntu的Zorin OS 15.2系統作為示範。&lt;/p>
+&lt;p>&lt;a href="https://adssettings.google.com">https://adssettings.google.com&lt;/a>&lt;/p></description></item><item><title>在 Linux 環境下無腦串接 Google 雲端硬碟</title><link>http://127.0.0.1:8000/posts/linux-mount-googledrive-not-required-brain/</link><pubDate>Tue, 19 Jan 2021 12:25:49 +0000</pubDate><guid>http://127.0.0.1:8000/posts/linux-mount-googledrive-not-required-brain/</guid><description>&lt;p>此篇教學使用的是 google-drive-ocamlfuse 這個軟體，筆者使用的環境是基於Ubuntu的Zorin OS 15.2系統作為示範。&lt;/p>
 &lt;p>首先需要先加入軟體源，請在終端機輸入（可以直接把這一串直接拷貝貼上）&lt;/p>
 &lt;p>sudo add-apt-repository ppa:alessandro-strada/ppa
 sudo apt-get update
@@ -812,7 +812,7 @@ sudo apt-get install google-drive-ocamlfuse
 &lt;p>如果想要退出掛載的話，可以在終端機使用以下指令&lt;/p>
 &lt;p>fusermount -u ~/GoogleDrive
 更多指令如果想要查詢看看，可以終端機輸入這個指令來做查詢&lt;/p>
-&lt;p>google-drive-ocamlfuse &amp;ndash;help&lt;/p></description></item><item><title>利用 redeb 來備份已安裝插件的 deb 檔</title><link>https://blog.steveyi.net/posts/use-redeb-to-backup-jb-tweaks/</link><pubDate>Sat, 28 Nov 2020 04:39:14 +0000</pubDate><guid>https://blog.steveyi.net/posts/use-redeb-to-backup-jb-tweaks/</guid><description>&lt;p>就在很久之前，筆者就有遇過插件在其他軟體源消失導致無法安裝想要的插件。但是因為在其他裝置有安裝該插件而能把該插件deb檔備份出來並安裝在我想要安裝該插件的裝置裡，在此分享給有想要備份插件的人！&lt;/p>
+&lt;p>google-drive-ocamlfuse &amp;ndash;help&lt;/p></description></item><item><title>利用 redeb 來備份已安裝插件的 deb 檔</title><link>http://127.0.0.1:8000/posts/use-redeb-to-backup-jb-tweaks/</link><pubDate>Sat, 28 Nov 2020 04:39:14 +0000</pubDate><guid>http://127.0.0.1:8000/posts/use-redeb-to-backup-jb-tweaks/</guid><description>&lt;p>就在很久之前，筆者就有遇過插件在其他軟體源消失導致無法安裝想要的插件。但是因為在其他裝置有安裝該插件而能把該插件deb檔備份出來並安裝在我想要安裝該插件的裝置裡，在此分享給有想要備份插件的人！&lt;/p>
 &lt;ul>
 &lt;li>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112105432588.png" alt="">&lt;/li>
 &lt;/ul>
@@ -868,7 +868,7 @@ FileZilla - SFTP存取裝置 (Windows部分也可用WinSCP)&lt;br>
 &lt;p>連線完成後，備份完成的deb檔位址在：&lt;/p>
 &lt;pre tabindex="0">&lt;code>/private/var/mobile/Documents/Redeb/debs
 &lt;/code>&lt;/pre>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112803211495.png" alt="">&lt;/p>
-&lt;p>在資料夾裡面的檔案就是剛剛備份的deb檔，這樣就完工了！&lt;/p></description></item><item><title>[有趣測試] 測驗看看你是不是木耳！</title><link>https://blog.steveyi.net/posts/are-you-mu-er/</link><pubDate>Wed, 25 Nov 2020 02:31:14 +0000</pubDate><guid>https://blog.steveyi.net/posts/are-you-mu-er/</guid><description>&lt;p>這個網站會以隨機順序提供六組音樂，每組包含 128Kbps MP3/320Kbps MP3/ 未壓縮的 WAV 音檔，測驗看看你能不能聽出哪個是音質最好的音檔，選擇後會產生正確答案。&lt;br>
+&lt;p>在資料夾裡面的檔案就是剛剛備份的deb檔，這樣就完工了！&lt;/p></description></item><item><title>[有趣測試] 測驗看看你是不是木耳！</title><link>http://127.0.0.1:8000/posts/are-you-mu-er/</link><pubDate>Wed, 25 Nov 2020 02:31:14 +0000</pubDate><guid>http://127.0.0.1:8000/posts/are-you-mu-er/</guid><description>&lt;p>這個網站會以隨機順序提供六組音樂，每組包含 128Kbps MP3/320Kbps MP3/ 未壓縮的 WAV 音檔，測驗看看你能不能聽出哪個是音質最好的音檔，選擇後會產生正確答案。&lt;br>
 連結在下方。&lt;/p>
 &lt;p>貼心提醒：&lt;/p>
 &lt;ul>
@@ -879,7 +879,7 @@ FileZilla - SFTP存取裝置 (Windows部分也可用WinSCP)&lt;br>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112501583221.png" alt="">&lt;/p>
 &lt;p>&lt;a href="https://www.npr.org/sections/therecord/2015/06/02/411473508/how-well-can-you-hear-audio-quality">點我前往測試&lt;/a>&lt;/p>
 &lt;p>測驗結果分析結果是，如果你能答對四個或以上，那麼你就不是木耳囉&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112501563810.jpg" alt="">&lt;/p></description></item><item><title>AutoDraw 自動繪圖吧！</title><link>https://blog.steveyi.net/posts/autodraw/</link><pubDate>Wed, 25 Nov 2020 02:25:44 +0000</pubDate><guid>https://blog.steveyi.net/posts/autodraw/</guid><description>&lt;blockquote>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112501563810.jpg" alt="">&lt;/p></description></item><item><title>AutoDraw 自動繪圖吧！</title><link>http://127.0.0.1:8000/posts/autodraw/</link><pubDate>Wed, 25 Nov 2020 02:25:44 +0000</pubDate><guid>http://127.0.0.1:8000/posts/autodraw/</guid><description>&lt;blockquote>
 &lt;p>(本文由小易及蘿蔔共同編輯)&lt;/p>
 &lt;/blockquote>
 &lt;p>前幾天，小易在上課的時候，老師介紹到了一個有趣的網站&lt;/p>
@@ -899,7 +899,7 @@ Google 從 1998 年就註冊這個網域了(或是其他人註冊轉賣給 Googl
 下次有空來玩玩看吧～&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/RPReplay-Final1606267033.gif" alt="">&lt;/p>
 &lt;p>或是使用 iPad 直接到 AutoDraw 去畫也是可以的&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112501382837.gif" alt="">&lt;/p></description></item><item><title>從 RIPE 申請屬於自己的 ASN</title><link>https://blog.steveyi.net/posts/get-asn-from-ripe/</link><pubDate>Sat, 21 Nov 2020 08:39:28 +0000</pubDate><guid>https://blog.steveyi.net/posts/get-asn-from-ripe/</guid><description>&lt;p>今天來講一下透過 LIR 在 RIPE 取得自己的 ASN&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112501382837.gif" alt="">&lt;/p></description></item><item><title>從 RIPE 申請屬於自己的 ASN</title><link>http://127.0.0.1:8000/posts/get-asn-from-ripe/</link><pubDate>Sat, 21 Nov 2020 08:39:28 +0000</pubDate><guid>http://127.0.0.1:8000/posts/get-asn-from-ripe/</guid><description>&lt;p>今天來講一下透過 LIR 在 RIPE 取得自己的 ASN&lt;/p>
 &lt;p>首先，可能有些人會很好奇&lt;/p>
 &lt;p>&lt;strong>為什麼要選擇 RIPE 呢？選擇 APNIC, ARIN 不好嗎？&lt;/strong>&lt;/p>
 &lt;p>筆者有兩個 ASN，分別是 RIPE 及 APNIC 下的&lt;br>
@@ -943,7 +943,7 @@ MAINTAINER, PERSON / ROLE, and ORGANIZATION object&lt;br>
 &lt;p>那一切都準備好後，LIR 會準備一分用戶協議，簽名完，LIR 就會把你的請求轉交給 RIPE 啦！&lt;br>
 當提交請求給 RIPE 時，大約 1-3 天就會發放 ASN 了&lt;/p>
 &lt;p>當拿到 ASN 之後，我們就可以來廣播自己的網路啦！&lt;br>
-那我們下一篇會再詳細地與大家分享廣播網路的細節&lt;/p></description></item><item><title>在 RIPE DataBase 建立 Object</title><link>https://blog.steveyi.net/posts/create-object-in-ripe-database/</link><pubDate>Sat, 21 Nov 2020 08:37:20 +0000</pubDate><guid>https://blog.steveyi.net/posts/create-object-in-ripe-database/</guid><description>&lt;p>在本篇文章中，將與大家分享如何在 RIPE DataBase 註冊 MAINTAINER, PERSON / ROLE, and ORGANIZATION object&lt;/p>
+那我們下一篇會再詳細地與大家分享廣播網路的細節&lt;/p></description></item><item><title>在 RIPE DataBase 建立 Object</title><link>http://127.0.0.1:8000/posts/create-object-in-ripe-database/</link><pubDate>Sat, 21 Nov 2020 08:37:20 +0000</pubDate><guid>http://127.0.0.1:8000/posts/create-object-in-ripe-database/</guid><description>&lt;p>在本篇文章中，將與大家分享如何在 RIPE DataBase 註冊 MAINTAINER, PERSON / ROLE, and ORGANIZATION object&lt;/p>
 &lt;p>這些對象也是註冊 ASN 必要的，如果要申請 ASN，可以參考 &lt;a href="https://blog.steveyi.net/get-asn-from-ripe/">這篇教學&lt;/a>&lt;/p>
 &lt;p>那首先，我們要先註冊 RIPE 的帳號 &lt;a href="https://access.ripe.net/registration">註冊網站在這&lt;/a>&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112108155764.png" alt="">&lt;/p>
@@ -976,7 +976,7 @@ email 寫自己的電子郵箱地址&lt;/p>
 就完成啦&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112108331094.png" alt="">&lt;/p>
 &lt;p>最後，我們只需要將 ORG 的編號給 LIR，就可以啦！&lt;/p>
-&lt;p>如果還是不懂的話，可以參考RIPE的影片！https://www.ripe.net/support/training/videos/ripe-database&lt;/p></description></item><item><title>利用 WireGuard 建立大內網</title><link>https://blog.steveyi.net/posts/using-wireguard-to-make-intranet/</link><pubDate>Fri, 20 Nov 2020 18:31:04 +0000</pubDate><guid>https://blog.steveyi.net/posts/using-wireguard-to-make-intranet/</guid><description>&lt;p>Hi 大家好，今天來分享一下如何使用WireGuard建立大內網&lt;/p>
+&lt;p>如果還是不懂的話，可以參考RIPE的影片！https://www.ripe.net/support/training/videos/ripe-database&lt;/p></description></item><item><title>利用 WireGuard 建立大內網</title><link>http://127.0.0.1:8000/posts/using-wireguard-to-make-intranet/</link><pubDate>Fri, 20 Nov 2020 18:31:04 +0000</pubDate><guid>http://127.0.0.1:8000/posts/using-wireguard-to-make-intranet/</guid><description>&lt;p>Hi 大家好，今天來分享一下如何使用WireGuard建立大內網&lt;/p>
 &lt;p>之前有與大家分享過 &lt;a href="https://blog.steveyi.net/how-to-install-wireguard/">在 Linux 系統上安裝 Wireguard&lt;/a>，那這次我們要利用 WireGuard 來建立大內網&lt;/p>
 &lt;p>為什麼筆者稱這次要建立&amp;quot;大內網&amp;quot;呢？&lt;br>
 因為筆者也許多不同地方的網路，想藉由這次機會，來把他們都加進同一個局域網&lt;/p>
@@ -1025,7 +1025,7 @@ AllowedIPs = 10.121.208.0/24,10.121.210.0/24,10.121.211.0/24
 PersistentKeepalive = 10
 &lt;/code>&lt;/pre>&lt;p>相Ｎ信C路由器大家應該就會配了&lt;/p>
 &lt;p>最後，大家只需要在每台路由器上執行指令 &lt;code>wg-quick up &amp;lt;wireguard_網卡名稱&amp;gt;&lt;/code> 就可以互通啦！&lt;/p>
-&lt;p>特別注意：這種網路架構，如果VPN Gateway掉線了，那A,B,C也就不能彼此互通了&lt;/p></description></item><item><title>Windows 10 打開電腦(喚醒)後自動校正時間</title><link>https://blog.steveyi.net/posts/ntp-clock-autoset/</link><pubDate>Fri, 20 Nov 2020 15:52:24 +0000</pubDate><guid>https://blog.steveyi.net/posts/ntp-clock-autoset/</guid><description>&lt;p>時鐘對電腦來說是一個非常重要的東西，並不是只在狀態欄(或工作列)顯示時間那麼單純而已，時鐘不正確(與真實世界實際時間偏差太多)的話，可能會造成電腦發生一些奇怪的現象，例如:不能看網頁(憑證問題)，如果時間差太多甚至會造成軟體當掉。各種程式登入逾時也是很容易在時間偏差太大時發生的事情&lt;/p>
+&lt;p>特別注意：這種網路架構，如果VPN Gateway掉線了，那A,B,C也就不能彼此互通了&lt;/p></description></item><item><title>Windows 10 打開電腦(喚醒)後自動校正時間</title><link>http://127.0.0.1:8000/posts/ntp-clock-autoset/</link><pubDate>Fri, 20 Nov 2020 15:52:24 +0000</pubDate><guid>http://127.0.0.1:8000/posts/ntp-clock-autoset/</guid><description>&lt;p>時鐘對電腦來說是一個非常重要的東西，並不是只在狀態欄(或工作列)顯示時間那麼單純而已，時鐘不正確(與真實世界實際時間偏差太多)的話，可能會造成電腦發生一些奇怪的現象，例如:不能看網頁(憑證問題)，如果時間差太多甚至會造成軟體當掉。各種程式登入逾時也是很容易在時間偏差太大時發生的事情&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112014495468.png" alt="">&lt;/p>
 &lt;p>時間錯誤造成的憑證問題導致無法正常瀏覽網頁&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112015550593.png" alt="">&lt;/p>
@@ -1083,7 +1083,7 @@ PersistentKeepalive = 10
 &lt;p>到設定的地方，調整紅色框起來的地方的設定如圖&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112015293652.png" alt="">&lt;/p>
 &lt;p>接下來每次打開電腦就會自動對時囉~&lt;br>
-如果電腦關掉後時間會跑掉的話，以後每次打開電腦都不用手動改時間了!&lt;/p></description></item><item><title>透過 iperf3 來測試內網速度</title><link>https://blog.steveyi.net/posts/iperf3/</link><pubDate>Sun, 08 Nov 2020 13:26:11 +0000</pubDate><guid>https://blog.steveyi.net/posts/iperf3/</guid><description>&lt;p>不久前，筆者換了新的交換機。為了測試內網的傳輸速度，筆者發現了這款工具 - &lt;a href="https://iperf.fr/iperf-download.php">iperf3&lt;/a>&lt;/p>
+如果電腦關掉後時間會跑掉的話，以後每次打開電腦都不用手動改時間了!&lt;/p></description></item><item><title>透過 iperf3 來測試內網速度</title><link>http://127.0.0.1:8000/posts/iperf3/</link><pubDate>Sun, 08 Nov 2020 13:26:11 +0000</pubDate><guid>http://127.0.0.1:8000/posts/iperf3/</guid><description>&lt;p>不久前，筆者換了新的交換機。為了測試內網的傳輸速度，筆者發現了這款工具 - &lt;a href="https://iperf.fr/iperf-download.php">iperf3&lt;/a>&lt;/p>
 &lt;p>這是一個支援 Ｗindows, Linux, macOS 的測試程式，主要是透過指令來操作&lt;br>
 筆者也常常用來測試兩個不同地區伺服器的速度&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020110813145837.png" alt="">&lt;/p>
@@ -1097,7 +1097,7 @@ PersistentKeepalive = 10
 &lt;p>就會開始跑測速啦！&lt;/p>
 &lt;p>大家比較需要注意的點是，在內網的話，需要確認內網是互通的(同一個 LAN 就是互通的)&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020110813230558.png" alt="">&lt;/p>
-&lt;p>我們也可以使用 ping 指令去測試網路是否通的，在部分設備上（如 Windows），可能預設將 ICMP 屏蔽了。需要特別到防火牆裡面開啟&lt;/p></description></item><item><title>iOS 和 macaOS 上超好用的內建 Spotlight 搜尋小技巧</title><link>https://blog.steveyi.net/posts/apple-spotlight/</link><pubDate>Sun, 18 Oct 2020 09:02:50 +0000</pubDate><guid>https://blog.steveyi.net/posts/apple-spotlight/</guid><description>&lt;p>不少人都買了 iPhone, iPad, iPod touch 或 Mac，卻不知道內建的 Spotlight 有許多好用的功能，讓我們來看看吧！&lt;/p>
+&lt;p>我們也可以使用 ping 指令去測試網路是否通的，在部分設備上（如 Windows），可能預設將 ICMP 屏蔽了。需要特別到防火牆裡面開啟&lt;/p></description></item><item><title>iOS 和 macaOS 上超好用的內建 Spotlight 搜尋小技巧</title><link>http://127.0.0.1:8000/posts/apple-spotlight/</link><pubDate>Sun, 18 Oct 2020 09:02:50 +0000</pubDate><guid>http://127.0.0.1:8000/posts/apple-spotlight/</guid><description>&lt;p>不少人都買了 iPhone, iPad, iPod touch 或 Mac，卻不知道內建的 Spotlight 有許多好用的功能，讓我們來看看吧！&lt;/p>
 &lt;blockquote>
 &lt;p>Spotlight的使用方法(早期的版本可能不太一樣)：&lt;br>
 iOS/iPadOS是在主畫面往下拉、macOS則是按下選單列(右上角)的放大鏡，或是按下「command」+「空白鍵」&lt;/p>
@@ -1128,7 +1128,7 @@ iOS/iPadOS是在主畫面往下拉、macOS則是按下選單列(右上角)的放
 連結到iTunes Store、Apple Music或Apple TV+，如果有訂閱的話超方便的(雖然筆者沒訂閱啦&amp;hellip;)&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020101808474679.jpg" alt="">&lt;/p>
 &lt;p>Spotlight 搜尋功能非常多，筆者也沒用完全部的功能過 XD&lt;br>
-大家都來玩玩看吧&lt;/p></description></item><item><title>使用 Xbox 遊戲列提升 Windows 的遊戲體驗</title><link>https://blog.steveyi.net/posts/xbox-game-bar/</link><pubDate>Wed, 07 Oct 2020 02:09:56 +0000</pubDate><guid>https://blog.steveyi.net/posts/xbox-game-bar/</guid><description>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020100701190250.png" alt="">&lt;/p>
+大家都來玩玩看吧&lt;/p></description></item><item><title>使用 Xbox 遊戲列提升 Windows 的遊戲體驗</title><link>http://127.0.0.1:8000/posts/xbox-game-bar/</link><pubDate>Wed, 07 Oct 2020 02:09:56 +0000</pubDate><guid>http://127.0.0.1:8000/posts/xbox-game-bar/</guid><description>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020100701190250.png" alt="">&lt;/p>
 &lt;p>Xbox遊戲列是Windows 10的一個功能，具有錄影和直播、顯示效能、控制Spotify音樂等功能，還可以釘選在螢幕上。最棒的是，遊戲列會把系統資源集中在遊戲上，因此如果電腦配置不是很頂級的玩家玩起來會更順暢!&lt;/p>
 &lt;p>註: 筆者以Windows 10 (2004版) 和Xbox遊戲列(v5.420)作為示範，不同版本可能長得不太一樣。&lt;/p>
 &lt;p>首先，請先打開你的遊戲，或是要開啟遊戲列的應用程式，然後按下Win鍵(command鍵)+G&lt;br>
@@ -1140,7 +1140,7 @@ iOS/iPadOS是在主畫面往下拉、macOS則是按下選單列(右上角)的放
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020100701490590.png" alt="">&lt;/p>
 &lt;p>提醒:&lt;br>
 在設定的齒輪旁邊有一個啟用點閱率/停用點閱率的功能，這個功能是控制釘選時，小工具能不能操作。(停用=小工具只能看，不能操作；啟用則反之)&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020100701584448.png" alt="">&lt;/p></description></item><item><title>使用 "備份與還原" 備份 Windows 7 以上的 PC</title><link>https://blog.steveyi.net/posts/windows-backup/</link><pubDate>Fri, 28 Aug 2020 09:09:08 +0000</pubDate><guid>https://blog.steveyi.net/posts/windows-backup/</guid><description>&lt;p>Mac裡面有一個&amp;quot;時光機&amp;quot;可以簡單易用地備份整部電腦，而Windows裡面也藏著類似的功能哦！&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020100701584448.png" alt="">&lt;/p></description></item><item><title>使用 "備份與還原" 備份 Windows 7 以上的 PC</title><link>http://127.0.0.1:8000/posts/windows-backup/</link><pubDate>Fri, 28 Aug 2020 09:09:08 +0000</pubDate><guid>http://127.0.0.1:8000/posts/windows-backup/</guid><description>&lt;p>Mac裡面有一個&amp;quot;時光機&amp;quot;可以簡單易用地備份整部電腦，而Windows裡面也藏著類似的功能哦！&lt;/p>
 &lt;p>簡單來說就是會將整台電腦、磁碟機或資料夾（視設定而定）備份起來，第一次會完整備份，所以會花比較久的時間；第二次以後會只備份「在上次備份完更動過」或「在上次備份完新建立」的檔案，以節省空間和時間。&lt;/p>
 &lt;p>首先請先打開開始，找到&amp;quot;Windows系統&amp;quot;，然後打開控制台&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020082808195051.png" alt="">&lt;/p>
@@ -1160,14 +1160,14 @@ iOS/iPadOS是在主畫面往下拉、macOS則是按下選單列(右上角)的放
 以下是開啟舊檔後的樣子&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020082809060089-scaled.jpg" alt="">&lt;/p>
 &lt;p>這樣以後再也不怕誤刪檔案囉！&lt;br>
-但還是要注意備份週期的問題，假如每週備份一次，但還來不及備份就被刪掉也是沒辦法囉&lt;/p></description></item><item><title>從終端機更改 Mac 的主機名稱</title><link>https://blog.steveyi.net/posts/mac-hostname/</link><pubDate>Sat, 22 Aug 2020 08:25:56 +0000</pubDate><guid>https://blog.steveyi.net/posts/mac-hostname/</guid><description>&lt;p>打開終端機時，我們會看到一串字是「使用者@主機名稱」，例如 John@Johns-MacBook&lt;/p>
+但還是要注意備份週期的問題，假如每週備份一次，但還來不及備份就被刪掉也是沒辦法囉&lt;/p></description></item><item><title>從終端機更改 Mac 的主機名稱</title><link>http://127.0.0.1:8000/posts/mac-hostname/</link><pubDate>Sat, 22 Aug 2020 08:25:56 +0000</pubDate><guid>http://127.0.0.1:8000/posts/mac-hostname/</guid><description>&lt;p>打開終端機時，我們會看到一串字是「使用者@主機名稱」，例如 John@Johns-MacBook&lt;/p>
 &lt;p>主機名稱理論上是可以從系統偏好設定裡頭的「共享」去更改，但是不曉得是不是系統的 Bug，筆者使用的電腦卻不能更改，為此搜尋了幾天終於得出了答案，可以從終端機更改主機名稱&lt;/p>
 &lt;p>首先請先打開終端機，然後輸入下面這串&lt;br>
 注意：請將下方的 &amp;ldquo;MacHostName&amp;rdquo; 帶換成你要的主機名稱，只能包含英文數字和連字號 (-)，並且盡量不要太長&lt;/p>
 &lt;pre tabindex="0">&lt;code>sudo scutil --set HostName MacHostName
 &lt;/code>&lt;/pre>&lt;p>接下來請輸入密碼（看不到很正常）然後按下 return&lt;/p>
 &lt;p>接下來關掉終端機再打開就會看到新的名稱囉！&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020082208224152.png" alt="">&lt;/p></description></item><item><title>使用傳統版 Gmail 加快老舊裝置和低速網路的郵件載入速度</title><link>https://blog.steveyi.net/posts/html-gmail/</link><pubDate>Fri, 21 Aug 2020 15:32:52 +0000</pubDate><guid>https://blog.steveyi.net/posts/html-gmail/</guid><description>&lt;p>筆者有一部老舊的PC，配備1GB記憶體以及Windows XP做輕度文書使用(Windows XP只需128MB記憶體即可操作)，瀏覽一些網站仍可應付，有些大型網站則要載入很久或是無法正常使用。如果是一般的文章網頁還可以，問題來了，筆者想用Gmail網頁版收發郵件，但在網路暢通的情況下載入標準Gmail網頁需要將近一分鐘，捲動郵件更是一場災難，後來筆者發現網頁底部會有一個不明顯的傳統版Gmail超連結，不太會有人注意到它。&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020082208224152.png" alt="">&lt;/p></description></item><item><title>使用傳統版 Gmail 加快老舊裝置和低速網路的郵件載入速度</title><link>http://127.0.0.1:8000/posts/html-gmail/</link><pubDate>Fri, 21 Aug 2020 15:32:52 +0000</pubDate><guid>http://127.0.0.1:8000/posts/html-gmail/</guid><description>&lt;p>筆者有一部老舊的PC，配備1GB記憶體以及Windows XP做輕度文書使用(Windows XP只需128MB記憶體即可操作)，瀏覽一些網站仍可應付，有些大型網站則要載入很久或是無法正常使用。如果是一般的文章網頁還可以，問題來了，筆者想用Gmail網頁版收發郵件，但在網路暢通的情況下載入標準Gmail網頁需要將近一分鐘，捲動郵件更是一場災難，後來筆者發現網頁底部會有一個不明顯的傳統版Gmail超連結，不太會有人注意到它。&lt;/p>
 &lt;p>註：該部PC後來有點故障，所以不會用它來示範本篇教學。&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020082115070982.png" alt="">&lt;/p>
 &lt;p>筆者將連結放在這裡，有需要的可以拷貝拿去用&lt;br>
@@ -1178,7 +1178,7 @@ iOS/iPadOS是在主畫面往下拉、macOS則是按下選單列(右上角)的放
 &lt;p>這是傳統版Gmail的網頁，雖然看起來陽春但大部分功能都還在。&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020082115230812.png" alt="">&lt;/p>
 &lt;p>這是標準的Gmail網頁，在效能良好的裝置和良好的網路環境可以獲得很好的視覺效果和使用體驗，但老舊裝置以及網路頻寬不足的情況下就要等很久。&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020082115303578.png" alt="">&lt;/p></description></item><item><title>淺談 Mac 筆記型電腦的電池和效能的影響</title><link>https://blog.steveyi.net/posts/macbook-without-a-battery/</link><pubDate>Tue, 18 Aug 2020 13:16:25 +0000</pubDate><guid>https://blog.steveyi.net/posts/macbook-without-a-battery/</guid><description>&lt;p>筆者從小使用PC，直到家人幾年前買了一台MacBook Pro （額&amp;hellip;對，不是我的，只是我借用時間比較長😂）&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020082115303578.png" alt="">&lt;/p></description></item><item><title>淺談 Mac 筆記型電腦的電池和效能的影響</title><link>http://127.0.0.1:8000/posts/macbook-without-a-battery/</link><pubDate>Tue, 18 Aug 2020 13:16:25 +0000</pubDate><guid>http://127.0.0.1:8000/posts/macbook-without-a-battery/</guid><description>&lt;p>筆者從小使用PC，直到家人幾年前買了一台MacBook Pro （額&amp;hellip;對，不是我的，只是我借用時間比較長😂）&lt;/p>
 &lt;p>筆者第一台筆記型電腦是IBM的ThinkPad T43，接手時，電池因老化變得沒什麼用處（從開機到沒電休眠的續航大約3分42秒），所以大部分時候都把電池拔除來減輕重量，除非要在插座間移動才裝上。在這台電腦，以及後續我用的幾部PC筆記型電腦移除電池並插電使用都沒有任何明顯可見的降頻，只是後來換的PC筆記型電腦因為規格太文書，用幾年後跟不上軟體肥大的速度，容易當機，甚至多次在我存簡報時當機導致儲存失敗所以後來都借用家人的MacBok Pro。&lt;/p>
 &lt;p>直到家人那台Pro 2017卡鍵待送修，跟親戚借了塵封已久、電池無法充電的MacBook Air 2011來使用，原本以為只是不能拔掉電源而已，沒想到開機後用起來非常卡頓，根本不像是2代1.6GHz intel Core i5處理器該有的水準。在四處都看得到電池需要維修的警告後，我懷疑卡頓來自電池效能太低，系統做的降頻處理，就像&lt;a href="https://support.apple.com/zh-tw/HT208387" title="https://support.apple.com/zh-tw/HT208387">iPhone上的效能管理&lt;/a>一樣。&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081811411362.png" alt="">&lt;/p>
@@ -1220,7 +1220,7 @@ Mac不插電池或是電池被系統視為需要維修，則會嚴重影響使�
 經過筆者實測發現，使用舊版的OS X可以在CPU一樣被降頻的情況下獲得更好的使用體驗。&lt;br>
 所以等待更換電池的期間（或是根本不想換電池的話）可以考慮試試看舊版的OS X。&lt;br>
 筆者是使用OS X 10.9.5 &amp;ldquo;Mavericks&amp;quot;作為等待電池期間主要使用的作業系統，不過舊版OS X的應用程式相容性比較差，就請自行斟酌啦&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020082115435852.png" alt="">&lt;/p></description></item><item><title>在官方不支援 macOS Catalina 的裝置安裝 macOS Catalina</title><link>https://blog.steveyi.net/posts/macos-catalina-on-unsupport-mac/</link><pubDate>Tue, 18 Aug 2020 10:41:18 +0000</pubDate><guid>https://blog.steveyi.net/posts/macos-catalina-on-unsupport-mac/</guid><description>&lt;p>有些電腦明明還可以好好的、正常使用，但可能因為官方的多重考量(不管是效能上、商業上、或是功能上之類的考量)，而被官方從升級名單中一代一代的移除，豈不是覺得很可惜嗎&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020082115435852.png" alt="">&lt;/p></description></item><item><title>在官方不支援 macOS Catalina 的裝置安裝 macOS Catalina</title><link>http://127.0.0.1:8000/posts/macos-catalina-on-unsupport-mac/</link><pubDate>Tue, 18 Aug 2020 10:41:18 +0000</pubDate><guid>http://127.0.0.1:8000/posts/macos-catalina-on-unsupport-mac/</guid><description>&lt;p>有些電腦明明還可以好好的、正常使用，但可能因為官方的多重考量(不管是效能上、商業上、或是功能上之類的考量)，而被官方從升級名單中一代一代的移除，豈不是覺得很可惜嗎&lt;/p>
 &lt;p>這時候，有一位&lt;a href="http://dosdude1.com">dosdude1&lt;/a>做了&lt;a href="http://dosdude1.com/catalina" title="dosdude1.com/catalina">Catalina Patcher&lt;/a>解決了這個問題。&lt;/p>
 &lt;p>這是官方的支援名單:&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081801505962.png" alt="">&lt;/p>
@@ -1274,7 +1274,7 @@ Mac不插電池或是電池被系統視為需要維修，則會嚴重影響使�
 接下來如果有需要還原時光機備份或是從其他電腦轉移資料也可以在這裡完成，或是設定完成後打開「系統移轉輔助程式」&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081810265417.png" alt="">&lt;/p>
 &lt;p>接下來將它設定好就可以正常使用囉&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081810311541.png" alt="">&lt;/p></description></item><item><title>macOS 重灌不求人！使用內建回復功能輕鬆重灌 Mac 電腦</title><link>https://blog.steveyi.net/posts/macos-recovery/</link><pubDate>Sat, 15 Aug 2020 07:25:12 +0000</pubDate><guid>https://blog.steveyi.net/posts/macos-recovery/</guid><description>&lt;p>很多時候很多種原因我們需要重灌作業系統，比如說系統裝了太多東西覺得變慢 懶得一個一個刪掉、或是換了新的磁碟機、升級Beta版想要降回來穩定發行版、或是系統升級過程中意外斷電等原因。Mac內建了一個好用的工具程式可以協助我們重灌。&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081810311541.png" alt="">&lt;/p></description></item><item><title>macOS 重灌不求人！使用內建回復功能輕鬆重灌 Mac 電腦</title><link>http://127.0.0.1:8000/posts/macos-recovery/</link><pubDate>Sat, 15 Aug 2020 07:25:12 +0000</pubDate><guid>http://127.0.0.1:8000/posts/macos-recovery/</guid><description>&lt;p>很多時候很多種原因我們需要重灌作業系統，比如說系統裝了太多東西覺得變慢 懶得一個一個刪掉、或是換了新的磁碟機、升級Beta版想要降回來穩定發行版、或是系統升級過程中意外斷電等原因。Mac內建了一個好用的工具程式可以協助我們重灌。&lt;/p>
 &lt;h2 id="開始教學囉" >開始教學囉
 &lt;span>
 &lt;a href="#%e9%96%8b%e5%a7%8b%e6%95%99%e5%ad%b8%e5%9b%89">
@@ -1311,7 +1311,7 @@ Internet回復會使用Wi-Fi或乙太網路，如果找不到可用的網路就�
 &lt;p>然後請選擇安裝於剛剛清除的磁區或卷宗&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081507212961.png" alt="">&lt;/p>
 &lt;p>接下來就等候安裝吧！&lt;br>
-安裝完會有基本設定，本篇就不贅述了，祝大家使用愉快～&lt;/p></description></item><item><title>使用CloudReady體驗ChromiumOS作業系統，老電腦重獲新生!</title><link>https://blog.steveyi.net/posts/cloudready/</link><pubDate>Mon, 10 Aug 2020 15:10:52 +0000</pubDate><guid>https://blog.steveyi.net/posts/cloudready/</guid><description>&lt;p>不曉得各位有沒有一種經驗，電腦老舊了，連文書處理和基本的瀏覽網頁都卡頓，但又不想使用太老舊的作業系統(官方停止提供新功能了，連瀏覽器也不提供更新支援了)，這時便可以下載最新版的CloudReady家用版來使用囉!既有最新版的瀏覽器，也有不少Web App能使用；也因為是基於瀏覽器的作業系統，因此資源占用比許多作業系統都少，也不用怕不習慣使用Linux作業系統(安裝軟體的方式很不一樣，使用邏輯也差很多，而且一直使用命令行也不是很直覺的用法)，所以，只要電腦支援64位元，幾乎都可以用CloudReady(試過家裡唯一一台32位元電腦，無法使用32位元版的CloudReady開機)&lt;/p>
+安裝完會有基本設定，本篇就不贅述了，祝大家使用愉快～&lt;/p></description></item><item><title>使用CloudReady體驗ChromiumOS作業系統，老電腦重獲新生!</title><link>http://127.0.0.1:8000/posts/cloudready/</link><pubDate>Mon, 10 Aug 2020 15:10:52 +0000</pubDate><guid>http://127.0.0.1:8000/posts/cloudready/</guid><description>&lt;p>不曉得各位有沒有一種經驗，電腦老舊了，連文書處理和基本的瀏覽網頁都卡頓，但又不想使用太老舊的作業系統(官方停止提供新功能了，連瀏覽器也不提供更新支援了)，這時便可以下載最新版的CloudReady家用版來使用囉!既有最新版的瀏覽器，也有不少Web App能使用；也因為是基於瀏覽器的作業系統，因此資源占用比許多作業系統都少，也不用怕不習慣使用Linux作業系統(安裝軟體的方式很不一樣，使用邏輯也差很多，而且一直使用命令行也不是很直覺的用法)，所以，只要電腦支援64位元，幾乎都可以用CloudReady(試過家裡唯一一台32位元電腦，無法使用32位元版的CloudReady開機)&lt;/p>
 &lt;p>開始吧!&lt;/p>
 &lt;p>準備材料有:&lt;/p>
 &lt;ol>
@@ -1359,7 +1359,7 @@ Internet回復會使用Wi-Fi或乙太網路，如果找不到可用的網路就�
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081015044386.png" alt="">&lt;/p>
 &lt;p>大致介紹完畢囉！祝各位用得愉快～&lt;br>
 螢幕快照的快速鍵是Ctrl+F5，會存在下載資料夾&lt;br>
-其餘快速鍵幾乎都跟Windows差不多，可以參考&lt;a href="https://support.google.com/chromebook/answer/183101?hl=zh-Hant" title="https://support.google.com/chromebook/answer/183101?hl=zh-Hant">這篇官方文章&lt;/a>&lt;/p></description></item><item><title>使用 Android 手機作為 Mac 的網路連線來源的方法</title><link>https://blog.steveyi.net/posts/horndis/</link><pubDate>Sat, 08 Aug 2020 07:23:53 +0000</pubDate><guid>https://blog.steveyi.net/posts/horndis/</guid><description>&lt;p>有時因為某些原因，不想使用Wi-Fi上網或使用Wi-Fi個人熱點時，或是電腦的無線網路卡受到周遭物品的遮蔽時，甚至是黑蘋果電腦沒有相容無線網卡等情況下，將Android手機作為網路接收器是一個好主意。&lt;br>
+其餘快速鍵幾乎都跟Windows差不多，可以參考&lt;a href="https://support.google.com/chromebook/answer/183101?hl=zh-Hant" title="https://support.google.com/chromebook/answer/183101?hl=zh-Hant">這篇官方文章&lt;/a>&lt;/p></description></item><item><title>使用 Android 手機作為 Mac 的網路連線來源的方法</title><link>http://127.0.0.1:8000/posts/horndis/</link><pubDate>Sat, 08 Aug 2020 07:23:53 +0000</pubDate><guid>http://127.0.0.1:8000/posts/horndis/</guid><description>&lt;p>有時因為某些原因，不想使用Wi-Fi上網或使用Wi-Fi個人熱點時，或是電腦的無線網路卡受到周遭物品的遮蔽時，甚至是黑蘋果電腦沒有相容無線網卡等情況下，將Android手機作為網路接收器是一個好主意。&lt;br>
 macOS需求為10.11(El Captain)以上，本篇筆者使用macOS 10.13(High Sierra)作為示範&lt;br>
 只要Android手機連得到Wi-Fi或是行動數據連線，而且有USB數據連線的功能，都可以執行以下教學提到的內容。&lt;br>
 請注意，手機一直24小時掛著電源可能會造成膨脹，需要時再接上電腦。&lt;/p>
@@ -1376,7 +1376,7 @@ macOS需求為10.11(El Captain)以上，本篇筆者使用macOS 10.13(High Sierr
 &lt;p>到系統偏好設定裡，打開網路偏好設定&lt;/p>
 &lt;p>&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020080807085471.png" alt="">&lt;/p>
 &lt;p>接下來就會在裡面看到手機有沒有連線囉&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020080806520553.png" alt="">&lt;/p></description></item><item><title>輕鬆免工具關閉 Windows 10 自動更新</title><link>https://blog.steveyi.net/posts/no-win10-update/</link><pubDate>Sat, 18 Jul 2020 14:37:57 +0000</pubDate><guid>https://blog.steveyi.net/posts/no-win10-update/</guid><description>&lt;p>由於 Windows 10 更新時常占用筆者電腦的儲存空間，而且常常會有一些莫名其妙的問題出現(例如 Windows 內建搜尋功能無法使用等)，所以自己發現了一個有效阻擋更新的方法。&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020080806520553.png" alt="">&lt;/p></description></item><item><title>輕鬆免工具關閉 Windows 10 自動更新</title><link>http://127.0.0.1:8000/posts/no-win10-update/</link><pubDate>Sat, 18 Jul 2020 14:37:57 +0000</pubDate><guid>http://127.0.0.1:8000/posts/no-win10-update/</guid><description>&lt;p>由於 Windows 10 更新時常占用筆者電腦的儲存空間，而且常常會有一些莫名其妙的問題出現(例如 Windows 內建搜尋功能無法使用等)，所以自己發現了一個有效阻擋更新的方法。&lt;/p>
 &lt;p>請先打開 開始&amp;gt;設定&amp;gt;更新與安全性&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071810311417.png" alt="">&lt;/p>
 &lt;p>接下來進入Windows Update設定後請按下[進階選項]&lt;br>
@@ -1397,7 +1397,7 @@ macOS需求為10.11(El Captain)以上，本篇筆者使用macOS 10.13(High Sierr
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071813402994.png" alt="">&lt;/p>
 &lt;p>上網時記得做這小小的動作就可以輕鬆避免 Windows 10 自動更新囉~&lt;br>
 如果需要更新的時候進來 Windows Update 按[下載]就可以囉&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071814305227.png" alt="">&lt;/p></description></item><item><title>FRRouting 安裝教學</title><link>https://blog.steveyi.net/posts/frrouting-install/</link><pubDate>Sun, 12 Jul 2020 13:07:14 +0000</pubDate><guid>https://blog.steveyi.net/posts/frrouting-install/</guid><description>&lt;p>很久沒有來分享了！最近仍然在學習 BGP 知識及測試之前一直使用 Bird1 來廣播 BGP，後來在跟朋友 Peer 時，一直無法建立對等（很玄，但卻可以跟 IX 建立）&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071814305227.png" alt="">&lt;/p></description></item><item><title>FRRouting 安裝教學</title><link>http://127.0.0.1:8000/posts/frrouting-install/</link><pubDate>Sun, 12 Jul 2020 13:07:14 +0000</pubDate><guid>http://127.0.0.1:8000/posts/frrouting-install/</guid><description>&lt;p>很久沒有來分享了！最近仍然在學習 BGP 知識及測試之前一直使用 Bird1 來廣播 BGP，後來在跟朋友 Peer 時，一直無法建立對等（很玄，但卻可以跟 IX 建立）&lt;/p>
 &lt;p>於是我將 BIRD1 解除安裝了，改安裝 &lt;a href="https://frrouting.org/">FRRouting&lt;/a>。&lt;/p>
 &lt;p>&lt;a href="https://frrouting.org/">FRRouting&lt;/a> 是從 Quagga Fork 來的路由套件，功能也十分強大（ 其指令類似於 Cisco 或 Quagga ）&lt;/p>
 &lt;p>使用者指南（英文）：&lt;a href="https://docs.frrouting.org/en/latest/">https://docs.frrouting.org/en/latest/&lt;/a>&lt;br>
@@ -1459,7 +1459,7 @@ service frr restart
 &lt;/span>
 &lt;/h3>&lt;pre tabindex="0">&lt;code>sudo vtysh
 &lt;/code>&lt;/pre>&lt;p>進入互動式 CLI ，不出意外的話，就可以進行配置了&lt;br>
-鍵入 config 就可以進入設定界面囉！&lt;/p></description></item><item><title>幫 Spotify 或其他音樂軟體加上實時歌詞的方法 (Android)</title><link>https://blog.steveyi.net/posts/dynamic-lyrics-android/</link><pubDate>Sat, 11 Jul 2020 10:00:12 +0000</pubDate><guid>https://blog.steveyi.net/posts/dynamic-lyrics-android/</guid><description>&lt;p>上次有一篇介紹&lt;a href="https://blog.steveyi.net/free-streaming-music-compare/" title="[2020最新] 各大串流平台免費會員比較">各家串流平台的免費會員比較&lt;/a>，各位可以發現實時歌詞很多家平台都有&lt;/p>
+鍵入 config 就可以進入設定界面囉！&lt;/p></description></item><item><title>幫 Spotify 或其他音樂軟體加上實時歌詞的方法 (Android)</title><link>http://127.0.0.1:8000/posts/dynamic-lyrics-android/</link><pubDate>Sat, 11 Jul 2020 10:00:12 +0000</pubDate><guid>http://127.0.0.1:8000/posts/dynamic-lyrics-android/</guid><description>&lt;p>上次有一篇介紹&lt;a href="https://blog.steveyi.net/free-streaming-music-compare/" title="[2020最新] 各大串流平台免費會員比較">各家串流平台的免費會員比較&lt;/a>，各位可以發現實時歌詞很多家平台都有&lt;/p>
 &lt;p>但Spotify根據筆者測試只有Premium用戶能用或是有些平台沒有歌詞服務，稍嫌可惜&lt;/p>
 &lt;p>這時想要聽著Spotify或其他沒歌詞的平台的免費音樂，但又覺得沒歌詞不能一起唱很麻煩嗎 這時候照這篇文章做就可以解決這個問題囉&lt;/p>
 &lt;p>這篇文章適用Android用戶，iOS/iPadOS用戶在&lt;a href="https://blog.steveyi.net/no-premium-spotify-dynamic-lyrics/" title="不用Premium也可以幫Spotify加上實時歌詞(iOS/iPadOS)">另外一篇&lt;/a>唷&lt;/p>
@@ -1506,7 +1506,7 @@ service frr restart
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071109383934.jpeg" alt="">&lt;/p>
 &lt;p>舉例來說，以下這首歌曲是鄧紫棋的「&lt;a href="https://www.youtube.com/watch?v=G3z9U_1Uue4&amp;amp;feature=share">好想好想妳&lt;/a>」&lt;br>
 但歌詞卻誤判為另一首(我完全沒聽過的)歌曲，這時我只好關掉Floating Lyrics，或是改用選單的歌詞辨識功能&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071109490666.jpeg" alt="">&lt;/p></description></item><item><title>幫 Spotify 加上實時歌詞 (iOS/iPadOS)</title><link>https://blog.steveyi.net/posts/no-premium-spotify-dynamic-lyrics/</link><pubDate>Sat, 11 Jul 2020 07:31:26 +0000</pubDate><guid>https://blog.steveyi.net/posts/no-premium-spotify-dynamic-lyrics/</guid><description>&lt;p>上次有一篇介紹&lt;a href="https://blog.steveyi.net/free-streaming-music-compare/" title="[2020最新] 各大串流平台免費會員比較">各家串流平台的免費會員比較&lt;/a>，各位可以發現實時歌詞很多家平台都有&lt;br>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071109490666.jpeg" alt="">&lt;/p></description></item><item><title>幫 Spotify 加上實時歌詞 (iOS/iPadOS)</title><link>http://127.0.0.1:8000/posts/no-premium-spotify-dynamic-lyrics/</link><pubDate>Sat, 11 Jul 2020 07:31:26 +0000</pubDate><guid>http://127.0.0.1:8000/posts/no-premium-spotify-dynamic-lyrics/</guid><description>&lt;p>上次有一篇介紹&lt;a href="https://blog.steveyi.net/free-streaming-music-compare/" title="[2020最新] 各大串流平台免費會員比較">各家串流平台的免費會員比較&lt;/a>，各位可以發現實時歌詞很多家平台都有&lt;br>
 但 Spotify 根據筆者測試只有 Premium 用戶能用，稍嫌可惜&lt;br>
 這時想要聽著 Spotify 的免費音樂，但又覺得沒歌詞不能一起唱很麻煩嗎&lt;br>
 這時候照這篇文章做就可以解決這個問題囉&lt;/p>
@@ -1539,7 +1539,7 @@ service frr restart
 &lt;p>也可以在桌面左邊新增小工具&lt;/p>
 &lt;p>&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020071107274160.jpeg" alt="IMG_1759.jpeg">&lt;/p>
 &lt;p>桌面上就會有歌詞囉&lt;/p>
-&lt;p>&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020071107275851.gif" alt="IMG_1760.gif">&lt;/p></description></item><item><title>PVE入門心得-安裝篇</title><link>https://blog.steveyi.net/posts/pve-install/</link><pubDate>Tue, 07 Jul 2020 05:33:14 +0000</pubDate><guid>https://blog.steveyi.net/posts/pve-install/</guid><description>&lt;p>玩虛擬機有一段時間了，不過是在Windows系統下裝VMware Workstation玩xD&lt;br>
+&lt;p>&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020071107275851.gif" alt="IMG_1760.gif">&lt;/p></description></item><item><title>PVE入門心得-安裝篇</title><link>http://127.0.0.1:8000/posts/pve-install/</link><pubDate>Tue, 07 Jul 2020 05:33:14 +0000</pubDate><guid>http://127.0.0.1:8000/posts/pve-install/</guid><description>&lt;p>玩虛擬機有一段時間了，不過是在Windows系統下裝VMware Workstation玩xD&lt;br>
 後來閒置了幾台電腦，恰好也查詢到PVE(Proxmox VE)這個開源虛擬系統，於是 我們就來安裝玩玩吧!&lt;/p>
 &lt;p>前期準備:&lt;/p>
 &lt;p>Proxmox VE 安裝碟&lt;br>
@@ -1566,7 +1566,7 @@ service frr restart
 &lt;p>全部完成後，就點擊Install來進行安裝!&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070705284395.png" alt="">&lt;/p>
 &lt;p>安裝完成後，我們使用 https://你的IP:8006 就可以進入管理面板囉!&lt;/p>
-&lt;p>下一篇，我們將與大家分享一些配置的過程&lt;/p></description></item><item><title>[2020最新] 各大串流平台免費會員比較</title><link>https://blog.steveyi.net/posts/free-streaming-music-compare/</link><pubDate>Sun, 05 Jul 2020 12:51:26 +0000</pubDate><guid>https://blog.steveyi.net/posts/free-streaming-music-compare/</guid><description>&lt;p>蘿蔔這幾年來一直在尋找免費好用的串流音樂平台，也因此幾乎所有台灣常見的平台都有用過，所以接下來一一為大家介紹&lt;/p>
+&lt;p>下一篇，我們將與大家分享一些配置的過程&lt;/p></description></item><item><title>[2020最新] 各大串流平台免費會員比較</title><link>http://127.0.0.1:8000/posts/free-streaming-music-compare/</link><pubDate>Sun, 05 Jul 2020 12:51:26 +0000</pubDate><guid>http://127.0.0.1:8000/posts/free-streaming-music-compare/</guid><description>&lt;p>蘿蔔這幾年來一直在尋找免費好用的串流音樂平台，也因此幾乎所有台灣常見的平台都有用過，所以接下來一一為大家介紹&lt;/p>
 &lt;p>首先我先說一下，蘿蔔是台灣人，所以文章介紹的有些平台不見得能在其他國家或地區使用；或是有些平台改版了，這篇文章可能會來不及更新，請見諒&lt;/p>
 &lt;p>再來要說的是，我們不鼓勵使用盜版或破解版，首先是音樂平台和音樂創作者沒辦法收到錢（例如串流音樂平台上面廣告贊助的費用），而好音樂就沒辦法受到鼓勵，裝置也可能被病毒或是間諜程式入侵，而且還可能會有法律責任產生&lt;/p>
 &lt;p>說完了那我們開始介紹吧&lt;/p>
@@ -1668,7 +1668,7 @@ service frr restart
 另外令人匪夷所思的是系統語言是中文的情況下，有些中文歌都只寫英文歌名，非常奇葩&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070512340980.png" alt="">&lt;/p>
 &lt;p>以上就是蘿蔔介紹台灣比較常見的串流音樂平台，有些版權比較屬於灰色地帶的就先不介紹了，畢竟「我是小易」的編輯們也無法保證其合法性&lt;/p>
-&lt;p>看完這些介紹，各位有打算使用哪個串流音樂平台了嗎？&lt;/p></description></item><item><title>LINE 聊天訊息自動分類好友、群組、官方帳號</title><link>https://blog.steveyi.net/posts/line-xun-xi-fen-lei/</link><pubDate>Fri, 03 Jul 2020 12:25:49 +0000</pubDate><guid>https://blog.steveyi.net/posts/line-xun-xi-fen-lei/</guid><description>&lt;p>LINE 分類完之後找訊息大概會方便很多&amp;hellip;&lt;/p>
+&lt;p>看完這些介紹，各位有打算使用哪個串流音樂平台了嗎？&lt;/p></description></item><item><title>LINE 聊天訊息自動分類好友、群組、官方帳號</title><link>http://127.0.0.1:8000/posts/line-xun-xi-fen-lei/</link><pubDate>Fri, 03 Jul 2020 12:25:49 +0000</pubDate><guid>http://127.0.0.1:8000/posts/line-xun-xi-fen-lei/</guid><description>&lt;p>LINE 分類完之後找訊息大概會方便很多&amp;hellip;&lt;/p>
 &lt;blockquote>
 &lt;p>這功能目前只有Android有加入，iOS應該過一段時間也會加入&lt;br>
 請確認LINE版本是Google Play上的最新版本&lt;/p>
@@ -1678,7 +1678,7 @@ service frr restart
 &lt;p>接下來點選右上角的齒輪，找到 LINE Lab 然後打勾&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070312153360.jpg" alt="">&lt;/p>
 &lt;p>接下來就會自動分類囉&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070312202078.gif" alt="">&lt;/p></description></item><item><title>無需訂閱 Youtube Music Premium 也能讓 Android 的裝置享有背景播放的功能 (Youtube 也適用哦！)</title><link>https://blog.steveyi.net/posts/youtube-background-playing-android/</link><pubDate>Fri, 19 Jun 2020 15:58:18 +0000</pubDate><guid>https://blog.steveyi.net/posts/youtube-background-playing-android/</guid><description>&lt;p>此處主要由Android手機作為示範，Android 平板也可以用一樣的方法唷&lt;br>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070312202078.gif" alt="">&lt;/p></description></item><item><title>無需訂閱 Youtube Music Premium 也能讓 Android 的裝置享有背景播放的功能 (Youtube 也適用哦！)</title><link>http://127.0.0.1:8000/posts/youtube-background-playing-android/</link><pubDate>Fri, 19 Jun 2020 15:58:18 +0000</pubDate><guid>http://127.0.0.1:8000/posts/youtube-background-playing-android/</guid><description>&lt;p>此處主要由Android手機作為示範，Android 平板也可以用一樣的方法唷&lt;br>
 iOS/iPadOS也可以用類似的方法，&lt;a href="https://blog.steveyi.net/youtube-background-playing-ios" title="https://blog.steveyi.net/youtube-background-playing-ios">請見此篇&lt;/a>&lt;/p>
 &lt;h3 id="讓我們開始吧" >讓我們開始吧
 &lt;span>
@@ -1698,7 +1698,7 @@ iOS/iPadOS也可以用類似的方法，&lt;a href="https://blog.steveyi.net/you
 &lt;p>筆者順便測試了幾個品牌的Android手機&lt;br>
 目前也沒遇到不能用的！&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020061915532349.jpg" alt="">&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020061915534442.png" alt="">&lt;/p></description></item><item><title>無需訂閱 Youtube Music Premium 也能讓 iOS/iPadOS 的裝置享有背景播放的功能 (Youtube 也適用哦！)</title><link>https://blog.steveyi.net/posts/youtube-background-ios/</link><pubDate>Fri, 19 Jun 2020 14:39:47 +0000</pubDate><guid>https://blog.steveyi.net/posts/youtube-background-ios/</guid><description>&lt;p>此處主要由iPad作為示範，iPhone也可以用一樣的方法唷&lt;br>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020061915534442.png" alt="">&lt;/p></description></item><item><title>無需訂閱 Youtube Music Premium 也能讓 iOS/iPadOS 的裝置享有背景播放的功能 (Youtube 也適用哦！)</title><link>http://127.0.0.1:8000/posts/youtube-background-ios/</link><pubDate>Fri, 19 Jun 2020 14:39:47 +0000</pubDate><guid>http://127.0.0.1:8000/posts/youtube-background-ios/</guid><description>&lt;p>此處主要由iPad作為示範，iPhone也可以用一樣的方法唷&lt;br>
 Android也可以用類似的方法，之後會再發一篇教學，敬請關注「我是小易」後續的文章吧！&lt;/p>
 &lt;p>後續更新：&lt;a href="https://blog.steveyi.net/youtube-background-playing-android" title="https://blog.steveyi.net/youtube-background-playing-android">Android版教學在此&lt;/a>&lt;/p>
 &lt;blockquote>
@@ -1735,7 +1735,7 @@ Android也可以用類似的方法，之後會再發一篇教學，敬請關注�
 &lt;p>&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020061914373657.jpeg" alt="">&lt;/p>
 &lt;p>iPhone的Youtube Music網頁也能跟電腦網頁有幾乎一樣的功能囉&lt;/p>
 &lt;p>筆者試了一下，年代有點久遠的iOS 10也能用哦&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020062707454832.png" alt="">&lt;/p></description></item><item><title>在忘記管理員帳號的 Mac 上新增新的管理員帳號</title><link>https://blog.steveyi.net/posts/iforgot-mac-password/</link><pubDate>Thu, 04 Jun 2020 05:54:21 +0000</pubDate><guid>https://blog.steveyi.net/posts/iforgot-mac-password/</guid><description>&lt;p>之前筆者借用的一台iMac用到放假的時候，放在一個安全的地方，然後回家（搬不回去）。&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020062707454832.png" alt="">&lt;/p></description></item><item><title>在忘記管理員帳號的 Mac 上新增新的管理員帳號</title><link>http://127.0.0.1:8000/posts/iforgot-mac-password/</link><pubDate>Thu, 04 Jun 2020 05:54:21 +0000</pubDate><guid>http://127.0.0.1:8000/posts/iforgot-mac-password/</guid><description>&lt;p>之前筆者借用的一台iMac用到放假的時候，放在一個安全的地方，然後回家（搬不回去）。&lt;/p>
 &lt;p>過了一個多月再回來發現竟然忘了密碼（很誇張但是是真的，一直想不起來之前的密碼），幸好我在回家前就已經把資料都備份好了。&lt;/p>
 &lt;p>這可以重灌，但是因為筆者事情有點多所以沒空可以慢慢重灌，所以便找到了這麼一個方法，比重灌來的快多了，而且舊的帳號之後可以用新帳號去刪掉，App基本上也不用重新下載&lt;/p>
 &lt;p>（當時有點忙所以這篇是後來寫出來的，就不是用iMac示範了）&lt;/p>
@@ -1766,7 +1766,7 @@ Android也可以用類似的方法，之後會再發一篇教學，敬請關注�
 &lt;p>接下來請按鎖頭，並輸入剛剛的新帳號和新密碼&lt;/p>
 &lt;p>&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020060405435722.png" alt="">&lt;/p>
 &lt;p>接下來在選單選擇要刪掉的使用者，並按下「-」按鈕之後，選擇檔案的處理方式後，按下刪除使用者，舊的使用者就消失囉～&lt;/p>
-&lt;p>&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020060405491836.png" alt="">&lt;/p></description></item><item><title>使用 IFTTT 讓手機在離開家裡時關閉無線網路</title><link>https://blog.steveyi.net/posts/ifttt-zhi-dong-guan-wifi/</link><pubDate>Wed, 03 Jun 2020 04:43:06 +0000</pubDate><guid>https://blog.steveyi.net/posts/ifttt-zhi-dong-guan-wifi/</guid><description>&lt;p>由於筆者離開家裡的時候，常常忘記關掉Wi-Fi，所以就找出了這樣一個方法&lt;/p>
+&lt;p>&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020060405491836.png" alt="">&lt;/p></description></item><item><title>使用 IFTTT 讓手機在離開家裡時關閉無線網路</title><link>http://127.0.0.1:8000/posts/ifttt-zhi-dong-guan-wifi/</link><pubDate>Wed, 03 Jun 2020 04:43:06 +0000</pubDate><guid>http://127.0.0.1:8000/posts/ifttt-zhi-dong-guan-wifi/</guid><description>&lt;p>由於筆者離開家裡的時候，常常忘記關掉Wi-Fi，所以就找出了這樣一個方法&lt;/p>
 &lt;p>首先我們會需要做準備工作，依照不同的裝置類型會有不同的方法&lt;/p>
 &lt;h2 id="如果是小米或是redmi黑鯊poco手機的使用者" >如果是小米或是Redmi、黑鯊、POCO手機的使用者
 &lt;span>
@@ -1862,14 +1862,14 @@ Android也可以用類似的方法，之後會再發一篇教學，敬請關注�
 &lt;/span>
 &lt;/h4>&lt;p>因為只要有任何Applet用到Location服務，那IFTTT就會一直存取位置資訊，耗費電量，而且許多品牌的手機進入省電模式就會關掉定位功能，那麼這就沒辦法正常運作了&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020060307230142.jpg" alt="">&lt;/p>
-&lt;p>只要任何一個Applet有用到Location服務，IFTTT就會一直使用定位&lt;/p></description></item><item><title>解決 Telegram 在 Android 開啟深色模式時自動跳回預設主題的問題</title><link>https://blog.steveyi.net/posts/telegram-dark-mode-theme/</link><pubDate>Mon, 01 Jun 2020 08:46:56 +0000</pubDate><guid>https://blog.steveyi.net/posts/telegram-dark-mode-theme/</guid><description>&lt;p>如果有在Telegram更改主題的用戶應該會發現，在深Android色模式下每次啟動Telegram都會被改回預設的深藍色主題非常困擾&lt;/p>
+&lt;p>只要任何一個Applet有用到Location服務，IFTTT就會一直使用定位&lt;/p></description></item><item><title>解決 Telegram 在 Android 開啟深色模式時自動跳回預設主題的問題</title><link>http://127.0.0.1:8000/posts/telegram-dark-mode-theme/</link><pubDate>Mon, 01 Jun 2020 08:46:56 +0000</pubDate><guid>http://127.0.0.1:8000/posts/telegram-dark-mode-theme/</guid><description>&lt;p>如果有在Telegram更改主題的用戶應該會發現，在深Android色模式下每次啟動Telegram都會被改回預設的深藍色主題非常困擾&lt;/p>
 &lt;p>在這裡有一個方法，可以有效解決這個問題&lt;/p>
 &lt;p>首先請先打開側邊選單，然後按「設定」&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020060108401587.jpg" alt="">&lt;/p>
 &lt;p>接下來請選擇對話設定&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020060108403955.jpg" alt="">&lt;/p>
 &lt;p>接下來請找到「自動夜晚模式」並關掉&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020060108410457.jpg" alt="">&lt;/p></description></item><item><title>讓手機音質提升的小技巧</title><link>https://blog.steveyi.net/posts/yin-zhi-ti-sheng/</link><pubDate>Mon, 01 Jun 2020 03:55:45 +0000</pubDate><guid>https://blog.steveyi.net/posts/yin-zhi-ti-sheng/</guid><description>&lt;p>註：Apple Lightning裝置以及大多數的USB-C裝置(像是Windows電腦等)也適用這篇哦&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020060108410457.jpg" alt="">&lt;/p></description></item><item><title>讓手機音質提升的小技巧</title><link>http://127.0.0.1:8000/posts/yin-zhi-ti-sheng/</link><pubDate>Mon, 01 Jun 2020 03:55:45 +0000</pubDate><guid>http://127.0.0.1:8000/posts/yin-zhi-ti-sheng/</guid><description>&lt;p>註：Apple Lightning裝置以及大多數的USB-C裝置(像是Windows電腦等)也適用這篇哦&lt;/p>
 &lt;p>在你認為兩百元有找的耳機音質不好的同時，你是否忽略了哪個重要的細節呢？&lt;br>
 雖然也許手機廠牌跟耳機廠牌一致可以得到更好的優化體驗，但不可否認手機內置的DAC(數位音訊轉化為類比訊號提供給耳機的一個重要元件)不一定可以媲美外置的DAC，也許不是耳機太差，而是DAC推不動或是搭配起來不合適&lt;/p>
 &lt;p>但人們會問：外置的DAC不是都很大一台嗎?&lt;br>
@@ -1896,7 +1896,7 @@ Android也可以用類似的方法，之後會再發一篇教學，敬請關注�
 &lt;p>後來我去測試了一下，電腦的部分，Windows 10(PC和Mac)可以用，但我手上的轉接頭插到macOS 10.15.5的Mac是沒有反應的(不確定是不是因為不是蘋果的)，供大家參考&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020060300231492.png" alt="">&lt;/p>
 &lt;p>電腦的部分，Windows 10(PC和Mac)可以用&lt;/p>
-&lt;p>筆者對這方面有研究過，但還未達專家等級，如果有誤懇請讀者見諒&lt;/p></description></item><item><title>在 Ubuntu 系統下架設 Tunnel Broker 服務 (v4 to v6)</title><link>https://blog.steveyi.net/posts/tunnel-broker-bgp/</link><pubDate>Sun, 31 May 2020 16:56:41 +0000</pubDate><guid>https://blog.steveyi.net/posts/tunnel-broker-bgp/</guid><description>&lt;h3 id="前言" >前言
+&lt;p>筆者對這方面有研究過，但還未達專家等級，如果有誤懇請讀者見諒&lt;/p></description></item><item><title>在 Ubuntu 系統下架設 Tunnel Broker 服務 (v4 to v6)</title><link>http://127.0.0.1:8000/posts/tunnel-broker-bgp/</link><pubDate>Sun, 31 May 2020 16:56:41 +0000</pubDate><guid>http://127.0.0.1:8000/posts/tunnel-broker-bgp/</guid><description>&lt;h3 id="前言" >前言
 &lt;span>
 &lt;a href="#%e5%89%8d%e8%a8%80">
 &lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
@@ -1983,7 +1983,7 @@ apt-get install sipcalc
 &lt;/h3>&lt;p>&lt;a href="https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sithttps://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/https://github.com/sskaje/6in4https://www.ciscopress.com/articles/article.asp?p=2154680">https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sit&lt;/a>&lt;br>
 &lt;a href="https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sithttps://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/https://github.com/sskaje/6in4https://www.ciscopress.com/articles/article.asp?p=2154680">https://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/&lt;/a>&lt;br>
 &lt;a href="https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sithttps://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/https://github.com/sskaje/6in4https://www.ciscopress.com/articles/article.asp?p=2154680">https://github.com/sskaje/6in4&lt;/a>&lt;br>
-&lt;a href="https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sithttps://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/https://github.com/sskaje/6in4https://www.ciscopress.com/articles/article.asp?p=2154680">https://www.ciscopress.com/articles/article.asp?p=2154680&lt;/a>&lt;/p></description></item><item><title>使用 TeamViewer 遠端操作 Android 手機</title><link>https://blog.steveyi.net/posts/teamviewer-android/</link><pubDate>Tue, 26 May 2020 10:09:17 +0000</pubDate><guid>https://blog.steveyi.net/posts/teamviewer-android/</guid><description>&lt;p>需要用到Android手機但常常忘記帶出門嗎？&lt;br>
+&lt;a href="https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sithttps://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/https://github.com/sskaje/6in4https://www.ciscopress.com/articles/article.asp?p=2154680">https://www.ciscopress.com/articles/article.asp?p=2154680&lt;/a>&lt;/p></description></item><item><title>使用 TeamViewer 遠端操作 Android 手機</title><link>http://127.0.0.1:8000/posts/teamviewer-android/</link><pubDate>Tue, 26 May 2020 10:09:17 +0000</pubDate><guid>http://127.0.0.1:8000/posts/teamviewer-android/</guid><description>&lt;p>需要用到Android手機但常常忘記帶出門嗎？&lt;br>
 這時候TeamViewer就很好用了！&lt;br>
 但要將其從系統的自動殺後台清單移除&lt;/p>
 &lt;p>遠端操作功能適用Android 5~Android 8&lt;br>
@@ -2003,7 +2003,7 @@ Android 9以上適用遠端查看&lt;br>
 &lt;p>儀表板頁面可以顯示手機資訊，遠端控制頁面可以按圈起來的地方放大&lt;/p>
 &lt;p>&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020052609562446.gif" alt="">&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020052610054826.png" alt="">&lt;/p>
-&lt;p>可以用手機控制手機唷&lt;/p></description></item><item><title>使用 Scrcpy 輕鬆安裝 APK 檔案到手機內</title><link>https://blog.steveyi.net/posts/scrcpy-android-apk/</link><pubDate>Wed, 20 May 2020 08:52:47 +0000</pubDate><guid>https://blog.steveyi.net/posts/scrcpy-android-apk/</guid><description>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020052008515768.png" alt="">&lt;/p>
+&lt;p>可以用手機控制手機唷&lt;/p></description></item><item><title>使用 Scrcpy 輕鬆安裝 APK 檔案到手機內</title><link>http://127.0.0.1:8000/posts/scrcpy-android-apk/</link><pubDate>Wed, 20 May 2020 08:52:47 +0000</pubDate><guid>http://127.0.0.1:8000/posts/scrcpy-android-apk/</guid><description>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020052008515768.png" alt="">&lt;/p>
 &lt;p>首先我們會先需要安裝Scrcpy並打開它。&lt;br>
 &lt;a href="https://blog.steveyi.net/scrcpy-android">安裝方法在此&lt;/a>&lt;/p>
 &lt;p>如果使用的是小米手機(如果不是的話請跳過這部分)，&lt;br>
@@ -2024,7 +2024,7 @@ Android 9以上適用遠端查看&lt;br>
 &lt;p>完成時Mac終端機視窗會寫「&lt;code>Success&lt;/code>」表示安裝成功&lt;br>
 實測安裝完的程式也能正常開啟的&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020052008425289.png" alt="">&lt;/p>
-&lt;p>&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020052008464950.gif" alt="">&lt;/p></description></item><item><title>使用 Scrcpy，由電腦操作 Android 手機</title><link>https://blog.steveyi.net/posts/scrcpy-android/</link><pubDate>Tue, 19 May 2020 15:41:11 +0000</pubDate><guid>https://blog.steveyi.net/posts/scrcpy-android/</guid><description>&lt;p>前情提要：由於筆者的手機螢幕忽然壞掉了，液晶會顯示但沒有背光照亮，需要用強光照射才能勉強查看畫面，但筆者依然需要使用該手機來搬移裡面重要資料以及測試Android程式等，所以一定要想辦法讓它可以操作！  (因為筆者目前主要使用iPhone)&lt;/p>
+&lt;p>&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020052008464950.gif" alt="">&lt;/p></description></item><item><title>使用 Scrcpy，由電腦操作 Android 手機</title><link>http://127.0.0.1:8000/posts/scrcpy-android/</link><pubDate>Tue, 19 May 2020 15:41:11 +0000</pubDate><guid>http://127.0.0.1:8000/posts/scrcpy-android/</guid><description>&lt;p>前情提要：由於筆者的手機螢幕忽然壞掉了，液晶會顯示但沒有背光照亮，需要用強光照射才能勉強查看畫面，但筆者依然需要使用該手機來搬移裡面重要資料以及測試Android程式等，所以一定要想辦法讓它可以操作！  (因為筆者目前主要使用iPhone)&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051917331789.jpg" alt="">&lt;/p>
 &lt;p>&lt;em>（只能在強光照射下隱約看到畫面）&lt;/em>&lt;/p>
 &lt;p>需求:PC或是Mac、配備Android 5.0或更高版本的裝置&lt;/p>
@@ -2191,7 +2191,7 @@ Android 9以上適用遠端查看&lt;br>
 &lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
 &lt;/a>
 &lt;/span>
-&lt;/h2>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051916163290.jpeg" alt="">&lt;/p></description></item><item><title>在 Linux 系統上安裝 Wireguard</title><link>https://blog.steveyi.net/posts/how-to-install-wireguard/</link><pubDate>Sat, 16 May 2020 11:51:52 +0000</pubDate><guid>https://blog.steveyi.net/posts/how-to-install-wireguard/</guid><description>&lt;p>&lt;a href="https://wireguard.com">Wireguard&lt;/a>是一個點對點加密網路&lt;/p>
+&lt;/h2>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051916163290.jpeg" alt="">&lt;/p></description></item><item><title>在 Linux 系統上安裝 Wireguard</title><link>http://127.0.0.1:8000/posts/how-to-install-wireguard/</link><pubDate>Sat, 16 May 2020 11:51:52 +0000</pubDate><guid>http://127.0.0.1:8000/posts/how-to-install-wireguard/</guid><description>&lt;p>&lt;a href="https://wireguard.com">Wireguard&lt;/a>是一個點對點加密網路&lt;/p>
 &lt;p>一直以來，我都使用它來管理我所有的雲端主機&lt;/p>
 &lt;p>今天就來分享一下安裝方法吧！&lt;/p>
 &lt;p>安裝指令請參考 &lt;a href="https://www.wireguard.com/install/">https://www.wireguard.com/install/&lt;/a>&lt;/p>
@@ -2222,7 +2222,7 @@ wg-quick up wg0
 &lt;pre tabindex="0">&lt;code>systemctl enable wg-quick@wg0
 &lt;/code>&lt;/pre>&lt;p>接著可以嘗試ping看看，如果有響應的話&lt;/p>
 &lt;p>代表成功了！&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051612102187.png" alt="">&lt;/p></description></item><item><title>建立 Cloud Identity 帳戶</title><link>https://blog.steveyi.net/posts/create-cloud-identity/</link><pubDate>Fri, 15 May 2020 20:35:11 +0000</pubDate><guid>https://blog.steveyi.net/posts/create-cloud-identity/</guid><description>&lt;p>首先，進入 &lt;a href="https://gsuite.google.com/signup/gcpidentity/welcome">Cloud Identity 申請頁面&lt;/a> 點擊下一頁&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051612102187.png" alt="">&lt;/p></description></item><item><title>建立 Cloud Identity 帳戶</title><link>http://127.0.0.1:8000/posts/create-cloud-identity/</link><pubDate>Fri, 15 May 2020 20:35:11 +0000</pubDate><guid>http://127.0.0.1:8000/posts/create-cloud-identity/</guid><description>&lt;p>首先，進入 &lt;a href="https://gsuite.google.com/signup/gcpidentity/welcome">Cloud Identity 申請頁面&lt;/a> 點擊下一頁&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051520063750.png" alt="">&lt;/p>
 &lt;p>接著輸入公司名稱(可以隨意輸入)，員工數量(隨意選擇) 把它當作一個團隊&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051520064943.png" alt="">&lt;/p>
@@ -2239,7 +2239,7 @@ wg-quick up wg0
 &lt;p>當出現這個頁面時，代表註冊完成了！&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051520091652.png" alt="">&lt;/p>
 &lt;p>接著我們需要驗證網域&lt;/p>
-&lt;p>請看下一篇文章 - &lt;a href="https://blog.steveyi.net/cloud-identity-setting/">Cloud Identity 驗證網域及建立帳號&lt;/a>&lt;/p></description></item><item><title>刪除 G suite 組織</title><link>https://blog.steveyi.net/posts/delete-gsuite/</link><pubDate>Fri, 15 May 2020 18:17:25 +0000</pubDate><guid>https://blog.steveyi.net/posts/delete-gsuite/</guid><description>&lt;p>之前有跟大家分享&lt;a href="https://blog.steveyi.net/register-gsuite/">註冊G Suite帳號&lt;/a>的方式，最近想將 &lt;a href="https://support.google.com/cloudidentity/answer/7319251?hl=zh-Hant">Cloud Identity免費版&lt;/a> 的G Suite組織刪除&lt;/p>
+&lt;p>請看下一篇文章 - &lt;a href="https://blog.steveyi.net/cloud-identity-setting/">Cloud Identity 驗證網域及建立帳號&lt;/a>&lt;/p></description></item><item><title>刪除 G suite 組織</title><link>http://127.0.0.1:8000/posts/delete-gsuite/</link><pubDate>Fri, 15 May 2020 18:17:25 +0000</pubDate><guid>http://127.0.0.1:8000/posts/delete-gsuite/</guid><description>&lt;p>之前有跟大家分享&lt;a href="https://blog.steveyi.net/register-gsuite/">註冊G Suite帳號&lt;/a>的方式，最近想將 &lt;a href="https://support.google.com/cloudidentity/answer/7319251?hl=zh-Hant">Cloud Identity免費版&lt;/a> 的G Suite組織刪除&lt;/p>
 &lt;p>由於完全沒有刪除過G Suite組織，所以稍微爬文了一下&lt;br>
 大致整理了一下刪除的方式&lt;/p>
 &lt;p>重要提醒：&lt;br>
@@ -2254,7 +2254,7 @@ wg-quick up wg0
 &lt;p>接著會提示你，這個步驟無法復原&lt;br>
 打勾後點擊 刪除帳號&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051515413046.png" alt="">&lt;/p>
-&lt;p>接著帳號就刪除囉！&lt;/p></description></item><item><title>Backblaze B2 支援 S3 API 了！</title><link>https://blog.steveyi.net/posts/backblaze-b2-compatible-s3-api/</link><pubDate>Thu, 14 May 2020 03:08:02 +0000</pubDate><guid>https://blog.steveyi.net/posts/backblaze-b2-compatible-s3-api/</guid><description>&lt;p>前幾天打開 Backblaze 後，看到一行大大的字&lt;/p>
+&lt;p>接著帳號就刪除囉！&lt;/p></description></item><item><title>Backblaze B2 支援 S3 API 了！</title><link>http://127.0.0.1:8000/posts/backblaze-b2-compatible-s3-api/</link><pubDate>Thu, 14 May 2020 03:08:02 +0000</pubDate><guid>http://127.0.0.1:8000/posts/backblaze-b2-compatible-s3-api/</guid><description>&lt;p>前幾天打開 Backblaze 後，看到一行大大的字&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051402585860.png" alt="">&lt;/p>
 &lt;p>沒錯！S3 API 跟 Backblaze B2 兼容啦！&lt;/p>
 &lt;p>S3 API 是目前市面上最流行的協定，很多軟硬體都兼容&lt;/p>
@@ -2270,7 +2270,7 @@ wg-quick up wg0
 &lt;p>有關於一些 B2 的文章介紹:&lt;/p>
 &lt;p>&lt;a href="https://blog.steveyi.net/backblaze-b2/">Backblaze B2 低價的雲端數據存儲服務&lt;/a>&lt;br>
 &lt;a href="https://blog.steveyi.net/b2-cfworkers/">Backblaze B2 和 Cloudflare Workers 設定自訂域名&lt;/a>&lt;br>
-&lt;a href="https://blog.steveyi.net/backblaze-eu-central/">BackBlaze 宣布第一個歐洲數據中心啟用&lt;/a>&lt;/p></description></item><item><title>Backblaze B2 低價的雲端數據存儲服務</title><link>https://blog.steveyi.net/posts/backblaze-b2/</link><pubDate>Mon, 11 May 2020 09:35:00 +0000</pubDate><guid>https://blog.steveyi.net/posts/backblaze-b2/</guid><description>&lt;p>之前學習建站之時，考量到一個問題！&lt;br>
+&lt;a href="https://blog.steveyi.net/backblaze-eu-central/">BackBlaze 宣布第一個歐洲數據中心啟用&lt;/a>&lt;/p></description></item><item><title>Backblaze B2 低價的雲端數據存儲服務</title><link>http://127.0.0.1:8000/posts/backblaze-b2/</link><pubDate>Mon, 11 May 2020 09:35:00 +0000</pubDate><guid>http://127.0.0.1:8000/posts/backblaze-b2/</guid><description>&lt;p>之前學習建站之時，考量到一個問題！&lt;br>
 如果今天我的流量暴漲，文章變多，我的圖片空間及流量會不會也跟著變多&lt;br>
 所以在網路上搜尋了一些對象存處服務，找到了一間便宜的對象存處提供商－&lt;a href="https://www.backblaze.com/">Backblaze&lt;/a>&lt;/p>
 &lt;h2 id="什麼是對象存處" >什麼是對象存處
@@ -2352,7 +2352,7 @@ wg-quick up wg0
 &lt;/span>
 &lt;/h2>&lt;p>Backblaze 真的是我找到最實惠的靜態存處服務&lt;br>
 價格超優！而且可以搭配 Cloudflare 綁定自訂網域及 CDN&lt;br>
-不知道大家有沒有發現，本站的圖片皆是放置在 Backblaze 並啟用 Cloudflare CDN 加速唷！&lt;/p></description></item><item><title>透過 Github 託管靜態網頁 - Github Pages</title><link>https://blog.steveyi.net/posts/github-static-website/</link><pubDate>Wed, 22 Apr 2020 14:09:46 +0000</pubDate><guid>https://blog.steveyi.net/posts/github-static-website/</guid><description>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-12.png" alt="">&lt;/p>
+不知道大家有沒有發現，本站的圖片皆是放置在 Backblaze 並啟用 Cloudflare CDN 加速唷！&lt;/p></description></item><item><title>透過 Github 託管靜態網頁 - Github Pages</title><link>http://127.0.0.1:8000/posts/github-static-website/</link><pubDate>Wed, 22 Apr 2020 14:09:46 +0000</pubDate><guid>http://127.0.0.1:8000/posts/github-static-website/</guid><description>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-12.png" alt="">&lt;/p>
 &lt;p>首先，進入Github 點擊左方綠色按鈕的 &lt;a href="https://github.com/new">New&lt;/a>&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-1-1920x1142.png" alt="">&lt;/p>
 &lt;p>輸入Repository名稱（自定義）&lt;br>
@@ -2382,7 +2382,7 @@ wg-quick up wg0
 &lt;p>接著就會產生子網域，就可以嘗試進入網站囉！&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-12.png" alt="">&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-11-1920x1142.png" alt="">&lt;/p>
-&lt;p>下次再來補充綁定自訂網域及SSL的方式吧！&lt;/p></description></item><item><title>Mailgun + Gmail 達成自訂網域郵箱</title><link>https://blog.steveyi.net/posts/mailgun-gmail-custom-domain-email/</link><pubDate>Wed, 22 Apr 2020 12:48:48 +0000</pubDate><guid>https://blog.steveyi.net/posts/mailgun-gmail-custom-domain-email/</guid><description>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-14.jpg" alt="">&lt;/p>
+&lt;p>下次再來補充綁定自訂網域及SSL的方式吧！&lt;/p></description></item><item><title>Mailgun + Gmail 達成自訂網域郵箱</title><link>http://127.0.0.1:8000/posts/mailgun-gmail-custom-domain-email/</link><pubDate>Wed, 22 Apr 2020 12:48:48 +0000</pubDate><guid>http://127.0.0.1:8000/posts/mailgun-gmail-custom-domain-email/</guid><description>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-14.jpg" alt="">&lt;/p>
 &lt;p>小時候總是很好奇寄件者後方的網域名稱是什麼，後來接觸到網站架設後，註冊了許多網域（現在手上大概6個網域左右)，也慢慢解開了小時候的疑惑&lt;/p>
 &lt;p>今天就來分享一下 Mailgun + Gmail 自訂網域郵箱的方法吧！&lt;/p>
 &lt;p>首先，先註冊 &lt;a href="https://www.mailgun.com/">Mailgun&lt;/a>，預設有 5000 封信件額度&lt;br>
@@ -2425,7 +2425,7 @@ mailgun 的 SMTP 伺服器是 smtp.mailgun.org&lt;/p>
 &lt;p>將驗證碼輸入上去就完成囉！&lt;/p>
 &lt;p>後記，好香 有網域信箱就是香（？🤩&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-14.jpg" alt="">&lt;/p>
-&lt;p>工具：&lt;a href="https://toolbox.googleapps.com/">G Suite工具箱&lt;/a>（檢測 DNS 問題）&lt;/p></description></item><item><title>Cloudflare 新服務 spectrum 設定教學</title><link>https://blog.steveyi.net/posts/hot-to-set-cloudflare-spectrum/</link><pubDate>Wed, 15 Apr 2020 08:50:06 +0000</pubDate><guid>https://blog.steveyi.net/posts/hot-to-set-cloudflare-spectrum/</guid><description>&lt;p>今天早上打開&lt;a href="https://facebook.com/">FaceBook&lt;/a>時，發現&lt;a href="https://cloudflare.com/">Cloudflare&lt;/a>推出了一個新服務 - &lt;a href="https://cfl.re/3efcOhv">Spectrum&lt;/a>&lt;br>
+&lt;p>工具：&lt;a href="https://toolbox.googleapps.com/">G Suite工具箱&lt;/a>（檢測 DNS 問題）&lt;/p></description></item><item><title>Cloudflare 新服務 spectrum 設定教學</title><link>http://127.0.0.1:8000/posts/hot-to-set-cloudflare-spectrum/</link><pubDate>Wed, 15 Apr 2020 08:50:06 +0000</pubDate><guid>http://127.0.0.1:8000/posts/hot-to-set-cloudflare-spectrum/</guid><description>&lt;p>今天早上打開&lt;a href="https://facebook.com/">FaceBook&lt;/a>時，發現&lt;a href="https://cloudflare.com/">Cloudflare&lt;/a>推出了一個新服務 - &lt;a href="https://cfl.re/3efcOhv">Spectrum&lt;/a>&lt;br>
 目前是提供給所有付費用戶使用，不知道未來有沒有機會開放給免費客戶&lt;br>
 官方部落格連結: &lt;a href="https://cfl.re/3efcOhv">https://cfl.re/3efcOhv&lt;/a>&lt;/p>
 &lt;p>正好我有幾個網域有使用Plesk Plus的服務（此服務已下架），算是Cloudflare Pro版本 所以也可以開通這個功能！&lt;/p>
@@ -2448,7 +2448,7 @@ Business版本提供10GB流量/月&lt;br>
 超過1GB，以0.1USD計價&lt;br>
 &lt;a href="https://www.cloudflare.com/products/cloudflare-spectrum/">https://www.cloudflare.com/products/cloudflare-spectrum/&lt;/a>&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020050916464540-1920x1142.png" alt="">&lt;/p>
-&lt;p>對於DDOS防禦很頭痛的可以試試看～！&lt;/p></description></item><item><title>在 Vultr 使用 Bird6 廣播 IPv6</title><link>https://blog.steveyi.net/posts/use-bird6-broadcast-ipv6-vultr/</link><pubDate>Fri, 10 Apr 2020 02:21:55 +0000</pubDate><guid>https://blog.steveyi.net/posts/use-bird6-broadcast-ipv6-vultr/</guid><description>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/vu-00.png" alt="">&lt;/p>
+&lt;p>對於DDOS防禦很頭痛的可以試試看～！&lt;/p></description></item><item><title>在 Vultr 使用 Bird6 廣播 IPv6</title><link>http://127.0.0.1:8000/posts/use-bird6-broadcast-ipv6-vultr/</link><pubDate>Fri, 10 Apr 2020 02:21:55 +0000</pubDate><guid>http://127.0.0.1:8000/posts/use-bird6-broadcast-ipv6-vultr/</guid><description>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/vu-00.png" alt="">&lt;/p>
 &lt;p>&lt;strong>建議可以參考於 2021 年 01 月 24 日 的 &lt;a href="https://blog.steveyi.net/posts/make-internal-network-by-bgp/">透過 BGP 與朋友組成內網&lt;/a> 文章&lt;/strong>&lt;/p>
 &lt;p>這次就來分享一下在 &lt;a href="https://vultr.com">Vultr&lt;/a> 廣播IP吧！&lt;/p>
 &lt;h1 id="設置-as-號碼及-ip-前綴" >&lt;strong>設置 AS 號碼及 IP 前綴&lt;/strong>
@@ -2507,7 +2507,7 @@ protocol device 
 }
 &lt;/code>&lt;/pre>&lt;p>設置好後，我們重啟bird6&lt;/p>
 &lt;pre tabindex="0">&lt;code>service bird6 restart
-&lt;/code>&lt;/pre>&lt;p>接著我們就可以嘗試追蹤路由看看囉！&lt;/p></description></item><item><title>透過電腦使用USB傳送網際網路連線給手機 (USB Reverse Tethering)</title><link>https://blog.steveyi.net/posts/usb-reverse-tethering/</link><pubDate>Tue, 07 Apr 2020 04:57:33 +0000</pubDate><guid>https://blog.steveyi.net/posts/usb-reverse-tethering/</guid><description>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/usb-reverse-tethering-.png" alt="">&lt;/p>
+&lt;/code>&lt;/pre>&lt;p>接著我們就可以嘗試追蹤路由看看囉！&lt;/p></description></item><item><title>透過電腦使用USB傳送網際網路連線給手機 (USB Reverse Tethering)</title><link>http://127.0.0.1:8000/posts/usb-reverse-tethering/</link><pubDate>Tue, 07 Apr 2020 04:57:33 +0000</pubDate><guid>http://127.0.0.1:8000/posts/usb-reverse-tethering/</guid><description>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/usb-reverse-tethering-.png" alt="">&lt;/p>
 &lt;p>本篇教學使用搭載Android 5.0.2，Wi-Fi和藍芽損壞的手機搭配Windows 10做示範。&lt;/p>
 &lt;p>請注意:不一定保證每一隻手機都相容，就算相容還是有一些App不認得此類型連接方式 (它們通常只認得行動數據和Wi-Fi連接)&lt;/p>
 &lt;p>本篇著重於使用Windows平台進行的部分，所以不討論其他作業系統，其他作業系統理應當也是差不多才對。請讓電腦先安裝手機的驅動程式&lt;/p>
@@ -2554,7 +2554,7 @@ protocol device 
 &lt;p>如果有因本教學造成任何爭議，本作者一蓋不負責&lt;/p>
 &lt;p>對於非本作者創作之相關資訊，或是非本作者控制或測試之獨立網站，不得解釋本作者為其推薦或背書。&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/cc.png" alt="">&lt;/p>
-&lt;p>© iambjlu&lt;/p></description></item><item><title>使用 IFTTT 將未接來電、簡訊轉送至 LINE</title><link>https://blog.steveyi.net/posts/ifttt-forward-to-line/</link><pubDate>Tue, 07 Apr 2020 04:56:37 +0000</pubDate><guid>https://blog.steveyi.net/posts/ifttt-forward-to-line/</guid><description>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/39743.jpg" alt="">&lt;/p>
+&lt;p>© iambjlu&lt;/p></description></item><item><title>使用 IFTTT 將未接來電、簡訊轉送至 LINE</title><link>http://127.0.0.1:8000/posts/ifttt-forward-to-line/</link><pubDate>Tue, 07 Apr 2020 04:56:37 +0000</pubDate><guid>http://127.0.0.1:8000/posts/ifttt-forward-to-line/</guid><description>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/39743.jpg" alt="">&lt;/p>
 &lt;p>&lt;strong>準備工作&lt;/strong>&lt;br>
 首先，需要先註冊或登入IFTTT (&lt;a href="http://ifttt.com">ifttt.com&lt;/a>)&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-1.png" alt="">&lt;/p>
@@ -2662,7 +2662,7 @@ protocol device 
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-40.png" alt="">&lt;/p>
 &lt;p>接下來，如果有未接來電就會轉發到LINE提醒囉&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/ifttt-forward-to-line-41.png" alt="">&lt;/p>
-&lt;p>全篇教學結束&lt;/p></description></item><item><title>[教學] AWS Route 53 代管DNS</title><link>https://blog.steveyi.net/posts/aws-route53/</link><pubDate>Mon, 06 Apr 2020 14:38:57 +0000</pubDate><guid>https://blog.steveyi.net/posts/aws-route53/</guid><description>&lt;p>從2017年 &lt;a href="https://diary.steveyi.net">註冊了第一個網域之後&lt;/a>，DNS 代管商一直是我在研究的一個部分！&lt;br>
+&lt;p>全篇教學結束&lt;/p></description></item><item><title>[教學] AWS Route 53 代管DNS</title><link>http://127.0.0.1:8000/posts/aws-route53/</link><pubDate>Mon, 06 Apr 2020 14:38:57 +0000</pubDate><guid>http://127.0.0.1:8000/posts/aws-route53/</guid><description>&lt;p>從2017年 &lt;a href="https://diary.steveyi.net">註冊了第一個網域之後&lt;/a>，DNS 代管商一直是我在研究的一個部分！&lt;br>
 今天來推薦一下由 &lt;a href="https://aws.amazon.com">AWS&lt;/a> 推出的 DNS 代管服務 - &lt;a href="https://aws.amazon.com/tw/route53/">Route 53&lt;/a>&lt;/p>
 &lt;p>前置作業：&lt;br>
 &lt;a href="https://blog.steveyi.net/signup-aws-account/">AWS帳號&lt;/a>&lt;br>
@@ -2692,7 +2692,7 @@ protocol device 
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020050917101357-scaled.jpg" alt="">&lt;/p>
 &lt;p>點擊變更後，將原本的紀錄刪除，並將 AWS Route 53 自動產生的 NS 紀錄貼上去&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020050917103474.png" alt="">&lt;/p>
-&lt;p>接著就等待生效囉！大約 24-48 小時生效（實際上應該 5-10 分鐘生效 XD）&lt;/p></description></item><item><title>在 Gandi 購買網域</title><link>https://blog.steveyi.net/posts/register-domain-at-gandi/</link><pubDate>Fri, 03 Apr 2020 18:40:19 +0000</pubDate><guid>https://blog.steveyi.net/posts/register-domain-at-gandi/</guid><description>&lt;p>之前有跟大家分享將網域從 Google 移轉至 Gandi 的過程 &lt;a href="https://blog.steveyi.net/transfer-domain-from-google-to-gandi/">點我看文章&lt;/a>&lt;br>
+&lt;p>接著就等待生效囉！大約 24-48 小時生效（實際上應該 5-10 分鐘生效 XD）&lt;/p></description></item><item><title>在 Gandi 購買網域</title><link>http://127.0.0.1:8000/posts/register-domain-at-gandi/</link><pubDate>Fri, 03 Apr 2020 18:40:19 +0000</pubDate><guid>http://127.0.0.1:8000/posts/register-domain-at-gandi/</guid><description>&lt;p>之前有跟大家分享將網域從 Google 移轉至 Gandi 的過程 &lt;a href="https://blog.steveyi.net/transfer-domain-from-google-to-gandi/">點我看文章&lt;/a>&lt;br>
 本篇就來分享一下 在 Gandi 購買網域的過程吧！&lt;/p>
 &lt;p>前置準備：&lt;br>
 錢（用來註冊網域的費用）&lt;/p>
@@ -2708,7 +2708,7 @@ protocol device 
 &lt;p>付款完成後，系統就會建立網域資料 可以在&lt;a href="https://admin.gandi.net/domain/incoming">這裡查看狀態&lt;/a>&lt;/p>
 &lt;p>建立完成後，會收到一封電子郵件通知&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/register-domain-at-gandi-05-1920x1019.jpg" alt="">&lt;/p>
-&lt;p>接著就可以前往&lt;a href="https://admin.gandi.net">控制台&lt;/a>管理你的網域囉！&lt;/p></description></item><item><title>將網域從 Google Domains 轉出至 Gandi</title><link>https://blog.steveyi.net/posts/transfer-domain-from-google-to-gandi/</link><pubDate>Thu, 02 Apr 2020 02:55:55 +0000</pubDate><guid>https://blog.steveyi.net/posts/transfer-domain-from-google-to-gandi/</guid><description>&lt;p>這幾天收到Google Domains的通知信，通知網域即將要續費了&lt;/p>
+&lt;p>接著就可以前往&lt;a href="https://admin.gandi.net">控制台&lt;/a>管理你的網域囉！&lt;/p></description></item><item><title>將網域從 Google Domains 轉出至 Gandi</title><link>http://127.0.0.1:8000/posts/transfer-domain-from-google-to-gandi/</link><pubDate>Thu, 02 Apr 2020 02:55:55 +0000</pubDate><guid>http://127.0.0.1:8000/posts/transfer-domain-from-google-to-gandi/</guid><description>&lt;p>這幾天收到Google Domains的通知信，通知網域即將要續費了&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/transfer-domain-from-google-to-gandi-01-1920x1019.png" alt="">&lt;/p>
 &lt;p>正好前陣子打算將所有網域轉移到 &lt;a href="https://gandi.net">Gandi&lt;/a> 統一管理，趁著這次機會&lt;br>
 來分享一下如何將網域 轉出/轉入&lt;/p>
@@ -2742,7 +2742,7 @@ protocol device 
 &lt;p>PS.如果出現註冊商拒絕了這次移轉&lt;br>
 可能是因為你拒絕了電子郵件轉移授權、網域到期年限超過10年、或&amp;hellip;總總原因&lt;/p>
 &lt;p>如果你的網域不存在上方問題，建議你聯繫原本網域的註冊商客服&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/transfer-domain-from-google-to-gandi-13-1920x945.png" alt="">&lt;/p></description></item><item><title>申請 G Suite 帳號</title><link>https://blog.steveyi.net/posts/register-gsuite/</link><pubDate>Wed, 01 Apr 2020 03:13:48 +0000</pubDate><guid>https://blog.steveyi.net/posts/register-gsuite/</guid><description>&lt;p>相信大家應該都有使用過Gmail&lt;br>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/transfer-domain-from-google-to-gandi-13-1920x945.png" alt="">&lt;/p></description></item><item><title>申請 G Suite 帳號</title><link>http://127.0.0.1:8000/posts/register-gsuite/</link><pubDate>Wed, 01 Apr 2020 03:13:48 +0000</pubDate><guid>http://127.0.0.1:8000/posts/register-gsuite/</guid><description>&lt;p>相信大家應該都有使用過Gmail&lt;br>
 今天要來介紹的 G Suite 是由Google推出的企業服務，不過一般使用者也是可以申請的！&lt;/p>
 &lt;h2 id="事前準備" >事前準備：
 &lt;span>
@@ -2776,7 +2776,7 @@ protocol device 
 設定完成後，點擊&amp;quot;同意並繼續&amp;quot;！&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/register-gsuite-05.png" alt="">&lt;/p>
 &lt;p>接著就可以進入&lt;a href="https://admin.google.com">管理員管理面板&lt;/a>囉！&lt;/p>
-&lt;p>我們下次再來跟大家分享網域驗證等相關設定唷！&lt;/p></description></item><item><title>32 位元 iOS 裝置免電腦免 SHSH 降級到 8.4.1</title><link>https://blog.steveyi.net/posts/backtoios841/</link><pubDate>Mon, 30 Dec 2019 13:26:02 +0000</pubDate><guid>https://blog.steveyi.net/posts/backtoios841/</guid><description>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/9564cd1098c2183afddb9be15db99ddf781db6b1-770x439_c.jpeg" alt="">&lt;/p>
+&lt;p>我們下次再來跟大家分享網域驗證等相關設定唷！&lt;/p></description></item><item><title>32 位元 iOS 裝置免電腦免 SHSH 降級到 8.4.1</title><link>http://127.0.0.1:8000/posts/backtoios841/</link><pubDate>Mon, 30 Dec 2019 13:26:02 +0000</pubDate><guid>http://127.0.0.1:8000/posts/backtoios841/</guid><description>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/9564cd1098c2183afddb9be15db99ddf781db6b1-770x439_c.jpeg" alt="">&lt;/p>
 &lt;blockquote>
 &lt;p>有時會因爲蘋果的部分問題，會在各種環節出狀況，如果有任何錯誤請改天再試&lt;/p>
 &lt;p>蘋果的漏洞不是非常穩定，有一天我試了三次都不能用，改天再弄，一次就成功了，這有點碰運氣&lt;/p>
@@ -2857,7 +2857,7 @@ protocol device 
 &lt;p>安裝描述檔後&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/backtoios841-11.jpg" alt="">&lt;/p>
 &lt;p>backtoios841-11.jpg&lt;/p>
-&lt;p>大功告成！&lt;/p></description></item><item><title>專為 GCP 打造的 Windows 10 DD 鏡像</title><link>https://blog.steveyi.net/posts/gcp-windows-dd/</link><pubDate>Tue, 27 Aug 2019 15:07:49 +0000</pubDate><guid>https://blog.steveyi.net/posts/gcp-windows-dd/</guid><description>&lt;p>前陣子為了要在 GCP 使用 VPS，於是在一段時間裡製作了 Windows DD 鏡像&lt;br>
+&lt;p>大功告成！&lt;/p></description></item><item><title>專為 GCP 打造的 Windows 10 DD 鏡像</title><link>http://127.0.0.1:8000/posts/gcp-windows-dd/</link><pubDate>Tue, 27 Aug 2019 15:07:49 +0000</pubDate><guid>http://127.0.0.1:8000/posts/gcp-windows-dd/</guid><description>&lt;p>前陣子為了要在 GCP 使用 VPS，於是在一段時間裡製作了 Windows DD 鏡像&lt;br>
 分別是：&lt;br>
 1，中文繁體版 Windows 10 工作站專業版&lt;br>
 2，英文版 Windows 10 工作站專業版(尚未上傳)&lt;/p>
@@ -2885,7 +2885,7 @@ protocol device 
 帳號: Administrator&lt;br>
 密碼: steveyigame.com&lt;/p>
 &lt;/li>
-&lt;/ul></description></item><item><title>隱私權政策</title><link>https://blog.steveyi.net/posts/privacy-policy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.steveyi.net/posts/privacy-policy/</guid><description>&lt;p>非常歡迎您光臨「酷小易」（以下簡稱本網站），為了讓您能夠安心的使用本網站的各項服務與資訊，特此向您說明本網站的隱私權保護政策，以保障您的權益，請您詳閱下列內容：&lt;/p>
+&lt;/ul></description></item><item><title>隱私權政策</title><link>http://127.0.0.1:8000/posts/privacy-policy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://127.0.0.1:8000/posts/privacy-policy/</guid><description>&lt;p>非常歡迎您光臨「酷小易」（以下簡稱本網站），為了讓您能夠安心的使用本網站的各項服務與資訊，特此向您說明本網站的隱私權保護政策，以保障您的權益，請您詳閱下列內容：&lt;/p>
 &lt;h2 id="一隱私權保護政策的適用範圍" >一、隱私權保護政策的適用範圍
 &lt;span>
 &lt;a href="#%e4%b8%80%e9%9a%b1%e7%a7%81%e6%ac%8a%e4%bf%9d%e8%ad%b7%e6%94%bf%e7%ad%96%e7%9a%84%e9%81%a9%e7%94%a8%e7%af%84%e5%9c%8d">

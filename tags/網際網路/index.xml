@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>網際網路 on 小易的部落格</title><link>https://blog.steveyi.net/tags/%E7%B6%B2%E9%9A%9B%E7%B6%B2%E8%B7%AF/</link><description>小易的部落格 (網際網路)</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Sun, 27 Jun 2021 05:35:35 +0800</lastBuildDate><atom:link href="https://blog.steveyi.net/tags/%E7%B6%B2%E9%9A%9B%E7%B6%B2%E8%B7%AF/index.xml" rel="self" type="application/rss+xml"/><item><title>利用 AS-SET 建立過濾器</title><link>https://blog.steveyi.net/posts/using-as-set-to-make-filter/</link><pubDate>Sun, 27 Jun 2021 05:35:35 +0800</pubDate><guid>https://blog.steveyi.net/posts/using-as-set-to-make-filter/</guid><description>&lt;p>最近，為了跟一些新入坑的朋友們建立 BGP Peer，所以也順便來教他們怎麼使用 AS-SET 過濾。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>網際網路 on 小易的部落格</title><link>http://127.0.0.1:8000/tags/%E7%B6%B2%E9%9A%9B%E7%B6%B2%E8%B7%AF/</link><description>小易的部落格 (網際網路)</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Sun, 27 Jun 2021 05:35:35 +0800</lastBuildDate><atom:link href="http://127.0.0.1:8000/tags/%E7%B6%B2%E9%9A%9B%E7%B6%B2%E8%B7%AF/index.xml" rel="self" type="application/rss+xml"/><item><title>利用 AS-SET 建立過濾器</title><link>http://127.0.0.1:8000/posts/using-as-set-to-make-filter/</link><pubDate>Sun, 27 Jun 2021 05:35:35 +0800</pubDate><guid>http://127.0.0.1:8000/posts/using-as-set-to-make-filter/</guid><description>&lt;p>最近，為了跟一些新入坑的朋友們建立 BGP Peer，所以也順便來教他們怎麼使用 AS-SET 過濾。&lt;/p>
 &lt;h3 id="什麼是-as-set" >什麼是 AS-SET
 &lt;span>
 &lt;a href="#%e4%bb%80%e9%ba%bc%e6%98%af-as-set">
@@ -50,7 +50,7 @@ config
 route-map AS-STEVEYI_v4 permit 5
 match ip address prefix-list AS-STEVEYI_v4
 set community 60614:100
-&lt;/code>&lt;/pre>&lt;p>這樣就完成啦！&lt;/p></description></item><item><title>在 Linux 環境下無腦串接 Google 雲端硬碟</title><link>https://blog.steveyi.net/posts/linux-mount-googledrive-not-required-brain/</link><pubDate>Tue, 19 Jan 2021 12:25:49 +0000</pubDate><guid>https://blog.steveyi.net/posts/linux-mount-googledrive-not-required-brain/</guid><description>&lt;p>此篇教學使用的是 google-drive-ocamlfuse 這個軟體，筆者使用的環境是基於Ubuntu的Zorin OS 15.2系統作為示範。&lt;/p>
+&lt;/code>&lt;/pre>&lt;p>這樣就完成啦！&lt;/p></description></item><item><title>在 Linux 環境下無腦串接 Google 雲端硬碟</title><link>http://127.0.0.1:8000/posts/linux-mount-googledrive-not-required-brain/</link><pubDate>Tue, 19 Jan 2021 12:25:49 +0000</pubDate><guid>http://127.0.0.1:8000/posts/linux-mount-googledrive-not-required-brain/</guid><description>&lt;p>此篇教學使用的是 google-drive-ocamlfuse 這個軟體，筆者使用的環境是基於Ubuntu的Zorin OS 15.2系統作為示範。&lt;/p>
 &lt;p>首先需要先加入軟體源，請在終端機輸入（可以直接把這一串直接拷貝貼上）&lt;/p>
 &lt;p>sudo add-apt-repository ppa:alessandro-strada/ppa
 sudo apt-get update
@@ -72,7 +72,7 @@ sudo apt-get install google-drive-ocamlfuse
 &lt;p>如果想要退出掛載的話，可以在終端機使用以下指令&lt;/p>
 &lt;p>fusermount -u ~/GoogleDrive
 更多指令如果想要查詢看看，可以終端機輸入這個指令來做查詢&lt;/p>
-&lt;p>google-drive-ocamlfuse &amp;ndash;help&lt;/p></description></item><item><title>從 RIPE 申請屬於自己的 ASN</title><link>https://blog.steveyi.net/posts/get-asn-from-ripe/</link><pubDate>Sat, 21 Nov 2020 08:39:28 +0000</pubDate><guid>https://blog.steveyi.net/posts/get-asn-from-ripe/</guid><description>&lt;p>今天來講一下透過 LIR 在 RIPE 取得自己的 ASN&lt;/p>
+&lt;p>google-drive-ocamlfuse &amp;ndash;help&lt;/p></description></item><item><title>從 RIPE 申請屬於自己的 ASN</title><link>http://127.0.0.1:8000/posts/get-asn-from-ripe/</link><pubDate>Sat, 21 Nov 2020 08:39:28 +0000</pubDate><guid>http://127.0.0.1:8000/posts/get-asn-from-ripe/</guid><description>&lt;p>今天來講一下透過 LIR 在 RIPE 取得自己的 ASN&lt;/p>
 &lt;p>首先，可能有些人會很好奇&lt;/p>
 &lt;p>&lt;strong>為什麼要選擇 RIPE 呢？選擇 APNIC, ARIN 不好嗎？&lt;/strong>&lt;/p>
 &lt;p>筆者有兩個 ASN，分別是 RIPE 及 APNIC 下的&lt;br>
@@ -116,7 +116,7 @@ MAINTAINER, PERSON / ROLE, and ORGANIZATION object&lt;br>
 &lt;p>那一切都準備好後，LIR 會準備一分用戶協議，簽名完，LIR 就會把你的請求轉交給 RIPE 啦！&lt;br>
 當提交請求給 RIPE 時，大約 1-3 天就會發放 ASN 了&lt;/p>
 &lt;p>當拿到 ASN 之後，我們就可以來廣播自己的網路啦！&lt;br>
-那我們下一篇會再詳細地與大家分享廣播網路的細節&lt;/p></description></item><item><title>在 RIPE DataBase 建立 Object</title><link>https://blog.steveyi.net/posts/create-object-in-ripe-database/</link><pubDate>Sat, 21 Nov 2020 08:37:20 +0000</pubDate><guid>https://blog.steveyi.net/posts/create-object-in-ripe-database/</guid><description>&lt;p>在本篇文章中，將與大家分享如何在 RIPE DataBase 註冊 MAINTAINER, PERSON / ROLE, and ORGANIZATION object&lt;/p>
+那我們下一篇會再詳細地與大家分享廣播網路的細節&lt;/p></description></item><item><title>在 RIPE DataBase 建立 Object</title><link>http://127.0.0.1:8000/posts/create-object-in-ripe-database/</link><pubDate>Sat, 21 Nov 2020 08:37:20 +0000</pubDate><guid>http://127.0.0.1:8000/posts/create-object-in-ripe-database/</guid><description>&lt;p>在本篇文章中，將與大家分享如何在 RIPE DataBase 註冊 MAINTAINER, PERSON / ROLE, and ORGANIZATION object&lt;/p>
 &lt;p>這些對象也是註冊 ASN 必要的，如果要申請 ASN，可以參考 &lt;a href="https://blog.steveyi.net/get-asn-from-ripe/">這篇教學&lt;/a>&lt;/p>
 &lt;p>那首先，我們要先註冊 RIPE 的帳號 &lt;a href="https://access.ripe.net/registration">註冊網站在這&lt;/a>&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112108155764.png" alt="">&lt;/p>

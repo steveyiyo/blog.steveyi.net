@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>網站日誌 on 小易的部落格</title><link>https://blog.steveyi.net/tags/%E7%B6%B2%E7%AB%99%E6%97%A5%E8%AA%8C/</link><description>小易的部落格 (網站日誌)</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Fri, 15 May 2020 20:35:11 +0000</lastBuildDate><atom:link href="https://blog.steveyi.net/tags/%E7%B6%B2%E7%AB%99%E6%97%A5%E8%AA%8C/index.xml" rel="self" type="application/rss+xml"/><item><title>建立 Cloud Identity 帳戶</title><link>https://blog.steveyi.net/posts/create-cloud-identity/</link><pubDate>Fri, 15 May 2020 20:35:11 +0000</pubDate><guid>https://blog.steveyi.net/posts/create-cloud-identity/</guid><description>&lt;p>首先，進入 &lt;a href="https://gsuite.google.com/signup/gcpidentity/welcome">Cloud Identity 申請頁面&lt;/a> 點擊下一頁&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>網站日誌 on 小易的部落格</title><link>http://127.0.0.1:8000/tags/%E7%B6%B2%E7%AB%99%E6%97%A5%E8%AA%8C/</link><description>小易的部落格 (網站日誌)</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Fri, 15 May 2020 20:35:11 +0000</lastBuildDate><atom:link href="http://127.0.0.1:8000/tags/%E7%B6%B2%E7%AB%99%E6%97%A5%E8%AA%8C/index.xml" rel="self" type="application/rss+xml"/><item><title>建立 Cloud Identity 帳戶</title><link>http://127.0.0.1:8000/posts/create-cloud-identity/</link><pubDate>Fri, 15 May 2020 20:35:11 +0000</pubDate><guid>http://127.0.0.1:8000/posts/create-cloud-identity/</guid><description>&lt;p>首先，進入 &lt;a href="https://gsuite.google.com/signup/gcpidentity/welcome">Cloud Identity 申請頁面&lt;/a> 點擊下一頁&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051520063750.png" alt="">&lt;/p>
 &lt;p>接著輸入公司名稱(可以隨意輸入)，員工數量(隨意選擇) 把它當作一個團隊&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051520064943.png" alt="">&lt;/p>
@@ -15,7 +15,7 @@
 &lt;p>當出現這個頁面時，代表註冊完成了！&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051520091652.png" alt="">&lt;/p>
 &lt;p>接著我們需要驗證網域&lt;/p>
-&lt;p>請看下一篇文章 - &lt;a href="https://blog.steveyi.net/cloud-identity-setting/">Cloud Identity 驗證網域及建立帳號&lt;/a>&lt;/p></description></item><item><title>刪除 G suite 組織</title><link>https://blog.steveyi.net/posts/delete-gsuite/</link><pubDate>Fri, 15 May 2020 18:17:25 +0000</pubDate><guid>https://blog.steveyi.net/posts/delete-gsuite/</guid><description>&lt;p>之前有跟大家分享&lt;a href="https://blog.steveyi.net/register-gsuite/">註冊G Suite帳號&lt;/a>的方式，最近想將 &lt;a href="https://support.google.com/cloudidentity/answer/7319251?hl=zh-Hant">Cloud Identity免費版&lt;/a> 的G Suite組織刪除&lt;/p>
+&lt;p>請看下一篇文章 - &lt;a href="https://blog.steveyi.net/cloud-identity-setting/">Cloud Identity 驗證網域及建立帳號&lt;/a>&lt;/p></description></item><item><title>刪除 G suite 組織</title><link>http://127.0.0.1:8000/posts/delete-gsuite/</link><pubDate>Fri, 15 May 2020 18:17:25 +0000</pubDate><guid>http://127.0.0.1:8000/posts/delete-gsuite/</guid><description>&lt;p>之前有跟大家分享&lt;a href="https://blog.steveyi.net/register-gsuite/">註冊G Suite帳號&lt;/a>的方式，最近想將 &lt;a href="https://support.google.com/cloudidentity/answer/7319251?hl=zh-Hant">Cloud Identity免費版&lt;/a> 的G Suite組織刪除&lt;/p>
 &lt;p>由於完全沒有刪除過G Suite組織，所以稍微爬文了一下&lt;br>
 大致整理了一下刪除的方式&lt;/p>
 &lt;p>重要提醒：&lt;br>
@@ -30,7 +30,7 @@
 &lt;p>接著會提示你，這個步驟無法復原&lt;br>
 打勾後點擊 刪除帳號&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051515413046.png" alt="">&lt;/p>
-&lt;p>接著帳號就刪除囉！&lt;/p></description></item><item><title>Backblaze B2 低價的雲端數據存儲服務</title><link>https://blog.steveyi.net/posts/backblaze-b2/</link><pubDate>Mon, 11 May 2020 09:35:00 +0000</pubDate><guid>https://blog.steveyi.net/posts/backblaze-b2/</guid><description>&lt;p>之前學習建站之時，考量到一個問題！&lt;br>
+&lt;p>接著帳號就刪除囉！&lt;/p></description></item><item><title>Backblaze B2 低價的雲端數據存儲服務</title><link>http://127.0.0.1:8000/posts/backblaze-b2/</link><pubDate>Mon, 11 May 2020 09:35:00 +0000</pubDate><guid>http://127.0.0.1:8000/posts/backblaze-b2/</guid><description>&lt;p>之前學習建站之時，考量到一個問題！&lt;br>
 如果今天我的流量暴漲，文章變多，我的圖片空間及流量會不會也跟著變多&lt;br>
 所以在網路上搜尋了一些對象存處服務，找到了一間便宜的對象存處提供商－&lt;a href="https://www.backblaze.com/">Backblaze&lt;/a>&lt;/p>
 &lt;h2 id="什麼是對象存處" >什麼是對象存處
@@ -112,7 +112,7 @@
 &lt;/span>
 &lt;/h2>&lt;p>Backblaze 真的是我找到最實惠的靜態存處服務&lt;br>
 價格超優！而且可以搭配 Cloudflare 綁定自訂網域及 CDN&lt;br>
-不知道大家有沒有發現，本站的圖片皆是放置在 Backblaze 並啟用 Cloudflare CDN 加速唷！&lt;/p></description></item><item><title>透過 Github 託管靜態網頁 - Github Pages</title><link>https://blog.steveyi.net/posts/github-static-website/</link><pubDate>Wed, 22 Apr 2020 14:09:46 +0000</pubDate><guid>https://blog.steveyi.net/posts/github-static-website/</guid><description>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-12.png" alt="">&lt;/p>
+不知道大家有沒有發現，本站的圖片皆是放置在 Backblaze 並啟用 Cloudflare CDN 加速唷！&lt;/p></description></item><item><title>透過 Github 託管靜態網頁 - Github Pages</title><link>http://127.0.0.1:8000/posts/github-static-website/</link><pubDate>Wed, 22 Apr 2020 14:09:46 +0000</pubDate><guid>http://127.0.0.1:8000/posts/github-static-website/</guid><description>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-12.png" alt="">&lt;/p>
 &lt;p>首先，進入Github 點擊左方綠色按鈕的 &lt;a href="https://github.com/new">New&lt;/a>&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-1-1920x1142.png" alt="">&lt;/p>
 &lt;p>輸入Repository名稱（自定義）&lt;br>
@@ -142,7 +142,7 @@
 &lt;p>接著就會產生子網域，就可以嘗試進入網站囉！&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-12.png" alt="">&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-11-1920x1142.png" alt="">&lt;/p>
-&lt;p>下次再來補充綁定自訂網域及SSL的方式吧！&lt;/p></description></item><item><title>Mailgun + Gmail 達成自訂網域郵箱</title><link>https://blog.steveyi.net/posts/mailgun-gmail-custom-domain-email/</link><pubDate>Wed, 22 Apr 2020 12:48:48 +0000</pubDate><guid>https://blog.steveyi.net/posts/mailgun-gmail-custom-domain-email/</guid><description>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-14.jpg" alt="">&lt;/p>
+&lt;p>下次再來補充綁定自訂網域及SSL的方式吧！&lt;/p></description></item><item><title>Mailgun + Gmail 達成自訂網域郵箱</title><link>http://127.0.0.1:8000/posts/mailgun-gmail-custom-domain-email/</link><pubDate>Wed, 22 Apr 2020 12:48:48 +0000</pubDate><guid>http://127.0.0.1:8000/posts/mailgun-gmail-custom-domain-email/</guid><description>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-14.jpg" alt="">&lt;/p>
 &lt;p>小時候總是很好奇寄件者後方的網域名稱是什麼，後來接觸到網站架設後，註冊了許多網域（現在手上大概6個網域左右)，也慢慢解開了小時候的疑惑&lt;/p>
 &lt;p>今天就來分享一下 Mailgun + Gmail 自訂網域郵箱的方法吧！&lt;/p>
 &lt;p>首先，先註冊 &lt;a href="https://www.mailgun.com/">Mailgun&lt;/a>，預設有 5000 封信件額度&lt;br>
@@ -185,7 +185,7 @@ mailgun 的 SMTP 伺服器是 smtp.mailgun.org&lt;/p>
 &lt;p>將驗證碼輸入上去就完成囉！&lt;/p>
 &lt;p>後記，好香 有網域信箱就是香（？🤩&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-14.jpg" alt="">&lt;/p>
-&lt;p>工具：&lt;a href="https://toolbox.googleapps.com/">G Suite工具箱&lt;/a>（檢測 DNS 問題）&lt;/p></description></item><item><title>[教學] AWS Route 53 代管DNS</title><link>https://blog.steveyi.net/posts/aws-route53/</link><pubDate>Mon, 06 Apr 2020 14:38:57 +0000</pubDate><guid>https://blog.steveyi.net/posts/aws-route53/</guid><description>&lt;p>從2017年 &lt;a href="https://diary.steveyi.net">註冊了第一個網域之後&lt;/a>，DNS 代管商一直是我在研究的一個部分！&lt;br>
+&lt;p>工具：&lt;a href="https://toolbox.googleapps.com/">G Suite工具箱&lt;/a>（檢測 DNS 問題）&lt;/p></description></item><item><title>[教學] AWS Route 53 代管DNS</title><link>http://127.0.0.1:8000/posts/aws-route53/</link><pubDate>Mon, 06 Apr 2020 14:38:57 +0000</pubDate><guid>http://127.0.0.1:8000/posts/aws-route53/</guid><description>&lt;p>從2017年 &lt;a href="https://diary.steveyi.net">註冊了第一個網域之後&lt;/a>，DNS 代管商一直是我在研究的一個部分！&lt;br>
 今天來推薦一下由 &lt;a href="https://aws.amazon.com">AWS&lt;/a> 推出的 DNS 代管服務 - &lt;a href="https://aws.amazon.com/tw/route53/">Route 53&lt;/a>&lt;/p>
 &lt;p>前置作業：&lt;br>
 &lt;a href="https://blog.steveyi.net/signup-aws-account/">AWS帳號&lt;/a>&lt;br>
@@ -215,7 +215,7 @@ mailgun 的 SMTP 伺服器是 smtp.mailgun.org&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020050917101357-scaled.jpg" alt="">&lt;/p>
 &lt;p>點擊變更後，將原本的紀錄刪除，並將 AWS Route 53 自動產生的 NS 紀錄貼上去&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020050917103474.png" alt="">&lt;/p>
-&lt;p>接著就等待生效囉！大約 24-48 小時生效（實際上應該 5-10 分鐘生效 XD）&lt;/p></description></item><item><title>在 Gandi 購買網域</title><link>https://blog.steveyi.net/posts/register-domain-at-gandi/</link><pubDate>Fri, 03 Apr 2020 18:40:19 +0000</pubDate><guid>https://blog.steveyi.net/posts/register-domain-at-gandi/</guid><description>&lt;p>之前有跟大家分享將網域從 Google 移轉至 Gandi 的過程 &lt;a href="https://blog.steveyi.net/transfer-domain-from-google-to-gandi/">點我看文章&lt;/a>&lt;br>
+&lt;p>接著就等待生效囉！大約 24-48 小時生效（實際上應該 5-10 分鐘生效 XD）&lt;/p></description></item><item><title>在 Gandi 購買網域</title><link>http://127.0.0.1:8000/posts/register-domain-at-gandi/</link><pubDate>Fri, 03 Apr 2020 18:40:19 +0000</pubDate><guid>http://127.0.0.1:8000/posts/register-domain-at-gandi/</guid><description>&lt;p>之前有跟大家分享將網域從 Google 移轉至 Gandi 的過程 &lt;a href="https://blog.steveyi.net/transfer-domain-from-google-to-gandi/">點我看文章&lt;/a>&lt;br>
 本篇就來分享一下 在 Gandi 購買網域的過程吧！&lt;/p>
 &lt;p>前置準備：&lt;br>
 錢（用來註冊網域的費用）&lt;/p>
@@ -231,7 +231,7 @@ mailgun 的 SMTP 伺服器是 smtp.mailgun.org&lt;/p>
 &lt;p>付款完成後，系統就會建立網域資料 可以在&lt;a href="https://admin.gandi.net/domain/incoming">這裡查看狀態&lt;/a>&lt;/p>
 &lt;p>建立完成後，會收到一封電子郵件通知&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/register-domain-at-gandi-05-1920x1019.jpg" alt="">&lt;/p>
-&lt;p>接著就可以前往&lt;a href="https://admin.gandi.net">控制台&lt;/a>管理你的網域囉！&lt;/p></description></item><item><title>將網域從 Google Domains 轉出至 Gandi</title><link>https://blog.steveyi.net/posts/transfer-domain-from-google-to-gandi/</link><pubDate>Thu, 02 Apr 2020 02:55:55 +0000</pubDate><guid>https://blog.steveyi.net/posts/transfer-domain-from-google-to-gandi/</guid><description>&lt;p>這幾天收到Google Domains的通知信，通知網域即將要續費了&lt;/p>
+&lt;p>接著就可以前往&lt;a href="https://admin.gandi.net">控制台&lt;/a>管理你的網域囉！&lt;/p></description></item><item><title>將網域從 Google Domains 轉出至 Gandi</title><link>http://127.0.0.1:8000/posts/transfer-domain-from-google-to-gandi/</link><pubDate>Thu, 02 Apr 2020 02:55:55 +0000</pubDate><guid>http://127.0.0.1:8000/posts/transfer-domain-from-google-to-gandi/</guid><description>&lt;p>這幾天收到Google Domains的通知信，通知網域即將要續費了&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/transfer-domain-from-google-to-gandi-01-1920x1019.png" alt="">&lt;/p>
 &lt;p>正好前陣子打算將所有網域轉移到 &lt;a href="https://gandi.net">Gandi&lt;/a> 統一管理，趁著這次機會&lt;br>
 來分享一下如何將網域 轉出/轉入&lt;/p>

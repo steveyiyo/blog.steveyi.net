@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GCP on 小易的部落格</title><link>https://blog.steveyi.net/tags/gcp/</link><description>小易的部落格 (GCP)</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Fri, 15 May 2020 20:35:11 +0000</lastBuildDate><atom:link href="https://blog.steveyi.net/tags/gcp/index.xml" rel="self" type="application/rss+xml"/><item><title>建立 Cloud Identity 帳戶</title><link>https://blog.steveyi.net/posts/create-cloud-identity/</link><pubDate>Fri, 15 May 2020 20:35:11 +0000</pubDate><guid>https://blog.steveyi.net/posts/create-cloud-identity/</guid><description>&lt;p>首先，進入 &lt;a href="https://gsuite.google.com/signup/gcpidentity/welcome">Cloud Identity 申請頁面&lt;/a> 點擊下一頁&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GCP on 小易的部落格</title><link>http://127.0.0.1:8000/tags/gcp/</link><description>小易的部落格 (GCP)</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Fri, 15 May 2020 20:35:11 +0000</lastBuildDate><atom:link href="http://127.0.0.1:8000/tags/gcp/index.xml" rel="self" type="application/rss+xml"/><item><title>建立 Cloud Identity 帳戶</title><link>http://127.0.0.1:8000/posts/create-cloud-identity/</link><pubDate>Fri, 15 May 2020 20:35:11 +0000</pubDate><guid>http://127.0.0.1:8000/posts/create-cloud-identity/</guid><description>&lt;p>首先，進入 &lt;a href="https://gsuite.google.com/signup/gcpidentity/welcome">Cloud Identity 申請頁面&lt;/a> 點擊下一頁&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051520063750.png" alt="">&lt;/p>
 &lt;p>接著輸入公司名稱(可以隨意輸入)，員工數量(隨意選擇) 把它當作一個團隊&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051520064943.png" alt="">&lt;/p>
@@ -15,7 +15,7 @@
 &lt;p>當出現這個頁面時，代表註冊完成了！&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051520091652.png" alt="">&lt;/p>
 &lt;p>接著我們需要驗證網域&lt;/p>
-&lt;p>請看下一篇文章 - &lt;a href="https://blog.steveyi.net/cloud-identity-setting/">Cloud Identity 驗證網域及建立帳號&lt;/a>&lt;/p></description></item><item><title>刪除 G suite 組織</title><link>https://blog.steveyi.net/posts/delete-gsuite/</link><pubDate>Fri, 15 May 2020 18:17:25 +0000</pubDate><guid>https://blog.steveyi.net/posts/delete-gsuite/</guid><description>&lt;p>之前有跟大家分享&lt;a href="https://blog.steveyi.net/register-gsuite/">註冊G Suite帳號&lt;/a>的方式，最近想將 &lt;a href="https://support.google.com/cloudidentity/answer/7319251?hl=zh-Hant">Cloud Identity免費版&lt;/a> 的G Suite組織刪除&lt;/p>
+&lt;p>請看下一篇文章 - &lt;a href="https://blog.steveyi.net/cloud-identity-setting/">Cloud Identity 驗證網域及建立帳號&lt;/a>&lt;/p></description></item><item><title>刪除 G suite 組織</title><link>http://127.0.0.1:8000/posts/delete-gsuite/</link><pubDate>Fri, 15 May 2020 18:17:25 +0000</pubDate><guid>http://127.0.0.1:8000/posts/delete-gsuite/</guid><description>&lt;p>之前有跟大家分享&lt;a href="https://blog.steveyi.net/register-gsuite/">註冊G Suite帳號&lt;/a>的方式，最近想將 &lt;a href="https://support.google.com/cloudidentity/answer/7319251?hl=zh-Hant">Cloud Identity免費版&lt;/a> 的G Suite組織刪除&lt;/p>
 &lt;p>由於完全沒有刪除過G Suite組織，所以稍微爬文了一下&lt;br>
 大致整理了一下刪除的方式&lt;/p>
 &lt;p>重要提醒：&lt;br>
@@ -30,7 +30,7 @@
 &lt;p>接著會提示你，這個步驟無法復原&lt;br>
 打勾後點擊 刪除帳號&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051515413046.png" alt="">&lt;/p>
-&lt;p>接著帳號就刪除囉！&lt;/p></description></item><item><title>申請 G Suite 帳號</title><link>https://blog.steveyi.net/posts/register-gsuite/</link><pubDate>Wed, 01 Apr 2020 03:13:48 +0000</pubDate><guid>https://blog.steveyi.net/posts/register-gsuite/</guid><description>&lt;p>相信大家應該都有使用過Gmail&lt;br>
+&lt;p>接著帳號就刪除囉！&lt;/p></description></item><item><title>申請 G Suite 帳號</title><link>http://127.0.0.1:8000/posts/register-gsuite/</link><pubDate>Wed, 01 Apr 2020 03:13:48 +0000</pubDate><guid>http://127.0.0.1:8000/posts/register-gsuite/</guid><description>&lt;p>相信大家應該都有使用過Gmail&lt;br>
 今天要來介紹的 G Suite 是由Google推出的企業服務，不過一般使用者也是可以申請的！&lt;/p>
 &lt;h2 id="事前準備" >事前準備：
 &lt;span>
