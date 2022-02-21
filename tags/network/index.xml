@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Network on 小易的部落格</title><link>http://127.0.0.1:8000/tags/network/</link><description>小易的部落格 (Network)</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Mon, 08 Mar 2021 13:20:00 +0800</lastBuildDate><atom:link href="http://127.0.0.1:8000/tags/network/index.xml" rel="self" type="application/rss+xml"/><item><title>在 iptables 上設定 NAT</title><link>http://127.0.0.1:8000/posts/iptables_nat/</link><pubDate>Mon, 08 Mar 2021 13:20:00 +0800</pubDate><guid>http://127.0.0.1:8000/posts/iptables_nat/</guid><description>&lt;p>不久之前，小易將家裡的一台電腦裝上了 Ubuntu 20.04，並把它當成了軟路由在使用。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Network on 小易的部落格</title><link>https://blog.steveyi.net/tags/network/</link><description>小易的部落格 (Network)</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Mon, 08 Mar 2021 13:20:00 +0800</lastBuildDate><atom:link href="https://blog.steveyi.net/tags/network/index.xml" rel="self" type="application/rss+xml"/><item><title>在 iptables 上設定 NAT</title><link>https://blog.steveyi.net/posts/iptables_nat/</link><pubDate>Mon, 08 Mar 2021 13:20:00 +0800</pubDate><guid>https://blog.steveyi.net/posts/iptables_nat/</guid><description>&lt;p>不久之前，小易將家裡的一台電腦裝上了 Ubuntu 20.04，並把它當成了軟路由在使用。&lt;/p>
 &lt;p>但小易發現了一件事情，就是電腦沒辦法上網RRR！&lt;/p>
 &lt;p>我們透過 mtr 追蹤路由後發現&amp;hellip;&lt;br>
 路由送到 Gateway 就出不去了，於是我們在路由器上抓包發現&lt;br>
@@ -9,7 +9,7 @@
 &lt;pre tabindex="0">&lt;code>iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE
 &lt;/code>&lt;/pre>&lt;p>另外，如果只想允許某段網段轉換為 NAT，則可以寫成&lt;/p>
 &lt;pre tabindex="0">&lt;code>iptables -t nat -A POSTROUTING -s 10.121.210.0/24 -o eth1 -j MASQUERADE
-&lt;/code>&lt;/pre></description></item><item><title>成為 MANRS 參與者！</title><link>http://127.0.0.1:8000/posts/join-manrs-as-participants/</link><pubDate>Mon, 25 Jan 2021 00:03:31 +0800</pubDate><guid>http://127.0.0.1:8000/posts/join-manrs-as-participants/</guid><description>&lt;p>在去年年底時，我送出了 &lt;a href="https://network.steveyi.net/">SteveYi Network Service&lt;/a> 的 &lt;a href="https://www.manrs.org/">MANRS&lt;/a> 申請&lt;br>
+&lt;/code>&lt;/pre></description></item><item><title>成為 MANRS 參與者！</title><link>https://blog.steveyi.net/posts/join-manrs-as-participants/</link><pubDate>Mon, 25 Jan 2021 00:03:31 +0800</pubDate><guid>https://blog.steveyi.net/posts/join-manrs-as-participants/</guid><description>&lt;p>在去年年底時，我送出了 &lt;a href="https://network.steveyi.net/">SteveYi Network Service&lt;/a> 的 &lt;a href="https://www.manrs.org/">MANRS&lt;/a> 申請&lt;br>
 今年年初時，我們通過了審核。正式成為 MANRS 的參與者！&lt;br>
 我們的會員介紹在這裏 &lt;a href="https://www.manrs.org/isps/participants/entry/1484/">https://www.manrs.org/isps/participants/entry/1484/&lt;/a>&lt;br>
 那麼，我們就順便來說說 我們如何實施 MANRS 政策&lt;/p>
@@ -28,7 +28,7 @@
 &lt;/blockquote>
 &lt;p>&lt;img src="https://i.imgur.com/3YMIHgZ.png" alt="">&lt;/p>
 &lt;p>我們也會過濾與我們建立私人對等的對等方路由，我們會將所有對等方的 AS-SET 或 ASN 加進我們的 &lt;a href="https://www.radb.net/query?keywords=AS-STEVEYI-A">AS-STEVEYI-A&lt;/a> 中，並自動產生對應的 IRR 紀錄，過濾無效的路由&lt;/p>
-&lt;p>我們也歡迎對我們的過濾系統有興趣的網路愛好者/工程師，可以發信至 info_at_steveyi_dot_net 與我們聯繫！&lt;/p></description></item><item><title>透過 BGP 與朋友組成內網</title><link>http://127.0.0.1:8000/posts/make-internal-network-by-bgp/</link><pubDate>Sun, 24 Jan 2021 02:00:00 +0000</pubDate><guid>http://127.0.0.1:8000/posts/make-internal-network-by-bgp/</guid><description>&lt;p>嗨！好久不見！&lt;/p>
+&lt;p>我們也歡迎對我們的過濾系統有興趣的網路愛好者/工程師，可以發信至 info_at_steveyi_dot_net 與我們聯繫！&lt;/p></description></item><item><title>透過 BGP 與朋友組成內網</title><link>https://blog.steveyi.net/posts/make-internal-network-by-bgp/</link><pubDate>Sun, 24 Jan 2021 02:00:00 +0000</pubDate><guid>https://blog.steveyi.net/posts/make-internal-network-by-bgp/</guid><description>&lt;p>嗨！好久不見！&lt;/p>
 &lt;p>在 2020 初時，我拿到了第一個 ASN號碼 - &lt;a href="https://bgp.he.net/AS209557/">AS209557&lt;/a>&lt;/p>
 &lt;p>我也使用了 &lt;a href="https://tools.ietf.org/html/rfc1918">RFC 1918&lt;/a> 所定義的 IP Address ，與我一些朋友透過 BGP 及 Internet 隧道 組成了一個大內網&lt;/p>
 &lt;p>那麼，讓我們開始吧！&lt;/p>

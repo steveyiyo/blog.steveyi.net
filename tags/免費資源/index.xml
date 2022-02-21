@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>免費資源 on 小易的部落格</title><link>http://127.0.0.1:8000/tags/%E5%85%8D%E8%B2%BB%E8%B3%87%E6%BA%90/</link><description>小易的部落格 (免費資源)</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Tue, 19 Jan 2021 12:25:49 +0000</lastBuildDate><atom:link href="http://127.0.0.1:8000/tags/%E5%85%8D%E8%B2%BB%E8%B3%87%E6%BA%90/index.xml" rel="self" type="application/rss+xml"/><item><title>在 Linux 環境下無腦串接 Google 雲端硬碟</title><link>http://127.0.0.1:8000/posts/linux-mount-googledrive-not-required-brain/</link><pubDate>Tue, 19 Jan 2021 12:25:49 +0000</pubDate><guid>http://127.0.0.1:8000/posts/linux-mount-googledrive-not-required-brain/</guid><description>&lt;p>此篇教學使用的是 google-drive-ocamlfuse 這個軟體，筆者使用的環境是基於Ubuntu的Zorin OS 15.2系統作為示範。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>免費資源 on 小易的部落格</title><link>https://blog.steveyi.net/tags/%E5%85%8D%E8%B2%BB%E8%B3%87%E6%BA%90/</link><description>小易的部落格 (免費資源)</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Tue, 19 Jan 2021 12:25:49 +0000</lastBuildDate><atom:link href="https://blog.steveyi.net/tags/%E5%85%8D%E8%B2%BB%E8%B3%87%E6%BA%90/index.xml" rel="self" type="application/rss+xml"/><item><title>在 Linux 環境下無腦串接 Google 雲端硬碟</title><link>https://blog.steveyi.net/posts/linux-mount-googledrive-not-required-brain/</link><pubDate>Tue, 19 Jan 2021 12:25:49 +0000</pubDate><guid>https://blog.steveyi.net/posts/linux-mount-googledrive-not-required-brain/</guid><description>&lt;p>此篇教學使用的是 google-drive-ocamlfuse 這個軟體，筆者使用的環境是基於Ubuntu的Zorin OS 15.2系統作為示範。&lt;/p>
 &lt;p>首先需要先加入軟體源，請在終端機輸入（可以直接把這一串直接拷貝貼上）&lt;/p>
 &lt;p>sudo add-apt-repository ppa:alessandro-strada/ppa
 sudo apt-get update
@@ -20,7 +20,7 @@ sudo apt-get install google-drive-ocamlfuse
 &lt;p>如果想要退出掛載的話，可以在終端機使用以下指令&lt;/p>
 &lt;p>fusermount -u ~/GoogleDrive
 更多指令如果想要查詢看看，可以終端機輸入這個指令來做查詢&lt;/p>
-&lt;p>google-drive-ocamlfuse &amp;ndash;help&lt;/p></description></item><item><title>[有趣測試] 測驗看看你是不是木耳！</title><link>http://127.0.0.1:8000/posts/are-you-mu-er/</link><pubDate>Wed, 25 Nov 2020 02:31:14 +0000</pubDate><guid>http://127.0.0.1:8000/posts/are-you-mu-er/</guid><description>&lt;p>這個網站會以隨機順序提供六組音樂，每組包含 128Kbps MP3/320Kbps MP3/ 未壓縮的 WAV 音檔，測驗看看你能不能聽出哪個是音質最好的音檔，選擇後會產生正確答案。&lt;br>
+&lt;p>google-drive-ocamlfuse &amp;ndash;help&lt;/p></description></item><item><title>[有趣測試] 測驗看看你是不是木耳！</title><link>https://blog.steveyi.net/posts/are-you-mu-er/</link><pubDate>Wed, 25 Nov 2020 02:31:14 +0000</pubDate><guid>https://blog.steveyi.net/posts/are-you-mu-er/</guid><description>&lt;p>這個網站會以隨機順序提供六組音樂，每組包含 128Kbps MP3/320Kbps MP3/ 未壓縮的 WAV 音檔，測驗看看你能不能聽出哪個是音質最好的音檔，選擇後會產生正確答案。&lt;br>
 連結在下方。&lt;/p>
 &lt;p>貼心提醒：&lt;/p>
 &lt;ul>
@@ -31,7 +31,7 @@ sudo apt-get install google-drive-ocamlfuse
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112501583221.png" alt="">&lt;/p>
 &lt;p>&lt;a href="https://www.npr.org/sections/therecord/2015/06/02/411473508/how-well-can-you-hear-audio-quality">點我前往測試&lt;/a>&lt;/p>
 &lt;p>測驗結果分析結果是，如果你能答對四個或以上，那麼你就不是木耳囉&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112501563810.jpg" alt="">&lt;/p></description></item><item><title>AutoDraw 自動繪圖吧！</title><link>http://127.0.0.1:8000/posts/autodraw/</link><pubDate>Wed, 25 Nov 2020 02:25:44 +0000</pubDate><guid>http://127.0.0.1:8000/posts/autodraw/</guid><description>&lt;blockquote>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112501563810.jpg" alt="">&lt;/p></description></item><item><title>AutoDraw 自動繪圖吧！</title><link>https://blog.steveyi.net/posts/autodraw/</link><pubDate>Wed, 25 Nov 2020 02:25:44 +0000</pubDate><guid>https://blog.steveyi.net/posts/autodraw/</guid><description>&lt;blockquote>
 &lt;p>(本文由小易及蘿蔔共同編輯)&lt;/p>
 &lt;/blockquote>
 &lt;p>前幾天，小易在上課的時候，老師介紹到了一個有趣的網站&lt;/p>
@@ -51,7 +51,7 @@ Google 從 1998 年就註冊這個網域了(或是其他人註冊轉賣給 Googl
 下次有空來玩玩看吧～&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/RPReplay-Final1606267033.gif" alt="">&lt;/p>
 &lt;p>或是使用 iPad 直接到 AutoDraw 去畫也是可以的&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112501382837.gif" alt="">&lt;/p></description></item><item><title>Windows 10 打開電腦(喚醒)後自動校正時間</title><link>http://127.0.0.1:8000/posts/ntp-clock-autoset/</link><pubDate>Fri, 20 Nov 2020 15:52:24 +0000</pubDate><guid>http://127.0.0.1:8000/posts/ntp-clock-autoset/</guid><description>&lt;p>時鐘對電腦來說是一個非常重要的東西，並不是只在狀態欄(或工作列)顯示時間那麼單純而已，時鐘不正確(與真實世界實際時間偏差太多)的話，可能會造成電腦發生一些奇怪的現象，例如:不能看網頁(憑證問題)，如果時間差太多甚至會造成軟體當掉。各種程式登入逾時也是很容易在時間偏差太大時發生的事情&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112501382837.gif" alt="">&lt;/p></description></item><item><title>Windows 10 打開電腦(喚醒)後自動校正時間</title><link>https://blog.steveyi.net/posts/ntp-clock-autoset/</link><pubDate>Fri, 20 Nov 2020 15:52:24 +0000</pubDate><guid>https://blog.steveyi.net/posts/ntp-clock-autoset/</guid><description>&lt;p>時鐘對電腦來說是一個非常重要的東西，並不是只在狀態欄(或工作列)顯示時間那麼單純而已，時鐘不正確(與真實世界實際時間偏差太多)的話，可能會造成電腦發生一些奇怪的現象，例如:不能看網頁(憑證問題)，如果時間差太多甚至會造成軟體當掉。各種程式登入逾時也是很容易在時間偏差太大時發生的事情&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112014495468.png" alt="">&lt;/p>
 &lt;p>時間錯誤造成的憑證問題導致無法正常瀏覽網頁&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112015550593.png" alt="">&lt;/p>
@@ -109,7 +109,7 @@ Google 從 1998 年就註冊這個網域了(或是其他人註冊轉賣給 Googl
 &lt;p>到設定的地方，調整紅色框起來的地方的設定如圖&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112015293652.png" alt="">&lt;/p>
 &lt;p>接下來每次打開電腦就會自動對時囉~&lt;br>
-如果電腦關掉後時間會跑掉的話，以後每次打開電腦都不用手動改時間了!&lt;/p></description></item><item><title>使用 Xbox 遊戲列提升 Windows 的遊戲體驗</title><link>http://127.0.0.1:8000/posts/xbox-game-bar/</link><pubDate>Wed, 07 Oct 2020 02:09:56 +0000</pubDate><guid>http://127.0.0.1:8000/posts/xbox-game-bar/</guid><description>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020100701190250.png" alt="">&lt;/p>
+如果電腦關掉後時間會跑掉的話，以後每次打開電腦都不用手動改時間了!&lt;/p></description></item><item><title>使用 Xbox 遊戲列提升 Windows 的遊戲體驗</title><link>https://blog.steveyi.net/posts/xbox-game-bar/</link><pubDate>Wed, 07 Oct 2020 02:09:56 +0000</pubDate><guid>https://blog.steveyi.net/posts/xbox-game-bar/</guid><description>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020100701190250.png" alt="">&lt;/p>
 &lt;p>Xbox遊戲列是Windows 10的一個功能，具有錄影和直播、顯示效能、控制Spotify音樂等功能，還可以釘選在螢幕上。最棒的是，遊戲列會把系統資源集中在遊戲上，因此如果電腦配置不是很頂級的玩家玩起來會更順暢!&lt;/p>
 &lt;p>註: 筆者以Windows 10 (2004版) 和Xbox遊戲列(v5.420)作為示範，不同版本可能長得不太一樣。&lt;/p>
 &lt;p>首先，請先打開你的遊戲，或是要開啟遊戲列的應用程式，然後按下Win鍵(command鍵)+G&lt;br>
@@ -121,7 +121,7 @@ Google 從 1998 年就註冊這個網域了(或是其他人註冊轉賣給 Googl
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020100701490590.png" alt="">&lt;/p>
 &lt;p>提醒:&lt;br>
 在設定的齒輪旁邊有一個啟用點閱率/停用點閱率的功能，這個功能是控制釘選時，小工具能不能操作。(停用=小工具只能看，不能操作；啟用則反之)&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020100701584448.png" alt="">&lt;/p></description></item><item><title>使用 "備份與還原" 備份 Windows 7 以上的 PC</title><link>http://127.0.0.1:8000/posts/windows-backup/</link><pubDate>Fri, 28 Aug 2020 09:09:08 +0000</pubDate><guid>http://127.0.0.1:8000/posts/windows-backup/</guid><description>&lt;p>Mac裡面有一個&amp;quot;時光機&amp;quot;可以簡單易用地備份整部電腦，而Windows裡面也藏著類似的功能哦！&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020100701584448.png" alt="">&lt;/p></description></item><item><title>使用 "備份與還原" 備份 Windows 7 以上的 PC</title><link>https://blog.steveyi.net/posts/windows-backup/</link><pubDate>Fri, 28 Aug 2020 09:09:08 +0000</pubDate><guid>https://blog.steveyi.net/posts/windows-backup/</guid><description>&lt;p>Mac裡面有一個&amp;quot;時光機&amp;quot;可以簡單易用地備份整部電腦，而Windows裡面也藏著類似的功能哦！&lt;/p>
 &lt;p>簡單來說就是會將整台電腦、磁碟機或資料夾（視設定而定）備份起來，第一次會完整備份，所以會花比較久的時間；第二次以後會只備份「在上次備份完更動過」或「在上次備份完新建立」的檔案，以節省空間和時間。&lt;/p>
 &lt;p>首先請先打開開始，找到&amp;quot;Windows系統&amp;quot;，然後打開控制台&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020082808195051.png" alt="">&lt;/p>
@@ -141,7 +141,7 @@ Google 從 1998 年就註冊這個網域了(或是其他人註冊轉賣給 Googl
 以下是開啟舊檔後的樣子&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020082809060089-scaled.jpg" alt="">&lt;/p>
 &lt;p>這樣以後再也不怕誤刪檔案囉！&lt;br>
-但還是要注意備份週期的問題，假如每週備份一次，但還來不及備份就被刪掉也是沒辦法囉&lt;/p></description></item><item><title>使用傳統版 Gmail 加快老舊裝置和低速網路的郵件載入速度</title><link>http://127.0.0.1:8000/posts/html-gmail/</link><pubDate>Fri, 21 Aug 2020 15:32:52 +0000</pubDate><guid>http://127.0.0.1:8000/posts/html-gmail/</guid><description>&lt;p>筆者有一部老舊的PC，配備1GB記憶體以及Windows XP做輕度文書使用(Windows XP只需128MB記憶體即可操作)，瀏覽一些網站仍可應付，有些大型網站則要載入很久或是無法正常使用。如果是一般的文章網頁還可以，問題來了，筆者想用Gmail網頁版收發郵件，但在網路暢通的情況下載入標準Gmail網頁需要將近一分鐘，捲動郵件更是一場災難，後來筆者發現網頁底部會有一個不明顯的傳統版Gmail超連結，不太會有人注意到它。&lt;/p>
+但還是要注意備份週期的問題，假如每週備份一次，但還來不及備份就被刪掉也是沒辦法囉&lt;/p></description></item><item><title>使用傳統版 Gmail 加快老舊裝置和低速網路的郵件載入速度</title><link>https://blog.steveyi.net/posts/html-gmail/</link><pubDate>Fri, 21 Aug 2020 15:32:52 +0000</pubDate><guid>https://blog.steveyi.net/posts/html-gmail/</guid><description>&lt;p>筆者有一部老舊的PC，配備1GB記憶體以及Windows XP做輕度文書使用(Windows XP只需128MB記憶體即可操作)，瀏覽一些網站仍可應付，有些大型網站則要載入很久或是無法正常使用。如果是一般的文章網頁還可以，問題來了，筆者想用Gmail網頁版收發郵件，但在網路暢通的情況下載入標準Gmail網頁需要將近一分鐘，捲動郵件更是一場災難，後來筆者發現網頁底部會有一個不明顯的傳統版Gmail超連結，不太會有人注意到它。&lt;/p>
 &lt;p>註：該部PC後來有點故障，所以不會用它來示範本篇教學。&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020082115070982.png" alt="">&lt;/p>
 &lt;p>筆者將連結放在這裡，有需要的可以拷貝拿去用&lt;br>
@@ -152,7 +152,7 @@ Google 從 1998 年就註冊這個網域了(或是其他人註冊轉賣給 Googl
 &lt;p>這是傳統版Gmail的網頁，雖然看起來陽春但大部分功能都還在。&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020082115230812.png" alt="">&lt;/p>
 &lt;p>這是標準的Gmail網頁，在效能良好的裝置和良好的網路環境可以獲得很好的視覺效果和使用體驗，但老舊裝置以及網路頻寬不足的情況下就要等很久。&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020082115303578.png" alt="">&lt;/p></description></item><item><title>在官方不支援 macOS Catalina 的裝置安裝 macOS Catalina</title><link>http://127.0.0.1:8000/posts/macos-catalina-on-unsupport-mac/</link><pubDate>Tue, 18 Aug 2020 10:41:18 +0000</pubDate><guid>http://127.0.0.1:8000/posts/macos-catalina-on-unsupport-mac/</guid><description>&lt;p>有些電腦明明還可以好好的、正常使用，但可能因為官方的多重考量(不管是效能上、商業上、或是功能上之類的考量)，而被官方從升級名單中一代一代的移除，豈不是覺得很可惜嗎&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020082115303578.png" alt="">&lt;/p></description></item><item><title>在官方不支援 macOS Catalina 的裝置安裝 macOS Catalina</title><link>https://blog.steveyi.net/posts/macos-catalina-on-unsupport-mac/</link><pubDate>Tue, 18 Aug 2020 10:41:18 +0000</pubDate><guid>https://blog.steveyi.net/posts/macos-catalina-on-unsupport-mac/</guid><description>&lt;p>有些電腦明明還可以好好的、正常使用，但可能因為官方的多重考量(不管是效能上、商業上、或是功能上之類的考量)，而被官方從升級名單中一代一代的移除，豈不是覺得很可惜嗎&lt;/p>
 &lt;p>這時候，有一位&lt;a href="http://dosdude1.com">dosdude1&lt;/a>做了&lt;a href="http://dosdude1.com/catalina" title="dosdude1.com/catalina">Catalina Patcher&lt;/a>解決了這個問題。&lt;/p>
 &lt;p>這是官方的支援名單:&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081801505962.png" alt="">&lt;/p>
@@ -206,7 +206,7 @@ Google 從 1998 年就註冊這個網域了(或是其他人註冊轉賣給 Googl
 接下來如果有需要還原時光機備份或是從其他電腦轉移資料也可以在這裡完成，或是設定完成後打開「系統移轉輔助程式」&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081810265417.png" alt="">&lt;/p>
 &lt;p>接下來將它設定好就可以正常使用囉&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081810311541.png" alt="">&lt;/p></description></item><item><title>使用CloudReady體驗ChromiumOS作業系統，老電腦重獲新生!</title><link>http://127.0.0.1:8000/posts/cloudready/</link><pubDate>Mon, 10 Aug 2020 15:10:52 +0000</pubDate><guid>http://127.0.0.1:8000/posts/cloudready/</guid><description>&lt;p>不曉得各位有沒有一種經驗，電腦老舊了，連文書處理和基本的瀏覽網頁都卡頓，但又不想使用太老舊的作業系統(官方停止提供新功能了，連瀏覽器也不提供更新支援了)，這時便可以下載最新版的CloudReady家用版來使用囉!既有最新版的瀏覽器，也有不少Web App能使用；也因為是基於瀏覽器的作業系統，因此資源占用比許多作業系統都少，也不用怕不習慣使用Linux作業系統(安裝軟體的方式很不一樣，使用邏輯也差很多，而且一直使用命令行也不是很直覺的用法)，所以，只要電腦支援64位元，幾乎都可以用CloudReady(試過家裡唯一一台32位元電腦，無法使用32位元版的CloudReady開機)&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081810311541.png" alt="">&lt;/p></description></item><item><title>使用CloudReady體驗ChromiumOS作業系統，老電腦重獲新生!</title><link>https://blog.steveyi.net/posts/cloudready/</link><pubDate>Mon, 10 Aug 2020 15:10:52 +0000</pubDate><guid>https://blog.steveyi.net/posts/cloudready/</guid><description>&lt;p>不曉得各位有沒有一種經驗，電腦老舊了，連文書處理和基本的瀏覽網頁都卡頓，但又不想使用太老舊的作業系統(官方停止提供新功能了，連瀏覽器也不提供更新支援了)，這時便可以下載最新版的CloudReady家用版來使用囉!既有最新版的瀏覽器，也有不少Web App能使用；也因為是基於瀏覽器的作業系統，因此資源占用比許多作業系統都少，也不用怕不習慣使用Linux作業系統(安裝軟體的方式很不一樣，使用邏輯也差很多，而且一直使用命令行也不是很直覺的用法)，所以，只要電腦支援64位元，幾乎都可以用CloudReady(試過家裡唯一一台32位元電腦，無法使用32位元版的CloudReady開機)&lt;/p>
 &lt;p>開始吧!&lt;/p>
 &lt;p>準備材料有:&lt;/p>
 &lt;ol>
@@ -254,7 +254,7 @@ Google 從 1998 年就註冊這個網域了(或是其他人註冊轉賣給 Googl
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081015044386.png" alt="">&lt;/p>
 &lt;p>大致介紹完畢囉！祝各位用得愉快～&lt;br>
 螢幕快照的快速鍵是Ctrl+F5，會存在下載資料夾&lt;br>
-其餘快速鍵幾乎都跟Windows差不多，可以參考&lt;a href="https://support.google.com/chromebook/answer/183101?hl=zh-Hant" title="https://support.google.com/chromebook/answer/183101?hl=zh-Hant">這篇官方文章&lt;/a>&lt;/p></description></item><item><title>使用 Android 手機作為 Mac 的網路連線來源的方法</title><link>http://127.0.0.1:8000/posts/horndis/</link><pubDate>Sat, 08 Aug 2020 07:23:53 +0000</pubDate><guid>http://127.0.0.1:8000/posts/horndis/</guid><description>&lt;p>有時因為某些原因，不想使用Wi-Fi上網或使用Wi-Fi個人熱點時，或是電腦的無線網路卡受到周遭物品的遮蔽時，甚至是黑蘋果電腦沒有相容無線網卡等情況下，將Android手機作為網路接收器是一個好主意。&lt;br>
+其餘快速鍵幾乎都跟Windows差不多，可以參考&lt;a href="https://support.google.com/chromebook/answer/183101?hl=zh-Hant" title="https://support.google.com/chromebook/answer/183101?hl=zh-Hant">這篇官方文章&lt;/a>&lt;/p></description></item><item><title>使用 Android 手機作為 Mac 的網路連線來源的方法</title><link>https://blog.steveyi.net/posts/horndis/</link><pubDate>Sat, 08 Aug 2020 07:23:53 +0000</pubDate><guid>https://blog.steveyi.net/posts/horndis/</guid><description>&lt;p>有時因為某些原因，不想使用Wi-Fi上網或使用Wi-Fi個人熱點時，或是電腦的無線網路卡受到周遭物品的遮蔽時，甚至是黑蘋果電腦沒有相容無線網卡等情況下，將Android手機作為網路接收器是一個好主意。&lt;br>
 macOS需求為10.11(El Captain)以上，本篇筆者使用macOS 10.13(High Sierra)作為示範&lt;br>
 只要Android手機連得到Wi-Fi或是行動數據連線，而且有USB數據連線的功能，都可以執行以下教學提到的內容。&lt;br>
 請注意，手機一直24小時掛著電源可能會造成膨脹，需要時再接上電腦。&lt;/p>
@@ -271,7 +271,7 @@ macOS需求為10.11(El Captain)以上，本篇筆者使用macOS 10.13(High Sierr
 &lt;p>到系統偏好設定裡，打開網路偏好設定&lt;/p>
 &lt;p>&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020080807085471.png" alt="">&lt;/p>
 &lt;p>接下來就會在裡面看到手機有沒有連線囉&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020080806520553.png" alt="">&lt;/p></description></item><item><title>幫 Spotify 或其他音樂軟體加上實時歌詞的方法 (Android)</title><link>http://127.0.0.1:8000/posts/dynamic-lyrics-android/</link><pubDate>Sat, 11 Jul 2020 10:00:12 +0000</pubDate><guid>http://127.0.0.1:8000/posts/dynamic-lyrics-android/</guid><description>&lt;p>上次有一篇介紹&lt;a href="https://blog.steveyi.net/free-streaming-music-compare/" title="[2020最新] 各大串流平台免費會員比較">各家串流平台的免費會員比較&lt;/a>，各位可以發現實時歌詞很多家平台都有&lt;/p>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020080806520553.png" alt="">&lt;/p></description></item><item><title>幫 Spotify 或其他音樂軟體加上實時歌詞的方法 (Android)</title><link>https://blog.steveyi.net/posts/dynamic-lyrics-android/</link><pubDate>Sat, 11 Jul 2020 10:00:12 +0000</pubDate><guid>https://blog.steveyi.net/posts/dynamic-lyrics-android/</guid><description>&lt;p>上次有一篇介紹&lt;a href="https://blog.steveyi.net/free-streaming-music-compare/" title="[2020最新] 各大串流平台免費會員比較">各家串流平台的免費會員比較&lt;/a>，各位可以發現實時歌詞很多家平台都有&lt;/p>
 &lt;p>但Spotify根據筆者測試只有Premium用戶能用或是有些平台沒有歌詞服務，稍嫌可惜&lt;/p>
 &lt;p>這時想要聽著Spotify或其他沒歌詞的平台的免費音樂，但又覺得沒歌詞不能一起唱很麻煩嗎 這時候照這篇文章做就可以解決這個問題囉&lt;/p>
 &lt;p>這篇文章適用Android用戶，iOS/iPadOS用戶在&lt;a href="https://blog.steveyi.net/no-premium-spotify-dynamic-lyrics/" title="不用Premium也可以幫Spotify加上實時歌詞(iOS/iPadOS)">另外一篇&lt;/a>唷&lt;/p>
@@ -318,7 +318,7 @@ macOS需求為10.11(El Captain)以上，本篇筆者使用macOS 10.13(High Sierr
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071109383934.jpeg" alt="">&lt;/p>
 &lt;p>舉例來說，以下這首歌曲是鄧紫棋的「&lt;a href="https://www.youtube.com/watch?v=G3z9U_1Uue4&amp;amp;feature=share">好想好想妳&lt;/a>」&lt;br>
 但歌詞卻誤判為另一首(我完全沒聽過的)歌曲，這時我只好關掉Floating Lyrics，或是改用選單的歌詞辨識功能&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071109490666.jpeg" alt="">&lt;/p></description></item><item><title>幫 Spotify 加上實時歌詞 (iOS/iPadOS)</title><link>http://127.0.0.1:8000/posts/no-premium-spotify-dynamic-lyrics/</link><pubDate>Sat, 11 Jul 2020 07:31:26 +0000</pubDate><guid>http://127.0.0.1:8000/posts/no-premium-spotify-dynamic-lyrics/</guid><description>&lt;p>上次有一篇介紹&lt;a href="https://blog.steveyi.net/free-streaming-music-compare/" title="[2020最新] 各大串流平台免費會員比較">各家串流平台的免費會員比較&lt;/a>，各位可以發現實時歌詞很多家平台都有&lt;br>
+&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071109490666.jpeg" alt="">&lt;/p></description></item><item><title>幫 Spotify 加上實時歌詞 (iOS/iPadOS)</title><link>https://blog.steveyi.net/posts/no-premium-spotify-dynamic-lyrics/</link><pubDate>Sat, 11 Jul 2020 07:31:26 +0000</pubDate><guid>https://blog.steveyi.net/posts/no-premium-spotify-dynamic-lyrics/</guid><description>&lt;p>上次有一篇介紹&lt;a href="https://blog.steveyi.net/free-streaming-music-compare/" title="[2020最新] 各大串流平台免費會員比較">各家串流平台的免費會員比較&lt;/a>，各位可以發現實時歌詞很多家平台都有&lt;br>
 但 Spotify 根據筆者測試只有 Premium 用戶能用，稍嫌可惜&lt;br>
 這時想要聽著 Spotify 的免費音樂，但又覺得沒歌詞不能一起唱很麻煩嗎&lt;br>
 這時候照這篇文章做就可以解決這個問題囉&lt;/p>
@@ -351,7 +351,7 @@ macOS需求為10.11(El Captain)以上，本篇筆者使用macOS 10.13(High Sierr
 &lt;p>也可以在桌面左邊新增小工具&lt;/p>
 &lt;p>&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020071107274160.jpeg" alt="IMG_1759.jpeg">&lt;/p>
 &lt;p>桌面上就會有歌詞囉&lt;/p>
-&lt;p>&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020071107275851.gif" alt="IMG_1760.gif">&lt;/p></description></item><item><title>[2020最新] 各大串流平台免費會員比較</title><link>http://127.0.0.1:8000/posts/free-streaming-music-compare/</link><pubDate>Sun, 05 Jul 2020 12:51:26 +0000</pubDate><guid>http://127.0.0.1:8000/posts/free-streaming-music-compare/</guid><description>&lt;p>蘿蔔這幾年來一直在尋找免費好用的串流音樂平台，也因此幾乎所有台灣常見的平台都有用過，所以接下來一一為大家介紹&lt;/p>
+&lt;p>&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020071107275851.gif" alt="IMG_1760.gif">&lt;/p></description></item><item><title>[2020最新] 各大串流平台免費會員比較</title><link>https://blog.steveyi.net/posts/free-streaming-music-compare/</link><pubDate>Sun, 05 Jul 2020 12:51:26 +0000</pubDate><guid>https://blog.steveyi.net/posts/free-streaming-music-compare/</guid><description>&lt;p>蘿蔔這幾年來一直在尋找免費好用的串流音樂平台，也因此幾乎所有台灣常見的平台都有用過，所以接下來一一為大家介紹&lt;/p>
 &lt;p>首先我先說一下，蘿蔔是台灣人，所以文章介紹的有些平台不見得能在其他國家或地區使用；或是有些平台改版了，這篇文章可能會來不及更新，請見諒&lt;/p>
 &lt;p>再來要說的是，我們不鼓勵使用盜版或破解版，首先是音樂平台和音樂創作者沒辦法收到錢（例如串流音樂平台上面廣告贊助的費用），而好音樂就沒辦法受到鼓勵，裝置也可能被病毒或是間諜程式入侵，而且還可能會有法律責任產生&lt;/p>
 &lt;p>說完了那我們開始介紹吧&lt;/p>
@@ -453,7 +453,7 @@ macOS需求為10.11(El Captain)以上，本篇筆者使用macOS 10.13(High Sierr
 另外令人匪夷所思的是系統語言是中文的情況下，有些中文歌都只寫英文歌名，非常奇葩&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070512340980.png" alt="">&lt;/p>
 &lt;p>以上就是蘿蔔介紹台灣比較常見的串流音樂平台，有些版權比較屬於灰色地帶的就先不介紹了，畢竟「我是小易」的編輯們也無法保證其合法性&lt;/p>
-&lt;p>看完這些介紹，各位有打算使用哪個串流音樂平台了嗎？&lt;/p></description></item><item><title>透過 Github 託管靜態網頁 - Github Pages</title><link>http://127.0.0.1:8000/posts/github-static-website/</link><pubDate>Wed, 22 Apr 2020 14:09:46 +0000</pubDate><guid>http://127.0.0.1:8000/posts/github-static-website/</guid><description>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-12.png" alt="">&lt;/p>
+&lt;p>看完這些介紹，各位有打算使用哪個串流音樂平台了嗎？&lt;/p></description></item><item><title>透過 Github 託管靜態網頁 - Github Pages</title><link>https://blog.steveyi.net/posts/github-static-website/</link><pubDate>Wed, 22 Apr 2020 14:09:46 +0000</pubDate><guid>https://blog.steveyi.net/posts/github-static-website/</guid><description>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-12.png" alt="">&lt;/p>
 &lt;p>首先，進入Github 點擊左方綠色按鈕的 &lt;a href="https://github.com/new">New&lt;/a>&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-1-1920x1142.png" alt="">&lt;/p>
 &lt;p>輸入Repository名稱（自定義）&lt;br>
@@ -483,7 +483,7 @@ macOS需求為10.11(El Captain)以上，本篇筆者使用macOS 10.13(High Sierr
 &lt;p>接著就會產生子網域，就可以嘗試進入網站囉！&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-12.png" alt="">&lt;/p>
 &lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-11-1920x1142.png" alt="">&lt;/p>
-&lt;p>下次再來補充綁定自訂網域及SSL的方式吧！&lt;/p></description></item><item><title>Mailgun + Gmail 達成自訂網域郵箱</title><link>http://127.0.0.1:8000/posts/mailgun-gmail-custom-domain-email/</link><pubDate>Wed, 22 Apr 2020 12:48:48 +0000</pubDate><guid>http://127.0.0.1:8000/posts/mailgun-gmail-custom-domain-email/</guid><description>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-14.jpg" alt="">&lt;/p>
+&lt;p>下次再來補充綁定自訂網域及SSL的方式吧！&lt;/p></description></item><item><title>Mailgun + Gmail 達成自訂網域郵箱</title><link>https://blog.steveyi.net/posts/mailgun-gmail-custom-domain-email/</link><pubDate>Wed, 22 Apr 2020 12:48:48 +0000</pubDate><guid>https://blog.steveyi.net/posts/mailgun-gmail-custom-domain-email/</guid><description>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-14.jpg" alt="">&lt;/p>
 &lt;p>小時候總是很好奇寄件者後方的網域名稱是什麼，後來接觸到網站架設後，註冊了許多網域（現在手上大概6個網域左右)，也慢慢解開了小時候的疑惑&lt;/p>
 &lt;p>今天就來分享一下 Mailgun + Gmail 自訂網域郵箱的方法吧！&lt;/p>
 &lt;p>首先，先註冊 &lt;a href="https://www.mailgun.com/">Mailgun&lt;/a>，預設有 5000 封信件額度&lt;br>
