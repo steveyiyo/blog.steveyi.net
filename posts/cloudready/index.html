@@ -35,7 +35,11 @@
 其餘快速鍵幾乎都跟Windows差不多，可以參考這篇官方文章">
 <link rel=icon type=image/x-icon href=https://blog.steveyi.net/favicon.ico>
 <link rel=apple-touch-icon-precomposed href=https://blog.steveyi.net/favicon.png>
-<link rel=stylesheet href=https://blog.steveyi.net/css/style.min.63aba568b2393a8f5a364a508001b05c9412a603d1a0a69bd50f9944649f9c56.css integrity="sha256-Y6ulaLI5Oo9aNkpQgAGwXJQSpgPRoKab1Q+ZRGSfnFY=">
+<style>body{visibility:hidden;opacity:0}</style>
+<noscript>
+<style>body{visibility:visible;opacity:1}</style>
+</noscript>
+<link rel=stylesheet href=https://blog.steveyi.net/css/style.min.e4dd69a921886f06d1a0e2bf835aa4fdced2d03b6f83804e6ae146caac8882bb.css integrity="sha256-5N1pqSGIbwbRoOK/g1qk/c7S0Dtvg4BOauFGyqyIgrs=">
 <script src=https://blog.steveyi.net/js/script.min.510c781c39dbb21b4c76d85c82e2bdf4689220adbb7cd61e49e9d293e442fb42.js type=text/javascript integrity="sha256-UQx4HDnbshtMdthcguK99GiSIK27fNYeSenSk+RC+0I="></script>
 <meta property="og:title" content="使用CloudReady體驗ChromiumOS作業系統，老電腦重獲新生!">
 <meta property="og:description" content="不曉得各位有沒有一種經驗，電腦老舊了，連文書處理和基本的瀏覽網頁都卡頓，但又不想使用太老舊的作業系統(官方停止提供新功能了，連瀏覽器也不提供更新支援了)，這時便可以下載最新版的CloudReady家用版來使用囉!既有最新版的瀏覽器，也有不少Web App能使用；也因為是基於瀏覽器的作業系統，因此資源占用比許多作業系統都少，也不用怕不習慣使用Linux作業系統(安裝軟體的方式很不一樣，使用邏輯也差很多，而且一直使用命令行也不是很直覺的用法)，所以，只要電腦支援64位元，幾乎都可以用CloudReady(試過家裡唯一一台32位元電腦，無法使用32位元版的CloudReady開機)
@@ -251,7 +255,7 @@
 <button class=theme-switcher>
 暗色主題
 </button>
-<script>const STORAGE_KEY='user-color-scheme',defaultTheme="auto";let currentTheme,switchButton,autoDefinedScheme=window.matchMedia('(prefers-color-scheme: dark)');const autoChangeScheme=a=>{currentTheme=a.matches?'dark':'light',document.documentElement.setAttribute('data-theme',currentTheme),changeButtonText()};document.addEventListener('DOMContentLoaded',function(){switchButton=document.querySelector('.theme-switcher'),currentTheme=detectCurrentScheme(),currentTheme=='dark'&&document.documentElement.setAttribute('data-theme','dark'),currentTheme=='auto'&&(autoChangeScheme(autoDefinedScheme),autoDefinedScheme.addListener(autoChangeScheme)),changeButtonText(),switchButton.addEventListener('click',switchTheme,!1)});function detectCurrentScheme(){return localStorage.getItem(STORAGE_KEY)?localStorage.getItem(STORAGE_KEY):defaultTheme?defaultTheme:window.matchMedia?window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light':'light'}function changeButtonText(){switchButton.textContent=currentTheme=='dark'?"亮色主題":"暗色主題"}function switchTheme(a){currentTheme=='dark'?(localStorage.setItem(STORAGE_KEY,'light'),document.documentElement.setAttribute('data-theme','light'),currentTheme='light'):(localStorage.setItem(STORAGE_KEY,'dark'),document.documentElement.setAttribute('data-theme','dark'),currentTheme='dark'),changeButtonText()}</script>
+<script>const STORAGE_KEY='user-color-scheme',defaultTheme="auto";let currentTheme,switchButton,autoDefinedScheme=window.matchMedia('(prefers-color-scheme: dark)');const autoChangeScheme=a=>{currentTheme=a.matches?'dark':'light',document.documentElement.setAttribute('data-theme',currentTheme),changeButtonText()};document.addEventListener('DOMContentLoaded',function(){switchButton=document.querySelector('.theme-switcher'),currentTheme=detectCurrentScheme(),currentTheme=='dark'&&document.documentElement.setAttribute('data-theme','dark'),currentTheme=='auto'&&(autoChangeScheme(autoDefinedScheme),autoDefinedScheme.addListener(autoChangeScheme)),switchButton&&(changeButtonText(),switchButton.addEventListener('click',switchTheme,!1)),showContent()});function detectCurrentScheme(){return localStorage.getItem(STORAGE_KEY)?localStorage.getItem(STORAGE_KEY):defaultTheme?defaultTheme:window.matchMedia?window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light':'light'}function changeButtonText(a){a&&(a.textContent=currentTheme=='dark'?"亮色主題":"暗色主題")}function switchTheme(a){currentTheme=='dark'?(localStorage.setItem(STORAGE_KEY,'light'),document.documentElement.setAttribute('data-theme','light'),currentTheme='light'):(localStorage.setItem(STORAGE_KEY,'dark'),document.documentElement.setAttribute('data-theme','dark'),currentTheme='dark'),changeButtonText()}function showContent(){document.body.style.visibility='visible',document.body.style.opacity=1}</script>
 </div>
 <p class="h-card vcard">
 <a href=https://blog.steveyi.net/ class="p-name u-url url fn" rel=me>SteveYi</a>

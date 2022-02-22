@@ -16,7 +16,11 @@ sudo ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf 最後，我們先
 sudo systemctl restart systemd-resolved 接著，我們就可以使用 53 Port 囉！">
 <link rel=icon type=image/x-icon href=https://blog.steveyi.net/favicon.ico>
 <link rel=apple-touch-icon-precomposed href=https://blog.steveyi.net/favicon.png>
-<link rel=stylesheet href=https://blog.steveyi.net/css/style.min.63aba568b2393a8f5a364a508001b05c9412a603d1a0a69bd50f9944649f9c56.css integrity="sha256-Y6ulaLI5Oo9aNkpQgAGwXJQSpgPRoKab1Q+ZRGSfnFY=">
+<style>body{visibility:hidden;opacity:0}</style>
+<noscript>
+<style>body{visibility:visible;opacity:1}</style>
+</noscript>
+<link rel=stylesheet href=https://blog.steveyi.net/css/style.min.e4dd69a921886f06d1a0e2bf835aa4fdced2d03b6f83804e6ae146caac8882bb.css integrity="sha256-5N1pqSGIbwbRoOK/g1qk/c7S0Dtvg4BOauFGyqyIgrs=">
 <script src=https://blog.steveyi.net/js/script.min.510c781c39dbb21b4c76d85c82e2bdf4689220adbb7cd61e49e9d293e442fb42.js type=text/javascript integrity="sha256-UQx4HDnbshtMdthcguK99GiSIK27fNYeSenSk+RC+0I="></script>
 <meta property="og:title" content="解決 Ubuntu 上 53 Port 占用問題">
 <meta property="og:description" content="最近為了在路由器上安裝 DoH Client 並架設 DNS Server 給內網機器使用，發現 Ubuntu 常常會使用 53 Port。
@@ -164,7 +168,7 @@ DNSStubListener=no
 <button class=theme-switcher>
 暗色主題
 </button>
-<script>const STORAGE_KEY='user-color-scheme',defaultTheme="auto";let currentTheme,switchButton,autoDefinedScheme=window.matchMedia('(prefers-color-scheme: dark)');const autoChangeScheme=a=>{currentTheme=a.matches?'dark':'light',document.documentElement.setAttribute('data-theme',currentTheme),changeButtonText()};document.addEventListener('DOMContentLoaded',function(){switchButton=document.querySelector('.theme-switcher'),currentTheme=detectCurrentScheme(),currentTheme=='dark'&&document.documentElement.setAttribute('data-theme','dark'),currentTheme=='auto'&&(autoChangeScheme(autoDefinedScheme),autoDefinedScheme.addListener(autoChangeScheme)),changeButtonText(),switchButton.addEventListener('click',switchTheme,!1)});function detectCurrentScheme(){return localStorage.getItem(STORAGE_KEY)?localStorage.getItem(STORAGE_KEY):defaultTheme?defaultTheme:window.matchMedia?window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light':'light'}function changeButtonText(){switchButton.textContent=currentTheme=='dark'?"亮色主題":"暗色主題"}function switchTheme(a){currentTheme=='dark'?(localStorage.setItem(STORAGE_KEY,'light'),document.documentElement.setAttribute('data-theme','light'),currentTheme='light'):(localStorage.setItem(STORAGE_KEY,'dark'),document.documentElement.setAttribute('data-theme','dark'),currentTheme='dark'),changeButtonText()}</script>
+<script>const STORAGE_KEY='user-color-scheme',defaultTheme="auto";let currentTheme,switchButton,autoDefinedScheme=window.matchMedia('(prefers-color-scheme: dark)');const autoChangeScheme=a=>{currentTheme=a.matches?'dark':'light',document.documentElement.setAttribute('data-theme',currentTheme),changeButtonText()};document.addEventListener('DOMContentLoaded',function(){switchButton=document.querySelector('.theme-switcher'),currentTheme=detectCurrentScheme(),currentTheme=='dark'&&document.documentElement.setAttribute('data-theme','dark'),currentTheme=='auto'&&(autoChangeScheme(autoDefinedScheme),autoDefinedScheme.addListener(autoChangeScheme)),switchButton&&(changeButtonText(),switchButton.addEventListener('click',switchTheme,!1)),showContent()});function detectCurrentScheme(){return localStorage.getItem(STORAGE_KEY)?localStorage.getItem(STORAGE_KEY):defaultTheme?defaultTheme:window.matchMedia?window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light':'light'}function changeButtonText(a){a&&(a.textContent=currentTheme=='dark'?"亮色主題":"暗色主題")}function switchTheme(a){currentTheme=='dark'?(localStorage.setItem(STORAGE_KEY,'light'),document.documentElement.setAttribute('data-theme','light'),currentTheme='light'):(localStorage.setItem(STORAGE_KEY,'dark'),document.documentElement.setAttribute('data-theme','dark'),currentTheme='dark'),changeButtonText()}function showContent(){document.body.style.visibility='visible',document.body.style.opacity=1}</script>
 </div>
 <p class="h-card vcard">
 <a href=https://blog.steveyi.net/ class="p-name u-url url fn" rel=me>SteveYi</a>
