@@ -1,12 +1,11 @@
 ---
-title: "在 Linux 上實現虛擬 WAN 多撥 PPPoE"
+title: "Using Linux to accomplish virtual WAN with multi PPPoE"
 date: 2021-07-19T08:47:55+08:00
-draft: flase
-description: "I've been using Linux as a router for quite some time."
+draft: true
+description: "我將 Linux 做為路由器已經有好一陣子了。最近，我想將中華電信的七個 IP 都用上"
 ---
 
-
-I've been using Linux as a router for quite some time.
+我將 Linux 做為路由器已經有好一陣子了。  
 前幾天，剛好想起來家中網路的 ISP（中華電信），可以透過撥號取得 7 個浮動的 Public IPv4 Address，於是就來實現他了！
 
 ## 環境
