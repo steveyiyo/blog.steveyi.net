@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Golang on SteveYi's Blog</title><link>https://blog.steveyi.net/en/tags/golang/</link><description>SteveYi's Blog (Golang)</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Tue, 29 Mar 2022 17:40:28 +0800</lastBuildDate><atom:link href="https://blog.steveyi.net/en/tags/golang/index.xml" rel="self" type="application/rss+xml"/><item><title>A capitalizations name issue can not build golang app</title><link>https://blog.steveyi.net/en/posts/golang/</link><pubDate>Tue, 29 Mar 2022 17:40:28 +0800</pubDate><guid>https://blog.steveyi.net/en/posts/golang/</guid><description>&lt;p>Recently, I&amp;rsquo;m working on a project which is a &lt;a href="https://github.com/steveyiyo/URL-Shortener">URL Shortener&lt;/a> with Golang.&lt;/p>
+&lt;p>Here is current arch.&lt;/p>
+&lt;pre tabindex="0">&lt;code>steveyiyo@SteveYis-MacBook-Pro-2 URL-Shortener % tree
+.
+├── README.md
+├── config.yaml
+├── config.yaml.example
+├── data.db
+├── details.md
+├── dockerfile
+├── go.mod
+├── go.sum
+├── internal
+│   ├── cache
+│   │   ├── cache.go
+│   │   └── cache_test.go
+│   ├── Database
+│   │   └── database.go
+│   └── Tools
+│   └── tools.go
+├── main.go
+└── package
+└── utils
+└── utils.go
+6 directories, 14 files
+&lt;/code>&lt;/pre>&lt;p>We can see there are some packages in the internal folder, with most capitalizations misused. (should be lowercase letters usually)&lt;/p>
+&lt;h2 id="what-problems-will-this-cause" >What problems will this cause?
+&lt;span>
+&lt;a href="#what-problems-will-this-cause">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>Since my developed machine is macOS which is under the APFS system. It will not particularly distinguish between upper and lower case.&lt;/p>
+&lt;p>Once I use the Linux system (ext4) to build the project, it will not work.&lt;/p>
+&lt;h2 id="how-to-fix-it" >How to fix it?
+&lt;span>
+&lt;a href="#how-to-fix-it">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>Rename the folder, and let the name be lowercase.&lt;/p>
+&lt;p>&lt;a href="https://github.com/steveyiyo/URL-Shortener/commit/d4819bd0b8bb5b4816279fed405e66ecaecd6858">https://github.com/steveyiyo/URL-Shortener/commit/d4819bd0b8bb5b4816279fed405e66ecaecd6858&lt;/a>&lt;/p></description></item></channel></rss>

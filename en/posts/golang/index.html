@@ -4,9 +4,10 @@
 <meta name=HandheldFriendly content="True">
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=referrer content="no-referrer-when-downgrade">
-<title>Posts - SteveYi's Blog</title>
-<meta name=description content>
-<link rel=alternate type=application/rss+xml href=https://blog.steveyi.net/en/posts/index.xml title="SteveYi's Blog">
+<title>A capitalizations name issue can not build golang app - SteveYi's Blog</title>
+<meta name=description content="Recently, I&rsquo;m working on a project which is a URL Shortener with Golang.
+Here is current arch.
+steveyiyo@SteveYis-MacBook-Pro-2 URL-Shortener % tree . ├── README.md ├── config.yaml ├── config.yaml.example ├── data.db ├── details.md ├── dockerfile ├── go.mod ├── go.sum ├── internal │ ├── cache │ │ ├── cache.go │ │ └── cache_test.go │ ├── Database │ │ └── database.go │ └── Tools │ └── tools.go ├── main.go └── package └── utils └── utils.">
 <link rel=icon type=image/x-icon href=https://blog.steveyi.net/favicon.ico>
 <link rel=apple-touch-icon-precomposed href=https://blog.steveyi.net/favicon.png>
 <style>body{visibility:hidden;opacity:0}</style>
@@ -15,13 +16,19 @@
 </noscript>
 <link rel=stylesheet href=https://blog.steveyi.net/css/style.min.e4dd69a921886f06d1a0e2bf835aa4fdced2d03b6f83804e6ae146caac8882bb.css integrity="sha256-5N1pqSGIbwbRoOK/g1qk/c7S0Dtvg4BOauFGyqyIgrs=">
 <script src=https://blog.steveyi.net/js/script.min.510c781c39dbb21b4c76d85c82e2bdf4689220adbb7cd61e49e9d293e442fb42.js type=text/javascript integrity="sha256-UQx4HDnbshtMdthcguK99GiSIK27fNYeSenSk+RC+0I="></script>
-<meta property="og:title" content="Posts">
-<meta property="og:description" content>
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://blog.steveyi.net/en/posts/"><meta property="og:site_name" content="SteveYi's Blog">
+<meta property="og:title" content="A capitalizations name issue can not build golang app">
+<meta property="og:description" content="Recently, I&rsquo;m working on a project which is a URL Shortener with Golang.
+Here is current arch.
+steveyiyo@SteveYis-MacBook-Pro-2 URL-Shortener % tree . ├── README.md ├── config.yaml ├── config.yaml.example ├── data.db ├── details.md ├── dockerfile ├── go.mod ├── go.sum ├── internal │ ├── cache │ │ ├── cache.go │ │ └── cache_test.go │ ├── Database │ │ └── database.go │ └── Tools │ └── tools.go ├── main.go └── package └── utils └── utils.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blog.steveyi.net/en/posts/golang/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2022-03-29T17:40:28+08:00">
+<meta property="article:modified_time" content="2022-03-29T17:40:28+08:00"><meta property="og:site_name" content="SteveYi's Blog">
 <meta name=twitter:card content="summary">
-<meta name=twitter:title content="Posts">
-<meta name=twitter:description content>
+<meta name=twitter:title content="A capitalizations name issue can not build golang app">
+<meta name=twitter:description content="Recently, I&rsquo;m working on a project which is a URL Shortener with Golang.
+Here is current arch.
+steveyiyo@SteveYis-MacBook-Pro-2 URL-Shortener % tree . ├── README.md ├── config.yaml ├── config.yaml.example ├── data.db ├── details.md ├── dockerfile ├── go.mod ├── go.sum ├── internal │ ├── cache │ │ ├── cache.go │ │ └── cache_test.go │ ├── Database │ │ └── database.go │ └── Tools │ └── tools.go ├── main.go └── package └── utils └── utils.">
 <link rel=webmention href=https://webmention.io/hugo-theme-anubis/webmention>
 <link rel=pingback href=https://webmention.io/hugo-theme-anubis/xmlrpc>
 <link rel=webmention href=https://yourdomain.com/webemntions/receive>
@@ -80,15 +87,54 @@
 </nav>
 </header>
 <main id=main tabindex=-1>
-<div class=index-content>
-</div>
-<div class="articles h-feed">
-<h1 class=post-title>Posts</h1>
-<div class="post-short-list h-entry">
+<article class="post h-entry">
 <div class=post-header>
 <header>
-<h2 class="p-name post-title"><a class=u-url href=/en/posts/golang/>A capitalizations name issue can not build golang app</a></h2>
+<h1 class="p-name post-title">A capitalizations name issue can not build golang app</h1>
 </header>
+</div>
+<div class="content e-content">
+<p>Recently, I&rsquo;m working on a project which is a <a href=https://github.com/steveyiyo/URL-Shortener>URL Shortener</a> with Golang.</p>
+<p>Here is current arch.</p>
+<pre tabindex=0><code>steveyiyo@SteveYis-MacBook-Pro-2 URL-Shortener % tree
+.
+├── README.md
+├── config.yaml
+├── config.yaml.example
+├── data.db
+├── details.md
+├── dockerfile
+├── go.mod
+├── go.sum
+├── internal
+│   ├── cache
+│   │   ├── cache.go
+│   │   └── cache_test.go
+│   ├── Database
+│   │   └── database.go
+│   └── Tools
+│       └── tools.go
+├── main.go
+└── package
+    └── utils
+        └── utils.go
+
+6 directories, 14 files
+</code></pre><p>We can see there are some packages in the internal folder, with most capitalizations misused. (should be lowercase letters usually)</p>
+<h2 id=what-problems-will-this-cause>What problems will this cause?
+<span>
+<a href=#what-problems-will-this-cause><svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/></svg>
+</a>
+</span>
+</h2><p>Since my developed machine is macOS which is under the APFS system. It will not particularly distinguish between upper and lower case.</p>
+<p>Once I use the Linux system (ext4) to build the project, it will not work.</p>
+<h2 id=how-to-fix-it>How to fix it?
+<span>
+<a href=#how-to-fix-it><svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/></svg>
+</a>
+</span>
+</h2><p>Rename the folder, and let the name be lowercase.</p>
+<p><a href=https://github.com/steveyiyo/URL-Shortener/commit/d4819bd0b8bb5b4816279fed405e66ecaecd6858>https://github.com/steveyiyo/URL-Shortener/commit/d4819bd0b8bb5b4816279fed405e66ecaecd6858</a></p>
 </div>
 <div class=post-info>
 <div class="post-date dt-published">2022-03-29</div>
@@ -100,69 +146,19 @@
 </ul>
 </div>
 </div>
+</article>
+<div class="pagination post-pagination">
+<div class="left pagination-item disabled">
 </div>
-<div class="post-short-list h-entry">
-<div class=post-header>
-<header>
-<h2 class="p-name post-title"><a class=u-url href=/en/posts/as7480/>Acquires AS7480 (Inter-RIR transfer)</a></h2>
-</header>
-</div>
-<div class=post-info>
-<div class="post-date dt-published">2022-03-08</div>
-<a class="post-hidden-url u-url" href=https://blog.steveyi.net/en/posts/as7480/>https://blog.steveyi.net/en/posts/as7480/</a>
-<a href=https://blog.steveyi.net/ class="p-name p-author post-hidden-author h-card" rel=me>SteveYi</a>
-<div class=post-taxonomies>
-</div>
-</div>
-</div>
-<div class="post-short-list h-entry">
-<div class=post-header>
-<header>
-<h2 class="p-name post-title"><a class=u-url href=/en/posts/frrouting-install/>FRRouting Install Guide</a></h2>
-<span>
-<ul class=post-translations>
-<li>
-EN
-</li>
-<li>
-<a href=https://blog.steveyi.net/posts/frrouting-install/>TW</a>
-</li>
-</ul>
-</span>
-</header>
-</div>
-<div class=post-info>
-<div class="post-date dt-published">2020-07-12</div>
-<a class="post-hidden-url u-url" href=https://blog.steveyi.net/en/posts/frrouting-install/>https://blog.steveyi.net/en/posts/frrouting-install/</a>
-<a href=https://blog.steveyi.net/ class="p-name p-author post-hidden-author h-card" rel=me>SteveYi</a>
-<div class=post-taxonomies>
-<ul class=post-tags>
-<li><a href=https://blog.steveyi.net/en/tags/bgp/>#BGP</a></li>
-<li><a href=https://blog.steveyi.net/en/tags/server/>#Server</a></li>
-<li><a href=https://blog.steveyi.net/en/tags/networl/>#Networl</a></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="post-short-list h-entry">
-<div class=post-header>
-<header>
-<h2 class="p-name post-title"><a class=u-url href=/en/posts/hello_world/>Multi Language Site is now Enabled!</a></h2>
-</header>
-</div>
-<div class=post-info>
-<a class="post-hidden-url u-url" href=https://blog.steveyi.net/en/posts/hello_world/>https://blog.steveyi.net/en/posts/hello_world/</a>
-<a href=https://blog.steveyi.net/ class="p-name p-author post-hidden-author h-card" rel=me>SteveYi</a>
-<div class=post-taxonomies>
-</div>
-</div>
+<div class="right pagination-item">
+<a href=/en/posts/as7480/>Acquires AS7480 (Inter-RIR transfer)</a>
 </div>
 </div>
 </main>
 <footer class=common-footer>
 <ul class=language-select>
 <li>English</li>
-<li><a href=https://blog.steveyi.net/posts/>正體中文</a></li>
+<li><a href=https://blog.steveyi.net/>正體中文</a></li>
 </ul>
 <div class=common-footer-bottom>
 <div class=copyright>
