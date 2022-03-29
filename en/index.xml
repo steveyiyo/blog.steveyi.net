@@ -1,4 +1,187 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SteveYi's Blog</title><link>https://blog.steveyi.net/en/</link><description>SteveYi's Blog</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Sun, 12 Jul 2020 13:07:14 +0000</lastBuildDate><atom:link href="https://blog.steveyi.net/en/index.xml" rel="self" type="application/rss+xml"/><item><title>FRRouting Install Guide</title><link>https://blog.steveyi.net/en/posts/frrouting-install/</link><pubDate>Sun, 12 Jul 2020 13:07:14 +0000</pubDate><guid>https://blog.steveyi.net/en/posts/frrouting-install/</guid><description>&lt;p>I haven’t posted anything for a long time. I’m still learning some BGP Knowledge and was trying to use bird1 to make BGP Session with another operator.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SteveYi's Blog</title><link>https://blog.steveyi.net/en/</link><description>SteveYi's Blog</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Tue, 08 Mar 2022 00:00:00 +0800</lastBuildDate><atom:link href="https://blog.steveyi.net/en/index.xml" rel="self" type="application/rss+xml"/><item><title>Acquires AS7480</title><link>https://blog.steveyi.net/en/posts/as7480/</link><pubDate>Tue, 08 Mar 2022 00:00:00 +0800</pubDate><guid>https://blog.steveyi.net/en/posts/as7480/</guid><description>&lt;h1 id="history" >History
+&lt;span>
+&lt;a href="#history">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h1>&lt;p>IANA earlier assigned AS7467 - 7722 to APNIC and APNIC assigned it to their members or other legal entities.&lt;/p>
+&lt;pre tabindex="0">&lt;code>% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+refer: whois.apnic.net
+as-block: 7467-7722
+organisation: Assigned by APNIC
+whois: whois.apnic.net
+descr: Assigned by APNIC
+source: IANA
+&lt;/code>&lt;/pre>&lt;p>Recently, Jason decided to change their network service provider. It&amp;rsquo;s mean they didn&amp;rsquo;t need multihoming, so he decided to transfer AS Number to me.&lt;/p>
+&lt;h1 id="action-transfer" >Action transfer
+&lt;span>
+&lt;a href="#action-transfer">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h1>&lt;h2 id="step-0-confirm-transfer-policies" >Step 0. Confirm Transfer Policies
+&lt;span>
+&lt;a href="#step-0-confirm-transfer-policies">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;h2 id="step-1-make-a-request-to-apnic" >Step 1. Make a request to APNIC
+&lt;span>
+&lt;a href="#step-1-make-a-request-to-apnic">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>According to the Transfer Template in &lt;a href="https://www.apnic.net/manage-ip/manage-resources/transfer-resources/transfer-of-unused-ip-and-as-numbers/transfers-of-unused-ipv4-addresses-and-or-as-numbers-between-apnic-and-an-rir-inter-rir-transfer/">APNIC Inter-RIR transfer of unused IPv4 addresses and/or AS numbers&lt;/a> , send an email to start the Inter-RIR ASN Transfer Request.&lt;/p>
+&lt;p>APNIC will send an email to you to confirm the request.&lt;/p>
+&lt;h2 id="step-2-transfer-process-to-ripe-ncc" >Step 2. Transfer process to RIPE NCC
+&lt;span>
+&lt;a href="#step-2-transfer-process-to-ripe-ncc">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>Once APNIC approved the transfer request, the process will transfer to RIPE NCC.&lt;/p>
+&lt;p>Since it was a Friday when RIPE NCC received the transfer request, they were very busy. So the transfer was not processed until the weekend. (As an aside, the English of RIPE NCC&amp;rsquo;s Dutch office staff is very fast, which is not at the same level as APNIC XD)&lt;/p>
+&lt;p>Since my ORG is not an LIR, the resource will be transferred to the EndUser as the Sponsor LIR.&lt;/p>
+&lt;ul>
+&lt;li>In general, if ORG is non-LIR, we have to look for LIR as Sponsor LIR&lt;/li>
+&lt;/ul>
+&lt;p>RIPE requested a lot of information from me in the first email and handles transfer requests in accordance with the following policies:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.ripe.net/manage-ips-and-asns/resource-transfers-and-mergers/inter-rir-transfers">Inter-RIR Transfers&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.ripe.net/publications/docs/transfer-policies">RIPE Resource Transfer Policies&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.ripe.net/publications/docs/inter-rir-transfer-of-inr">Inter-RIR Transfer of Internet Number Resources&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Questions list:&lt;/p>
+&lt;ul>
+&lt;li>Initial information&lt;/li>
+&lt;li>Documentation&lt;/li>
+&lt;li>ID Validation via iDenfy​&lt;/li>
+&lt;li>ASNs already registered to Tsung-Yi Yu (ORG-TY18-RIPE)&lt;/li>
+&lt;/ul>
+&lt;h3 id="section-1---initial-information" >Section 1 - Initial information
+&lt;span>
+&lt;a href="#section-1---initial-information">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h3>&lt;p>Is to confirm with me if you want to agree to this transfer request and become a Sponsor LIR. The next step is to confirm that there are Infras and routing policies in the RIPE NCC service area.&lt;/p>
+&lt;h3 id="section-2---documentation" >Section 2 - Documentation
+&lt;span>
+&lt;a href="#section-2---documentation">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h3>&lt;p>Due to resource transfer and sponsorship LIR. So two documents need to be signed.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.ripe.net/manage-ips-and-asns/resource-transfers-and-mergers/transfers/inter-rir-transfers/inter-rir-transfer-documents/confirmation-of-transfer-to-the-ripe-ncc-service-region">Confirmation of Transfer to the RIPE NCC Service Region&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.ripe.net/manage-ips-and-asns/resource-management/number-resources/independent-resources/requirements">Requirements: End User Assignment Agreement&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="section-3---id-validation-via-idenfy" >Section 3 - ID Validation via iDenfy​
+&lt;span>
+&lt;a href="#section-3---id-validation-via-idenfy">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h3>&lt;p>Since the resource is registered to a natural person, ID and other information need to be verified. This part is the same as opening a bank account, which requires KYC.&lt;/p>
+&lt;h3 id="section-4---asns-already-registered-to-tsung-yi-yu-org-ty18-ripe" >Section 4 - ASNs already registered to Tsung-Yi Yu (ORG-TY18-RIPE)
+&lt;span>
+&lt;a href="#section-4---asns-already-registered-to-tsung-yi-yu-org-ty18-ripe">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h3>&lt;p>Since I already have two AS Numbers, RIPE NCC would like to confirm with me if I want to transfer the Sponsor LIR of the existing ASN.&lt;/p>
+&lt;ul>
+&lt;li>Probably asking this because I&amp;rsquo;m making a request on behalf of both LIR and EndUser XD.&lt;/li>
+&lt;/ul>
+&lt;p>After all documents are signed and submitted, RIPE NCC will make final confirmation with APNIC, update WHOIS and other documents, and complete the transfer procedures.&lt;/p>
+&lt;p>&lt;a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=AS7480">https://apps.db.ripe.net/db-web-ui/query?searchtext=AS7480&lt;/a>&lt;/p>
+&lt;pre tabindex="0">&lt;code>steveyiyo@SteveYis-MacBook-Pro ~ % whois -r as7480
+as-block: AS7480 - AS7480
+descr: RIPE NCC ASN block
+remarks: These AS Numbers are assigned to network operators in the RIPE NCC service region.
+mnt-by: RIPE-NCC-HM-MNT
+created: 2022-03-01T17:14:47Z
+last-modified: 2022-03-01T17:14:47Z
+source: RIPE
+% Information related to 'AS7480'
+% Abuse contact for 'AS7480' is 'abuse@steveyi.net'
+aut-num: AS7480
+as-name: STEVEYI-NETWORK
+org: ORG-TY18-RIPE
+admin-c: YT1698-RIPE
+tech-c: YT1698-RIPE
+status: ASSIGNED
+mnt-by: RIPE-NCC-END-MNT
+mnt-by: STEVEYI-MNT
+created: 2022-03-01T17:15:53Z
+last-modified: 2022-03-02T08:35:19Z
+source: RIPE
+sponsoring-org: ORG-KL272-RIPE
+organisation: ORG-TY18-RIPE
+descr: SteveYi Network Service
+org-name: Tsung-Yi Yu
+org-type: OTHER
+address: No. 6, Aly. 3, Ln. 108, Fushan St., Changhua City, Changhua County 50036 , Taiwan (R.O.C.)
+abuse-c: YT1698-RIPE
+mnt-ref: STEVEYI-MNT
+mnt-by: STEVEYI-MNT
+created: 2020-01-26T17:35:48Z
+last-modified: 2022-02-16T11:12:19Z
+source: RIPE # Filtered
+role: Tsung-Yi Yu
+address: No. 6, Aly. 3, Ln. 108, Fushan St., Changhua City, Changhua County 50036 , Taiwan (R.O.C.)
+abuse-mailbox: abuse@steveyi.net
+nic-hdl: YT1698-RIPE
+mnt-by: STEVEYI-MNT
+created: 2020-01-26T19:09:13Z
+last-modified: 2022-02-24T20:17:37Z
+source: RIPE # Filtered
+% This query was served by the RIPE Database Query Service version 1.102.2 (BLAARKOP)
+&lt;/code>&lt;/pre>&lt;p>At the same time, you can also see the assignment record of this ASN in the assignment file of RIPE NCC.&lt;/p>
+&lt;pre tabindex="0">&lt;code>steveyiyo@SteveYis-MacBook-Pro ~ % curl https://ftp.ripe.net/pub/stats/ripencc/delegated-ripencc-latest -s | grep 'asn|7480'
+ripencc|TW|asn|7480|1|19970217|allocated
+&lt;/code>&lt;/pre>&lt;h2 id="step-3-next-steps" >Step 3. Next steps
+&lt;span>
+&lt;a href="#step-3-next-steps">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>After completing the transfer, I need to update the records of other third-party platforms (Eg: PeeringDB)&lt;/p>
+&lt;p>Since I initiated the ownership Transfer to PeeringDB, APNIC has not yet deleted the record.&lt;/p>
+&lt;p>This caused their administrators to think that the owner of this ASN was not me.&lt;/p>
+&lt;p>After explaining, they confirmed the RIPE NCC&amp;rsquo;s WHOIS record and moved.&lt;/p>
+&lt;p>&lt;a href="https://www.peeringdb.com/asn/7480">https://www.peeringdb.com/asn/7480&lt;/a>&lt;/p>
+&lt;h2 id="step-4-migrate-the-network" >Step 4. Migrate the network
+&lt;span>
+&lt;a href="#step-4-migrate-the-network">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>Before AS7480, my blackholes used AS60614 to peer with others.&lt;/p>
+&lt;p>We contacted the administrators of STUIX, ARIX, and Lambda-IX respectively, and replaced the Sessions of ASN and RS.&lt;/p>
+&lt;p>After the replacement was completed, we then contacted the NOC of Peer Sessions and also replaced the ASN together.&lt;/p>
+&lt;p>At the same time, we also updated the RPKI and IRR records to prevent prefix(es) from being filtered.&lt;/p>
+&lt;h1 id="timeline" >Timeline
+&lt;span>
+&lt;a href="#timeline">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h1>&lt;ul>
+&lt;li>2022-02-16 Initiate a transfer request to APNIC&lt;/li>
+&lt;li>2022-02-18 APNIC Approved&lt;/li>
+&lt;li>2022-02-22 RIPE Start transfer process&lt;/li>
+&lt;li>2022-03-01 RIPE created aut-num object&lt;/li>
+&lt;li>2022-03-02 APNIC confirmed the complete transfer process&lt;/li>
+&lt;li>2022-03-02 PeeringDB transfer ownership&lt;/li>
+&lt;li>2022-03-02 change Lambda-IX ASN&lt;/li>
+&lt;li>2022-03-03 change STUIX ASN&lt;/li>
+&lt;li>2022-03-04 change ARIX ASN&lt;/li>
+&lt;li>2022-03-05 change upstream ASN&lt;/li>
+&lt;li>2022-03-08 change all, deleted Session(s)&lt;/li>
+&lt;/ul></description></item><item><title>FRRouting Install Guide</title><link>https://blog.steveyi.net/en/posts/frrouting-install/</link><pubDate>Sun, 12 Jul 2020 13:07:14 +0000</pubDate><guid>https://blog.steveyi.net/en/posts/frrouting-install/</guid><description>&lt;p>I haven’t posted anything for a long time. I’m still learning some BGP Knowledge and was trying to use bird1 to make BGP Session with another operator.&lt;/p>
 &lt;p>But I can not make BGP Session Establishment with a operator, so I uninstall bird1 and install &lt;a href="https://frrouting.org/">FRRouting&lt;/a>&lt;/p>
 &lt;h2 id="whats-frrouting" >What&amp;rsquo;s FRRouting?
 &lt;span>
