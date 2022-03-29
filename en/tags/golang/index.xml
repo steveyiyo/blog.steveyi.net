@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Golang on SteveYi's Blog</title><link>https://blog.steveyi.net/en/tags/golang/</link><description>SteveYi's Blog (Golang)</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Tue, 29 Mar 2022 17:40:28 +0800</lastBuildDate><atom:link href="https://blog.steveyi.net/en/tags/golang/index.xml" rel="self" type="application/rss+xml"/><item><title>A capitalizations name issue can not build golang app</title><link>https://blog.steveyi.net/en/posts/capitalizations-name-issue-in-golang/</link><pubDate>Tue, 29 Mar 2022 17:40:28 +0800</pubDate><guid>https://blog.steveyi.net/en/posts/capitalizations-name-issue-in-golang/</guid><description>&lt;p>Recently, I&amp;rsquo;m working on a project which is a &lt;a href="https://github.com/steveyiyo/URL-Shortener">URL Shortener&lt;/a> with Golang.&lt;/p>
-&lt;p>Here is current arch.&lt;/p>
+&lt;p>Here is current architecture.&lt;/p>
 &lt;pre tabindex="0">&lt;code>steveyiyo@SteveYis-MacBook-Pro-2 URL-Shortener % tree
 .
 ├── README.md
