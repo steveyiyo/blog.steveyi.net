@@ -7,7 +7,7 @@ tags: ['Golang']
 
 Recently, I'm working on a project which is a [URL Shortener](https://github.com/steveyiyo/URL-Shortener) with Golang.
 
-Here is current arch.
+Here is current architecture.
 
 ```
 steveyiyo@SteveYis-MacBook-Pro-2 URL-Shortener % tree
