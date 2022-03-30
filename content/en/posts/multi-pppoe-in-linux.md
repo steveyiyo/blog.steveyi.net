@@ -1,16 +1,17 @@
 ---
 title: "Using Linux to accomplish virtual WAN with multi PPPoE"
 date: 2021-07-19T08:47:55+08:00
-draft: true
-description: "我將 Linux 做為路由器已經有好一陣子了。最近，我想將中華電信的七個 IP 都用上"
+draft: false
+description: "I use linux as router for a while. Recently, I'm trying to ..."
 ---
 
-我將 Linux 做為路由器已經有好一陣子了。  
-前幾天，剛好想起來家中網路的 ISP（中華電信），可以透過撥號取得 7 個浮動的 Public IPv4 Address，於是就來實現他了！
+I use Linux as a router for a while. Recently, I remember I can use PPPoE to get 7 IPs from Chunghwa Telecom (aka Hinet).
 
-## 環境
+So let's try it!
 
-> 以下資訊是透過 [bench.sh](https://bench.sh) 的 Script 所產生的
+## Environment
+
+> The below details is generate by [bench.sh](https://bench.sh/)
 
 ```shell
 ----------------------------------------------------------------------
@@ -34,14 +35,14 @@ description: "我將 Linux 做為路由器已經有好一陣子了。最近，�
 ----------------------------------------------------------------------
 ```
 
-## 建立虛擬網卡
+## Create Virtual Interface
 
-首先，我們需要先建立幾個虛擬 WAN，其 MacAddress 會不同。  
-這些是我們等等使用 PPPoe 連線需要使用到的。
+First, We need to create some virtual interfaces, and make sure the MAC Address is not the same.
+We'll use it for PPPoE connection.
 
-* enp1s0 為接上中華電信路由器的網卡，name 後可以自定義
+* enp1s0 is the physical interface which is connect to the router of Hinet.
 
-> 這邊先建立 7 個虛擬網卡
+> Create 7 virtual interfaces
 
 ```
 ip link add link enp1s0 name wan0 type macvlan
@@ -53,25 +54,26 @@ ip link add link enp1s0 name wan5 type macvlan
 ip link add link enp1s0 name wan6 type macvlan
 ```
 
-## 設定 PPPoe 連線
+## Setup PPPoE connection
 
-> 我在 Linux 中使用 pppoeconf。  
-> 如果沒有裝的話，可以透過以下指令安裝一下。
+> I use pppoeconf in Linux. If you haven't, please use following the command to install it.
 
 ```
 sudo apt install pppoeconf
 ```
 
-我們先進入 pppoeconf，將帳號密碼輸入進去。
+Going to pppoeconf, and add the connection details to the configure file.
 
-接著，再進去 `/etc/ppp/peers` 資料夾，將 dsl-provider 文件複製為其他檔案。  
-並修改複製後檔案中的網卡名稱（ex: nic-wan1 -> nic-wan0）
+And then, we can going to `/etc/ppp/peers` folder, and make the dsl-provider file as copy.
+
+Edit the interface name (Eg: nic-wan1 -> nic-wan0)
 
 ![](https://i.imgur.com/06M8VBv.png)
 
-接著，使用指令 `pon <檔案名稱>` 來啟用 PPPoe 連線。  
-再下 `ip addr` 就可以看到網卡列表。
+Final, You can use `pon <filename>` command to enable pppoe connection.
+
+Once everything is ok. You can use `ip addr` to see the interface list.
 
 ![](https://i.imgur.com/yg6Tx59.png)
 
-這樣就大功告成囉！
+That's all!
