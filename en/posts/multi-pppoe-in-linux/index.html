@@ -1,13 +1,11 @@
 <!doctype html><html lang=tw data-theme>
 <head>
-<meta name=generator content="Hugo 0.92.1">
 <meta charset=utf-8>
 <meta name=HandheldFriendly content="True">
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=referrer content="no-referrer-when-downgrade">
-<title>SteveYi's Blog</title>
-<meta name=description content>
-<link rel=alternate type=application/rss+xml href=https://blog.steveyi.net/en/index.xml title="SteveYi's Blog">
+<title>Using Linux to accomplish virtual WAN with multi PPPoE - SteveYi's Blog</title>
+<meta name=description content="I use linux as router for a while. Recently, I'm trying to ...">
 <link rel=icon type=image/x-icon href=https://blog.steveyi.net/favicon.ico>
 <link rel=apple-touch-icon-precomposed href=https://blog.steveyi.net/favicon.png>
 <style>body{visibility:hidden;opacity:0}</style>
@@ -16,13 +14,15 @@
 </noscript>
 <link rel=stylesheet href=https://blog.steveyi.net/css/style.min.e4dd69a921886f06d1a0e2bf835aa4fdced2d03b6f83804e6ae146caac8882bb.css integrity="sha256-5N1pqSGIbwbRoOK/g1qk/c7S0Dtvg4BOauFGyqyIgrs=">
 <script src=https://blog.steveyi.net/js/script.min.510c781c39dbb21b4c76d85c82e2bdf4689220adbb7cd61e49e9d293e442fb42.js type=text/javascript integrity="sha256-UQx4HDnbshtMdthcguK99GiSIK27fNYeSenSk+RC+0I="></script>
-<meta property="og:title" content="SteveYi's Blog">
-<meta property="og:description" content>
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://blog.steveyi.net/en/"><meta property="og:site_name" content="SteveYi's Blog">
+<meta property="og:title" content="Using Linux to accomplish virtual WAN with multi PPPoE">
+<meta property="og:description" content="I use linux as router for a while. Recently, I'm trying to ...">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blog.steveyi.net/en/posts/multi-pppoe-in-linux/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2021-07-19T08:47:55+08:00">
+<meta property="article:modified_time" content="2021-07-19T08:47:55+08:00"><meta property="og:site_name" content="SteveYi's Blog">
 <meta name=twitter:card content="summary">
-<meta name=twitter:title content="SteveYi's Blog">
-<meta name=twitter:description content>
+<meta name=twitter:title content="Using Linux to accomplish virtual WAN with multi PPPoE">
+<meta name=twitter:description content="I use linux as router for a while. Recently, I'm trying to ...">
 <link rel=webmention href=https://webmention.io/hugo-theme-anubis/webmention>
 <link rel=pingback href=https://webmention.io/hugo-theme-anubis/xmlrpc>
 <link rel=webmention href=https://yourdomain.com/webemntions/receive>
@@ -81,51 +81,10 @@
 </nav>
 </header>
 <main id=main tabindex=-1>
-<div class=homepage-content>
-</div>
-<div class="articles h-feed">
-<article class="post-list h-feed">
+<article class="post h-entry">
 <div class=post-header>
 <header>
-<h1 class="p-name post-title"><a class=u-url href=/en/posts/capitalizations-name-issue-in-golang/>A capitalizations name issue can not build golang app</a></h1>
-</header>
-</div>
-<div class=read-more>
-<a class=u-url href=/en/posts/capitalizations-name-issue-in-golang/>Read more</a>
-</div>
-<div class=post-info>
-<div class="post-date dt-published">2022-03-29</div>
-<a class="post-hidden-url u-url" href=https://blog.steveyi.net/en/posts/capitalizations-name-issue-in-golang/>https://blog.steveyi.net/en/posts/capitalizations-name-issue-in-golang/</a>
-<a href=https://blog.steveyi.net/ class="p-name p-author post-hidden-author h-card" rel=me>SteveYi</a>
-<div class=post-taxonomies>
-<ul class=post-tags>
-<li><a href=https://blog.steveyi.net/en/tags/golang/>#Golang</a></li>
-</ul>
-</div>
-</div>
-</article>
-<article class="post-list h-feed">
-<div class=post-header>
-<header>
-<h1 class="p-name post-title"><a class=u-url href=/en/posts/as7480/>Acquires AS7480 (Inter-RIR transfer)</a></h1>
-</header>
-</div>
-<div class=read-more>
-<a class=u-url href=/en/posts/as7480/>Read more</a>
-</div>
-<div class=post-info>
-<div class="post-date dt-published">2022-03-08</div>
-<a class="post-hidden-url u-url" href=https://blog.steveyi.net/en/posts/as7480/>https://blog.steveyi.net/en/posts/as7480/</a>
-<a href=https://blog.steveyi.net/ class="p-name p-author post-hidden-author h-card" rel=me>SteveYi</a>
-<div class=post-taxonomies>
-</div>
-</div>
-</article>
-<article class="post-list h-feed">
-<div class=post-header>
-<header>
-<h1 class="p-name post-title"><a class=u-url href=/en/posts/multi-pppoe-in-linux/>Using Linux to accomplish virtual WAN with multi PPPoE</a></h1>
-</header>
+<h1 class="p-name post-title">Using Linux to accomplish virtual WAN with multi PPPoE</h1>
 <span>
 <ul class=post-translations>
 <li>
@@ -136,9 +95,75 @@ EN
 </li>
 </ul>
 </span>
+</header>
 </div>
-<div class=read-more>
-<a class=u-url href=/en/posts/multi-pppoe-in-linux/>Read more</a>
+<div class="content e-content">
+<p>I use Linux as a router for a while. Recently, I remember I can use PPPoE to get 7 IPs from Chunghwa Telecom (aka Hinet).</p>
+<p>So let&rsquo;s try it!</p>
+<h2 id=environment>Environment
+<span>
+<a href=#environment><svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/></svg>
+</a>
+</span>
+</h2><blockquote>
+<p>The below details is generate by <a href=https://bench.sh/>bench.sh</a></p>
+</blockquote>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>----------------------------------------------------------------------
+ CPU Model             : Intel<span style=color:#f92672>(</span>R<span style=color:#f92672>)</span> Celeron<span style=color:#f92672>(</span>R<span style=color:#f92672>)</span> CPU 3865U @ 1.80GHz
+ CPU Cores             : <span style=color:#ae81ff>2</span>
+ CPU Frequency         : 1278.526 MHz
+ CPU Cache             : <span style=color:#ae81ff>2048</span> KB
+ Total Disk            : 14.9 GB <span style=color:#f92672>(</span>6.6 GB Used<span style=color:#f92672>)</span>
+ Total Mem             : <span style=color:#ae81ff>1910</span> MB <span style=color:#f92672>(</span><span style=color:#ae81ff>256</span> MB Used<span style=color:#f92672>)</span>
+ Total Swap            : <span style=color:#ae81ff>2047</span> MB <span style=color:#f92672>(</span><span style=color:#ae81ff>0</span> MB Used<span style=color:#f92672>)</span>
+ System uptime         : <span style=color:#ae81ff>3</span> days, <span style=color:#ae81ff>18</span> hour <span style=color:#ae81ff>30</span> min
+ Load average          : 0.07, 0.06, 0.01
+ OS                    : Ubuntu 20.04.1 LTS
+ Arch                  : x86_64 <span style=color:#f92672>(</span><span style=color:#ae81ff>64</span> Bit<span style=color:#f92672>)</span>
+ Kernel                : 5.4.0-77-generic
+ TCP CC                : cubic
+ Virtualization        : Dedicated
+ Organization          : AS3462 Data Communication Business Group
+ Location              : Chang-hua / TW
+ Region                : Taiwan
+----------------------------------------------------------------------
+</code></pre></div><h2 id=create-virtual-interface>Create Virtual Interface
+<span>
+<a href=#create-virtual-interface><svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/></svg>
+</a>
+</span>
+</h2><p>First, We need to create some virtual interfaces, and make sure the MAC Address is not the same.
+We&rsquo;ll use it for PPPoE connection.</p>
+<ul>
+<li>enp1s0 is the physical interface which is connect to the router of Hinet.</li>
+</ul>
+<blockquote>
+<p>Create 7 virtual interfaces</p>
+</blockquote>
+<pre tabindex=0><code>ip link add link enp1s0 name wan0 type macvlan
+ip link add link enp1s0 name wan1 type macvlan
+ip link add link enp1s0 name wan2 type macvlan
+ip link add link enp1s0 name wan3 type macvlan
+ip link add link enp1s0 name wan4 type macvlan
+ip link add link enp1s0 name wan5 type macvlan
+ip link add link enp1s0 name wan6 type macvlan
+</code></pre><h2 id=setup-pppoe-connection>Setup PPPoE connection
+<span>
+<a href=#setup-pppoe-connection><svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/></svg>
+</a>
+</span>
+</h2><blockquote>
+<p>I use pppoeconf in Linux. If you haven&rsquo;t, please use following the command to install it.</p>
+</blockquote>
+<pre tabindex=0><code>sudo apt install pppoeconf
+</code></pre><p>Going to pppoeconf, and add the connection details to the configure file.</p>
+<p>And then, we can going to <code>/etc/ppp/peers</code> folder, and make the dsl-provider file as copy.</p>
+<p>Edit the interface name (Eg: nic-wan1 -> nic-wan0)</p>
+<p><img src=https://i.imgur.com/06M8VBv.png alt></p>
+<p>Final, You can use <code>pon &lt;filename></code> command to enable pppoe connection.</p>
+<p>Once everything is ok. You can use <code>ip addr</code> to see the interface list.</p>
+<p><img src=https://i.imgur.com/yg6Tx59.png alt></p>
+<p>That&rsquo;s all!</p>
 </div>
 <div class=post-info>
 <div class="post-date dt-published">2021-07-19</div>
@@ -148,57 +173,19 @@ EN
 </div>
 </div>
 </article>
-<article class="post-list h-feed">
-<div class=post-header>
-<header>
-<h1 class="p-name post-title"><a class=u-url href=/en/posts/frrouting-install/>FRRouting Install Guide</a></h1>
-</header>
-<span>
-<ul class=post-translations>
-<li>
-EN
-</li>
-<li>
-<a href=https://blog.steveyi.net/posts/frrouting-install/>TW</a>
-</li>
-</ul>
-</span>
+<div class="pagination post-pagination">
+<div class="left pagination-item">
+<a href=/en/posts/as7480/>Acquires AS7480 (Inter-RIR transfer)</a>
 </div>
-<div class=read-more>
-<a class=u-url href=/en/posts/frrouting-install/>Read more</a>
+<div class="right pagination-item">
+<a href=/en/posts/frrouting-install/>FRRouting Install Guide</a>
 </div>
-<div class=post-info>
-<div class="post-date dt-published">2020-07-12</div>
-<a class="post-hidden-url u-url" href=https://blog.steveyi.net/en/posts/frrouting-install/>https://blog.steveyi.net/en/posts/frrouting-install/</a>
-<a href=https://blog.steveyi.net/ class="p-name p-author post-hidden-author h-card" rel=me>SteveYi</a>
-<div class=post-taxonomies>
-<ul class=post-tags>
-<li><a href=https://blog.steveyi.net/en/tags/bgp/>#BGP</a></li>
-<li><a href=https://blog.steveyi.net/en/tags/server/>#Server</a></li>
-<li><a href=https://blog.steveyi.net/en/tags/networl/>#Networl</a></li>
-</ul>
-</div>
-</div>
-</article>
-<article class="post-list h-feed">
-<div class=post-header>
-<header>
-<h1 class="p-name post-title"><a class=u-url href=/en/posts/hello_world/>Multi Language Site is now Enabled!</a></h1>
-</header>
-</div>
-<div class=post-info>
-<a class="post-hidden-url u-url" href=https://blog.steveyi.net/en/posts/hello_world/>https://blog.steveyi.net/en/posts/hello_world/</a>
-<a href=https://blog.steveyi.net/ class="p-name p-author post-hidden-author h-card" rel=me>SteveYi</a>
-<div class=post-taxonomies>
-</div>
-</div>
-</article>
 </div>
 </main>
 <footer class=common-footer>
 <ul class=language-select>
 <li>English</li>
-<li><a href=https://blog.steveyi.net/>正體中文</a></li>
+<li><a href=https://blog.steveyi.net/posts/multi-pppoe-in-linux/>正體中文</a></li>
 </ul>
 <div class=common-footer-bottom>
 <div class=copyright>
