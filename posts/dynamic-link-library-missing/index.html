@@ -1,13 +1,17 @@
 <!doctype html><html lang=tw data-theme>
 <head>
-<meta name=generator content="Hugo 0.92.1">
 <meta charset=utf-8>
 <meta name=HandheldFriendly content="True">
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=referrer content="no-referrer-when-downgrade">
-<title>小易的部落格</title>
-<meta name=description content>
-<link rel=alternate type=application/rss+xml href=https://blog.steveyi.net/index.xml title=小易的部落格>
+<title>在 Golang build 時，遇到動態連結庫遺失的問題 - 小易的部落格</title>
+<meta name=description content="Hi! 最近在寫一些 Golang 的專案。在使用 Docker build image 時，發現了一些問題。
+問題點     Docker image build 完後，執行 docker run 時出現以下錯誤
+standard_init_linux.go:211: exec user process caused &#34;no such file or directory&#34; 原因     以我目前在寫的專案 URL-Shortener 為例。
+在這個專案中，我用到了 go-sqlite3 這個 Library。
+我們可以注意到 go-sqlite3 是以 C programming 來寫的。當我們在 build 時，需要使用到 GCC 及 CGO 來構建。所以我們也需要將 CGO_ENABLED 的變量設為 1，使其可以進行動態編譯。
+ 執行指令就像這樣
+$ CGO_ENABLED=1 CC=gcc go build -o /app/app main.go  Mini Image     開兩個 Container">
 <link rel=icon type=image/x-icon href=https://blog.steveyi.net/favicon.ico>
 <link rel=apple-touch-icon-precomposed href=https://blog.steveyi.net/favicon.png>
 <style>body{visibility:hidden;opacity:0}</style>
@@ -16,13 +20,27 @@
 </noscript>
 <link rel=stylesheet href=https://blog.steveyi.net/css/style.min.e4dd69a921886f06d1a0e2bf835aa4fdced2d03b6f83804e6ae146caac8882bb.css integrity="sha256-5N1pqSGIbwbRoOK/g1qk/c7S0Dtvg4BOauFGyqyIgrs=">
 <script src=https://blog.steveyi.net/js/script.min.510c781c39dbb21b4c76d85c82e2bdf4689220adbb7cd61e49e9d293e442fb42.js type=text/javascript integrity="sha256-UQx4HDnbshtMdthcguK99GiSIK27fNYeSenSk+RC+0I="></script>
-<meta property="og:title" content="小易的部落格">
-<meta property="og:description" content>
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://blog.steveyi.net/"><meta property="og:site_name" content="小易的部落格">
+<meta property="og:title" content="在 Golang build 時，遇到動態連結庫遺失的問題">
+<meta property="og:description" content="Hi! 最近在寫一些 Golang 的專案。在使用 Docker build image 時，發現了一些問題。
+問題點     Docker image build 完後，執行 docker run 時出現以下錯誤
+standard_init_linux.go:211: exec user process caused &#34;no such file or directory&#34; 原因     以我目前在寫的專案 URL-Shortener 為例。
+在這個專案中，我用到了 go-sqlite3 這個 Library。
+我們可以注意到 go-sqlite3 是以 C programming 來寫的。當我們在 build 時，需要使用到 GCC 及 CGO 來構建。所以我們也需要將 CGO_ENABLED 的變量設為 1，使其可以進行動態編譯。
+ 執行指令就像這樣
+$ CGO_ENABLED=1 CC=gcc go build -o /app/app main.go  Mini Image     開兩個 Container">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blog.steveyi.net/posts/dynamic-link-library-missing/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2022-04-07T15:36:43+08:00">
+<meta property="article:modified_time" content="2022-04-07T15:36:43+08:00"><meta property="og:site_name" content="小易的部落格">
 <meta name=twitter:card content="summary">
-<meta name=twitter:title content="小易的部落格">
-<meta name=twitter:description content>
+<meta name=twitter:title content="在 Golang build 時，遇到動態連結庫遺失的問題">
+<meta name=twitter:description content="Hi! 最近在寫一些 Golang 的專案。在使用 Docker build image 時，發現了一些問題。
+問題點     Docker image build 完後，執行 docker run 時出現以下錯誤
+standard_init_linux.go:211: exec user process caused &#34;no such file or directory&#34; 原因     以我目前在寫的專案 URL-Shortener 為例。
+在這個專案中，我用到了 go-sqlite3 這個 Library。
+我們可以注意到 go-sqlite3 是以 C programming 來寫的。當我們在 build 時，需要使用到 GCC 及 CGO 來構建。所以我們也需要將 CGO_ENABLED 的變量設為 1，使其可以進行動態編譯。
+ 執行指令就像這樣
+$ CGO_ENABLED=1 CC=gcc go build -o /app/app main.go  Mini Image     開兩個 Container">
 <link rel=webmention href=https://webmention.io/hugo-theme-anubis/webmention>
 <link rel=pingback href=https://webmention.io/hugo-theme-anubis/xmlrpc>
 <link rel=webmention href=https://yourdomain.com/webemntions/receive>
@@ -81,218 +99,80 @@
 </nav>
 </header>
 <main id=main tabindex=-1>
-<div class=homepage-content>
-</div>
-<div class="articles h-feed">
-<article class="post-list h-feed">
+<article class="post h-entry">
 <div class=post-header>
 <header>
-<h1 class="p-name post-title"><a class=u-url href=/posts/html-gmail/>使用傳統版 Gmail 加快老舊裝置和低速網路的郵件載入速度</a></h1>
+<h1 class="p-name post-title">在 Golang build 時，遇到動態連結庫遺失的問題</h1>
 </header>
 </div>
-<div class=post-info>
-<div class="post-date dt-published">2020-08-21</div>
-<a class="post-hidden-url u-url" href=https://blog.steveyi.net/posts/html-gmail/>https://blog.steveyi.net/posts/html-gmail/</a>
-<a href=https://blog.steveyi.net/ class="p-name p-author post-hidden-author h-card" rel=me>蘿蔔</a>
-<div class=post-taxonomies>
-<ul class=post-tags>
-<li><a href=https://blog.steveyi.net/tags/g-suite/>#G-Suite</a></li>
-<li><a href=https://blog.steveyi.net/tags/google/>#Google</a></li>
-<li><a href=https://blog.steveyi.net/tags/%E5%85%8D%E8%B2%BB%E8%B3%87%E6%BA%90/>#免費資源</a></li>
-<li><a href=https://blog.steveyi.net/tags/%E7%94%9F%E6%B4%BB%E5%B0%8F%E7%9F%A5%E8%AD%98/>#生活小知識</a></li>
-</ul>
-</div>
-</div>
-</article>
-<article class="post-list h-feed">
-<div class=post-header>
-<header>
-<h1 class="p-name post-title"><a class=u-url href=/posts/macbook-without-a-battery/>淺談 Mac 筆記型電腦的電池和效能的影響</a></h1>
-</header>
-</div>
-<div class=read-more>
-<a class=u-url href=/posts/macbook-without-a-battery/>繼續閱讀</a>
-</div>
-<div class=post-info>
-<div class="post-date dt-published">2020-08-18</div>
-<a class="post-hidden-url u-url" href=https://blog.steveyi.net/posts/macbook-without-a-battery/>https://blog.steveyi.net/posts/macbook-without-a-battery/</a>
-<a href=https://blog.steveyi.net/ class="p-name p-author post-hidden-author h-card" rel=me>蘿蔔</a>
-<div class=post-taxonomies>
-<ul class=post-tags>
-<li><a href=https://blog.steveyi.net/tags/%E7%94%9F%E6%B4%BB%E5%B0%8F%E7%9F%A5%E8%AD%98/>#生活小知識</a></li>
-</ul>
-</div>
-</div>
-</article>
-<article class="post-list h-feed">
-<div class=post-header>
-<header>
-<h1 class="p-name post-title"><a class=u-url href=/posts/macos-catalina-on-unsupport-mac/>在官方不支援 macOS Catalina 的裝置安裝 macOS Catalina</a></h1>
-</header>
-</div>
-<div class=read-more>
-<a class=u-url href=/posts/macos-catalina-on-unsupport-mac/>繼續閱讀</a>
-</div>
-<div class=post-info>
-<div class="post-date dt-published">2020-08-18</div>
-<a class="post-hidden-url u-url" href=https://blog.steveyi.net/posts/macos-catalina-on-unsupport-mac/>https://blog.steveyi.net/posts/macos-catalina-on-unsupport-mac/</a>
-<a href=https://blog.steveyi.net/ class="p-name p-author post-hidden-author h-card" rel=me>蘿蔔</a>
-<div class=post-taxonomies>
-<ul class=post-tags>
-<li><a href=https://blog.steveyi.net/tags/%E5%85%8D%E8%B2%BB%E8%B3%87%E6%BA%90/>#免費資源</a></li>
-<li><a href=https://blog.steveyi.net/tags/%E7%94%9F%E6%B4%BB%E5%B0%8F%E7%9F%A5%E8%AD%98/>#生活小知識</a></li>
-</ul>
-</div>
-</div>
-</article>
-<article class="post-list h-feed">
-<div class=post-header>
-<header>
-<h1 class="p-name post-title"><a class=u-url href=/posts/macos-recovery/>macOS 重灌不求人！使用內建回復功能輕鬆重灌 Mac 電腦</a></h1>
-</header>
-</div>
-<div class=post-info>
-<div class="post-date dt-published">2020-08-15</div>
-<a class="post-hidden-url u-url" href=https://blog.steveyi.net/posts/macos-recovery/>https://blog.steveyi.net/posts/macos-recovery/</a>
-<a href=https://blog.steveyi.net/ class="p-name p-author post-hidden-author h-card" rel=me>蘿蔔</a>
-<div class=post-taxonomies>
-<ul class=post-tags>
-<li><a href=https://blog.steveyi.net/tags/%E7%94%9F%E6%B4%BB%E5%B0%8F%E7%9F%A5%E8%AD%98/>#生活小知識</a></li>
-</ul>
-</div>
-</div>
-</article>
-<article class="post-list h-feed">
-<div class=post-header>
-<header>
-<h1 class="p-name post-title"><a class=u-url href=/posts/cloudready/>使用CloudReady體驗ChromiumOS作業系統，老電腦重獲新生!</a></h1>
-</header>
-</div>
-<div class=post-info>
-<div class="post-date dt-published">2020-08-10</div>
-<a class="post-hidden-url u-url" href=https://blog.steveyi.net/posts/cloudready/>https://blog.steveyi.net/posts/cloudready/</a>
-<a href=https://blog.steveyi.net/ class="p-name p-author post-hidden-author h-card" rel=me>蘿蔔</a>
-<div class=post-taxonomies>
-<ul class=post-tags>
-<li><a href=https://blog.steveyi.net/tags/google/>#Google</a></li>
-<li><a href=https://blog.steveyi.net/tags/%E5%85%8D%E8%B2%BB%E8%B3%87%E6%BA%90/>#免費資源</a></li>
-<li><a href=https://blog.steveyi.net/tags/%E7%94%9F%E6%B4%BB%E5%B0%8F%E7%9F%A5%E8%AD%98/>#生活小知識</a></li>
-</ul>
-</div>
-</div>
-</article>
-<article class="post-list h-feed">
-<div class=post-header>
-<header>
-<h1 class="p-name post-title"><a class=u-url href=/posts/horndis/>使用 Android 手機作為 Mac 的網路連線來源的方法</a></h1>
-</header>
-</div>
-<div class=post-info>
-<div class="post-date dt-published">2020-08-08</div>
-<a class="post-hidden-url u-url" href=https://blog.steveyi.net/posts/horndis/>https://blog.steveyi.net/posts/horndis/</a>
-<a href=https://blog.steveyi.net/ class="p-name p-author post-hidden-author h-card" rel=me>蘿蔔</a>
-<div class=post-taxonomies>
-<ul class=post-tags>
-<li><a href=https://blog.steveyi.net/tags/android/>#Android</a></li>
-<li><a href=https://blog.steveyi.net/tags/%E5%85%8D%E8%B2%BB%E8%B3%87%E6%BA%90/>#免費資源</a></li>
-<li><a href=https://blog.steveyi.net/tags/%E7%94%9F%E6%B4%BB%E5%B0%8F%E7%9F%A5%E8%AD%98/>#生活小知識</a></li>
-</ul>
-</div>
-</div>
-</article>
-<article class="post-list h-feed">
-<div class=post-header>
-<header>
-<h1 class="p-name post-title"><a class=u-url href=/posts/no-win10-update/>輕鬆免工具關閉 Windows 10 自動更新</a></h1>
-</header>
-</div>
-<div class=post-info>
-<div class="post-date dt-published">2020-07-18</div>
-<a class="post-hidden-url u-url" href=https://blog.steveyi.net/posts/no-win10-update/>https://blog.steveyi.net/posts/no-win10-update/</a>
-<a href=https://blog.steveyi.net/ class="p-name p-author post-hidden-author h-card" rel=me>蘿蔔</a>
-<div class=post-taxonomies>
-<ul class=post-tags>
-<li><a href=https://blog.steveyi.net/tags/%E7%94%9F%E6%B4%BB%E5%B0%8F%E7%9F%A5%E8%AD%98/>#生活小知識</a></li>
-</ul>
-</div>
-</div>
-</article>
-<article class="post-list h-feed">
-<div class=post-header>
-<header>
-<h1 class="p-name post-title"><a class=u-url href=/posts/frrouting-install/>FRRouting 安裝教學</a></h1>
-</header>
+<div class="content e-content">
+<p>Hi! 最近在寫一些 Golang 的專案。在使用 Docker build image 時，發現了一些問題。</p>
+<h2 id=問題點>問題點
 <span>
-<ul class=post-translations>
-<li>
-<a href=https://blog.steveyi.net/en/posts/frrouting-install/>EN</a>
-</li>
-<li>
-TW
-</li>
-</ul>
+<a href=#%e5%95%8f%e9%a1%8c%e9%bb%9e><svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/></svg>
+</a>
 </span>
-</div>
-<div class=read-more>
-<a class=u-url href=/posts/frrouting-install/>繼續閱讀</a>
+</h2><p>Docker image build 完後，執行 <code>docker run</code> 時出現以下錯誤</p>
+<pre tabindex=0><code>standard_init_linux.go:211: exec user process caused &quot;no such file or directory&quot;
+</code></pre><h2 id=原因>原因
+<span>
+<a href=#%e5%8e%9f%e5%9b%a0><svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/></svg>
+</a>
+</span>
+</h2><p>以我目前在寫的專案 <a href=https://github.com/steveyiyo/URL-Shortener>URL-Shortener</a> 為例。<br>
+在這個專案中，我用到了 <a href=https://github.com/mattn/go-sqlite3>go-sqlite3</a> 這個 Library。</p>
+<p>我們可以注意到 <a href=https://github.com/mattn/go-sqlite3>go-sqlite3</a> 是以 C programming 來寫的。當我們在 build 時，需要使用到 GCC 及 CGO 來構建。所以我們也需要將 CGO_ENABLED 的變量設為 1，使其可以進行動態編譯。</p>
+<ul>
+<li>執行指令就像這樣<br>
+<code>$ CGO_ENABLED=1 CC=gcc go build -o /app/app main.go</code></li>
+</ul>
+<h2 id=mini-image>Mini Image
+<span>
+<a href=#mini-image><svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/></svg>
+</a>
+</span>
+</h2><p>開兩個 Container</p>
+<p>第一個 Container</p>
+<ul>
+<li>執行 <code>docker build</code> 進行 build。</li>
+<li>將 build 完成的 binary file 複製到第二個 Container。</li>
+</ul>
+<p>在第二個 Container 中安裝相關套件，打包。</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Dockerfile data-lang=Dockerfile><span style=color:#66d9ef>FROM</span><span style=color:#e6db74> golang:1.18-alpine3.15 as builder</span><span style=color:#960050;background-color:#1e0010>
+</span><span style=color:#960050;background-color:#1e0010>
+</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> apk --update upgrade <span style=color:#ae81ff>\
+</span><span style=color:#ae81ff></span>    <span style=color:#f92672>&amp;&amp;</span> apk add --no-cache sqlite gcc g++ <span style=color:#ae81ff>\
+</span><span style=color:#ae81ff></span>    <span style=color:#f92672>&amp;&amp;</span> rm -rf /var/cache/apk/*<span style=color:#960050;background-color:#1e0010>
+</span><span style=color:#960050;background-color:#1e0010>
+</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>WORKDIR</span><span style=color:#e6db74> /app</span><span style=color:#960050;background-color:#1e0010>
+</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>COPY</span> . .<span style=color:#960050;background-color:#1e0010>
+</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span>  CGO_ENABLED<span style=color:#f92672>=</span><span style=color:#ae81ff>1</span> CC<span style=color:#f92672>=</span>gcc go build -o /app/app main.go<span style=color:#960050;background-color:#1e0010>
+</span><span style=color:#960050;background-color:#1e0010>
+</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>FROM</span><span style=color:#e6db74> alpine:3.10</span><span style=color:#960050;background-color:#1e0010>
+</span><span style=color:#960050;background-color:#1e0010>
+</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#75715e># Install for go-sqlite3 use</span><span style=color:#960050;background-color:#1e0010>
+</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> apk --update upgrade <span style=color:#ae81ff>\
+</span><span style=color:#ae81ff></span>    <span style=color:#f92672>&amp;&amp;</span> apk add --no-cache sqlite <span style=color:#ae81ff>\
+</span><span style=color:#ae81ff></span>    <span style=color:#f92672>&amp;&amp;</span> rm -rf /var/cache/apk/*<span style=color:#960050;background-color:#1e0010>
+</span><span style=color:#960050;background-color:#1e0010>
+</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>COPY</span> --from<span style=color:#f92672>=</span>builder /app/app /app/<span style=color:#960050;background-color:#1e0010>
+</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>WORKDIR</span><span style=color:#e6db74> /app</span><span style=color:#960050;background-color:#1e0010>
+</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>CMD</span> [<span style=color:#e6db74>&#34;./app&#34;</span>]<span style=color:#960050;background-color:#1e0010>
+</span></code></pre></div>
 </div>
 <div class=post-info>
-<div class="post-date dt-published">2020-07-12</div>
-<a class="post-hidden-url u-url" href=https://blog.steveyi.net/posts/frrouting-install/>https://blog.steveyi.net/posts/frrouting-install/</a>
+<div class="post-date dt-published">2022-04-07</div>
+<a class="post-hidden-url u-url" href=https://blog.steveyi.net/posts/dynamic-link-library-missing/>https://blog.steveyi.net/posts/dynamic-link-library-missing/</a>
 <a href=https://blog.steveyi.net/ class="p-name p-author post-hidden-author h-card" rel=me>SteveYi</a>
 <div class=post-taxonomies>
-<ul class=post-tags>
-<li><a href=https://blog.steveyi.net/tags/bgp/>#BGP</a></li>
-<li><a href=https://blog.steveyi.net/tags/%E4%BC%BA%E6%9C%8D%E5%99%A8/>#伺服器</a></li>
-</ul>
 </div>
 </div>
 </article>
-<article class="post-list h-feed">
-<div class=post-header>
-<header>
-<h1 class="p-name post-title"><a class=u-url href=/posts/dynamic-lyrics-android/>幫 Spotify 或其他音樂軟體加上實時歌詞的方法 (Android)</a></h1>
-</header>
-</div>
-<div class=post-info>
-<div class="post-date dt-published">2020-07-11</div>
-<a class="post-hidden-url u-url" href=https://blog.steveyi.net/posts/dynamic-lyrics-android/>https://blog.steveyi.net/posts/dynamic-lyrics-android/</a>
-<a href=https://blog.steveyi.net/ class="p-name p-author post-hidden-author h-card" rel=me>蘿蔔</a>
-<div class=post-taxonomies>
-<ul class=post-tags>
-<li><a href=https://blog.steveyi.net/tags/android/>#Android</a></li>
-<li><a href=https://blog.steveyi.net/tags/%E5%85%8D%E8%B2%BB%E8%B3%87%E6%BA%90/>#免費資源</a></li>
-<li><a href=https://blog.steveyi.net/tags/%E7%94%9F%E6%B4%BB%E5%B0%8F%E7%9F%A5%E8%AD%98/>#生活小知識</a></li>
-</ul>
-</div>
-</div>
-</article>
-<article class="post-list h-feed">
-<div class=post-header>
-<header>
-<h1 class="p-name post-title"><a class=u-url href=/posts/no-premium-spotify-dynamic-lyrics/>幫 Spotify 加上實時歌詞 (iOS/iPadOS)</a></h1>
-</header>
-</div>
-<div class=post-info>
-<div class="post-date dt-published">2020-07-11</div>
-<a class="post-hidden-url u-url" href=https://blog.steveyi.net/posts/no-premium-spotify-dynamic-lyrics/>https://blog.steveyi.net/posts/no-premium-spotify-dynamic-lyrics/</a>
-<a href=https://blog.steveyi.net/ class="p-name p-author post-hidden-author h-card" rel=me>蘿蔔</a>
-<div class=post-taxonomies>
-<ul class=post-tags>
-<li><a href=https://blog.steveyi.net/tags/ios/>#iOS</a></li>
-<li><a href=https://blog.steveyi.net/tags/%E5%85%8D%E8%B2%BB%E8%B3%87%E6%BA%90/>#免費資源</a></li>
-<li><a href=https://blog.steveyi.net/tags/%E7%94%9F%E6%B4%BB%E5%B0%8F%E7%9F%A5%E8%AD%98/>#生活小知識</a></li>
-</ul>
-</div>
-</div>
-</article>
-<div class=pagination>
-<div class="left pagination-item">
-<a href=/page/3/>新文章</a>
+<div class="pagination post-pagination">
+<div class="left pagination-item disabled">
 </div>
 <div class="right pagination-item">
-<a href=/page/5/>舊文章</a>
-</div>
+<a href=/posts/multi-pppoe-in-linux/>在 Linux 上實現虛擬 WAN 多撥 PPPoE</a>
 </div>
 </div>
 </main>
