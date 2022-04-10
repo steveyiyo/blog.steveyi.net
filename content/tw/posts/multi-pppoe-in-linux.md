@@ -5,8 +5,6 @@ draft: flase
 description: "I've been using Linux as a router for quite some time."
 ---
 
-
-I've been using Linux as a router for quite some time.
 前幾天，剛好想起來家中網路的 ISP（中華電信），可以透過撥號取得 7 個浮動的 Public IPv4 Address，於是就來實現他了！
 
 ## 環境
