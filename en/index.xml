@@ -414,6 +414,55 @@ service frr restart
 &lt;/span>
 &lt;/h3>&lt;p>All of the posts are released by Creative Commons Taiwan, and The work is licensed under the Attribution-ShareAlike 4.0 International.&lt;/p>
 &lt;p>More details please see the &lt;a href="http://creativecommons.org/licenses/by-sa/4.0/">Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)&lt;/a>&lt;/p>
-&lt;p>&lt;img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png" alt="">&lt;/p></description></item><item><title>APAN Fellowship Program</title><link>https://blog.steveyi.net/en/apan-fellowship/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.steveyi.net/en/apan-fellowship/</guid><description>&lt;p>TBA&lt;/p></description></item><item><title>Multi Language Site is now Enabled!</title><link>https://blog.steveyi.net/en/posts/hello_world/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.steveyi.net/en/posts/hello_world/</guid><description>&lt;p>Today, I have now enabled my multi languages site.&lt;/p>
+&lt;p>&lt;img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png" alt="">&lt;/p></description></item><item><title>APAN Fellowship Program</title><link>https://blog.steveyi.net/en/apan-fellowship/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.steveyi.net/en/apan-fellowship/</guid><description>&lt;p>I&amp;rsquo;m very glad to be able to participate in this program. I hope that I can contribute to the APAN community and to the APAN Foundation.&lt;/p>
+&lt;h2 id="attending-apricot-2022--apnic-53" >Attending APRICOT 2022 / APNIC 53
+&lt;span>
+&lt;a href="#attending-apricot-2022--apnic-53">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>Based on the COVID-19, &lt;a href="https://2022.apricot.net/">APRICOT 2022 conference&lt;/a> are 100% online conference.&lt;/p>
+&lt;p>Before attending this conference, I need to register on their website. Since the conference is online, APNIC does not charge for the tickets.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;img src="https://i.imgur.com/GSIy8Cc.png" alt="">&lt;/p>
+&lt;p>There has 886 registered participants (Include me).&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="why-attend-this-conference" >Why attend this conference?
+&lt;span>
+&lt;a href="#why-attend-this-conference">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h3>&lt;p>I have follow the Internet government policy since 2022, and I was also focused on the development of the internet.&lt;/p>
+&lt;p>Currently, there have 5 RIRs (Regional Internet registry) in the world. APNIC is one of them which is manage the Asia Pacific region, closely related to our internet lives. And if the internet government policy has been changed, the network ecology may be changing too.&lt;/p>
+&lt;h3 id="policy-development" >Policy development
+&lt;span>
+&lt;a href="#policy-development">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h3>&lt;p>At this conference, I attending to the policy development session (prop-142/143/144) except the technology session.&lt;/p>
+&lt;p>The authors of each proposal brief the community on the pros and cons of the proposal, and the community decides whether to pass or not.&lt;/p>
+&lt;p>And I think &lt;a href="https://www.apnic.net/community/policy/proposals/prop-143/">prop-143: ASN to Customer&lt;/a> is the most interesting proposal, because for some Endusers who are not APNIC LIR, they can freely transfer ASN network resources.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;img src="https://i.imgur.com/v1SvIMV.png" alt="">&lt;/p>
+&lt;p>Voting takes place in a Zoom meeting&lt;/p>
+&lt;/blockquote>
+&lt;p>In addition to the above policy, the author of &lt;a href="https://www.apnic.net/community/policy/proposals/prop-141/">prop-141&lt;/a> also presented his proposal at &lt;a href="https://conference.apnic.net/53/program/schedule-conference/#/day/10/open-policy-meeting-1-policy-sig">OPL&lt;/a> - &lt;a href="https://www.apnic.net/wp-content/uploads/2021/09/prop-141-v003.txt">Change maximum delegation size of IPv4 address from 512 (/23) to 768 (/23+/24) addresses&lt;/a>&lt;/p>
+&lt;p>As this proposal may lead to a dramatic increase in the existing global routing table, and may accelerate the exhaustion of APNIC&amp;rsquo;s free IPv4 address pool. So the community has not yet reached a consensus.&lt;/p>
+&lt;h3 id="nir-forum" >NIR Forum
+&lt;span>
+&lt;a href="#nir-forum">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h3>&lt;p>The one that impressed me the most was the APNIC NIR SIG Forum. In this agenda, each NIR introduced their membership, infrastructure, results, etc.&lt;/p>
+&lt;p>In addition to this, I also asked the speaker of TWNIC (Taiwan Network Information Center) why they don&amp;rsquo;t allow natural personal to apply to be IP members.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;img src="https://i.imgur.com/iP3ujJ9.png" alt="">&lt;/p>
+&lt;p>TLDR; APNIC and RIPE allow to be a LIR member as a nature person. Why TWNIC doesn&amp;rsquo;t allow? Is it because of the law of taiwan or TWNIC internal policy?&lt;/p>
+&lt;p>TWNIC: Yes, it&amp;rsquo;s the currently policy within TWNIC.&lt;/p>
+&lt;/blockquote>
+&lt;p>TBA&lt;/p></description></item><item><title>Multi Language Site is now Enabled!</title><link>https://blog.steveyi.net/en/posts/hello_world/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.steveyi.net/en/posts/hello_world/</guid><description>&lt;p>Today, I have now enabled my multi languages site.&lt;/p>
 &lt;p>I still translate some old posts into English, please wait :)&lt;/p>
 &lt;p>You should see both languages version posts soon.&lt;/p></description></item></channel></rss>
