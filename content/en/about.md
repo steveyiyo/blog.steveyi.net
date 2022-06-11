@@ -19,6 +19,15 @@ When I was fifteen, I started to learn about network engineering (Eg: BGP, OSPF,
 
 In 2020, I going to lot of conferences. Eg: [COSCUP](https://coscup.org/), [SITCON](https://sitcon.org/), [MOPCON](https://mopcon.org/2020/), [g0v summit](https://g0v.tw/) and more. At the conference, I meetmet more technology friends, and communicated with each other!
 
+## AWARD
+
+- APAN/ISOC network-engineering fellowship
+- [APNIC Fellowship 2022](https://www.apnic.net/community/fellowship/fs-2022/fellows/)
+
+## Vulnerability Report
+
+- [APNIC Vulnerability Reporting Program](https://www.apnic.net/community/security/apnic-vulnerability-reporting-program/#collapseThree) (2022)
+
 ### Speech
 
 - 2021 清大 CSST 程式設計討論會
