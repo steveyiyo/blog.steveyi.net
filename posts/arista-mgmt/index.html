@@ -1,13 +1,11 @@
 <!doctype html><html lang=tw data-theme>
 <head>
-<meta name=generator content="Hugo 0.92.1">
 <meta charset=utf-8>
 <meta name=HandheldFriendly content="True">
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=referrer content="no-referrer-when-downgrade">
-<title>小易的部落格</title>
-<meta name=description content>
-<link rel=alternate type=application/rss+xml href=https://blog.steveyi.net/index.xml title=小易的部落格>
+<title>在 Arista 上設定 OOB 網路 - 小易的部落格</title>
+<meta name=description content="最近部署了一台 Arista 交換器。由於這台交換機上做了 L3 Routing，所以沒辦法直接將 OOB 網路設定預設路...">
 <link rel=icon type=image/x-icon href=https://blog.steveyi.net/favicon.ico>
 <link rel=apple-touch-icon-precomposed href=https://blog.steveyi.net/favicon.png>
 <style>body{visibility:hidden;opacity:0}</style>
@@ -16,13 +14,15 @@
 </noscript>
 <link rel=stylesheet href=https://blog.steveyi.net/css/style.min.e4dd69a921886f06d1a0e2bf835aa4fdced2d03b6f83804e6ae146caac8882bb.css integrity="sha256-5N1pqSGIbwbRoOK/g1qk/c7S0Dtvg4BOauFGyqyIgrs=">
 <script src=https://blog.steveyi.net/js/script.min.510c781c39dbb21b4c76d85c82e2bdf4689220adbb7cd61e49e9d293e442fb42.js type=text/javascript integrity="sha256-UQx4HDnbshtMdthcguK99GiSIK27fNYeSenSk+RC+0I="></script>
-<meta property="og:title" content="小易的部落格">
-<meta property="og:description" content>
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://blog.steveyi.net/"><meta property="og:site_name" content="小易的部落格">
+<meta property="og:title" content="在 Arista 上設定 OOB 網路">
+<meta property="og:description" content="最近部署了一台 Arista 交換器。由於這台交換機上做了 L3 Routing，所以沒辦法直接將 OOB 網路設定預設路...">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blog.steveyi.net/posts/arista-mgmt/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2022-07-05T02:58:47+08:00">
+<meta property="article:modified_time" content="2022-07-05T02:58:47+08:00"><meta property="og:site_name" content="小易的部落格">
 <meta name=twitter:card content="summary">
-<meta name=twitter:title content="小易的部落格">
-<meta name=twitter:description content>
+<meta name=twitter:title content="在 Arista 上設定 OOB 網路">
+<meta name=twitter:description content="最近部署了一台 Arista 交換器。由於這台交換機上做了 L3 Routing，所以沒辦法直接將 OOB 網路設定預設路...">
 <link rel=webmention href=https://webmention.io/hugo-theme-anubis/webmention>
 <link rel=pingback href=https://webmention.io/hugo-theme-anubis/xmlrpc>
 <link rel=webmention href=https://yourdomain.com/webemntions/receive>
@@ -81,198 +81,78 @@
 </nav>
 </header>
 <main id=main tabindex=-1>
-<div class=homepage-content>
-</div>
-<div class="articles h-feed">
-<article class="post-list h-feed">
+<article class="post h-entry">
 <div class=post-header>
 <header>
-<h1 class="p-name post-title"><a class=u-url href=/posts/pin-any-tweet-on-twitter/>將任何 Tweet 置頂到自己的 Twitter 上</a></h1>
+<h1 class="p-name post-title">在 Arista 上設定 OOB 網路</h1>
 </header>
 </div>
+<div class="content e-content">
+<p>最近部署了一台 Arista 交換器。由於這台交換機上做了 L3 Routing，所以沒辦法直接將 OOB 網路設定預設路由。</p>
+<p>為了解決這個問題，我們建立了一個 VRF 來隔離 OOB 網路。</p>
+<h2 id=如何設定>如何設定
+<span>
+<a href=#%e5%a6%82%e4%bd%95%e8%a8%ad%e5%ae%9a><svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/></svg>
+</a>
+</span>
+</h2><p>首先，我們先定義一個新的 VRF 及 rd</p>
+<pre tabindex=0><code>vrf definition OOB
+   rd 10:1
+</code></pre><p>接著我們設定 MGMT 網卡</p>
+<pre tabindex=0><code>interface Management1
+   vrf forwarding OOB
+   ip address 10.39.0.2/24
+</code></pre><p>設定靜態路由，並啟用 VRF 的 Routing 功能</p>
+<pre tabindex=0><code>ip route vrf OOB 0.0.0.0/0 10.39.0.1
+ip routing vrf OOB
+</code></pre><p>接著可以輸入 <code>show ip route vrf OOB</code> 來查看設定的路由</p>
+<pre tabindex=0><code>arista#show ip route vrf OOB
+
+VRF name: OOB
+Codes: C - connected, S - static, K - kernel, 
+       O - OSPF, IA - OSPF inter area, E1 - OSPF external type 1,
+       E2 - OSPF external type 2, N1 - OSPF NSSA external type 1,
+       N2 - OSPF NSSA external type2, B I - iBGP, B E - eBGP,
+       R - RIP, I L1 - ISIS level 1, I L2 - ISIS level 2,
+       O3 - OSPFv3, A B - BGP Aggregate, A O - OSPF Summary,
+       NG - Nexthop Group Static Route, V - VXLAN Control Service
+
+Gateway of last resort:
+ S      0.0.0.0/0 [1/0] via 10.39.0.1, Management1
+
+ C      10.39.0.0/24 is directly connected, Management1
+</code></pre><h2 id=測試>測試
+<span>
+<a href=#%e6%b8%ac%e8%a9%a6><svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/></svg>
+</a>
+</span>
+</h2><p>使用 <code>ping vrf OOB ip 1.1.1.1</code> 來測試是否可以連通</p>
+<pre tabindex=0><code>arista#ping vrf OOB ip 1.1.1.1 
+PING 1.1.1.1 (1.1.1.1) 72(100) bytes of data.
+80 bytes from 1.1.1.1: icmp_seq=1 ttl=59 time=0.623 ms
+80 bytes from 1.1.1.1: icmp_seq=2 ttl=59 time=0.417 ms
+80 bytes from 1.1.1.1: icmp_seq=3 ttl=59 time=0.419 ms
+80 bytes from 1.1.1.1: icmp_seq=4 ttl=59 time=0.460 ms
+80 bytes from 1.1.1.1: icmp_seq=5 ttl=59 time=0.460 ms
+
+--- 1.1.1.1 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4ms
+rtt min/avg/max/mdev = 0.417/0.475/0.623/0.080 ms, ipg/ewma 1.004/0.548 ms
+</code></pre>
+</div>
 <div class=post-info>
-<div class="post-date dt-published">2021-04-07</div>
-<a class="post-hidden-url u-url" href=https://blog.steveyi.net/posts/pin-any-tweet-on-twitter/>https://blog.steveyi.net/posts/pin-any-tweet-on-twitter/</a>
+<div class="post-date dt-published">2022-07-05</div>
+<a class="post-hidden-url u-url" href=https://blog.steveyi.net/posts/arista-mgmt/>https://blog.steveyi.net/posts/arista-mgmt/</a>
 <a href=https://blog.steveyi.net/ class="p-name p-author post-hidden-author h-card" rel=me>SteveYi</a>
 <div class=post-taxonomies>
 </div>
 </div>
 </article>
-<article class="post-list h-feed">
-<div class=post-header>
-<header>
-<h1 class="p-name post-title"><a class=u-url href=/posts/iptables_nat/>在 iptables 上設定 NAT</a></h1>
-</header>
-</div>
-<div class=post-info>
-<div class="post-date dt-published">2021-03-08</div>
-<a class="post-hidden-url u-url" href=https://blog.steveyi.net/posts/iptables_nat/>https://blog.steveyi.net/posts/iptables_nat/</a>
-<a href=https://blog.steveyi.net/ class="p-name p-author post-hidden-author h-card" rel=me>SteveYi</a>
-<div class=post-taxonomies>
-<ul class=post-tags>
-<li><a href=https://blog.steveyi.net/tags/network/>#Network</a></li>
-</ul>
-</div>
-</div>
-</article>
-<article class="post-list h-feed">
-<div class=post-header>
-<header>
-<h1 class="p-name post-title"><a class=u-url href=/posts/checkm8-bypass/>使用 checkm8 Activation Lock 免費版，繞過 iOS 啟用鎖定</a></h1>
-</header>
-</div>
-<div class=read-more>
-<a class=u-url href=/posts/checkm8-bypass/>繼續閱讀</a>
-</div>
-<div class=post-info>
-<div class="post-date dt-published">2021-03-04</div>
-<a class="post-hidden-url u-url" href=https://blog.steveyi.net/posts/checkm8-bypass/>https://blog.steveyi.net/posts/checkm8-bypass/</a>
-<a href=https://blog.steveyi.net/ class="p-name p-author post-hidden-author h-card" rel=me>蘿蔔</a>
-<div class=post-taxonomies>
-<ul class=post-tags>
-<li><a href=https://blog.steveyi.net/tags/ios/>#iOS</a></li>
-</ul>
-</div>
-</div>
-</article>
-<article class="post-list h-feed">
-<div class=post-header>
-<header>
-<h1 class="p-name post-title"><a class=u-url href=/posts/from-wordpress-to-hugo/>將部落格從 WordPress 轉移到 Hugo</a></h1>
-</header>
-</div>
-<div class=read-more>
-<a class=u-url href=/posts/from-wordpress-to-hugo/>繼續閱讀</a>
-</div>
-<div class=post-info>
-<div class="post-date dt-published">2021-02-10</div>
-<a class="post-hidden-url u-url" href=https://blog.steveyi.net/posts/from-wordpress-to-hugo/>https://blog.steveyi.net/posts/from-wordpress-to-hugo/</a>
-<a href=https://blog.steveyi.net/ class="p-name p-author post-hidden-author h-card" rel=me>SteveYi</a>
-<div class=post-taxonomies>
-</div>
-</div>
-</article>
-<article class="post-list h-feed">
-<div class=post-header>
-<header>
-<h1 class="p-name post-title"><a class=u-url href=/posts/bgp-asn-specify-gateway/>透過 ASN 指定網路出口</a></h1>
-</header>
-</div>
-<div class=read-more>
-<a class=u-url href=/posts/bgp-asn-specify-gateway/>繼續閱讀</a>
-</div>
-<div class=post-info>
-<div class="post-date dt-published">2021-02-06</div>
-<a class="post-hidden-url u-url" href=https://blog.steveyi.net/posts/bgp-asn-specify-gateway/>https://blog.steveyi.net/posts/bgp-asn-specify-gateway/</a>
-<a href=https://blog.steveyi.net/ class="p-name p-author post-hidden-author h-card" rel=me>SteveYi</a>
-<div class=post-taxonomies>
-</div>
-</div>
-</article>
-<article class="post-list h-feed">
-<div class=post-header>
-<header>
-<h1 class="p-name post-title"><a class=u-url href=/posts/join-manrs-as-participants/>成為 MANRS 參與者！</a></h1>
-</header>
-</div>
-<div class=post-info>
-<div class="post-date dt-published">2021-01-25</div>
-<a class="post-hidden-url u-url" href=https://blog.steveyi.net/posts/join-manrs-as-participants/>https://blog.steveyi.net/posts/join-manrs-as-participants/</a>
-<a href=https://blog.steveyi.net/ class="p-name p-author post-hidden-author h-card" rel=me>SteveYi</a>
-<div class=post-taxonomies>
-<ul class=post-tags>
-<li><a href=https://blog.steveyi.net/tags/bgp/>#BGP</a></li>
-<li><a href=https://blog.steveyi.net/tags/network/>#Network</a></li>
-</ul>
-</div>
-</div>
-</article>
-<article class="post-list h-feed">
-<div class=post-header>
-<header>
-<h1 class="p-name post-title"><a class=u-url href=/posts/make-internal-network-by-bgp/>透過 BGP 與朋友組成內網</a></h1>
-</header>
-</div>
-<div class=read-more>
-<a class=u-url href=/posts/make-internal-network-by-bgp/>繼續閱讀</a>
-</div>
-<div class=post-info>
-<div class="post-date dt-published">2021-01-24</div>
-<a class="post-hidden-url u-url" href=https://blog.steveyi.net/posts/make-internal-network-by-bgp/>https://blog.steveyi.net/posts/make-internal-network-by-bgp/</a>
-<a href=https://blog.steveyi.net/ class="p-name p-author post-hidden-author h-card" rel=me>SteveYi</a>
-<div class=post-taxonomies>
-<ul class=post-tags>
-<li><a href=https://blog.steveyi.net/tags/bgp/>#BGP</a></li>
-<li><a href=https://blog.steveyi.net/tags/network/>#Network</a></li>
-</ul>
-</div>
-</div>
-</article>
-<article class="post-list h-feed">
-<div class=post-header>
-<header>
-<h1 class="p-name post-title"><a class=u-url href=/posts/google-adssettings/>Google 廣告 – 原來你在 Google 眼中的形象是這樣的…</a></h1>
-</header>
-</div>
-<div class=post-info>
-<div class="post-date dt-published">2021-01-19</div>
-<a class="post-hidden-url u-url" href=https://blog.steveyi.net/posts/google-adssettings/>https://blog.steveyi.net/posts/google-adssettings/</a>
-<a href=https://blog.steveyi.net/ class="p-name p-author post-hidden-author h-card" rel=me>蘿蔔</a>
-<div class=post-taxonomies>
-<ul class=post-tags>
-<li><a href=https://blog.steveyi.net/tags/google/>#Google</a></li>
-<li><a href=https://blog.steveyi.net/tags/%E7%94%9F%E6%B4%BB%E5%B0%8F%E7%9F%A5%E8%AD%98/>#生活小知識</a></li>
-</ul>
-</div>
-</div>
-</article>
-<article class="post-list h-feed">
-<div class=post-header>
-<header>
-<h1 class="p-name post-title"><a class=u-url href=/posts/linux-mount-googledrive-not-required-brain/>在 Linux 環境下無腦串接 Google 雲端硬碟</a></h1>
-</header>
-</div>
-<div class=post-info>
-<div class="post-date dt-published">2021-01-19</div>
-<a class="post-hidden-url u-url" href=https://blog.steveyi.net/posts/linux-mount-googledrive-not-required-brain/>https://blog.steveyi.net/posts/linux-mount-googledrive-not-required-brain/</a>
-<a href=https://blog.steveyi.net/ class="p-name p-author post-hidden-author h-card" rel=me>蘿蔔</a>
-<div class=post-taxonomies>
-<ul class=post-tags>
-<li><a href=https://blog.steveyi.net/tags/google/>#Google</a></li>
-<li><a href=https://blog.steveyi.net/tags/%E5%85%8D%E8%B2%BB%E8%B3%87%E6%BA%90/>#免費資源</a></li>
-<li><a href=https://blog.steveyi.net/tags/%E7%94%9F%E6%B4%BB%E5%B0%8F%E7%9F%A5%E8%AD%98/>#生活小知識</a></li>
-<li><a href=https://blog.steveyi.net/tags/%E7%B6%B2%E9%9A%9B%E7%B6%B2%E8%B7%AF/>#網際網路</a></li>
-</ul>
-</div>
-</div>
-</article>
-<article class="post-list h-feed">
-<div class=post-header>
-<header>
-<h1 class="p-name post-title"><a class=u-url href=/posts/use-redeb-to-backup-jb-tweaks/>利用 redeb 來備份已安裝插件的 deb 檔</a></h1>
-</header>
-</div>
-<div class=read-more>
-<a class=u-url href=/posts/use-redeb-to-backup-jb-tweaks/>繼續閱讀</a>
-</div>
-<div class=post-info>
-<div class="post-date dt-published">2020-11-28</div>
-<a class="post-hidden-url u-url" href=https://blog.steveyi.net/posts/use-redeb-to-backup-jb-tweaks/>https://blog.steveyi.net/posts/use-redeb-to-backup-jb-tweaks/</a>
-<a href=https://blog.steveyi.net/ class="p-name p-author post-hidden-author h-card" rel=me>蘿蔔</a>
-<div class=post-taxonomies>
-<ul class=post-tags>
-<li><a href=https://blog.steveyi.net/tags/ios/>#iOS</a></li>
-</ul>
-</div>
-</div>
-</article>
-<div class=pagination>
-<div class="left pagination-item">
-<a href=/>新文章</a>
+<div class="pagination post-pagination">
+<div class="left pagination-item disabled">
 </div>
 <div class="right pagination-item">
-<a href=/page/3/>舊文章</a>
-</div>
+<a href=/posts/dynamic-link-library-missing/>在 Golang build 時，遇到動態連結庫遺失的問題</a>
 </div>
 </div>
 </main>

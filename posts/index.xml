@@ -1,4 +1,52 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 小易的部落格</title><link>https://blog.steveyi.net/posts/</link><description>小易的部落格 (Posts)</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Thu, 07 Apr 2022 15:36:43 +0800</lastBuildDate><atom:link href="https://blog.steveyi.net/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>在 Golang build 時，遇到動態連結庫遺失的問題</title><link>https://blog.steveyi.net/posts/dynamic-link-library-missing/</link><pubDate>Thu, 07 Apr 2022 15:36:43 +0800</pubDate><guid>https://blog.steveyi.net/posts/dynamic-link-library-missing/</guid><description>&lt;p>Hi! 最近在寫一些 Golang 的專案。在使用 Docker build image 時，發現了一些問題。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 小易的部落格</title><link>https://blog.steveyi.net/posts/</link><description>小易的部落格 (Posts)</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Tue, 05 Jul 2022 02:58:47 +0800</lastBuildDate><atom:link href="https://blog.steveyi.net/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>在 Arista 上設定 OOB 網路</title><link>https://blog.steveyi.net/posts/arista-mgmt/</link><pubDate>Tue, 05 Jul 2022 02:58:47 +0800</pubDate><guid>https://blog.steveyi.net/posts/arista-mgmt/</guid><description>&lt;p>最近部署了一台 Arista 交換器。由於這台交換機上做了 L3 Routing，所以沒辦法直接將 OOB 網路設定預設路由。&lt;/p>
+&lt;p>為了解決這個問題，我們建立了一個 VRF 來隔離 OOB 網路。&lt;/p>
+&lt;h2 id="如何設定" >如何設定
+&lt;span>
+&lt;a href="#%e5%a6%82%e4%bd%95%e8%a8%ad%e5%ae%9a">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>首先，我們先定義一個新的 VRF 及 rd&lt;/p>
+&lt;pre tabindex="0">&lt;code>vrf definition OOB
+rd 10:1
+&lt;/code>&lt;/pre>&lt;p>接著我們設定 MGMT 網卡&lt;/p>
+&lt;pre tabindex="0">&lt;code>interface Management1
+vrf forwarding OOB
+ip address 10.39.0.2/24
+&lt;/code>&lt;/pre>&lt;p>設定靜態路由，並啟用 VRF 的 Routing 功能&lt;/p>
+&lt;pre tabindex="0">&lt;code>ip route vrf OOB 0.0.0.0/0 10.39.0.1
+ip routing vrf OOB
+&lt;/code>&lt;/pre>&lt;p>接著可以輸入 &lt;code>show ip route vrf OOB&lt;/code> 來查看設定的路由&lt;/p>
+&lt;pre tabindex="0">&lt;code>arista#show ip route vrf OOB
+VRF name: OOB
+Codes: C - connected, S - static, K - kernel,
+O - OSPF, IA - OSPF inter area, E1 - OSPF external type 1,
+E2 - OSPF external type 2, N1 - OSPF NSSA external type 1,
+N2 - OSPF NSSA external type2, B I - iBGP, B E - eBGP,
+R - RIP, I L1 - ISIS level 1, I L2 - ISIS level 2,
+O3 - OSPFv3, A B - BGP Aggregate, A O - OSPF Summary,
+NG - Nexthop Group Static Route, V - VXLAN Control Service
+Gateway of last resort:
+S 0.0.0.0/0 [1/0] via 10.39.0.1, Management1
+C 10.39.0.0/24 is directly connected, Management1
+&lt;/code>&lt;/pre>&lt;h2 id="測試" >測試
+&lt;span>
+&lt;a href="#%e6%b8%ac%e8%a9%a6">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>使用 &lt;code>ping vrf OOB ip 1.1.1.1&lt;/code> 來測試是否可以連通&lt;/p>
+&lt;pre tabindex="0">&lt;code>arista#ping vrf OOB ip 1.1.1.1
+PING 1.1.1.1 (1.1.1.1) 72(100) bytes of data.
+80 bytes from 1.1.1.1: icmp_seq=1 ttl=59 time=0.623 ms
+80 bytes from 1.1.1.1: icmp_seq=2 ttl=59 time=0.417 ms
+80 bytes from 1.1.1.1: icmp_seq=3 ttl=59 time=0.419 ms
+80 bytes from 1.1.1.1: icmp_seq=4 ttl=59 time=0.460 ms
+80 bytes from 1.1.1.1: icmp_seq=5 ttl=59 time=0.460 ms
+--- 1.1.1.1 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4ms
+rtt min/avg/max/mdev = 0.417/0.475/0.623/0.080 ms, ipg/ewma 1.004/0.548 ms
+&lt;/code>&lt;/pre></description></item><item><title>在 Golang build 時，遇到動態連結庫遺失的問題</title><link>https://blog.steveyi.net/posts/dynamic-link-library-missing/</link><pubDate>Thu, 07 Apr 2022 15:36:43 +0800</pubDate><guid>https://blog.steveyi.net/posts/dynamic-link-library-missing/</guid><description>&lt;p>Hi! 最近在寫一些 Golang 的專案。在使用 Docker build image 時，發現了一些問題。&lt;/p>
 &lt;h2 id="問題點" >問題點
 &lt;span>
 &lt;a href="#%e5%95%8f%e9%a1%8c%e9%bb%9e">
