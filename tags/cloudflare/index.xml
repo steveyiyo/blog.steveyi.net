@@ -1,24 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cloudflare on 小易的部落格</title><link>https://blog.steveyi.net/tags/cloudflare/</link><description>小易的部落格 (Cloudflare)</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Wed, 15 Apr 2020 08:50:06 +0000</lastBuildDate><atom:link href="https://blog.steveyi.net/tags/cloudflare/index.xml" rel="self" type="application/rss+xml"/><item><title>Cloudflare 新服務 spectrum 設定教學</title><link>https://blog.steveyi.net/posts/hot-to-set-cloudflare-spectrum/</link><pubDate>Wed, 15 Apr 2020 08:50:06 +0000</pubDate><guid>https://blog.steveyi.net/posts/hot-to-set-cloudflare-spectrum/</guid><description>&lt;p>今天早上打開&lt;a href="https://facebook.com/">FaceBook&lt;/a>時，發現&lt;a href="https://cloudflare.com/">Cloudflare&lt;/a>推出了一個新服務 - &lt;a href="https://cfl.re/3efcOhv">Spectrum&lt;/a>&lt;br>
-目前是提供給所有付費用戶使用，不知道未來有沒有機會開放給免費客戶&lt;br>
-官方部落格連結: &lt;a href="https://cfl.re/3efcOhv">https://cfl.re/3efcOhv&lt;/a>&lt;/p>
-&lt;p>正好我有幾個網域有使用Plesk Plus的服務（此服務已下架），算是Cloudflare Pro版本 所以也可以開通這個功能！&lt;/p>
-&lt;p>那就來記錄一下設定過程吧&lt;/p>
-&lt;p>首先，進入網域設定 上方選擇 Spectrum&lt;br>
-接著點擊 Enable &lt;a href="https://cfl.re/3efcOhv">Spectrum&lt;/a>&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020050916443011-1920x1142.png" alt="">&lt;/p>
-&lt;p>開通完成後，點擊 Create an application&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020050916445886-1920x1142.png" alt="">&lt;/p>
-&lt;p>選擇SSH(22端口)或是Minecraft(65535端口) (如果是企業版可以使用RDP)&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020050916452556-1920x1142.png" alt="">&lt;/p>
-&lt;p>接著輸入子網域及IP位置，並按Save&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020050916455234-1920x1142.png" alt="">&lt;/p>
-&lt;p>接著我們就可以等待生效囉！&lt;/p>
-&lt;p>可以使用終端(dig 網域名稱)或是&lt;a href="https://dns.google/">Google Public DNS&lt;/a>查詢CNAME紀錄&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020050916461922-1920x1142.png" alt="">&lt;/p>
-&lt;p>目前這個服務&lt;br>
-Pro版本提供5GB流量/月&lt;br>
-Business版本提供10GB流量/月&lt;br>
-超過1GB，以0.1USD計價&lt;br>
-&lt;a href="https://www.cloudflare.com/products/cloudflare-spectrum/">https://www.cloudflare.com/products/cloudflare-spectrum/&lt;/a>&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020050916464540-1920x1142.png" alt="">&lt;/p>
-&lt;p>對於DDOS防禦很頭痛的可以試試看～！&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Cloudflare on 小易的部落格</title><link>https://blog.steveyi.net/tags/cloudflare/</link><description>Recent content in Cloudflare on 小易的部落格</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Wed, 15 Apr 2020 08:50:06 +0000</lastBuildDate><atom:link href="https://blog.steveyi.net/tags/cloudflare/index.xml" rel="self" type="application/rss+xml"/><item><title>Cloudflare 新服務 spectrum 設定教學</title><link>https://blog.steveyi.net/posts/hot-to-set-cloudflare-spectrum/</link><pubDate>Wed, 15 Apr 2020 08:50:06 +0000</pubDate><guid>https://blog.steveyi.net/posts/hot-to-set-cloudflare-spectrum/</guid><description>今天早上打開FaceBook時，發現Cloudflare推出了一個新服務 - Spectrum
+目前是提供給所有付費用戶使用，不知道未來有沒有機會開放給免費客戶
+官方部落格連結: https://cfl.re/3efcOhv
+正好我有幾個網域有使用Plesk Plus的服務（此服務已下架），算是Cloudflare Pro版本 所以也可以開通這個功能！
+那就來記錄一下設定過程吧
+首先，進入網域設定 上方選擇 Spectrum
+接著點擊 Enable Spectrum
+開通完成後，點擊 Create an application
+選擇SSH(22端口)或是Minecraft(65535端口) (如果是企業版可以使用RDP)
+接著輸入子網域及IP位置，並按Save
+接著我們就可以等待生效囉！
+可以使用終端(dig 網域名稱)或是Google Public DNS查詢CNAME紀錄
+目前這個服務
+Pro版本提供5GB流量/月
+Business版本提供10GB流量/月
+超過1GB，以0.1USD計價
+https://www.cloudflare.com/products/cloudflare-spectrum/
+對於DDOS防禦很頭痛的可以試試看～！</description></item></channel></rss>

@@ -1,67 +1,38 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GCP on 小易的部落格</title><link>https://blog.steveyi.net/tags/gcp/</link><description>小易的部落格 (GCP)</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Fri, 15 May 2020 20:35:11 +0000</lastBuildDate><atom:link href="https://blog.steveyi.net/tags/gcp/index.xml" rel="self" type="application/rss+xml"/><item><title>建立 Cloud Identity 帳戶</title><link>https://blog.steveyi.net/posts/create-cloud-identity/</link><pubDate>Fri, 15 May 2020 20:35:11 +0000</pubDate><guid>https://blog.steveyi.net/posts/create-cloud-identity/</guid><description>&lt;p>首先，進入 &lt;a href="https://gsuite.google.com/signup/gcpidentity/welcome">Cloud Identity 申請頁面&lt;/a> 點擊下一頁&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051520063750.png" alt="">&lt;/p>
-&lt;p>接著輸入公司名稱(可以隨意輸入)，員工數量(隨意選擇) 把它當作一個團隊&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051520064943.png" alt="">&lt;/p>
-&lt;p>選擇地點（設定好就不能修改了），其實作用不大&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051520070636.png" alt="">&lt;/p>
-&lt;p>設定目前的電子郵件地址（一些申請的郵件會寄到這裡）&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051520072596.png" alt="">&lt;/p>
-&lt;p>輸入要設定的網域（不得使用於其他 G Suite 服務）&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051520074395.png" alt="">&lt;/p>
-&lt;p>接著建立使用者&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051520083976.png" alt="">&lt;/p>
-&lt;p>機器人驗證&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051520085633.png" alt="">&lt;/p>
-&lt;p>當出現這個頁面時，代表註冊完成了！&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051520091652.png" alt="">&lt;/p>
-&lt;p>接著我們需要驗證網域&lt;/p>
-&lt;p>請看下一篇文章 - &lt;a href="https://blog.steveyi.net/cloud-identity-setting/">Cloud Identity 驗證網域及建立帳號&lt;/a>&lt;/p></description></item><item><title>刪除 G suite 組織</title><link>https://blog.steveyi.net/posts/delete-gsuite/</link><pubDate>Fri, 15 May 2020 18:17:25 +0000</pubDate><guid>https://blog.steveyi.net/posts/delete-gsuite/</guid><description>&lt;p>之前有跟大家分享&lt;a href="https://blog.steveyi.net/register-gsuite/">註冊G Suite帳號&lt;/a>的方式，最近想將 &lt;a href="https://support.google.com/cloudidentity/answer/7319251?hl=zh-Hant">Cloud Identity免費版&lt;/a> 的G Suite組織刪除&lt;/p>
-&lt;p>由於完全沒有刪除過G Suite組織，所以稍微爬文了一下&lt;br>
-大致整理了一下刪除的方式&lt;/p>
-&lt;p>重要提醒：&lt;br>
-刪除前，請先取消約期授權並刪除所有GCP專案&lt;br>
-刪除後，所有組織資料會被清除&lt;/p>
-&lt;p>首先，進入&lt;a href="https://admin.google.com">G Suite控制台&lt;/a>，點擊公司資料&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051515401915.png" alt="">&lt;/p>
-&lt;p>接著點擊帳戶管理&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051515404022.png" alt="">&lt;/p>
-&lt;p>接著點擊 刪除帳號&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051515411434.png" alt="">&lt;/p>
-&lt;p>接著會提示你，這個步驟無法復原&lt;br>
-打勾後點擊 刪除帳號&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051515413046.png" alt="">&lt;/p>
-&lt;p>接著帳號就刪除囉！&lt;/p></description></item><item><title>申請 G Suite 帳號</title><link>https://blog.steveyi.net/posts/register-gsuite/</link><pubDate>Wed, 01 Apr 2020 03:13:48 +0000</pubDate><guid>https://blog.steveyi.net/posts/register-gsuite/</guid><description>&lt;p>相信大家應該都有使用過Gmail&lt;br>
-今天要來介紹的 G Suite 是由Google推出的企業服務，不過一般使用者也是可以申請的！&lt;/p>
-&lt;h2 id="事前準備" >事前準備：
-&lt;span>
-&lt;a href="#%e4%ba%8b%e5%89%8d%e6%ba%96%e5%82%99">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h2>&lt;p>網域(非必要)&lt;br>
-信用卡/金融卡&lt;/p>
-&lt;h2 id="開始註冊" >開始註冊：
-&lt;span>
-&lt;a href="#%e9%96%8b%e5%a7%8b%e8%a8%bb%e5%86%8a">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h2>&lt;p>1.首先，我們先打開&lt;a href="https://gsuite.google.com">G Suite的官網&lt;/a>(&lt;a href="https://gsuite.google.com">https://gsuite.google.com&lt;/a>)&lt;/p>
-&lt;p>2.接著，點擊&amp;quot;開始免費試用&amp;quot;&lt;/p>
-&lt;p>3.上方輸入公司名稱(或是你自己想一個名字)&lt;br>
-員工人數自行選擇(我是選1)&lt;br>
-國家/地區自行選擇(建議照實寫，防止後續無法付款 我選台灣)&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/register-gsuite-01.png" alt="">&lt;/p>
-&lt;p>4.接著設定網域（如果沒有網域的話，請點擊第三個選項）&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/register-gsuite-02.png" alt="">&lt;/p>
-&lt;p>5.接著確認網域，點擊下一頁&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/register-gsuite-03.png" alt="">&lt;/p>
-&lt;p>6.接著就&amp;hellip;自己選擇囉！&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/register-gsuite-04.png" alt="">&lt;/p>
-&lt;p>7.接著建立管理者帳號&lt;br>
-使用者名稱，密碼自定&lt;br>
-網域則為我們剛剛選擇的&lt;br>
-設定完成後，點擊&amp;quot;同意並繼續&amp;quot;！&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/register-gsuite-05.png" alt="">&lt;/p>
-&lt;p>接著就可以進入&lt;a href="https://admin.google.com">管理員管理面板&lt;/a>囉！&lt;/p>
-&lt;p>我們下次再來跟大家分享網域驗證等相關設定唷！&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>GCP on 小易的部落格</title><link>https://blog.steveyi.net/tags/gcp/</link><description>Recent content in GCP on 小易的部落格</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Fri, 15 May 2020 20:35:11 +0000</lastBuildDate><atom:link href="https://blog.steveyi.net/tags/gcp/index.xml" rel="self" type="application/rss+xml"/><item><title>建立 Cloud Identity 帳戶</title><link>https://blog.steveyi.net/posts/create-cloud-identity/</link><pubDate>Fri, 15 May 2020 20:35:11 +0000</pubDate><guid>https://blog.steveyi.net/posts/create-cloud-identity/</guid><description>首先，進入 Cloud Identity 申請頁面 點擊下一頁
+接著輸入公司名稱(可以隨意輸入)，員工數量(隨意選擇) 把它當作一個團隊
+選擇地點（設定好就不能修改了），其實作用不大
+設定目前的電子郵件地址（一些申請的郵件會寄到這裡）
+輸入要設定的網域（不得使用於其他 G Suite 服務）
+接著建立使用者
+機器人驗證
+當出現這個頁面時，代表註冊完成了！
+接著我們需要驗證網域
+請看下一篇文章 - Cloud Identity 驗證網域及建立帳號</description></item><item><title>刪除 G suite 組織</title><link>https://blog.steveyi.net/posts/delete-gsuite/</link><pubDate>Fri, 15 May 2020 18:17:25 +0000</pubDate><guid>https://blog.steveyi.net/posts/delete-gsuite/</guid><description>之前有跟大家分享註冊G Suite帳號的方式，最近想將 Cloud Identity免費版 的G Suite組織刪除
+由於完全沒有刪除過G Suite組織，所以稍微爬文了一下
+大致整理了一下刪除的方式
+重要提醒：
+刪除前，請先取消約期授權並刪除所有GCP專案
+刪除後，所有組織資料會被清除
+首先，進入G Suite控制台，點擊公司資料
+接著點擊帳戶管理
+接著點擊 刪除帳號
+接著會提示你，這個步驟無法復原
+打勾後點擊 刪除帳號
+接著帳號就刪除囉！</description></item><item><title>申請 G Suite 帳號</title><link>https://blog.steveyi.net/posts/register-gsuite/</link><pubDate>Wed, 01 Apr 2020 03:13:48 +0000</pubDate><guid>https://blog.steveyi.net/posts/register-gsuite/</guid><description>相信大家應該都有使用過Gmail
+今天要來介紹的 G Suite 是由Google推出的企業服務，不過一般使用者也是可以申請的！
+事前準備： 網域(非必要)
+信用卡/金融卡
+開始註冊： 1.首先，我們先打開G Suite的官網(https://gsuite.google.com)
+2.接著，點擊&amp;quot;開始免費試用&amp;quot;
+3.上方輸入公司名稱(或是你自己想一個名字)
+員工人數自行選擇(我是選1)
+國家/地區自行選擇(建議照實寫，防止後續無法付款 我選台灣)
+4.接著設定網域（如果沒有網域的話，請點擊第三個選項）
+5.接著確認網域，點擊下一頁
+6.接著就&amp;hellip;自己選擇囉！
+7.接著建立管理者帳號
+使用者名稱，密碼自定
+網域則為我們剛剛選擇的
+設定完成後，點擊&amp;quot;同意並繼續&amp;quot;！
+接著就可以進入管理員管理面板囉！
+我們下次再來跟大家分享網域驗證等相關設定唷！</description></item></channel></rss>

@@ -1,165 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>VPS on 小易的部落格</title><link>https://blog.steveyi.net/tags/vps/</link><description>小易的部落格 (VPS)</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Fri, 20 Nov 2020 18:31:04 +0000</lastBuildDate><atom:link href="https://blog.steveyi.net/tags/vps/index.xml" rel="self" type="application/rss+xml"/><item><title>利用 WireGuard 建立大內網</title><link>https://blog.steveyi.net/posts/using-wireguard-to-make-intranet/</link><pubDate>Fri, 20 Nov 2020 18:31:04 +0000</pubDate><guid>https://blog.steveyi.net/posts/using-wireguard-to-make-intranet/</guid><description>&lt;p>Hi 大家好，今天來分享一下如何使用WireGuard建立大內網&lt;/p>
-&lt;p>之前有與大家分享過 &lt;a href="https://blog.steveyi.net/how-to-install-wireguard/">在 Linux 系統上安裝 Wireguard&lt;/a>，那這次我們要利用 WireGuard 來建立大內網&lt;/p>
-&lt;p>為什麼筆者稱這次要建立&amp;quot;大內網&amp;quot;呢？&lt;br>
-因為筆者也許多不同地方的網路，想藉由這次機會，來把他們都加進同一個局域網&lt;/p>
-&lt;p>這樣也可以解決一些連線問題，比如筆者常常連線回到家中的電腦&lt;br>
-但因為公網IP只有幾個，當機器太多時，就需要設定內網穿透&lt;/p>
-&lt;p>但筆者架設了內網之後，在外面只需要連入VPN，在其他網路區域，就可以存取所有網路設備了（這也類似於一般企業的遠端存取）&lt;/p>
-&lt;p>那麼，我們一樣需要有一個主伺服器當網關。不過，我們不使用 NAT TO NAT，而是透過私網IP來進行互連&lt;/p>
-&lt;p>我們的情境是這樣：&lt;/p>
-&lt;pre tabindex="0">&lt;code>A辦公室 路由器 10.121.208.254/24
-B辦公室 路由器 10.121.209.254/24
-C辦公室 路由器 10.121.210.254/24
-VPN路由器 10.121.211.254/24
-&lt;/code>&lt;/pre>&lt;p>首先，由於我們這次是純粹架設大內網，以WireGuard搭配靜態路由為主。所以先不講到路由協議（不過下次會介紹）&lt;/p>
-&lt;p>我們需要有一個主路由器，並透過它來連接A,B,C辦公室的路由器&lt;/p>
-&lt;p>所以會變成下面這樣&lt;/p>
-&lt;pre tabindex="0">&lt;code>VPN &amp;lt;-&amp;gt; A
-VPN &amp;lt;-&amp;gt; B
-VPN &amp;lt;-&amp;gt; C
-&lt;/code>&lt;/pre>&lt;p>當A的用戶想去C時(10.121.208.1 &amp;lt;-&amp;gt; 10.121.210.2) 路線會變成&amp;hellip;&lt;/p>
-&lt;p>User-A -&amp;gt; 10.121.208.254 -&amp;gt; 10.121.211.254 -&amp;gt; 10.121.210.254 -&amp;gt; 10.121.210.2(User-C)&lt;/p>
-&lt;p>也就是 User-A -&amp;gt; A的路由器 -&amp;gt; VPN Gateway -&amp;gt; C的路由器 -&amp;gt; User-C&lt;/p>
-&lt;p>那我們搞懂原理，就來實作啦！&lt;/p>
-&lt;p>首先，我先先準備好私鑰及公鑰（公鑰是由私鑰算過來的）&lt;/p>
-&lt;p>A&amp;rsquo;s Public key: WGokwN2HtiX+naa7hdvUaXoXk5tkzXQtMge4v9DKlVw=&lt;br>
-B&amp;rsquo;s Public key: fVNXw6EpC65DmIsY/XsWXL6EXLU9oFW7CL5cZr82Di8=&lt;br>
-C&amp;rsquo;s Public key: ORbEFZlR/IWFWaD42Nh00DfYEpCX2CbNmRy/Hc+crVQ=&lt;br>
-VPN&amp;rsquo;s Public Key: Rxcti9/3jLII4JOscHn9/yp5Z8ZROcYk8tugXn/FRHM=&lt;/p>
-&lt;p>那我們就在配置中這樣寫&amp;hellip;&lt;/p>
-&lt;pre tabindex="0">&lt;code>[Interface]
-PrivateKey = &amp;lt;各處的private key&amp;gt;
-Address = &amp;lt;各個路由器的IP，比如說A路由器 10.121.208.254/24&amp;gt;
-[Peer]
-PublicKey = &amp;lt;VPN Gateway Public Key&amp;gt;
-Endpoint = &amp;lt;VPN Gateway's EndPoint&amp;gt;
-AllowedIPs = 10.121.209.0/24,10.121.210.0/24,10.121.211.0/24
-PersistentKeepalive = 10
-&lt;/code>&lt;/pre>&lt;p>我們在個節點這樣配，上方例子是A路由器的&lt;br>
-B路由器則是這樣&lt;/p>
-&lt;pre tabindex="0">&lt;code>[Interface]
-PrivateKey = &amp;lt;各處的private key&amp;gt;
-Address = &amp;lt;各個路由器的IP，比如說B路由器 10.121.209.254/24&amp;gt;
-[Peer]
-PublicKey = &amp;lt;VPN Gateway Public Key&amp;gt;
-Endpoint = &amp;lt;VPN Gateway's EndPoint&amp;gt;
-AllowedIPs = 10.121.208.0/24,10.121.210.0/24,10.121.211.0/24
-PersistentKeepalive = 10
-&lt;/code>&lt;/pre>&lt;p>相Ｎ信C路由器大家應該就會配了&lt;/p>
-&lt;p>最後，大家只需要在每台路由器上執行指令 &lt;code>wg-quick up &amp;lt;wireguard_網卡名稱&amp;gt;&lt;/code> 就可以互通啦！&lt;/p>
-&lt;p>特別注意：這種網路架構，如果VPN Gateway掉線了，那A,B,C也就不能彼此互通了&lt;/p></description></item><item><title>在 Ubuntu 系統下架設 Tunnel Broker 服務 (v4 to v6)</title><link>https://blog.steveyi.net/posts/tunnel-broker-bgp/</link><pubDate>Sun, 31 May 2020 16:56:41 +0000</pubDate><guid>https://blog.steveyi.net/posts/tunnel-broker-bgp/</guid><description>&lt;h3 id="前言" >前言
-&lt;span>
-&lt;a href="#%e5%89%8d%e8%a8%80">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h3>&lt;p>之前拿到了一個自治號碼(AS Number)，也拿到了1個 /44 及兩個 /48 的iPv6&lt;br>
-恰好最近想到之前有使用過HE.Net的tunnel broker服務&lt;br>
-這次就來架設一下sit隧道的tunnel broker服務！本篇不會說明ipv6的取得方式，請自行詢問主機提供商&lt;/p>
-&lt;p>本篇將使用開源工具-&lt;a href="https://github.com/sskaje/6in4.git">IPv6-in-IPv4 Tunnel&lt;/a>&lt;/p>
-&lt;h3 id="配置工具" >配置工具
-&lt;span>
-&lt;a href="#%e9%85%8d%e7%bd%ae%e5%b7%a5%e5%85%b7">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h3>&lt;p>首先，將工具下載下來&lt;/p>
-&lt;pre tabindex="0">&lt;code>git clone [https://github.com/sskaje/6in4.git](https://github.com/sskaje/6in4)
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020053018041378.jpg" alt="">&lt;/p>
-&lt;p>我們進入項目的etc資料夾，並修改config.ini&lt;/p>
-&lt;pre tabindex="0">&lt;code>nano config.ini
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020053018044764.jpg" alt="">&lt;/p>
-&lt;p>依序編輯 IPV6_NETWORK, IPV6_CIDR, INTERFACE, BIND_IP(有多iPv4需要)&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020053018050652.jpg" alt="">&lt;/p>
-&lt;p>接著輸入 Crtl + X 來保存&lt;/p>
-&lt;h3 id="修改系統設定來允許ipv6轉發" >修改系統設定來允許iPv6轉發
-&lt;span>
-&lt;a href="#%e4%bf%ae%e6%94%b9%e7%b3%bb%e7%b5%b1%e8%a8%ad%e5%ae%9a%e4%be%86%e5%85%81%e8%a8%b1ipv6%e8%bd%89%e7%99%bc">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h3>&lt;pre tabindex="0">&lt;code>nano /etc/sysctl.conf
-在最下方添加下方這項net.ipv6.conf.all.forwarding = 1
-Crtl + X 保存
-sysctl -p
-&lt;/code>&lt;/pre>&lt;h3 id="防火牆" >防火牆
-&lt;span>
-&lt;a href="#%e9%98%b2%e7%81%ab%e7%89%86">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h3>&lt;pre tabindex="0">&lt;code>iptables -I INPUT -p 41 --j ACCEPT
-iptables -I OUTPUT -p 41 --j ACCEPT
-iptables -I FORWARD -p 41 --j ACCEPT
-&lt;/code>&lt;/pre>&lt;h3 id="使用工具建立伺服端新增隧道" >使用工具建立伺服端(新增隧道)
-&lt;span>
-&lt;a href="#%e4%bd%bf%e7%94%a8%e5%b7%a5%e5%85%b7%e5%bb%ba%e7%ab%8b%e4%bc%ba%e6%9c%8d%e7%ab%af%e6%96%b0%e5%a2%9e%e9%9a%a7%e9%81%93">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h3>&lt;p>假設隧道ID為1，伺服端IPv4為1.1.1.1 用戶端IPv4為8.8.8.8]&lt;/p>
-&lt;p>配置文件中設置的IPv6子網為 2a0e:b107:7e0::，子網路遮罩為48(必須為8的倍數)工具會自動分割出 一個用於隧道的 /64子網及一個用於用戶路由的 /64子網&lt;/p>
-&lt;p>如果用戶端需要給其下級設備分配的話，建議伺服端的子網 應大於 /64，這樣才能產生 /64的下級子網，以保證SLAAC的運作。&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020053018052119.jpg" alt="">&lt;/p>
-&lt;p>接著我們就可以至用戶端配置了！(配置過程可以參考&lt;a href="https://tunnelbroker.net/">https://tunnelbroker.net/&lt;/a>)&lt;/p>
-&lt;h3 id="報錯sipcalc-required" >報錯：sipcalc required
-&lt;span>
-&lt;a href="#%e5%a0%b1%e9%8c%afsipcalc-required">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h3>&lt;p>我在第一次新增隧道時，遇到了這個問題&lt;br>
-解決方式如下&lt;/p>
-&lt;pre tabindex="0">&lt;code>CentOS:
-yum install sipcalc
-Ubuntu/Debian:
-apt-get install sipcalc
-&lt;/code>&lt;/pre>&lt;h3 id="測試結果" >測試結果
-&lt;span>
-&lt;a href="#%e6%b8%ac%e8%a9%a6%e7%b5%90%e6%9e%9c">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h3>&lt;p>&lt;a href="https://test-ipv6.com/">https://test-ipv6.com/&lt;/a> 測試結果&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020053018053577.png" alt="">&lt;/p>
-&lt;p>路由追蹤&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020053018054471.jpg" alt="">&lt;/p>
-&lt;p>完成！&lt;/p>
-&lt;h3 id="參考資料" >參考資料：
-&lt;span>
-&lt;a href="#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h3>&lt;p>&lt;a href="https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sithttps://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/https://github.com/sskaje/6in4https://www.ciscopress.com/articles/article.asp?p=2154680">https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sit&lt;/a>&lt;br>
-&lt;a href="https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sithttps://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/https://github.com/sskaje/6in4https://www.ciscopress.com/articles/article.asp?p=2154680">https://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/&lt;/a>&lt;br>
-&lt;a href="https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sithttps://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/https://github.com/sskaje/6in4https://www.ciscopress.com/articles/article.asp?p=2154680">https://github.com/sskaje/6in4&lt;/a>&lt;br>
-&lt;a href="https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sithttps://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/https://github.com/sskaje/6in4https://www.ciscopress.com/articles/article.asp?p=2154680">https://www.ciscopress.com/articles/article.asp?p=2154680&lt;/a>&lt;/p></description></item><item><title>專為 GCP 打造的 Windows 10 DD 鏡像</title><link>https://blog.steveyi.net/posts/gcp-windows-dd/</link><pubDate>Tue, 27 Aug 2019 15:07:49 +0000</pubDate><guid>https://blog.steveyi.net/posts/gcp-windows-dd/</guid><description>&lt;p>前陣子為了要在 GCP 使用 VPS，於是在一段時間裡製作了 Windows DD 鏡像&lt;br>
-分別是：&lt;br>
-1，中文繁體版 Windows 10 工作站專業版&lt;br>
-2，英文版 Windows 10 工作站專業版(尚未上傳)&lt;/p>
-&lt;h2 id="鏡像具備以下特點" >鏡像具備以下特點
-&lt;span>
-&lt;a href="#%e9%8f%a1%e5%83%8f%e5%85%b7%e5%82%99%e4%bb%a5%e4%b8%8b%e7%89%b9%e9%bb%9e">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h2>&lt;ul>
-&lt;li>
-&lt;p>集成 Virtio 驅動以及 Google Virtio Ethernet Adapter 的網卡驅動，因此適用於&lt;a href="http://cloud.google.com">GCP&lt;/a>的 VPS 伺服器&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>無需 VNC 交互直接無人值守安裝，DD 完成即可遠程登錄桌面&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>基於 VOL 版製作，因此可用 KMS 方式激活系統&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>開啟 Windows 遠程桌面&lt;/p>
-&lt;p>中文繁體版&lt;br>
-載點1: &lt;a href="http://static-a1.steveyi.net/mirror/dd/win10.gz">http://static-a1.steveyi.net/mirror/dd/win10.gz&lt;/a>&lt;/p>
-&lt;p>遠端登入資訊&lt;br>
-帳號: Administrator&lt;br>
-密碼: steveyigame.com&lt;/p>
-&lt;/li>
-&lt;/ul></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>VPS on 小易的部落格</title><link>https://blog.steveyi.net/tags/vps/</link><description>Recent content in VPS on 小易的部落格</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Fri, 20 Nov 2020 18:31:04 +0000</lastBuildDate><atom:link href="https://blog.steveyi.net/tags/vps/index.xml" rel="self" type="application/rss+xml"/><item><title>利用 WireGuard 建立大內網</title><link>https://blog.steveyi.net/posts/using-wireguard-to-make-intranet/</link><pubDate>Fri, 20 Nov 2020 18:31:04 +0000</pubDate><guid>https://blog.steveyi.net/posts/using-wireguard-to-make-intranet/</guid><description>Hi 大家好，今天來分享一下如何使用WireGuard建立大內網
+之前有與大家分享過 在 Linux 系統上安裝 Wireguard，那這次我們要利用 WireGuard 來建立大內網
+為什麼筆者稱這次要建立&amp;quot;大內網&amp;quot;呢？
+因為筆者也許多不同地方的網路，想藉由這次機會，來把他們都加進同一個局域網
+這樣也可以解決一些連線問題，比如筆者常常連線回到家中的電腦
+但因為公網IP只有幾個，當機器太多時，就需要設定內網穿透
+但筆者架設了內網之後，在外面只需要連入VPN，在其他網路區域，就可以存取所有網路設備了（這也類似於一般企業的遠端存取）
+那麼，我們一樣需要有一個主伺服器當網關。不過，我們不使用 NAT TO NAT，而是透過私網IP來進行互連
+我們的情境是這樣：
+A辦公室 路由器 10.121.208.254/24 B辦公室 路由器 10.121.209.254/24 C辦公室 路由器 10.121.210.254/24 VPN路由器 10.121.211.254/24 首先，由於我們這次是純粹架設大內網，以WireGuard搭配靜態路由為主。所以先不講到路由協議（不過下次會介紹）
+我們需要有一個主路由器，並透過它來連接A,B,C辦公室的路由器
+所以會變成下面這樣
+VPN &amp;lt;-&amp;gt; A VPN &amp;lt;-&amp;gt; B VPN &amp;lt;-&amp;gt; C 當A的用戶想去C時(10.121.208.1 &amp;lt;-&amp;gt; 10.121.210.2) 路線會變成&amp;hellip;
+User-A -&amp;gt; 10.121.208.254 -&amp;gt; 10.121.211.254 -&amp;gt; 10.121.210.254 -&amp;gt; 10.121.210.2(User-C)
+也就是 User-A -&amp;gt; A的路由器 -&amp;gt; VPN Gateway -&amp;gt; C的路由器 -&amp;gt; User-C
+那我們搞懂原理，就來實作啦！
+首先，我先先準備好私鑰及公鑰（公鑰是由私鑰算過來的）
+A&amp;rsquo;s Public key: WGokwN2HtiX+naa7hdvUaXoXk5tkzXQtMge4v9DKlVw=</description></item><item><title>在 Ubuntu 系統下架設 Tunnel Broker 服務 (v4 to v6)</title><link>https://blog.steveyi.net/posts/tunnel-broker-bgp/</link><pubDate>Sun, 31 May 2020 16:56:41 +0000</pubDate><guid>https://blog.steveyi.net/posts/tunnel-broker-bgp/</guid><description>前言 之前拿到了一個自治號碼(AS Number)，也拿到了1個 /44 及兩個 /48 的iPv6
+恰好最近想到之前有使用過HE.Net的tunnel broker服務
+這次就來架設一下sit隧道的tunnel broker服務！本篇不會說明ipv6的取得方式，請自行詢問主機提供商
+本篇將使用開源工具-IPv6-in-IPv4 Tunnel
+配置工具 首先，將工具下載下來
+git clone [https://github.com/sskaje/6in4.git](https://github.com/sskaje/6in4) 我們進入項目的etc資料夾，並修改config.ini
+nano config.ini 依序編輯 IPV6_NETWORK, IPV6_CIDR, INTERFACE, BIND_IP(有多iPv4需要)
+接著輸入 Crtl + X 來保存
+修改系統設定來允許iPv6轉發 nano /etc/sysctl.conf 在最下方添加下方這項net.ipv6.conf.all.forwarding = 1 Crtl + X 保存 sysctl -p 防火牆 iptables -I INPUT -p 41 --j ACCEPT iptables -I OUTPUT -p 41 --j ACCEPT iptables -I FORWARD -p 41 --j ACCEPT 使用工具建立伺服端(新增隧道) 假設隧道ID為1，伺服端IPv4為1.1.1.1 用戶端IPv4為8.8.8.8]
+配置文件中設置的IPv6子網為 2a0e:b107:7e0::，子網路遮罩為48(必須為8的倍數)工具會自動分割出 一個用於隧道的 /64子網及一個用於用戶路由的 /64子網</description></item><item><title>專為 GCP 打造的 Windows 10 DD 鏡像</title><link>https://blog.steveyi.net/posts/gcp-windows-dd/</link><pubDate>Tue, 27 Aug 2019 15:07:49 +0000</pubDate><guid>https://blog.steveyi.net/posts/gcp-windows-dd/</guid><description>前陣子為了要在 GCP 使用 VPS，於是在一段時間裡製作了 Windows DD 鏡像
+分別是：
+1，中文繁體版 Windows 10 工作站專業版
+2，英文版 Windows 10 工作站專業版(尚未上傳)
+鏡像具備以下特點 集成 Virtio 驅動以及 Google Virtio Ethernet Adapter 的網卡驅動，因此適用於GCP的 VPS 伺服器
+無需 VNC 交互直接無人值守安裝，DD 完成即可遠程登錄桌面
+基於 VOL 版製作，因此可用 KMS 方式激活系統
+開啟 Windows 遠程桌面
+中文繁體版
+載點1: http://static-a1.steveyi.net/mirror/dd/win10.gz
+遠端登入資訊
+帳號: Administrator
+密碼: steveyigame.com</description></item></channel></rss>

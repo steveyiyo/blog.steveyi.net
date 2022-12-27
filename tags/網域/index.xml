@@ -1,282 +1,115 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>網域 on 小易的部落格</title><link>https://blog.steveyi.net/tags/%E7%B6%B2%E5%9F%9F/</link><description>小易的部落格 (網域)</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Tue, 07 Jul 2020 05:33:14 +0000</lastBuildDate><atom:link href="https://blog.steveyi.net/tags/%E7%B6%B2%E5%9F%9F/index.xml" rel="self" type="application/rss+xml"/><item><title>PVE入門心得-安裝篇</title><link>https://blog.steveyi.net/posts/pve-install/</link><pubDate>Tue, 07 Jul 2020 05:33:14 +0000</pubDate><guid>https://blog.steveyi.net/posts/pve-install/</guid><description>&lt;p>玩虛擬機有一段時間了，不過是在Windows系統下裝VMware Workstation玩xD&lt;br>
-後來閒置了幾台電腦，恰好也查詢到PVE(Proxmox VE)這個開源虛擬系統，於是 我們就來安裝玩玩吧!&lt;/p>
-&lt;p>前期準備:&lt;/p>
-&lt;p>Proxmox VE 安裝碟&lt;br>
-高核心且空閒的電腦(不然跑起來會很卡)&lt;/p>
-&lt;p>首先，我們先到官方網站下載PVE的ISO檔案 &lt;a href="https://www.proxmox.com/en/downloads">官網載點&lt;/a>&lt;br>
-點擊左方的 &lt;a href="https://www.proxmox.com/en/downloads/item/proxmox-ve-6-2-iso-installer">Proxmox VE 6.2 ISO Installer&lt;/a> 來下載(6.2是版本號，右方則是種子下載)&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070100471381.png" alt="">&lt;/p>
-&lt;p>下載好之後，我們將檔案寫入USB中，做成安裝碟&lt;br>
-這邊推薦使用Etcher來寫入，&lt;a href="https://www.balena.io/etcher/">官網連結&lt;/a>&lt;/p>
-&lt;p>做好安裝碟之後，我們進入BIOS，並調整開機順序(將安裝碟設為第一順位)&lt;/p>
-&lt;p>接著我們就可以進行安裝了!&lt;/p>
-&lt;p>首先，選擇第一個 Install Proxmox VE&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070705281974.png" alt="">&lt;/p>
-&lt;p>接著同意服務條款&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070705274149.png" alt="">&lt;/p>
-&lt;p>選擇硬碟&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070705275335.png" alt="">&lt;/p>
-&lt;p>選擇國家及時區&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070705280757.png" alt="">&lt;/p>
-&lt;p>設置root密碼及電子郵件地址&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070705282498.png" alt="">&lt;/p>
-&lt;p>設置主機名稱及網路(這邊建議一次就設定好，不然後續修改IP有點麻煩)&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070705283457.png" alt="">&lt;/p>
-&lt;p>全部完成後，就點擊Install來進行安裝!&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070705284395.png" alt="">&lt;/p>
-&lt;p>安裝完成後，我們使用 https://你的IP:8006 就可以進入管理面板囉!&lt;/p>
-&lt;p>下一篇，我們將與大家分享一些配置的過程&lt;/p></description></item><item><title>在 Ubuntu 系統下架設 Tunnel Broker 服務 (v4 to v6)</title><link>https://blog.steveyi.net/posts/tunnel-broker-bgp/</link><pubDate>Sun, 31 May 2020 16:56:41 +0000</pubDate><guid>https://blog.steveyi.net/posts/tunnel-broker-bgp/</guid><description>&lt;h3 id="前言" >前言
-&lt;span>
-&lt;a href="#%e5%89%8d%e8%a8%80">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h3>&lt;p>之前拿到了一個自治號碼(AS Number)，也拿到了1個 /44 及兩個 /48 的iPv6&lt;br>
-恰好最近想到之前有使用過HE.Net的tunnel broker服務&lt;br>
-這次就來架設一下sit隧道的tunnel broker服務！本篇不會說明ipv6的取得方式，請自行詢問主機提供商&lt;/p>
-&lt;p>本篇將使用開源工具-&lt;a href="https://github.com/sskaje/6in4.git">IPv6-in-IPv4 Tunnel&lt;/a>&lt;/p>
-&lt;h3 id="配置工具" >配置工具
-&lt;span>
-&lt;a href="#%e9%85%8d%e7%bd%ae%e5%b7%a5%e5%85%b7">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h3>&lt;p>首先，將工具下載下來&lt;/p>
-&lt;pre tabindex="0">&lt;code>git clone [https://github.com/sskaje/6in4.git](https://github.com/sskaje/6in4)
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020053018041378.jpg" alt="">&lt;/p>
-&lt;p>我們進入項目的etc資料夾，並修改config.ini&lt;/p>
-&lt;pre tabindex="0">&lt;code>nano config.ini
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020053018044764.jpg" alt="">&lt;/p>
-&lt;p>依序編輯 IPV6_NETWORK, IPV6_CIDR, INTERFACE, BIND_IP(有多iPv4需要)&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020053018050652.jpg" alt="">&lt;/p>
-&lt;p>接著輸入 Crtl + X 來保存&lt;/p>
-&lt;h3 id="修改系統設定來允許ipv6轉發" >修改系統設定來允許iPv6轉發
-&lt;span>
-&lt;a href="#%e4%bf%ae%e6%94%b9%e7%b3%bb%e7%b5%b1%e8%a8%ad%e5%ae%9a%e4%be%86%e5%85%81%e8%a8%b1ipv6%e8%bd%89%e7%99%bc">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h3>&lt;pre tabindex="0">&lt;code>nano /etc/sysctl.conf
-在最下方添加下方這項net.ipv6.conf.all.forwarding = 1
-Crtl + X 保存
-sysctl -p
-&lt;/code>&lt;/pre>&lt;h3 id="防火牆" >防火牆
-&lt;span>
-&lt;a href="#%e9%98%b2%e7%81%ab%e7%89%86">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h3>&lt;pre tabindex="0">&lt;code>iptables -I INPUT -p 41 --j ACCEPT
-iptables -I OUTPUT -p 41 --j ACCEPT
-iptables -I FORWARD -p 41 --j ACCEPT
-&lt;/code>&lt;/pre>&lt;h3 id="使用工具建立伺服端新增隧道" >使用工具建立伺服端(新增隧道)
-&lt;span>
-&lt;a href="#%e4%bd%bf%e7%94%a8%e5%b7%a5%e5%85%b7%e5%bb%ba%e7%ab%8b%e4%bc%ba%e6%9c%8d%e7%ab%af%e6%96%b0%e5%a2%9e%e9%9a%a7%e9%81%93">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h3>&lt;p>假設隧道ID為1，伺服端IPv4為1.1.1.1 用戶端IPv4為8.8.8.8]&lt;/p>
-&lt;p>配置文件中設置的IPv6子網為 2a0e:b107:7e0::，子網路遮罩為48(必須為8的倍數)工具會自動分割出 一個用於隧道的 /64子網及一個用於用戶路由的 /64子網&lt;/p>
-&lt;p>如果用戶端需要給其下級設備分配的話，建議伺服端的子網 應大於 /64，這樣才能產生 /64的下級子網，以保證SLAAC的運作。&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020053018052119.jpg" alt="">&lt;/p>
-&lt;p>接著我們就可以至用戶端配置了！(配置過程可以參考&lt;a href="https://tunnelbroker.net/">https://tunnelbroker.net/&lt;/a>)&lt;/p>
-&lt;h3 id="報錯sipcalc-required" >報錯：sipcalc required
-&lt;span>
-&lt;a href="#%e5%a0%b1%e9%8c%afsipcalc-required">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h3>&lt;p>我在第一次新增隧道時，遇到了這個問題&lt;br>
-解決方式如下&lt;/p>
-&lt;pre tabindex="0">&lt;code>CentOS:
-yum install sipcalc
-Ubuntu/Debian:
-apt-get install sipcalc
-&lt;/code>&lt;/pre>&lt;h3 id="測試結果" >測試結果
-&lt;span>
-&lt;a href="#%e6%b8%ac%e8%a9%a6%e7%b5%90%e6%9e%9c">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h3>&lt;p>&lt;a href="https://test-ipv6.com/">https://test-ipv6.com/&lt;/a> 測試結果&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020053018053577.png" alt="">&lt;/p>
-&lt;p>路由追蹤&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020053018054471.jpg" alt="">&lt;/p>
-&lt;p>完成！&lt;/p>
-&lt;h3 id="參考資料" >參考資料：
-&lt;span>
-&lt;a href="#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h3>&lt;p>&lt;a href="https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sithttps://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/https://github.com/sskaje/6in4https://www.ciscopress.com/articles/article.asp?p=2154680">https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sit&lt;/a>&lt;br>
-&lt;a href="https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sithttps://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/https://github.com/sskaje/6in4https://www.ciscopress.com/articles/article.asp?p=2154680">https://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/&lt;/a>&lt;br>
-&lt;a href="https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sithttps://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/https://github.com/sskaje/6in4https://www.ciscopress.com/articles/article.asp?p=2154680">https://github.com/sskaje/6in4&lt;/a>&lt;br>
-&lt;a href="https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sithttps://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/https://github.com/sskaje/6in4https://www.ciscopress.com/articles/article.asp?p=2154680">https://www.ciscopress.com/articles/article.asp?p=2154680&lt;/a>&lt;/p></description></item><item><title>建立 Cloud Identity 帳戶</title><link>https://blog.steveyi.net/posts/create-cloud-identity/</link><pubDate>Fri, 15 May 2020 20:35:11 +0000</pubDate><guid>https://blog.steveyi.net/posts/create-cloud-identity/</guid><description>&lt;p>首先，進入 &lt;a href="https://gsuite.google.com/signup/gcpidentity/welcome">Cloud Identity 申請頁面&lt;/a> 點擊下一頁&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051520063750.png" alt="">&lt;/p>
-&lt;p>接著輸入公司名稱(可以隨意輸入)，員工數量(隨意選擇) 把它當作一個團隊&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051520064943.png" alt="">&lt;/p>
-&lt;p>選擇地點（設定好就不能修改了），其實作用不大&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051520070636.png" alt="">&lt;/p>
-&lt;p>設定目前的電子郵件地址（一些申請的郵件會寄到這裡）&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051520072596.png" alt="">&lt;/p>
-&lt;p>輸入要設定的網域（不得使用於其他 G Suite 服務）&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051520074395.png" alt="">&lt;/p>
-&lt;p>接著建立使用者&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051520083976.png" alt="">&lt;/p>
-&lt;p>機器人驗證&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051520085633.png" alt="">&lt;/p>
-&lt;p>當出現這個頁面時，代表註冊完成了！&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051520091652.png" alt="">&lt;/p>
-&lt;p>接著我們需要驗證網域&lt;/p>
-&lt;p>請看下一篇文章 - &lt;a href="https://blog.steveyi.net/cloud-identity-setting/">Cloud Identity 驗證網域及建立帳號&lt;/a>&lt;/p></description></item><item><title>刪除 G suite 組織</title><link>https://blog.steveyi.net/posts/delete-gsuite/</link><pubDate>Fri, 15 May 2020 18:17:25 +0000</pubDate><guid>https://blog.steveyi.net/posts/delete-gsuite/</guid><description>&lt;p>之前有跟大家分享&lt;a href="https://blog.steveyi.net/register-gsuite/">註冊G Suite帳號&lt;/a>的方式，最近想將 &lt;a href="https://support.google.com/cloudidentity/answer/7319251?hl=zh-Hant">Cloud Identity免費版&lt;/a> 的G Suite組織刪除&lt;/p>
-&lt;p>由於完全沒有刪除過G Suite組織，所以稍微爬文了一下&lt;br>
-大致整理了一下刪除的方式&lt;/p>
-&lt;p>重要提醒：&lt;br>
-刪除前，請先取消約期授權並刪除所有GCP專案&lt;br>
-刪除後，所有組織資料會被清除&lt;/p>
-&lt;p>首先，進入&lt;a href="https://admin.google.com">G Suite控制台&lt;/a>，點擊公司資料&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051515401915.png" alt="">&lt;/p>
-&lt;p>接著點擊帳戶管理&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051515404022.png" alt="">&lt;/p>
-&lt;p>接著點擊 刪除帳號&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051515411434.png" alt="">&lt;/p>
-&lt;p>接著會提示你，這個步驟無法復原&lt;br>
-打勾後點擊 刪除帳號&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051515413046.png" alt="">&lt;/p>
-&lt;p>接著帳號就刪除囉！&lt;/p></description></item><item><title>Backblaze B2 支援 S3 API 了！</title><link>https://blog.steveyi.net/posts/backblaze-b2-compatible-s3-api/</link><pubDate>Thu, 14 May 2020 03:08:02 +0000</pubDate><guid>https://blog.steveyi.net/posts/backblaze-b2-compatible-s3-api/</guid><description>&lt;p>前幾天打開 Backblaze 後，看到一行大大的字&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051402585860.png" alt="">&lt;/p>
-&lt;p>沒錯！S3 API 跟 Backblaze B2 兼容啦！&lt;/p>
-&lt;p>S3 API 是目前市面上最流行的協定，很多軟硬體都兼容&lt;/p>
-&lt;p>Backblaze B2 則是非常棒的雲端存處(低價優勢)&lt;/p>
-&lt;h2 id="如何使用-s3-api" >如何使用 S3 API
-&lt;span>
-&lt;a href="#%e5%a6%82%e4%bd%95%e4%bd%bf%e7%94%a8-s3-api">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h2>&lt;p>若存處桶是在 2020/05/04 前創立的，則要創立一個新的，並將檔案移入(推薦使用 &lt;a href="https://rclone.org">Rclone&lt;/a>，會自動支援 &lt;a href="https://www.backblaze.com/b2/docs/b2_copy_file.html">B2 Copy File&lt;/a>)&lt;/p>
-&lt;p>然後創建一個新的 App Key (不要使用主要的喔)&lt;/p>
-&lt;p>有關於一些 B2 的文章介紹:&lt;/p>
-&lt;p>&lt;a href="https://blog.steveyi.net/backblaze-b2/">Backblaze B2 低價的雲端數據存儲服務&lt;/a>&lt;br>
-&lt;a href="https://blog.steveyi.net/b2-cfworkers/">Backblaze B2 和 Cloudflare Workers 設定自訂域名&lt;/a>&lt;br>
-&lt;a href="https://blog.steveyi.net/backblaze-eu-central/">BackBlaze 宣布第一個歐洲數據中心啟用&lt;/a>&lt;/p></description></item><item><title>透過 Github 託管靜態網頁 - Github Pages</title><link>https://blog.steveyi.net/posts/github-static-website/</link><pubDate>Wed, 22 Apr 2020 14:09:46 +0000</pubDate><guid>https://blog.steveyi.net/posts/github-static-website/</guid><description>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-12.png" alt="">&lt;/p>
-&lt;p>首先，進入Github 點擊左方綠色按鈕的 &lt;a href="https://github.com/new">New&lt;/a>&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-1-1920x1142.png" alt="">&lt;/p>
-&lt;p>輸入Repository名稱（自定義）&lt;br>
-選擇 Public(公開) 或是 Private(私人)&lt;br>
-點擊Create Repository&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-2-1920x1142.png" alt="">&lt;/p>
-&lt;p>這樣就建立好一個Repository囉！&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-3-1920x1142.png" alt="">&lt;/p>
-&lt;p>接著我們要下載&lt;a href="https://desktop.github.com/">Github Desktop&lt;/a>，方便上傳網頁原始檔&lt;br>
-點擊中間的Download for macOS（Windows 則會是 Download for Windows）&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-4-1920x1142.png" alt="">&lt;/p>
-&lt;p>下載完成後，登入Github帳號（Sign in to Github.com）&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-5-1920x1383.png" alt="">&lt;/p>
-&lt;p>接著選擇剛剛建立的Repository&lt;br>
-點擊 Clone&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-6-1920x1383.png" alt="">&lt;/p>
-&lt;p>接著將檔案複製到資料夾中&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-7.png" alt="">&lt;/p>
-&lt;p>回到Github Desktop，輸入Commit changes的資訊&lt;br>
-點擊Commit to master&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-8-1920x1383.png" alt="">&lt;/p>
-&lt;p>接著我們回到網頁，刷新後應該就會看到剛剛上傳的檔案囉！&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-9-1920x1142.png" alt="">&lt;/p>
-&lt;p>接著來設定一下Github Pages&lt;br>
-選擇master branch&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-10-1920x1142.png" alt="">&lt;/p>
-&lt;p>接著就會產生子網域，就可以嘗試進入網站囉！&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-12.png" alt="">&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-11-1920x1142.png" alt="">&lt;/p>
-&lt;p>下次再來補充綁定自訂網域及SSL的方式吧！&lt;/p></description></item><item><title>Mailgun + Gmail 達成自訂網域郵箱</title><link>https://blog.steveyi.net/posts/mailgun-gmail-custom-domain-email/</link><pubDate>Wed, 22 Apr 2020 12:48:48 +0000</pubDate><guid>https://blog.steveyi.net/posts/mailgun-gmail-custom-domain-email/</guid><description>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-14.jpg" alt="">&lt;/p>
-&lt;p>小時候總是很好奇寄件者後方的網域名稱是什麼，後來接觸到網站架設後，註冊了許多網域（現在手上大概6個網域左右)，也慢慢解開了小時候的疑惑&lt;/p>
-&lt;p>今天就來分享一下 Mailgun + Gmail 自訂網域郵箱的方法吧！&lt;/p>
-&lt;p>首先，先註冊 &lt;a href="https://www.mailgun.com/">Mailgun&lt;/a>，預設有 5000 封信件額度&lt;br>
-PS.如果你是GCP客戶，可以到 &lt;a href="https://www.mailgun.com/google/">合作頁面&lt;/a>，申請免費 30000 額度&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-2-1920x1142.png" alt="">&lt;/p>
-&lt;p>註冊之後，我們進入控制台新增網域（預設會有一個網域）&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-3-1920x1142.png" alt="">&lt;/p>
-&lt;p>上方輸入網域名網域名稱，下方勾選 Create DKIM Authority 並選擇 1024 位元(部分 DNS 服務商不支持 2048 位元)&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-4.png" alt="">&lt;/p>
-&lt;p>接著設定 DNS 紀錄，MX 紀錄一定要設定（不然會收不到信）&lt;br>
-小提醒：如果你有其他郵件收信服務(如: Gsuite, Office… 等)，不要設定 MX 紀錄，不然原先的服務會收不到信&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-5-1920x1142.png" alt="">&lt;/p>
-&lt;p>設置完後，等待 DNS 生效 我們就可以來進行下一個步驟了！&lt;/p>
-&lt;p>接著我們來設置 SMTP 帳號&lt;/p>
-&lt;p>首先，打開 Mailgun 控制台&lt;br>
-點擊 Domain settings 選擇 SMTP credentials&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-6-1920x1142.png" alt="">&lt;/p>
-&lt;p>接著點擊右上角的 New SMTP User 來建立新帳號&lt;br>
-右上方為密碼！先記起來，等等會用到&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-7-1920x1142.jpg" alt="">&lt;/p>
-&lt;p>接著我們來設定轉寄郵件&lt;/p>
-&lt;p>點擊左方的 Receiving，在點擊右上方的 Create Route&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-8-1920x1142.jpg" alt="">&lt;/p>
-&lt;p>接著選擇 Match Recipient (指定收件者)，並輸入剛剛建立的電子郵件地址&lt;br>
-下方 Forward 填寫 Gmail 的電子郵件地址，存檔！&lt;br>
-PS.如果第一項選擇 Cache All，則會轉發所有寄到這個網域下的電子郵件，也就是無限別名&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-9-1920x1142.jpg" alt="">&lt;/p>
-&lt;p>新增完後，我們打開 Gmail 設定→更多設定→帳戶&lt;br>
-點擊 &lt;strong>新增另一個電子郵件地址 (Add another email address)&lt;/strong>&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-1-1920x1142.jpg" alt="">&lt;/p>
-&lt;p>接著輸入名稱(自訂)及電子郵件地址(剛剛建立的那個)&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-10.jpg" alt="">&lt;/p>
-&lt;p>接著輸入SMTP伺服器(端口選擇 587tls) 使用者帳號 密碼&lt;br>
-mailgun 的 SMTP 伺服器是 smtp.mailgun.org&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-11.jpg" alt="">&lt;/p>
-&lt;p>接著驗證電子郵件擁有權（代碼會寄到剛剛設置的 Gmail 信箱）&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-12.jpg" alt="">&lt;/p>
-&lt;p>會收到類似這樣的信&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-13-1920x1142.jpg" alt="">&lt;/p>
-&lt;p>將驗證碼輸入上去就完成囉！&lt;/p>
-&lt;p>後記，好香 有網域信箱就是香（？🤩&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-14.jpg" alt="">&lt;/p>
-&lt;p>工具：&lt;a href="https://toolbox.googleapps.com/">G Suite工具箱&lt;/a>（檢測 DNS 問題）&lt;/p></description></item><item><title>[教學] AWS Route 53 代管DNS</title><link>https://blog.steveyi.net/posts/aws-route53/</link><pubDate>Mon, 06 Apr 2020 14:38:57 +0000</pubDate><guid>https://blog.steveyi.net/posts/aws-route53/</guid><description>&lt;p>從2017年 &lt;a href="https://diary.steveyi.net">註冊了第一個網域之後&lt;/a>，DNS 代管商一直是我在研究的一個部分！&lt;br>
-今天來推薦一下由 &lt;a href="https://aws.amazon.com">AWS&lt;/a> 推出的 DNS 代管服務 - &lt;a href="https://aws.amazon.com/tw/route53/">Route 53&lt;/a>&lt;/p>
-&lt;p>前置作業：&lt;br>
-&lt;a href="https://blog.steveyi.net/signup-aws-account/">AWS帳號&lt;/a>&lt;br>
-網域&lt;/p>
-&lt;h1 id="建立託管區域" >建立託管區域
-&lt;span>
-&lt;a href="#%e5%bb%ba%e7%ab%8b%e8%a8%97%e7%ae%a1%e5%8d%80%e5%9f%9f">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h1>&lt;p>首先，進入 AWS 主控台搜尋 Route 53&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020050917090249-scaled.jpg" alt="">&lt;/p>
-&lt;p>接著點擊左上角的託管區域&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020050917092329-scaled.jpg" alt="">&lt;/p>
-&lt;p>點擊左上角的，建立託管區域 接著在右方自己的網域名稱&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020050917094366-scaled.jpg" alt="">&lt;/p>
-&lt;p>接著系統就會建立一個託管區域囉！（這邊先將NS紀錄記起來，下個步驟會用到）&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020050917104942.png" alt="">&lt;/p>
-&lt;h1 id="設定-dns-伺服器" >設定 DNS 伺服器
-&lt;span>
-&lt;a href="#%e8%a8%ad%e5%ae%9a-dns-%e4%bc%ba%e6%9c%8d%e5%99%a8">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h1>&lt;p>那我們剛剛已經在 AWS Route 53 建立了 DNS 託管區域，接著我們要到網域註冊商來設定 DNS 伺服器！&lt;/p>
-&lt;p>首先，打開網域管理頁面（本篇以 Gandi 示範），並找到名稱伺服器或是 Nameservers&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020050917101357-scaled.jpg" alt="">&lt;/p>
-&lt;p>點擊變更後，將原本的紀錄刪除，並將 AWS Route 53 自動產生的 NS 紀錄貼上去&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020050917103474.png" alt="">&lt;/p>
-&lt;p>接著就等待生效囉！大約 24-48 小時生效（實際上應該 5-10 分鐘生效 XD）&lt;/p></description></item><item><title>在 Gandi 購買網域</title><link>https://blog.steveyi.net/posts/register-domain-at-gandi/</link><pubDate>Fri, 03 Apr 2020 18:40:19 +0000</pubDate><guid>https://blog.steveyi.net/posts/register-domain-at-gandi/</guid><description>&lt;p>之前有跟大家分享將網域從 Google 移轉至 Gandi 的過程 &lt;a href="https://blog.steveyi.net/transfer-domain-from-google-to-gandi/">點我看文章&lt;/a>&lt;br>
-本篇就來分享一下 在 Gandi 購買網域的過程吧！&lt;/p>
-&lt;p>前置準備：&lt;br>
-錢（用來註冊網域的費用）&lt;/p>
-&lt;p>首先，我們打開 &lt;a href="https://www.gandi.net/">Gandi&lt;/a> 的官網&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/register-domain-at-gandi-01-1920x923.png" alt="">&lt;/p>
-&lt;p>搜尋你想要的網域，接著將其加入購物車&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/register-domain-at-gandi-02-1920x741.jpg" alt="">&lt;/p>
-&lt;p>接著就可以結帳啦&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/register-domain-at-gandi-03-1920x923.png" alt="">&lt;/p>
-&lt;p>Gandi 支持很多付款方式：信用卡、銀聯、PayPal、轉帳、比特幣(BitCoin)&lt;br>
-其中 Paypal 必須為非台灣帳戶才可以付款&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/register-domain-at-gandi-04-1920x923.png" alt="">&lt;/p>
-&lt;p>付款完成後，系統就會建立網域資料 可以在&lt;a href="https://admin.gandi.net/domain/incoming">這裡查看狀態&lt;/a>&lt;/p>
-&lt;p>建立完成後，會收到一封電子郵件通知&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/register-domain-at-gandi-05-1920x1019.jpg" alt="">&lt;/p>
-&lt;p>接著就可以前往&lt;a href="https://admin.gandi.net">控制台&lt;/a>管理你的網域囉！&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>網域 on 小易的部落格</title><link>https://blog.steveyi.net/tags/%E7%B6%B2%E5%9F%9F/</link><description>Recent content in 網域 on 小易的部落格</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Tue, 07 Jul 2020 05:33:14 +0000</lastBuildDate><atom:link href="https://blog.steveyi.net/tags/%E7%B6%B2%E5%9F%9F/index.xml" rel="self" type="application/rss+xml"/><item><title>PVE入門心得-安裝篇</title><link>https://blog.steveyi.net/posts/pve-install/</link><pubDate>Tue, 07 Jul 2020 05:33:14 +0000</pubDate><guid>https://blog.steveyi.net/posts/pve-install/</guid><description>玩虛擬機有一段時間了，不過是在Windows系統下裝VMware Workstation玩xD
+後來閒置了幾台電腦，恰好也查詢到PVE(Proxmox VE)這個開源虛擬系統，於是 我們就來安裝玩玩吧!
+前期準備:
+Proxmox VE 安裝碟
+高核心且空閒的電腦(不然跑起來會很卡)
+首先，我們先到官方網站下載PVE的ISO檔案 官網載點
+點擊左方的 Proxmox VE 6.2 ISO Installer 來下載(6.2是版本號，右方則是種子下載)
+下載好之後，我們將檔案寫入USB中，做成安裝碟
+這邊推薦使用Etcher來寫入，官網連結
+做好安裝碟之後，我們進入BIOS，並調整開機順序(將安裝碟設為第一順位)
+接著我們就可以進行安裝了!
+首先，選擇第一個 Install Proxmox VE
+接著同意服務條款
+選擇硬碟
+選擇國家及時區
+設置root密碼及電子郵件地址
+設置主機名稱及網路(這邊建議一次就設定好，不然後續修改IP有點麻煩)
+全部完成後，就點擊Install來進行安裝!
+安裝完成後，我們使用 https://你的IP:8006 就可以進入管理面板囉!
+下一篇，我們將與大家分享一些配置的過程</description></item><item><title>在 Ubuntu 系統下架設 Tunnel Broker 服務 (v4 to v6)</title><link>https://blog.steveyi.net/posts/tunnel-broker-bgp/</link><pubDate>Sun, 31 May 2020 16:56:41 +0000</pubDate><guid>https://blog.steveyi.net/posts/tunnel-broker-bgp/</guid><description>前言 之前拿到了一個自治號碼(AS Number)，也拿到了1個 /44 及兩個 /48 的iPv6
+恰好最近想到之前有使用過HE.Net的tunnel broker服務
+這次就來架設一下sit隧道的tunnel broker服務！本篇不會說明ipv6的取得方式，請自行詢問主機提供商
+本篇將使用開源工具-IPv6-in-IPv4 Tunnel
+配置工具 首先，將工具下載下來
+git clone [https://github.com/sskaje/6in4.git](https://github.com/sskaje/6in4) 我們進入項目的etc資料夾，並修改config.ini
+nano config.ini 依序編輯 IPV6_NETWORK, IPV6_CIDR, INTERFACE, BIND_IP(有多iPv4需要)
+接著輸入 Crtl + X 來保存
+修改系統設定來允許iPv6轉發 nano /etc/sysctl.conf 在最下方添加下方這項net.ipv6.conf.all.forwarding = 1 Crtl + X 保存 sysctl -p 防火牆 iptables -I INPUT -p 41 --j ACCEPT iptables -I OUTPUT -p 41 --j ACCEPT iptables -I FORWARD -p 41 --j ACCEPT 使用工具建立伺服端(新增隧道) 假設隧道ID為1，伺服端IPv4為1.1.1.1 用戶端IPv4為8.8.8.8]
+配置文件中設置的IPv6子網為 2a0e:b107:7e0::，子網路遮罩為48(必須為8的倍數)工具會自動分割出 一個用於隧道的 /64子網及一個用於用戶路由的 /64子網</description></item><item><title>建立 Cloud Identity 帳戶</title><link>https://blog.steveyi.net/posts/create-cloud-identity/</link><pubDate>Fri, 15 May 2020 20:35:11 +0000</pubDate><guid>https://blog.steveyi.net/posts/create-cloud-identity/</guid><description>首先，進入 Cloud Identity 申請頁面 點擊下一頁
+接著輸入公司名稱(可以隨意輸入)，員工數量(隨意選擇) 把它當作一個團隊
+選擇地點（設定好就不能修改了），其實作用不大
+設定目前的電子郵件地址（一些申請的郵件會寄到這裡）
+輸入要設定的網域（不得使用於其他 G Suite 服務）
+接著建立使用者
+機器人驗證
+當出現這個頁面時，代表註冊完成了！
+接著我們需要驗證網域
+請看下一篇文章 - Cloud Identity 驗證網域及建立帳號</description></item><item><title>刪除 G suite 組織</title><link>https://blog.steveyi.net/posts/delete-gsuite/</link><pubDate>Fri, 15 May 2020 18:17:25 +0000</pubDate><guid>https://blog.steveyi.net/posts/delete-gsuite/</guid><description>之前有跟大家分享註冊G Suite帳號的方式，最近想將 Cloud Identity免費版 的G Suite組織刪除
+由於完全沒有刪除過G Suite組織，所以稍微爬文了一下
+大致整理了一下刪除的方式
+重要提醒：
+刪除前，請先取消約期授權並刪除所有GCP專案
+刪除後，所有組織資料會被清除
+首先，進入G Suite控制台，點擊公司資料
+接著點擊帳戶管理
+接著點擊 刪除帳號
+接著會提示你，這個步驟無法復原
+打勾後點擊 刪除帳號
+接著帳號就刪除囉！</description></item><item><title>Backblaze B2 支援 S3 API 了！</title><link>https://blog.steveyi.net/posts/backblaze-b2-compatible-s3-api/</link><pubDate>Thu, 14 May 2020 03:08:02 +0000</pubDate><guid>https://blog.steveyi.net/posts/backblaze-b2-compatible-s3-api/</guid><description>前幾天打開 Backblaze 後，看到一行大大的字
+沒錯！S3 API 跟 Backblaze B2 兼容啦！
+S3 API 是目前市面上最流行的協定，很多軟硬體都兼容
+Backblaze B2 則是非常棒的雲端存處(低價優勢)
+如何使用 S3 API 若存處桶是在 2020/05/04 前創立的，則要創立一個新的，並將檔案移入(推薦使用 Rclone，會自動支援 B2 Copy File)
+然後創建一個新的 App Key (不要使用主要的喔)
+有關於一些 B2 的文章介紹:
+Backblaze B2 低價的雲端數據存儲服務
+Backblaze B2 和 Cloudflare Workers 設定自訂域名
+BackBlaze 宣布第一個歐洲數據中心啟用</description></item><item><title>透過 Github 託管靜態網頁 - Github Pages</title><link>https://blog.steveyi.net/posts/github-static-website/</link><pubDate>Wed, 22 Apr 2020 14:09:46 +0000</pubDate><guid>https://blog.steveyi.net/posts/github-static-website/</guid><description>首先，進入Github 點擊左方綠色按鈕的 New
+輸入Repository名稱（自定義）
+選擇 Public(公開) 或是 Private(私人)
+點擊Create Repository
+這樣就建立好一個Repository囉！
+接著我們要下載Github Desktop，方便上傳網頁原始檔
+點擊中間的Download for macOS（Windows 則會是 Download for Windows）
+下載完成後，登入Github帳號（Sign in to Github.com）
+接著選擇剛剛建立的Repository
+點擊 Clone
+接著將檔案複製到資料夾中
+回到Github Desktop，輸入Commit changes的資訊
+點擊Commit to master
+接著我們回到網頁，刷新後應該就會看到剛剛上傳的檔案囉！
+接著來設定一下Github Pages
+選擇master branch
+接著就會產生子網域，就可以嘗試進入網站囉！
+下次再來補充綁定自訂網域及SSL的方式吧！</description></item><item><title>Mailgun + Gmail 達成自訂網域郵箱</title><link>https://blog.steveyi.net/posts/mailgun-gmail-custom-domain-email/</link><pubDate>Wed, 22 Apr 2020 12:48:48 +0000</pubDate><guid>https://blog.steveyi.net/posts/mailgun-gmail-custom-domain-email/</guid><description>小時候總是很好奇寄件者後方的網域名稱是什麼，後來接觸到網站架設後，註冊了許多網域（現在手上大概6個網域左右)，也慢慢解開了小時候的疑惑
+今天就來分享一下 Mailgun + Gmail 自訂網域郵箱的方法吧！
+首先，先註冊 Mailgun，預設有 5000 封信件額度
+PS.如果你是GCP客戶，可以到 合作頁面，申請免費 30000 額度
+註冊之後，我們進入控制台新增網域（預設會有一個網域）
+上方輸入網域名網域名稱，下方勾選 Create DKIM Authority 並選擇 1024 位元(部分 DNS 服務商不支持 2048 位元)
+接著設定 DNS 紀錄，MX 紀錄一定要設定（不然會收不到信）
+小提醒：如果你有其他郵件收信服務(如: Gsuite, Office… 等)，不要設定 MX 紀錄，不然原先的服務會收不到信
+設置完後，等待 DNS 生效 我們就可以來進行下一個步驟了！
+接著我們來設置 SMTP 帳號
+首先，打開 Mailgun 控制台
+點擊 Domain settings 選擇 SMTP credentials
+接著點擊右上角的 New SMTP User 來建立新帳號
+右上方為密碼！先記起來，等等會用到
+接著我們來設定轉寄郵件
+點擊左方的 Receiving，在點擊右上方的 Create Route
+接著選擇 Match Recipient (指定收件者)，並輸入剛剛建立的電子郵件地址
+下方 Forward 填寫 Gmail 的電子郵件地址，存檔！</description></item><item><title>[教學] AWS Route 53 代管DNS</title><link>https://blog.steveyi.net/posts/aws-route53/</link><pubDate>Mon, 06 Apr 2020 14:38:57 +0000</pubDate><guid>https://blog.steveyi.net/posts/aws-route53/</guid><description>從2017年 註冊了第一個網域之後，DNS 代管商一直是我在研究的一個部分！
+今天來推薦一下由 AWS 推出的 DNS 代管服務 - Route 53
+前置作業：
+AWS帳號
+網域
+建立託管區域 首先，進入 AWS 主控台搜尋 Route 53
+接著點擊左上角的託管區域
+點擊左上角的，建立託管區域 接著在右方自己的網域名稱
+接著系統就會建立一個託管區域囉！（這邊先將NS紀錄記起來，下個步驟會用到）
+設定 DNS 伺服器 那我們剛剛已經在 AWS Route 53 建立了 DNS 託管區域，接著我們要到網域註冊商來設定 DNS 伺服器！
+首先，打開網域管理頁面（本篇以 Gandi 示範），並找到名稱伺服器或是 Nameservers
+點擊變更後，將原本的紀錄刪除，並將 AWS Route 53 自動產生的 NS 紀錄貼上去
+接著就等待生效囉！大約 24-48 小時生效（實際上應該 5-10 分鐘生效 XD）</description></item><item><title>在 Gandi 購買網域</title><link>https://blog.steveyi.net/posts/register-domain-at-gandi/</link><pubDate>Fri, 03 Apr 2020 18:40:19 +0000</pubDate><guid>https://blog.steveyi.net/posts/register-domain-at-gandi/</guid><description>之前有跟大家分享將網域從 Google 移轉至 Gandi 的過程 點我看文章
+本篇就來分享一下 在 Gandi 購買網域的過程吧！
+前置準備：
+錢（用來註冊網域的費用）
+首先，我們打開 Gandi 的官網
+搜尋你想要的網域，接著將其加入購物車
+接著就可以結帳啦
+Gandi 支持很多付款方式：信用卡、銀聯、PayPal、轉帳、比特幣(BitCoin)
+其中 Paypal 必須為非台灣帳戶才可以付款
+付款完成後，系統就會建立網域資料 可以在這裡查看狀態
+建立完成後，會收到一封電子郵件通知
+接著就可以前往控制台管理你的網域囉！</description></item></channel></rss>

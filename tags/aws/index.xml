@@ -1,31 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AWS on 小易的部落格</title><link>https://blog.steveyi.net/tags/aws/</link><description>小易的部落格 (AWS)</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Mon, 06 Apr 2020 14:38:57 +0000</lastBuildDate><atom:link href="https://blog.steveyi.net/tags/aws/index.xml" rel="self" type="application/rss+xml"/><item><title>[教學] AWS Route 53 代管DNS</title><link>https://blog.steveyi.net/posts/aws-route53/</link><pubDate>Mon, 06 Apr 2020 14:38:57 +0000</pubDate><guid>https://blog.steveyi.net/posts/aws-route53/</guid><description>&lt;p>從2017年 &lt;a href="https://diary.steveyi.net">註冊了第一個網域之後&lt;/a>，DNS 代管商一直是我在研究的一個部分！&lt;br>
-今天來推薦一下由 &lt;a href="https://aws.amazon.com">AWS&lt;/a> 推出的 DNS 代管服務 - &lt;a href="https://aws.amazon.com/tw/route53/">Route 53&lt;/a>&lt;/p>
-&lt;p>前置作業：&lt;br>
-&lt;a href="https://blog.steveyi.net/signup-aws-account/">AWS帳號&lt;/a>&lt;br>
-網域&lt;/p>
-&lt;h1 id="建立託管區域" >建立託管區域
-&lt;span>
-&lt;a href="#%e5%bb%ba%e7%ab%8b%e8%a8%97%e7%ae%a1%e5%8d%80%e5%9f%9f">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h1>&lt;p>首先，進入 AWS 主控台搜尋 Route 53&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020050917090249-scaled.jpg" alt="">&lt;/p>
-&lt;p>接著點擊左上角的託管區域&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020050917092329-scaled.jpg" alt="">&lt;/p>
-&lt;p>點擊左上角的，建立託管區域 接著在右方自己的網域名稱&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020050917094366-scaled.jpg" alt="">&lt;/p>
-&lt;p>接著系統就會建立一個託管區域囉！（這邊先將NS紀錄記起來，下個步驟會用到）&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020050917104942.png" alt="">&lt;/p>
-&lt;h1 id="設定-dns-伺服器" >設定 DNS 伺服器
-&lt;span>
-&lt;a href="#%e8%a8%ad%e5%ae%9a-dns-%e4%bc%ba%e6%9c%8d%e5%99%a8">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h1>&lt;p>那我們剛剛已經在 AWS Route 53 建立了 DNS 託管區域，接著我們要到網域註冊商來設定 DNS 伺服器！&lt;/p>
-&lt;p>首先，打開網域管理頁面（本篇以 Gandi 示範），並找到名稱伺服器或是 Nameservers&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020050917101357-scaled.jpg" alt="">&lt;/p>
-&lt;p>點擊變更後，將原本的紀錄刪除，並將 AWS Route 53 自動產生的 NS 紀錄貼上去&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020050917103474.png" alt="">&lt;/p>
-&lt;p>接著就等待生效囉！大約 24-48 小時生效（實際上應該 5-10 分鐘生效 XD）&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>AWS on 小易的部落格</title><link>https://blog.steveyi.net/tags/aws/</link><description>Recent content in AWS on 小易的部落格</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Mon, 06 Apr 2020 14:38:57 +0000</lastBuildDate><atom:link href="https://blog.steveyi.net/tags/aws/index.xml" rel="self" type="application/rss+xml"/><item><title>[教學] AWS Route 53 代管DNS</title><link>https://blog.steveyi.net/posts/aws-route53/</link><pubDate>Mon, 06 Apr 2020 14:38:57 +0000</pubDate><guid>https://blog.steveyi.net/posts/aws-route53/</guid><description>從2017年 註冊了第一個網域之後，DNS 代管商一直是我在研究的一個部分！
+今天來推薦一下由 AWS 推出的 DNS 代管服務 - Route 53
+前置作業：
+AWS帳號
+網域
+建立託管區域 首先，進入 AWS 主控台搜尋 Route 53
+接著點擊左上角的託管區域
+點擊左上角的，建立託管區域 接著在右方自己的網域名稱
+接著系統就會建立一個託管區域囉！（這邊先將NS紀錄記起來，下個步驟會用到）
+設定 DNS 伺服器 那我們剛剛已經在 AWS Route 53 建立了 DNS 託管區域，接著我們要到網域註冊商來設定 DNS 伺服器！
+首先，打開網域管理頁面（本篇以 Gandi 示範），並找到名稱伺服器或是 Nameservers
+點擊變更後，將原本的紀錄刪除，並將 AWS Route 53 自動產生的 NS 紀錄貼上去
+接著就等待生效囉！大約 24-48 小時生效（實際上應該 5-10 分鐘生效 XD）</description></item></channel></rss>

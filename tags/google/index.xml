@@ -1,164 +1,93 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Google on 小易的部落格</title><link>https://blog.steveyi.net/tags/google/</link><description>小易的部落格 (Google)</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Tue, 19 Jan 2021 13:00:00 +0000</lastBuildDate><atom:link href="https://blog.steveyi.net/tags/google/index.xml" rel="self" type="application/rss+xml"/><item><title>Google 廣告 – 原來你在 Google 眼中的形象是這樣的…</title><link>https://blog.steveyi.net/posts/google-adssettings/</link><pubDate>Tue, 19 Jan 2021 13:00:00 +0000</pubDate><guid>https://blog.steveyi.net/posts/google-adssettings/</guid><description>&lt;p>原本這篇去年12月就要發布的，但剛好遇到伺服器維護就一直沒發XD&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2021011914191084.png" alt="">&lt;/p>
-&lt;p>有一天筆者在修改Google帳戶資料時，意外發現了「廣告設定」這個地方點開有還滿多資訊的。&lt;/p>
-&lt;p>資料的來源包括登入狀態下的Google和Youtube各種紀錄，以及Google帳號申請時填寫的基本資料&lt;/p>
-&lt;p>可以推測出興趣、年齡、家庭收入、感情狀況、雇主等，甚至是小孩數量&lt;/p>
-&lt;p>不過推測出來的東西也會時常變動，也不是完全準確，不介意的話可以當笑話看看就好🤣
-（筆者曾經在三天內看到自己的收入出現「中間偏高、中間偏低、高、低」的極端起伏）&lt;/p>
-&lt;p>如果真的不喜歡被Google看透的話，上面的廣告個人化開關可以關掉，或是使用無痕模式進行搜尋&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2021011914215023.png" alt="">&lt;/p>
-&lt;p>Google對筆者的認識，看看參考就好，反正也不是完全準確🤣
-如果系統猜測的項目不喜歡，也可以隨時按「停用」，也會把該項目丟到「已關閉的項目」裡面，在登入情況下就再也不會看到囉～&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2021011914231714.png" alt="">&lt;/p>
-&lt;p>已關閉的項目大致上會像下圖這樣，不經意地按掉廣告，或是在各種地方按下「不感興趣」的東西都會在這邊&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2021011914235943.png" alt="">&lt;/p>
-&lt;p>之前按掉的廣告的冰山一角🤣
-連結放在下方，歡迎大家有空去玩看看吧&lt;/p>
-&lt;p>&lt;a href="https://adssettings.google.com">https://adssettings.google.com&lt;/a>&lt;/p></description></item><item><title>在 Linux 環境下無腦串接 Google 雲端硬碟</title><link>https://blog.steveyi.net/posts/linux-mount-googledrive-not-required-brain/</link><pubDate>Tue, 19 Jan 2021 12:25:49 +0000</pubDate><guid>https://blog.steveyi.net/posts/linux-mount-googledrive-not-required-brain/</guid><description>&lt;p>此篇教學使用的是 google-drive-ocamlfuse 這個軟體，筆者使用的環境是基於Ubuntu的Zorin OS 15.2系統作為示範。&lt;/p>
-&lt;p>首先需要先加入軟體源，請在終端機輸入（可以直接把這一串直接拷貝貼上）&lt;/p>
-&lt;p>sudo add-apt-repository ppa:alessandro-strada/ppa
-sudo apt-get update
-sudo apt-get install google-drive-ocamlfuse
-註：安裝過程可能需要輸入密碼，有些Linux發行版看不到輸入的密碼，打完按下Return就會繼續&lt;/p>
-&lt;p>安裝完成後，請在終端機輸入這個指令來啟動掛載的程式&lt;/p>
-&lt;p>google-drive-ocamlfuse
-第一次運行的時候它會跳出瀏覽器視窗給用戶登入並選擇帳號，要求權限時請選擇同意。
-成功之後會會跳轉到這個頁面（如下圖），並且在終端機看到這個訊息：&lt;/p>
-&lt;p>Access token retrieved correctly.&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2021011913110433.png" alt="">&lt;/p>
-&lt;p>接下來請輸入這串指令，在Home Directory建立一個掛載用的檔案夾&lt;/p>
-&lt;p>mkdir ~/GoogleDrive
-再接下來輸入這串指令就會完成掛載囉！&lt;/p>
-&lt;p>google-drive-ocamlfuse ~/GoogleDrive&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2021011913111963.png" alt="">&lt;/p>
-&lt;p>掛載的位置會在Home Directory 底下的Google Drive資料夾&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2021011913113183.png" alt="">&lt;/p>
-&lt;p>如果想要退出掛載的話，可以在終端機使用以下指令&lt;/p>
-&lt;p>fusermount -u ~/GoogleDrive
-更多指令如果想要查詢看看，可以終端機輸入這個指令來做查詢&lt;/p>
-&lt;p>google-drive-ocamlfuse &amp;ndash;help&lt;/p></description></item><item><title>使用傳統版 Gmail 加快老舊裝置和低速網路的郵件載入速度</title><link>https://blog.steveyi.net/posts/html-gmail/</link><pubDate>Fri, 21 Aug 2020 15:32:52 +0000</pubDate><guid>https://blog.steveyi.net/posts/html-gmail/</guid><description>&lt;p>筆者有一部老舊的PC，配備1GB記憶體以及Windows XP做輕度文書使用(Windows XP只需128MB記憶體即可操作)，瀏覽一些網站仍可應付，有些大型網站則要載入很久或是無法正常使用。如果是一般的文章網頁還可以，問題來了，筆者想用Gmail網頁版收發郵件，但在網路暢通的情況下載入標準Gmail網頁需要將近一分鐘，捲動郵件更是一場災難，後來筆者發現網頁底部會有一個不明顯的傳統版Gmail超連結，不太會有人注意到它。&lt;/p>
-&lt;p>註：該部PC後來有點故障，所以不會用它來示範本篇教學。&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020082115070982.png" alt="">&lt;/p>
-&lt;p>筆者將連結放在這裡，有需要的可以拷貝拿去用&lt;br>
-&lt;a href="https://mail.google.com/mail/u/0/h/" title="https://mail.google.com/mail/u/0/h/">Gmail傳統版&lt;/a>&lt;/p>
-&lt;p>點開連結後，請按下我要使用「HTML版Gmail」&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020082115124610.png" alt="">&lt;/p>
-&lt;p>進入之後會發現少漂亮的圖示和華麗的動畫，雖然視覺效果不這麼吸引人，但在網路不佳或是電腦運作不快的環境可是非常有用啊！&lt;/p>
-&lt;p>這是傳統版Gmail的網頁，雖然看起來陽春但大部分功能都還在。&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020082115230812.png" alt="">&lt;/p>
-&lt;p>這是標準的Gmail網頁，在效能良好的裝置和良好的網路環境可以獲得很好的視覺效果和使用體驗，但老舊裝置以及網路頻寬不足的情況下就要等很久。&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020082115303578.png" alt="">&lt;/p></description></item><item><title>使用CloudReady體驗ChromiumOS作業系統，老電腦重獲新生!</title><link>https://blog.steveyi.net/posts/cloudready/</link><pubDate>Mon, 10 Aug 2020 15:10:52 +0000</pubDate><guid>https://blog.steveyi.net/posts/cloudready/</guid><description>&lt;p>不曉得各位有沒有一種經驗，電腦老舊了，連文書處理和基本的瀏覽網頁都卡頓，但又不想使用太老舊的作業系統(官方停止提供新功能了，連瀏覽器也不提供更新支援了)，這時便可以下載最新版的CloudReady家用版來使用囉!既有最新版的瀏覽器，也有不少Web App能使用；也因為是基於瀏覽器的作業系統，因此資源占用比許多作業系統都少，也不用怕不習慣使用Linux作業系統(安裝軟體的方式很不一樣，使用邏輯也差很多，而且一直使用命令行也不是很直覺的用法)，所以，只要電腦支援64位元，幾乎都可以用CloudReady(試過家裡唯一一台32位元電腦，無法使用32位元版的CloudReady開機)&lt;/p>
-&lt;p>開始吧!&lt;/p>
-&lt;p>準備材料有:&lt;/p>
-&lt;ol>
-&lt;li>8GB隨身碟(資料會洗掉，請先移除資料)&lt;/li>
-&lt;li>要安裝的電腦&lt;/li>
-&lt;/ol>
-&lt;p>首先請先到&lt;a href="https://www.neverware.com/freedownload#home-edition-install" title="https://www.neverware.com/freedownload#home-edition-install">官網&lt;/a>按下[DOWNLOAD 64-BIT IMAGE]下載64位元版安裝檔&lt;a href="https://www.neverware.com/blogcontent/2019/7/12/announcement-end-of-support-for-cloudready-home-edition-32bit" title="https://www.neverware.com/blogcontent/2019/7/12/announcement-end-of-support-for-cloudready-home-edition-32bit">(32位元版已停止支援)&lt;/a>&lt;br>
-無論使用何種系統，請不要選擇USB Maker，因為筆者和朋友測試多次，很容易製作失敗&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081014045049.png" alt="">&lt;/p>
-&lt;p>請將下載後的檔案(*.zip)解壓縮後會得到一個(*.bin)檔案&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081014081737.png" alt="">&lt;/p>
-&lt;p>接下來請使用Chrome開啟&lt;a href="https://chrome.google.com/webstore/detail/chromebook-recovery-utili/jndclpdbaamdhonoechobihbbiimdgai?utm_source=chrome-app-launcher-info-dialog" title="https://chrome.google.com/webstore/detail/chromebook-recovery-utili/jndclpdbaamdhonoechobihbbiimdgai?utm_source=chrome-app-launcher-info-dialog">這個連結&lt;/a>，並安裝後開啟&lt;/p>
-&lt;p>插上隨身碟之後按齒輪，並按下[Use local image]&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081014111649.png" alt="">&lt;/p>
-&lt;p>選擇剛剛解壓縮出來的BIN(*.bin)檔案&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081014135411.png" alt="">&lt;/p>
-&lt;p>然後插入並選擇剛剛準備好的隨身碟&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081014150721.png" alt="">&lt;/p>
-&lt;p>接下來按兩次藍色按鈕，並授予使用者帳戶控制的權限，等待完成&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081014165917.png" alt="">&lt;/p>
-&lt;p>如果過程中跳出USB磁碟機需要格式化的視窗，請按下取消!&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081014261042.png" alt="">&lt;/p>
-&lt;p>完成之後請將電腦關機，依照電腦製造商提供的方法進入BIOS設定、開機選單或Mac開機管理程式，並選擇使用剛剛製作好的隨身碟開機(視情況可能需要輸入BIOS密碼或是&lt;a href="https://support.apple.com/zh-tw/guide/mac-help/mchl126463db/mac" title="https://support.apple.com/zh-tw/guide/mac-help/mchl126463db/mac">韌體密碼&lt;/a>)&lt;/p>
-&lt;p>本篇以PC作為示範，所以使用Boot Menu選擇USB磁碟機(隨身碟名字可能不一樣)&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081014475160-scaled.jpg" alt="">&lt;/p>
-&lt;p>再來會進入開機畫面&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081014493026-scaled.jpg" alt="">&lt;/p>
-&lt;p>開機完成後可以選擇語言和聯網等基礎設定&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081014502140-scaled.jpg" alt="">&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081014503063.jpg" alt="">&lt;/p>
-&lt;p>設定完成後可以按下藍色的開始使用&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081014521448.png" alt="">&lt;/p>
-&lt;p>右下角按下後會展開控制中心（下半部）和通知中心（上半部）&lt;br>
-控制中心可以控制各式開關、關機、鎖定、打開系統偏好設定&lt;br>
-按下Install OS便可以安裝到硬碟，以後開機就不用依賴這個隨身碟了，但是會將硬碟資料清空，請謹慎操作。&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081014532111.png" alt="">&lt;/p>
-&lt;p>左下角的圓形按鈕是啟動台，可以找Chromium應用程式商店下載各式Chrome App和擴充功能。&lt;br>
-值得一提的是，下載的Chrome App會和帳戶同步，意指重新安裝或者是到別台CloudReady電腦、Chromebit、Chromebox或是Chromebook上都會同步安裝&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081014561142.png" alt="">&lt;/p>
-&lt;p>在設定裡面可以調整各種選項，裡面的設定值也會同步&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081015000930.png" alt="">&lt;/p>
-&lt;p>有一個App叫做「檔案」，功能相當於Finder和檔案總管，可以管理檔案&lt;br>
-而且也會自動串接Google雲端硬碟，非常方便。&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081015012368.png" alt="">&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020081015044386.png" alt="">&lt;/p>
-&lt;p>大致介紹完畢囉！祝各位用得愉快～&lt;br>
-螢幕快照的快速鍵是Ctrl+F5，會存在下載資料夾&lt;br>
-其餘快速鍵幾乎都跟Windows差不多，可以參考&lt;a href="https://support.google.com/chromebook/answer/183101?hl=zh-Hant" title="https://support.google.com/chromebook/answer/183101?hl=zh-Hant">這篇官方文章&lt;/a>&lt;/p></description></item><item><title>建立 Cloud Identity 帳戶</title><link>https://blog.steveyi.net/posts/create-cloud-identity/</link><pubDate>Fri, 15 May 2020 20:35:11 +0000</pubDate><guid>https://blog.steveyi.net/posts/create-cloud-identity/</guid><description>&lt;p>首先，進入 &lt;a href="https://gsuite.google.com/signup/gcpidentity/welcome">Cloud Identity 申請頁面&lt;/a> 點擊下一頁&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051520063750.png" alt="">&lt;/p>
-&lt;p>接著輸入公司名稱(可以隨意輸入)，員工數量(隨意選擇) 把它當作一個團隊&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051520064943.png" alt="">&lt;/p>
-&lt;p>選擇地點（設定好就不能修改了），其實作用不大&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051520070636.png" alt="">&lt;/p>
-&lt;p>設定目前的電子郵件地址（一些申請的郵件會寄到這裡）&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051520072596.png" alt="">&lt;/p>
-&lt;p>輸入要設定的網域（不得使用於其他 G Suite 服務）&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051520074395.png" alt="">&lt;/p>
-&lt;p>接著建立使用者&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051520083976.png" alt="">&lt;/p>
-&lt;p>機器人驗證&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051520085633.png" alt="">&lt;/p>
-&lt;p>當出現這個頁面時，代表註冊完成了！&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051520091652.png" alt="">&lt;/p>
-&lt;p>接著我們需要驗證網域&lt;/p>
-&lt;p>請看下一篇文章 - &lt;a href="https://blog.steveyi.net/cloud-identity-setting/">Cloud Identity 驗證網域及建立帳號&lt;/a>&lt;/p></description></item><item><title>刪除 G suite 組織</title><link>https://blog.steveyi.net/posts/delete-gsuite/</link><pubDate>Fri, 15 May 2020 18:17:25 +0000</pubDate><guid>https://blog.steveyi.net/posts/delete-gsuite/</guid><description>&lt;p>之前有跟大家分享&lt;a href="https://blog.steveyi.net/register-gsuite/">註冊G Suite帳號&lt;/a>的方式，最近想將 &lt;a href="https://support.google.com/cloudidentity/answer/7319251?hl=zh-Hant">Cloud Identity免費版&lt;/a> 的G Suite組織刪除&lt;/p>
-&lt;p>由於完全沒有刪除過G Suite組織，所以稍微爬文了一下&lt;br>
-大致整理了一下刪除的方式&lt;/p>
-&lt;p>重要提醒：&lt;br>
-刪除前，請先取消約期授權並刪除所有GCP專案&lt;br>
-刪除後，所有組織資料會被清除&lt;/p>
-&lt;p>首先，進入&lt;a href="https://admin.google.com">G Suite控制台&lt;/a>，點擊公司資料&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051515401915.png" alt="">&lt;/p>
-&lt;p>接著點擊帳戶管理&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051515404022.png" alt="">&lt;/p>
-&lt;p>接著點擊 刪除帳號&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051515411434.png" alt="">&lt;/p>
-&lt;p>接著會提示你，這個步驟無法復原&lt;br>
-打勾後點擊 刪除帳號&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020051515413046.png" alt="">&lt;/p>
-&lt;p>接著帳號就刪除囉！&lt;/p></description></item><item><title>申請 G Suite 帳號</title><link>https://blog.steveyi.net/posts/register-gsuite/</link><pubDate>Wed, 01 Apr 2020 03:13:48 +0000</pubDate><guid>https://blog.steveyi.net/posts/register-gsuite/</guid><description>&lt;p>相信大家應該都有使用過Gmail&lt;br>
-今天要來介紹的 G Suite 是由Google推出的企業服務，不過一般使用者也是可以申請的！&lt;/p>
-&lt;h2 id="事前準備" >事前準備：
-&lt;span>
-&lt;a href="#%e4%ba%8b%e5%89%8d%e6%ba%96%e5%82%99">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h2>&lt;p>網域(非必要)&lt;br>
-信用卡/金融卡&lt;/p>
-&lt;h2 id="開始註冊" >開始註冊：
-&lt;span>
-&lt;a href="#%e9%96%8b%e5%a7%8b%e8%a8%bb%e5%86%8a">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h2>&lt;p>1.首先，我們先打開&lt;a href="https://gsuite.google.com">G Suite的官網&lt;/a>(&lt;a href="https://gsuite.google.com">https://gsuite.google.com&lt;/a>)&lt;/p>
-&lt;p>2.接著，點擊&amp;quot;開始免費試用&amp;quot;&lt;/p>
-&lt;p>3.上方輸入公司名稱(或是你自己想一個名字)&lt;br>
-員工人數自行選擇(我是選1)&lt;br>
-國家/地區自行選擇(建議照實寫，防止後續無法付款 我選台灣)&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/register-gsuite-01.png" alt="">&lt;/p>
-&lt;p>4.接著設定網域（如果沒有網域的話，請點擊第三個選項）&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/register-gsuite-02.png" alt="">&lt;/p>
-&lt;p>5.接著確認網域，點擊下一頁&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/register-gsuite-03.png" alt="">&lt;/p>
-&lt;p>6.接著就&amp;hellip;自己選擇囉！&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/register-gsuite-04.png" alt="">&lt;/p>
-&lt;p>7.接著建立管理者帳號&lt;br>
-使用者名稱，密碼自定&lt;br>
-網域則為我們剛剛選擇的&lt;br>
-設定完成後，點擊&amp;quot;同意並繼續&amp;quot;！&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/register-gsuite-05.png" alt="">&lt;/p>
-&lt;p>接著就可以進入&lt;a href="https://admin.google.com">管理員管理面板&lt;/a>囉！&lt;/p>
-&lt;p>我們下次再來跟大家分享網域驗證等相關設定唷！&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Google on 小易的部落格</title><link>https://blog.steveyi.net/tags/google/</link><description>Recent content in Google on 小易的部落格</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Tue, 19 Jan 2021 13:00:00 +0000</lastBuildDate><atom:link href="https://blog.steveyi.net/tags/google/index.xml" rel="self" type="application/rss+xml"/><item><title>Google 廣告 – 原來你在 Google 眼中的形象是這樣的…</title><link>https://blog.steveyi.net/posts/google-adssettings/</link><pubDate>Tue, 19 Jan 2021 13:00:00 +0000</pubDate><guid>https://blog.steveyi.net/posts/google-adssettings/</guid><description>原本這篇去年12月就要發布的，但剛好遇到伺服器維護就一直沒發XD
+有一天筆者在修改Google帳戶資料時，意外發現了「廣告設定」這個地方點開有還滿多資訊的。
+資料的來源包括登入狀態下的Google和Youtube各種紀錄，以及Google帳號申請時填寫的基本資料
+可以推測出興趣、年齡、家庭收入、感情狀況、雇主等，甚至是小孩數量
+不過推測出來的東西也會時常變動，也不是完全準確，不介意的話可以當笑話看看就好🤣 （筆者曾經在三天內看到自己的收入出現「中間偏高、中間偏低、高、低」的極端起伏）
+如果真的不喜歡被Google看透的話，上面的廣告個人化開關可以關掉，或是使用無痕模式進行搜尋
+Google對筆者的認識，看看參考就好，反正也不是完全準確🤣 如果系統猜測的項目不喜歡，也可以隨時按「停用」，也會把該項目丟到「已關閉的項目」裡面，在登入情況下就再也不會看到囉～
+已關閉的項目大致上會像下圖這樣，不經意地按掉廣告，或是在各種地方按下「不感興趣」的東西都會在這邊
+之前按掉的廣告的冰山一角🤣 連結放在下方，歡迎大家有空去玩看看吧
+https://adssettings.google.com</description></item><item><title>在 Linux 環境下無腦串接 Google 雲端硬碟</title><link>https://blog.steveyi.net/posts/linux-mount-googledrive-not-required-brain/</link><pubDate>Tue, 19 Jan 2021 12:25:49 +0000</pubDate><guid>https://blog.steveyi.net/posts/linux-mount-googledrive-not-required-brain/</guid><description>此篇教學使用的是 google-drive-ocamlfuse 這個軟體，筆者使用的環境是基於Ubuntu的Zorin OS 15.2系統作為示範。
+首先需要先加入軟體源，請在終端機輸入（可以直接把這一串直接拷貝貼上）
+sudo add-apt-repository ppa:alessandro-strada/ppa sudo apt-get update sudo apt-get install google-drive-ocamlfuse 註：安裝過程可能需要輸入密碼，有些Linux發行版看不到輸入的密碼，打完按下Return就會繼續
+安裝完成後，請在終端機輸入這個指令來啟動掛載的程式
+google-drive-ocamlfuse 第一次運行的時候它會跳出瀏覽器視窗給用戶登入並選擇帳號，要求權限時請選擇同意。 成功之後會會跳轉到這個頁面（如下圖），並且在終端機看到這個訊息：
+Access token retrieved correctly.
+接下來請輸入這串指令，在Home Directory建立一個掛載用的檔案夾
+mkdir ~/GoogleDrive 再接下來輸入這串指令就會完成掛載囉！
+google-drive-ocamlfuse ~/GoogleDrive
+掛載的位置會在Home Directory 底下的Google Drive資料夾
+如果想要退出掛載的話，可以在終端機使用以下指令
+fusermount -u ~/GoogleDrive 更多指令如果想要查詢看看，可以終端機輸入這個指令來做查詢
+google-drive-ocamlfuse &amp;ndash;help</description></item><item><title>使用傳統版 Gmail 加快老舊裝置和低速網路的郵件載入速度</title><link>https://blog.steveyi.net/posts/html-gmail/</link><pubDate>Fri, 21 Aug 2020 15:32:52 +0000</pubDate><guid>https://blog.steveyi.net/posts/html-gmail/</guid><description>筆者有一部老舊的PC，配備1GB記憶體以及Windows XP做輕度文書使用(Windows XP只需128MB記憶體即可操作)，瀏覽一些網站仍可應付，有些大型網站則要載入很久或是無法正常使用。如果是一般的文章網頁還可以，問題來了，筆者想用Gmail網頁版收發郵件，但在網路暢通的情況下載入標準Gmail網頁需要將近一分鐘，捲動郵件更是一場災難，後來筆者發現網頁底部會有一個不明顯的傳統版Gmail超連結，不太會有人注意到它。
+註：該部PC後來有點故障，所以不會用它來示範本篇教學。
+筆者將連結放在這裡，有需要的可以拷貝拿去用
+Gmail傳統版
+點開連結後，請按下我要使用「HTML版Gmail」
+進入之後會發現少漂亮的圖示和華麗的動畫，雖然視覺效果不這麼吸引人，但在網路不佳或是電腦運作不快的環境可是非常有用啊！
+這是傳統版Gmail的網頁，雖然看起來陽春但大部分功能都還在。
+這是標準的Gmail網頁，在效能良好的裝置和良好的網路環境可以獲得很好的視覺效果和使用體驗，但老舊裝置以及網路頻寬不足的情況下就要等很久。</description></item><item><title>使用CloudReady體驗ChromiumOS作業系統，老電腦重獲新生!</title><link>https://blog.steveyi.net/posts/cloudready/</link><pubDate>Mon, 10 Aug 2020 15:10:52 +0000</pubDate><guid>https://blog.steveyi.net/posts/cloudready/</guid><description>不曉得各位有沒有一種經驗，電腦老舊了，連文書處理和基本的瀏覽網頁都卡頓，但又不想使用太老舊的作業系統(官方停止提供新功能了，連瀏覽器也不提供更新支援了)，這時便可以下載最新版的CloudReady家用版來使用囉!既有最新版的瀏覽器，也有不少Web App能使用；也因為是基於瀏覽器的作業系統，因此資源占用比許多作業系統都少，也不用怕不習慣使用Linux作業系統(安裝軟體的方式很不一樣，使用邏輯也差很多，而且一直使用命令行也不是很直覺的用法)，所以，只要電腦支援64位元，幾乎都可以用CloudReady(試過家裡唯一一台32位元電腦，無法使用32位元版的CloudReady開機)
+開始吧!
+準備材料有:
+8GB隨身碟(資料會洗掉，請先移除資料) 要安裝的電腦 首先請先到官網按下[DOWNLOAD 64-BIT IMAGE]下載64位元版安裝檔(32位元版已停止支援)
+無論使用何種系統，請不要選擇USB Maker，因為筆者和朋友測試多次，很容易製作失敗
+請將下載後的檔案(*.zip)解壓縮後會得到一個(*.bin)檔案
+接下來請使用Chrome開啟這個連結，並安裝後開啟
+插上隨身碟之後按齒輪，並按下[Use local image]
+選擇剛剛解壓縮出來的BIN(*.bin)檔案
+然後插入並選擇剛剛準備好的隨身碟
+接下來按兩次藍色按鈕，並授予使用者帳戶控制的權限，等待完成
+如果過程中跳出USB磁碟機需要格式化的視窗，請按下取消!
+完成之後請將電腦關機，依照電腦製造商提供的方法進入BIOS設定、開機選單或Mac開機管理程式，並選擇使用剛剛製作好的隨身碟開機(視情況可能需要輸入BIOS密碼或是韌體密碼)
+本篇以PC作為示範，所以使用Boot Menu選擇USB磁碟機(隨身碟名字可能不一樣)
+再來會進入開機畫面
+開機完成後可以選擇語言和聯網等基礎設定
+設定完成後可以按下藍色的開始使用
+右下角按下後會展開控制中心（下半部）和通知中心（上半部）
+控制中心可以控制各式開關、關機、鎖定、打開系統偏好設定
+按下Install OS便可以安裝到硬碟，以後開機就不用依賴這個隨身碟了，但是會將硬碟資料清空，請謹慎操作。
+左下角的圓形按鈕是啟動台，可以找Chromium應用程式商店下載各式Chrome App和擴充功能。
+值得一提的是，下載的Chrome App會和帳戶同步，意指重新安裝或者是到別台CloudReady電腦、Chromebit、Chromebox或是Chromebook上都會同步安裝
+在設定裡面可以調整各種選項，裡面的設定值也會同步
+有一個App叫做「檔案」，功能相當於Finder和檔案總管，可以管理檔案
+而且也會自動串接Google雲端硬碟，非常方便。
+大致介紹完畢囉！祝各位用得愉快～
+螢幕快照的快速鍵是Ctrl+F5，會存在下載資料夾
+其餘快速鍵幾乎都跟Windows差不多，可以參考這篇官方文章</description></item><item><title>建立 Cloud Identity 帳戶</title><link>https://blog.steveyi.net/posts/create-cloud-identity/</link><pubDate>Fri, 15 May 2020 20:35:11 +0000</pubDate><guid>https://blog.steveyi.net/posts/create-cloud-identity/</guid><description>首先，進入 Cloud Identity 申請頁面 點擊下一頁
+接著輸入公司名稱(可以隨意輸入)，員工數量(隨意選擇) 把它當作一個團隊
+選擇地點（設定好就不能修改了），其實作用不大
+設定目前的電子郵件地址（一些申請的郵件會寄到這裡）
+輸入要設定的網域（不得使用於其他 G Suite 服務）
+接著建立使用者
+機器人驗證
+當出現這個頁面時，代表註冊完成了！
+接著我們需要驗證網域
+請看下一篇文章 - Cloud Identity 驗證網域及建立帳號</description></item><item><title>刪除 G suite 組織</title><link>https://blog.steveyi.net/posts/delete-gsuite/</link><pubDate>Fri, 15 May 2020 18:17:25 +0000</pubDate><guid>https://blog.steveyi.net/posts/delete-gsuite/</guid><description>之前有跟大家分享註冊G Suite帳號的方式，最近想將 Cloud Identity免費版 的G Suite組織刪除
+由於完全沒有刪除過G Suite組織，所以稍微爬文了一下
+大致整理了一下刪除的方式
+重要提醒：
+刪除前，請先取消約期授權並刪除所有GCP專案
+刪除後，所有組織資料會被清除
+首先，進入G Suite控制台，點擊公司資料
+接著點擊帳戶管理
+接著點擊 刪除帳號
+接著會提示你，這個步驟無法復原
+打勾後點擊 刪除帳號
+接著帳號就刪除囉！</description></item><item><title>申請 G Suite 帳號</title><link>https://blog.steveyi.net/posts/register-gsuite/</link><pubDate>Wed, 01 Apr 2020 03:13:48 +0000</pubDate><guid>https://blog.steveyi.net/posts/register-gsuite/</guid><description>相信大家應該都有使用過Gmail
+今天要來介紹的 G Suite 是由Google推出的企業服務，不過一般使用者也是可以申請的！
+事前準備： 網域(非必要)
+信用卡/金融卡
+開始註冊： 1.首先，我們先打開G Suite的官網(https://gsuite.google.com)
+2.接著，點擊&amp;quot;開始免費試用&amp;quot;
+3.上方輸入公司名稱(或是你自己想一個名字)
+員工人數自行選擇(我是選1)
+國家/地區自行選擇(建議照實寫，防止後續無法付款 我選台灣)
+4.接著設定網域（如果沒有網域的話，請點擊第三個選項）
+5.接著確認網域，點擊下一頁
+6.接著就&amp;hellip;自己選擇囉！
+7.接著建立管理者帳號
+使用者名稱，密碼自定
+網域則為我們剛剛選擇的
+設定完成後，點擊&amp;quot;同意並繼續&amp;quot;！
+接著就可以進入管理員管理面板囉！
+我們下次再來跟大家分享網域驗證等相關設定唷！</description></item></channel></rss>

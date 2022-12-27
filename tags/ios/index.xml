@@ -1,448 +1,189 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>iOS on 小易的部落格</title><link>https://blog.steveyi.net/tags/ios/</link><description>小易的部落格 (iOS)</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Thu, 04 Mar 2021 00:35:46 +0800</lastBuildDate><atom:link href="https://blog.steveyi.net/tags/ios/index.xml" rel="self" type="application/rss+xml"/><item><title>使用 checkm8 Activation Lock 免費版，繞過 iOS 啟用鎖定</title><link>https://blog.steveyi.net/posts/checkm8-bypass/</link><pubDate>Thu, 04 Mar 2021 00:35:46 +0800</pubDate><guid>https://blog.steveyi.net/posts/checkm8-bypass/</guid><description>&lt;p>作者：蘿蔔&lt;/p>
-&lt;p>本文章同步發佈於「&lt;a href="https://iambjlu.blogspot.com">蘿蔔ㄉ部落格&lt;/a>」&lt;/p>
-&lt;p>[注意] 請勿用於商業或是非法用途。&lt;/p>
-&lt;p>這個軟體不是筆者所撰寫，如果使用上產生爭議，筆者恕不負責。&lt;br>
-繞過啟用鎖定需要使用到Mac電腦。&lt;/p>
-&lt;p>筆者使用的是自己的設備和自己的帳號做測試。(iPhone 7 Plus, iOS 14.3)&lt;br>
-有時候因為某些原因，將iPhone&lt;br>
-重置或更新時沒有關閉「尋找」，重新設定時會被要求Apple ID密碼來解除啟用鎖定，忘記Apple ID的密碼的話iPhone只能當作零件機或是一塊無用的磚頭。因此我們可能會需要繞過這道鎖定，至少還能當作遊戲機或是隨身聽使用。&lt;/p>
-&lt;p>筆者寫這篇文章時最新的iOS版本是iOS 14.4，官方標示支援的版本從12.4~14.4。&amp;lt;&lt;/p>
-&lt;p>官方標示支援的設備是：&lt;br>
-iPhone SE (第一代)&lt;br>
-iPhone 6&lt;br>
-iPhone 6S&lt;br>
-iPhone 7, 7 Plus&lt;br>
-iPhone 8, 8 Plus&lt;br>
-iPhone X&lt;br>
-iPad Air (1, 2)&lt;br>
-iPad Mini (2, 3, 4)&lt;br>
-iPad (5, 6, 7)&lt;br>
-iPad Pro (1, 2)&lt;br>
-iPad Pro (9.7 10.5 in.)&lt;/p>
-&lt;p>[注意] 部分功能在繞過啟用鎖定後會暫時失效 (包括但不限於下列)：&lt;br>
-行動通訊（無法撥打或接聽電話，也無法使用行動數據上網）&lt;br>
-iCloud雲端同步功能（也包含「&lt;a href="https://support.apple.com/zh-tw/HT204681">接續互通&lt;/a>」等需要帳號的功能）&lt;br>
-不建議安裝&lt;a href="https://support.apple.com/zh-tw/HT204204%5D">軟體更新&lt;/a>&lt;br>
-重開機（會跳出啟用鎖定頁面，要重新進行操作）&lt;br>
-如果繞過後想起密碼，可以重開機，在啟用鎖定的地方輸入密碼，以上限制會被立馬破除&lt;/p>
-&lt;p>可以使用的功能(包括但不限於下列)：&lt;br>
-Wi-Fi上網&lt;br>
-藍芽功能 (AirPods可用)&lt;br>
-iTunes Store&lt;br>
-App Store&lt;br>
-Apple Music訂閱&lt;br>
-Apple Music同步資料庫&lt;br>
-各種App等&lt;/p>
-&lt;p>首先需要使用checkra1n進行越獄，到&lt;a href="%E5%AE%98%E7%B6%B2">https://checkra.in/&lt;/a>&lt;/p>
-&lt;p>按下紅框標示的地方&lt;/p>
-&lt;p>&lt;a href="https://checkra.in/">&lt;img src="https://1.bp.blogspot.com/-Bob3QMbUbuY/YEBNtXjtAgI/AAAAAAABlpU/OQKz2eBxp7cp_cFGq79Gbtt7a_XRRe9dACPcBGAYYCw/w550-h669/%25E6%2588%25AA%25E5%259C%2596%2B2021-02-12%2B%25E4%25B8%258B%25E5%258D%25883.13.11.png" alt="">&lt;/a>&lt;/p>
-&lt;p>然後將越獄軟體checkra1n丟到Applications資料夾，就會在&lt;a href="https://support.apple.com/zh-tw/HT202635">啟動台&lt;/a>找到它，但是目前還沒要用到它。&lt;img src="https://1.bp.blogspot.com/-LrCIMA-WhWk/YEBOnzJKp0I/AAAAAAABlpc/6UhEyq3ayNkzx2i38u-1IBDkhAX2K75wgCPcBGAYYCw/s772/%25E6%2588%25AA%25E5%259C%2596%2B2021-02-12%2B%25E4%25B8%258B%25E5%258D%25883.15.00.png" alt="">&lt;/p>
-&lt;p>&lt;img src="https://1.bp.blogspot.com/-LrCIMA-WhWk/YEBOnzJKp0I/AAAAAAABlpc/6UhEyq3ayNkzx2i38u-1IBDkhAX2K75wgCPcBGAYYCw/w517-h357/%25E6%2588%25AA%25E5%259C%2596%2B2021-02-12%2B%25E4%25B8%258B%25E5%258D%25883.15.00.png" alt="">&lt;/p>
-&lt;p>接下來請到 checkm8.info 的&lt;a href="https://checkm8.info/free-bypass-activation-lock-tool">官網&lt;/a>按下橘色的「Download Free Version」下載&lt;br>
-軟體，照著步驟安裝完就可以關掉它，打開checkra1n進行越獄。&lt;/p>
-&lt;p>如果不會越獄的話，網路上教學一大堆，在這裡就先不贅述。&lt;/p>
-&lt;h2 id="-裝置越獄完成後再進行以下操作-" >[ 裝置越獄完成後再進行以下操作 ]
-&lt;span>
-&lt;a href="#-%e8%a3%9d%e7%bd%ae%e8%b6%8a%e7%8d%84%e5%ae%8c%e6%88%90%e5%be%8c%e5%86%8d%e9%80%b2%e8%a1%8c%e4%bb%a5%e4%b8%8b%e6%93%8d%e4%bd%9c-">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h2>&lt;p>請到&lt;a href="https://support.apple.com/zh-tw/HT202635">啟動台&lt;/a>，打開剛剛裝好的 checkm8.info Software [FREE VERSION]並連接越獄完的裝置，停留在啟用鎖定要輸入密碼的畫面，按下Start就可以看到神奇的事情發生了，進行一些基本設定後就可以使用設備啦。&lt;/p>
-&lt;p>&lt;img src="https://1.bp.blogspot.com/-OygRsmhKE0s/YEBThZjmR5I/AAAAAAABlp8/tTGh-k65exsxrzj455QeBQbyz6B6NUAuACNcBGAsYHQ/s569/%25E6%2588%25AA%25E5%259C%2596%2B2021-02-12%2B%25E4%25B8%258B%25E5%258D%25883.16.24.png" alt="">&lt;/p>
-&lt;p>&lt;img src="https://1.bp.blogspot.com/-OygRsmhKE0s/YEBThZjmR5I/AAAAAAABlp8/tTGh-k65exsxrzj455QeBQbyz6B6NUAuACNcBGAsYHQ/w516-h426/%25E6%2588%25AA%25E5%259C%2596%2B2021-02-12%2B%25E4%25B8%258B%25E5%258D%25883.16.24.png" alt="">&lt;/p>
-&lt;p>目前有測試幾個不能用的功能會像以下圖片所示：&lt;/p>
-&lt;p>雖然標示4G但實際上無法上網(用量875KB是在繞過啟用鎖定前的基本設定所存取的)&lt;/p>
-&lt;p>&lt;img src="https://1.bp.blogspot.com/-wqzLc9wLBdg/YEBSxHkIP2I/AAAAAAABlps/kB1QNgk-0lUZGZJExlX99bzyA9AOavevgCPcBGAYYCw/s2048/IMG_140AD17C1604-1.jpeg" alt="">&lt;/p>
-&lt;p>&lt;img src="https://1.bp.blogspot.com/-wqzLc9wLBdg/YEBSxHkIP2I/AAAAAAABlps/kB1QNgk-0lUZGZJExlX99bzyA9AOavevgCPcBGAYYCw/w360-h640/IMG_140AD17C1604-1.jpeg" alt="">&lt;/p>
-&lt;p>無法登入iCloud&lt;/p>
-&lt;p>&lt;img src="https://1.bp.blogspot.com/-DmhSsVxHjLo/YEBTeGZk2zI/AAAAAAABlp0/OpQciqEUvjQQA87zDhnRKw9Ixtiy7FyjQCNcBGAsYHQ/s1120/%25E6%2588%25AA%25E5%259C%2596%2B2021-02-12%2B%25E4%25B8%258B%25E5%258D%25884.37.17.png" alt="">&lt;/p>
-&lt;p>&lt;img src="https://1.bp.blogspot.com/-DmhSsVxHjLo/YEBTeGZk2zI/AAAAAAABlp0/OpQciqEUvjQQA87zDhnRKw9Ixtiy7FyjQCNcBGAsYHQ/w387-h640/%25E6%2588%25AA%25E5%259C%2596%2B2021-02-12%2B%25E4%25B8%258B%25E5%258D%25884.37.17.png" alt="">&lt;/p>
-&lt;p>無法撥出電話（電話撥入會直接轉到語音信箱）&lt;/div>&lt;/p>
-&lt;p>&lt;img src="https://1.bp.blogspot.com/-urhTRb61qj0/YEBTeOCOX4I/AAAAAAABlp4/IXUixciOGbAVE9jKIDC9XZ9zrorfmHa-wCNcBGAsYHQ/s2048/IMG_C0C2C5D6F028-1.jpeg" alt="">&lt;/p>
-&lt;p>&lt;img src="https://1.bp.blogspot.com/-urhTRb61qj0/YEBTeOCOX4I/AAAAAAABlp4/IXUixciOGbAVE9jKIDC9XZ9zrorfmHa-wCNcBGAsYHQ/w360-h640/IMG_C0C2C5D6F028-1.jpeg" alt="">&lt;/p>
-&lt;p>本文章同步發佈於「&lt;a href="https://iambjlu.blogspot.com">蘿蔔ㄉ部落格&lt;/a>」部落格&lt;/p>
-&lt;pre tabindex="0">&lt;code> &amp;lt;script&amp;gt;
-window.fbAsyncInit = function() {
-FB.init({
-xfbml : true,
-version : 'v9.0'
-});
-};
-(function(d, s, id) {
-var js, fjs = d.getElementsByTagName(s)[0];
-if (d.getElementById(id)) return;
-js = d.createElement(s); js.id = id;
-js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));&amp;lt;/script&amp;gt;
-&amp;lt;!--Your Chat Plugin code--&amp;gt;
-&amp;lt;div attribution=&amp;quot;install_email&amp;quot; class=&amp;quot;fb-customerchat&amp;quot; page_id=&amp;quot;105835291511389&amp;quot;&amp;gt;
-&amp;lt;/div&amp;gt;
-&lt;/code>&lt;/pre></description></item><item><title>利用 redeb 來備份已安裝插件的 deb 檔</title><link>https://blog.steveyi.net/posts/use-redeb-to-backup-jb-tweaks/</link><pubDate>Sat, 28 Nov 2020 04:39:14 +0000</pubDate><guid>https://blog.steveyi.net/posts/use-redeb-to-backup-jb-tweaks/</guid><description>&lt;p>就在很久之前，筆者就有遇過插件在其他軟體源消失導致無法安裝想要的插件。但是因為在其他裝置有安裝該插件而能把該插件deb檔備份出來並安裝在我想要安裝該插件的裝置裡，在此分享給有想要備份插件的人！&lt;/p>
-&lt;ul>
-&lt;li>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112105432588.png" alt="">&lt;/li>
-&lt;/ul>
-&lt;p>redeb與備份出來的deb檔（以打包Zebra為例）&lt;/p>
-&lt;p>需要利用到的插件/程式：&lt;br>
-Redeb - deb重新打包備份插件（軟體源：&lt;a href="https://wiety.github.io/cydia/">https://wiety.github.io/cydia/&lt;/a> ）&lt;br>
-OpenSSH - 讓電腦可以ssh進去裝置裡並下指令&lt;br>
-FileZilla - SFTP存取裝置 (Windows部分也可用WinSCP)&lt;br>
-終端機 - 下達ssh指令（Windows使用者請用PuTTY)&lt;/p>
-&lt;h2 id="前置作業" >前置作業：
-&lt;span>
-&lt;a href="#%e5%89%8d%e7%bd%ae%e4%bd%9c%e6%a5%ad">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h2>&lt;p>首先先在插件管理器（這邊以Zebra為例）上加入此軟體源： &lt;a href="https://wiety.github.io/cydia/">https://wiety.github.io/cydia/&lt;/a>&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112106035462.png" alt="">&lt;/p>
-&lt;p>往下滑進去&amp;quot;Wiety&amp;rsquo;s beta repository&amp;quot;並找到redeb, 安裝它&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112106052890.png" alt="">&lt;/p>
-&lt;p>安裝OpenSSH (有安裝的可以跳過此步驟）&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112106070556.png" alt="">&lt;/p>
-&lt;p>安裝完這兩個插件後就可以移到電腦了&lt;/p>
-&lt;h2 id="電腦端的操作" >電腦端的操作：
-&lt;span>
-&lt;a href="#%e9%9b%bb%e8%85%a6%e7%ab%af%e7%9a%84%e6%93%8d%e4%bd%9c">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h2>&lt;p>這邊要先注意一下，行動裝置與電腦皆要連接在同一個區網下，不然會連不上ssh!&lt;/p>
-&lt;p>先在要做ssh連線的裝置端確認內網IP位置（設定-&amp;gt;Wi-Fi-&amp;gt;在連線的Wi-Fi上按 &amp;ldquo;i&amp;quot;即可查詢）&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112802475870.jpeg" alt="">&lt;/p>
-&lt;p>筆者有自己製作簡易捷徑去查詢內網IP.&lt;/p>
-&lt;p>在電腦上打開終端機（Windows使用者請安裝PuTTY, 筆者這邊使用macOS)&lt;br>
-在終端機打上 ssh &lt;a href="mailto:root@192.168.31.46">root@192.168.31.46&lt;/a> (紅色部分更換為自己的內網IP)&lt;br>
-打上要連線裝置的ssh密碼 (預設密碼是alpine. 這邊建議如果還在用預設密碼的，請更改成自訂的密碼！）&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112802562966.png" alt="">&lt;/p>
-&lt;p>在終端機上打入redeb, 會跳出圖左的訊息，這是因為我們沒預先指定好插件ID, 這邊鍵入&amp;quot;y&amp;rdquo;. redeb會列出所有插件的ID（圖右）&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112803005671.png" alt="">&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112803010555.png" alt="">&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>這邊就是鍵入欲備份的插件ID, 這邊以Zebra為例，插件ID &amp;ldquo;206&amp;rdquo;&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112803044464.png" alt="">&lt;/p>
-&lt;p>執行完成後，終端機會長這樣：&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112803075785.png" alt="">&lt;/p>
-&lt;p>完成後，這邊就可以把剛打包好的deb檔從裝置中提起出來。接下來打開FileZilla並一樣ssh連線至剛剛做完deb打包的裝置。&lt;/p>
-&lt;p>在Filza中，按左上方的按鈕會打開該畫面，新增一個站台並把伺服器型態更改成SFTP. 最後把主機名稱（欲連線裝置的IP）, 使用者 (root) 跟密碼打上去並按下連線&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112803123820.png" alt="">&lt;/p>
-&lt;p>連線完成後，備份完成的deb檔位址在：&lt;/p>
-&lt;pre tabindex="0">&lt;code>/private/var/mobile/Documents/Redeb/debs
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020112803211495.png" alt="">&lt;/p>
-&lt;p>在資料夾裡面的檔案就是剛剛備份的deb檔，這樣就完工了！&lt;/p></description></item><item><title>iOS 和 macaOS 上超好用的內建 Spotlight 搜尋小技巧</title><link>https://blog.steveyi.net/posts/apple-spotlight/</link><pubDate>Sun, 18 Oct 2020 09:02:50 +0000</pubDate><guid>https://blog.steveyi.net/posts/apple-spotlight/</guid><description>&lt;p>不少人都買了 iPhone, iPad, iPod touch 或 Mac，卻不知道內建的 Spotlight 有許多好用的功能，讓我們來看看吧！&lt;/p>
-&lt;blockquote>
-&lt;p>Spotlight的使用方法(早期的版本可能不太一樣)：&lt;br>
-iOS/iPadOS是在主畫面往下拉、macOS則是按下選單列(右上角)的放大鏡，或是按下「command」+「空白鍵」&lt;/p>
-&lt;/blockquote>
-&lt;p>註：Spotlight 搜尋跟 Siri 的功能都是逐版進步的，所以有些比較舊的版本可能就沒有某些功能了，筆者以 iOS/iPadOS 14 和 macOS Catalina 作為示範。&lt;/p>
-&lt;p>1.找裝置內的資料&lt;br>
-舉凡簡訊、檔案、備忘錄、聯絡人、聯絡人的電話、地點、郵件、App什麼的都有！甚至還會可以搜尋網路上的東西！&lt;/p>
-&lt;p>舉例來說，筆者把 OPENPOINT 的 App 放在「眼不見為淨」資料夾裡，也會寫出來，另外也會看到一些相關的東西&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020101805554594-scaled.jpeg" alt="">&lt;/p>
-&lt;p>如果尋找的是聯絡資訊裡的電話號碼的話也是可以的&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020101806020278.png" alt="">&lt;/p>
-&lt;p>2.換算單位&lt;br>
-各種單位幾乎都可以換算哦！&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020101808281619.png" alt="">&lt;/p>
-&lt;p>還可以指定單位&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020101808285965.png" alt="">&lt;/p>
-&lt;p>也可以換算貨幣&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020101808303857.png" alt="">&lt;/p>
-&lt;p>3.iPad沒有內建計算機，但又要算數字？&lt;br>
-沒關係，用Spotight就可以算了哦！&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020101808380585.jpeg" alt="">&lt;/p>
-&lt;p>4.字典&lt;br>
-看到哪個很困難的字嗎？搜尋就會有結果了！&lt;br>
-如果維基百科有資料也會出現&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020101808585213.jpeg" alt="">&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020101808585871.jpeg" alt="">&lt;/p>
-&lt;p>5.電影、音樂等&lt;br>
-連結到iTunes Store、Apple Music或Apple TV+，如果有訂閱的話超方便的(雖然筆者沒訂閱啦&amp;hellip;)&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020101808474679.jpg" alt="">&lt;/p>
-&lt;p>Spotlight 搜尋功能非常多，筆者也沒用完全部的功能過 XD&lt;br>
-大家都來玩玩看吧&lt;/p></description></item><item><title>幫 Spotify 加上實時歌詞 (iOS/iPadOS)</title><link>https://blog.steveyi.net/posts/no-premium-spotify-dynamic-lyrics/</link><pubDate>Sat, 11 Jul 2020 07:31:26 +0000</pubDate><guid>https://blog.steveyi.net/posts/no-premium-spotify-dynamic-lyrics/</guid><description>&lt;p>上次有一篇介紹&lt;a href="https://blog.steveyi.net/free-streaming-music-compare/" title="[2020最新] 各大串流平台免費會員比較">各家串流平台的免費會員比較&lt;/a>，各位可以發現實時歌詞很多家平台都有&lt;br>
-但 Spotify 根據筆者測試只有 Premium 用戶能用，稍嫌可惜&lt;br>
-這時想要聽著 Spotify 的免費音樂，但又覺得沒歌詞不能一起唱很麻煩嗎&lt;br>
-這時候照這篇文章做就可以解決這個問題囉&lt;/p>
-&lt;p>這篇文章適用 iOS/iPadOS 用戶，Android 用戶在 &lt;a href="https://blog.steveyi.net/no-premium-spotify-dynamic-lyrics/">另外一篇&lt;/a> 唷&lt;/p>
-&lt;h2 id="開始吧" >開始吧
-&lt;span>
-&lt;a href="#%e9%96%8b%e5%a7%8b%e5%90%a7">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h2>&lt;p>首先請先下載&lt;a href="https://apps.apple.com/tw/app/musixmatch/id448278467">Musixmatch&lt;/a>&lt;br>
-下載完成後請打開並註冊或登入Musixmatch的帳號&lt;br>
-如果有詢問是否加入Musixmatch Premium會員，可以按左上角「ㄨ」關掉&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071106591523.png" alt="">&lt;/p>
-&lt;p>完成後請授權Spotify，按下綠色的按鈕&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071107003597.png" alt="">&lt;/p>
-&lt;p>接下來滑到最下面按綠色的「同意」&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071107012072.png" alt="">&lt;/p>
-&lt;p>這時候可以隨便播一首歌&lt;/p>
-&lt;p>&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020071107042389.png" alt="">&lt;/p>
-&lt;p>然後回到Musixmatch，轉到「音樂」頁面或是「首頁」會看到正在播放的音樂&lt;br>
-按下去會展開&lt;/p>
-&lt;p>如果有支援實時歌詞，會跟著音樂跑，如果只支援靜態歌詞，則可能需要自己用手滑，最怕是有些音樂沒支援歌詞&lt;br>
-左下角也有翻譯功能喔（如果有人翻譯的話）&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071107271010.png" alt="">&lt;/p>
-&lt;p>如果使用iPad還可以搭配SpiltView邊看歌詞邊放專輯封面展示&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071215492977.png" alt="">&lt;/p>
-&lt;p>或是使用iPad的Spilt View邊看歌詞邊做其他事（例如：瀏覽網頁）&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020071215540769.png" alt="">&lt;/p>
-&lt;p>也可以在桌面左邊新增小工具&lt;/p>
-&lt;p>&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020071107274160.jpeg" alt="IMG_1759.jpeg">&lt;/p>
-&lt;p>桌面上就會有歌詞囉&lt;/p>
-&lt;p>&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020071107275851.gif" alt="IMG_1760.gif">&lt;/p></description></item><item><title>[2020最新] 各大串流平台免費會員比較</title><link>https://blog.steveyi.net/posts/free-streaming-music-compare/</link><pubDate>Sun, 05 Jul 2020 12:51:26 +0000</pubDate><guid>https://blog.steveyi.net/posts/free-streaming-music-compare/</guid><description>&lt;p>蘿蔔這幾年來一直在尋找免費好用的串流音樂平台，也因此幾乎所有台灣常見的平台都有用過，所以接下來一一為大家介紹&lt;/p>
-&lt;p>首先我先說一下，蘿蔔是台灣人，所以文章介紹的有些平台不見得能在其他國家或地區使用；或是有些平台改版了，這篇文章可能會來不及更新，請見諒&lt;/p>
-&lt;p>再來要說的是，我們不鼓勵使用盜版或破解版，首先是音樂平台和音樂創作者沒辦法收到錢（例如串流音樂平台上面廣告贊助的費用），而好音樂就沒辦法受到鼓勵，裝置也可能被病毒或是間諜程式入侵，而且還可能會有法律責任產生&lt;/p>
-&lt;p>說完了那我們開始介紹吧&lt;/p>
-&lt;h2 id="spotify" >Spotify
-&lt;span>
-&lt;a href="#spotify">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h2>&lt;p>一個老牌的串流音樂平台，整體以播放清單為主，有Spotify Connect可以無縫更換聆聽裝置，最近剛陸續開放歌詞功能，不過似乎只有Premium能用。&lt;br>
-免費會員在平板電腦和電腦App、電腦版網頁可以隨選即播，有穿插廣告，音質不能設為「最高」。&lt;br>
-如果在手機和iPod touch上則是限隨機播放，每小時只能跳過六首歌（部分指定的個人化播放清單可隨選即播，不在此限）。&lt;br>
-有趣的是筆者的大螢幕手機被視為平板，賺到隨選即播🤣&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070809182757.png" alt="">&lt;/p>
-&lt;h2 id="kkbox" >KKBOX
-&lt;span>
-&lt;a href="#kkbox">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h2>&lt;p>串流音樂服務的元老，比Spotify還早推出，中文曲庫比Spotify多，有動態歌詞。&lt;br>
-會員註冊完會有三天體驗會員幾乎全功能都能用，體驗會員過期後會成為一般會員，但每個裝置能登入的體驗會員帳號次數有限。&lt;br>
-一般會員音質不能設為最高(320kbps)，每天會有一則廣告，看完後可以免費聽20首歌曲，用完後每首歌只能預覽30秒。&lt;br>
-網路上有時會不定期發布體驗序號。&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070504425055.jpg" alt="">&lt;/p>
-&lt;h2 id="mymusic" >MyMusic
-&lt;span>
-&lt;a href="#mymusic">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h2>&lt;p>會員註冊完會有7天體驗會員全功能都能用，體驗會員過期後會成為一般會員。&lt;br>
-一般會員音質只能設為一般(128kbps)，只有指定的幾張歌單可以完整聽，其他歌曲都只能預覽30秒。網路上有時會不定期發布體驗序號。&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070504433779.jpg" alt="">&lt;/p>
-&lt;h2 id="friday-音樂" >Friday 音樂
-&lt;span>
-&lt;a href="#friday-%e9%9f%b3%e6%a8%82">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h2>&lt;p>無廣告、有動態歌詞&lt;br>
-會員註冊完會有7天體驗會員全功能都能用，體驗會員過期後會成為一般會員。&lt;br>
-一般會員音質只能設為一般(128kbps)，每天只能播放五首歌，用完後都只能預覽30秒。&lt;br>
-網路上有時會不定期發布體驗序號。&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070505410044.jpeg" alt="">&lt;/p>
-&lt;h2 id="apple-music" >Apple Music
-&lt;span>
-&lt;a href="#apple-music">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h2>&lt;p>跟蘋果生態系整合度非常高，有很漂亮的動態歌詞&lt;br>
-（需升級至iOS/iPad OS 13以上，iOS 10以上只有靜態歌詞）&lt;br>
-需要先付錢才能送三個月試用，Android版App帶給我的感受不是很順手；Android版使用上也常常遇到Bug，但如果使用iPhone的話可以直接在Apple Watch上面呼叫Siri點歌確實很方便，網路上偶爾也會發布歌手或電台贊助的免費體驗序號。&lt;br>
-官方說明的系統需求是iOS 8.4/Android 5.0/iTunes 12.2以上&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020072711523343.png" alt="">&lt;/p>
-&lt;h2 id="網易雲音樂" >網易雲音樂
-&lt;span>
-&lt;a href="#%e7%b6%b2%e6%98%93%e9%9b%b2%e9%9f%b3%e6%a8%82">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h2>&lt;p>如果需要全曲庫聽到飽要用翻牆軟體（如：穿梭VPN），沒翻牆的話會反灰如圖，動態歌詞，隨選即播，無穿插廣告，但大部分歌曲音質只能設128Kbps，有少部分歌曲可以下載，也有一些獨家音樂，英文歌偏少。&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070504432158.jpg" alt="">&lt;/p>
-&lt;h2 id="蝦米音樂" >蝦米音樂
-&lt;span>
-&lt;a href="#%e8%9d%a6%e7%b1%b3%e9%9f%b3%e6%a8%82">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h2>&lt;p>常常簽到可以領體驗會員，但曲庫筆者感覺上比網易雲跟QQ音樂少，有些歌要用翻牆軟體（如：穿梭VPN等），有動態歌詞，部分歌曲可以下載，英文歌偏少。&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070512114857.png" alt="">&lt;/p>
-&lt;h2 id="qq音樂" >QQ音樂
-&lt;span>
-&lt;a href="#qq%e9%9f%b3%e6%a8%82">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h2>&lt;p>曲庫幾乎都要用翻牆軟體（如：穿梭VPN等），有動態歌詞（逐字），英文歌偏少。&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070512124991.png" alt="">&lt;/p>
-&lt;h2 id="mixerbox-3" >MixerBox 3
-&lt;span>
-&lt;a href="#mixerbox-3">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h2>&lt;p>基於Youtube做成的MV播放器，但iOS每次離開App就要從控制中心按一次播放；Android則會有一個小視窗懸浮著，略為不便，而且因為是MV，所以有些穿插對話的MV會影響聽歌體驗。有些人會開台一起聽歌，而探索頁面常常可以找到適合自己的音樂，音樂鬧鐘功能可以讓起床變有趣&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070512135174.png" alt="">&lt;/p>
-&lt;h2 id="youtube-music" >Youtube Music
-&lt;span>
-&lt;a href="#youtube-music">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h2>&lt;p>App不能背景播放，雖然有其他的方法（&lt;a href="https://blog.steveyi.net/youtube-background-playing-ios/" title="無需訂閱Youtube Music Premium也能讓iOS/iPadOS的裝置享有背景播放的功能(Youtube也適用哦！)">iPadOS和iOS&lt;/a>/&lt;a href="https://blog.steveyi.net/youtube-background-playing-android/" title="無需訂閱Youtube Music Premium也能讓Android的裝置享有背景播放的功能(Youtube也適用哦！)">Android&lt;/a>），但不管什麼方法每播完一首歌就跳廣告實在很煩，而且廣告的品質也不及Spotify。&lt;br>
-而iOS版的App給我的體驗很差（用起來的Bug比Android版的Apple Music還多，比如說暫停一下，後台就被殺了又要重新載入一次）。&lt;br>
-有設計歌詞的區塊，但沒幾首歌支援的。&lt;br>
-不含Youtube的話曲庫不算多，但配合Youtube上的影片後，曲庫可說是非常龐大；但也因此搜尋介面很亂，有專輯版音樂，也有MV、第三方上傳的音樂影片（版權灰色地帶，時常被下架），也有播放清單。&lt;br>
-另外令人匪夷所思的是系統語言是中文的情況下，有些中文歌都只寫英文歌名，非常奇葩&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070512340980.png" alt="">&lt;/p>
-&lt;p>以上就是蘿蔔介紹台灣比較常見的串流音樂平台，有些版權比較屬於灰色地帶的就先不介紹了，畢竟「我是小易」的編輯們也無法保證其合法性&lt;/p>
-&lt;p>看完這些介紹，各位有打算使用哪個串流音樂平台了嗎？&lt;/p></description></item><item><title>無需訂閱 Youtube Music Premium 也能讓 iOS/iPadOS 的裝置享有背景播放的功能 (Youtube 也適用哦！)</title><link>https://blog.steveyi.net/posts/youtube-background-ios/</link><pubDate>Fri, 19 Jun 2020 14:39:47 +0000</pubDate><guid>https://blog.steveyi.net/posts/youtube-background-ios/</guid><description>&lt;p>此處主要由iPad作為示範，iPhone也可以用一樣的方法唷&lt;br>
-Android也可以用類似的方法，之後會再發一篇教學，敬請關注「我是小易」後續的文章吧！&lt;/p>
-&lt;p>後續更新：&lt;a href="https://blog.steveyi.net/youtube-background-playing-android" title="https://blog.steveyi.net/youtube-background-playing-android">Android版教學在此&lt;/a>&lt;/p>
-&lt;blockquote>
-&lt;p>筆者最近一直在找好用的免費串流音樂服務，發現其實電腦上的Youtube Music App(其實就是嵌入網頁拉XD)還不錯用，可惜行動版App跟網頁就都不能背景播放了(訂閱Premium的話就是App版可以，但網頁還是不行唷)&lt;/p>
-&lt;p>後來筆者發現了一個iOS 13/iPadOS 13的好功能&lt;br>
-(比較舊的iOS也有，但功能不是那麼完善，各位也可以試試看)&lt;/p>
-&lt;/blockquote>
-&lt;h3 id="讓我們開始吧" >讓我們開始吧
-&lt;span>
-&lt;a href="#%e8%ae%93%e6%88%91%e5%80%91%e9%96%8b%e5%a7%8b%e5%90%a7">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h3>&lt;p>首先請先用內建的Safari瀏覽器打開&lt;a href="http://music.youtube.com">Youtube Music首頁&lt;/a>(請按住選擇在新標籤頁打開)，別急著播放音樂，按下左上方的AA，然後按下「切換為電腦版網頁」&lt;br>
-(iOS 12或更早版本的切換電腦版按鈕在動作選單內，也就是重新整理按鈕旁邊那個按鈕)&lt;/p>
-&lt;p>註：這邊不建議使用第三方瀏覽器的原因是有些第三方瀏覽器功能不如內建的穩定，記憶體有時會被系統回收凍結，導致音樂無緣無故暫停&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020061914004694.png" alt="">&lt;/p>
-&lt;p>iOS 13/iPadOS 13以上的電腦版網頁切換開關在左上方的「AA」內&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020061916292435.jpeg" alt="">&lt;/p>
-&lt;p>iOS 12或更早版本的電腦版網頁切換開關在動作選單內&lt;/p>
-&lt;p>接下來網頁會重新載入，此時再按一次AA，點選網站設定，把開關打開，這樣以後就會自動以電腦版網頁載入了(iOS 12或更早版本不支援此操作)&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020061914034643.jpeg" alt="">&lt;/p>
-&lt;p>接下來可以回到桌面、鎖定螢幕、或是切換到其他App，您會發現音樂繼續播放，且控制中心和通知中心可以控制播放、暫停及快轉&lt;/p>
-&lt;p>&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020061914571832.jpeg" alt="">&lt;/p>
-&lt;p>如果控制中心和通知中心沒出現控制介面或是控制介面標題只寫YouTube Music，而希望寫出歌名的話，就回到網頁多按幾下播放/暫停按鈕就好了&lt;/p>
-&lt;p>回到網頁也可以控制上一首和下一首、切換歌曲等電腦版可以做的操作&lt;/p>
-&lt;p>&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020061914134138.png" alt="">&lt;/p>
-&lt;p>到這邊就完成拉&lt;br>
-以後要聽音樂直接在Safari上面打開Youtube Music就可以拉～&lt;/p>
-&lt;p>Youtube也要允許背景播放的話也是一樣的方法唷！&lt;/p>
-&lt;p>筆者也有在iPhone上測試過，可以用～&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020061914370286.jpeg" alt="">&lt;/p>
-&lt;p>iPhone也可以背景播放唷&lt;/p>
-&lt;p>&lt;img src="https://blog.steveyi.net/wp-content/uploads/media/blog/2020061914373657.jpeg" alt="">&lt;/p>
-&lt;p>iPhone的Youtube Music網頁也能跟電腦網頁有幾乎一樣的功能囉&lt;/p>
-&lt;p>筆者試了一下，年代有點久遠的iOS 10也能用哦&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020062707454832.png" alt="">&lt;/p></description></item><item><title>讓手機音質提升的小技巧</title><link>https://blog.steveyi.net/posts/yin-zhi-ti-sheng/</link><pubDate>Mon, 01 Jun 2020 03:55:45 +0000</pubDate><guid>https://blog.steveyi.net/posts/yin-zhi-ti-sheng/</guid><description>&lt;p>註：Apple Lightning裝置以及大多數的USB-C裝置(像是Windows電腦等)也適用這篇哦&lt;/p>
-&lt;p>在你認為兩百元有找的耳機音質不好的同時，你是否忽略了哪個重要的細節呢？&lt;br>
-雖然也許手機廠牌跟耳機廠牌一致可以得到更好的優化體驗，但不可否認手機內置的DAC(數位音訊轉化為類比訊號提供給耳機的一個重要元件)不一定可以媲美外置的DAC，也許不是耳機太差，而是DAC推不動或是搭配起來不合適&lt;/p>
-&lt;p>但人們會問：外置的DAC不是都很大一台嗎?&lt;br>
-沒錯的，專業等級的DAC確實有點龐大，而且價格偏高&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020060102552564.png" alt="">&lt;/p>
-&lt;p>Google隨便搜尋都會看到這種龐大的DAC&lt;/p>
-&lt;p>但是筆者是一個講究CP值的人，這種東西音質再好基本上我是不會買的(除非我哪天發大財)&lt;br>
-就在我為了兩百塊有找的3.5mm的耳機音質太差傷腦筋時，忽然想起抽屜裡那完全沒用過的Google USB-C 轉 3.5 毫米轉接頭&lt;br>
-(因為筆者之前使用的Pixel 2尾插有問題只能充電但送不回美國)&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020060103063749.jpg" alt="">&lt;/p>
-&lt;p>轉接頭插上去後我明顯的感受到了無力的低音瞬間變得有力&lt;br>
-之後還拿雜牌的轉接頭來試聽，音質慘不忍睹，比手機的3.5mm耳機口還慘&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020060103152993-scaled.jpg" alt="">&lt;/p>
-&lt;p>如果搭配手機內建的音質選項，甚至是等化器都調整成自己偏好的，效果會更好&lt;/p>
-&lt;p>(但筆者不推薦HTC手機用戶使用「HTC BoomSound配備杜比音效」在耳機上，整個聲音變得不像原來的樣子，沒開的音質反而聽起來比打開好)&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020060103253098.jpg" alt="">&lt;/p>
-&lt;p>現在來說說為什麼Google的轉接頭有這樣一個神奇的效果，而雜牌轉接頭聽起來如此慘不忍睹了。&lt;/p>
-&lt;p>原因在於Pixel 2016和Pixel 3a以外的Google手機和HTC後來的手機，以及2016以後的iPhone一樣，沒有內置耳機的DAC，他們將DAC移植到了轉接頭（等於是採用外置音效卡的設計，所以Google的轉接頭一定自帶DAC）&lt;/p>
-&lt;p>雜牌轉接頭雖然可能有DAC，但用料可能不是這麼扎實，聽起來刺耳和低音無力是肯定的，只能說是一分錢一分貨。&lt;/p>
-&lt;p>要如何確保自己買的轉接頭支援DAC呢？&lt;br>
-(Apple Lightning接頭的裝置就不用擔心了，一定會有的)&lt;/p>
-&lt;p>判別USB-C轉接頭是否有DAC最好的方法就是購買時詢問店員或是賣家，是否支援Pixel 2手機或HTC U11手機&lt;/p>
-&lt;p>至於品牌的部分，市面上有很多(像是Apple、Google、HTC、紫米、moshi等)，各位可以自己去探索一下自己喜歡的聲音效果哦～&lt;/p>
-&lt;p>後來我去測試了一下，電腦的部分，Windows 10(PC和Mac)可以用，但我手上的轉接頭插到macOS 10.15.5的Mac是沒有反應的(不確定是不是因為不是蘋果的)，供大家參考&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020060300231492.png" alt="">&lt;/p>
-&lt;p>電腦的部分，Windows 10(PC和Mac)可以用&lt;/p>
-&lt;p>筆者對這方面有研究過，但還未達專家等級，如果有誤懇請讀者見諒&lt;/p></description></item><item><title>32 位元 iOS 裝置免電腦免 SHSH 降級到 8.4.1</title><link>https://blog.steveyi.net/posts/backtoios841/</link><pubDate>Mon, 30 Dec 2019 13:26:02 +0000</pubDate><guid>https://blog.steveyi.net/posts/backtoios841/</guid><description>&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/9564cd1098c2183afddb9be15db99ddf781db6b1-770x439_c.jpeg" alt="">&lt;/p>
-&lt;blockquote>
-&lt;p>有時會因爲蘋果的部分問題，會在各種環節出狀況，如果有任何錯誤請改天再試&lt;/p>
-&lt;p>蘋果的漏洞不是非常穩定，有一天我試了三次都不能用，改天再弄，一次就成功了，這有點碰運氣&lt;/p>
-&lt;p>iOS 裝置如果很慢，降級會比較流暢&lt;/p>
-&lt;p>(A5 裝置非常有感，A6、A6X 裝置則差異不大但仍有比較快一點點)&lt;/p>
-&lt;p>雖然還是偶爾會 LAG 一下但是至少改善滿多的&lt;/p>
-&lt;p>例如轉場動畫不會像原本那麼卡頓&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>&lt;strong>適用裝置：&lt;/strong>&lt;/li>
-&lt;li>iOS 9.0～10.3.3，有越獄的以下列出裝置&lt;/li>
-&lt;li>有附各版本越獄教學&lt;/li>
-&lt;li>iPhone 4S&lt;/li>
-&lt;li>iPhone 5&lt;/li>
-&lt;li>iPod Touch 5&lt;/li>
-&lt;li>iPad 2&lt;/li>
-&lt;li>iPad 3&lt;/li>
-&lt;li>iPad 4&lt;/li>
-&lt;li>iPad Mini 1代&lt;/li>
-&lt;li>[iPhone 5C不適用]&lt;/li>
-&lt;/ul>
-&lt;p>*如有發生問題本人恕不負責*&lt;/p>
-&lt;p>※其實我用到現在都沒事，上面那句希望只是備而不用&lt;/p>
-&lt;p>*請先做好iTunes備份*&lt;/p>
-&lt;p>*中途若失敗或反悔可以使用DFU回到原版本或再試一次*&lt;/p>
-&lt;p>*請先清除所有內容和設定後再進行！*&lt;/p>
-&lt;p>講了這麼多，來開工吧&lt;/p>
-&lt;p>——————分隔線——————&lt;/p>
-&lt;ul>
-&lt;li>(如果已經越獄，請跳過此段)&lt;/li>
-&lt;li>越獄方法整理[來自&lt;a href="https://mrmad.com.tw">瘋先生網站&lt;/a>]&lt;/li>
-&lt;li>&lt;a href="https://www.google.com/url?q=https://mrmad.com.tw/h3lix&amp;amp;sa=D&amp;amp;ust=1577715419051000">10.X～10.3.3&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://www.google.com/url?q=https://mrmad.com.tw/phoenix-jailbreakable&amp;amp;sa=D&amp;amp;ust=1577715419052000">9.3.5&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://www.google.com/url?q=https://mrmad.com.tw/tihmstar-jailbreakme-4-0&amp;amp;sa=D&amp;amp;ust=1577715419052000">9.1~9.3.4&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://www.google.com/url?q=https://mrmad.com.tw/ios9-0-9-1-teachingios9-perfect-jailbreak-jailbreak-assault-pangu-jailbreak-tool-gives-you-the-perfect-escape-update-version-v1-3-1&amp;amp;sa=D&amp;amp;ust=1577715419052000">9.0.X&lt;/a>&lt;/li>
-&lt;li>降級完的8.4.1在文章底部&lt;/li>
-&lt;/ul>
-&lt;p>——————分隔線——————&lt;/p>
-&lt;p>此處以iPad 2(原9.3.5)做為示範&lt;/p>
-&lt;p>如果有Apple ID雙重認證，建議&lt;a href="https://www.google.com/url?q=https://support.apple.com/zh-tw/HT202664&amp;amp;sa=D&amp;amp;ust=1577715419053000">關閉雙重認證&lt;/a>或&lt;a href="https://www.google.com/url?q=https://appleid.apple.com/account%23!%26page%3Dcreate&amp;amp;sa=D&amp;amp;ust=1577715419053000">註冊一組新的&lt;/a>，並且要記得密碼，不然後續登入很麻煩！&lt;/p>
-&lt;p>降級前請將螢幕鎖定密碼關閉！！！否則可能會造成降級後無法解鎖裝置&lt;/p>
-&lt;p>1.越獄後使用iFile或Filza File Manager打開下方路徑的檔案&lt;/p>
-&lt;p>/System/Library/CoreServices/SystemVersion.plist&lt;/p>
-&lt;p>打錯了如果重開可能導致系統損毀需要重刷！&lt;/p>
-&lt;p>打錯也別擔心如果沒有重開的話只要更正存檔就可以放心重開了&lt;/p>
-&lt;p>Product Version改 6.1.3&lt;/p>
-&lt;p>ProductBuildVersion改 10B329&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/backtoios841-2.jpg" alt="">&lt;/p>
-&lt;p>2.存檔修改後記得確認版本號無誤才可重開&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/backtoios841-1.jpg" alt="">&lt;/p>
-&lt;p>3.重新啟動，重啟跑完進度條需要一段時間，開完機之後請重設裝置，設定精靈的地方隨便設，只要能進到主畫面就行了（不要還原任何的備份！），重設的地方在&lt;/p>
-&lt;h2 id="設定-一般-重置-清除所有內容和設定" >設定-&amp;gt;一般-&amp;gt;重置-&amp;gt;清除所有內容和設定
-&lt;span>
-&lt;a href="#%e8%a8%ad%e5%ae%9a-%e4%b8%80%e8%88%ac-%e9%87%8d%e7%bd%ae-%e6%b8%85%e9%99%a4%e6%89%80%e6%9c%89%e5%85%a7%e5%ae%b9%e5%92%8c%e8%a8%ad%e5%ae%9a">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h2>&lt;p>重設之後進到設定檢查更新，會看到更新的地方有iOS 8.4.1的更新，點下去，並安裝&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/backtoios841-3.jpg" alt="">&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/backtoios841-4.jpg" alt="">&lt;/p>
-&lt;p>4.更新完成後請再次清除所有內容和設定&lt;/p>
-&lt;p>不然連系統APP都會閃退(例如「設定」內的「更改語言」)&lt;/p>
-&lt;p>已知重置的按鈕是可用的&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/backtoios841-5.jpg" alt="">&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/backtoios841-6.jpg" alt="">&lt;/p>
-&lt;p>5.如果有出現「啟用鎖定」的話需要使用這部裝置原來登入的Apple ID 密碼登入，再次設定後，即將完成!&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/backtoios841-7.jpg" alt="">&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/backtoios841-8.jpg" alt="">&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/backtoios841-9.jpg" alt="">&lt;/p>
-&lt;p>下圖是另一部降級成功的第四代iPad&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/backtoios841-10.jpg" alt="">&lt;/p>
-&lt;p>補充連結:&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://www.google.com/url?q=https://mrmad.com.tw/etason&amp;amp;sa=D&amp;amp;ust=1577715419056000">8.4.1越獄&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://www.google.com/url?q=https://mrmad.com.tw/technique-close-hide-ota&amp;amp;sa=D&amp;amp;ust=1577715419056000">阻擋日後OTA更新的描述檔&lt;/a> &lt;/li>
-&lt;/ul>
-&lt;p>[建議使用，不然哪天自己升回去又要再來一次]&lt;/p>
-&lt;p>安裝描述檔後&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020/04/backtoios841-11.jpg" alt="">&lt;/p>
-&lt;p>backtoios841-11.jpg&lt;/p>
-&lt;p>大功告成！&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>iOS on 小易的部落格</title><link>https://blog.steveyi.net/tags/ios/</link><description>Recent content in iOS on 小易的部落格</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Thu, 04 Mar 2021 00:35:46 +0800</lastBuildDate><atom:link href="https://blog.steveyi.net/tags/ios/index.xml" rel="self" type="application/rss+xml"/><item><title>使用 checkm8 Activation Lock 免費版，繞過 iOS 啟用鎖定</title><link>https://blog.steveyi.net/posts/checkm8-bypass/</link><pubDate>Thu, 04 Mar 2021 00:35:46 +0800</pubDate><guid>https://blog.steveyi.net/posts/checkm8-bypass/</guid><description>作者：蘿蔔
+本文章同步發佈於「蘿蔔ㄉ部落格」
+[注意] 請勿用於商業或是非法用途。
+這個軟體不是筆者所撰寫，如果使用上產生爭議，筆者恕不負責。
+繞過啟用鎖定需要使用到Mac電腦。
+筆者使用的是自己的設備和自己的帳號做測試。(iPhone 7 Plus, iOS 14.3)
+有時候因為某些原因，將iPhone
+重置或更新時沒有關閉「尋找」，重新設定時會被要求Apple ID密碼來解除啟用鎖定，忘記Apple ID的密碼的話iPhone只能當作零件機或是一塊無用的磚頭。因此我們可能會需要繞過這道鎖定，至少還能當作遊戲機或是隨身聽使用。
+筆者寫這篇文章時最新的iOS版本是iOS 14.4，官方標示支援的版本從12.4~14.4。&amp;lt;
+官方標示支援的設備是：
+iPhone SE (第一代)
+iPhone 6
+iPhone 6S
+iPhone 7, 7 Plus
+iPhone 8, 8 Plus
+iPhone X
+iPad Air (1, 2)
+iPad Mini (2, 3, 4)
+iPad (5, 6, 7)
+iPad Pro (1, 2)
+iPad Pro (9.7 10.5 in.)
+[注意] 部分功能在繞過啟用鎖定後會暫時失效 (包括但不限於下列)：
+行動通訊（無法撥打或接聽電話，也無法使用行動數據上網）
+iCloud雲端同步功能（也包含「接續互通」等需要帳號的功能）
+不建議安裝軟體更新
+重開機（會跳出啟用鎖定頁面，要重新進行操作）
+如果繞過後想起密碼，可以重開機，在啟用鎖定的地方輸入密碼，以上限制會被立馬破除
+可以使用的功能(包括但不限於下列)：
+Wi-Fi上網
+藍芽功能 (AirPods可用)
+iTunes Store</description></item><item><title>利用 redeb 來備份已安裝插件的 deb 檔</title><link>https://blog.steveyi.net/posts/use-redeb-to-backup-jb-tweaks/</link><pubDate>Sat, 28 Nov 2020 04:39:14 +0000</pubDate><guid>https://blog.steveyi.net/posts/use-redeb-to-backup-jb-tweaks/</guid><description>就在很久之前，筆者就有遇過插件在其他軟體源消失導致無法安裝想要的插件。但是因為在其他裝置有安裝該插件而能把該插件deb檔備份出來並安裝在我想要安裝該插件的裝置裡，在此分享給有想要備份插件的人！
+redeb與備份出來的deb檔（以打包Zebra為例）
+需要利用到的插件/程式：
+Redeb - deb重新打包備份插件（軟體源：https://wiety.github.io/cydia/ ）
+OpenSSH - 讓電腦可以ssh進去裝置裡並下指令
+FileZilla - SFTP存取裝置 (Windows部分也可用WinSCP)
+終端機 - 下達ssh指令（Windows使用者請用PuTTY)
+前置作業： 首先先在插件管理器（這邊以Zebra為例）上加入此軟體源： https://wiety.github.io/cydia/
+往下滑進去&amp;quot;Wiety&amp;rsquo;s beta repository&amp;quot;並找到redeb, 安裝它
+安裝OpenSSH (有安裝的可以跳過此步驟）
+安裝完這兩個插件後就可以移到電腦了
+電腦端的操作： 這邊要先注意一下，行動裝置與電腦皆要連接在同一個區網下，不然會連不上ssh!
+先在要做ssh連線的裝置端確認內網IP位置（設定-&amp;gt;Wi-Fi-&amp;gt;在連線的Wi-Fi上按 &amp;ldquo;i&amp;quot;即可查詢）
+筆者有自己製作簡易捷徑去查詢內網IP.
+在電腦上打開終端機（Windows使用者請安裝PuTTY, 筆者這邊使用macOS)
+在終端機打上 ssh root@192.168.31.46 (紅色部分更換為自己的內網IP)
+打上要連線裝置的ssh密碼 (預設密碼是alpine. 這邊建議如果還在用預設密碼的，請更改成自訂的密碼！）
+在終端機上打入redeb, 會跳出圖左的訊息，這是因為我們沒預先指定好插件ID, 這邊鍵入&amp;quot;y&amp;rdquo;. redeb會列出所有插件的ID（圖右）
+這邊就是鍵入欲備份的插件ID, 這邊以Zebra為例，插件ID &amp;ldquo;206&amp;rdquo;
+執行完成後，終端機會長這樣：
+完成後，這邊就可以把剛打包好的deb檔從裝置中提起出來。接下來打開FileZilla並一樣ssh連線至剛剛做完deb打包的裝置。
+在Filza中，按左上方的按鈕會打開該畫面，新增一個站台並把伺服器型態更改成SFTP. 最後把主機名稱（欲連線裝置的IP）, 使用者 (root) 跟密碼打上去並按下連線
+連線完成後，備份完成的deb檔位址在：
+/private/var/mobile/Documents/Redeb/debs 在資料夾裡面的檔案就是剛剛備份的deb檔，這樣就完工了！</description></item><item><title>iOS 和 macaOS 上超好用的內建 Spotlight 搜尋小技巧</title><link>https://blog.steveyi.net/posts/apple-spotlight/</link><pubDate>Sun, 18 Oct 2020 09:02:50 +0000</pubDate><guid>https://blog.steveyi.net/posts/apple-spotlight/</guid><description>不少人都買了 iPhone, iPad, iPod touch 或 Mac，卻不知道內建的 Spotlight 有許多好用的功能，讓我們來看看吧！
+Spotlight的使用方法(早期的版本可能不太一樣)：
+iOS/iPadOS是在主畫面往下拉、macOS則是按下選單列(右上角)的放大鏡，或是按下「command」+「空白鍵」
+註：Spotlight 搜尋跟 Siri 的功能都是逐版進步的，所以有些比較舊的版本可能就沒有某些功能了，筆者以 iOS/iPadOS 14 和 macOS Catalina 作為示範。
+1.找裝置內的資料
+舉凡簡訊、檔案、備忘錄、聯絡人、聯絡人的電話、地點、郵件、App什麼的都有！甚至還會可以搜尋網路上的東西！
+舉例來說，筆者把 OPENPOINT 的 App 放在「眼不見為淨」資料夾裡，也會寫出來，另外也會看到一些相關的東西
+如果尋找的是聯絡資訊裡的電話號碼的話也是可以的
+2.換算單位
+各種單位幾乎都可以換算哦！
+還可以指定單位
+也可以換算貨幣
+3.iPad沒有內建計算機，但又要算數字？
+沒關係，用Spotight就可以算了哦！
+4.字典
+看到哪個很困難的字嗎？搜尋就會有結果了！
+如果維基百科有資料也會出現
+5.電影、音樂等
+連結到iTunes Store、Apple Music或Apple TV+，如果有訂閱的話超方便的(雖然筆者沒訂閱啦&amp;hellip;)
+Spotlight 搜尋功能非常多，筆者也沒用完全部的功能過 XD
+大家都來玩玩看吧</description></item><item><title>幫 Spotify 加上實時歌詞 (iOS/iPadOS)</title><link>https://blog.steveyi.net/posts/no-premium-spotify-dynamic-lyrics/</link><pubDate>Sat, 11 Jul 2020 07:31:26 +0000</pubDate><guid>https://blog.steveyi.net/posts/no-premium-spotify-dynamic-lyrics/</guid><description>上次有一篇介紹各家串流平台的免費會員比較，各位可以發現實時歌詞很多家平台都有
+但 Spotify 根據筆者測試只有 Premium 用戶能用，稍嫌可惜
+這時想要聽著 Spotify 的免費音樂，但又覺得沒歌詞不能一起唱很麻煩嗎
+這時候照這篇文章做就可以解決這個問題囉
+這篇文章適用 iOS/iPadOS 用戶，Android 用戶在 另外一篇 唷
+開始吧 首先請先下載Musixmatch
+下載完成後請打開並註冊或登入Musixmatch的帳號
+如果有詢問是否加入Musixmatch Premium會員，可以按左上角「ㄨ」關掉
+完成後請授權Spotify，按下綠色的按鈕
+接下來滑到最下面按綠色的「同意」
+這時候可以隨便播一首歌
+然後回到Musixmatch，轉到「音樂」頁面或是「首頁」會看到正在播放的音樂
+按下去會展開
+如果有支援實時歌詞，會跟著音樂跑，如果只支援靜態歌詞，則可能需要自己用手滑，最怕是有些音樂沒支援歌詞
+左下角也有翻譯功能喔（如果有人翻譯的話）
+如果使用iPad還可以搭配SpiltView邊看歌詞邊放專輯封面展示
+或是使用iPad的Spilt View邊看歌詞邊做其他事（例如：瀏覽網頁）
+也可以在桌面左邊新增小工具
+桌面上就會有歌詞囉</description></item><item><title>[2020最新] 各大串流平台免費會員比較</title><link>https://blog.steveyi.net/posts/free-streaming-music-compare/</link><pubDate>Sun, 05 Jul 2020 12:51:26 +0000</pubDate><guid>https://blog.steveyi.net/posts/free-streaming-music-compare/</guid><description>蘿蔔這幾年來一直在尋找免費好用的串流音樂平台，也因此幾乎所有台灣常見的平台都有用過，所以接下來一一為大家介紹
+首先我先說一下，蘿蔔是台灣人，所以文章介紹的有些平台不見得能在其他國家或地區使用；或是有些平台改版了，這篇文章可能會來不及更新，請見諒
+再來要說的是，我們不鼓勵使用盜版或破解版，首先是音樂平台和音樂創作者沒辦法收到錢（例如串流音樂平台上面廣告贊助的費用），而好音樂就沒辦法受到鼓勵，裝置也可能被病毒或是間諜程式入侵，而且還可能會有法律責任產生
+說完了那我們開始介紹吧
+Spotify 一個老牌的串流音樂平台，整體以播放清單為主，有Spotify Connect可以無縫更換聆聽裝置，最近剛陸續開放歌詞功能，不過似乎只有Premium能用。
+免費會員在平板電腦和電腦App、電腦版網頁可以隨選即播，有穿插廣告，音質不能設為「最高」。
+如果在手機和iPod touch上則是限隨機播放，每小時只能跳過六首歌（部分指定的個人化播放清單可隨選即播，不在此限）。
+有趣的是筆者的大螢幕手機被視為平板，賺到隨選即播🤣
+KKBOX 串流音樂服務的元老，比Spotify還早推出，中文曲庫比Spotify多，有動態歌詞。
+會員註冊完會有三天體驗會員幾乎全功能都能用，體驗會員過期後會成為一般會員，但每個裝置能登入的體驗會員帳號次數有限。
+一般會員音質不能設為最高(320kbps)，每天會有一則廣告，看完後可以免費聽20首歌曲，用完後每首歌只能預覽30秒。
+網路上有時會不定期發布體驗序號。
+MyMusic 會員註冊完會有7天體驗會員全功能都能用，體驗會員過期後會成為一般會員。
+一般會員音質只能設為一般(128kbps)，只有指定的幾張歌單可以完整聽，其他歌曲都只能預覽30秒。網路上有時會不定期發布體驗序號。
+Friday 音樂 無廣告、有動態歌詞
+會員註冊完會有7天體驗會員全功能都能用，體驗會員過期後會成為一般會員。
+一般會員音質只能設為一般(128kbps)，每天只能播放五首歌，用完後都只能預覽30秒。
+網路上有時會不定期發布體驗序號。
+Apple Music 跟蘋果生態系整合度非常高，有很漂亮的動態歌詞
+（需升級至iOS/iPad OS 13以上，iOS 10以上只有靜態歌詞）
+需要先付錢才能送三個月試用，Android版App帶給我的感受不是很順手；Android版使用上也常常遇到Bug，但如果使用iPhone的話可以直接在Apple Watch上面呼叫Siri點歌確實很方便，網路上偶爾也會發布歌手或電台贊助的免費體驗序號。
+官方說明的系統需求是iOS 8.4/Android 5.0/iTunes 12.2以上
+網易雲音樂 如果需要全曲庫聽到飽要用翻牆軟體（如：穿梭VPN），沒翻牆的話會反灰如圖，動態歌詞，隨選即播，無穿插廣告，但大部分歌曲音質只能設128Kbps，有少部分歌曲可以下載，也有一些獨家音樂，英文歌偏少。
+蝦米音樂 常常簽到可以領體驗會員，但曲庫筆者感覺上比網易雲跟QQ音樂少，有些歌要用翻牆軟體（如：穿梭VPN等），有動態歌詞，部分歌曲可以下載，英文歌偏少。
+QQ音樂 曲庫幾乎都要用翻牆軟體（如：穿梭VPN等），有動態歌詞（逐字），英文歌偏少。
+MixerBox 3 基於Youtube做成的MV播放器，但iOS每次離開App就要從控制中心按一次播放；Android則會有一個小視窗懸浮著，略為不便，而且因為是MV，所以有些穿插對話的MV會影響聽歌體驗。有些人會開台一起聽歌，而探索頁面常常可以找到適合自己的音樂，音樂鬧鐘功能可以讓起床變有趣
+Youtube Music App不能背景播放，雖然有其他的方法（iPadOS和iOS/Android），但不管什麼方法每播完一首歌就跳廣告實在很煩，而且廣告的品質也不及Spotify。
+而iOS版的App給我的體驗很差（用起來的Bug比Android版的Apple Music還多，比如說暫停一下，後台就被殺了又要重新載入一次）。
+有設計歌詞的區塊，但沒幾首歌支援的。
+不含Youtube的話曲庫不算多，但配合Youtube上的影片後，曲庫可說是非常龐大；但也因此搜尋介面很亂，有專輯版音樂，也有MV、第三方上傳的音樂影片（版權灰色地帶，時常被下架），也有播放清單。
+另外令人匪夷所思的是系統語言是中文的情況下，有些中文歌都只寫英文歌名，非常奇葩
+以上就是蘿蔔介紹台灣比較常見的串流音樂平台，有些版權比較屬於灰色地帶的就先不介紹了，畢竟「我是小易」的編輯們也無法保證其合法性
+看完這些介紹，各位有打算使用哪個串流音樂平台了嗎？</description></item><item><title>無需訂閱 Youtube Music Premium 也能讓 iOS/iPadOS 的裝置享有背景播放的功能 (Youtube 也適用哦！)</title><link>https://blog.steveyi.net/posts/youtube-background-ios/</link><pubDate>Fri, 19 Jun 2020 14:39:47 +0000</pubDate><guid>https://blog.steveyi.net/posts/youtube-background-ios/</guid><description>此處主要由iPad作為示範，iPhone也可以用一樣的方法唷
+Android也可以用類似的方法，之後會再發一篇教學，敬請關注「我是小易」後續的文章吧！
+後續更新：Android版教學在此
+筆者最近一直在找好用的免費串流音樂服務，發現其實電腦上的Youtube Music App(其實就是嵌入網頁拉XD)還不錯用，可惜行動版App跟網頁就都不能背景播放了(訂閱Premium的話就是App版可以，但網頁還是不行唷)
+後來筆者發現了一個iOS 13/iPadOS 13的好功能
+(比較舊的iOS也有，但功能不是那麼完善，各位也可以試試看)
+讓我們開始吧 首先請先用內建的Safari瀏覽器打開Youtube Music首頁(請按住選擇在新標籤頁打開)，別急著播放音樂，按下左上方的AA，然後按下「切換為電腦版網頁」
+(iOS 12或更早版本的切換電腦版按鈕在動作選單內，也就是重新整理按鈕旁邊那個按鈕)
+註：這邊不建議使用第三方瀏覽器的原因是有些第三方瀏覽器功能不如內建的穩定，記憶體有時會被系統回收凍結，導致音樂無緣無故暫停
+iOS 13/iPadOS 13以上的電腦版網頁切換開關在左上方的「AA」內
+iOS 12或更早版本的電腦版網頁切換開關在動作選單內
+接下來網頁會重新載入，此時再按一次AA，點選網站設定，把開關打開，這樣以後就會自動以電腦版網頁載入了(iOS 12或更早版本不支援此操作)
+接下來可以回到桌面、鎖定螢幕、或是切換到其他App，您會發現音樂繼續播放，且控制中心和通知中心可以控制播放、暫停及快轉
+如果控制中心和通知中心沒出現控制介面或是控制介面標題只寫YouTube Music，而希望寫出歌名的話，就回到網頁多按幾下播放/暫停按鈕就好了
+回到網頁也可以控制上一首和下一首、切換歌曲等電腦版可以做的操作
+到這邊就完成拉
+以後要聽音樂直接在Safari上面打開Youtube Music就可以拉～
+Youtube也要允許背景播放的話也是一樣的方法唷！
+筆者也有在iPhone上測試過，可以用～
+iPhone也可以背景播放唷
+iPhone的Youtube Music網頁也能跟電腦網頁有幾乎一樣的功能囉
+筆者試了一下，年代有點久遠的iOS 10也能用哦</description></item><item><title>讓手機音質提升的小技巧</title><link>https://blog.steveyi.net/posts/yin-zhi-ti-sheng/</link><pubDate>Mon, 01 Jun 2020 03:55:45 +0000</pubDate><guid>https://blog.steveyi.net/posts/yin-zhi-ti-sheng/</guid><description>註：Apple Lightning裝置以及大多數的USB-C裝置(像是Windows電腦等)也適用這篇哦
+在你認為兩百元有找的耳機音質不好的同時，你是否忽略了哪個重要的細節呢？
+雖然也許手機廠牌跟耳機廠牌一致可以得到更好的優化體驗，但不可否認手機內置的DAC(數位音訊轉化為類比訊號提供給耳機的一個重要元件)不一定可以媲美外置的DAC，也許不是耳機太差，而是DAC推不動或是搭配起來不合適
+但人們會問：外置的DAC不是都很大一台嗎?
+沒錯的，專業等級的DAC確實有點龐大，而且價格偏高
+Google隨便搜尋都會看到這種龐大的DAC
+但是筆者是一個講究CP值的人，這種東西音質再好基本上我是不會買的(除非我哪天發大財)
+就在我為了兩百塊有找的3.5mm的耳機音質太差傷腦筋時，忽然想起抽屜裡那完全沒用過的Google USB-C 轉 3.5 毫米轉接頭
+(因為筆者之前使用的Pixel 2尾插有問題只能充電但送不回美國)
+轉接頭插上去後我明顯的感受到了無力的低音瞬間變得有力
+之後還拿雜牌的轉接頭來試聽，音質慘不忍睹，比手機的3.5mm耳機口還慘
+如果搭配手機內建的音質選項，甚至是等化器都調整成自己偏好的，效果會更好
+(但筆者不推薦HTC手機用戶使用「HTC BoomSound配備杜比音效」在耳機上，整個聲音變得不像原來的樣子，沒開的音質反而聽起來比打開好)
+現在來說說為什麼Google的轉接頭有這樣一個神奇的效果，而雜牌轉接頭聽起來如此慘不忍睹了。
+原因在於Pixel 2016和Pixel 3a以外的Google手機和HTC後來的手機，以及2016以後的iPhone一樣，沒有內置耳機的DAC，他們將DAC移植到了轉接頭（等於是採用外置音效卡的設計，所以Google的轉接頭一定自帶DAC）
+雜牌轉接頭雖然可能有DAC，但用料可能不是這麼扎實，聽起來刺耳和低音無力是肯定的，只能說是一分錢一分貨。
+要如何確保自己買的轉接頭支援DAC呢？
+(Apple Lightning接頭的裝置就不用擔心了，一定會有的)
+判別USB-C轉接頭是否有DAC最好的方法就是購買時詢問店員或是賣家，是否支援Pixel 2手機或HTC U11手機
+至於品牌的部分，市面上有很多(像是Apple、Google、HTC、紫米、moshi等)，各位可以自己去探索一下自己喜歡的聲音效果哦～
+後來我去測試了一下，電腦的部分，Windows 10(PC和Mac)可以用，但我手上的轉接頭插到macOS 10.15.5的Mac是沒有反應的(不確定是不是因為不是蘋果的)，供大家參考
+電腦的部分，Windows 10(PC和Mac)可以用
+筆者對這方面有研究過，但還未達專家等級，如果有誤懇請讀者見諒</description></item><item><title>32 位元 iOS 裝置免電腦免 SHSH 降級到 8.4.1</title><link>https://blog.steveyi.net/posts/backtoios841/</link><pubDate>Mon, 30 Dec 2019 13:26:02 +0000</pubDate><guid>https://blog.steveyi.net/posts/backtoios841/</guid><description>有時會因爲蘋果的部分問題，會在各種環節出狀況，如果有任何錯誤請改天再試
+蘋果的漏洞不是非常穩定，有一天我試了三次都不能用，改天再弄，一次就成功了，這有點碰運氣
+iOS 裝置如果很慢，降級會比較流暢
+(A5 裝置非常有感，A6、A6X 裝置則差異不大但仍有比較快一點點)
+雖然還是偶爾會 LAG 一下但是至少改善滿多的
+例如轉場動畫不會像原本那麼卡頓
+適用裝置： iOS 9.0～10.3.3，有越獄的以下列出裝置 有附各版本越獄教學 iPhone 4S iPhone 5 iPod Touch 5 iPad 2 iPad 3 iPad 4 iPad Mini 1代 [iPhone 5C不適用] *如有發生問題本人恕不負責*
+※其實我用到現在都沒事，上面那句希望只是備而不用
+*請先做好iTunes備份*
+*中途若失敗或反悔可以使用DFU回到原版本或再試一次*
+*請先清除所有內容和設定後再進行！*
+講了這麼多，來開工吧
+——————分隔線——————
+(如果已經越獄，請跳過此段) 越獄方法整理[來自瘋先生網站] 10.X～10.3.3 9.3.5 9.1~9.3.4 9.0.X 降級完的8.4.1在文章底部 ——————分隔線——————
+此處以iPad 2(原9.3.5)做為示範
+如果有Apple ID雙重認證，建議關閉雙重認證或註冊一組新的，並且要記得密碼，不然後續登入很麻煩！
+降級前請將螢幕鎖定密碼關閉！！！否則可能會造成降級後無法解鎖裝置
+1.越獄後使用iFile或Filza File Manager打開下方路徑的檔案
+/System/Library/CoreServices/SystemVersion.plist
+打錯了如果重開可能導致系統損毀需要重刷！
+打錯也別擔心如果沒有重開的話只要更正存檔就可以放心重開了
+Product Version改 6.1.3
+ProductBuildVersion改 10B329</description></item></channel></rss>

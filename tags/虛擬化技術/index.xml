@@ -1,28 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>虛擬化技術 on 小易的部落格</title><link>https://blog.steveyi.net/tags/%E8%99%9B%E6%93%AC%E5%8C%96%E6%8A%80%E8%A1%93/</link><description>小易的部落格 (虛擬化技術)</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Tue, 07 Jul 2020 05:33:14 +0000</lastBuildDate><atom:link href="https://blog.steveyi.net/tags/%E8%99%9B%E6%93%AC%E5%8C%96%E6%8A%80%E8%A1%93/index.xml" rel="self" type="application/rss+xml"/><item><title>PVE入門心得-安裝篇</title><link>https://blog.steveyi.net/posts/pve-install/</link><pubDate>Tue, 07 Jul 2020 05:33:14 +0000</pubDate><guid>https://blog.steveyi.net/posts/pve-install/</guid><description>&lt;p>玩虛擬機有一段時間了，不過是在Windows系統下裝VMware Workstation玩xD&lt;br>
-後來閒置了幾台電腦，恰好也查詢到PVE(Proxmox VE)這個開源虛擬系統，於是 我們就來安裝玩玩吧!&lt;/p>
-&lt;p>前期準備:&lt;/p>
-&lt;p>Proxmox VE 安裝碟&lt;br>
-高核心且空閒的電腦(不然跑起來會很卡)&lt;/p>
-&lt;p>首先，我們先到官方網站下載PVE的ISO檔案 &lt;a href="https://www.proxmox.com/en/downloads">官網載點&lt;/a>&lt;br>
-點擊左方的 &lt;a href="https://www.proxmox.com/en/downloads/item/proxmox-ve-6-2-iso-installer">Proxmox VE 6.2 ISO Installer&lt;/a> 來下載(6.2是版本號，右方則是種子下載)&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070100471381.png" alt="">&lt;/p>
-&lt;p>下載好之後，我們將檔案寫入USB中，做成安裝碟&lt;br>
-這邊推薦使用Etcher來寫入，&lt;a href="https://www.balena.io/etcher/">官網連結&lt;/a>&lt;/p>
-&lt;p>做好安裝碟之後，我們進入BIOS，並調整開機順序(將安裝碟設為第一順位)&lt;/p>
-&lt;p>接著我們就可以進行安裝了!&lt;/p>
-&lt;p>首先，選擇第一個 Install Proxmox VE&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070705281974.png" alt="">&lt;/p>
-&lt;p>接著同意服務條款&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070705274149.png" alt="">&lt;/p>
-&lt;p>選擇硬碟&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070705275335.png" alt="">&lt;/p>
-&lt;p>選擇國家及時區&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070705280757.png" alt="">&lt;/p>
-&lt;p>設置root密碼及電子郵件地址&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070705282498.png" alt="">&lt;/p>
-&lt;p>設置主機名稱及網路(這邊建議一次就設定好，不然後續修改IP有點麻煩)&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070705283457.png" alt="">&lt;/p>
-&lt;p>全部完成後，就點擊Install來進行安裝!&lt;/p>
-&lt;p>&lt;img src="https://static-a1.steveyi.net/media/blog/2020070705284395.png" alt="">&lt;/p>
-&lt;p>安裝完成後，我們使用 https://你的IP:8006 就可以進入管理面板囉!&lt;/p>
-&lt;p>下一篇，我們將與大家分享一些配置的過程&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>虛擬化技術 on 小易的部落格</title><link>https://blog.steveyi.net/tags/%E8%99%9B%E6%93%AC%E5%8C%96%E6%8A%80%E8%A1%93/</link><description>Recent content in 虛擬化技術 on 小易的部落格</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Tue, 07 Jul 2020 05:33:14 +0000</lastBuildDate><atom:link href="https://blog.steveyi.net/tags/%E8%99%9B%E6%93%AC%E5%8C%96%E6%8A%80%E8%A1%93/index.xml" rel="self" type="application/rss+xml"/><item><title>PVE入門心得-安裝篇</title><link>https://blog.steveyi.net/posts/pve-install/</link><pubDate>Tue, 07 Jul 2020 05:33:14 +0000</pubDate><guid>https://blog.steveyi.net/posts/pve-install/</guid><description>玩虛擬機有一段時間了，不過是在Windows系統下裝VMware Workstation玩xD
+後來閒置了幾台電腦，恰好也查詢到PVE(Proxmox VE)這個開源虛擬系統，於是 我們就來安裝玩玩吧!
+前期準備:
+Proxmox VE 安裝碟
+高核心且空閒的電腦(不然跑起來會很卡)
+首先，我們先到官方網站下載PVE的ISO檔案 官網載點
+點擊左方的 Proxmox VE 6.2 ISO Installer 來下載(6.2是版本號，右方則是種子下載)
+下載好之後，我們將檔案寫入USB中，做成安裝碟
+這邊推薦使用Etcher來寫入，官網連結
+做好安裝碟之後，我們進入BIOS，並調整開機順序(將安裝碟設為第一順位)
+接著我們就可以進行安裝了!
+首先，選擇第一個 Install Proxmox VE
+接著同意服務條款
+選擇硬碟
+選擇國家及時區
+設置root密碼及電子郵件地址
+設置主機名稱及網路(這邊建議一次就設定好，不然後續修改IP有點麻煩)
+全部完成後，就點擊Install來進行安裝!
+安裝完成後，我們使用 https://你的IP:8006 就可以進入管理面板囉!
+下一篇，我們將與大家分享一些配置的過程</description></item></channel></rss>
