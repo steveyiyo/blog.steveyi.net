@@ -1,7 +1,7 @@
 languageCode: "tw"
 baseUrl: "https://blog.steveyi.net/"
 title: "SteveYi's Blog"
-theme: "anubis"
+theme: "PaperMod"
 paginate: 10
 # disqusShortname: ""
 # googleAnalytics: "G-12345"
