@@ -186,4 +186,7 @@ iOS 裝置如果很慢，降級會比較流暢
 打錯了如果重開可能導致系統損毀需要重刷！
 打錯也別擔心如果沒有重開的話只要更正存檔就可以放心重開了
 Product Version改 6.1.3
-ProductBuildVersion改 10B329</description></item></channel></rss>
+ProductBuildVersion改 10B329
+2.存檔修改後記得確認版本號無誤才可重開
+3.重新啟動，重啟跑完進度條需要一段時間，開完機之後請重設裝置，設定精靈的地方隨便設，只要能進到主畫面就行了（不要還原任何的備份！），重設的地方在
+設定-&amp;gt;一般-&amp;gt;重置-&amp;gt;清除所有內容和設定 重設之後進到設定檢查更新，會看到更新的地方有iOS 8.4.1的更新，點下去，並安裝</description></item></channel></rss>

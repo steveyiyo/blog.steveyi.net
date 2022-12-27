@@ -1,11 +1,4 @@
-<!doctype html><html lang=tw dir=auto>
-<head><meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
-<meta name=robots content="index, follow">
-<title>在 Ubuntu 系統下架設 Tunnel Broker 服務 (v4 to v6) | 小易的部落格</title>
-<meta name=keywords content="VPS,伺服器,網域">
-<meta name=description content="前言 之前拿到了一個自治號碼(AS Number)，也拿到了1個 /44 及兩個 /48 的iPv6
+<!doctype html><html lang=tw dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>在 Ubuntu 系統下架設 Tunnel Broker 服務 (v4 to v6) | 小易的部落格</title><meta name=keywords content="VPS,伺服器,網域"><meta name=description content="前言 之前拿到了一個自治號碼(AS Number)，也拿到了1個 /44 及兩個 /48 的iPv6
 恰好最近想到之前有使用過HE.Net的tunnel broker服務
 這次就來架設一下sit隧道的tunnel broker服務！本篇不會說明ipv6的取得方式，請自行詢問主機提供商
 本篇將使用開源工具-IPv6-in-IPv4 Tunnel
@@ -14,27 +7,9 @@ git clone [https://github.com/sskaje/6in4.git](https://github.com/sskaje/6in4) �
 nano config.ini 依序編輯 IPV6_NETWORK, IPV6_CIDR, INTERFACE, BIND_IP(有多iPv4需要)
 接著輸入 Crtl + X 來保存
 修改系統設定來允許iPv6轉發 nano /etc/sysctl.conf 在最下方添加下方這項net.ipv6.conf.all.forwarding = 1 Crtl + X 保存 sysctl -p 防火牆 iptables -I INPUT -p 41 --j ACCEPT iptables -I OUTPUT -p 41 --j ACCEPT iptables -I FORWARD -p 41 --j ACCEPT 使用工具建立伺服端(新增隧道) 假設隧道ID為1，伺服端IPv4為1.1.1.1 用戶端IPv4為8.8.8.8]
-配置文件中設置的IPv6子網為 2a0e:b107:7e0::，子網路遮罩為48(必須為8的倍數)工具會自動分割出 一個用於隧道的 /64子網及一個用於用戶路由的 /64子網">
-<meta name=author content="SteveYi">
-<link rel=canonical href=https://blog.steveyi.net/posts/tunnel-broker-bgp/>
-<link crossorigin=anonymous href=/assets/css/stylesheet.bccfefac377bc340f06c260aed1bddf49a4354816d7c570d6aac75a997986c95.css integrity="sha256-vM/vrDd7w0DwbCYK7Rvd9JpDVIFtfFcNaqx1qZeYbJU=" rel="preload stylesheet" as=style>
-<script defer crossorigin=anonymous src=/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG+9vmJ0cTS+ovo0FeA=" onload=hljs.initHighlightingOnLoad()></script>
-<link rel=icon href=https://blog.steveyi.net/favicon.ico>
-<link rel=icon type=image/png sizes=16x16 href=https://blog.steveyi.net/favicon-16x16.png>
-<link rel=icon type=image/png sizes=32x32 href=https://blog.steveyi.net/favicon-32x32.png>
-<link rel=apple-touch-icon href=https://blog.steveyi.net/apple-touch-icon.png>
-<link rel=mask-icon href=https://blog.steveyi.net/safari-pinned-tab.svg>
-<meta name=theme-color content="#2e2e33">
-<meta name=msapplication-TileColor content="#2e2e33">
-<link rel=alternate hreflang=tw href=https://blog.steveyi.net/posts/tunnel-broker-bgp/>
-<noscript>
-<style>#theme-toggle,.top-link{display:none}</style>
-<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
-</noscript>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CPGWT2M3VT"></script>
-<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-CPGWT2M3VT',{anonymize_ip:!1})}</script>
-<meta property="og:title" content="在 Ubuntu 系統下架設 Tunnel Broker 服務 (v4 to v6)">
-<meta property="og:description" content="前言 之前拿到了一個自治號碼(AS Number)，也拿到了1個 /44 及兩個 /48 的iPv6
+配置文件中設置的IPv6子網為 2a0e:b107:7e0::，子網路遮罩為48(必須為8的倍數)工具會自動分割出 一個用於隧道的 /64子網及一個用於用戶路由的 /64子網"><meta name=author content="SteveYi"><link rel=canonical href=https://blog.steveyi.net/posts/tunnel-broker-bgp/><link crossorigin=anonymous href=/assets/css/stylesheet.bccfefac377bc340f06c260aed1bddf49a4354816d7c570d6aac75a997986c95.css integrity="sha256-vM/vrDd7w0DwbCYK7Rvd9JpDVIFtfFcNaqx1qZeYbJU=" rel="preload stylesheet" as=style><script defer crossorigin=anonymous src=/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG+9vmJ0cTS+ovo0FeA=" onload=hljs.initHighlightingOnLoad()></script>
+<link rel=icon href=https://blog.steveyi.net/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://blog.steveyi.net/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://blog.steveyi.net/favicon-32x32.png><link rel=apple-touch-icon href=https://blog.steveyi.net/apple-touch-icon.png><link rel=mask-icon href=https://blog.steveyi.net/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=tw href=https://blog.steveyi.net/posts/tunnel-broker-bgp/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><script async src="https://www.googletagmanager.com/gtag/js?id=G-CPGWT2M3VT"></script>
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-CPGWT2M3VT",{anonymize_ip:!1})}</script><meta property="og:title" content="在 Ubuntu 系統下架設 Tunnel Broker 服務 (v4 to v6)"><meta property="og:description" content="前言 之前拿到了一個自治號碼(AS Number)，也拿到了1個 /44 及兩個 /48 的iPv6
 恰好最近想到之前有使用過HE.Net的tunnel broker服務
 這次就來架設一下sit隧道的tunnel broker服務！本篇不會說明ipv6的取得方式，請自行詢問主機提供商
 本篇將使用開源工具-IPv6-in-IPv4 Tunnel
@@ -43,14 +18,7 @@ git clone [https://github.com/sskaje/6in4.git](https://github.com/sskaje/6in4) �
 nano config.ini 依序編輯 IPV6_NETWORK, IPV6_CIDR, INTERFACE, BIND_IP(有多iPv4需要)
 接著輸入 Crtl + X 來保存
 修改系統設定來允許iPv6轉發 nano /etc/sysctl.conf 在最下方添加下方這項net.ipv6.conf.all.forwarding = 1 Crtl + X 保存 sysctl -p 防火牆 iptables -I INPUT -p 41 --j ACCEPT iptables -I OUTPUT -p 41 --j ACCEPT iptables -I FORWARD -p 41 --j ACCEPT 使用工具建立伺服端(新增隧道) 假設隧道ID為1，伺服端IPv4為1.1.1.1 用戶端IPv4為8.8.8.8]
-配置文件中設置的IPv6子網為 2a0e:b107:7e0::，子網路遮罩為48(必須為8的倍數)工具會自動分割出 一個用於隧道的 /64子網及一個用於用戶路由的 /64子網">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://blog.steveyi.net/posts/tunnel-broker-bgp/"><meta property="article:section" content="posts">
-<meta property="article:published_time" content="2020-05-31T16:56:41+00:00">
-<meta property="article:modified_time" content="2020-05-31T16:56:41+00:00"><meta property="og:site_name" content="小易的部落格">
-<meta name=twitter:card content="summary">
-<meta name=twitter:title content="在 Ubuntu 系統下架設 Tunnel Broker 服務 (v4 to v6)">
-<meta name=twitter:description content="前言 之前拿到了一個自治號碼(AS Number)，也拿到了1個 /44 及兩個 /48 的iPv6
+配置文件中設置的IPv6子網為 2a0e:b107:7e0::，子網路遮罩為48(必須為8的倍數)工具會自動分割出 一個用於隧道的 /64子網及一個用於用戶路由的 /64子網"><meta property="og:type" content="article"><meta property="og:url" content="https://blog.steveyi.net/posts/tunnel-broker-bgp/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2020-05-31T16:56:41+00:00"><meta property="article:modified_time" content="2020-05-31T16:56:41+00:00"><meta property="og:site_name" content="小易的部落格"><meta name=twitter:card content="summary"><meta name=twitter:title content="在 Ubuntu 系統下架設 Tunnel Broker 服務 (v4 to v6)"><meta name=twitter:description content="前言 之前拿到了一個自治號碼(AS Number)，也拿到了1個 /44 及兩個 /48 的iPv6
 恰好最近想到之前有使用過HE.Net的tunnel broker服務
 這次就來架設一下sit隧道的tunnel broker服務！本篇不會說明ipv6的取得方式，請自行詢問主機提供商
 本篇將使用開源工具-IPv6-in-IPv4 Tunnel
@@ -59,132 +27,22 @@ git clone [https://github.com/sskaje/6in4.git](https://github.com/sskaje/6in4) �
 nano config.ini 依序編輯 IPV6_NETWORK, IPV6_CIDR, INTERFACE, BIND_IP(有多iPv4需要)
 接著輸入 Crtl + X 來保存
 修改系統設定來允許iPv6轉發 nano /etc/sysctl.conf 在最下方添加下方這項net.ipv6.conf.all.forwarding = 1 Crtl + X 保存 sysctl -p 防火牆 iptables -I INPUT -p 41 --j ACCEPT iptables -I OUTPUT -p 41 --j ACCEPT iptables -I FORWARD -p 41 --j ACCEPT 使用工具建立伺服端(新增隧道) 假設隧道ID為1，伺服端IPv4為1.1.1.1 用戶端IPv4為8.8.8.8]
-配置文件中設置的IPv6子網為 2a0e:b107:7e0::，子網路遮罩為48(必須為8的倍數)工具會自動分割出 一個用於隧道的 /64子網及一個用於用戶路由的 /64子網">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://blog.steveyi.net/posts/"},{"@type":"ListItem","position":2,"name":"在 Ubuntu 系統下架設 Tunnel Broker 服務 (v4 to v6)","item":"https://blog.steveyi.net/posts/tunnel-broker-bgp/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"在 Ubuntu 系統下架設 Tunnel Broker 服務 (v4 to v6)","name":"在 Ubuntu 系統下架設 Tunnel Broker 服務 (v4 to v6)","description":"前言 之前拿到了一個自治號碼(AS Number)，也拿到了1個 /44 及兩個 /48 的iPv6\n恰好最近想到之前有使用過HE.Net的tunnel broker服務\n這次就來架設一下sit隧道的tunnel broker服務！本篇不會說明ipv6的取得方式，請自行詢問主機提供商\n本篇將使用開源工具-IPv6-in-IPv4 Tunnel\n配置工具 首先，將工具下載下來\ngit clone [https://github.com/sskaje/6in4.git](https://github.com/sskaje/6in4) 我們進入項目的etc資料夾，並修改config.ini\nnano config.ini 依序編輯 IPV6_NETWORK, IPV6_CIDR, INTERFACE, BIND_IP(有多iPv4需要)\n接著輸入 Crtl + X 來保存\n修改系統設定來允許iPv6轉發 nano /etc/sysctl.conf 在最下方添加下方這項net.ipv6.conf.all.forwarding = 1 Crtl + X 保存 sysctl -p 防火牆 iptables -I INPUT -p 41 --j ACCEPT iptables -I OUTPUT -p 41 --j ACCEPT iptables -I FORWARD -p 41 --j ACCEPT 使用工具建立伺服端(新增隧道) 假設隧道ID為1，伺服端IPv4為1.1.1.1 用戶端IPv4為8.8.8.8]\n配置文件中設置的IPv6子網為 2a0e:b107:7e0::，子網路遮罩為48(必須為8的倍數)工具會自動分割出 一個用於隧道的 /64子網及一個用於用戶路由的 /64子網","keywords":["VPS","伺服器","網域"],"articleBody":"前言 之前拿到了一個自治號碼(AS Number)，也拿到了1個 /44 及兩個 /48 的iPv6\n恰好最近想到之前有使用過HE.Net的tunnel broker服務\n這次就來架設一下sit隧道的tunnel broker服務！本篇不會說明ipv6的取得方式，請自行詢問主機提供商\n本篇將使用開源工具-IPv6-in-IPv4 Tunnel\n配置工具 首先，將工具下載下來\ngit clone [https://github.com/sskaje/6in4.git](https://github.com/sskaje/6in4) 我們進入項目的etc資料夾，並修改config.ini\nnano config.ini 依序編輯 IPV6_NETWORK, IPV6_CIDR, INTERFACE, BIND_IP(有多iPv4需要)\n接著輸入 Crtl + X 來保存\n修改系統設定來允許iPv6轉發 nano /etc/sysctl.conf 在最下方添加下方這項net.ipv6.conf.all.forwarding = 1 Crtl + X 保存 sysctl -p 防火牆 iptables -I INPUT -p 41 --j ACCEPT iptables -I OUTPUT -p 41 --j ACCEPT iptables -I FORWARD -p 41 --j ACCEPT 使用工具建立伺服端(新增隧道) 假設隧道ID為1，伺服端IPv4為1.1.1.1 用戶端IPv4為8.8.8.8]\n配置文件中設置的IPv6子網為 2a0e:b107:7e0::，子網路遮罩為48(必須為8的倍數)工具會自動分割出 一個用於隧道的 /64子網及一個用於用戶路由的 /64子網\n如果用戶端需要給其下級設備分配的話，建議伺服端的子網 應大於 /64，這樣才能產生 /64的下級子網，以保證SLAAC的運作。\n接著我們就可以至用戶端配置了！(配置過程可以參考https://tunnelbroker.net/)\n報錯：sipcalc required 我在第一次新增隧道時，遇到了這個問題\n解決方式如下\nCentOS: yum install sipcalc Ubuntu/Debian: apt-get install sipcalc 測試結果 https://test-ipv6.com/ 測試結果\n路由追蹤\n完成！\n參考資料： https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sit\nhttps://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/\nhttps://github.com/sskaje/6in4\nhttps://www.ciscopress.com/articles/article.asp?p=2154680\n","wordCount":"100","inLanguage":"tw","datePublished":"2020-05-31T16:56:41Z","dateModified":"2020-05-31T16:56:41Z","author":{"@type":"Person","name":"SteveYi"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.steveyi.net/posts/tunnel-broker-bgp/"},"publisher":{"@type":"Organization","name":"小易的部落格","logo":{"@type":"ImageObject","url":"https://blog.steveyi.net/favicon.ico"}}}</script>
-</head>
-<body id=top>
-<script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
-<header class=header>
-<nav class=nav>
-<div class=logo>
-<a href=https://blog.steveyi.net/ accesskey=h title="小易的部落格 (Alt + H)">小易的部落格</a>
-<div class=logo-switches>
-<button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-</button>
-<ul class=lang-switch><li>|</li>
-<li>
-<a href=https://blog.steveyi.net/en/ title=English aria-label=English>En</a>
-</li>
-</ul>
-</div>
-</div>
-<ul id=menu>
-<li>
-<a href=https://blog.steveyi.net/ title=首頁>
-<span>首頁</span>
-</a>
-</li>
-<li>
-<a href=https://blog.steveyi.net/posts/ title=文章列表>
-<span>文章列表</span>
-</a>
-</li>
-<li>
-<a href=https://blog.steveyi.net/about/ title=關於小易>
-<span>關於小易</span>
-</a>
-</li>
-</ul>
-</nav>
-</header>
-<main class=main>
-<article class=post-single>
-<header class=post-header>
-<h1 class=post-title>
-在 Ubuntu 系統下架設 Tunnel Broker 服務 (v4 to v6)
-</h1>
-<div class=post-meta><span title="2020-05-31 16:56:41 +0000 UTC">2020-05-31</span>&nbsp;·&nbsp;SteveYi
-</div>
-</header>
-<div class=post-content><h3 id=前言>前言<a hidden class=anchor aria-hidden=true href=#前言>#</a></h3>
-<p>之前拿到了一個自治號碼(AS Number)，也拿到了1個 /44 及兩個 /48 的iPv6<br>
-恰好最近想到之前有使用過HE.Net的tunnel broker服務<br>
-這次就來架設一下sit隧道的tunnel broker服務！本篇不會說明ipv6的取得方式，請自行詢問主機提供商</p>
-<p>本篇將使用開源工具-<a href=https://github.com/sskaje/6in4.git>IPv6-in-IPv4 Tunnel</a></p>
-<h3 id=配置工具>配置工具<a hidden class=anchor aria-hidden=true href=#配置工具>#</a></h3>
-<p>首先，將工具下載下來</p>
-<pre tabindex=0><code>git clone [https://github.com/sskaje/6in4.git](https://github.com/sskaje/6in4)
-</code></pre><p><img loading=lazy src=https://static-a1.steveyi.net/media/blog/2020053018041378.jpg alt>
-</p>
-<p>我們進入項目的etc資料夾，並修改config.ini</p>
-<pre tabindex=0><code>nano config.ini
-</code></pre><p><img loading=lazy src=https://static-a1.steveyi.net/media/blog/2020053018044764.jpg alt>
-</p>
-<p>依序編輯 IPV6_NETWORK, IPV6_CIDR, INTERFACE, BIND_IP(有多iPv4需要)</p>
-<p><img loading=lazy src=https://static-a1.steveyi.net/media/blog/2020053018050652.jpg alt>
-</p>
-<p>接著輸入 Crtl + X 來保存</p>
-<h3 id=修改系統設定來允許ipv6轉發>修改系統設定來允許iPv6轉發<a hidden class=anchor aria-hidden=true href=#修改系統設定來允許ipv6轉發>#</a></h3>
-<pre tabindex=0><code>nano /etc/sysctl.conf  
+配置文件中設置的IPv6子網為 2a0e:b107:7e0::，子網路遮罩為48(必須為8的倍數)工具會自動分割出 一個用於隧道的 /64子網及一個用於用戶路由的 /64子網"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://blog.steveyi.net/posts/"},{"@type":"ListItem","position":2,"name":"在 Ubuntu 系統下架設 Tunnel Broker 服務 (v4 to v6)","item":"https://blog.steveyi.net/posts/tunnel-broker-bgp/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"在 Ubuntu 系統下架設 Tunnel Broker 服務 (v4 to v6)","name":"在 Ubuntu 系統下架設 Tunnel Broker 服務 (v4 to v6)","description":"前言 之前拿到了一個自治號碼(AS Number)，也拿到了1個 /44 及兩個 /48 的iPv6\n恰好最近想到之前有使用過HE.Net的tunnel broker服務\n這次就來架設一下sit隧道的tunnel broker服務！本篇不會說明ipv6的取得方式，請自行詢問主機提供商\n本篇將使用開源工具-IPv6-in-IPv4 Tunnel\n配置工具 首先，將工具下載下來\ngit clone [https://github.com/sskaje/6in4.git](https://github.com/sskaje/6in4) 我們進入項目的etc資料夾，並修改config.ini\nnano config.ini 依序編輯 IPV6_NETWORK, IPV6_CIDR, INTERFACE, BIND_IP(有多iPv4需要)\n接著輸入 Crtl + X 來保存\n修改系統設定來允許iPv6轉發 nano /etc/sysctl.conf 在最下方添加下方這項net.ipv6.conf.all.forwarding = 1 Crtl + X 保存 sysctl -p 防火牆 iptables -I INPUT -p 41 --j ACCEPT iptables -I OUTPUT -p 41 --j ACCEPT iptables -I FORWARD -p 41 --j ACCEPT 使用工具建立伺服端(新增隧道) 假設隧道ID為1，伺服端IPv4為1.1.1.1 用戶端IPv4為8.8.8.8]\n配置文件中設置的IPv6子網為 2a0e:b107:7e0::，子網路遮罩為48(必須為8的倍數)工具會自動分割出 一個用於隧道的 /64子網及一個用於用戶路由的 /64子網","keywords":["VPS","伺服器","網域"],"articleBody":"前言 之前拿到了一個自治號碼(AS Number)，也拿到了1個 /44 及兩個 /48 的iPv6\n恰好最近想到之前有使用過HE.Net的tunnel broker服務\n這次就來架設一下sit隧道的tunnel broker服務！本篇不會說明ipv6的取得方式，請自行詢問主機提供商\n本篇將使用開源工具-IPv6-in-IPv4 Tunnel\n配置工具 首先，將工具下載下來\ngit clone [https://github.com/sskaje/6in4.git](https://github.com/sskaje/6in4) 我們進入項目的etc資料夾，並修改config.ini\nnano config.ini 依序編輯 IPV6_NETWORK, IPV6_CIDR, INTERFACE, BIND_IP(有多iPv4需要)\n接著輸入 Crtl + X 來保存\n修改系統設定來允許iPv6轉發 nano /etc/sysctl.conf 在最下方添加下方這項net.ipv6.conf.all.forwarding = 1 Crtl + X 保存 sysctl -p 防火牆 iptables -I INPUT -p 41 --j ACCEPT iptables -I OUTPUT -p 41 --j ACCEPT iptables -I FORWARD -p 41 --j ACCEPT 使用工具建立伺服端(新增隧道) 假設隧道ID為1，伺服端IPv4為1.1.1.1 用戶端IPv4為8.8.8.8]\n配置文件中設置的IPv6子網為 2a0e:b107:7e0::，子網路遮罩為48(必須為8的倍數)工具會自動分割出 一個用於隧道的 /64子網及一個用於用戶路由的 /64子網\n如果用戶端需要給其下級設備分配的話，建議伺服端的子網 應大於 /64，這樣才能產生 /64的下級子網，以保證SLAAC的運作。\n接著我們就可以至用戶端配置了！(配置過程可以參考https://tunnelbroker.net/)\n報錯：sipcalc required 我在第一次新增隧道時，遇到了這個問題\n解決方式如下\nCentOS: yum install sipcalc Ubuntu/Debian: apt-get install sipcalc 測試結果 https://test-ipv6.com/ 測試結果\n路由追蹤\n完成！\n參考資料： https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sit\nhttps://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/\nhttps://github.com/sskaje/6in4\nhttps://www.ciscopress.com/articles/article.asp?p=2154680\n","wordCount":"100","inLanguage":"tw","datePublished":"2020-05-31T16:56:41Z","dateModified":"2020-05-31T16:56:41Z","author":{"@type":"Person","name":"SteveYi"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.steveyi.net/posts/tunnel-broker-bgp/"},"publisher":{"@type":"Organization","name":"小易的部落格","logo":{"@type":"ImageObject","url":"https://blog.steveyi.net/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://blog.steveyi.net/ accesskey=h title="小易的部落格 (Alt + H)">小易的部落格</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button><ul class=lang-switch><li>|</li><li><a href=https://blog.steveyi.net/en/ title=English aria-label=English>En</a></li></ul></div></div><ul id=menu><li><a href=https://blog.steveyi.net/ title=首頁><span>首頁</span></a></li><li><a href=https://blog.steveyi.net/posts/ title=文章列表><span>文章列表</span></a></li><li><a href=https://blog.steveyi.net/about/ title=關於小易><span>關於小易</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><h1 class=post-title>在 Ubuntu 系統下架設 Tunnel Broker 服務 (v4 to v6)</h1><div class=post-meta><span title='2020-05-31 16:56:41 +0000 UTC'>2020-05-31</span>&nbsp;·&nbsp;SteveYi</div></header><div class=post-content><h3 id=前言>前言<a hidden class=anchor aria-hidden=true href=#前言>#</a></h3><p>之前拿到了一個自治號碼(AS Number)，也拿到了1個 /44 及兩個 /48 的iPv6<br>恰好最近想到之前有使用過HE.Net的tunnel broker服務<br>這次就來架設一下sit隧道的tunnel broker服務！本篇不會說明ipv6的取得方式，請自行詢問主機提供商</p><p>本篇將使用開源工具-<a href=https://github.com/sskaje/6in4.git>IPv6-in-IPv4 Tunnel</a></p><h3 id=配置工具>配置工具<a hidden class=anchor aria-hidden=true href=#配置工具>#</a></h3><p>首先，將工具下載下來</p><pre tabindex=0><code>git clone [https://github.com/sskaje/6in4.git](https://github.com/sskaje/6in4)
+</code></pre><p><img loading=lazy src=https://static-a1.steveyi.net/media/blog/2020053018041378.jpg alt></p><p>我們進入項目的etc資料夾，並修改config.ini</p><pre tabindex=0><code>nano config.ini
+</code></pre><p><img loading=lazy src=https://static-a1.steveyi.net/media/blog/2020053018044764.jpg alt></p><p>依序編輯 IPV6_NETWORK, IPV6_CIDR, INTERFACE, BIND_IP(有多iPv4需要)</p><p><img loading=lazy src=https://static-a1.steveyi.net/media/blog/2020053018050652.jpg alt></p><p>接著輸入 Crtl + X 來保存</p><h3 id=修改系統設定來允許ipv6轉發>修改系統設定來允許iPv6轉發<a hidden class=anchor aria-hidden=true href=#修改系統設定來允許ipv6轉發>#</a></h3><pre tabindex=0><code>nano /etc/sysctl.conf  
   
 在最下方添加下方這項net.ipv6.conf.all.forwarding = 1  
   
 Crtl + X 保存  
 sysctl -p
-</code></pre><h3 id=防火牆>防火牆<a hidden class=anchor aria-hidden=true href=#防火牆>#</a></h3>
-<pre tabindex=0><code>iptables -I INPUT -p 41 --j ACCEPT  
+</code></pre><h3 id=防火牆>防火牆<a hidden class=anchor aria-hidden=true href=#防火牆>#</a></h3><pre tabindex=0><code>iptables -I INPUT -p 41 --j ACCEPT  
 iptables -I OUTPUT -p 41 --j ACCEPT  
 iptables -I FORWARD -p 41 --j ACCEPT
-</code></pre><h3 id=使用工具建立伺服端新增隧道>使用工具建立伺服端(新增隧道)<a hidden class=anchor aria-hidden=true href=#使用工具建立伺服端新增隧道>#</a></h3>
-<p>假設隧道ID為1，伺服端IPv4為1.1.1.1 用戶端IPv4為8.8.8.8]</p>
-<p>配置文件中設置的IPv6子網為 2a0e:b107:7e0::，子網路遮罩為48(必須為8的倍數)工具會自動分割出 一個用於隧道的 /64子網及一個用於用戶路由的 /64子網</p>
-<p>如果用戶端需要給其下級設備分配的話，建議伺服端的子網 應大於 /64，這樣才能產生 /64的下級子網，以保證SLAAC的運作。</p>
-<p><img loading=lazy src=https://static-a1.steveyi.net/media/blog/2020053018052119.jpg alt>
-</p>
-<p>接著我們就可以至用戶端配置了！(配置過程可以參考<a href=https://tunnelbroker.net/>https://tunnelbroker.net/</a>)</p>
-<h3 id=報錯sipcalc-required>報錯：sipcalc required<a hidden class=anchor aria-hidden=true href=#報錯sipcalc-required>#</a></h3>
-<p>我在第一次新增隧道時，遇到了這個問題<br>
-解決方式如下</p>
-<pre tabindex=0><code>CentOS:  
+</code></pre><h3 id=使用工具建立伺服端新增隧道>使用工具建立伺服端(新增隧道)<a hidden class=anchor aria-hidden=true href=#使用工具建立伺服端新增隧道>#</a></h3><p>假設隧道ID為1，伺服端IPv4為1.1.1.1 用戶端IPv4為8.8.8.8]</p><p>配置文件中設置的IPv6子網為 2a0e:b107:7e0::，子網路遮罩為48(必須為8的倍數)工具會自動分割出 一個用於隧道的 /64子網及一個用於用戶路由的 /64子網</p><p>如果用戶端需要給其下級設備分配的話，建議伺服端的子網 應大於 /64，這樣才能產生 /64的下級子網，以保證SLAAC的運作。</p><p><img loading=lazy src=https://static-a1.steveyi.net/media/blog/2020053018052119.jpg alt></p><p>接著我們就可以至用戶端配置了！(配置過程可以參考<a href=https://tunnelbroker.net/>https://tunnelbroker.net/</a>)</p><h3 id=報錯sipcalc-required>報錯：sipcalc required<a hidden class=anchor aria-hidden=true href=#報錯sipcalc-required>#</a></h3><p>我在第一次新增隧道時，遇到了這個問題<br>解決方式如下</p><pre tabindex=0><code>CentOS:  
 yum install sipcalc  
 Ubuntu/Debian:  
 apt-get install sipcalc
-</code></pre><h3 id=測試結果>測試結果<a hidden class=anchor aria-hidden=true href=#測試結果>#</a></h3>
-<p><a href=https://test-ipv6.com/>https://test-ipv6.com/</a> 測試結果</p>
-<p><img loading=lazy src=https://static-a1.steveyi.net/media/blog/2020053018053577.png alt>
-</p>
-<p>路由追蹤</p>
-<p><img loading=lazy src=https://static-a1.steveyi.net/media/blog/2020053018054471.jpg alt>
-</p>
-<p>完成！</p>
-<h3 id=參考資料>參考資料：<a hidden class=anchor aria-hidden=true href=#參考資料>#</a></h3>
-<p><a href="https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sithttps://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/https://github.com/sskaje/6in4https://www.ciscopress.com/articles/article.asp?p=2154680">https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sit</a><br>
-<a href="https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sithttps://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/https://github.com/sskaje/6in4https://www.ciscopress.com/articles/article.asp?p=2154680">https://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/</a><br>
-<a href="https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sithttps://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/https://github.com/sskaje/6in4https://www.ciscopress.com/articles/article.asp?p=2154680">https://github.com/sskaje/6in4</a><br>
-<a href="https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sithttps://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/https://github.com/sskaje/6in4https://www.ciscopress.com/articles/article.asp?p=2154680">https://www.ciscopress.com/articles/article.asp?p=2154680</a></p>
-</div>
-<footer class=post-footer>
-<ul class=post-tags>
-<li><a href=https://blog.steveyi.net/tags/vps/>VPS</a></li>
-<li><a href=https://blog.steveyi.net/tags/%E4%BC%BA%E6%9C%8D%E5%99%A8/>伺服器</a></li>
-<li><a href=https://blog.steveyi.net/tags/%E7%B6%B2%E5%9F%9F/>網域</a></li>
-</ul>
-</footer>
-</article>
-</main>
-<footer class=footer>
-<span>&copy; 2022 <a href=https://blog.steveyi.net/>小易的部落格</a></span>
-<span>
-Powered by
+</code></pre><h3 id=測試結果>測試結果<a hidden class=anchor aria-hidden=true href=#測試結果>#</a></h3><p><a href=https://test-ipv6.com/>https://test-ipv6.com/</a> 測試結果</p><p><img loading=lazy src=https://static-a1.steveyi.net/media/blog/2020053018053577.png alt></p><p>路由追蹤</p><p><img loading=lazy src=https://static-a1.steveyi.net/media/blog/2020053018054471.jpg alt></p><p>完成！</p><h3 id=參考資料>參考資料：<a hidden class=anchor aria-hidden=true href=#參考資料>#</a></h3><p><a href="https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sithttps://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/https://github.com/sskaje/6in4https://www.ciscopress.com/articles/article.asp?p=2154680">https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sit</a><br><a href="https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sithttps://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/https://github.com/sskaje/6in4https://www.ciscopress.com/articles/article.asp?p=2154680">https://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/</a><br><a href="https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sithttps://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/https://github.com/sskaje/6in4https://www.ciscopress.com/articles/article.asp?p=2154680">https://github.com/sskaje/6in4</a><br><a href="https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels/#sithttps://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/https://github.com/sskaje/6in4https://www.ciscopress.com/articles/article.asp?p=2154680">https://www.ciscopress.com/articles/article.asp?p=2154680</a></p></div><footer class=post-footer><ul class=post-tags><li><a href=https://blog.steveyi.net/tags/vps/>VPS</a></li><li><a href=https://blog.steveyi.net/tags/%E4%BC%BA%E6%9C%8D%E5%99%A8/>伺服器</a></li><li><a href=https://blog.steveyi.net/tags/%E7%B6%B2%E5%9F%9F/>網域</a></li></ul></footer></article></main><footer class=footer><span>&copy; 2022 <a href=https://blog.steveyi.net/>小易的部落格</a></span>
+<span>Powered by
 <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-        <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a>
-</span>
-</footer>
-<a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
-</a>
-<script>let menu=document.getElementById('menu');menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script>
-<script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script>
-<script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script>
-</body>
-</html>
+        <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script></body></html>

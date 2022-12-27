@@ -114,7 +114,8 @@ Gmail傳統版
 接下來請按下「重新安裝macOS」
 進入安裝程式後請按下「繼續」，並同意條款。
 接下來選擇要安裝在哪個磁碟或卷宗
-接下來可能升級完成後會開機，如果進度條卡住而且沒有寫安裝剩餘時間可以試著強制關機(隨身碟還不用拔掉)，然後再次開機同時按option選擇macOS Base System來開機</description></item><item><title>使用CloudReady體驗ChromiumOS作業系統，老電腦重獲新生!</title><link>https://blog.steveyi.net/posts/cloudready/</link><pubDate>Mon, 10 Aug 2020 15:10:52 +0000</pubDate><guid>https://blog.steveyi.net/posts/cloudready/</guid><description>不曉得各位有沒有一種經驗，電腦老舊了，連文書處理和基本的瀏覽網頁都卡頓，但又不想使用太老舊的作業系統(官方停止提供新功能了，連瀏覽器也不提供更新支援了)，這時便可以下載最新版的CloudReady家用版來使用囉!既有最新版的瀏覽器，也有不少Web App能使用；也因為是基於瀏覽器的作業系統，因此資源占用比許多作業系統都少，也不用怕不習慣使用Linux作業系統(安裝軟體的方式很不一樣，使用邏輯也差很多，而且一直使用命令行也不是很直覺的用法)，所以，只要電腦支援64位元，幾乎都可以用CloudReady(試過家裡唯一一台32位元電腦，無法使用32位元版的CloudReady開機)
+接下來可能升級完成後會開機，如果進度條卡住而且沒有寫安裝剩餘時間可以試著強制關機(隨身碟還不用拔掉)，然後再次開機同時按option選擇macOS Base System來開機
+然後這次一樣回到macOS工具程式，這次選擇「macOS Post Install」才能解決驅動程式等問題</description></item><item><title>使用CloudReady體驗ChromiumOS作業系統，老電腦重獲新生!</title><link>https://blog.steveyi.net/posts/cloudready/</link><pubDate>Mon, 10 Aug 2020 15:10:52 +0000</pubDate><guid>https://blog.steveyi.net/posts/cloudready/</guid><description>不曉得各位有沒有一種經驗，電腦老舊了，連文書處理和基本的瀏覽網頁都卡頓，但又不想使用太老舊的作業系統(官方停止提供新功能了，連瀏覽器也不提供更新支援了)，這時便可以下載最新版的CloudReady家用版來使用囉!既有最新版的瀏覽器，也有不少Web App能使用；也因為是基於瀏覽器的作業系統，因此資源占用比許多作業系統都少，也不用怕不習慣使用Linux作業系統(安裝軟體的方式很不一樣，使用邏輯也差很多，而且一直使用命令行也不是很直覺的用法)，所以，只要電腦支援64位元，幾乎都可以用CloudReady(試過家裡唯一一台32位元電腦，無法使用32位元版的CloudReady開機)
 開始吧!
 準備材料有:
 8GB隨身碟(資料會洗掉，請先移除資料) 要安裝的電腦 首先請先到官網按下[DOWNLOAD 64-BIT IMAGE]下載64位元版安裝檔(32位元版已停止支援)

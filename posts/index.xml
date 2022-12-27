@@ -43,7 +43,7 @@ java -Xmx2048M -Xms1024M -jar server.jar nogui 就開啟你的 Minecraft 伺服�
 安裝 isc-dhcp-server 首先，我們需要先安裝一個套件，名為 isc-dhcp-server
 sudo apt install isc-dhcp-server 設置 DHCP Server 安裝完成後，我們需要編輯設定檔 /etc/dhcp/dhcpd.conf
 範例大概像這樣
-option domain-name &amp;quot;network.steveyi.net&amp;quot;; # 網域名稱 option domain-name-servers 8.8.8.8; # DNS Server default-lease-time 600; # 預設租賃時間 max-lease-time 3600; # 最大租賃時間 authoritative; # 網段，這邊分配 /24 使用 subnet 10.121.210.0 netmask 255.255.255.0 { range 10.121.210.1 10.121.210.253; option subnet-mask 255.255.255.0; option routers 10.121.210.254; } 接著，我們需要編輯發 DHCP 包的網卡 /etc/default/isc-dhcp-server
+option domain-name &amp;#34;network.steveyi.net&amp;#34;; # 網域名稱 option domain-name-servers 8.8.8.8; # DNS Server default-lease-time 600; # 預設租賃時間 max-lease-time 3600; # 最大租賃時間 authoritative; # 網段，這邊分配 /24 使用 subnet 10.121.210.0 netmask 255.255.255.0 { range 10.121.210.1 10.121.210.253; option subnet-mask 255.255.255.0; option routers 10.121.210.254; } 接著，我們需要編輯發 DHCP 包的網卡 /etc/default/isc-dhcp-server
 最後，輸入 service isc-dhcp-server restart
 這樣就完成囉～</description></item><item><title>將任何 Tweet 置頂到自己的 Twitter 上</title><link>https://blog.steveyi.net/posts/pin-any-tweet-on-twitter/</link><pubDate>Wed, 07 Apr 2021 19:00:27 +0800</pubDate><guid>https://blog.steveyi.net/posts/pin-any-tweet-on-twitter/</guid><description>在今天，我滑 Twitter 時，發現了一篇有趣的推文&amp;hellip;
 於是我馬上就跟 @edisonlee55 分享這個趣事
@@ -411,7 +411,8 @@ Important: It is strongly recommended that you do not use your MacBook or MacBoo
 接下來請按下「重新安裝macOS」
 進入安裝程式後請按下「繼續」，並同意條款。
 接下來選擇要安裝在哪個磁碟或卷宗
-接下來可能升級完成後會開機，如果進度條卡住而且沒有寫安裝剩餘時間可以試著強制關機(隨身碟還不用拔掉)，然後再次開機同時按option選擇macOS Base System來開機</description></item><item><title>macOS 重灌不求人！使用內建回復功能輕鬆重灌 Mac 電腦</title><link>https://blog.steveyi.net/posts/macos-recovery/</link><pubDate>Sat, 15 Aug 2020 07:25:12 +0000</pubDate><guid>https://blog.steveyi.net/posts/macos-recovery/</guid><description>很多時候很多種原因我們需要重灌作業系統，比如說系統裝了太多東西覺得變慢 懶得一個一個刪掉、或是換了新的磁碟機、升級Beta版想要降回來穩定發行版、或是系統升級過程中意外斷電等原因。Mac內建了一個好用的工具程式可以協助我們重灌。
+接下來可能升級完成後會開機，如果進度條卡住而且沒有寫安裝剩餘時間可以試著強制關機(隨身碟還不用拔掉)，然後再次開機同時按option選擇macOS Base System來開機
+然後這次一樣回到macOS工具程式，這次選擇「macOS Post Install」才能解決驅動程式等問題</description></item><item><title>macOS 重灌不求人！使用內建回復功能輕鬆重灌 Mac 電腦</title><link>https://blog.steveyi.net/posts/macos-recovery/</link><pubDate>Sat, 15 Aug 2020 07:25:12 +0000</pubDate><guid>https://blog.steveyi.net/posts/macos-recovery/</guid><description>很多時候很多種原因我們需要重灌作業系統，比如說系統裝了太多東西覺得變慢 懶得一個一個刪掉、或是換了新的磁碟機、升級Beta版想要降回來穩定發行版、或是系統升級過程中意外斷電等原因。Mac內建了一個好用的工具程式可以協助我們重灌。
 開始教學囉 首先請先將電腦開機，在蘋果圖像出現前按住command + R ，如果有韌體密碼會在此步驟要求解鎖。
 電腦會先嘗試使用內建的復原磁區開機，如果沒有找到復原磁區的話會使用Internet回復。
 Internet回復會使用Wi-Fi或乙太網路，如果找不到可用的網路就會出現驚嘆號的地球符號。
@@ -487,7 +488,7 @@ FRRouting 是從 Quagga Fork 來的路由套件，功能也十分強大（ 其�
 使用者指南（英文）：https://docs.frrouting.org/en/latest/
 GitHub 專案：https://github.com/FRRouting/frr/releases
 首先，我們要先來安裝 FRRouting
-更新套件 sudo apt update -y sudo apt upgrade -y # 安裝網路套件及 GPG 套件 sudo apt install -y curl gnupg2 traceroute 安裝 FRRouting # 導入 GPG curl -s https://deb.frrouting.org/frr/keys.asc | sudo apt-key add - FRRVER=&amp;quot;frr-stable&amp;quot; # 寫入軟體源 echo deb https://deb.frrouting.org/frr $(lsb_release -s -c) $FRRVER | sudo tee -a /etc/apt/sources.</description></item><item><title>幫 Spotify 或其他音樂軟體加上實時歌詞的方法 (Android)</title><link>https://blog.steveyi.net/posts/dynamic-lyrics-android/</link><pubDate>Sat, 11 Jul 2020 10:00:12 +0000</pubDate><guid>https://blog.steveyi.net/posts/dynamic-lyrics-android/</guid><description>上次有一篇介紹各家串流平台的免費會員比較，各位可以發現實時歌詞很多家平台都有
+更新套件 sudo apt update -y sudo apt upgrade -y # 安裝網路套件及 GPG 套件 sudo apt install -y curl gnupg2 traceroute 安裝 FRRouting # 導入 GPG curl -s https://deb.frrouting.org/frr/keys.asc | sudo apt-key add - FRRVER=&amp;#34;frr-stable&amp;#34; # 寫入軟體源 echo deb https://deb.frrouting.org/frr $(lsb_release -s -c) $FRRVER | sudo tee -a /etc/apt/sources.</description></item><item><title>幫 Spotify 或其他音樂軟體加上實時歌詞的方法 (Android)</title><link>https://blog.steveyi.net/posts/dynamic-lyrics-android/</link><pubDate>Sat, 11 Jul 2020 10:00:12 +0000</pubDate><guid>https://blog.steveyi.net/posts/dynamic-lyrics-android/</guid><description>上次有一篇介紹各家串流平台的免費會員比較，各位可以發現實時歌詞很多家平台都有
 但Spotify根據筆者測試只有Premium用戶能用或是有些平台沒有歌詞服務，稍嫌可惜
 這時想要聽著Spotify或其他沒歌詞的平台的免費音樂，但又覺得沒歌詞不能一起唱很麻煩嗎 這時候照這篇文章做就可以解決這個問題囉
 這篇文章適用Android用戶，iOS/iPadOS用戶在另外一篇唷
@@ -746,14 +747,33 @@ Android裝置需要先打開USB偵錯 打開Android手機，找到關於手機�
 USB安裝建議打開，畢竟Scrcpy拖拉安裝安裝功能滿好用的(詳見這篇)
 「安全設定」彈窗請一路按下一步，記得要插SIM卡
 (不然按到後來會跳出請插卡的提示） 如果遇到陌生電腦記得在手機上面按允許偵錯唷 接下來請到電腦進行環境安裝 PC環境安裝 請下載最新版工具包並且解壓縮（筆者習慣解壓縮到C槽目錄下）
-也可以跟ADB驅動安裝檔一起裝在隨身碟帶著走唷
-到adb.clockworkmod.com按下白色的Download按鈕安裝ADB驅動 (如果有安裝過ADB驅動程式者請直接跳過這部分)
+也可以跟ADB驅動安裝檔一起裝在隨身碟帶著走唷 到adb.clockworkmod.com按下白色的Download按鈕安裝ADB驅動 (如果有安裝過ADB驅動程式者請直接跳過這部分)
 一路按下右下角的Next，預設選項夠我們用了 要求權限的話就給他唄，請按「是」 裝完請按Close 打開Scrcpy所在資料夾，找到scrcpy-noconsole.exe並雙擊執行它，便可以操作了 控制方式 主要操作 : 滑鼠左鍵&amp;gt;點擊 . 滑鼠中鍵&amp;gt;回主畫面 . 滑鼠右鍵&amp;gt;返回 其他功能快捷鍵↓
 動作
 快捷鍵
 全螢幕模式
 Ctrl+f
-調整視窗 1:1 比例</description></item><item><title>在 Linux 系統上安裝 Wireguard</title><link>https://blog.steveyi.net/posts/how-to-install-wireguard/</link><pubDate>Sat, 16 May 2020 11:51:52 +0000</pubDate><guid>https://blog.steveyi.net/posts/how-to-install-wireguard/</guid><description>Wireguard是一個點對點加密網路
+調整視窗 1:1 比例
+Ctrl+g
+調整視窗將黑邊去除
+Ctrl+x
+主畫面
+Ctrl+h 返回
+Ctrl+b
+多工
+Ctrl+s
+菜單鍵
+Ctrl+m
+音量上鍵
+Ctrl+↑
+音量下鍵
+Ctrl+↓ 電源鍵
+Ctrl+p
+點亮螢幕
+鎖屏時滑鼠右鍵
+從電腦安裝 apk 檔案
+拖拉APK檔案
+Mac環境安裝 請先安裝 Homebrew，如果有安裝過的話請跳過此步驟 打開終端機（系統內建的工具程式） 輸入</description></item><item><title>在 Linux 系統上安裝 Wireguard</title><link>https://blog.steveyi.net/posts/how-to-install-wireguard/</link><pubDate>Sat, 16 May 2020 11:51:52 +0000</pubDate><guid>https://blog.steveyi.net/posts/how-to-install-wireguard/</guid><description>Wireguard是一個點對點加密網路
 一直以來，我都使用它來管理我所有的雲端主機
 今天就來分享一下安裝方法吧！
 安裝指令請參考 https://www.wireguard.com/install/
@@ -950,8 +970,7 @@ Receive notifications when this runs 的意思是這件事發生時要不要收�
 我個人是沒開拉，但這個就自己決定吧
 接下來如果被要求權限請不要拒絕!!!
 否則功能無法正常運作!!!
-Connected的開關就是這項功能的開關
-不想用的時候可以關起來，隨時都可以再打開</description></item><item><title>[教學] AWS Route 53 代管DNS</title><link>https://blog.steveyi.net/posts/aws-route53/</link><pubDate>Mon, 06 Apr 2020 14:38:57 +0000</pubDate><guid>https://blog.steveyi.net/posts/aws-route53/</guid><description>從2017年 註冊了第一個網域之後，DNS 代管商一直是我在研究的一個部分！
+Connected的開關就是這項功能的開關</description></item><item><title>[教學] AWS Route 53 代管DNS</title><link>https://blog.steveyi.net/posts/aws-route53/</link><pubDate>Mon, 06 Apr 2020 14:38:57 +0000</pubDate><guid>https://blog.steveyi.net/posts/aws-route53/</guid><description>從2017年 註冊了第一個網域之後，DNS 代管商一直是我在研究的一個部分！
 今天來推薦一下由 AWS 推出的 DNS 代管服務 - Route 53
 前置作業：
 AWS帳號
@@ -1034,7 +1053,10 @@ iOS 裝置如果很慢，降級會比較流暢
 打錯了如果重開可能導致系統損毀需要重刷！
 打錯也別擔心如果沒有重開的話只要更正存檔就可以放心重開了
 Product Version改 6.1.3
-ProductBuildVersion改 10B329</description></item><item><title>專為 GCP 打造的 Windows 10 DD 鏡像</title><link>https://blog.steveyi.net/posts/gcp-windows-dd/</link><pubDate>Tue, 27 Aug 2019 15:07:49 +0000</pubDate><guid>https://blog.steveyi.net/posts/gcp-windows-dd/</guid><description>前陣子為了要在 GCP 使用 VPS，於是在一段時間裡製作了 Windows DD 鏡像
+ProductBuildVersion改 10B329
+2.存檔修改後記得確認版本號無誤才可重開
+3.重新啟動，重啟跑完進度條需要一段時間，開完機之後請重設裝置，設定精靈的地方隨便設，只要能進到主畫面就行了（不要還原任何的備份！），重設的地方在
+設定-&amp;gt;一般-&amp;gt;重置-&amp;gt;清除所有內容和設定 重設之後進到設定檢查更新，會看到更新的地方有iOS 8.4.1的更新，點下去，並安裝</description></item><item><title>專為 GCP 打造的 Windows 10 DD 鏡像</title><link>https://blog.steveyi.net/posts/gcp-windows-dd/</link><pubDate>Tue, 27 Aug 2019 15:07:49 +0000</pubDate><guid>https://blog.steveyi.net/posts/gcp-windows-dd/</guid><description>前陣子為了要在 GCP 使用 VPS，於是在一段時間裡製作了 Windows DD 鏡像
 分別是：
 1，中文繁體版 Windows 10 工作站專業版
 2，英文版 Windows 10 工作站專業版(尚未上傳)

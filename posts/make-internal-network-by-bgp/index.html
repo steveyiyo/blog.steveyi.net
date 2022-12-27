@@ -1,11 +1,4 @@
-<!doctype html><html lang=tw dir=auto>
-<head><meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
-<meta name=robots content="index, follow">
-<title>透過 BGP 與朋友組成內網 | 小易的部落格</title>
-<meta name=keywords content="BGP,Network">
-<meta name=description content="嗨！好久不見！
+<!doctype html><html lang=tw dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>透過 BGP 與朋友組成內網 | 小易的部落格</title><meta name=keywords content="BGP,Network"><meta name=description content="嗨！好久不見！
 在 2020 初時，我拿到了第一個 ASN號碼 - AS209557
 我也使用了 RFC 1918 所定義的 IP Address ，與我一些朋友透過 BGP 及 Internet 隧道 組成了一個大內網
 那麼，讓我們開始吧！
@@ -17,27 +10,9 @@ WireGuard 則是在 2019 年 9 月 推出的點對點隧道，在 2020 年 3 月
 那接著，是我與我朋友的對等信息
 PS. 部分 IP Address 被基於安全因素，可能與實際使用的 IP Address 不同
 我的資料
-公網 IP Address: 59.126.1.1 隧道內 IP Address: 10.">
-<meta name=author content="SteveYi">
-<link rel=canonical href=https://blog.steveyi.net/posts/make-internal-network-by-bgp/>
-<link crossorigin=anonymous href=/assets/css/stylesheet.bccfefac377bc340f06c260aed1bddf49a4354816d7c570d6aac75a997986c95.css integrity="sha256-vM/vrDd7w0DwbCYK7Rvd9JpDVIFtfFcNaqx1qZeYbJU=" rel="preload stylesheet" as=style>
-<script defer crossorigin=anonymous src=/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG+9vmJ0cTS+ovo0FeA=" onload=hljs.initHighlightingOnLoad()></script>
-<link rel=icon href=https://blog.steveyi.net/favicon.ico>
-<link rel=icon type=image/png sizes=16x16 href=https://blog.steveyi.net/favicon-16x16.png>
-<link rel=icon type=image/png sizes=32x32 href=https://blog.steveyi.net/favicon-32x32.png>
-<link rel=apple-touch-icon href=https://blog.steveyi.net/apple-touch-icon.png>
-<link rel=mask-icon href=https://blog.steveyi.net/safari-pinned-tab.svg>
-<meta name=theme-color content="#2e2e33">
-<meta name=msapplication-TileColor content="#2e2e33">
-<link rel=alternate hreflang=tw href=https://blog.steveyi.net/posts/make-internal-network-by-bgp/>
-<noscript>
-<style>#theme-toggle,.top-link{display:none}</style>
-<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
-</noscript>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CPGWT2M3VT"></script>
-<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-CPGWT2M3VT',{anonymize_ip:!1})}</script>
-<meta property="og:title" content="透過 BGP 與朋友組成內網">
-<meta property="og:description" content="嗨！好久不見！
+公網 IP Address: 59.126.1.1 隧道內 IP Address: 10."><meta name=author content="SteveYi"><link rel=canonical href=https://blog.steveyi.net/posts/make-internal-network-by-bgp/><link crossorigin=anonymous href=/assets/css/stylesheet.bccfefac377bc340f06c260aed1bddf49a4354816d7c570d6aac75a997986c95.css integrity="sha256-vM/vrDd7w0DwbCYK7Rvd9JpDVIFtfFcNaqx1qZeYbJU=" rel="preload stylesheet" as=style><script defer crossorigin=anonymous src=/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG+9vmJ0cTS+ovo0FeA=" onload=hljs.initHighlightingOnLoad()></script>
+<link rel=icon href=https://blog.steveyi.net/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://blog.steveyi.net/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://blog.steveyi.net/favicon-32x32.png><link rel=apple-touch-icon href=https://blog.steveyi.net/apple-touch-icon.png><link rel=mask-icon href=https://blog.steveyi.net/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=tw href=https://blog.steveyi.net/posts/make-internal-network-by-bgp/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><script async src="https://www.googletagmanager.com/gtag/js?id=G-CPGWT2M3VT"></script>
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-CPGWT2M3VT",{anonymize_ip:!1})}</script><meta property="og:title" content="透過 BGP 與朋友組成內網"><meta property="og:description" content="嗨！好久不見！
 在 2020 初時，我拿到了第一個 ASN號碼 - AS209557
 我也使用了 RFC 1918 所定義的 IP Address ，與我一些朋友透過 BGP 及 Internet 隧道 組成了一個大內網
 那麼，讓我們開始吧！
@@ -49,14 +24,7 @@ WireGuard 則是在 2019 年 9 月 推出的點對點隧道，在 2020 年 3 月
 那接著，是我與我朋友的對等信息
 PS. 部分 IP Address 被基於安全因素，可能與實際使用的 IP Address 不同
 我的資料
-公網 IP Address: 59.126.1.1 隧道內 IP Address: 10.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://blog.steveyi.net/posts/make-internal-network-by-bgp/"><meta property="article:section" content="posts">
-<meta property="article:published_time" content="2021-01-24T02:00:00+00:00">
-<meta property="article:modified_time" content="2021-01-24T02:00:00+00:00"><meta property="og:site_name" content="小易的部落格">
-<meta name=twitter:card content="summary">
-<meta name=twitter:title content="透過 BGP 與朋友組成內網">
-<meta name=twitter:description content="嗨！好久不見！
+公網 IP Address: 59.126.1.1 隧道內 IP Address: 10."><meta property="og:type" content="article"><meta property="og:url" content="https://blog.steveyi.net/posts/make-internal-network-by-bgp/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2021-01-24T02:00:00+00:00"><meta property="article:modified_time" content="2021-01-24T02:00:00+00:00"><meta property="og:site_name" content="小易的部落格"><meta name=twitter:card content="summary"><meta name=twitter:title content="透過 BGP 與朋友組成內網"><meta name=twitter:description content="嗨！好久不見！
 在 2020 初時，我拿到了第一個 ASN號碼 - AS209557
 我也使用了 RFC 1918 所定義的 IP Address ，與我一些朋友透過 BGP 及 Internet 隧道 組成了一個大內網
 那麼，讓我們開始吧！
@@ -68,73 +36,11 @@ WireGuard 則是在 2019 年 9 月 推出的點對點隧道，在 2020 年 3 月
 那接著，是我與我朋友的對等信息
 PS. 部分 IP Address 被基於安全因素，可能與實際使用的 IP Address 不同
 我的資料
-公網 IP Address: 59.126.1.1 隧道內 IP Address: 10.">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://blog.steveyi.net/posts/"},{"@type":"ListItem","position":2,"name":"透過 BGP 與朋友組成內網","item":"https://blog.steveyi.net/posts/make-internal-network-by-bgp/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"透過 BGP 與朋友組成內網","name":"透過 BGP 與朋友組成內網","description":"嗨！好久不見！\n在 2020 初時，我拿到了第一個 ASN號碼 - AS209557\n我也使用了 RFC 1918 所定義的 IP Address ，與我一些朋友透過 BGP 及 Internet 隧道 組成了一個大內網\n那麼，讓我們開始吧！\n首先，我們使用 Ubuntu 20.04 來建立隧道，並與其他人建立 BGP 對等\n那通常，我都是使用 GRE, SIT 或是 WireGuard\n其中，GRE 或 SIT 隧道是屬於非加密隧道，在公網上是可以查看到其封包的。若要加密需要配上 IPsec\nWireGuard 則是在 2019 年 9 月 推出的點對點隧道，在 2020 年 3 月 已列入 Linux 內核\n（其實更早就在 Beta 了，但小易用 WireGuard 時已經是屬於穩定版了）\n那接著，是我與我朋友的對等信息\nPS. 部分 IP Address 被基於安全因素，可能與實際使用的 IP Address 不同\n我的資料\n公網 IP Address: 59.126.1.1 隧道內 IP Address: 10.","keywords":["BGP","Network"],"articleBody":"嗨！好久不見！\n在 2020 初時，我拿到了第一個 ASN號碼 - AS209557\n我也使用了 RFC 1918 所定義的 IP Address ，與我一些朋友透過 BGP 及 Internet 隧道 組成了一個大內網\n那麼，讓我們開始吧！\n首先，我們使用 Ubuntu 20.04 來建立隧道，並與其他人建立 BGP 對等\n那通常，我都是使用 GRE, SIT 或是 WireGuard\n其中，GRE 或 SIT 隧道是屬於非加密隧道，在公網上是可以查看到其封包的。若要加密需要配上 IPsec\nWireGuard 則是在 2019 年 9 月 推出的點對點隧道，在 2020 年 3 月 已列入 Linux 內核\n（其實更早就在 Beta 了，但小易用 WireGuard 時已經是屬於穩定版了）\n那接著，是我與我朋友的對等信息\nPS. 部分 IP Address 被基於安全因素，可能與實際使用的 IP Address 不同\n我的資料\n公網 IP Address: 59.126.1.1 隧道內 IP Address: 10.0.0.1/30 對方資料\n公網 IP Address: 140.113.1.1 隧道內 IP Address: 10.0.0.2/30 建立完隧道之後，我們嘗試 ICMP PING 看看\nroot@tw-stuin:~# ping 10.0.0.2 PING 10.0.0.2 (10.0.0.2) 56(84) bytes of data. 64 bytes from 10.0.0.2: icmp_seq=1 ttl=64 time=3.26 ms 64 bytes from 10.0.0.2: icmp_seq=2 ttl=64 time=3.22 ms 64 bytes from 10.0.0.2: icmp_seq=3 ttl=64 time=3.24 ms --- 10.0.0.2 ping statistics --- 3 packets transmitted, 3 received, 0% packet loss, time 2003ms rtt min/avg/max/mdev = 3.223/3.242/3.259/0.014 ms 好，看起來通了！\n那接著，透過 BGP 協議來組建大內網了！\n首先，我們必須要在 Linux 上安裝一個 BGP Routing Daemon\n在 Linux 系統上，大部分人都使用 BIRD 或是 FRRouting\nBIRD 比較類似於寫程式的概念(? FRRouting 則是類似於 Cisco 的概念(?\n至少我是這樣認為的，但本篇是使用 FRRouting 來進行操作\n首先，我們可以先參考 這篇文章 來安裝 FRRouting\n安裝完成之後，我們進入 Cli\nvtysh 接著，我們輸入以下指令，來開通 BGP 功能 PS. 如果沒有公網 ASN，可以使用 Private ASN 可參考 RFC 6996\nrouter bgp 你的ASN 再來，我們輸入對等方資訊\nneighbor 10.0.0.2 remote-as 對面的ASN 由於是 IPv4 Peer，所以我們需要到 address-family ipv4 來進行設定。以此類推，如果設定 IPv6 的話，則是 address-family ipv6\naddress-family ipv4 接著，我們可以發我們家的內部路由給對面。注意！不要將不屬於自己的路由隨便發給他，否則可能會造成 BGP hijacking\n這邊發 10.10.1.0/24 及 192.168.99.0/24 這條路由給對方\nnetwork 10.10.1.0/24 network 192.168.99.0/24 這邊也建議與對方先溝通好預計會廣播的路由，讓對方可以配好 filter，防止雙方有一方配錯\n後記：\n理論上大概這樣就可以通了！但要特別注意的是，在 ping 對方的時候，記得加上 Source IP Address!! 因為對方可能不會收隧道 IP Address\n但 FRRouting 在 7.5 版時，加入了 RFC 8212\n若沒有明確的路由策略，則不會將路由寫入系統路由表中，也不會發路由給對方\n","wordCount":"235","inLanguage":"tw","datePublished":"2021-01-24T02:00:00Z","dateModified":"2021-01-24T02:00:00Z","author":{"@type":"Person","name":"SteveYi"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.steveyi.net/posts/make-internal-network-by-bgp/"},"publisher":{"@type":"Organization","name":"小易的部落格","logo":{"@type":"ImageObject","url":"https://blog.steveyi.net/favicon.ico"}}}</script>
-</head>
-<body id=top>
-<script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
-<header class=header>
-<nav class=nav>
-<div class=logo>
-<a href=https://blog.steveyi.net/ accesskey=h title="小易的部落格 (Alt + H)">小易的部落格</a>
-<div class=logo-switches>
-<button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-</button>
-<ul class=lang-switch><li>|</li>
-<li>
-<a href=https://blog.steveyi.net/en/ title=English aria-label=English>En</a>
-</li>
-</ul>
-</div>
-</div>
-<ul id=menu>
-<li>
-<a href=https://blog.steveyi.net/ title=首頁>
-<span>首頁</span>
-</a>
-</li>
-<li>
-<a href=https://blog.steveyi.net/posts/ title=文章列表>
-<span>文章列表</span>
-</a>
-</li>
-<li>
-<a href=https://blog.steveyi.net/about/ title=關於小易>
-<span>關於小易</span>
-</a>
-</li>
-</ul>
-</nav>
-</header>
-<main class=main>
-<article class=post-single>
-<header class=post-header>
-<h1 class=post-title>
-透過 BGP 與朋友組成內網
-</h1>
-<div class=post-meta><span title="2021-01-24 02:00:00 +0000 UTC">2021-01-24</span>&nbsp;·&nbsp;SteveYi
-</div>
-</header>
-<div class=post-content><p>嗨！好久不見！</p>
-<p>在 2020 初時，我拿到了第一個 ASN號碼 - <a href=https://bgp.he.net/AS209557/>AS209557</a></p>
-<p>我也使用了 <a href=https://tools.ietf.org/html/rfc1918>RFC 1918</a> 所定義的 IP Address ，與我一些朋友透過 BGP 及 Internet 隧道 組成了一個大內網</p>
-<p>那麼，讓我們開始吧！</p>
-<p>首先，我們使用 Ubuntu 20.04 來建立隧道，並與其他人建立 BGP 對等</p>
-<p>那通常，我都是使用 GRE, SIT 或是 WireGuard</p>
-<p>其中，GRE 或 SIT 隧道是屬於非加密隧道，在公網上是可以查看到其封包的。若要加密需要配上 IPsec</p>
-<p>WireGuard 則是在 2019 年 9 月 推出的點對點隧道，在 2020 年 3 月 已列入 Linux 內核</p>
-<p>（其實更早就在 Beta 了，但小易用 WireGuard 時已經是屬於穩定版了）</p>
-<p>那接著，是我與我朋友的對等信息</p>
-<p>PS. 部分 IP Address 被基於安全因素，可能與實際使用的 IP Address 不同</p>
-<p>我的資料</p>
-<pre tabindex=0><code>公網 IP Address: 59.126.1.1
+公網 IP Address: 59.126.1.1 隧道內 IP Address: 10."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://blog.steveyi.net/posts/"},{"@type":"ListItem","position":2,"name":"透過 BGP 與朋友組成內網","item":"https://blog.steveyi.net/posts/make-internal-network-by-bgp/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"透過 BGP 與朋友組成內網","name":"透過 BGP 與朋友組成內網","description":"嗨！好久不見！\n在 2020 初時，我拿到了第一個 ASN號碼 - AS209557\n我也使用了 RFC 1918 所定義的 IP Address ，與我一些朋友透過 BGP 及 Internet 隧道 組成了一個大內網\n那麼，讓我們開始吧！\n首先，我們使用 Ubuntu 20.04 來建立隧道，並與其他人建立 BGP 對等\n那通常，我都是使用 GRE, SIT 或是 WireGuard\n其中，GRE 或 SIT 隧道是屬於非加密隧道，在公網上是可以查看到其封包的。若要加密需要配上 IPsec\nWireGuard 則是在 2019 年 9 月 推出的點對點隧道，在 2020 年 3 月 已列入 Linux 內核\n（其實更早就在 Beta 了，但小易用 WireGuard 時已經是屬於穩定版了）\n那接著，是我與我朋友的對等信息\nPS. 部分 IP Address 被基於安全因素，可能與實際使用的 IP Address 不同\n我的資料\n公網 IP Address: 59.126.1.1 隧道內 IP Address: 10.","keywords":["BGP","Network"],"articleBody":"嗨！好久不見！\n在 2020 初時，我拿到了第一個 ASN號碼 - AS209557\n我也使用了 RFC 1918 所定義的 IP Address ，與我一些朋友透過 BGP 及 Internet 隧道 組成了一個大內網\n那麼，讓我們開始吧！\n首先，我們使用 Ubuntu 20.04 來建立隧道，並與其他人建立 BGP 對等\n那通常，我都是使用 GRE, SIT 或是 WireGuard\n其中，GRE 或 SIT 隧道是屬於非加密隧道，在公網上是可以查看到其封包的。若要加密需要配上 IPsec\nWireGuard 則是在 2019 年 9 月 推出的點對點隧道，在 2020 年 3 月 已列入 Linux 內核\n（其實更早就在 Beta 了，但小易用 WireGuard 時已經是屬於穩定版了）\n那接著，是我與我朋友的對等信息\nPS. 部分 IP Address 被基於安全因素，可能與實際使用的 IP Address 不同\n我的資料\n公網 IP Address: 59.126.1.1 隧道內 IP Address: 10.0.0.1/30 對方資料\n公網 IP Address: 140.113.1.1 隧道內 IP Address: 10.0.0.2/30 建立完隧道之後，我們嘗試 ICMP PING 看看\nroot@tw-stuin:~# ping 10.0.0.2 PING 10.0.0.2 (10.0.0.2) 56(84) bytes of data. 64 bytes from 10.0.0.2: icmp_seq=1 ttl=64 time=3.26 ms 64 bytes from 10.0.0.2: icmp_seq=2 ttl=64 time=3.22 ms 64 bytes from 10.0.0.2: icmp_seq=3 ttl=64 time=3.24 ms --- 10.0.0.2 ping statistics --- 3 packets transmitted, 3 received, 0% packet loss, time 2003ms rtt min/avg/max/mdev = 3.223/3.242/3.259/0.014 ms 好，看起來通了！\n那接著，透過 BGP 協議來組建大內網了！\n首先，我們必須要在 Linux 上安裝一個 BGP Routing Daemon\n在 Linux 系統上，大部分人都使用 BIRD 或是 FRRouting\nBIRD 比較類似於寫程式的概念(? FRRouting 則是類似於 Cisco 的概念(?\n至少我是這樣認為的，但本篇是使用 FRRouting 來進行操作\n首先，我們可以先參考 這篇文章 來安裝 FRRouting\n安裝完成之後，我們進入 Cli\nvtysh 接著，我們輸入以下指令，來開通 BGP 功能 PS. 如果沒有公網 ASN，可以使用 Private ASN 可參考 RFC 6996\nrouter bgp 你的ASN 再來，我們輸入對等方資訊\nneighbor 10.0.0.2 remote-as 對面的ASN 由於是 IPv4 Peer，所以我們需要到 address-family ipv4 來進行設定。以此類推，如果設定 IPv6 的話，則是 address-family ipv6\naddress-family ipv4 接著，我們可以發我們家的內部路由給對面。注意！不要將不屬於自己的路由隨便發給他，否則可能會造成 BGP hijacking\n這邊發 10.10.1.0/24 及 192.168.99.0/24 這條路由給對方\nnetwork 10.10.1.0/24 network 192.168.99.0/24 這邊也建議與對方先溝通好預計會廣播的路由，讓對方可以配好 filter，防止雙方有一方配錯\n後記：\n理論上大概這樣就可以通了！但要特別注意的是，在 ping 對方的時候，記得加上 Source IP Address!! 因為對方可能不會收隧道 IP Address\n但 FRRouting 在 7.5 版時，加入了 RFC 8212\n若沒有明確的路由策略，則不會將路由寫入系統路由表中，也不會發路由給對方\n","wordCount":"235","inLanguage":"tw","datePublished":"2021-01-24T02:00:00Z","dateModified":"2021-01-24T02:00:00Z","author":{"@type":"Person","name":"SteveYi"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.steveyi.net/posts/make-internal-network-by-bgp/"},"publisher":{"@type":"Organization","name":"小易的部落格","logo":{"@type":"ImageObject","url":"https://blog.steveyi.net/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://blog.steveyi.net/ accesskey=h title="小易的部落格 (Alt + H)">小易的部落格</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button><ul class=lang-switch><li>|</li><li><a href=https://blog.steveyi.net/en/ title=English aria-label=English>En</a></li></ul></div></div><ul id=menu><li><a href=https://blog.steveyi.net/ title=首頁><span>首頁</span></a></li><li><a href=https://blog.steveyi.net/posts/ title=文章列表><span>文章列表</span></a></li><li><a href=https://blog.steveyi.net/about/ title=關於小易><span>關於小易</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><h1 class=post-title>透過 BGP 與朋友組成內網</h1><div class=post-meta><span title='2021-01-24 02:00:00 +0000 UTC'>2021-01-24</span>&nbsp;·&nbsp;SteveYi</div></header><div class=post-content><p>嗨！好久不見！</p><p>在 2020 初時，我拿到了第一個 ASN號碼 - <a href=https://bgp.he.net/AS209557/>AS209557</a></p><p>我也使用了 <a href=https://tools.ietf.org/html/rfc1918>RFC 1918</a> 所定義的 IP Address ，與我一些朋友透過 BGP 及 Internet 隧道 組成了一個大內網</p><p>那麼，讓我們開始吧！</p><p>首先，我們使用 Ubuntu 20.04 來建立隧道，並與其他人建立 BGP 對等</p><p>那通常，我都是使用 GRE, SIT 或是 WireGuard</p><p>其中，GRE 或 SIT 隧道是屬於非加密隧道，在公網上是可以查看到其封包的。若要加密需要配上 IPsec</p><p>WireGuard 則是在 2019 年 9 月 推出的點對點隧道，在 2020 年 3 月 已列入 Linux 內核</p><p>（其實更早就在 Beta 了，但小易用 WireGuard 時已經是屬於穩定版了）</p><p>那接著，是我與我朋友的對等信息</p><p>PS. 部分 IP Address 被基於安全因素，可能與實際使用的 IP Address 不同</p><p>我的資料</p><pre tabindex=0><code>公網 IP Address: 59.126.1.1
 隧道內 IP Address: 10.0.0.1/30
-</code></pre><p>對方資料</p>
-<pre tabindex=0><code>公網 IP Address: 140.113.1.1
+</code></pre><p>對方資料</p><pre tabindex=0><code>公網 IP Address: 140.113.1.1
 隧道內 IP Address: 10.0.0.2/30
-</code></pre><p>建立完隧道之後，我們嘗試 ICMP PING 看看</p>
-<pre tabindex=0><code>root@tw-stuin:~# ping 10.0.0.2
+</code></pre><p>建立完隧道之後，我們嘗試 ICMP PING 看看</p><pre tabindex=0><code>root@tw-stuin:~# ping 10.0.0.2
 PING 10.0.0.2 (10.0.0.2) 56(84) bytes of data.
 64 bytes from 10.0.0.2: icmp_seq=1 ttl=64 time=3.26 ms
 64 bytes from 10.0.0.2: icmp_seq=2 ttl=64 time=3.22 ms
@@ -142,51 +48,13 @@ PING 10.0.0.2 (10.0.0.2) 56(84) bytes of data.
 --- 10.0.0.2 ping statistics ---
 3 packets transmitted, 3 received, 0% packet loss, time 2003ms
 rtt min/avg/max/mdev = 3.223/3.242/3.259/0.014 ms
-</code></pre><p>好，看起來通了！</p>
-<p>那接著，透過 BGP 協議來組建大內網了！</p>
-<p>首先，我們必須要在 Linux 上安裝一個 BGP Routing Daemon</p>
-<p>在 Linux 系統上，大部分人都使用 <a href=https://bird.network.cz/>BIRD</a> 或是 <a href=https://frrouting.org/>FRRouting</a></p>
-<p>BIRD 比較類似於寫程式的概念(? FRRouting 則是類似於 Cisco 的概念(?</p>
-<p>至少我是這樣認為的，但本篇是使用 FRRouting 來進行操作</p>
-<p>首先，我們可以先參考 <a href=https://blog.steveyi.net/frrouting-install/>這篇文章</a> 來安裝 FRRouting</p>
-<p>安裝完成之後，我們進入 Cli</p>
-<pre tabindex=0><code>vtysh
-</code></pre><p>接著，我們輸入以下指令，來開通 BGP 功能 PS. 如果沒有公網 ASN，可以使用 Private ASN 可參考 <a href=https://tools.ietf.org/html/rfc6996>RFC 6996</a></p>
-<pre tabindex=0><code>router bgp 你的ASN
-</code></pre><p>再來，我們輸入對等方資訊</p>
-<pre tabindex=0><code>neighbor 10.0.0.2 remote-as 對面的ASN
-</code></pre><p>由於是 IPv4 Peer，所以我們需要到 address-family ipv4 來進行設定。以此類推，如果設定 IPv6 的話，則是 address-family ipv6</p>
-<pre tabindex=0><code>address-family ipv4
-</code></pre><p>接著，我們可以發我們家的內部路由給對面。注意！不要將不屬於自己的路由隨便發給他，否則可能會造成 <a href=https://www.cloudflare.com/en/learning/security/glossary/bgp-hijacking/>BGP hijacking</a></p>
-<p>這邊發 10.10.1.0/24 及 192.168.99.0/24 這條路由給對方</p>
-<pre tabindex=0><code>network 10.10.1.0/24
+</code></pre><p>好，看起來通了！</p><p>那接著，透過 BGP 協議來組建大內網了！</p><p>首先，我們必須要在 Linux 上安裝一個 BGP Routing Daemon</p><p>在 Linux 系統上，大部分人都使用 <a href=https://bird.network.cz/>BIRD</a> 或是 <a href=https://frrouting.org/>FRRouting</a></p><p>BIRD 比較類似於寫程式的概念(? FRRouting 則是類似於 Cisco 的概念(?</p><p>至少我是這樣認為的，但本篇是使用 FRRouting 來進行操作</p><p>首先，我們可以先參考 <a href=https://blog.steveyi.net/frrouting-install/>這篇文章</a> 來安裝 FRRouting</p><p>安裝完成之後，我們進入 Cli</p><pre tabindex=0><code>vtysh
+</code></pre><p>接著，我們輸入以下指令，來開通 BGP 功能 PS. 如果沒有公網 ASN，可以使用 Private ASN 可參考 <a href=https://tools.ietf.org/html/rfc6996>RFC 6996</a></p><pre tabindex=0><code>router bgp 你的ASN
+</code></pre><p>再來，我們輸入對等方資訊</p><pre tabindex=0><code>neighbor 10.0.0.2 remote-as 對面的ASN
+</code></pre><p>由於是 IPv4 Peer，所以我們需要到 address-family ipv4 來進行設定。以此類推，如果設定 IPv6 的話，則是 address-family ipv6</p><pre tabindex=0><code>address-family ipv4
+</code></pre><p>接著，我們可以發我們家的內部路由給對面。注意！不要將不屬於自己的路由隨便發給他，否則可能會造成 <a href=https://www.cloudflare.com/en/learning/security/glossary/bgp-hijacking/>BGP hijacking</a></p><p>這邊發 10.10.1.0/24 及 192.168.99.0/24 這條路由給對方</p><pre tabindex=0><code>network 10.10.1.0/24
 network 192.168.99.0/24
-</code></pre><p>這邊也建議與對方先溝通好預計會廣播的路由，讓對方可以配好 filter，防止雙方有一方配錯</p>
-<p>後記：</p>
-<p>理論上大概這樣就可以通了！但要特別注意的是，在 ping 對方的時候，記得加上 Source IP Address!! 因為對方可能不會收隧道 IP Address</p>
-<p>但 FRRouting 在 7.5 版時，加入了 <a href=https://tools.ietf.org/html/rfc8212>RFC 8212</a></p>
-<p>若沒有明確的路由策略，則不會將路由寫入系統路由表中，也不會發路由給對方</p>
-</div>
-<footer class=post-footer>
-<ul class=post-tags>
-<li><a href=https://blog.steveyi.net/tags/bgp/>BGP</a></li>
-<li><a href=https://blog.steveyi.net/tags/network/>Network</a></li>
-</ul>
-</footer>
-</article>
-</main>
-<footer class=footer>
-<span>&copy; 2022 <a href=https://blog.steveyi.net/>小易的部落格</a></span>
-<span>
-Powered by
+</code></pre><p>這邊也建議與對方先溝通好預計會廣播的路由，讓對方可以配好 filter，防止雙方有一方配錯</p><p>後記：</p><p>理論上大概這樣就可以通了！但要特別注意的是，在 ping 對方的時候，記得加上 Source IP Address!! 因為對方可能不會收隧道 IP Address</p><p>但 FRRouting 在 7.5 版時，加入了 <a href=https://tools.ietf.org/html/rfc8212>RFC 8212</a></p><p>若沒有明確的路由策略，則不會將路由寫入系統路由表中，也不會發路由給對方</p></div><footer class=post-footer><ul class=post-tags><li><a href=https://blog.steveyi.net/tags/bgp/>BGP</a></li><li><a href=https://blog.steveyi.net/tags/network/>Network</a></li></ul></footer></article></main><footer class=footer><span>&copy; 2022 <a href=https://blog.steveyi.net/>小易的部落格</a></span>
+<span>Powered by
 <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-        <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a>
-</span>
-</footer>
-<a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
-</a>
-<script>let menu=document.getElementById('menu');menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script>
-<script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script>
-<script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script>
-</body>
-</html>
+        <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script></body></html>

@@ -181,14 +181,33 @@ Android裝置需要先打開USB偵錯 打開Android手機，找到關於手機�
 USB安裝建議打開，畢竟Scrcpy拖拉安裝安裝功能滿好用的(詳見這篇)
 「安全設定」彈窗請一路按下一步，記得要插SIM卡
 (不然按到後來會跳出請插卡的提示） 如果遇到陌生電腦記得在手機上面按允許偵錯唷 接下來請到電腦進行環境安裝 PC環境安裝 請下載最新版工具包並且解壓縮（筆者習慣解壓縮到C槽目錄下）
-也可以跟ADB驅動安裝檔一起裝在隨身碟帶著走唷
-到adb.clockworkmod.com按下白色的Download按鈕安裝ADB驅動 (如果有安裝過ADB驅動程式者請直接跳過這部分)
+也可以跟ADB驅動安裝檔一起裝在隨身碟帶著走唷 到adb.clockworkmod.com按下白色的Download按鈕安裝ADB驅動 (如果有安裝過ADB驅動程式者請直接跳過這部分)
 一路按下右下角的Next，預設選項夠我們用了 要求權限的話就給他唄，請按「是」 裝完請按Close 打開Scrcpy所在資料夾，找到scrcpy-noconsole.exe並雙擊執行它，便可以操作了 控制方式 主要操作 : 滑鼠左鍵&amp;gt;點擊 . 滑鼠中鍵&amp;gt;回主畫面 . 滑鼠右鍵&amp;gt;返回 其他功能快捷鍵↓
 動作
 快捷鍵
 全螢幕模式
 Ctrl+f
-調整視窗 1:1 比例</description></item><item><title>透過電腦使用USB傳送網際網路連線給手機 (USB Reverse Tethering)</title><link>https://blog.steveyi.net/posts/usb-reverse-tethering/</link><pubDate>Tue, 07 Apr 2020 04:57:33 +0000</pubDate><guid>https://blog.steveyi.net/posts/usb-reverse-tethering/</guid><description>本篇教學使用搭載Android 5.0.2，Wi-Fi和藍芽損壞的手機搭配Windows 10做示範。
+調整視窗 1:1 比例
+Ctrl+g
+調整視窗將黑邊去除
+Ctrl+x
+主畫面
+Ctrl+h 返回
+Ctrl+b
+多工
+Ctrl+s
+菜單鍵
+Ctrl+m
+音量上鍵
+Ctrl+↑
+音量下鍵
+Ctrl+↓ 電源鍵
+Ctrl+p
+點亮螢幕
+鎖屏時滑鼠右鍵
+從電腦安裝 apk 檔案
+拖拉APK檔案
+Mac環境安裝 請先安裝 Homebrew，如果有安裝過的話請跳過此步驟 打開終端機（系統內建的工具程式） 輸入</description></item><item><title>透過電腦使用USB傳送網際網路連線給手機 (USB Reverse Tethering)</title><link>https://blog.steveyi.net/posts/usb-reverse-tethering/</link><pubDate>Tue, 07 Apr 2020 04:57:33 +0000</pubDate><guid>https://blog.steveyi.net/posts/usb-reverse-tethering/</guid><description>本篇教學使用搭載Android 5.0.2，Wi-Fi和藍芽損壞的手機搭配Windows 10做示範。
 請注意:不一定保證每一隻手機都相容，就算相容還是有一些App不認得此類型連接方式 (它們通常只認得行動數據和Wi-Fi連接)
 本篇著重於使用Windows平台進行的部分，所以不討論其他作業系統，其他作業系統理應當也是差不多才對。請讓電腦先安裝手機的驅動程式
 (外部連結: https://mobileai.net/2016/09/22/google-adb-driver/ )
