@@ -89,7 +89,6 @@ $ curl http://127.0.0.1:29750
 Once we have the router, we can add the API endpoint.
 
 ```go
-
 func UploadFile(c *gin.Context) {
 	c.JSON(200, gin.H{"message": "Pong!"})
 }
