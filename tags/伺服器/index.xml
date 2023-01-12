@@ -60,20 +60,14 @@ git clone [https://github.com/sskaje/6in4.git](https://github.com/sskaje/6in4) �
 nano config.ini 依序編輯 IPV6_NETWORK, IPV6_CIDR, INTERFACE, BIND_IP(有多iPv4需要)
 接著輸入 Crtl + X 來保存
 修改系統設定來允許iPv6轉發 nano /etc/sysctl.conf 在最下方添加下方這項net.ipv6.conf.all.forwarding = 1 Crtl + X 保存 sysctl -p 防火牆 iptables -I INPUT -p 41 --j ACCEPT iptables -I OUTPUT -p 41 --j ACCEPT iptables -I FORWARD -p 41 --j ACCEPT 使用工具建立伺服端(新增隧道) 假設隧道ID為1，伺服端IPv4為1.1.1.1 用戶端IPv4為8.8.8.8]
-配置文件中設置的IPv6子網為 2a0e:b107:7e0::，子網路遮罩為48(必須為8的倍數)工具會自動分割出 一個用於隧道的 /64子網及一個用於用戶路由的 /64子網</description></item><item><title>在 Linux 系統上安裝 Wireguard</title><link>https://blog.steveyi.net/posts/how-to-install-wireguard/</link><pubDate>Sat, 16 May 2020 11:51:52 +0000</pubDate><guid>https://blog.steveyi.net/posts/how-to-install-wireguard/</guid><description>Wireguard是一個點對點加密網路
-一直以來，我都使用它來管理我所有的雲端主機
-今天就來分享一下安裝方法吧！
-安裝指令請參考 https://www.wireguard.com/install/
-首先，進入Wireguard安裝資料夾
-如果找不到的話，請建立一下
-cd /etc/wireguard 接著，我們使用指令來產生公私鑰，並使用cat查看公私鑰內容
-wg genkey | tee privatekey | wg pubkey &amp;gt; publickey 接著我們將公私鑰記下來，我們建立一個配置文件
-nano wg0.conf 進入nano 編輯器後，我們將下方代碼貼上，並修改公私鑰
-[Interface] Address = 192.168.200.1/24 //這邊可以自定網段 SaveConfig = true ListenPort = 51820 PrivateKey = 修改為私鑰 [Peer] PublicKey = 對方的公鑰 AllowedIPs = 192.168.200.2/24 //對方的網段 接著輸入 Crtl + X 在輸入y 退出編輯器
-接著使用指令，來存檔並啟用wireguard
-wg-quick save wg0 wg-quick down wg0 wg-quick up wg0 PS.開機自動啟動指令
-systemctl enable wg-quick@wg0 接著可以嘗試ping看看，如果有響應的話
-代表成功了！</description></item><item><title>Backblaze B2 支援 S3 API 了！</title><link>https://blog.steveyi.net/posts/backblaze-b2-compatible-s3-api/</link><pubDate>Thu, 14 May 2020 03:08:02 +0000</pubDate><guid>https://blog.steveyi.net/posts/backblaze-b2-compatible-s3-api/</guid><description>前幾天打開 Backblaze 後，看到一行大大的字
+配置文件中設置的IPv6子網為 2a0e:b107:7e0::，子網路遮罩為48(必須為8的倍數)工具會自動分割出 一個用於隧道的 /64子網及一個用於用戶路由的 /64子網</description></item><item><title>在 Linux 系統上使用 WireGuard</title><link>https://blog.steveyi.net/posts/how-to-use-wireguard/</link><pubDate>Sat, 16 May 2020 11:51:52 +0000</pubDate><guid>https://blog.steveyi.net/posts/how-to-use-wireguard/</guid><description>WireGuard 是一個點對點加密網路。一直以來，我都使用它來管理 / 互聯我所有的雲端主機。
+而今天我們就來分享一下怎麼使用 WireGuard 吧！
+安裝 WireGuard 基本上 WireGuard Install Page 已經非常完整的提供了各版本的安裝方法及指令，所以大家直接到上面參考就好～
+創建 WireGuard Profile 首先，進入 WireGuard 安裝資料夾。如果不存在的話，請建立一下。
+cd /etc/wireguard 使用指令來產生公私鑰，並搭配 cat 查看公私鑰內容。
+wg genkey | tee privatekey | wg pubkey &amp;gt; publickey 將公私鑰記下來，並建立一個設定文件。
+nano wg0.conf 進入 nano 編輯器後，我們將下方設定檔貼上，並修改公私鑰。
+[Interface] Address = 192.168.200.1/24 // 這邊可以自定網段 SaveConfig = true ListenPort = 51820 PrivateKey = &amp;lt;修改為私鑰&amp;gt; [Peer] PublicKey = &amp;lt;對方的公鑰&amp;gt; AllowedIPs = 192.168.200.2/24 // 對方的網段 輸入 Crtl + X 在輸入 y 退出編輯器。</description></item><item><title>Backblaze B2 支援 S3 API 了！</title><link>https://blog.steveyi.net/posts/backblaze-b2-compatible-s3-api/</link><pubDate>Thu, 14 May 2020 03:08:02 +0000</pubDate><guid>https://blog.steveyi.net/posts/backblaze-b2-compatible-s3-api/</guid><description>前幾天打開 Backblaze 後，看到一行大大的字
 沒錯！S3 API 跟 Backblaze B2 兼容啦！
 S3 API 是目前市面上最流行的協定，很多軟硬體都兼容
 Backblaze B2 則是非常棒的雲端存處(低價優勢)

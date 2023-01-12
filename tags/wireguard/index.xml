@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>WireGuard on 小易的部落格</title><link>https://blog.steveyi.net/tags/wireguard/</link><description>Recent content in WireGuard on 小易的部落格</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Sat, 16 May 2020 11:51:52 +0000</lastBuildDate><atom:link href="https://blog.steveyi.net/tags/wireguard/index.xml" rel="self" type="application/rss+xml"/><item><title>在 Linux 系統上使用 WireGuard</title><link>https://blog.steveyi.net/posts/how-to-use-wireguard/</link><pubDate>Sat, 16 May 2020 11:51:52 +0000</pubDate><guid>https://blog.steveyi.net/posts/how-to-use-wireguard/</guid><description>WireGuard 是一個點對點加密網路。一直以來，我都使用它來管理 / 互聯我所有的雲端主機。
+而今天我們就來分享一下怎麼使用 WireGuard 吧！
+安裝 WireGuard 基本上 WireGuard Install Page 已經非常完整的提供了各版本的安裝方法及指令，所以大家直接到上面參考就好～
+創建 WireGuard Profile 首先，進入 WireGuard 安裝資料夾。如果不存在的話，請建立一下。
+cd /etc/wireguard 使用指令來產生公私鑰，並搭配 cat 查看公私鑰內容。
+wg genkey | tee privatekey | wg pubkey &amp;gt; publickey 將公私鑰記下來，並建立一個設定文件。
+nano wg0.conf 進入 nano 編輯器後，我們將下方設定檔貼上，並修改公私鑰。
+[Interface] Address = 192.168.200.1/24 // 這邊可以自定網段 SaveConfig = true ListenPort = 51820 PrivateKey = &amp;lt;修改為私鑰&amp;gt; [Peer] PublicKey = &amp;lt;對方的公鑰&amp;gt; AllowedIPs = 192.168.200.2/24 // 對方的網段 輸入 Crtl + X 在輸入 y 退出編輯器。</description></item></channel></rss>

@@ -74,20 +74,14 @@ FRRouting 是從 Quagga Fork 來的路由套件，功能也十分強大（ 其�
 使用者指南（英文）：https://docs.frrouting.org/en/latest/
 GitHub 專案：https://github.com/FRRouting/frr/releases
 首先，我們要先來安裝 FRRouting
-更新套件 sudo apt update -y sudo apt upgrade -y # 安裝網路套件及 GPG 套件 sudo apt install -y curl gnupg2 traceroute 安裝 FRRouting # 導入 GPG curl -s https://deb.frrouting.org/frr/keys.asc | sudo apt-key add - FRRVER=&amp;#34;frr-stable&amp;#34; # 寫入軟體源 echo deb https://deb.frrouting.org/frr $(lsb_release -s -c) $FRRVER | sudo tee -a /etc/apt/sources.</description></item><item><title>在 Linux 系統上安裝 Wireguard</title><link>https://blog.steveyi.net/posts/how-to-install-wireguard/</link><pubDate>Sat, 16 May 2020 11:51:52 +0000</pubDate><guid>https://blog.steveyi.net/posts/how-to-install-wireguard/</guid><description>Wireguard是一個點對點加密網路
-一直以來，我都使用它來管理我所有的雲端主機
-今天就來分享一下安裝方法吧！
-安裝指令請參考 https://www.wireguard.com/install/
-首先，進入Wireguard安裝資料夾
-如果找不到的話，請建立一下
-cd /etc/wireguard 接著，我們使用指令來產生公私鑰，並使用cat查看公私鑰內容
-wg genkey | tee privatekey | wg pubkey &amp;gt; publickey 接著我們將公私鑰記下來，我們建立一個配置文件
-nano wg0.conf 進入nano 編輯器後，我們將下方代碼貼上，並修改公私鑰
-[Interface] Address = 192.168.200.1/24 //這邊可以自定網段 SaveConfig = true ListenPort = 51820 PrivateKey = 修改為私鑰 [Peer] PublicKey = 對方的公鑰 AllowedIPs = 192.168.200.2/24 //對方的網段 接著輸入 Crtl + X 在輸入y 退出編輯器
-接著使用指令，來存檔並啟用wireguard
-wg-quick save wg0 wg-quick down wg0 wg-quick up wg0 PS.開機自動啟動指令
-systemctl enable wg-quick@wg0 接著可以嘗試ping看看，如果有響應的話
-代表成功了！</description></item><item><title>在 Vultr 使用 Bird6 廣播 IPv6</title><link>https://blog.steveyi.net/posts/use-bird6-broadcast-ipv6-vultr/</link><pubDate>Fri, 10 Apr 2020 02:21:55 +0000</pubDate><guid>https://blog.steveyi.net/posts/use-bird6-broadcast-ipv6-vultr/</guid><description>建議可以參考於 2021 年 01 月 24 日 的 透過 BGP 與朋友組成內網 文章
+更新套件 sudo apt update -y sudo apt upgrade -y # 安裝網路套件及 GPG 套件 sudo apt install -y curl gnupg2 traceroute 安裝 FRRouting # 導入 GPG curl -s https://deb.frrouting.org/frr/keys.asc | sudo apt-key add - FRRVER=&amp;#34;frr-stable&amp;#34; # 寫入軟體源 echo deb https://deb.frrouting.org/frr $(lsb_release -s -c) $FRRVER | sudo tee -a /etc/apt/sources.</description></item><item><title>在 Linux 系統上使用 WireGuard</title><link>https://blog.steveyi.net/posts/how-to-use-wireguard/</link><pubDate>Sat, 16 May 2020 11:51:52 +0000</pubDate><guid>https://blog.steveyi.net/posts/how-to-use-wireguard/</guid><description>WireGuard 是一個點對點加密網路。一直以來，我都使用它來管理 / 互聯我所有的雲端主機。
+而今天我們就來分享一下怎麼使用 WireGuard 吧！
+安裝 WireGuard 基本上 WireGuard Install Page 已經非常完整的提供了各版本的安裝方法及指令，所以大家直接到上面參考就好～
+創建 WireGuard Profile 首先，進入 WireGuard 安裝資料夾。如果不存在的話，請建立一下。
+cd /etc/wireguard 使用指令來產生公私鑰，並搭配 cat 查看公私鑰內容。
+wg genkey | tee privatekey | wg pubkey &amp;gt; publickey 將公私鑰記下來，並建立一個設定文件。
+nano wg0.conf 進入 nano 編輯器後，我們將下方設定檔貼上，並修改公私鑰。
+[Interface] Address = 192.168.200.1/24 // 這邊可以自定網段 SaveConfig = true ListenPort = 51820 PrivateKey = &amp;lt;修改為私鑰&amp;gt; [Peer] PublicKey = &amp;lt;對方的公鑰&amp;gt; AllowedIPs = 192.168.200.2/24 // 對方的網段 輸入 Crtl + X 在輸入 y 退出編輯器。</description></item><item><title>在 Vultr 使用 Bird6 廣播 IPv6</title><link>https://blog.steveyi.net/posts/use-bird6-broadcast-ipv6-vultr/</link><pubDate>Fri, 10 Apr 2020 02:21:55 +0000</pubDate><guid>https://blog.steveyi.net/posts/use-bird6-broadcast-ipv6-vultr/</guid><description>建議可以參考於 2021 年 01 月 24 日 的 透過 BGP 與朋友組成內網 文章
 這次就來分享一下在 Vultr 廣播IP吧！
 設置 AS 號碼及 IP 前綴 首先，我們要先開通 BGP 的功能！ 點擊這裡前往 Vultr BGP 頁面 進入此頁面後，我們點擊 Get Started
 選擇 I have my own IP space 及 I have own my ASN (如果沒有 ASN 不用選擇)
