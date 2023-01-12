@@ -1,21 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>伺服器 on 小易的部落格</title><link>https://blog.steveyi.net/tags/%E4%BC%BA%E6%9C%8D%E5%99%A8/</link><description>Recent content in 伺服器 on 小易的部落格</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Fri, 20 Nov 2020 18:31:04 +0000</lastBuildDate><atom:link href="https://blog.steveyi.net/tags/%E4%BC%BA%E6%9C%8D%E5%99%A8/index.xml" rel="self" type="application/rss+xml"/><item><title>利用 WireGuard 建立大內網</title><link>https://blog.steveyi.net/posts/using-wireguard-to-make-intranet/</link><pubDate>Fri, 20 Nov 2020 18:31:04 +0000</pubDate><guid>https://blog.steveyi.net/posts/using-wireguard-to-make-intranet/</guid><description>Hi 大家好，今天來分享一下如何使用WireGuard建立大內網
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>伺服器 on 小易的部落格</title><link>https://blog.steveyi.net/tags/%E4%BC%BA%E6%9C%8D%E5%99%A8/</link><description>Recent content in 伺服器 on 小易的部落格</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Fri, 20 Nov 2020 18:31:04 +0000</lastBuildDate><atom:link href="https://blog.steveyi.net/tags/%E4%BC%BA%E6%9C%8D%E5%99%A8/index.xml" rel="self" type="application/rss+xml"/><item><title>利用 WireGuard 建立大內網</title><link>https://blog.steveyi.net/posts/using-wireguard-to-make-intranet/</link><pubDate>Fri, 20 Nov 2020 18:31:04 +0000</pubDate><guid>https://blog.steveyi.net/posts/using-wireguard-to-make-intranet/</guid><description>Hi 大家好，今天來分享一下如何使用 WireGuard 建立大內網
 之前有與大家分享過 在 Linux 系統上安裝 Wireguard，那這次我們要利用 WireGuard 來建立大內網
-為什麼筆者稱這次要建立&amp;quot;大內網&amp;quot;呢？
-因為筆者也許多不同地方的網路，想藉由這次機會，來把他們都加進同一個局域網
+為什麼要建立大內網？ 為什麼筆者稱這次要建立「大內網」呢？
+因為筆者也許多不同地方的網路，想藉由這次機會，來把他們都加進同一個局域網 (LAN)
 這樣也可以解決一些連線問題，比如筆者常常連線回到家中的電腦
-但因為公網IP只有幾個，當機器太多時，就需要設定內網穿透
+但因為公網 IP 只有幾個，當機器太多時，就需要設定內網穿透
 但筆者架設了內網之後，在外面只需要連入VPN，在其他網路區域，就可以存取所有網路設備了（這也類似於一般企業的遠端存取）
-那麼，我們一樣需要有一個主伺服器當網關。不過，我們不使用 NAT TO NAT，而是透過私網IP來進行互連
+情境及架構 那麼，我們一樣需要有一個主伺服器當網關。不過，我們不使用 NAT TO NAT，而是讓 Private 可以直接互連。
 我們的情境是這樣：
-A辦公室 路由器 10.121.208.254/24 B辦公室 路由器 10.121.209.254/24 C辦公室 路由器 10.121.210.254/24 VPN路由器 10.121.211.254/24 首先，由於我們這次是純粹架設大內網，以WireGuard搭配靜態路由為主。所以先不講到路由協議（不過下次會介紹）
-我們需要有一個主路由器，並透過它來連接A,B,C辦公室的路由器
+A 辦公室 路由器 10.121.208.254/24 B 辦公室 路由器 10.121.209.254/24 C 辦公室 路由器 10.121.210.254/24 VPN 路由器 10.121.211.254/24 設定 VPN Tunnel 及靜態路由 首先，由於我們這次是純粹架設大內網，以 WireGuard 搭配靜態路由為主。 所以先不講到路由協議。如果你有興趣的話，也可以參考我寫的 透過 BGP 組建不同網段互通。
+我們需要有一個主路由器，並透過它來連接 A, B, C 辦公室的路由器
 所以會變成下面這樣
-VPN &amp;lt;-&amp;gt; A VPN &amp;lt;-&amp;gt; B VPN &amp;lt;-&amp;gt; C 當A的用戶想去C時(10.121.208.1 &amp;lt;-&amp;gt; 10.121.210.2) 路線會變成&amp;hellip;
-User-A -&amp;gt; 10.121.208.254 -&amp;gt; 10.121.211.254 -&amp;gt; 10.121.210.254 -&amp;gt; 10.121.210.2(User-C)
-也就是 User-A -&amp;gt; A的路由器 -&amp;gt; VPN Gateway -&amp;gt; C的路由器 -&amp;gt; User-C
-那我們搞懂原理，就來實作啦！
-首先，我先先準備好私鑰及公鑰（公鑰是由私鑰算過來的）
-A&amp;rsquo;s Public key: WGokwN2HtiX+naa7hdvUaXoXk5tkzXQtMge4v9DKlVw=</description></item><item><title>透過 iperf3 來測試內網速度</title><link>https://blog.steveyi.net/posts/iperf3/</link><pubDate>Sun, 08 Nov 2020 13:26:11 +0000</pubDate><guid>https://blog.steveyi.net/posts/iperf3/</guid><description>不久前，筆者換了新的交換機。為了測試內網的傳輸速度，筆者發現了這款工具 - iperf3
+VPN &amp;lt;-&amp;gt; A VPN &amp;lt;-&amp;gt; B VPN &amp;lt;-&amp;gt; C 當A的用戶想去 C 時 (10.</description></item><item><title>透過 iperf3 來測試內網速度</title><link>https://blog.steveyi.net/posts/iperf3/</link><pubDate>Sun, 08 Nov 2020 13:26:11 +0000</pubDate><guid>https://blog.steveyi.net/posts/iperf3/</guid><description>不久前，筆者換了新的交換機。為了測試內網的傳輸速度，筆者發現了這款工具 - iperf3
 這是一個支援 Ｗindows, Linux, macOS 的測試程式，主要是透過指令來操作
 筆者也常常用來測試兩個不同地區伺服器的速度
 那麼，以下分享一下安裝方法
