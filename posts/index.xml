@@ -13,7 +13,19 @@ $ steveyiyo@steveyi-MBP ~ % whois -r AS-STEVEYI as-set: AS-STEVEYI descr: SteveY
 後來，我發現我可以利用其他方式做到 PBR，而不需要透過 VRF 來隔離
 PBR 是什麼？ PBR 全名 Policy Based Routing，是一種可以透過修改下一跳 IP Address 來達到控制路由或封包方向的一種技術
 在 Linux 下怎麼做到？ Linux 下其實有許多種方式可以做到，比如說透過 Routing Daemon 或是 ip link 及 ip rule 的指令去做到
-# 比如說我想要讓 10.121.210.0/24 這條路由放在一張表裡面 ip rule add from 10.121.210.0/24 lookup TW # 並讓其網路走 VPN Interface 出去 ip route add 0.0.0.0/0 via 10.121.210.0/24 dev VPN-JP table TW 但這樣的話，我每次都開機時都要執行一次 Script。</description></item><item><title>解決 Ubuntu 上 53 Port 占用問題</title><link>https://blog.steveyi.net/posts/ubuntu-53-port-already-in-use/</link><pubDate>Wed, 12 May 2021 20:58:02 +0800</pubDate><guid>https://blog.steveyi.net/posts/ubuntu-53-port-already-in-use/</guid><description>最近為了在路由器上安裝 DoH Client 並架設 DNS Server 給內網機器使用，發現 Ubuntu 常常會使用 53 Port。
+# 比如說我想要讓 10.121.210.0/24 這條路由放在一張表裡面 ip rule add from 10.121.210.0/24 lookup TW # 並讓其網路走 VPN Interface 出去 ip route add 0.0.0.0/0 via 10.121.210.0/24 dev VPN-JP table TW 但這樣的話，我每次都開機時都要執行一次 Script。</description></item><item><title>利用 OSPF 及 BGP 來最佳化大內網</title><link>https://blog.steveyi.net/posts/ospf-and-bgp/</link><pubDate>Sun, 16 May 2021 22:17:25 +0800</pubDate><guid>https://blog.steveyi.net/posts/ospf-and-bgp/</guid><description>一直一來，我跟朋友間有一個類似於 DN42 的大內網。
+我們使用 VPN 建立 BGP 互聯，並將這個大內網部署於我各個區域的設備使用。
+P.S. 目前共有 46 條路由左右
+而我目前則是在一個點與其他人建立 BGP Peer，並使用 Static Route 處理內部路由
+e.g. 10.121.23.242 的設備想要到我的內網下的某台設備 10.121.210.3
+比如說，我在核心路由器上指一條 10.121.210.0/24 到我放在學校的路由器上。
+而在學校的路由器上，我則與核心路由器建立了 BGP Peer，來收我們的大內網全表。
+這樣確實可以讓我們的網路動，但是當核心路由器故障時，其他人則無法進到我的內網。
+於是我想到，我可以使用 OSPF 及 iBGP 去解決單一核心路由器故障的問題
+什麼是 OSPF？ OSPF 全名 Open Shortest Path First，是一種 IGP 協議，使用 Link State Routing 算法。
+IETF 中的 IGP 開發團隊在 1988 年提出 RFC 2328，用於 IPv4 的路由協定。
+在當時，由於 RIP 單一路徑最多只能支 15 個網路設備，所以 RIP 路由協定在當時並不適合用於大型的網路環境，所以才會研發 IGRP 路由協定，並且同時開發出 OSPF 協定。
+目前 OSPF 分為兩種版本：</description></item><item><title>解決 Ubuntu 上 53 Port 占用問題</title><link>https://blog.steveyi.net/posts/ubuntu-53-port-already-in-use/</link><pubDate>Wed, 12 May 2021 20:58:02 +0800</pubDate><guid>https://blog.steveyi.net/posts/ubuntu-53-port-already-in-use/</guid><description>最近為了在路由器上安裝 DoH Client 並架設 DNS Server 給內網機器使用，發現 Ubuntu 常常會使用 53 Port。
 經過檢查一輪後，發現是 systemd-resolve 所導致的，於是找到這些方法去關閉他！
 在此之前，如果大家發現 53 Port 被使用，可以先下以下指令來查看是哪個進程去用的。
 sudo netstat -pna | grep 53 那接著，我們來關閉一下 systemd-resolve 使用 53 Port 的問題吧
