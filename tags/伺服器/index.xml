@@ -97,7 +97,7 @@ https://www.cloudflare.com/products/cloudflare-spectrum/
 接著點 Start，來驗證 IP 擁有權 或 ASN
 系統會寄一封電子郵件到 Whois 的 Email，進行驗證！
 驗證完後呢，我們就等待工作人員設置
-廣播 這次是使用 Ubuntu 18.04 來進行宣告的，CentOS 及 Debian 應該大同小異</description></item><item><title>Backblaze B2 搭配 Cloudflare Workers 設定自訂網域名稱</title><link>https://blog.steveyi.net/posts/b2-cfworkers/</link><pubDate>Wed, 26 Feb 2020 20:36:28 +0000</pubDate><guid>https://blog.steveyi.net/posts/b2-cfworkers/</guid><description>當初架設網站的時候，考量到了圖片的存儲以及流量的問題
+廣播 這次是使用 Ubuntu 18.04 來進行宣告的，CentOS 及 Debian 應該大同小異</description></item><item><title>Backblaze B2 搭配 Cloudflare Workers 設定自訂網域名稱</title><link>https://blog.steveyi.net/posts/b2-cfworkers/</link><pubDate>Wed, 26 Feb 2020 20:36:28 +0000</pubDate><guid>https://blog.steveyi.net/posts/b2-cfworkers/</guid><description>當初架設網站的時候，考量到了圖片的存儲以及流量的問題。
 本來是將圖片跟網站放在同一個網站伺服器下的，但後來發現伺服器空間常常不足夠（因為系統會自動備份，導致空間不足）
 後來將圖片放在 OneDrive 商業版，並搭配 OneList 來使用，但畢竟是非官方的API，當API請求速率過快，圖片就載入不出來了．
 當初 OneDrive 失敗後，又將圖片放到 Google Drive 上，並搭配 rclone 使用，

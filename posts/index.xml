@@ -1040,7 +1040,7 @@ PS.如果出現註冊商拒絕了這次移轉
 網域則為我們剛剛選擇的
 設定完成後，點擊&amp;quot;同意並繼續&amp;quot;！
 接著就可以進入管理員管理面板囉！
-我們下次再來跟大家分享網域驗證等相關設定唷！</description></item><item><title>Backblaze B2 搭配 Cloudflare Workers 設定自訂網域名稱</title><link>https://blog.steveyi.net/posts/b2-cfworkers/</link><pubDate>Wed, 26 Feb 2020 20:36:28 +0000</pubDate><guid>https://blog.steveyi.net/posts/b2-cfworkers/</guid><description>當初架設網站的時候，考量到了圖片的存儲以及流量的問題
+我們下次再來跟大家分享網域驗證等相關設定唷！</description></item><item><title>Backblaze B2 搭配 Cloudflare Workers 設定自訂網域名稱</title><link>https://blog.steveyi.net/posts/b2-cfworkers/</link><pubDate>Wed, 26 Feb 2020 20:36:28 +0000</pubDate><guid>https://blog.steveyi.net/posts/b2-cfworkers/</guid><description>當初架設網站的時候，考量到了圖片的存儲以及流量的問題。
 本來是將圖片跟網站放在同一個網站伺服器下的，但後來發現伺服器空間常常不足夠（因為系統會自動備份，導致空間不足）
 後來將圖片放在 OneDrive 商業版，並搭配 OneList 來使用，但畢竟是非官方的API，當API請求速率過快，圖片就載入不出來了．
 當初 OneDrive 失敗後，又將圖片放到 Google Drive 上，並搭配 rclone 使用，
