@@ -1,7 +1,7 @@
 ---
 title: "Make a RESTFul API to upload files to S3 with Golang"
 date: 2022-03-31T04:30:00+08:00
-draft: true
+draft: false
 description: "Anyway, I need have a API to upload files to S3 (Eg: image, iso file ...etc)"
 ---
 
@@ -126,28 +126,28 @@ type Result struct {
 
 // Create folder as storage cache
 func CreateFolder(FolderName string) bool {
-	return_check := false
+	returnCheck := false
 	if _, err := os.Stat(FolderName); os.IsNotExist(err) {
 		err = os.Mkdir(FolderName, 0755)
 		if err != nil {
 			// fmt.Println(err)
-			return_check = false
+			returnCheck = false
 		} else {
-			return_check = true
+			returnCheck = true
 		}
 	} else {
-		return_check = true
+		returnCheck = true
 	}
-	return return_check
+	return returnCheck
 }
 
 // Process file upload
 func UploadFile(c *gin.Context) {
     // Pre define variables
 	var r Result
-	var return_check bool
-	var return_message string
-	return_status_code := 200
+	var returnCheck bool
+	var returnMessage string
+	returnStatusCode := 200
 
     // Get file information
 	file, header, err := c.Request.FormFile("upload_file")
@@ -165,32 +165,34 @@ func UploadFile(c *gin.Context) {
         // Copy file to the folder
 		out, err := os.Create("tmp/" + filename)
 		if err != nil {
-			return_status_code = 400
-			return_check = false
-			return_message = "Error!"
+			returnStatusCode = 400
+			returnCheck = false
+			returnMessage = "Error!"
 		}
 		defer out.Close()
 
 		_, err = io.Copy(out, file)
 		if err != nil {
             // If error, return 400 error
-			return_status_code = 400
-			return_check = false
-			return_message = "Error!"
+			returnStatusCode = 400
+			returnCheck = false
+			returnMessage = "Error!"
 		} else {
             // If success, return 200 success
-			return_status_code = 201
-			return_check = true
-			return_message = "Success!"
+			returnStatusCode = 201
+			returnCheck = true
+			returnMessage = "Success!"
 		}
 	} else {
         // return failed to create the folder
-		return_status_code = 400
-		return_check = false
-		return_message = "Failed to create the tmp folder!"
+		returnStatusCode = 400
+		returnCheck = false
+		returnMessage = "Failed to create the tmp folder!"
 	}
     // return JSON type
-	r = Result{return_check, return_message, filename}
-	c.JSON(return_status_code, r)
+	r = Result{returnCheck, returnMessage, filename}
+	c.JSON(returnStatusCode, r)
 }
 ```
+
+I have already published a repository on GitHub [file-upload-to-s3](https://github.com/steveyiyo/file-upload-to-s3). Feel free to check it if needed. 
