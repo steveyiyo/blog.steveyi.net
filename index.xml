@@ -105,25 +105,20 @@ iCloud雲端同步功能（也包含「接續互通」等需要帳號的功能�
 可以使用的功能(包括但不限於下列)：
 Wi-Fi上網
 藍芽功能 (AirPods可用)
-iTunes Store</description></item><item><title>將部落格從 WordPress 轉移到 Hugo</title><link>https://blog.steveyi.net/posts/from-wordpress-to-hugo/</link><pubDate>Wed, 10 Feb 2021 14:27:17 +0800</pubDate><guid>https://blog.steveyi.net/posts/from-wordpress-to-hugo/</guid><description>從 2018 年註冊了第一個網域 - steveyigame.com 後
-我嘗試架設了第一個 WordPress 部落格
+iTunes Store</description></item><item><title>將部落格從 WordPress 轉移到 Hugo</title><link>https://blog.steveyi.net/posts/from-wordpress-to-hugo/</link><pubDate>Wed, 10 Feb 2021 14:27:17 +0800</pubDate><guid>https://blog.steveyi.net/posts/from-wordpress-to-hugo/</guid><description>從 2018 年註冊了第一個網域 steveyigame.com 後，我也嘗試架設了第一個 WordPress 部落格。
 當時也正好學習使用 Linux 系統，順帶了解到 雲端硬碟(像是 Google Drive) 及 檔案伺服器 的差異
-為什麼要換成 Hugo? WordPress 不好嗎? 我認為沒有好或不好這件事，一切憑個人感覺
-但由於逐漸學習到後端，會覺得說 如果可以靜態網頁就靜態 XD
-PS. 其實 WordPress 也可以優化到很好，但我純粹不想優化
-而且由於 WordPress 是動態網頁，且連接上了資料庫
-一般用戶訪問網站時，網站會先到資料庫抓資料處理後再回應給用戶
-WordPress 載入速度
-Hugo 載入速度
-很明顯的可以看到，WordPress 網站初次載入需要花費 4.11 秒，而 Hugo 網站只需 1.41 秒，差異非常大
-在 GitHub 部署並搭配 GitHub Pages 由於 Hugo 是靜態網頁，所以想到可以將其部署在 GitHub，並搭配 GitHub Pages 使用
-於是我開了兩個 Repositories，一個用來放網站的原始檔案（其實可以直接開不同的分支）
-Hugo 原始碼
-產生後的網站原始碼
-那我們就來講一下設定過程
-首先，我們先在電腦中裝好 Hugo
-Hugo 官方提供了以下系統預先編譯版，這代表這些系統不需要自行編譯!!
-macOS (Darwin) for x64, i386, and ARM architectures Windows Linux OpenBSD FreeBSD 可以直接下載官方編譯好的檔案直接使用</description></item><item><title>透過 ASN 指定網路出口</title><link>https://blog.steveyi.net/posts/bgp-asn-specify-gateway/</link><pubDate>Sat, 06 Feb 2021 02:13:10 +0800</pubDate><guid>https://blog.steveyi.net/posts/bgp-asn-specify-gateway/</guid><description>在去年一月時，我申請到了自己的第一個 ASN - AS209557，也做了很多酷實驗！
+為什麼要換成 Hugo？WordPress 不好嗎？ 我認為沒有好或不好這件事，一切憑個人感覺。
+但由於逐漸學習到後端，會覺得說「如果可以靜態網頁就靜態，不要讓網站伺服器處理東西」。
+PS. 其實 WordPress 也可以優化到很好，但我純粹不想優化 XD。
+另外，由於 WordPress 是動態網頁，且必須要與資料庫進行連接。一般用戶訪問網站時，網站會先到資料庫抓資料處理後再回應給用戶。
+我不想維護資料庫 R
+效能對比 我們來看看更換前跟更換後的具體差別好了。
+WordPress 載入速度 Hugo 載入速度 很明顯的可以看到，WordPress 網站初次載入需要花費 4.11 秒，而 Hugo 網站只需 1.41 秒，差異非常大。
+關於 Hugo 由於 Hugo 是靜態網頁，所以想到可以將其部署在 GitHub，並搭配 GitHub Pages 使用。
+於是我開了兩個 Repositories，一個用來放網站的原始檔案。
+當然，如果你想要開在同一個 Repo 下，利用不同的 branch 也是可以的！
+Hugo 原始碼 產生後的網站原始碼 安裝 Hugo 首先，我們先在電腦中裝好 Hugo
+Hugo 官方提供了以下系統預先編譯版，這代表這些系統不需要自行編譯！</description></item><item><title>透過 ASN 指定網路出口</title><link>https://blog.steveyi.net/posts/bgp-asn-specify-gateway/</link><pubDate>Sat, 06 Feb 2021 02:13:10 +0800</pubDate><guid>https://blog.steveyi.net/posts/bgp-asn-specify-gateway/</guid><description>在去年一月時，我申請到了自己的第一個 ASN - AS209557，也做了很多酷實驗！
 今天，我改造了我家的路由，並可以指定 ASN 走哪條路出去
 首先，先說一下我家的路由器資訊 Ubuntu 20.04 軟路由
 Bird2 (Internet Routing Daemon)
