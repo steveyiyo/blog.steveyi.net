@@ -69,7 +69,20 @@ email 寫自己的電子郵箱地址
 “address”: 地址
 “e-mail”: 電子郵件地址
 “abuse-c”: 剛剛我們建立的role
-“mnt-ref”: 剛剛我們建立的mnter...</p></div><footer class=entry-footer><span title='2020-11-21 08:37:20 +0000 UTC'>2020-11-21</span>&nbsp;·&nbsp;SteveYi</footer><a class=entry-link aria-label="post link to 在 RIPE DataBase 建立 Object" href=https://blog.steveyi.net/posts/create-object-in-ripe-database/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2>FRRouting 安裝教學</h2></header><div class=entry-content><p>很久沒有來分享了！最近仍然在學習 BGP 知識及測試之前一直使用 Bird1 來廣播 BGP，後來在跟朋友 Peer 時，一直無法建立對等（很玄，但卻可以跟 IX 建立）
+“mnt-ref”: 剛剛我們建立的mnter...</p></div><footer class=entry-footer><span title='2020-11-21 08:37:20 +0000 UTC'>2020-11-21</span>&nbsp;·&nbsp;SteveYi</footer><a class=entry-link aria-label="post link to 在 RIPE DataBase 建立 Object" href=https://blog.steveyi.net/posts/create-object-in-ripe-database/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2>透過 BGP 組建不同網段互通</h2></header><div class=entry-content><p>小時候常常為了家中的網路管理而困擾。
+舉例來說，我家有三個樓層、三台路由器。並讓三個路由器後的設備可以互通，但是如果我三台路由器都打開 DHCP Server 的話，三台將會是獨立的網段而不互通。
+後來發現如果使用 bridge（橋接）的方式將一台路由器當作 DHCP Server，其他的當作 AP 或 Switch，就可以達到網段相同且可以互通了！
+不過，這次我們要做的是跨 L3 的「異地組網」，沒辦法去做到使用同一個的 DHCP Server 來連接，所以就會有兩個網段。
+那之前有跟大家分享過 FRRouting 安裝教學，所以我們也可以透過 BGP 及 VPN Tunnel 來組建不同區域網段互通。
+事前準備 路由器須為 Linux 系統，或是可以使用 BGP 功能的路由器。
+e.g. RouterOS, Cisco IOS, Junos, etc.
+Linux 路由套件，這邊推薦以下兩種：
+FRRouting (FRR) BIRD Router:
+R1 R2 以 FRRouting 來做 BGP 互連 本篇將以 FRRouting 作為示範。
+PS. 雙方路由器必須支持 BGP，否則只能使用 NAT 設備來進行互通了
+設定路由器 IP 地址 我們先在雙方路由器配置好路由器 IP
+R1:
+10.0.1.1/24 DHCP 分配 10.0.1.2 - 10....</p></div><footer class=entry-footer><span title='2020-08-11 18:56:26 +0000 UTC'>2020-08-11</span>&nbsp;·&nbsp;SteveYi</footer><a class=entry-link aria-label="post link to 透過 BGP 組建不同網段互通" href=https://blog.steveyi.net/posts/bgp-network-peer/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2>FRRouting 安裝教學</h2></header><div class=entry-content><p>很久沒有來分享了！最近仍然在學習 BGP 知識及測試之前一直使用 Bird1 來廣播 BGP，後來在跟朋友 Peer 時，一直無法建立對等（很玄，但卻可以跟 IX 建立）
 於是我將 BIRD1 解除安裝了，改安裝 FRRouting。
 FRRouting 是從 Quagga Fork 來的路由套件，功能也十分強大（ 其指令類似於 Cisco 或 Quagga ）
 使用者指南（英文）：https://docs.frrouting.org/en/latest/

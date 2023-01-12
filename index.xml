@@ -440,7 +440,20 @@ Internet回復會使用Wi-Fi或乙太網路，如果找不到可用的網路就�
 不同意使用條款就不能安裝。
 然後請選擇安裝於剛剛清除的磁區或卷宗
 接下來就等候安裝吧！
-安裝完會有基本設定，本篇就不贅述了，祝大家使用愉快～</description></item><item><title>使用CloudReady體驗ChromiumOS作業系統，老電腦重獲新生!</title><link>https://blog.steveyi.net/posts/cloudready/</link><pubDate>Mon, 10 Aug 2020 15:10:52 +0000</pubDate><guid>https://blog.steveyi.net/posts/cloudready/</guid><description>不曉得各位有沒有一種經驗，電腦老舊了，連文書處理和基本的瀏覽網頁都卡頓，但又不想使用太老舊的作業系統(官方停止提供新功能了，連瀏覽器也不提供更新支援了)，這時便可以下載最新版的CloudReady家用版來使用囉!既有最新版的瀏覽器，也有不少Web App能使用；也因為是基於瀏覽器的作業系統，因此資源占用比許多作業系統都少，也不用怕不習慣使用Linux作業系統(安裝軟體的方式很不一樣，使用邏輯也差很多，而且一直使用命令行也不是很直覺的用法)，所以，只要電腦支援64位元，幾乎都可以用CloudReady(試過家裡唯一一台32位元電腦，無法使用32位元版的CloudReady開機)
+安裝完會有基本設定，本篇就不贅述了，祝大家使用愉快～</description></item><item><title>透過 BGP 組建不同網段互通</title><link>https://blog.steveyi.net/posts/bgp-network-peer/</link><pubDate>Tue, 11 Aug 2020 18:56:26 +0000</pubDate><guid>https://blog.steveyi.net/posts/bgp-network-peer/</guid><description>小時候常常為了家中的網路管理而困擾。
+舉例來說，我家有三個樓層、三台路由器。並讓三個路由器後的設備可以互通，但是如果我三台路由器都打開 DHCP Server 的話，三台將會是獨立的網段而不互通。
+後來發現如果使用 bridge（橋接）的方式將一台路由器當作 DHCP Server，其他的當作 AP 或 Switch，就可以達到網段相同且可以互通了！
+不過，這次我們要做的是跨 L3 的「異地組網」，沒辦法去做到使用同一個的 DHCP Server 來連接，所以就會有兩個網段。
+那之前有跟大家分享過 FRRouting 安裝教學，所以我們也可以透過 BGP 及 VPN Tunnel 來組建不同區域網段互通。
+事前準備 路由器須為 Linux 系統，或是可以使用 BGP 功能的路由器。
+e.g. RouterOS, Cisco IOS, Junos, etc.
+Linux 路由套件，這邊推薦以下兩種：
+FRRouting (FRR) BIRD Router:
+R1 R2 以 FRRouting 來做 BGP 互連 本篇將以 FRRouting 作為示範。
+PS. 雙方路由器必須支持 BGP，否則只能使用 NAT 設備來進行互通了
+設定路由器 IP 地址 我們先在雙方路由器配置好路由器 IP
+R1:
+10.0.1.1/24 DHCP 分配 10.0.1.2 - 10.</description></item><item><title>使用CloudReady體驗ChromiumOS作業系統，老電腦重獲新生!</title><link>https://blog.steveyi.net/posts/cloudready/</link><pubDate>Mon, 10 Aug 2020 15:10:52 +0000</pubDate><guid>https://blog.steveyi.net/posts/cloudready/</guid><description>不曉得各位有沒有一種經驗，電腦老舊了，連文書處理和基本的瀏覽網頁都卡頓，但又不想使用太老舊的作業系統(官方停止提供新功能了，連瀏覽器也不提供更新支援了)，這時便可以下載最新版的CloudReady家用版來使用囉!既有最新版的瀏覽器，也有不少Web App能使用；也因為是基於瀏覽器的作業系統，因此資源占用比許多作業系統都少，也不用怕不習慣使用Linux作業系統(安裝軟體的方式很不一樣，使用邏輯也差很多，而且一直使用命令行也不是很直覺的用法)，所以，只要電腦支援64位元，幾乎都可以用CloudReady(試過家裡唯一一台32位元電腦，無法使用32位元版的CloudReady開機)
 開始吧!
 準備材料有:
 8GB隨身碟(資料會洗掉，請先移除資料) 要安裝的電腦 首先請先到官網按下[DOWNLOAD 64-BIT IMAGE]下載64位元版安裝檔(32位元版已停止支援)
