@@ -178,33 +178,18 @@ PS.如果出現註冊商拒絕了這次移轉
 網域則為我們剛剛選擇的
 設定完成後，點擊"同意並繼續"！
 接著就可以進入管理員管理面板囉！
-我們下次再來跟大家分享網域驗證等相關設定唷！</p></div><footer class=entry-footer><span title='2020-04-01 03:13:48 +0000 UTC'>2020-04-01</span>&nbsp;·&nbsp;SteveYi</footer><a class=entry-link aria-label="post link to 申請 G Suite 帳號" href=https://blog.steveyi.net/posts/register-gsuite/></a></article><article class=post-entry><header class=entry-header><h2>32 位元 iOS 裝置免電腦免 SHSH 降級到 8.4.1</h2></header><div class=entry-content><p>有時會因爲蘋果的部分問題，會在各種環節出狀況，如果有任何錯誤請改天再試
-蘋果的漏洞不是非常穩定，有一天我試了三次都不能用，改天再弄，一次就成功了，這有點碰運氣
-iOS 裝置如果很慢，降級會比較流暢
-(A5 裝置非常有感，A6、A6X 裝置則差異不大但仍有比較快一點點)
-雖然還是偶爾會 LAG 一下但是至少改善滿多的
-例如轉場動畫不會像原本那麼卡頓
-適用裝置： iOS 9.0～10.3.3，有越獄的以下列出裝置 有附各版本越獄教學 iPhone 4S iPhone 5 iPod Touch 5 iPad 2 iPad 3 iPad 4 iPad Mini 1代 [iPhone 5C不適用] *如有發生問題本人恕不負責*
-※其實我用到現在都沒事，上面那句希望只是備而不用
-*請先做好iTunes備份*
-*中途若失敗或反悔可以使用DFU回到原版本或再試一次*
-*請先清除所有內容和設定後再進行！*
-講了這麼多，來開工吧
-——————分隔線——————
-(如果已經越獄，請跳過此段) 越獄方法整理[來自瘋先生網站] 10.X～10.3.3 9.3.5 9.1~9.3.4 9.0.X 降級完的8.4.1在文章底部 ——————分隔線——————
-此處以iPad 2(原9.3.5)做為示範
-如果有Apple ID雙重認證，建議關閉雙重認證或註冊一組新的，並且要記得密碼，不然後續登入很麻煩！
-降級前請將螢幕鎖定密碼關閉！！！否則可能會造成降級後無法解鎖裝置
-1.越獄後使用iFile或Filza File Manager打開下方路徑的檔案
-/System/Library/CoreServices/SystemVersion.plist
-打錯了如果重開可能導致系統損毀需要重刷！
-打錯也別擔心如果沒有重開的話只要更正存檔就可以放心重開了
-Product Version改 6.1.3
-ProductBuildVersion改 10B329
-2.存檔修改後記得確認版本號無誤才可重開
-3.重新啟動，重啟跑完進度條需要一段時間，開完機之後請重設裝置，設定精靈的地方隨便設，只要能進到主畫面就行了（不要還原任何的備份！），重設的地方在
-設定->一般->重置->清除所有內容和設定 重設之後進到設定檢查更新，會看到更新的地方有iOS 8.4.1的更新，點下去，並安裝...</p></div><footer class=entry-footer><span title='2019-12-30 13:26:02 +0000 UTC'>2019-12-30</span>&nbsp;·&nbsp;蘿蔔</footer><a class=entry-link aria-label="post link to 32 位元 iOS 裝置免電腦免 SHSH 降級到 8.4.1" href=https://blog.steveyi.net/posts/backtoios841/></a></article><footer class=page-footer><nav class=pagination><a class=prev href=https://blog.steveyi.net/posts/page/6/>«&nbsp;&nbsp;</a>
-<a class=next href=https://blog.steveyi.net/posts/page/8/>&nbsp;&nbsp;»</a></nav></footer></main><footer class=footer><span>&copy; 2022 <a href=https://blog.steveyi.net/>小易的部落格</a></span>
+我們下次再來跟大家分享網域驗證等相關設定唷！</p></div><footer class=entry-footer><span title='2020-04-01 03:13:48 +0000 UTC'>2020-04-01</span>&nbsp;·&nbsp;SteveYi</footer><a class=entry-link aria-label="post link to 申請 G Suite 帳號" href=https://blog.steveyi.net/posts/register-gsuite/></a></article><article class=post-entry><header class=entry-header><h2>Backblaze B2 搭配 Cloudflare Workers 設定自訂網域名稱</h2></header><div class=entry-content><p>當初架設網站的時候，考量到了圖片的存儲以及流量的問題
+本來是將圖片跟網站放在同一個網站伺服器下的，但後來發現伺服器空間常常不足夠（因為系統會自動備份，導致空間不足）
+後來將圖片放在 OneDrive 商業版，並搭配 OneList 來使用，但畢竟是非官方的API，當API請求速率過快，圖片就載入不出來了．
+當初 OneDrive 失敗後，又將圖片放到 Google Drive 上，並搭配 rclone 使用，
+但是… 網站載入爆慢呀！（而且流量也爆了）
+最後就發現 Backblaze B2 這個東西了 XD
+Backblaze 是什麼? Backblaze 是一家數據存儲提供商，提供兩種產品：
+B2 Cloud Storage 是一種類似於 Amazon S3 的對象存儲服務，主打低價，並且搭配 Cloudflare CDN 的 egree 流量為免費！ Cloud Backup 則是無限空間的電腦備份服務。 如果有興趣了解更多內容的話，可以參考 Backblaze官網。
+需要運用到的資源 Cloudflare CDN Cloudflare DNS Cloudflare Workers Backblaze B2 教學開始 1.首先，進入 Cloudflare 後，點擊 + Add a Site 來新增一個網域
+2.新增完成之後，我們點擊右方的 Workers 來進入Cloudflare Workers
+接著我們點擊上方的 Create a Worker 來建立一個新的 Worker...</p></div><footer class=entry-footer><span title='2020-02-26 20:36:28 +0000 UTC'>2020-02-26</span>&nbsp;·&nbsp;SteveYi</footer><a class=entry-link aria-label="post link to Backblaze B2 搭配 Cloudflare Workers 設定自訂網域名稱" href=https://blog.steveyi.net/posts/b2-cfworkers/></a></article><footer class=page-footer><nav class=pagination><a class=prev href=https://blog.steveyi.net/posts/page/6/>«&nbsp;&nbsp;</a>
+<a class=next href=https://blog.steveyi.net/posts/page/8/>&nbsp;&nbsp;»</a></nav></footer></main><footer class=footer><span>&copy; 2023 <a href=https://blog.steveyi.net/>小易的部落格</a></span>
 <span>Powered by
 <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
         <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script></body></html>

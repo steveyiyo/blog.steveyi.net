@@ -1031,7 +1031,17 @@ PS.如果出現註冊商拒絕了這次移轉
 網域則為我們剛剛選擇的
 設定完成後，點擊&amp;quot;同意並繼續&amp;quot;！
 接著就可以進入管理員管理面板囉！
-我們下次再來跟大家分享網域驗證等相關設定唷！</description></item><item><title>32 位元 iOS 裝置免電腦免 SHSH 降級到 8.4.1</title><link>https://blog.steveyi.net/posts/backtoios841/</link><pubDate>Mon, 30 Dec 2019 13:26:02 +0000</pubDate><guid>https://blog.steveyi.net/posts/backtoios841/</guid><description>有時會因爲蘋果的部分問題，會在各種環節出狀況，如果有任何錯誤請改天再試
+我們下次再來跟大家分享網域驗證等相關設定唷！</description></item><item><title>Backblaze B2 搭配 Cloudflare Workers 設定自訂網域名稱</title><link>https://blog.steveyi.net/posts/b2-cfworkers/</link><pubDate>Wed, 26 Feb 2020 20:36:28 +0000</pubDate><guid>https://blog.steveyi.net/posts/b2-cfworkers/</guid><description>當初架設網站的時候，考量到了圖片的存儲以及流量的問題
+本來是將圖片跟網站放在同一個網站伺服器下的，但後來發現伺服器空間常常不足夠（因為系統會自動備份，導致空間不足）
+後來將圖片放在 OneDrive 商業版，並搭配 OneList 來使用，但畢竟是非官方的API，當API請求速率過快，圖片就載入不出來了．
+當初 OneDrive 失敗後，又將圖片放到 Google Drive 上，並搭配 rclone 使用，
+但是&amp;hellip; 網站載入爆慢呀！（而且流量也爆了）
+最後就發現 Backblaze B2 這個東西了 XD
+Backblaze 是什麼? Backblaze 是一家數據存儲提供商，提供兩種產品：
+B2 Cloud Storage 是一種類似於 Amazon S3 的對象存儲服務，主打低價，並且搭配 Cloudflare CDN 的 egree 流量為免費！ Cloud Backup 則是無限空間的電腦備份服務。 如果有興趣了解更多內容的話，可以參考 Backblaze官網。
+需要運用到的資源 Cloudflare CDN Cloudflare DNS Cloudflare Workers Backblaze B2 教學開始 1.首先，進入 Cloudflare 後，點擊 + Add a Site 來新增一個網域
+2.新增完成之後，我們點擊右方的 Workers 來進入Cloudflare Workers
+接著我們點擊上方的 Create a Worker 來建立一個新的 Worker</description></item><item><title>32 位元 iOS 裝置免電腦免 SHSH 降級到 8.4.1</title><link>https://blog.steveyi.net/posts/backtoios841/</link><pubDate>Mon, 30 Dec 2019 13:26:02 +0000</pubDate><guid>https://blog.steveyi.net/posts/backtoios841/</guid><description>有時會因爲蘋果的部分問題，會在各種環節出狀況，如果有任何錯誤請改天再試
 蘋果的漏洞不是非常穩定，有一天我試了三次都不能用，改天再弄，一次就成功了，這有點碰運氣
 iOS 裝置如果很慢，降級會比較流暢
 (A5 裝置非常有感，A6、A6X 裝置則差異不大但仍有比較快一點點)
