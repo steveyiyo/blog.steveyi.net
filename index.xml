@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>小易的部落格</title><link>https://blog.steveyi.net/</link><description>Recent content on 小易的部落格</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Mon, 06 Feb 2023 01:51:10 +0800</lastBuildDate><atom:link href="https://blog.steveyi.net/index.xml" rel="self" type="application/rss+xml"/><item><title>Cisco N3K-C3048TP-1GE 從 6.x 升級到 9.x 全過程</title><link>https://blog.steveyi.net/posts/upgrade-c3048tp-from-6.x-to-9.x/</link><pubDate>Mon, 06 Feb 2023 01:51:10 +0800</pubDate><guid>https://blog.steveyi.net/posts/upgrade-c3048tp-from-6.x-to-9.x/</guid><description>最近有一台 N3K-C3048TP-1GE 的版本太舊了，導致一些東西無法正常運作，所以決定升級到新版本，來解決這些問題！
 大版本升級有一定的風險，請在看完本篇文章及 官方文件 後再決定是否需要進行操作！
-升級前的環境 Model: N3K-C3048TP-1GE-SUP NXOS: 6.0(2)U3(4)
+升級前的環境 Model: N3K-C3048TP-1GE-SUP
+NXOS: 6.0(2)U3(4)
 重要提醒：
 這台 Switch 請一定要照著指南升級，不要一次升級到最新版本！ 否則可能會導致你的設備變磚無法使用！
 參考文件：
