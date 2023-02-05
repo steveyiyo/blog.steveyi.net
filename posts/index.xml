@@ -1,4 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on 小易的部落格</title><link>https://blog.steveyi.net/posts/</link><description>Recent content in Posts on 小易的部落格</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Thu, 19 Jan 2023 19:00:47 +0800</lastBuildDate><atom:link href="https://blog.steveyi.net/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>如何將自己的 iOS 裝置升級 Beta 版本</title><link>https://blog.steveyi.net/posts/how-to-upgrade-ios-rc/</link><pubDate>Thu, 19 Jan 2023 19:00:47 +0800</pubDate><guid>https://blog.steveyi.net/posts/how-to-upgrade-ios-rc/</guid><description>最近恰好 iOS 16.3 RC 釋出了，以往 RC 版釋出就代表隔一週也會在釋出正式版本的更新了，而兩種版本沒有區別。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on 小易的部落格</title><link>https://blog.steveyi.net/posts/</link><description>Recent content in Posts on 小易的部落格</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Mon, 06 Feb 2023 01:51:10 +0800</lastBuildDate><atom:link href="https://blog.steveyi.net/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Cisco N3K-C3048TP-1GE 從 6.x 升級到 9.x 全過程</title><link>https://blog.steveyi.net/posts/upgrade-c3048tp-from-6.x-to-9.x/</link><pubDate>Mon, 06 Feb 2023 01:51:10 +0800</pubDate><guid>https://blog.steveyi.net/posts/upgrade-c3048tp-from-6.x-to-9.x/</guid><description>最近有一台 N3K-C3048TP-1GE 的版本太舊了，導致一些東西無法正常運作，所以決定升級到新版本，來解決這些問題！
+大版本升級有一定的風險，請在看完本篇文章及 官方文件 後再決定是否需要進行操作！
+升級前的環境 Model: N3K-C3048TP-1GE-SUP NXOS: 6.0(2)U3(4)
+重要提醒：
+這台 Switch 請一定要照著指南升級，不要一次升級到最新版本！ 否則可能會導致你的設備變磚無法使用！
+參考文件：
+Cisco Nexus 3048TP Bricked Upgrade Nexus 3048 NX-OS Software 升級版本路徑 (Upgrade Path) 6.0(2)U3(4) &amp;lt;&amp;ndash; 最初版本 6.0(2)U6(3a) 7.0(3)I7(6) 9.3(3) 從 6.0(2)U3(4) 升級到 6.0(2)U6(3a) 首先先取得對應的 bin 文件。
+n3000-uk9-kickstart.6.0.2.U6.3a.bin n3000-uk9.6.0.2.U6.3a.bin 比較特別的是在這個版本下，kickstar 及 nxos 是拆分的。
+取得完成後輸入以下指令來安裝新版本，請自行修改對應目錄及檔案名稱。
+install all kickstart bootflash:n3000-uk9-kickstart.6.0.2.U6.3a.bin system bootflash:n3000-uk9.6.0.2.U6.3a.bin 當全部驗證完成後，請輸入 y 將新版本安裝到系統上。
+Switch 會在安裝完成後自動重啟。
+重開機後輸入 show module 來看看是否成功升級！
+從 6.0(2)U6(3a) 升級到 7.0(3)I7(6) 這邊的話，我們使用 nxos.7.0.3.I7.6.bin 作為升級文件。</description></item><item><title>如何將自己的 iOS 裝置升級 Beta 版本</title><link>https://blog.steveyi.net/posts/how-to-upgrade-ios-rc/</link><pubDate>Thu, 19 Jan 2023 19:00:47 +0800</pubDate><guid>https://blog.steveyi.net/posts/how-to-upgrade-ios-rc/</guid><description>最近恰好 iOS 16.3 RC 釋出了，以往 RC 版釋出就代表隔一週也會在釋出正式版本的更新了，而兩種版本沒有區別。
 正好趁著這個機會，我們來看看如何將自己的 iOS 裝置升級 RC / Beta 版本。
 取得測試資格的方法 基本上有兩種方法可以下載到 iOS Beta 版本的測試資格：
 Apple Beta Software Program Apple Developer Program Apple Beta Software Program Apple Beta Software Program 是 Apple 提供的公開測試計畫，只要你有 iOS 裝置及 Apple ID 就可以申請加入測試計畫。
