@@ -75,7 +75,7 @@ sudo apt install openvswitch-switch -y
 
 2. 建立 OVS Bond
 
-Mode 選擇 LACP (balance-tcp)，在 Slaves 內填入要做物理網卡的名稱並綁定剛剛建立的 OVS Bridge。
+Mode 選擇 LACP (balance-tcp)，在 Slaves 內填入要做物理網卡的名稱並綁定剛剛建立的 OVS Bridge。  
 如果網卡不是 Trunk Mode 的話，可以這邊寫入 VLAN ID，或是在建立 VM 時指定。
 
 ![](https://i.imgur.com/7fvU2gd.png)
@@ -92,3 +92,139 @@ Mode 選擇 LACP (balance-tcp)，在 Slaves 內填入要做物理網卡的名稱
 這時系統會使用指令 `ifreload --all` 來重啟整個 PVE Host 的網路，並建立 LACP 連線。
 
 若一切正常的話，LACP 就可以正常使用囉～
+
+## 結果
+
+這邊主要有兩種：
+1. LACP 狀態
+2. 測速結果
+
+### 查看 LACP 狀態
+
+Arista
+
+```shell
+core#show interfaces Port-Channel 1001
+Port-Channel1001 is up, line protocol is up (connected)
+  Hardware is Port-Channel, address is 7483.ef49.cfda
+  Description: PVE-N1-LACP
+  Ethernet MTU 9214 bytes, BW 20000000 kbit
+  Full-duplex, 20Gb/s
+  Active members in this channel: 2
+  ... Ethernet7/1 , Full-duplex, 10Gb/s
+  ... Ethernet8/1 , Full-duplex, 10Gb/s
+  Fallback mode is: off
+  Up 2 days, 10 hours, 21 minutes, 6 seconds
+  4 link status changes since last clear
+  Last clearing of "show interface" counters never
+  5 minutes input rate 324 kbps (0.0% with framing overhead), 200 packets/sec
+  5 minutes output rate 582 kbps (0.0% with framing overhead), 496 packets/sec
+     913814733 packets input, 1101680299997 bytes
+     Received 52458 broadcasts, 61239 multicast
+     0 input errors, 0 input discards
+     1430249790 packets output, 1734991390380 bytes
+     Sent 13679583 broadcasts, 5532412 multicast
+     0 output errors, 1235 output discards
+```
+
+PVE
+
+```shell
+root@node2:~# ovs-appctl bond/list
+bond    type    recircID        members
+bond0   balance-tcp     1       ens20f1np1, ens20f0np0
+root@node2:~# ovs-appctl bond/show bond0
+---- bond0 ----
+bond_mode: balance-tcp
+bond may use recirculation: yes, Recirc-ID : 1
+bond-hash-basis: 0
+lb_output action: disabled, bond-id: -1
+updelay: 0 ms
+downdelay: 0 ms
+next rebalance: 7952 ms
+lacp_status: negotiated
+lacp_fallback_ab: false
+active-backup primary: <none>
+active member mac: b8:59:9f:ab:ff:89(ens20f1np1)
+
+member ens20f0np0: enabled
+  may_enable: true
+  hash 1: 1 kB load
+  hash 2: 1 kB load
+  hash 8: 5 kB load
+  hash 15: 3 kB load
+  hash 42: 1 kB load
+  hash 45: 1 kB load
+  hash 46: 1 kB load
+  hash 49: 1 kB load
+  hash 56: 1 kB load
+  hash 63: 2 kB load
+  hash 65: 1 kB load
+  hash 70: 1 kB load
+  hash 72: 1 kB load
+  hash 84: 2 kB load
+  hash 90: 4 kB load
+  hash 99: 3 kB load
+  hash 102: 32 kB load
+  hash 105: 36 kB load
+  hash 108: 33 kB load
+  hash 111: 30 kB load
+  hash 118: 13 kB load
+  hash 122: 1 kB load
+  hash 127: 8 kB load
+  hash 135: 1 kB load
+  hash 142: 2 kB load
+  hash 151: 1 kB load
+  hash 155: 30 kB load
+  hash 169: 1 kB load
+  hash 172: 5 kB load
+  hash 176: 2 kB load
+  hash 178: 3 kB load
+  hash 184: 3 kB load
+  hash 195: 3 kB load
+  hash 204: 5 kB load
+  hash 205: 1 kB load
+  hash 207: 1 kB load
+  hash 208: 6 kB load
+  hash 210: 3 kB load
+  hash 215: 1 kB load
+  hash 235: 1 kB load
+  hash 244: 30 kB load
+  hash 247: 1 kB load
+  hash 254: 3 kB load
+
+member ens20f1np1: enabled
+  active member
+  may_enable: true
+  hash 3: 2 kB load
+  hash 13: 1 kB load
+  hash 21: 10 kB load
+  hash 27: 1 kB load
+  hash 32: 3 kB load
+  hash 34: 2 kB load
+  hash 40: 20 kB load
+  hash 60: 40 kB load
+  hash 96: 1 kB load
+  hash 115: 1 kB load
+  hash 131: 142 kB load
+  hash 152: 3 kB load
+  hash 157: 1 kB load
+  hash 159: 1 kB load
+  hash 164: 1 kB load
+  hash 188: 28 kB load
+  hash 196: 1 kB load
+  hash 211: 1 kB load
+  hash 224: 1 kB load
+  hash 225: 3 kB load
+  hash 227: 2 kB load
+  hash 229: 52 kB load
+  hash 241: 3 kB load
+  hash 250: 3 kB load
+```
+
+### 測速結果
+
+我們在不同 node 中，準備了兩台 VM 並搭配 `iperf3` 來做跨節點互聯測速。  
+可以看到在不使用 Multi-Thread 的情況下，速度可以輕鬆超過 10Gbp！
+
+![](https://i.imgur.com/l7XnFka.jpg)
