@@ -3,12 +3,16 @@ baseUrl: "https://blog.steveyi.net/"
 title: "SteveYi's Blog"
 theme: "PaperMod"
 paginate: 10
-# disqusShortname: ""
 googleAnalytics: "G-CPGWT2M3VT"
 enableRobotsTXT: true
 ShowWordCount: true
 
 defaultContentLanguage: tw
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true # enable raw HTML in Markdown
 
 languages:
   tw:
@@ -18,26 +22,26 @@ languages:
     languageName: 正體中文
     menu:
       main:
-        - identifier: Home Page
-          name: 首頁
-          title: 首頁
-          url: /
-          weight: 5
-        - identifier: posts
-          name: 文章列表
-          title: 文章列表
-          url: /posts/
-          weight: 10
-        - identifier: about
-          name: 關於小易
-          title: 關於小易
-          url: /about/
-          weight: 15
-        - identifier: twitter
-          name: Twitter
-          title: Twitter
-          url: https://twitter.com/steveyiyo
-          weight: 20
+      - identifier: Home Page
+        name: 首頁
+        title: 首頁
+        url: /
+        weight: 5
+      - identifier: posts
+        name: 文章列表
+        title: 文章列表
+        url: /posts/
+        weight: 10
+      - identifier: about
+        name: 關於小易
+        title: 關於小易
+        url: /about/
+        weight: 15
+      - identifier: twitter
+        name: Twitter
+        title: Twitter
+        url: https://twitter.com/steveyiyo
+        weight: 20
   en:
     contentDir: content/en
     title: SteveYi's Blog
@@ -46,26 +50,26 @@ languages:
 
 menu:
   main:
-    - identifier: Home Page
-      name: Home
-      title: Home Page
-      url: /
-      weight: 5
-    - identifier: posts
-      name: Posts
-      title: Posts
-      url: /posts/
-      weight: 10
-    - identifier: about
-      name: About
-      title: 關於小易
-      url: /about/
-      weight: 15
-    - identifier: twitter
-      name: Twitter
-      title: Twitter
-      url: https://twitter.com/cool_small_yi
-      weight: 20
+  - identifier: Home Page
+    name: Home
+    title: Home Page
+    url: /
+    weight: 5
+  - identifier: posts
+    name: Posts
+    title: Posts
+    url: /posts/
+    weight: 10
+  - identifier: about
+    name: About
+    title: 關於小易
+    url: /about/
+    weight: 15
+  - identifier: twitter
+    name: Twitter
+    title: Twitter
+    url: https://twitter.com/cool_small_yi
+    weight: 20
 
 params:
   author: "SteveYi"
@@ -85,18 +89,13 @@ params:
   utterancesIssue: "" # optional
   utterancesLabel: "" # optional
   social:
-    - id: github
-      name: steveyiyo
-    - id: twitter
-      name: steveyiyo
-    - id: instagram
-      name: steveyiyo
-    - id: facebook
-      name: steveyigame
-    - id: telegram
-      name: steveyi
-
-markup:
-  goldmark:
-    renderer:
-      unsafe: true # enable raw HTML in Markdown
+  - id: github
+    name: steveyiyo
+  - id: twitter
+    name: steveyiyo
+  - id: instagram
+    name: steveyiyo
+  - id: facebook
+    name: steveyigame
+  - id: telegram
+    name: steveyi
