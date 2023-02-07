@@ -13,9 +13,9 @@ draft: false
 Model: N3K-C3048TP-1GE-SUP  
 NXOS: 6.0(2)U3(4)
 
-重要提醒：  
-這台 Switch 請一定要照著指南升級，不要一次升級到最新版本！
-否則可能會導致你的設備變磚無法使用！
+> 重要提醒：  
+> 這台 Switch 請一定要照著指南升級，不要一次升級到最新版本！  
+> 否則可能會導致你的設備變磚無法使用！
 
 參考文件：
 - [Cisco Nexus 3048TP Bricked](https://community.cisco.com/t5/switches-small-business/cisco-nexus-3048tp-bricked/td-p/3182064)
@@ -102,3 +102,5 @@ install all nxos usb1:nxos.9.3.3.compact.bin
 強烈建議在升級時連接 Console，防止網路斷掉導致無法得知最新狀況。另外也有可能導致你的設定檔遺失，請在升級前備份好目前的設定文件。
 
 最後非常感謝 akw 及 Licson 在升級過程中提供協助！
+
+![](https://i.imgur.com/HmZXnnD.png)
