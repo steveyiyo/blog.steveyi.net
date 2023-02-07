@@ -8,7 +8,8 @@ interface Ethernet7/1 description PVE-N1-P0(R) switchport mode trunk channel-gro
 升級前的環境 Model: N3K-C3048TP-1GE-SUP
 NXOS: 6.0(2)U3(4)
 重要提醒：
-這台 Switch 請一定要照著指南升級，不要一次升級到最新版本！ 否則可能會導致你的設備變磚無法使用！
+這台 Switch 請一定要照著指南升級，不要一次升級到最新版本！
+否則可能會導致你的設備變磚無法使用！
 參考文件：
 Cisco Nexus 3048TP Bricked Upgrade Nexus 3048 NX-OS Software 升級版本路徑 (Upgrade Path) 6.0(2)U3(4) &amp;lt;&amp;ndash; 最初版本 6.0(2)U6(3a) 7.0(3)I7(6) 9.3(3) 從 6.0(2)U3(4) 升級到 6.0(2)U6(3a) 首先先取得對應的 bin 文件。
 n3000-uk9-kickstart.6.0.2.U6.3a.bin n3000-uk9.6.0.2.U6.3a.bin 比較特別的是在這個版本下，kickstar 及 nxos 是拆分的。
