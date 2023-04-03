@@ -1,17 +1,15 @@
 ---
-title: "Using Linux to accomplish virtual WAN with multi PPPoE"
+title: "Implementing Virtual WAN Multi-PPPoe on Linux"
 date: 2021-07-19T08:47:55+08:00
 draft: false
-description: "I use linux as router for a while. Recently, I'm trying to ..."
+description: "I've been using Linux as a router for quite some time."
 ---
 
-I use Linux as a router for a while. Recently, I remember I can use PPPoE to get 7 IPs from Chunghwa Telecom (aka Hinet).
-
-So let's try it!
+The other day, I remembered that my ISP (Chunghwa Telecom) at home can obtain 7 floating Public IPv4 Addresses through dial-up, so I decided to implement it!
 
 ## Environment
 
-> The below details is generate by [bench.sh](https://bench.sh/)
+> The following information was generated through the [bench.sh](https://bench.sh) script.
 
 ```shell
 ----------------------------------------------------------------------
@@ -35,14 +33,14 @@ So let's try it!
 ----------------------------------------------------------------------
 ```
 
-## Create Virtual Interface
+## Create Virtual Network Card
 
-First, We need to create some virtual interfaces, and make sure the MAC Address is not the same.
-We'll use it for PPPoE connection.
+First, we need to create several virtual WANs with different MacAddresses.  
+These are what we need to use for PPPoe connections later.
 
-* enp1s0 is the physical interface which is connect to the router of Hinet.
+* enp1s0 is the network card connected to the Chunghwa Telecom router, and the name can be customized afterwards.
 
-> Create 7 virtual interfaces
+> Here we create 7 virtual network cards first.
 
 ```
 ip link add link enp1s0 name wan0 type macvlan
@@ -54,26 +52,25 @@ ip link add link enp1s0 name wan5 type macvlan
 ip link add link enp1s0 name wan6 type macvlan
 ```
 
-## Setup PPPoE connection
+## Configure PPPoe Connection
 
-> I use pppoeconf in Linux. If you haven't, please use following the command to install it.
+> I use pppoeconf in Linux.  
+> If it is not installed, you can install it with the following command.
 
 ```
 sudo apt install pppoeconf
 ```
 
-Going to pppoeconf, and add the connection details to the configure file.
+First, we enter pppoeconf and enter the account and password.
 
-And then, we can going to `/etc/ppp/peers` folder, and make the dsl-provider file as copy.
-
-Edit the interface name (Eg: nic-wan1 -> nic-wan0)
+Next, go to the `/etc/ppp/peers` folder and copy the dsl-provider file to other files.  
+And modify the network card name in the copied file (e.g. nic-wan1 -> nic-wan0).
 
 ![](https://i.imgur.com/06M8VBv.png)
 
-Final, You can use `pon <filename>` command to enable pppoe connection.
-
-Once everything is ok. You can use `ip addr` to see the interface list.
+Then use the command `pon <file name>` to enable the PPPoe connection.  
+Then enter `ip addr` to see the list of network cards.
 
 ![](https://i.imgur.com/yg6Tx59.png)
 
-That's all!
+That's it!

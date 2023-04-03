@@ -1,41 +1,37 @@
 ---
-title: 'FRRouting Install Guide'
+title: 'FRRouting Installation Tutorial'
 date: Sun, 12 Jul 2020 13:07:14 +0000
 draft: false
-tags: ['BGP', 'Server', 'Networl']
+tags: ['BGP', 'Server']
 ---
 
-I haven’t posted anything for a long time. I’m still learning some BGP Knowledge and was trying to use bird1 to make BGP Session with another operator.
+It's been a while since I last shared anything! Recently, I have been learning about BGP knowledge and testing. Previously, I used Bird1 to broadcast BGP, but when I tried to peer with my friend, we couldn't establish a connection (it was strange, but I could connect with IX). So I uninstalled Bird1 and installed [FRRouting](https://frrouting.org/) instead.
 
-But I can not make BGP Session Establishment with a operator, so I uninstall bird1 and install [FRRouting](https://frrouting.org/)
+[FRRouting](https://frrouting.org/) is a routing suite that comes from Quagga Fork, and its functionality is also very powerful (its commands are similar to Cisco or Quagga).
 
-## What's FRRouting?
+User Guide (English): [https://docs.frrouting.org/en/latest/](https://docs.frrouting.org/en/latest/)  
+GitHub project: [https://github.com/FRRouting/frr/releases](https://github.com/FRRouting/frr/releases)
 
-[FRRouting](https://frrouting.org/) is a routing daemon fork from Quagga, has a lot of features (The commands look like Cisco or Arista :D)
+First, we need to install [FRRouting](https://frrouting.org/).
 
-User Guide: [https://docs.frrouting.org/en/latest/](https://docs.frrouting.org/en/latest/)  
-GitHub Repository: [https://github.com/FRRouting/frr/releases](https://github.com/FRRouting/frr/releases)
-
-Let us start to install FRRouting!
-
-### Update Packages
+### Update packages
 
 ```
 sudo apt update -y
 sudo apt upgrade -y
 
-# Install Network Tools and GPG Packages
+# Install network packages and GPG packages
 sudo apt install -y curl gnupg2 traceroute
 ```
 
 ### Install FRRouting
 
 ```
-# Import GPG Key
+# Import GPG
 curl -s https://deb.frrouting.org/frr/keys.asc | sudo apt-key add -
 FRRVER="frr-stable"
 
-# Add repository mirror
+# Write software sources
 echo deb https://deb.frrouting.org/frr $(lsb_release -s -c) $FRRVER | sudo tee -a /etc/apt/sources.list.d/frr.list
 
 # Install FRRouting
@@ -59,17 +55,17 @@ net.ipv6.conf.all.accept_ra = 2
 sudo sysctl -p
 ```
 
-### Enable FRRouting All features
+### Activate all functions of FRRouting
 
 ```
 sudo sed -i "s/=no/=yes/g" /etc/frr/daemons
 service frr restart
 ```
 
-### Access FRRouting CLI mode
+### Enter FRRouting interactive CLI
 
 ```
 sudo vtysh
 ```
 
-Once you go to the CLI Mode, you can configure the routing with the command `config`.
+After entering the interactive CLI, you can start configuring by typing "config".
