@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Domain on SteveYi's Blog</title><link>https://blog.steveyi.net/en/tags/domain/</link><description>Recent content in Domain on SteveYi's Blog</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Tue, 07 Jul 2020 05:33:14 +0000</lastBuildDate><atom:link href="https://blog.steveyi.net/en/tags/domain/index.xml" rel="self" type="application/rss+xml"/><item><title>Guide to PVE - Installation</title><link>https://blog.steveyi.net/en/posts/pve-install/</link><pubDate>Tue, 07 Jul 2020 05:33:14 +0000</pubDate><guid>https://blog.steveyi.net/en/posts/pve-install/</guid><description>I&amp;rsquo;ve been playing with virtual machines for some time, but I used VMware Workstation on Windows systems. Later, I had a few idle computers and came across Proxmox VE, an open-source virtualization system. So, let&amp;rsquo;s install and try it out!
+Preparation:
+Proxmox VE installation disc A high-core and idle computer (otherwise, it will run very slowly) First, let&amp;rsquo;s go to the official website to download the PVE ISO file Official website link.</description></item><item><title>Setting up Tunnel Broker Service (v4 to v6) on Ubuntu System</title><link>https://blog.steveyi.net/en/posts/tunnel-broker-bgp/</link><pubDate>Sun, 31 May 2020 16:56:41 +0000</pubDate><guid>https://blog.steveyi.net/en/posts/tunnel-broker-bgp/</guid><description>Introduction I recently obtained an Autonomous System Number (AS Number), along with one /44 and two /48 IPv6 addresses. Coincidentally, I remembered using HE.Net&amp;rsquo;s tunnel broker service before, so I decided to set up a sit tunnel broker service. This article does not explain how to obtain IPv6 addresses, please consult your hosting provider.
+This article will use the open source tool - IPv6-in-IPv4 Tunnel.
+Configuration tool First, download the tool:</description></item><item><title>Creating a Cloud Identity account</title><link>https://blog.steveyi.net/en/posts/create-cloud-identity/</link><pubDate>Fri, 15 May 2020 20:35:11 +0000</pubDate><guid>https://blog.steveyi.net/en/posts/create-cloud-identity/</guid><description>First, go to the Cloud Identity registration page and click on the next page button.
+Then enter your company name (you can enter any name), number of employees (choose any number) and treat it as a team.
+Select your location (once set, it cannot be changed), but it doesn&amp;rsquo;t really matter.
+Set up your current email address (some registration emails will be sent here).
+Enter the domain you want to set up (cannot be used for other G Suite services).</description></item><item><title>Delete G Suite organization</title><link>https://blog.steveyi.net/en/posts/delete-gsuite/</link><pubDate>Fri, 15 May 2020 18:17:25 +0000</pubDate><guid>https://blog.steveyi.net/en/posts/delete-gsuite/</guid><description>Previously, I shared with you the way to register a G Suite account. Recently, I wanted to delete the G Suite organization of the Cloud Identity free version.
+Since I have never deleted a G Suite organization before, I searched for information and roughly sorted out the deletion method.
+Important reminder: Before deletion, please cancel the contractual authorization and delete all GCP projects. After deletion, all organization data will be cleared.</description></item><item><title>Backblaze B2 now supports S3 API!</title><link>https://blog.steveyi.net/en/posts/backblaze-b2-compatible-s3-api/</link><pubDate>Thu, 14 May 2020 03:08:02 +0000</pubDate><guid>https://blog.steveyi.net/en/posts/backblaze-b2-compatible-s3-api/</guid><description>A few days ago, when I opened Backblaze, I saw a big line of text:
+That&amp;rsquo;s right! Backblaze B2 now supports the S3 API!
+The S3 API is currently the most popular protocol in the market, and many hardware and software are compatible.
+Backblaze B2 is a great cloud storage option with a low cost advantage.
+How to use the S3 API If the storage bucket was created before May 4, 2020, you will need to create a new one and move your files into it (we recommend using Rclone, which will automatically support B2 Copy File).</description></item><item><title>Hosting Static Websites with Github - Github Pages</title><link>https://blog.steveyi.net/en/posts/github-static-website/</link><pubDate>Wed, 22 Apr 2020 14:09:46 +0000</pubDate><guid>https://blog.steveyi.net/en/posts/github-static-website/</guid><description>First, go to Github and click on the green New button on the left.
+Enter a Repository name (customizable)
+Choose Public or Private
+Click on Create Repository
+Now you have created a Repository!
+Next, we need to download Github Desktop to easily upload the website source files.
+Click on Download for macOS (or Download for Windows for Windows)
+After downloading, sign in to your Github account (Sign in to Github.</description></item><item><title>Setting up Custom Email Domain with Mailgun and Gmail</title><link>https://blog.steveyi.net/en/posts/mailgun-gmail-custom-domain-email/</link><pubDate>Wed, 22 Apr 2020 12:48:48 +0000</pubDate><guid>https://blog.steveyi.net/en/posts/mailgun-gmail-custom-domain-email/</guid><description>As a child, I was always curious about the domain name of the sender in an email. Later, after getting involved in website development, I registered many domains (currently having about 6 domains), and gradually understood the doubts I had as a child.
+Today, I will share with you the method of setting up custom email domain with Mailgun and Gmail!
+First, register with Mailgun, which offers 5000 free emails by default.</description></item><item><title>[Tutorial] AWS Route 53 DNS Hosting</title><link>https://blog.steveyi.net/en/posts/aws-route53/</link><pubDate>Mon, 06 Apr 2020 14:38:57 +0000</pubDate><guid>https://blog.steveyi.net/en/posts/aws-route53/</guid><description>Since 2017, after registering my first domain, DNS hosting has always been a part of my research!
+Today, I want to recommend DNS hosting service Route 53 launched by AWS.
+Prerequisites:
+AWS account
+Domain
+Create Hosted Zone First, enter the AWS console and search for Route 53.
+Then click on Hosted Zones at the top left.
+Click on Create Hosted Zone on the upper left, and then enter your domain name on the right.</description></item><item><title>Buying a domain on Gandi</title><link>https://blog.steveyi.net/en/posts/register-domain-at-gandi/</link><pubDate>Fri, 03 Apr 2020 18:40:19 +0000</pubDate><guid>https://blog.steveyi.net/en/posts/register-domain-at-gandi/</guid><description>Previously, I shared the process of transferring a domain from Google to Gandi click here to read the article. In this post, I will share the process of buying a domain on Gandi!
+Prerequisites: Money (for the domain registration fee)
+First, we open Gandi&amp;rsquo;s official website.
+Search for the domain you want and add it to your shopping cart.
+Then you can proceed to checkout.
+Gandi supports many payment methods: credit card, UnionPay, PayPal, bank transfer, Bitcoin.</description></item></channel></rss>

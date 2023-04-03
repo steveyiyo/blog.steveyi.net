@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>AWS on SteveYi's Blog</title><link>https://blog.steveyi.net/en/tags/aws/</link><description>Recent content in AWS on SteveYi's Blog</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Mon, 06 Apr 2020 14:38:57 +0000</lastBuildDate><atom:link href="https://blog.steveyi.net/en/tags/aws/index.xml" rel="self" type="application/rss+xml"/><item><title>[Tutorial] AWS Route 53 DNS Hosting</title><link>https://blog.steveyi.net/en/posts/aws-route53/</link><pubDate>Mon, 06 Apr 2020 14:38:57 +0000</pubDate><guid>https://blog.steveyi.net/en/posts/aws-route53/</guid><description>Since 2017, after registering my first domain, DNS hosting has always been a part of my research!
+Today, I want to recommend DNS hosting service Route 53 launched by AWS.
+Prerequisites:
+AWS account
+Domain
+Create Hosted Zone First, enter the AWS console and search for Route 53.
+Then click on Hosted Zones at the top left.
+Click on Create Hosted Zone on the upper left, and then enter your domain name on the right.</description></item></channel></rss>

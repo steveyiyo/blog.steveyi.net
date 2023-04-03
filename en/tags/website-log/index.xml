@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Website Log on SteveYi's Blog</title><link>https://blog.steveyi.net/en/tags/website-log/</link><description>Recent content in Website Log on SteveYi's Blog</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Fri, 15 May 2020 20:35:11 +0000</lastBuildDate><atom:link href="https://blog.steveyi.net/en/tags/website-log/index.xml" rel="self" type="application/rss+xml"/><item><title>Creating a Cloud Identity account</title><link>https://blog.steveyi.net/en/posts/create-cloud-identity/</link><pubDate>Fri, 15 May 2020 20:35:11 +0000</pubDate><guid>https://blog.steveyi.net/en/posts/create-cloud-identity/</guid><description>First, go to the Cloud Identity registration page and click on the next page button.
+Then enter your company name (you can enter any name), number of employees (choose any number) and treat it as a team.
+Select your location (once set, it cannot be changed), but it doesn&amp;rsquo;t really matter.
+Set up your current email address (some registration emails will be sent here).
+Enter the domain you want to set up (cannot be used for other G Suite services).</description></item><item><title>Hosting Static Websites with Github - Github Pages</title><link>https://blog.steveyi.net/en/posts/github-static-website/</link><pubDate>Wed, 22 Apr 2020 14:09:46 +0000</pubDate><guid>https://blog.steveyi.net/en/posts/github-static-website/</guid><description>First, go to Github and click on the green New button on the left.
+Enter a Repository name (customizable)
+Choose Public or Private
+Click on Create Repository
+Now you have created a Repository!
+Next, we need to download Github Desktop to easily upload the website source files.
+Click on Download for macOS (or Download for Windows for Windows)
+After downloading, sign in to your Github account (Sign in to Github.</description></item><item><title>Setting up Custom Email Domain with Mailgun and Gmail</title><link>https://blog.steveyi.net/en/posts/mailgun-gmail-custom-domain-email/</link><pubDate>Wed, 22 Apr 2020 12:48:48 +0000</pubDate><guid>https://blog.steveyi.net/en/posts/mailgun-gmail-custom-domain-email/</guid><description>As a child, I was always curious about the domain name of the sender in an email. Later, after getting involved in website development, I registered many domains (currently having about 6 domains), and gradually understood the doubts I had as a child.
+Today, I will share with you the method of setting up custom email domain with Mailgun and Gmail!
+First, register with Mailgun, which offers 5000 free emails by default.</description></item><item><title>[Tutorial] AWS Route 53 DNS Hosting</title><link>https://blog.steveyi.net/en/posts/aws-route53/</link><pubDate>Mon, 06 Apr 2020 14:38:57 +0000</pubDate><guid>https://blog.steveyi.net/en/posts/aws-route53/</guid><description>Since 2017, after registering my first domain, DNS hosting has always been a part of my research!
+Today, I want to recommend DNS hosting service Route 53 launched by AWS.
+Prerequisites:
+AWS account
+Domain
+Create Hosted Zone First, enter the AWS console and search for Route 53.
+Then click on Hosted Zones at the top left.
+Click on Create Hosted Zone on the upper left, and then enter your domain name on the right.</description></item><item><title>Transferring Domain from Google Domains to Gandi</title><link>https://blog.steveyi.net/en/posts/transfer-domain-from-google-to-gandi/</link><pubDate>Thu, 02 Apr 2020 02:55:55 +0000</pubDate><guid>https://blog.steveyi.net/en/posts/transfer-domain-from-google-to-gandi/</guid><description>In the past few days, I received a notification email from Google Domains reminding me that my domain would need to be renewed soon.
+Coincidentally, I had planned to transfer all my domains to Gandi for unified management. So, I&amp;rsquo;ll take this opportunity to share how to transfer a domain out/in.
+Preparation:
+Registered domain (the one to be transferred out) Money (required for domain renewal when transferred to another registrar) First, go to Google Domains to unlock the domain and obtain the transfer authorization code.</description></item></channel></rss>
