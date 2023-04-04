@@ -3,8 +3,9 @@ title: 'Google Ads - This is How Google Sees You...'
 date: Tue, 19 Jan 2021 13:00:00 +0000
 draft: false
 tags: ['Google', 'Life Tips']
-Author: Carrot
+Author: 蘿蔔
 ---
+
 This article was supposed to be published in December of last year, but it happened to coincide with server maintenance, so it hasn't been released until now.
 
 ![](https://static-a1.steveyi.net/media/blog/2021011914191084.png)

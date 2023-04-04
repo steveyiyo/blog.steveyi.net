@@ -6,7 +6,7 @@ tags: ['Free Resources', 'Life Hacks']
 Author: 蘿蔔 & SteveYi Yo
 ---
 
-> (This article was co-edited by SteveYi and Carrot)
+> (This article was co-edited by SteveYi and 蘿蔔)
 
 A few days ago, during class, SteveYi’s teacher introduced a fun website to the class.
 
