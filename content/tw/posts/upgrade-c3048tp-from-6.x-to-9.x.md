@@ -61,7 +61,7 @@ Switch 會在安裝完成後自動重啟。
 直接輸入以下指令即可進入升級，請自行修改對應目錄及檔案名稱。
 
 ```shell
-install all nxos bootflash:nxos.7.0.3.I7.6.bin`
+install all nxos bootflash:nxos.7.0.3.I7.6.bin
 ```
 
 升級完成後一樣輸入 `show module` 來看看是否升級成功！
