@@ -7,7 +7,7 @@ draft: false
 
 ### 我是誰
 
-我是小易，你也可以稱呼我為 SteveYi。目前專注於研究網際網路及虛擬化設計。
+我是游宗易，大家都叫我小易，你也可以稱呼我為 SteveYi。目前專注於研究網際網路及虛擬化設計。
 
 <!--
 從小學時期就很喜歡虛擬化技術，最初在家裡的電腦上安裝 [Virtual Box](https://www.virtualbox.org/) 及 [VMware Workstation](https://www.vmware.com/products/workstation-pro.html) 程式來虛擬系統使用  
