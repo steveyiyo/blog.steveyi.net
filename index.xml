@@ -1136,17 +1136,8 @@ ProductBuildVersion改 10B329
 Attending APRICOT 2022 / APNIC 53 Based on the COVID-19, APRICOT 2022 conference are 100% online conference.
 Before attending this conference, I need to register on their website. Since the conference is online, APNIC does not charge for the tickets.
 There has 886 registered participants (Include me).</description></item><item><title>關於</title><link>https://blog.steveyi.net/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.steveyi.net/about/</guid><description>很高興你可以來到這裡！歡迎來到酷小易的部落格
-我是誰 我是游宗易，大家都叫我小易，你也可以稱呼我為 SteveYi。目前專注於研究網際網路及虛擬化設計。
-本站的起源故事 我在國中時（2018 年）開始接觸網域名稱及 Linux 系統，並註冊了人生第一個網域為 steveyigame.com
-當時非常嚮往設計個人網站，讓大家可以直接從網際網路上瀏覽，於是也逐漸地踏上後端工程師的道路。
-在這之中，我用過了 WordPress 這類的動態 CMS 系統，也在當時開始學習 PHP 及 HTML，逐步到後面，學習使用 Golang 來開發 RESTFul API 並串接網站。
-不知道你有沒有注意到，本站是一個 Hosting 在 GitHub Pages 的靜態網頁喲！
-其原理是使用 Hugo 及 Markdown 來撰寫文章，並搭配 CI/CD 來自動化產生靜態網頁文件，詳情可以參考這份 YAML 文件。
-網路工程 從 2020 年初密切接觸到了 Routing 等網際網路技術，深入瞭解 L3 的魔法，並因此自建個人的邊緣網路及 Homa Lab，維護一個大型網路。
-除此之外，也透過 AS7480 等 AS Number 來宣告 Public IP 地址到網際網路，運用 iBGP, OSPF 等內部路由技術，來完成網際網路的接通。
-PS. 歡迎參考相關的 L3 路由演講紀錄 - 演講
-從社群中學習，回饋於社群 剛開始學網路工程時，遇到了一位好朋友指點我成長，才有現在的我。不僅讓我掌握自學的能力，也是我學習的道路上，令我印象深刻的一件事，並持續成長！
-也從 2020 年開始，陸續參與了許多社群活動 比如：COSCUP、SITCON、MOPCON 及 g0v summit 社群等。在這當中，我的視野增長了不少，也認識了許多專業技術的同好，彼此交流。我也其中盡我所能的去分享我的個人經驗，彼此成長！</description></item><item><title>隱私權政策</title><link>https://blog.steveyi.net/posts/privacy-policy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.steveyi.net/posts/privacy-policy/</guid><description>非常歡迎您光臨「酷小易」（以下簡稱本網站），為了讓您能夠安心的使用本網站的各項服務與資訊，特此向您說明本網站的隱私權保護政策，以保障您的權益，請您詳閱下列內容：
+我是誰 我是游宗易，大家都叫我小易，你也可以稱呼我為 SteveYi。目前專注於研究網際網路、虛擬化設計及網路治理研究。
+AWARD APAN/ISOC network-engineering fellowship APNIC Fellowship 2022 Vulnerability Report APNIC Vulnerability Reporting Program (2022) 演講 年份 活動名稱 講題 2023 TWIGF 台灣網路治理論壇 多元世代參與如何構築韌性更強的網路治理社群 2023 COSCUP 開源人年會 Design a Linux DPDK-based router system of your own to achieve 100G forwarding efficiency! 2023 LINE TECH FRESH 畢業分享會 Enable Resiliency and Efficiency at LINE Invoice 2023 4th ICANN APAC-TWNIC Engagement Forum Empowering the Next Gen: Fostering Youth Engagement and Cross-Generational Collaboration in Internet Governance 2023 TWNIC 台灣網路青年論壇節目 AI 帶來的新世界：年輕人的機會與挑戰！ 2023 TWNIC Podcast 不斷網會客室 從台灣到國際，AI 高速列車你搭上了嗎？ 2021 清大 CSST 程式設計討論會 Part 12 - L3 神奇魔法 路由的奧秘 2021 師大附中 CNMS 暑訓 著手打造一個小型 ISP 2021 SITCON 學生計算機年會 想上網？大展 L3 路由魔法吧！ 與我聯繫 Email: info [at] steveyi [dot] net</description></item><item><title>隱私權政策</title><link>https://blog.steveyi.net/posts/privacy-policy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.steveyi.net/posts/privacy-policy/</guid><description>非常歡迎您光臨「酷小易」（以下簡稱本網站），為了讓您能夠安心的使用本網站的各項服務與資訊，特此向您說明本網站的隱私權保護政策，以保障您的權益，請您詳閱下列內容：
 一、隱私權保護政策的適用範圍 隱私權保護政策內容，包括本網站如何處理在您使用網站服務時收集到的個人識別資料。隱私權保護政策不適用於本網站以外的相關連結網站，也不適用於非本網站所委託或參與管理的人員。
 二、個人資料的蒐集、處理及利用方式 當您造訪本網站或使用本網站所提供之功能服務時，我們將視該服務功能性質，請您提供必要的個人資料，並在該特定目的範圍內處理及利用您的個人資料；非經您書面同意，本網站不會將個人資料用於其他用途。
 本網站在您使用服務信箱、問卷調查等互動性功能時，會保留您所提供的姓名、電子郵件地址、聯絡方式及使用時間等。
