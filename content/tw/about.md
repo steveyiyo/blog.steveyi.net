@@ -7,7 +7,7 @@ draft: false
 
 ### 我是誰
 
-我是游宗易，大家都叫我小易，你也可以稱呼我為 SteveYi。目前專注於研究網際網路及虛擬化設計。
+我是游宗易，大家都叫我小易，你也可以稱呼我為 SteveYi。目前專注於研究網際網路、虛擬化設計及網路治理研究。
 
 <!--
 從小學時期就很喜歡虛擬化技術，最初在家裡的電腦上安裝 [Virtual Box](https://www.virtualbox.org/) 及 [VMware Workstation](https://www.vmware.com/products/workstation-pro.html) 程式來虛擬系統使用  
@@ -16,6 +16,7 @@ draft: false
 同時，我也專研於網際網路 (L2 及 L3) 並使用 [AS60614](https://whois.steveyi.net/whois/AS60614) 及 [AS209557](https://whois.steveyi.net/whois/AS209557)
 -->
 
+<!--
 ### 本站的起源故事
 
 我在國中時（2018 年）開始接觸網域名稱及 Linux 系統，並註冊了人生第一個網域為 [steveyigame.com](https://whois.steveyi.net/whois/steveyigame.com)
@@ -44,6 +45,8 @@ PS. 歡迎參考相關的 L3 路由演講紀錄 - [演講](#演講)
 
 所以，在這個網站中，你會看到我的實驗筆記記錄以及心得分享或是一些意想不到的內容唷～
 
+-->
+
 ## AWARD
 
 - APAN/ISOC network-engineering fellowship
@@ -55,23 +58,18 @@ PS. 歡迎參考相關的 L3 路由演講紀錄 - [演講](#演講)
 
 ### 演講
 
-- 2021 清大 CSST 程式設計討論會
-  - [Part 12 - L3 神奇魔法 路由的奧秘](https://www.slideshare.net/ZongYiYo/20210607-csst)
-- 師大附中 CNMS 暑訓
-  - [著手打造一個小型 ISP]()
-- 2021 SITCON 學生計算機年會
-  - [想上網？大展 L3 路由魔法吧！](https://sitcon.org/2021/agenda/5860c3e8-a7a6-4c7b-afee-7797e777725e) w/ [Sciuridae Li](https://sciuridae.me/)
+|年份|活動名稱|講題|
+|------|------|------|
+|2023|TWIGF 台灣網路治理論壇|多元世代參與如何構築韌性更強的網路治理社群|
+|2023|COSCUP 開源人年會|Design a Linux DPDK-based router system of your own to achieve 100G forwarding efficiency!|
+|2023|LINE TECH FRESH 畢業分享會|[Enable Resiliency and Efficiency at LINE Invoice](https://youtu.be/GAaGIfP-IBA)|
+|2023|4th ICANN APAC-TWNIC Engagement Forum|Empowering the Next Gen: Fostering Youth Engagement and Cross-Generational Collaboration in Internet Governance|
+|2023|TWNIC 台灣網路青年論壇節目|[AI 帶來的新世界：年輕人的機會與挑戰！](https://open.firstory.me/story/clnpn0oek05bj01urbi4qdz8k)|
+|2023|TWNIC Podcast 不斷網會客室|從台灣到國際，AI 高速列車你搭上了嗎？|
+|2021|清大 CSST 程式設計討論會|[Part 12 - L3 神奇魔法 路由的奧秘](https://www.slideshare.net/ZongYiYo/20210607-csst)|
+|2021|師大附中 CNMS 暑訓| [著手打造一個小型 ISP]()|
+|2021|SITCON 學生計算機年會| [想上網？大展 L3 路由魔法吧！](https://sitcon.org/2021/agenda/5860c3e8-a7a6-4c7b-afee-7797e777725e)
 
 ### 與我聯繫
 
-若發現文章有誤，歡迎告訴我或是透過 [PR](https://github.com/steveyiyo/blog.steveyi.net/pulls) 來提交修改。
-
 Email: [info [at] steveyi [dot] net](mailto:info@steveyi_dot_net)
-
-### 授權
-
-本站所有文章採用創用 CC 姓名標示 - 相同方式分享 4.0 國際授權條款授權。
-
-詳情請參考 [Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](http://creativecommons.org/licenses/by-sa/4.0/)
-
-![](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png)
