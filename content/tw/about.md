@@ -69,6 +69,28 @@ PS. 歡迎參考相關的 L3 路由演講紀錄 - [演講](#演講)
 |2021|師大附中 CNMS 暑訓| [著手打造一個小型 ISP]()|
 |2021|SITCON 學生計算機年會| [想上網？大展 L3 路由魔法吧！](https://sitcon.org/2021/agenda/5860c3e8-a7a6-4c7b-afee-7797e777725e)
 
+## 活動參與
+|年份|活動名稱|身份|
+|------|------|------|
+|2023|NTHU HPC x AI Summer Camp|學員|
+|2022|HITCON 台灣駭客年會|資訊設施組 組長|
+|2022|SITCON 學生計算機年會|編輯組、行銷組 組員|
+|2022|COSCUP 開源人年會|KCD Taiwan 志工|
+|2021|SITCON HoC 台南場|總召集人|
+|2021|HITCON 台灣駭客年會|資訊設施組 組員|
+|2021|iThome 鐵人賽|筆者|
+|2021|SITCON Camp|隊輔|
+|2021|AIS3 新型態資安暑期課程|學員|
+|2021|All 駭 Yo 寒假資安訓練營|學員|
+|2020|SITCON HoC 台南場|助教|
+|2020|SITCON 聯合工作坊 簡易網路環境建置安全實作與 Homelab 建置之心路歷程|助教|
+|2020|g0v Summit|與會者|
+|2020|MOPCON|與會者|
+|2020|iThome 鐵人賽|筆者|
+|2020|SITCON 學生計算機年會|與會者|
+|2020|COSCUP 開源人年會|與會者|
+|2019|TpGS 台北國際電玩展|創作者|
+
 ### 與我聯繫
 
 Email: [info [at] steveyi [dot] net](mailto:info@steveyi.net)

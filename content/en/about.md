@@ -87,6 +87,28 @@ More details please see the [Attribution-ShareAlike 4.0 International (CC BY-SA 
 | 2021 | Affiliated Senior High School of Normal University CNMS Summer Training | Starting to Build a Small ISP |
 | 2021 | SITCON, Students’ Information Technology Conference | [Want to Connect to the Internet? Unveil the L3 Routing Magic!](https://sitcon.org/2021/agenda/5860c3e8-a7a6-4c7b-afee-7797e777725e) |
 
+## Event Participation
+|Year|Event Name|Role|
+|------|------|------|
+|2023|NTHU HPC x AI Summer Camp|Student|
+|2022|HITCON Taiwan Hacker Conference|Information Infrastructure Team Leader|
+|2022|SITCON, Students' Information Technology Conference|Editorial Team & Marketing Team Member|
+|2022|COSCUP, Conference for Open Source Coders, Users, and Promoters|KCD Taiwan Volunteer|
+|2021|SITCON HoC Tainan|General Convener|
+|2021|HITCON Taiwan Hacker Conference|Information Infrastructure Team Member|
+|2021|iThome Challenge|Author|
+|2021|SITCON Camp|Team Facilitator|
+|2021|AIS3 Cybersecurity Summer Course|Student|
+|2021|Cybersecurity Camp by NCHC|Student|
+|2020|SITCON HoC Tainan|Teaching Assistant|
+|2020|SITCON 聯合工作坊 簡易網路環境建置安全實作與 Homelab 建置之心路歷程|Teaching Assistant|
+|2020|g0v Summit|Participant|
+|2020|MOPCON|Participant|
+|2020|iThome Challenge|Author|
+|2020|SITCON, Students' Information Technology Conference|Participant|
+|2020|COSCUP, Conference for Open Source Coders, Users, and Promoters|Participant|
+|2019|TpGS, Taipei Game Show|Creator|
+
 ### Contact Me
 
 Email: [info [at] steveyi [dot] net](mailto:info@steveyi.net)
