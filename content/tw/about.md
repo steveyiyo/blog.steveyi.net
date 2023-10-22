@@ -1,22 +1,20 @@
 ---
-title: "關於"
+title: "關於宗易"
 draft: false
 ---
 
-很高興你可以來到這裡！歡迎來到酷小易的部落格
+我是游宗易，大家都叫我小易，你也可以稱呼我為 SteveYi。
 
-### 我是誰
+目前興趣是網路治理研究、網際網路技術及虛擬化設計等等。我在網路治理領域深入參與不少活動，曾出席過多場國內外研討會，如：APNIC 54/56, ICANN APAC-TWNIC Engagement Forum, TWIGF 台灣網路治理論壇等。此外，我對有興趣的領域非常熱情，無論是公共政策還是資訊領域，每場活動我都會花很多時間深入參與，我也在許多研討會中擔任講者。
 
-我是游宗易，大家都叫我小易，你也可以稱呼我為 SteveYi。目前專注於研究網際網路、虛擬化設計及網路治理研究。
+我同時也對網路工程及公共政策很感興趣，最近正在積極參與法學相關活動，往法律領域發展，成為擁有科技能力的法律人。如果想與更近一步交流，歡迎透過電子郵件聯絡我。
 
 <!--
 從小學時期就很喜歡虛擬化技術，最初在家裡的電腦上安裝 [Virtual Box](https://www.virtualbox.org/) 及 [VMware Workstation](https://www.vmware.com/products/workstation-pro.html) 程式來虛擬系統使用  
 目前則在伺服器上使用 [PVE](https://pve.proxmox.com/) 來進行虛擬化
 
 同時，我也專研於網際網路 (L2 及 L3) 並使用 [AS60614](https://whois.steveyi.net/whois/AS60614) 及 [AS209557](https://whois.steveyi.net/whois/AS209557)
--->
 
-<!--
 ### 本站的起源故事
 
 我在國中時（2018 年）開始接觸網域名稱及 Linux 系統，並註冊了人生第一個網域為 [steveyigame.com](https://whois.steveyi.net/whois/steveyigame.com)
@@ -65,12 +63,12 @@ PS. 歡迎參考相關的 L3 路由演講紀錄 - [演講](#演講)
 |2023|COSCUP 開源人年會|[Design a Linux DPDK-based router system of your own to achieve 100G forwarding efficiency!](https://coscup.org/2023/en/session/NJPZFR)|
 |2023|LINE TECH FRESH 畢業分享會|[Enable Resiliency and Efficiency at LINE Invoice](https://youtu.be/GAaGIfP-IBA)|
 |2023|4th ICANN APAC-TWNIC Engagement Forum|[Empowering the Next Gen: Fostering Youth Engagement and Cross-Generational Collaboration in Internet Governance](https://forum.twnic.tw/2023/agenda03.htm#ag)|
-|2023|TWNIC 台灣網路青年論壇節目|[AI 帶來的新世界：年輕人的機會與挑戰！](https://open.firstory.me/story/clnpn0oek05bj01urbi4qdz8k)|
-|2023|TWNIC Podcast 不斷網會客室|從台灣到國際，AI 高速列車你搭上了嗎？|
+|2023|TWNIC 台灣網路青年論壇節目|AI 帶來的新世界：年輕人的機會與挑戰！|
+|2023|TWNIC Podcast 不斷網會客室|[從台灣到國際，AI 高速列車你搭上了嗎？]((https://open.firstory.me/story/clnpn0oek05bj01urbi4qdz8k))|
 |2021|清大 CSST 程式設計討論會|[Part 12 - L3 神奇魔法 路由的奧秘](https://www.slideshare.net/ZongYiYo/20210607-csst)|
 |2021|師大附中 CNMS 暑訓| [著手打造一個小型 ISP]()|
 |2021|SITCON 學生計算機年會| [想上網？大展 L3 路由魔法吧！](https://sitcon.org/2021/agenda/5860c3e8-a7a6-4c7b-afee-7797e777725e)
 
 ### 與我聯繫
 
-Email: [info [at] steveyi [dot] net](mailto:info@steveyi_dot_net)
+Email: [info [at] steveyi [dot] net](mailto:info@steveyi.net)
