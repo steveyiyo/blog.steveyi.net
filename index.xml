@@ -1,4 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>小易的部落格</title><link>https://blog.steveyi.net/</link><description>Recent content on 小易的部落格</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Tue, 16 May 2023 17:53:38 +0800</lastBuildDate><atom:link href="https://blog.steveyi.net/index.xml" rel="self" type="application/rss+xml"/><item><title>Juniper MX204 升級全過程</title><link>https://blog.steveyi.net/posts/upgrade-mx204/</link><pubDate>Tue, 16 May 2023 17:53:38 +0800</pubDate><guid>https://blog.steveyi.net/posts/upgrade-mx204/</guid><description>最近有幸接觸了一台 Juniper MX204，恰巧也順便將其升級到新版本。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>小易的部落格</title><link>https://blog.steveyi.net/</link><description>Recent content on 小易的部落格</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Mon, 23 Oct 2023 10:31:38 +0800</lastBuildDate><atom:link href="https://blog.steveyi.net/index.xml" rel="self" type="application/rss+xml"/><item><title>心得：法理學經典導讀 - "Theorie der juristischen Argumentation" 《法律論證理論》 @ NTU 2023-10-23</title><link>https://blog.steveyi.net/posts/alexy_legal_argumentation_summary_20231023_ntu/</link><pubDate>Mon, 23 Oct 2023 10:31:38 +0800</pubDate><guid>https://blog.steveyi.net/posts/alexy_legal_argumentation_summary_20231023_ntu/</guid><description>很高興可以聽到王鵬翔老師及程源中老師帶大家導讀 Alexy 的法律論證理論，老師們的導讀方式非常有趣，非法律背景的我也可以聽懂一部分。
+趁著記憶猶新，趕快將心得記下來。而我為了重新確認內容有沒有錯誤，我又把直播紀錄看了一次，老師們講得真好呀～～
+Facebook 活動資訊
+心得反思 作為一位非法律背景的聽眾，法理學是比較偏向哲學類型的法學，前部分我還是可以理解內容的，而後半部就稍微有點跟不上了。不過整體收穫頗多！
+在導讀尾聲時，老師們提到 The problem of underdetermination and &amp;ldquo;replacement program&amp;rdquo;，並延伸兩個問題。其中之一我覺得蠻有意思的。
+” 影響判決因素的經驗研究（包含運用機器學習的 AI 判決預測）能夠取代法律論證理論嗎？ “
+在這邊我想以科技點的看法來探討，特別是 AI。
+我一開始認為在沒有實質上的證據而去進行判決預測，可能會參考到其他不被預期的證據而導致判決有所偏差。曾經看過美國銀行在審核信用卡或貸款時，內部的計算方式 (or AI) 自動將黑人的評分降低。以這個例子為例，是不是會有失公平性、無法掌握的問題？然而，如是以 Explainable AI 為準，經過主管機關「合理」的調查，收集到明確的證據。是不是可以將其作為辯論者，限縮在法律框架下進行，成為論證理論？
+當然，如果有一天法庭真的使用 Explainable AI 作為論證理論，可能還是要有所評估。比如 AI 太公正，而忽略人的情感、家庭背景或是生活壓力所導致的評估點？
+為什麼生程式 AI 會產生不存在內容？ 此部分篇資訊技術，若想看導讀摘要可以跳過此段。
+當時我向政治系及資管系的朋友討論，其中一位朋友向我提問「為什麼生成式 AI 會產生不存在的內容？他們不是都有收集到資料嗎？」
+生成式 AI 主要利用深度學習的技術，深度學習則是由多種神經網路架構組成，演算函數及變數的組合數量非常，無法透過人腦理解。而其訓練資料的來源性更難以透徹。
+我時常將生成式 AI 比喻為人類，為了說服使用者，他會產生「極為真實」的資料，透過誤導性資訊更可能導致其失去自我判斷。
+查證的重要性 還記得我曾經受到 TWNIC 台灣網路資訊中心邀請，進行 Podcast 及影音錄製。
+當時與主持人 陽明交通大學 - 陳延昇老師 及其他與會者共同探討時，「如何查驗身份及資訊的正確性」則為很重要的一點。除了透過中心化的 Google, Yahoo, Bing 等搜尋引擎來查證相關參考連結以外，我們可以用自然人憑證, 區塊鏈的 NFT, 等等方式。
+可是，更大的問題是我們是不是要花費更多時間或人工成本來進行手動查證呢？而未來假消息泛濫，要如何在保障網路公民言論管制中立性的前提下，我們要如何讓現有的法規跟上科技的改變呢？
+如果非科技相關背景，該如何去學習查證的方法呢？ &amp;ldquo;In the age of information, discernment is not a luxury but a necessity.</description></item><item><title>Juniper MX204 升級全過程</title><link>https://blog.steveyi.net/posts/upgrade-mx204/</link><pubDate>Tue, 16 May 2023 17:53:38 +0800</pubDate><guid>https://blog.steveyi.net/posts/upgrade-mx204/</guid><description>最近有幸接觸了一台 Juniper MX204，恰巧也順便將其升級到新版本。
 這篇文章就來記錄一下升級的過程，以及遇到的問題。
 升級的方法 一般來說，Juniper 可以透過以下兩種方式來升級系統版本：
 透過 USB 隨身碟 透過網路 注意：此處是指升級 Junos OS，而不是從 Boot 重新安裝。
