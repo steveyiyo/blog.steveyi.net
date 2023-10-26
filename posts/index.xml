@@ -1,4 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on 小易的部落格</title><link>https://blog.steveyi.net/posts/</link><description>Recent content in Posts on 小易的部落格</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Mon, 23 Oct 2023 10:31:38 +0800</lastBuildDate><atom:link href="https://blog.steveyi.net/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>心得：法理學經典導讀 - "Theorie der juristischen Argumentation" 《法律論證理論》 @ NTU 2023-10-23</title><link>https://blog.steveyi.net/posts/alexy_legal_argumentation_summary_20231023_ntu/</link><pubDate>Mon, 23 Oct 2023 10:31:38 +0800</pubDate><guid>https://blog.steveyi.net/posts/alexy_legal_argumentation_summary_20231023_ntu/</guid><description>很高興可以聽到 王鵬翔老師 及 程源中老師 帶大家導讀 Alexy 的法律論證理論，老師們的導讀方式非常有趣，非法律背景的我也可以聽懂一部分。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on 小易的部落格</title><link>https://blog.steveyi.net/posts/</link><description>Recent content in Posts on 小易的部落格</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Fri, 27 Oct 2023 04:17:04 +0800</lastBuildDate><atom:link href="https://blog.steveyi.net/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>AFRINIC 破產是危機還是轉機 - 數百萬 IPv4 地址的爭議故事</title><link>https://blog.steveyi.net/posts/afrinic-bankruptcy-crisis-or-opportunity/</link><pubDate>Fri, 27 Oct 2023 04:17:04 +0800</pubDate><guid>https://blog.steveyi.net/posts/afrinic-bankruptcy-crisis-or-opportunity/</guid><description>我從 2021 年就開始關注 AFRINIC 的相關爭議事件，這幾天其宣布破產保護更讓我震驚。這篇文章就來分享一下 AFRINIC 一直以來的爭議及我的論點吧！
+AFRINIC 是什麼來頭？他對我們的影響有哪些？ AFRINIC 大家可能比較陌生，但相信對網路治理有興趣的朋友們多多少少都有聽過 Regional Internet Registries (RIR) 區域網際網路註冊管理機構吧！
+在全球共有五大 RIR，負責分配全世界的所有網路資源（包括 IP 地址、AS 號碼），分別為：
+APNIC 亞太網路資訊中心 RIPE NCC 歐洲網路資訊中心 ARIN 北美網際網路註冊中心 AFRINIC 非洲網路資訊中心 LACNIC 拉丁美洲和加勒比網域名稱註冊管理機構 而其中，AFRINIC 則負責分配「非洲地區」及「印度洋地區」的網路資源，意思就是整個非洲地區所有的 IP 地址都由他們負責分配及管理。
+你可能會好奇&amp;hellip;
+Q: 如果沒有 IP 地址會怎麼樣？ IP 地址作為全球唯一的識別碼，其概念類似於身分證字號，負責判斷使用者的位置。當網際網路的另一端收到該 IP 的請求，會透過「路由」將回傳資料一路送回。 如果沒有 IP 地址，將無法與網際網路連接，無法做任何事情。
+除了 RIR，你還必須知道 ICANN, ASO &amp;amp; NRO。 你可能好奇，五大 RIR 不是已經管理全球所有 IP 地址了嗎？這些組織是什麼？
+ICANN 全名 Internet Corporation for Assigned Names and Numbers，負責管理全球的 Domain Name, Internet Resource 及 L Root Server 的維護，而他們又將網路資源下發給全球五大 RIR 管理。</description></item><item><title>心得：法理學經典導讀 - "Theorie der juristischen Argumentation" 《法律論證理論》 @ NTU 2023-10-23</title><link>https://blog.steveyi.net/posts/alexy_legal_argumentation_summary_20231023_ntu/</link><pubDate>Mon, 23 Oct 2023 10:31:38 +0800</pubDate><guid>https://blog.steveyi.net/posts/alexy_legal_argumentation_summary_20231023_ntu/</guid><description>很高興可以聽到 王鵬翔老師 及 程源中老師 帶大家導讀 Alexy 的法律論證理論，老師們的導讀方式非常有趣，非法律背景的我也可以聽懂一部分。
 趁著記憶猶新，趕快將心得記下來。而我為了重新確認內容有沒有錯誤，我又把 直播紀錄 看了一次，老師們講得真好呀～～
 Facebook 活動資訊
 心得反思 作為一位非法律背景的聽眾，我認為法理學是比較偏向哲學類型的法學，前部分我還是可以理解內容的，而後半部就稍微有點跟不上了。不過整體收穫頗多！
@@ -1145,14 +1152,7 @@ ProductBuildVersion改 10B329
 載點1: http://static-a1.steveyi.net/mirror/dd/win10.gz
 遠端登入資訊
 帳號: Administrator
-密碼: steveyigame.com</description></item><item><title/><link>https://blog.steveyi.net/posts/afrinic-bankruptcy-crisis-or-opportunity/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.steveyi.net/posts/afrinic-bankruptcy-crisis-or-opportunity/</guid><description>AFRINIC 破產是危機還是轉機：數百萬 IPv4 地址的爭議故事 我從 2021 年就開始關注 AFRINIC 的相關爭議事件，這幾天其宣布破產保護更讓我震驚。這篇文章就來分享一下 AFRINIC 一直以來的爭議及我的論點吧！
-AFRINIC 是什麼來頭？他對我們的影響有哪些？ AFRINIC 大家可能比較陌生，但相信對網路治理有興趣的朋友們多多少少都有聽過 Regional Internet Registries (RIR) 區域網際網路註冊管理機構吧！
-在全球共有五大 RIR，負責分配全世界的所有網路資源（包括 IP 地址、AS 號碼），分別為：
-APNIC 亞太網路資訊中心 RIPE NCC 歐洲網路資訊中心 ARIN 北美網際網路註冊中心 AFRINIC 非洲網路資訊中心 LACNIC 拉丁美洲和加勒比網域名稱註冊管理機構 而其中，AFRINIC 則負責分配「非洲地區」及「印度洋地區」的網路資源，意思就是整個非洲地區所有的 IP 地址都由他們負責分配及管理。
-你可能會好奇&amp;hellip;
-Q: 如果沒有 IP 地址會怎麼樣？ IP 地址作為全球唯一的識別碼，其概念類似於身分證字號，負責判斷使用者的位置。當網際網路的另一端收到該 IP 的請求，會透過「路由」將回傳資料一路送回。 如果沒有 IP 地址，將無法與網際網路連接，無法做任何事情。
-除了 RIR，你還必須知道 ICANN, ASO &amp;amp; NRO。 你可能好奇，五大 RIR 不是已經管理全球所有 IP 地址了嗎？這些組織是什麼？
-ICANN 全名 Internet Corporation for Assigned Names and Numbers，負責管理全球的 Domain Name, Internet Resource 及 L Root Server 的維護，而他們又將網路資源下發給全球五大 RIR 管理。</description></item><item><title>隱私權政策</title><link>https://blog.steveyi.net/posts/privacy-policy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.steveyi.net/posts/privacy-policy/</guid><description>非常歡迎您光臨「酷小易」（以下簡稱本網站），為了讓您能夠安心的使用本網站的各項服務與資訊，特此向您說明本網站的隱私權保護政策，以保障您的權益，請您詳閱下列內容：
+密碼: steveyigame.com</description></item><item><title>隱私權政策</title><link>https://blog.steveyi.net/posts/privacy-policy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.steveyi.net/posts/privacy-policy/</guid><description>非常歡迎您光臨「酷小易」（以下簡稱本網站），為了讓您能夠安心的使用本網站的各項服務與資訊，特此向您說明本網站的隱私權保護政策，以保障您的權益，請您詳閱下列內容：
 一、隱私權保護政策的適用範圍 隱私權保護政策內容，包括本網站如何處理在您使用網站服務時收集到的個人識別資料。隱私權保護政策不適用於本網站以外的相關連結網站，也不適用於非本網站所委託或參與管理的人員。
 二、個人資料的蒐集、處理及利用方式 當您造訪本網站或使用本網站所提供之功能服務時，我們將視該服務功能性質，請您提供必要的個人資料，並在該特定目的範圍內處理及利用您的個人資料；非經您書面同意，本網站不會將個人資料用於其他用途。
 本網站在您使用服務信箱、問卷調查等互動性功能時，會保留您所提供的姓名、電子郵件地址、聯絡方式及使用時間等。
