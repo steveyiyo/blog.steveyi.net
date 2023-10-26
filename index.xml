@@ -1145,7 +1145,14 @@ ProductBuildVersion改 10B329
 載點1: http://static-a1.steveyi.net/mirror/dd/win10.gz
 遠端登入資訊
 帳號: Administrator
-密碼: steveyigame.com</description></item><item><title>APAN 獎學金計畫</title><link>https://blog.steveyi.net/apan-fellowship/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.steveyi.net/apan-fellowship/</guid><description>I&amp;rsquo;m very glad to be able to participate in this program. I hope that I can contribute to the APAN community and to the APAN Foundation.
+密碼: steveyigame.com</description></item><item><title/><link>https://blog.steveyi.net/posts/afrinic-bankruptcy-crisis-or-opportunity/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.steveyi.net/posts/afrinic-bankruptcy-crisis-or-opportunity/</guid><description>AFRINIC 破產是危機還是轉機：數百萬 IPv4 地址的爭議故事 我從 2021 年就開始關注 AFRINIC 的相關爭議事件，這幾天其宣布破產保護更讓我震驚。這篇文章就來分享一下 AFRINIC 一直以來的爭議及我的論點吧！
+AFRINIC 是什麼來頭？他對我們的影響有哪些？ AFRINIC 大家可能比較陌生，但相信對網路治理有興趣的朋友們多多少少都有聽過 Regional Internet Registries (RIR) 區域網際網路註冊管理機構吧！
+在全球共有五大 RIR，負責分配全世界的所有網路資源（包括 IP 地址、AS 號碼），分別為：
+APNIC 亞太網路資訊中心 RIPE NCC 歐洲網路資訊中心 ARIN 北美網際網路註冊中心 AFRINIC 非洲網路資訊中心 LACNIC 拉丁美洲和加勒比網域名稱註冊管理機構 而其中，AFRINIC 則負責分配「非洲地區」及「印度洋地區」的網路資源，意思就是整個非洲地區所有的 IP 地址都由他們負責分配及管理。
+你可能會好奇&amp;hellip;
+Q: 如果沒有 IP 地址會怎麼樣？ IP 地址作為全球唯一的識別碼，其概念類似於身分證字號，負責判斷使用者的位置。當網際網路的另一端收到該 IP 的請求，會透過「路由」將回傳資料一路送回。 如果沒有 IP 地址，將無法與網際網路連接，無法做任何事情。
+除了 RIR，你還必須知道 ICANN, ASO &amp;amp; NRO。 你可能好奇，五大 RIR 不是已經管理全球所有 IP 地址了嗎？這些組織是什麼？
+ICANN 全名 Internet Corporation for Assigned Names and Numbers，負責管理全球的 Domain Name, Internet Resource 及 L Root Server 的維護，而他們又將網路資源下發給全球五大 RIR 管理。</description></item><item><title>APAN 獎學金計畫</title><link>https://blog.steveyi.net/apan-fellowship/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.steveyi.net/apan-fellowship/</guid><description>I&amp;rsquo;m very glad to be able to participate in this program. I hope that I can contribute to the APAN community and to the APAN Foundation.
 Attending APRICOT 2022 / APNIC 53 Based on the COVID-19, APRICOT 2022 conference are 100% online conference.
 Before attending this conference, I need to register on their website. Since the conference is online, APNIC does not charge for the tickets.
 There has 886 registered participants (Include me).</description></item><item><title>關於宗易</title><link>https://blog.steveyi.net/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.steveyi.net/about/</guid><description>我是游宗易，大家都叫我小易，你也可以稱呼我為 SteveYi。
