@@ -1,6 +1,8 @@
 ---
 title: "如何將自己的 iOS 裝置升級 Beta 版本"
 author: "SteveYi"
+categories: "科技"
+tags: iOS
 date: 2023-01-19T19:00:47+08:00
 draft: false
 ---

@@ -1,8 +1,8 @@
 ---
 title: '使用 IFTTT 將未接來電、簡訊轉送至 LINE'
-author: "SteveYi"
 date: Tue, 07 Apr 2020 04:56:37 +0000
 draft: false
+categories: "科技"
 tags: ['生活小知識']
 Author: 蘿蔔
 ---

@@ -1,6 +1,6 @@
 ---
 title: 'LINE 聊天訊息自動分類好友、群組、官方帳號'
-author: "SteveYi"
+categories: "科技"
 date: Fri, 03 Jul 2020 12:25:49 +0000
 draft: false
 tags: ['Android', '生活小知識']

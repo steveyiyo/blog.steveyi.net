@@ -1,6 +1,8 @@
 ---
 title: "在 Linux 上實現虛擬 WAN 多撥 PPPoE"
 author: "SteveYi"
+categories: "科技"
+tags: 網路
 date: 2021-07-19T08:47:55+08:00
 draft: flase
 description: "I've been using Linux as a router for quite some time."

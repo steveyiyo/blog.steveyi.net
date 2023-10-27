@@ -3,7 +3,8 @@ title: '透過 BGP 組建不同網段互通'
 author: "SteveYi"
 date: Tue, 11 Aug 2020 18:56:26 +0000
 draft: false
-tags: ['BGP']
+tags: ['BGP', '網路']
+categories: "科技"
 ---
 
 小時候常常為了家中的網路管理而困擾。

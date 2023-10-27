@@ -1,6 +1,7 @@
 ---
 title: "成為 MANRS 參與者！"
 author: "SteveYi"
+categories: "科技"
 date: 2021-01-25T00:03:31+08:00
 draft: false
 tags: ['BGP', 'Network']

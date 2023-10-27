@@ -1,6 +1,6 @@
 ---
 title: '使用 "備份與還原" 備份 Windows 7 以上的 PC'
-author: "SteveYi"
+categories: "科技"
 date: Fri, 28 Aug 2020 09:09:08 +0000
 draft: false
 tags: ['免費資源', '生活小知識']
