@@ -1,4 +1,4 @@
-template: example/template3.png
+template: ./tcardgen/template/template.png
 title:
   start:
     px: 113
