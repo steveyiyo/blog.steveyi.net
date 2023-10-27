@@ -1,5 +1,6 @@
 ---
 title: "在 Linux 系統上自架 Minecraft 伺服器"
+author: "SteveYi"
 date: 2021-04-12T17:56:08+08:00
 draft: false
 ---

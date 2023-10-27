@@ -1,5 +1,6 @@
 ---
 title: 心得：法理學經典導讀 - "Theorie der juristischen Argumentation" 《法律論證理論》 @ NTU 2023-10-23
+author: "SteveYi"
 date: 2023-10-23T10:31:38+08:00
 draft: false
 ---

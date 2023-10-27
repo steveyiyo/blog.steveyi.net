@@ -1,5 +1,6 @@
 ---
 title: "APNIC Fellowship 2022"
+author: "SteveYi"
 date: 2022-11-06T19:45:04+08:00
 draft: true
 tags: ['APNIC', 'RIR', 'Fellowship', 'Networking', 'BGP']

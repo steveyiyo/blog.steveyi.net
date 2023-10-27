@@ -1,5 +1,6 @@
 ---
 title: 'AutoDraw 自動繪圖吧！'
+author: "SteveYi"
 date: Wed, 25 Nov 2020 02:25:44 +0000
 draft: false
 tags: ['免費資源', '生活小知識']

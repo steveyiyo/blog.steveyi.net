@@ -1,5 +1,6 @@
 ---
 title: "Encountering Dynamic Linking Library Missing Issue when Building Golang"
+author: "SteveYi"
 date: 2022-04-07T15:36:43+08:00
 description: "During Golang build, encountering dynamic linking library missing issue..."
 draft: false

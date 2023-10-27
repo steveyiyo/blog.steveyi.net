@@ -1,5 +1,6 @@
 ---
 title: "在 VSCode 中將 .tmpl 檔案設為 HTML 語法"
+author: "SteveYi"
 date: 2021-04-25T09:57:13+08:00
 draft: false
 ---

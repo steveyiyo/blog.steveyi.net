@@ -1,5 +1,6 @@
 ---
 title: 'Easy Mac Reinstallation with Built-in Recovery Function! '
+author: "SteveYi"
 date: Sat, 15 Aug 2020 07:25:12 +0000
 draft: false
 tags: ['Life Hacks']

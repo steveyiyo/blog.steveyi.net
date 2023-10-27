@@ -1,5 +1,6 @@
 ---
 title: '透過 BGP 組建不同網段互通'
+author: "SteveYi"
 date: Tue, 11 Aug 2020 18:56:26 +0000
 draft: false
 tags: ['BGP']

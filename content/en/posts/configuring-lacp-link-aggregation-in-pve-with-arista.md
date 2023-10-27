@@ -1,5 +1,6 @@
 ---
 title: "PVE Configuration of Arista LACP Link Aggregation"
+author: "SteveYi"
 date: 2023-02-07T02:39:05+08:00
 draft: false
 ---

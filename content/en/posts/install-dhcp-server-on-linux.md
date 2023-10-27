@@ -1,5 +1,6 @@
 ---
 title: "Installing DHCP Server on Linux"
+author: "SteveYi"
 date: 2021-04-11T09:37:30+08:00
 draft: false
 ---

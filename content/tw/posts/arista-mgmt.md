@@ -1,5 +1,6 @@
 ---
 title: "在 Arista 上設定 OOB 網路"
+author: "SteveYi"
 date: 2022-07-05T02:58:47+08:00
 draft: false
 description: "最近部署了一台 Arista 交換器。由於這台交換機上做了 L3 Routing，所以沒辦法直接將 OOB 網路設定預設路..."

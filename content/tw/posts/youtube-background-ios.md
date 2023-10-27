@@ -1,5 +1,6 @@
 ---
 title: '無需訂閱 Youtube Music Premium 也能讓 iOS/iPadOS 的裝置享有背景播放的功能 (Youtube 也適用哦！)'
+author: "SteveYi"
 date: Fri, 19 Jun 2020 14:39:47 +0000
 draft: false
 tags: ['iOS', 'iOS', 'Youtube', '生活小知識', '背景播放']

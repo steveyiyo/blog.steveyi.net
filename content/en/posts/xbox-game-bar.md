@@ -1,5 +1,6 @@
 ---
 title: 'Enhance your Windows gaming experience with Xbox Game Bar'
+author: "SteveYi"
 date: Wed, 07 Oct 2020 02:09:56 +0000
 draft: false
 tags: ['Free Resources', 'Life Hacks']

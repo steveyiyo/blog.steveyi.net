@@ -1,5 +1,6 @@
 ---
 title: '透過 BGP 與朋友組成內網'
+author: "SteveYi"
 date: Sun, 24 Jan 2021 02:00:00 +0000
 draft: false
 tags: ['BGP', 'Network']

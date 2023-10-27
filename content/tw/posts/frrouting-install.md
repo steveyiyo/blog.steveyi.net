@@ -1,5 +1,6 @@
 ---
 title: 'FRRouting 安裝教學'
+author: "SteveYi"
 date: Sun, 12 Jul 2020 13:07:14 +0000
 draft: false
 tags: ['BGP', '伺服器']

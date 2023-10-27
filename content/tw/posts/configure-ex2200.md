@@ -1,5 +1,6 @@
 ---
 title: "EX2200 基礎設定＆開箱"
+author: "SteveYi"
 date: 2021-08-19T09:51:03+08:00
 draft: true
 ---

@@ -1,5 +1,6 @@
 ---
 title: 'Backblaze B2 低價的雲端數據存儲服務'
+author: "SteveYi"
 date: Mon, 11 May 2020 09:35:00 +0000
 draft: false
 tags: ['對象存處', '網站日誌']

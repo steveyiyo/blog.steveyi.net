@@ -1,5 +1,6 @@
 ---
 title: 'Setting up Custom Domain Name for Backblaze B2 with Cloudflare Workers'
+author: "SteveYi"
 date: Wed, 26 Feb 2020 20:36:28 +0000
 draft: false
 tags: ['server', 'website logs', 'CDN']

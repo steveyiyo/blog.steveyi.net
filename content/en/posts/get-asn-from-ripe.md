@@ -1,5 +1,6 @@
 ---
 title: 'Applying for your own ASN through RIPE'
+author: "SteveYi"
 date: Sat, 21 Nov 2020 08:39:28 +0000
 draft: false
 tags: ['ASN', 'BGP', 'Internet', 'Routing Protocol']

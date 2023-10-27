@@ -1,5 +1,6 @@
 ---
 title: "Using checkm8 Activation Lock Free Version to Bypass iOS Activation Lock"
+author: "SteveYi"
 date: 2021-03-04T00:35:46+08:00
 tags: ['iOS']
 draft: false

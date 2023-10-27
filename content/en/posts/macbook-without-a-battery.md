@@ -1,5 +1,6 @@
 ---
 title: 'A Discussion on the Impact of Battery and Performance on Mac Laptops'
+author: "SteveYi"
 date: Tue, 18 Aug 2020 13:16:25 +0000
 draft: false
 tags: ['Life Tips']

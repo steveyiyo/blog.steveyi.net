@@ -1,5 +1,6 @@
 ---
 title: 'Tips for Improving Mobile Phone Audio Quality'
+author: "SteveYi"
 date: Mon, 01 Jun 2020 03:55:45 +0000
 draft: false
 tags: ['Android', 'iOS', 'Life Tips']

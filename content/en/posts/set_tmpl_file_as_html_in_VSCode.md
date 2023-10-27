@@ -1,5 +1,6 @@
 ---
 title: "Set .tmpl files as HTML syntax in VSCode"
+author: "SteveYi"
 date: 2021-04-25T09:57:13+08:00
 draft: false
 ---

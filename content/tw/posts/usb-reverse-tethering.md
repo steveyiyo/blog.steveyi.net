@@ -1,5 +1,6 @@
 ---
 title: '透過電腦使用USB傳送網際網路連線給手機 (USB Reverse Tethering)'
+author: "SteveYi"
 date: Tue, 07 Apr 2020 04:57:33 +0000
 draft: false
 tags: ['Android']

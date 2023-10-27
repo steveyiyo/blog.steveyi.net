@@ -1,5 +1,6 @@
 ---
 title: "Make a RESTFul API to upload files to S3 with Golang"
+author: "SteveYi"
 date: 2022-03-31T04:30:00+08:00
 draft: false
 description: "Anyway, I need have a API to upload files to S3 (Eg: image, iso file ...etc)"

@@ -1,5 +1,6 @@
 ---
 title: 'Experience ChromiumOS with CloudReady and Give Your Old Computer a New Life!'
+author: "SteveYi"
 date: Mon, 10 Aug 2020 15:10:52 +0000
 draft: false
 tags: ['Google', 'Free resources', 'Life hacks']

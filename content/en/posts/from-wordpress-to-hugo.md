@@ -1,5 +1,6 @@
 ---
 title: "Migrating from WordPress to Hugo"
+author: "SteveYi"
 date: 2021-02-10T14:27:17+08:00
 draft: false
 image: "https://i.imgur.com/1a3dW0f.png"

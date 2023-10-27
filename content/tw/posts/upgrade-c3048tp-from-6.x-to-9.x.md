@@ -1,5 +1,6 @@
 ---
 title: "Cisco N3K-C3048TP-1GE 從 6.x 升級到 9.x 全過程"
+author: "SteveYi"
 date: 2023-02-06T01:51:10+08:00
 draft: false
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Implementing Virtual WAN Multi-PPPoe on Linux"
+author: "SteveYi"
 date: 2021-07-19T08:47:55+08:00
 draft: false
 description: "I've been using Linux as a router for quite some time."

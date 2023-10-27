@@ -1,5 +1,6 @@
 ---
 title: 'Testing Internal Network Speed via iperf3'
+author: "SteveYi"
 date: Sun, 08 Nov 2020 13:26:11 +0000
 draft: false
 tags: ['Servers']

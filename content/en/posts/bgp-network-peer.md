@@ -1,5 +1,6 @@
 ---
 title: 'Building interconnectivity between different network segments through BGP'
+author: "SteveYi"
 date: Tue, 11 Aug 2020 18:56:26 +0000
 draft: false
 tags: ['BGP']

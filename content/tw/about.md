@@ -1,5 +1,6 @@
 ---
 title: "關於宗易"
+author: "SteveYi"
 draft: false
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: '[教學] AWS Route 53 代管DNS'
+author: "SteveYi"
 date: Mon, 06 Apr 2020 14:38:57 +0000
 draft: false
 tags: ['AWS', '網域', '網站日誌']

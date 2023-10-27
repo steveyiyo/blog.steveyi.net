@@ -1,5 +1,6 @@
 ---
 title: 'Backblaze B2 now supports S3 API!'
+author: "SteveYi"
 date: Thu, 14 May 2020 03:08:02 +0000
 draft: false
 tags: ['server', 'object storage', 'domain']

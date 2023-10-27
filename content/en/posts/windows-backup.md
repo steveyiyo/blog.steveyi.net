@@ -1,5 +1,6 @@
 ---
 title: 'Backup and Restore Windows 7 and above PCs'
+author: "SteveYi"
 date: Fri, 28 Aug 2020 09:09:08 +0000
 draft: false
 tags: ['Free Resources', 'Life Tips']

@@ -1,5 +1,6 @@
 ---
 title: 'Super useful built-in Spotlight search tips on iOS and macOS'
+author: "SteveYi"
 date: Sun, 18 Oct 2020 09:02:50 +0000
 draft: false
 tags: ['iOS', 'life hacks']

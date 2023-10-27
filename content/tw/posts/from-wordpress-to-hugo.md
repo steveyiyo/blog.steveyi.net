@@ -1,5 +1,6 @@
 ---
 title: "將部落格從 WordPress 轉移到 Hugo"
+author: "SteveYi"
 date: 2021-02-10T14:27:17+08:00
 draft: false
 image: "https://i.imgur.com/1a3dW0f.png"

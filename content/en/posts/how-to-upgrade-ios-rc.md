@@ -1,5 +1,6 @@
 ---
 title: "How to Upgrade Your iOS Device to Beta Version"
+author: "SteveYi"
 date: 2023-01-19T19:00:47+08:00
 draft: false
 ---

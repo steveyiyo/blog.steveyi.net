@@ -1,5 +1,6 @@
 ---
 title: 'Cloudflare 新服務 spectrum 設定教學'
+author: "SteveYi"
 date: Wed, 15 Apr 2020 08:50:06 +0000
 draft: false
 tags: ['Cloudflare', '伺服器']

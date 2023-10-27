@@ -1,5 +1,6 @@
 ---
 title: "Designating network egress by AS Number"
+author: "SteveYi"
 date: 2021-02-06T02:13:10+08:00
 draft: false
 image: "https://i.imgur.com/mgyCzFl.png"

@@ -1,5 +1,6 @@
 ---
 title: '幫 Spotify 加上實時歌詞 (iOS/iPadOS)'
+author: "SteveYi"
 date: Sat, 11 Jul 2020 07:31:26 +0000
 draft: false
 tags: ['iOS', '免費資源', '生活小知識']

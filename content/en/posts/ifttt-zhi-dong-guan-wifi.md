@@ -1,5 +1,6 @@
 ---
 title: 'Use IFTTT to Turn off Wi-Fi When Leaving Home'
+author: "SteveYi"
 date: Wed, 03 Jun 2020 04:43:06 +0000
 draft: false
 tags: ['Android', 'Life Tips']

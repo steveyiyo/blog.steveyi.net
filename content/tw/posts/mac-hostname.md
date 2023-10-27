@@ -1,5 +1,6 @@
 ---
 title: '從終端機更改 Mac 的主機名稱'
+author: "SteveYi"
 date: Sat, 22 Aug 2020 08:25:56 +0000
 draft: false
 tags: ['生活小知識']

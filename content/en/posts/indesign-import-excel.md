@@ -1,5 +1,6 @@
 ---
 title: "Import and Apply Excel Data in Indesign Templates"
+author: "SteveYi"
 date: 2023-02-19T01:07:22+08:00
 draft: false
 ---

@@ -1,5 +1,6 @@
 ---
 title: '建立 Cloud Identity 帳戶'
+author: "SteveYi"
 date: Fri, 15 May 2020 20:35:11 +0000
 draft: false
 tags: ['G-Suite', 'GCP', 'Google', '網域', '網站日誌']

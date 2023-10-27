@@ -1,5 +1,6 @@
 ---
 title: 'Building an Internal Network with WireGuard'
+author: "SteveYi"
 date: Fri, 20 Nov 2020 18:31:04 +0000
 draft: false
 tags: ['VPS', 'server']

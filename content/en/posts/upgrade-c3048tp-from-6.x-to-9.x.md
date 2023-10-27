@@ -1,5 +1,6 @@
 ---
 title: "Cisco N3K-C3048TP-1GE Upgrade from 6.x to 9.x Full Process"
+author: "SteveYi"
 date: 2023-02-06T01:51:10+08:00
 draft: false
 ---

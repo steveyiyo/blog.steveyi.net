@@ -1,5 +1,6 @@
 ---
 title: 'Creating Objects in RIPE DataBase'
+author: "SteveYi"
 date: Sat, 21 Nov 2020 08:37:20 +0000
 draft: false
 tags: ['ASN', 'BGP', 'Internet', 'Routing Protocol']

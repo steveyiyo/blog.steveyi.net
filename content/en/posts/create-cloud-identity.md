@@ -1,5 +1,6 @@
 ---
 title: 'Creating a Cloud Identity account'
+author: "SteveYi"
 date: Fri, 15 May 2020 20:35:11 +0000
 draft: false
 tags: ['G-Suite', 'GCP', 'Google', 'domain', 'website log']

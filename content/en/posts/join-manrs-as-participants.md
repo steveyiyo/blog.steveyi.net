@@ -1,5 +1,6 @@
 ---
 title: "Become a MANRS participant!"
+author: "SteveYi"
 date: 2021-01-25T00:03:31+08:00
 draft: false
 tags: ['BGP', 'Network']
