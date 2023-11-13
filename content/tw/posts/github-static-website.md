@@ -4,7 +4,7 @@ author: "SteveYi"
 date: Wed, 22 Apr 2020 14:09:46 +0000
 draft: false
 categories: "科技"
-tags: ['免費資源', '網域', '網站日誌']
+tags: ["免費資源", "網域", "網站日誌"]
 ---
 
 ![](https://static-a1.steveyi.net/media/blog/2020/04/github-static-website-12.png)

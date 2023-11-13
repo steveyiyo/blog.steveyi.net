@@ -3,7 +3,7 @@ title: 'Guide to PVE - Installation'
 author: "SteveYi"
 date: Tue, 07 Jul 2020 05:33:14 +0000
 draft: false
-tags: ['Server', 'Domain', 'Virtualization technology']
+tags: ["Server", "Domain", "Virtualization technology"]
 ---
 
 I've been playing with virtual machines for some time, but I used VMware Workstation on Windows systems. Later, I had a few idle computers and came across Proxmox VE, an open-source virtualization system. So, let's install and try it out!

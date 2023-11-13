@@ -4,7 +4,7 @@ author: "SteveYi"
 categories: "科技"
 date: Sat, 16 May 2020 11:51:52 +0000
 draft: false
-tags: ['BGP', '伺服器', 'WireGuard']
+tags: ["BGP", "伺服器", "WireGuard"]
 ---
 
 [WireGuard](https://wireguard.com) 是一個點對點加密網路。一直以來，我都使用它來管理 / 互聯我所有的雲端主機。

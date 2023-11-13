@@ -3,7 +3,7 @@ title: 'Setting up Custom Email Domain with Mailgun and Gmail'
 author: "SteveYi"
 date: Wed, 22 Apr 2020 12:48:48 +0000
 draft: false
-tags: ['Free Resources', 'Domain', 'Website Log']
+tags: ["Free Resources", "Domain", "Website Log"]
 ---
 
 ![](https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-14.jpg)

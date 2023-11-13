@@ -3,7 +3,7 @@ title: "Become a MANRS participant!"
 author: "SteveYi"
 date: 2021-01-25T00:03:31+08:00
 draft: false
-tags: ['BGP', 'Network']
+tags: ["BGP", "Network"]
 ---
 
 At the end of last year, I submitted an application for [MANRS](https://www.manrs.org/) for [SteveYi Network Service](https://network.steveyi.net/). At the beginning of this year, we passed the review and officially became a participant in MANRS! Our member introduction can be found here: [https://www.manrs.org/isps/participants/entry/1484/](https://www.manrs.org/isps/participants/entry/1484/)

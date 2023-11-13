@@ -3,7 +3,7 @@ title: 'Cloudflare New Service Spectrum Setup Tutorial'
 author: "SteveYi"
 date: Wed, 15 Apr 2020 08:50:06 +0000
 draft: false
-tags: ['Cloudflare', 'Server']
+tags: ["Cloudflare", "Server"]
 ---
 
 This morning when I opened [Facebook](https://facebook.com/), I found that [Cloudflare](https://cloudflare.com/) has launched a new service - [Spectrum](https://cfl.re/3efcOhv). It is currently available to all paid users, and I don't know if there will be a chance to open it to free customers in the future. Official blog link: [https://cfl.re/3efcOhv](https://cfl.re/3efcOhv)

@@ -3,7 +3,7 @@ title: "A capitalizations name issue can not build golang app"
 author: "SteveYi"
 date: 2022-03-29T17:40:28+08:00
 draft: false
-tags: ['Golang']
+tags: ["Golang"]
 ---
 
 Recently, I'm working on a project which is a [URL Shortener](https://github.com/steveyiyo/URL-Shortener) with Golang.

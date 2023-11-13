@@ -3,7 +3,7 @@ title: 'Add Real-time Lyrics to Spotify (iOS/iPadOS)'
 author: "SteveYi"
 date: Sat, 11 Jul 2020 07:31:26 +0000
 draft: false
-tags: ['iOS', 'Free Resources', 'Life Tips']
+tags: ["iOS", "Free Resources", "Life Tips"]
 Author: 蘿蔔
 ---
 

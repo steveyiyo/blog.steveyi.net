@@ -4,7 +4,7 @@ author: "SteveYi"
 categories: "科技"
 date: Fri, 10 Apr 2020 02:21:55 +0000
 draft: false
-tags: ['BGP', '伺服器']
+tags: ["BGP", "伺服器"]
 ---
 
 ![](https://static-a1.steveyi.net/media/blog/2020/04/vu-00.png)

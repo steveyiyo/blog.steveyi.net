@@ -3,7 +3,7 @@ title: 'Transferring Domain from Google Domains to Gandi'
 author: "SteveYi"
 date: Thu, 02 Apr 2020 02:55:55 +0000
 draft: false
-tags: ['Website Log']
+tags: ["Website Log"]
 ---
 
 In the past few days, I received a notification email from Google Domains reminding me that my domain would need to be renewed soon.

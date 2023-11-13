@@ -4,7 +4,7 @@ author: "SteveYi"
 date: Mon, 06 Apr 2020 14:38:57 +0000
 draft: false
 categories: "科技"
-tags: ['AWS', '網域', '網站日誌']
+tags: ["AWS", "網域", "網站日誌"]
 ---
 
 從2017年 [註冊了第一個網域之後](https://diary.steveyi.net)，DNS 代管商一直是我在研究的一個部分！  

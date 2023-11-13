@@ -4,7 +4,7 @@ author: "SteveYi"
 date: Wed, 26 Feb 2020 20:36:28 +0000
 draft: false
 categories: "科技"
-tags: ['伺服器', '網站日誌', 'CDN']
+tags: ["伺服器", "網站日誌", "CDN"]
 ---
 
 當初架設網站的時候，考量到了圖片的存儲以及流量的問題。

@@ -4,7 +4,7 @@ categories: "科技"
 author: "SteveYi"
 date: Wed, 22 Apr 2020 12:48:48 +0000
 draft: false
-tags: ['免費資源', '網域', '網站日誌']
+tags: ["免費資源", "網域", "網站日誌"]
 ---
 
 ![](https://static-a1.steveyi.net/media/blog/2020/04/mailgungmail-14.jpg)

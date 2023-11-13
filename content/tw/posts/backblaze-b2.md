@@ -4,7 +4,7 @@ author: "SteveYi"
 date: Mon, 11 May 2020 09:35:00 +0000
 draft: false
 categories: "科技"
-tags: ['對象存處', '網站日誌']
+tags: ["對象存處", "網站日誌"]
 ---
 
 之前學習建站之時，考量到一個問題！  

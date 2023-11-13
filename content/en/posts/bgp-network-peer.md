@@ -3,7 +3,7 @@ title: 'Building interconnectivity between different network segments through BG
 author: "SteveYi"
 date: Tue, 11 Aug 2020 18:56:26 +0000
 draft: false
-tags: ['BGP']
+tags: ["BGP"]
 ---
 
 As a child, I often struggled with managing my home network. For example, my home had three floors and three routers. I wanted to make sure that devices connected to each router could communicate with each other. However, if I turned on DHCP Server on each of the routers, the routers would become independent networks that couldn't communicate with each other.

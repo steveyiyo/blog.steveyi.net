@@ -4,7 +4,7 @@ author: "SteveYi"
 date: Sun, 12 Jul 2020 13:07:14 +0000
 draft: false
 categories: "科技"
-tags: ['BGP', '伺服器']
+tags: ["BGP", "伺服器"]
 ---
 
 很久沒有來分享了！最近仍然在學習 BGP 知識及測試之前一直使用 Bird1 來廣播 BGP，後來在跟朋友 Peer 時，一直無法建立對等（很玄，但卻可以跟 IX 建立）

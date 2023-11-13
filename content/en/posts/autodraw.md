@@ -3,7 +3,7 @@ title: 'AutoDraw: Automatic Drawing!'
 author: "SteveYi"
 date: Wed, 25 Nov 2020 02:25:44 +0000
 draft: false
-tags: ['Free Resources', 'Life Hacks']
+tags: ["Free Resources", "Life Hacks"]
 Author: 蘿蔔 & SteveYi Yo
 ---
 

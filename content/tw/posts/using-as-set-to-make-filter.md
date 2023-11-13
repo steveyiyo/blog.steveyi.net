@@ -4,7 +4,7 @@ author: "SteveYi"
 date: 2021-06-27T05:35:35+08:00
 draft: false
 categories: "科技"
-tags: ['網際網路', 'BGP']
+tags: ["網際網路", "BGP"]
 ---
 
 最近，為了跟一些新入坑的朋友們建立 BGP Peer，所以也順便來教他們怎麼使用 AS-SET 過濾。

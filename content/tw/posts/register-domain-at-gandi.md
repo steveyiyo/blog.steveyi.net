@@ -4,7 +4,7 @@ author: "SteveYi"
 date: Fri, 03 Apr 2020 18:40:19 +0000
 draft: false
 categories: "科技"
-tags: ['網域', '網站日誌']
+tags: ["網域", "網站日誌"]
 ---
 
 之前有跟大家分享將網域從 Google 移轉至 Gandi 的過程 [點我看文章](https://blog.steveyi.net/transfer-domain-from-google-to-gandi/)  

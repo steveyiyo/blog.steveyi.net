@@ -3,7 +3,7 @@ title: 'Announce IPv6 on Vultr with BIRD'
 author: "SteveYi"
 date: Fri, 10 Apr 2020 02:21:55 +0000
 draft: false
-tags: ['BGP', 'server']
+tags: ["BGP", "server"]
 ---
 
 ![](https://static-a1.steveyi.net/media/blog/2020/04/vu-00.png)

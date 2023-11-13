@@ -4,7 +4,7 @@ author: "SteveYi"
 categories: "科技"
 date: Sun, 08 Nov 2020 13:26:11 +0000
 draft: false
-tags: ['伺服器']
+tags: ["伺服器"]
 ---
 
 不久前，筆者換了新的交換機。為了測試內網的傳輸速度，筆者發現了這款工具 - [iperf3](https://iperf.fr/iperf-download.php)

@@ -4,7 +4,7 @@ author: "SteveYi"
 date: Fri, 15 May 2020 20:35:11 +0000
 draft: false
 categories: "科技"
-tags: ['G-Suite', 'GCP', 'Google', '網域', '網站日誌']
+tags: ["G-Suite", "GCP", "Google", "網域", "網站日誌"]
 ---
 
 首先，進入 [Cloud Identity 申請頁面](https://gsuite.google.com/signup/gcpidentity/welcome) 點擊下一頁

@@ -3,7 +3,7 @@ title: 'Creating Objects in RIPE DataBase'
 author: "SteveYi"
 date: Sat, 21 Nov 2020 08:37:20 +0000
 draft: false
-tags: ['ASN', 'BGP', 'Internet', 'Routing Protocol']
+tags: ["ASN", "BGP", "Internet", "Routing Protocol"]
 ---
 
 In this article, we will share with you how to register MAINTAINER, PERSON/ROLE, and ORGANIZATION objects in the RIPE DataBase.

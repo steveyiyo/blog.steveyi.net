@@ -3,7 +3,7 @@ title: 'Testing Internal Network Speed via iperf3'
 author: "SteveYi"
 date: Sun, 08 Nov 2020 13:26:11 +0000
 draft: false
-tags: ['Servers']
+tags: ["Servers"]
 ---
 
 Recently, I replaced my switch and to test the speed of the internal network, I found this tool - [iperf3](https://iperf.fr/iperf-download.php)

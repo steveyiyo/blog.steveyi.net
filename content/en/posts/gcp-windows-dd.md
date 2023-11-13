@@ -3,7 +3,7 @@ title: 'Windows 10 DD Image specifically for GCP'
 author: "SteveYi"
 date: Tue, 27 Aug 2019 15:07:49 +0000
 draft: false
-tags: ['VPS', 'Server']
+tags: ["VPS", "Server"]
 ---
 
 Recently, in order to use VPS on GCP, I created a Windows DD image during a period of time. 

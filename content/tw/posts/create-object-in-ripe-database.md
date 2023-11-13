@@ -4,7 +4,7 @@ author: "SteveYi"
 date: Sat, 21 Nov 2020 08:37:20 +0000
 draft: false
 categories: "科技"
-tags: ['ASN', 'BGP', '網際網路', '路由協議']
+tags: ["ASN", "BGP", "網際網路", "路由協議"]
 ---
 
 在本篇文章中，將與大家分享如何在 RIPE DataBase 註冊 MAINTAINER, PERSON / ROLE, and ORGANIZATION object

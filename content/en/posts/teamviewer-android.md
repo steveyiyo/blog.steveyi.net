@@ -3,7 +3,7 @@ title: 'Using TeamViewer to Remotely Control Android Phones'
 author: "SteveYi"
 date: Tue, 26 May 2020 10:09:17 +0000
 draft: false
-tags: ['Android', 'Life Tips']
+tags: ["Android", "Life Tips"]
 Author: 蘿蔔
 ---
 

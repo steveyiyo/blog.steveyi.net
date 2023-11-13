@@ -4,7 +4,7 @@ author: "SteveYi"
 date: Thu, 14 May 2020 03:08:02 +0000
 draft: false
 categories: "科技"
-tags: ['伺服器', '對象存處', '網域']
+tags: ["伺服器", "對象存處", "網域"]
 ---
 
 前幾天打開 Backblaze 後，看到一行大大的字

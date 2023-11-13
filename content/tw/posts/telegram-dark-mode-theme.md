@@ -3,7 +3,7 @@ title: '解決 Telegram 在 Android 開啟深色模式時自動跳回預設主�
 categories: "科技"
 date: Mon, 01 Jun 2020 08:46:56 +0000
 draft: false
-tags: ['Android', '生活小知識']
+tags: ["Android", "生活小知識"]
 Author: 蘿蔔
 ---
 

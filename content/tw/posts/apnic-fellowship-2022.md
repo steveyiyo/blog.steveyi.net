@@ -3,7 +3,7 @@ title: "APNIC Fellowship 2022"
 author: "SteveYi"
 date: 2022-11-06T19:45:04+08:00
 draft: true
-tags: ['APNIC', 'RIR', 'Fellowship', 'Networking', 'BGP']
+tags: ["APNIC", "RIR", "Fellowship", "Networking", "BGP"]
 Author: 小易
 description: "今年九月，我以 APNIC Fellows 的身份，前往新加坡參與 APNIC 54..."
 ---

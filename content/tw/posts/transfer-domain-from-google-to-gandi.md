@@ -4,7 +4,7 @@ author: "SteveYi"
 categories: "科技"
 date: Thu, 02 Apr 2020 02:55:55 +0000
 draft: false
-tags: ['網站日誌']
+tags: ["網站日誌"]
 ---
 
 這幾天收到Google Domains的通知信，通知網域即將要續費了

@@ -4,7 +4,7 @@ author: "SteveYi"
 date: Wed, 15 Apr 2020 08:50:06 +0000
 draft: false
 categories: "科技"
-tags: ['Cloudflare', '伺服器']
+tags: ["Cloudflare", "伺服器"]
 ---
 
 今天早上打開[FaceBook](https://facebook.com/)時，發現[Cloudflare](https://cloudflare.com/)推出了一個新服務 - [Spectrum](https://cfl.re/3efcOhv)  

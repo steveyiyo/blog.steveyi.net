@@ -4,7 +4,7 @@ author: "SteveYi"
 date: Tue, 07 Jul 2020 05:33:14 +0000
 draft: false
 categories: "科技"
-tags: ['伺服器', '網域', '虛擬化技術']
+tags: ["伺服器", "網域", "虛擬化技術"]
 ---
 
 玩虛擬機有一段時間了，不過是在Windows系統下裝VMware Workstation玩xD  

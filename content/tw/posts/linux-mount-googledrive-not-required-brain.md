@@ -3,7 +3,7 @@ title: '在 Linux 環境下無腦串接 Google 雲端硬碟'
 categories: "科技"
 date: Tue, 19 Jan 2021 12:25:49 +0000
 draft: false
-tags: ['Google', '免費資源', '生活小知識', '網際網路']
+tags: ["Google", "免費資源", "生活小知識", "網際網路"]
 Author: 蘿蔔
 ---
 此篇教學使用的是 google-drive-ocamlfuse 這個軟體，筆者使用的環境是基於Ubuntu的Zorin OS 15.2系統作為示範。

@@ -3,7 +3,7 @@ title: 'Installing macOS Catalina on Unsupported Devices'
 author: "SteveYi"
 date: Tue, 18 Aug 2020 10:41:18 +0000
 draft: false
-tags: ['Free Resources', 'Life Hacks']
+tags: ["Free Resources", "Life Hacks"]
 Author: 蘿蔔
 ---
 

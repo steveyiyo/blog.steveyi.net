@@ -3,7 +3,7 @@ title: "在 iptables 上設定 NAT"
 author: "SteveYi"
 categories: "科技"
 date: 2021-03-08T13:20:00+08:00
-tags: ['Network']
+tags: ["Network"]
 draft: false
 ---
 不久之前，小易將家裡的一台電腦裝上了 Ubuntu 20.04，並把它當成了軟路由在使用。

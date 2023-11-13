@@ -3,7 +3,7 @@ title: 'FRRouting Installation Tutorial'
 author: "SteveYi"
 date: Sun, 12 Jul 2020 13:07:14 +0000
 draft: false
-tags: ['BGP', 'Server']
+tags: ["BGP", "Server"]
 ---
 
 It's been a while since I last shared anything! Recently, I have been learning about BGP knowledge and testing. Previously, I used Bird1 to broadcast BGP, but when I tried to peer with my friend, we couldn't establish a connection (it was strange, but I could connect with IX). So I uninstalled Bird1 and installed [FRRouting](https://frrouting.org/) instead.

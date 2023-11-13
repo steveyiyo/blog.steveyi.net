@@ -3,7 +3,7 @@ title: 'Buying a domain on Gandi'
 author: "SteveYi"
 date: Fri, 03 Apr 2020 18:40:19 +0000
 draft: false
-tags: ['domain', 'blog']
+tags: ["domain", "blog"]
 ---
 
 Previously, I shared the process of transferring a domain from Google to Gandi [click here to read the article](https://blog.steveyi.net/transfer-domain-from-google-to-gandi/). 

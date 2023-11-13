@@ -3,7 +3,7 @@ title: 'Building an Internal Network with WireGuard'
 author: "SteveYi"
 date: Fri, 20 Nov 2020 18:31:04 +0000
 draft: false
-tags: ['VPS', 'server']
+tags: ["VPS", "server"]
 ---
 
 Hi everyone, today I'm going to share how to use WireGuard to build an internal network.

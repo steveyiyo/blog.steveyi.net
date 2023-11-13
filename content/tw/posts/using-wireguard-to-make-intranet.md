@@ -4,7 +4,7 @@ author: "SteveYi"
 date: Fri, 20 Nov 2020 18:31:04 +0000
 draft: false
 categories: "科技"
-tags: ['VPS', '伺服器']
+tags: ["VPS", "伺服器"]
 ---
 
 Hi 大家好，今天來分享一下如何使用 WireGuard 建立大內網  

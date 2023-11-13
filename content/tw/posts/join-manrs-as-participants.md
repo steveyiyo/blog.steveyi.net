@@ -4,7 +4,7 @@ author: "SteveYi"
 categories: "科技"
 date: 2021-01-25T00:03:31+08:00
 draft: false
-tags: ['BGP', 'Network']
+tags: ["BGP", "Network"]
 ---
 
 在去年年底時，我送出了 [SteveYi Network Service](https://network.steveyi.net/) 的 [MANRS](https://www.manrs.org/) 申請  

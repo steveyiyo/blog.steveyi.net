@@ -4,7 +4,7 @@ author: "SteveYi"
 date: Sat, 21 Nov 2020 08:39:28 +0000
 draft: false
 categories: "科技"
-tags: ['ASN', 'BGP', '網際網路', '路由協議']
+tags: ["ASN", "BGP", "網際網路", "路由協議"]
 ---
 
 今天來講一下透過 LIR 在 RIPE 取得自己的 ASN

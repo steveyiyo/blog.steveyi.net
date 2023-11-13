@@ -3,7 +3,7 @@ title: 'Delete G Suite organization'
 author: "SteveYi"
 date: Fri, 15 May 2020 18:17:25 +0000
 draft: false
-tags: ['G-Suite', 'GCP', 'Google', 'Domain', 'Web Log']
+tags: ["G-Suite", "GCP", "Google", "Domain", "Web Log"]
 ---
 
 Previously, I shared with you [the way to register a G Suite account](https://blog.steveyi.net/register-gsuite/). Recently, I wanted to delete the G Suite organization of the [Cloud Identity free version](https://support.google.com/cloudidentity/answer/7319251?hl=en).

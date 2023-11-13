@@ -4,7 +4,7 @@ author: "SteveYi"
 date: Tue, 27 Aug 2019 15:07:49 +0000
 draft: false
 categories: "科技"
-tags: ['VPS', '伺服器']
+tags: ["VPS", "伺服器"]
 ---
 
 前陣子為了要在 GCP 使用 VPS，於是在一段時間裡製作了 Windows DD 鏡像  

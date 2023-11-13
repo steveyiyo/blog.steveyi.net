@@ -3,7 +3,7 @@ title: 'How to Use an Android Phone as a Network Connection for a Mac'
 author: "SteveYi"
 date: Sat, 08 Aug 2020 07:23:53 +0000
 draft: false
-tags: ['Android', 'Free Resources', 'Life Tips']
+tags: ["Android", "Free Resources", "Life Tips"]
 Author: 蘿蔔
 ---
 

@@ -4,7 +4,7 @@ author: "SteveYi"
 date: 2023-02-07T02:39:05+08:00
 draft: false
 categories: "科技"
-tags: ['網路', '虛擬化']
+tags: ["網路", "虛擬化"]
 ---
 
 最近遇到一台機器使用兩張 NVIDIA Mellanox ConnectX-4 網卡，最高速率支援 25G。  

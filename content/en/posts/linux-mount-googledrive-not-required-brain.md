@@ -3,7 +3,7 @@ title: 'Easy integration with Google Drive in Linux environment'
 author: "SteveYi"
 date: Tue, 19 Jan 2021 12:25:49 +0000
 draft: false
-tags: ['Google', 'Free Resources', 'Life Hacks', 'Internet']
+tags: ["Google", "Free Resources", "Life Hacks", "Internet"]
 Author: 蘿蔔
 ---
 This tutorial uses the software google-drive-ocamlfuse and the demonstration is based on the Ubuntu-based Zorin OS 15.2 system.

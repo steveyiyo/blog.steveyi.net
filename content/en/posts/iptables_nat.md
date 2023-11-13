@@ -2,7 +2,7 @@
 title: "Setting up NAT on iptables"
 author: "SteveYi"
 date: 2021-03-08T13:20:00+08:00
-tags: ['Network']
+tags: ["Network"]
 draft: false
 ---
 Recently, Xiaoyi installed Ubuntu 20.04 on a computer at home and used it as a soft router.

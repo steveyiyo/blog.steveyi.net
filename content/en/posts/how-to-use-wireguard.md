@@ -3,7 +3,7 @@ title: 'Using WireGuard on Linux'
 author: "SteveYi"
 date: Sat, 16 May 2020 11:51:52 +0000
 draft: false
-tags: ['BGP', 'server', 'WireGuard']
+tags: ["BGP", "server", "WireGuard"]
 ---
 
 [WireGuard](https://wireguard.com) is a point-to-point encryption network. I have been using it to manage/connect all my cloud servers.

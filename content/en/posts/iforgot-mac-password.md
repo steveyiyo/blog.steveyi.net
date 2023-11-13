@@ -3,7 +3,7 @@ title: 'Adding a New Administrator Account to a Mac When You Forget the Login Cr
 author: "SteveYi"
 date: Thu, 04 Jun 2020 05:54:21 +0000
 draft: false
-tags: ['Life Tips']
+tags: ["Life Tips"]
 Author: 蘿蔔
 ---
 

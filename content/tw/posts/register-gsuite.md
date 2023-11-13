@@ -4,7 +4,7 @@ author: "SteveYi"
 date: Wed, 01 Apr 2020 03:13:48 +0000
 draft: false
 categories: "科技"
-tags: ['G-Suite', 'GCP', 'Google']
+tags: ["G-Suite", "GCP", "Google"]
 ---
 
 相信大家應該都有使用過Gmail  

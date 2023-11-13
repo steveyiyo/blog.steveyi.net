@@ -3,7 +3,7 @@ title: 'Applying for a G Suite account'
 author: "SteveYi"
 date: Wed, 01 Apr 2020 03:13:48 +0000
 draft: false
-tags: ['G-Suite', 'GCP', 'Google']
+tags: ["G-Suite", "GCP", "Google"]
 ---
 
 I believe most of you have used Gmail before. Today, we want to introduce G Suite, an enterprise service launched by Google. However, individual users can also apply for it!

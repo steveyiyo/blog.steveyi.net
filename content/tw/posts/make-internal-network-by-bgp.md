@@ -4,7 +4,7 @@ author: "SteveYi"
 date: Sun, 24 Jan 2021 02:00:00 +0000
 draft: false
 categories: "科技"
-tags: ['BGP', 'Network']
+tags: ["BGP", "Network"]
 ---
 
 嗨！好久不見！

@@ -4,7 +4,7 @@ author: "SteveYi"
 date: Fri, 15 May 2020 18:17:25 +0000
 draft: false
 categories: "科技"
-tags: ['G-Suite', 'GCP', 'Google', '網域', '網站日誌']
+tags: ["G-Suite", "GCP", "Google", "網域", "網站日誌"]
 ---
 
 之前有跟大家分享[註冊G Suite帳號](https://blog.steveyi.net/register-gsuite/)的方式，最近想將 [Cloud Identity免費版](https://support.google.com/cloudidentity/answer/7319251?hl=zh-Hant) 的G Suite組織刪除

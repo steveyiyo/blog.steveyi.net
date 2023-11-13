@@ -3,7 +3,7 @@ title: '[Tutorial] AWS Route 53 DNS Hosting'
 author: "SteveYi"
 date: Mon, 06 Apr 2020 14:38:57 +0000
 draft: false
-tags: ['AWS', 'Domain', 'Website Log']
+tags: ["AWS", "Domain", "Website Log"]
 ---
 
 Since 2017, after [registering my first domain](https://diary.steveyi.net), DNS hosting has always been a part of my research!  

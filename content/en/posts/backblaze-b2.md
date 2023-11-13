@@ -3,7 +3,7 @@ title: 'Backblaze B2: Affordable Cloud Data Storage Service'
 author: "SteveYi"
 date: Mon, 11 May 2020 09:35:00 +0000
 draft: false
-tags: ['Object Storage', 'Website Logs']
+tags: ["Object Storage", "Website Logs"]
 ---
 
 When I was learning how to build a website, I considered a problem!  
