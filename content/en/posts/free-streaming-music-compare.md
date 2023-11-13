@@ -1,7 +1,7 @@
 ---
 title: '[2020 Latest] Comparison of Major Streaming Platforms with Free Membership'
 author: "SteveYi"
-date: Sun, 05 Jul 2020 12:51:26 +0000
+date: 2020-07-05T12:51:26+0000
 draft: false
 tags: ["Android", "iOS", "Free Resources", "Life Tips"]
 Author: 蘿蔔

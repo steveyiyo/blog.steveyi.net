@@ -1,7 +1,7 @@
 ---
 title: 'Backblaze B2: Affordable Cloud Data Storage Service'
 author: "SteveYi"
-date: Mon, 11 May 2020 09:35:00 +0000
+date: 2020-05-11T09:35:00+0000
 draft: false
 tags: ["Object Storage", "Website Logs"]
 ---

@@ -1,7 +1,7 @@
 ---
 title: '在官方不支援 macOS Catalina 的裝置安裝 macOS Catalina'
 categories: ["科技"]
-date: Tue, 18 Aug 2020 10:41:18 +0000
+date: 2020-08-18T10:41:18+0000
 draft: false
 tags: ["免費資源", "生活小知識"]
 Author: 蘿蔔

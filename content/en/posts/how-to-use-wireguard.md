@@ -1,7 +1,7 @@
 ---
 title: 'Using WireGuard on Linux'
 author: "SteveYi"
-date: Sat, 16 May 2020 11:51:52 +0000
+date: 2020-05-16T11:51:52+0000
 draft: false
 tags: ["BGP", "server", "WireGuard"]
 ---

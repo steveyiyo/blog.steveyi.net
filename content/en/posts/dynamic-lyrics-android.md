@@ -1,7 +1,7 @@
 ---
 title: 'Method to add real-time lyrics to Spotify or other music software (Android)'
 author: "SteveYi"
-date: Sat, 11 Jul 2020 10:00:12 +0000
+date: 2020-07-11T10:00:12+0000
 draft: false
 tags: ["Android", "免費資源", "生活小知識"]
 Author: 蘿蔔

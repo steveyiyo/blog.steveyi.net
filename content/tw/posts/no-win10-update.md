@@ -1,7 +1,7 @@
 ---
 title: '輕鬆免工具關閉 Windows 10 自動更新'
 author: "SteveYi"
-date: Sat, 18 Jul 2020 14:37:57 +0000
+date: 2020-07-18T14:37:57+0000
 draft: false
 categories: ["科技"]
 tags: ["生活小知識"]

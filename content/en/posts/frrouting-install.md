@@ -1,7 +1,7 @@
 ---
 title: 'FRRouting Installation Tutorial'
 author: "SteveYi"
-date: Sun, 12 Jul 2020 13:07:14 +0000
+date: 2020-07-12T13:07:14+0000
 draft: false
 tags: ["BGP", "Server"]
 ---

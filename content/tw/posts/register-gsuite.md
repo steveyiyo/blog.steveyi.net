@@ -1,7 +1,7 @@
 ---
 title: '申請 G Suite 帳號'
 author: "SteveYi"
-date: Wed, 01 Apr 2020 03:13:48 +0000
+date: 2020-04-01T03:13:48+0000
 draft: false
 categories: ["科技"]
 tags: ["G-Suite", "GCP", "Google"]

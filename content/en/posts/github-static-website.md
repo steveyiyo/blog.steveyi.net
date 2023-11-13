@@ -1,7 +1,7 @@
 ---
 title: 'Hosting Static Websites with Github - Github Pages'
 author: "SteveYi"
-date: Wed, 22 Apr 2020 14:09:46 +0000
+date: 2020-04-22T14:09:46+0000
 draft: false
 tags: ["Free Resources", "Domain", "Website Log"]
 ---

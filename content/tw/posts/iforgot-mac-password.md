@@ -1,7 +1,7 @@
 ---
 title: '在忘記管理員帳號的 Mac 上新增新的管理員帳號'
 categories: ["科技"]
-date: Thu, 04 Jun 2020 05:54:21 +0000
+date: 2020-06-04T05:54:21+0000
 draft: false
 tags: ["生活小知識"]
 Author: 蘿蔔

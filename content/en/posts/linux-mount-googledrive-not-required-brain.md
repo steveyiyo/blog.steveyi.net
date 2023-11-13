@@ -1,7 +1,7 @@
 ---
 title: 'Easy integration with Google Drive in Linux environment'
 author: "SteveYi"
-date: Tue, 19 Jan 2021 12:25:49 +0000
+date: 2021-01-19T12:25:49+0000
 draft: false
 tags: ["Google", "Free Resources", "Life Hacks", "Internet"]
 Author: 蘿蔔

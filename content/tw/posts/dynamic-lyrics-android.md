@@ -1,7 +1,7 @@
 ---
 title: '幫 Spotify 或其他音樂軟體加上實時歌詞的方法 (Android)'
 author: "SteveYi"
-date: Sat, 11 Jul 2020 10:00:12 +0000
+date: 2020-07-11T10:00:12+0000
 draft: false
 categories: ["科技"]
 tags: ["Android", "免費資源", "生活小知識"]

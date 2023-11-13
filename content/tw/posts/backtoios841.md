@@ -1,7 +1,7 @@
 ---
 title: '32 位元 iOS 裝置免電腦免 SHSH 降級到 8.4.1'
 author: "SteveYi"
-date: Mon, 30 Dec 2019 13:26:02 +0000
+date: 2019-12-30T13:26:02+0000
 draft: false
 tags: ["iOS"]
 categories: ["科技"]

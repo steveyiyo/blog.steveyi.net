@@ -1,7 +1,7 @@
 ---
 title: '使用 Scrcpy 輕鬆安裝 APK 檔案到手機內'
 author: "SteveYi"
-date: Wed, 20 May 2020 08:52:47 +0000
+date: 2020-05-20T08:52:47+0000
 draft: false
 categories: ["科技"]
 tags: ["Android"]

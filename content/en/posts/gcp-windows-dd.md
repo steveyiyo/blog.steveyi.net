@@ -1,7 +1,7 @@
 ---
 title: 'Windows 10 DD Image specifically for GCP'
 author: "SteveYi"
-date: Tue, 27 Aug 2019 15:07:49 +0000
+date: 2019-08-27T15:07:49+0000
 draft: false
 tags: ["VPS", "Server"]
 ---

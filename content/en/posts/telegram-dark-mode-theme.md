@@ -1,7 +1,7 @@
 ---
 title: 'Fixing the issue of Telegram automatically switching back to the default theme when dark mode is enabled on Android'
 author: "SteveYi"
-date: Mon, 01 Jun 2020 08:46:56 +0000
+date: 2020-06-01T08:46:56+0000
 draft: false
 tags: ["Android", "Life Hacks"]
 Author: 蘿蔔

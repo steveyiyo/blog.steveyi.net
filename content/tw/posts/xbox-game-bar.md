@@ -1,6 +1,6 @@
 ---
 title: '使用 Xbox 遊戲列提升 Windows 的遊戲體驗'
-date: Wed, 07 Oct 2020 02:09:56 +0000
+date: 2020-10-07T02:09:56+0000
 draft: false
 categories: ["科技"]
 tags: ["免費資源", "生活小知識"]

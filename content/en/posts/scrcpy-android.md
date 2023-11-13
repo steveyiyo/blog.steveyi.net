@@ -1,7 +1,7 @@
 ---
 title: 'Using Scrcpy to Control Your Android Phone from Your Computer'
 author: "SteveYi"
-date: Tue, 19 May 2020 15:41:11 +0000
+date: 2020-05-19T15:41:11+0000
 draft: false
 tags: ["Android"]
 Author: 蘿蔔

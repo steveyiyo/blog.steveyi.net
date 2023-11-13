@@ -1,6 +1,6 @@
 ---
 title: '使用CloudReady體驗ChromiumOS作業系統，老電腦重獲新生!'
-date: Mon, 10 Aug 2020 15:10:52 +0000
+date: 2020-08-10T15:10:52+0000
 draft: false
 tags: ["Google", "免費資源", "生活小知識"]
 Author: 蘿蔔

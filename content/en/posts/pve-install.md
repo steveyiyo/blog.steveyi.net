@@ -1,7 +1,7 @@
 ---
 title: 'Guide to PVE - Installation'
 author: "SteveYi"
-date: Tue, 07 Jul 2020 05:33:14 +0000
+date: 2020-07-07T05:33:14+0000
 draft: false
 tags: ["Server", "Domain", "Virtualization technology"]
 ---
