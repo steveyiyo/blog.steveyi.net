@@ -2,7 +2,7 @@
 title: 'Mailgun + Gmail 達成自訂網域郵箱'
 categories: ["科技"]
 author: "SteveYi"
-date: 2020-04-22T12:48:48+0000
+date: 2020-04-22T12:48:48+00:00
 draft: false
 tags: ["免費資源", "網域", "網站日誌"]
 ---

@@ -1,7 +1,7 @@
 ---
 title: 'Creating a Cloud Identity account'
 author: "SteveYi"
-date: 2020-05-15T20:35:11+0000
+date: 2020-05-15T20:35:11+00:00
 draft: false
 tags: ["G-Suite", "GCP", "Google", "domain", "website log"]
 ---

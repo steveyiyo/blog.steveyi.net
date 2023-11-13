@@ -1,7 +1,7 @@
 ---
 title: 'Delete G Suite organization'
 author: "SteveYi"
-date: 2020-05-15T18:17:25+0000
+date: 2020-05-15T18:17:25+00:00
 draft: false
 tags: ["G-Suite", "GCP", "Google", "Domain", "Web Log"]
 ---

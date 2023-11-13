@@ -1,7 +1,7 @@
 ---
 title: 'Forward Missed Calls and SMS to LINE Using IFTTT'
 author: "SteveYi"
-date: 2020-04-07T04:56:37+0000
+date: 2020-04-07T04:56:37+00:00
 draft: false
 tags: ["Life Hack"]
 Author: 蘿蔔

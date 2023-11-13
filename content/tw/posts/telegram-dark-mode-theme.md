@@ -1,7 +1,7 @@
 ---
 title: '解決 Telegram 在 Android 開啟深色模式時自動跳回預設主題的問題'
 categories: ["科技"]
-date: 2020-06-01T08:46:56+0000
+date: 2020-06-01T08:46:56+00:00
 draft: false
 tags: ["Android", "生活小知識"]
 Author: 蘿蔔

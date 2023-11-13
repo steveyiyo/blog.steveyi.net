@@ -1,7 +1,7 @@
 ---
 title: '專為 GCP 打造的 Windows 10 DD 鏡像'
 author: "SteveYi"
-date: 2019-08-27T15:07:49+0000
+date: 2019-08-27T15:07:49+00:00
 draft: false
 categories: ["科技"]
 tags: ["VPS", "伺服器"]

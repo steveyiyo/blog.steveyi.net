@@ -1,7 +1,7 @@
 ---
 title: '透過 Github 託管靜態網頁 - Github Pages'
 author: "SteveYi"
-date: 2020-04-22T14:09:46+0000
+date: 2020-04-22T14:09:46+00:00
 draft: false
 categories: ["科技"]
 tags: ["免費資源", "網域", "網站日誌"]

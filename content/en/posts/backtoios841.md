@@ -1,7 +1,7 @@
 ---
 title: 'Downgrade 32-bit iOS Devices to 8.4.1 without Computer and SHSH'
 author: "SteveYi"
-date: 2019-12-30T13:26:02+0000
+date: 2019-12-30T13:26:02+00:00
 draft: false
 tags: ["iOS"]
 Author: 蘿蔔

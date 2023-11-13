@@ -1,7 +1,7 @@
 ---
 title: 'Easily Install APK Files to Your Phone with Scrcpy'
 author: "SteveYi"
-date: 2020-05-20T08:52:47+0000
+date: 2020-05-20T08:52:47+00:00
 draft: false
 tags: ["Android"]
 Author: 蘿蔔

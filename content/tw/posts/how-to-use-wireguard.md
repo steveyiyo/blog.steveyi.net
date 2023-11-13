@@ -2,7 +2,7 @@
 title: '在 Linux 系統上使用 WireGuard'
 author: "SteveYi"
 categories: ["科技"]
-date: 2020-05-16T11:51:52+0000
+date: 2020-05-16T11:51:52+00:00
 draft: false
 tags: ["BGP", "伺服器", "WireGuard"]
 ---

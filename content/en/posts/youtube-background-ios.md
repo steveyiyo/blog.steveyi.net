@@ -1,7 +1,7 @@
 ---
 title: 'No subscription required for Youtube Music Premium to enable background playback on iOS/iPadOS (also works for Youtube!)'
 author: "SteveYi"
-date: 2020-06-19T14:39:47+0000
+date: 2020-06-19T14:39:47+00:00
 draft: false
 tags: ["iOS", "iOS", "Youtube", "生活小知識", "背景播放"]
 Author: 蘿蔔

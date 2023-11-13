@@ -1,7 +1,7 @@
 ---
 title: 'macOS 重灌不求人！使用內建回復功能輕鬆重灌 Mac 電腦'
 categories: ["科技"]
-date: 2020-08-15T07:25:12+0000
+date: 2020-08-15T07:25:12+00:00
 draft: false
 tags: ["生活小知識"]
 Author: 蘿蔔

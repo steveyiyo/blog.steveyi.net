@@ -1,7 +1,7 @@
 ---
 title: '[Fun Test] Test to see if you have a good ear for music!'
 author: "SteveYi"
-date: 2020-11-25T02:31:14+0000
+date: 2020-11-25T02:31:14+00:00
 draft: false
 tags: ["Free resources", "Life hacks"]
 Author: 蘿蔔

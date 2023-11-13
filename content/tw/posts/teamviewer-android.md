@@ -1,7 +1,7 @@
 ---
 title: '使用 TeamViewer 遠端操作 Android 手機'
 categories: ["科技"]
-date: 2020-05-26T10:09:17+0000
+date: 2020-05-26T10:09:17+00:00
 draft: false
 tags: ["Android", "生活小知識"]
 Author: 蘿蔔

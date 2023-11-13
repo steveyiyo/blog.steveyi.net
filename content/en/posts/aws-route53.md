@@ -1,7 +1,7 @@
 ---
 title: '[Tutorial] AWS Route 53 DNS Hosting'
 author: "SteveYi"
-date: 2020-04-06T14:38:57+0000
+date: 2020-04-06T14:38:57+00:00
 draft: false
 tags: ["AWS", "Domain", "Website Log"]
 ---

@@ -1,7 +1,7 @@
 ---
 title: 'How to Easily Disable Windows 10 Automatic Updates Without Tools'
 author: "SteveYi"
-date: 2020-07-18T14:37:57+0000
+date: 2020-07-18T14:37:57+00:00
 draft: false
 tags: ["Life Tips"]
 Author: 蘿蔔

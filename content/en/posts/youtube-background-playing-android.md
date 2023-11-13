@@ -1,7 +1,7 @@
 ---
 title: 'Enjoy background playback on Android devices without subscribing to Youtube Music Premium (works for Youtube too!)'
 author: "SteveYi"
-date: 2020-06-19T15:58:18+0000
+date: 2020-06-19T15:58:18+00:00
 draft: false
 tags: ["Android", "Life Hacks"]
 Author: 蘿蔔

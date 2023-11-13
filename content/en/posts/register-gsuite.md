@@ -1,7 +1,7 @@
 ---
 title: 'Applying for a G Suite account'
 author: "SteveYi"
-date: 2020-04-01T03:13:48+0000
+date: 2020-04-01T03:13:48+00:00
 draft: false
 tags: ["G-Suite", "GCP", "Google"]
 ---

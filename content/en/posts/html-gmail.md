@@ -1,7 +1,7 @@
 ---
 title: 'Speed up email loading on old devices and slow internet with traditional version of Gmail'
 author: "SteveYi"
-date: 2020-08-21T15:32:52+0000
+date: 2020-08-21T15:32:52+00:00
 draft: false
 tags: ["G-Suite", "Google", "Free Resources", "Life Tips"]
 Author: 蘿蔔

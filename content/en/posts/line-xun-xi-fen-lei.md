@@ -1,7 +1,7 @@
 ---
 title: 'Automatically categorize LINE chat messages into friends, groups, and official accounts'
 author: "SteveYi"
-date: 2020-07-03T12:25:49+0000
+date: 2020-07-03T12:25:49+00:00
 draft: false
 tags: ["Android", "Life Tips"]
 Author: 蘿蔔

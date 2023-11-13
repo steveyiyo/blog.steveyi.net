@@ -1,6 +1,6 @@
 ---
 title: 'iOS 和 macaOS 上超好用的內建 Spotlight 搜尋小技巧'
-date: 2020-10-18T09:02:50+0000
+date: 2020-10-18T09:02:50+00:00
 draft: false
 categories: ["科技"]
 tags: ["iOS", "生活小知識"]

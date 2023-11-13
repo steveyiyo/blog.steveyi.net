@@ -1,7 +1,7 @@
 ---
 title: 'Testing Internal Network Speed via iperf3'
 author: "SteveYi"
-date: 2020-11-08T13:26:11+0000
+date: 2020-11-08T13:26:11+00:00
 draft: false
 tags: ["Servers"]
 ---

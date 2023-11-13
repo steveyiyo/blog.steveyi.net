@@ -1,7 +1,7 @@
 ---
 title: '在 Gandi 購買網域'
 author: "SteveYi"
-date: 2020-04-03T18:40:19+0000
+date: 2020-04-03T18:40:19+00:00
 draft: false
 categories: ["科技"]
 tags: ["網域", "網站日誌"]

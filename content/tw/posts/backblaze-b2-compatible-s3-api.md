@@ -1,7 +1,7 @@
 ---
 title: 'Backblaze B2 支援 S3 API 了！'
 author: "SteveYi"
-date: 2020-05-14T03:08:02+0000
+date: 2020-05-14T03:08:02+00:00
 draft: false
 categories: ["科技"]
 tags: ["伺服器", "對象存處", "網域"]

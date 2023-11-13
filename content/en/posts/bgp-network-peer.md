@@ -1,7 +1,7 @@
 ---
 title: 'Building interconnectivity between different network segments through BGP'
 author: "SteveYi"
-date: 2020-08-11T18:56:26+0000
+date: 2020-08-11T18:56:26+00:00
 draft: false
 tags: ["BGP"]
 ---

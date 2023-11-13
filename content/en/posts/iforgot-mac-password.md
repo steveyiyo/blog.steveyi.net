@@ -1,7 +1,7 @@
 ---
 title: 'Adding a New Administrator Account to a Mac When You Forget the Login Credentials'
 author: "SteveYi"
-date: 2020-06-04T05:54:21+0000
+date: 2020-06-04T05:54:21+00:00
 draft: false
 tags: ["Life Tips"]
 Author: 蘿蔔

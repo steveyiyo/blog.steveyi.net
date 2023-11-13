@@ -1,7 +1,7 @@
 ---
 title: '在 RIPE DataBase 建立 Object'
 author: "SteveYi"
-date: 2020-11-21T08:37:20+0000
+date: 2020-11-21T08:37:20+00:00
 draft: false
 categories: ["科技"]
 tags: ["ASN", "BGP", "網際網路", "路由協議"]

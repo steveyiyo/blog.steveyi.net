@@ -1,7 +1,7 @@
 ---
 title: 'Backup and Restore Windows 7 and above PCs'
 author: "SteveYi"
-date: 2020-08-28T09:09:08+0000
+date: 2020-08-28T09:09:08+00:00
 draft: false
 tags: ["Free Resources", "Life Tips"]
 Author: 蘿蔔

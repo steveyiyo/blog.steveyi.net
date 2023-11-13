@@ -1,7 +1,7 @@
 ---
 title: '在 Linux 環境下設定 IPSec 點對點隧道'
 author: "SteveYi"
-date: 2021-06-13T23:05:00+0000
+date: 2021-06-13T23:05:00+00:00
 draft: true
 tags: ["IPSec", "BGP", "網際網路"]
 ---

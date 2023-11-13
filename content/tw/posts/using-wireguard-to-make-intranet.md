@@ -1,7 +1,7 @@
 ---
 title: '利用 WireGuard 建立大內網'
 author: "SteveYi"
-date: 2020-11-20T18:31:04+0000
+date: 2020-11-20T18:31:04+00:00
 draft: false
 categories: ["科技"]
 tags: ["VPS", "伺服器"]

@@ -1,7 +1,7 @@
 ---
 title: '從 RIPE 申請屬於自己的 ASN'
 author: "SteveYi"
-date: 2020-11-21T08:39:28+0000
+date: 2020-11-21T08:39:28+00:00
 draft: false
 categories: ["科技"]
 tags: ["ASN", "BGP", "網際網路", "路由協議"]

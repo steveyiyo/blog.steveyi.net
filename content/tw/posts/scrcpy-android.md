@@ -1,6 +1,6 @@
 ---
 title: '使用 Scrcpy，由電腦操作 Android 手機'
-date: 2020-05-19T15:41:11+0000
+date: 2020-05-19T15:41:11+00:00
 draft: false
 categories: ["科技"]
 tags: ["Android"]

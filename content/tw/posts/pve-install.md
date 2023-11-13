@@ -1,7 +1,7 @@
 ---
 title: 'PVE入門心得-安裝篇'
 author: "SteveYi"
-date: 2020-07-07T05:33:14+0000
+date: 2020-07-07T05:33:14+00:00
 draft: false
 categories: ["科技"]
 tags: ["伺服器", "網域", "虛擬化技術"]

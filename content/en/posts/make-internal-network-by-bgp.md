@@ -1,7 +1,7 @@
 ---
 title: 'Building an Internal Network with Friends using BGP'
 author: "SteveYi"
-date: 2021-01-24T02:00:00+0000
+date: 2021-01-24T02:00:00+00:00
 draft: false
 tags: ["BGP", "Network"]
 ---

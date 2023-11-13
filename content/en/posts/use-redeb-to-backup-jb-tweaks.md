@@ -1,7 +1,7 @@
 ---
 title: 'Backing up Installed Plugins with Redeb'
 author: "SteveYi"
-date: 2020-11-28T04:39:14+0000
+date: 2020-11-28T04:39:14+00:00
 draft: false
 tags: ["iOS"]
 Author: 蘿蔔

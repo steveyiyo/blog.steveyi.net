@@ -1,7 +1,7 @@
 ---
 title: 'Buying a domain on Gandi'
 author: "SteveYi"
-date: 2020-04-03T18:40:19+0000
+date: 2020-04-03T18:40:19+00:00
 draft: false
 tags: ["domain", "blog"]
 ---

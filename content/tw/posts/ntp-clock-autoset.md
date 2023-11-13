@@ -1,7 +1,7 @@
 ---
 title: 'Windows 10 打開電腦(喚醒)後自動校正時間'
 author: "SteveYi"
-date: 2020-11-20T15:52:24+0000
+date: 2020-11-20T15:52:24+00:00
 draft: false
 categories: ["科技"]
 tags: ["免費資源", "生活小知識"]

@@ -2,7 +2,7 @@
 title: '在 Vultr 使用 Bird6 廣播 IPv6'
 author: "SteveYi"
 categories: ["科技"]
-date: 2020-04-10T02:21:55+0000
+date: 2020-04-10T02:21:55+00:00
 draft: false
 tags: ["BGP", "伺服器"]
 ---

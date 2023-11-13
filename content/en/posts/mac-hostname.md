@@ -1,7 +1,7 @@
 ---
 title: 'Changing Mac Hostname from Terminal'
 author: "SteveYi"
-date: 2020-08-22T08:25:56+0000
+date: 2020-08-22T08:25:56+00:00
 draft: false
 tags: ["Life Tips"]
 Author: 蘿蔔

@@ -1,7 +1,7 @@
 ---
 title: 'Cloudflare New Service Spectrum Setup Tutorial'
 author: "SteveYi"
-date: 2020-04-15T08:50:06+0000
+date: 2020-04-15T08:50:06+00:00
 draft: false
 tags: ["Cloudflare", "Server"]
 ---

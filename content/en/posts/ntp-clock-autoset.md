@@ -1,7 +1,7 @@
 ---
 title: 'Automatically Correct Time on Windows 10 After Turning on Computer (Wake Up)'
 author: "SteveYi"
-date: 2020-11-20T15:52:24+0000
+date: 2020-11-20T15:52:24+00:00
 draft: false
 tags: ["Free Resources", "Life Tips"]
 Author: 蘿蔔

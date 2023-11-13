@@ -1,7 +1,7 @@
 ---
 title: 'Setting up Tunnel Broker Service (v4 to v6) on Ubuntu System'
 author: "SteveYi"
-date: 2020-05-31T16:56:41+0000
+date: 2020-05-31T16:56:41+00:00
 draft: false
 tags: ["VPS", "Server", "Domain"]
 ---

@@ -1,7 +1,7 @@
 ---
 title: 'Transferring Domain from Google Domains to Gandi'
 author: "SteveYi"
-date: 2020-04-02T02:55:55+0000
+date: 2020-04-02T02:55:55+00:00
 draft: false
 tags: ["Website Log"]
 ---

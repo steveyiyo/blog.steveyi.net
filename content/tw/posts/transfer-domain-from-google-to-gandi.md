@@ -2,7 +2,7 @@
 title: '將網域從 Google Domains 轉出至 Gandi'
 author: "SteveYi"
 categories: ["科技"]
-date: 2020-04-02T02:55:55+0000
+date: 2020-04-02T02:55:55+00:00
 draft: false
 tags: ["網站日誌"]
 ---
