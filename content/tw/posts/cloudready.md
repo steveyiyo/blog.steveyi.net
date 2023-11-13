@@ -1,4 +1,5 @@
 ---
+author: "蘿蔔"
 title: '使用CloudReady體驗ChromiumOS作業系統，老電腦重獲新生!'
 date: 2020-08-10T15:10:52+00:00
 draft: false

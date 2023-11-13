@@ -1,4 +1,5 @@
 ---
+author: "蘿蔔"
 title: '利用 redeb 來備份已安裝插件的 deb 檔'
 categories: ["科技"]
 date: 2020-11-28T04:39:14+00:00

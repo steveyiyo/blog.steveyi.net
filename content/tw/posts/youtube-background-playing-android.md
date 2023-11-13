@@ -1,4 +1,5 @@
 ---
+author: "蘿蔔"
 title: '無需訂閱 Youtube Music Premium 也能讓 Android 的裝置享有背景播放的功能 (Youtube 也適用哦！)'
 categories: ["科技"]
 date: 2020-06-19T15:58:18+00:00

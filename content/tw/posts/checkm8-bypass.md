@@ -1,4 +1,5 @@
 ---
+author: "蘿蔔"
 title: "使用 checkm8 Activation Lock 免費版，繞過 iOS 啟用鎖定"
 date: 2021-03-04T00:35:46+08:00
 tags: ["iOS"]

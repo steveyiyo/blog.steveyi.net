@@ -1,4 +1,5 @@
 ---
+author: "蘿蔔"
 title: '透過電腦使用USB傳送網際網路連線給手機 (USB Reverse Tethering)'
 categories: ["科技"]
 date: 2020-04-07T04:57:33+00:00

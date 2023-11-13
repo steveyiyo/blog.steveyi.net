@@ -1,4 +1,5 @@
 ---
+author: "蘿蔔"
 title: 'macOS 重灌不求人！使用內建回復功能輕鬆重灌 Mac 電腦'
 categories: ["科技"]
 date: 2020-08-15T07:25:12+00:00

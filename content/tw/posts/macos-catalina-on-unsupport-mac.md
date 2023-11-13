@@ -1,4 +1,5 @@
 ---
+author: "蘿蔔"
 title: '在官方不支援 macOS Catalina 的裝置安裝 macOS Catalina'
 categories: ["科技"]
 date: 2020-08-18T10:41:18+00:00

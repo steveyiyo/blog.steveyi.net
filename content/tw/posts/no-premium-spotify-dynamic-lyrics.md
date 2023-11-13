@@ -1,4 +1,5 @@
 ---
+author: "蘿蔔"
 title: '幫 Spotify 加上實時歌詞 (iOS/iPadOS)'
 categories: ["科技"]
 date: 2020-07-11T07:31:26+00:00
