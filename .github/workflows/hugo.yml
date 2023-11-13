@@ -23,10 +23,10 @@ jobs:
         with:
           hugo-version: '0.108.0'
 
-      - name: Install tcardgen
-        run: go install github.com/gnehs/tcardgen@0.0.1
-      - name: Generate Open Graph Images
-        run: tcardgen -f ./tcardgen/fonts -o ./static/banners -c ./tcardgen/template/template.yaml -t ./tcardgen/template/template.png ./content/tw/posts/*.md
+      # - name: Install tcardgen
+      #   run: go install github.com/gnehs/tcardgen@0.0.1
+      # - name: Generate Open Graph Images
+      #   run: tcardgen -f ./tcardgen/fonts -o ./static/banners -c ./tcardgen/template/template.yaml -t ./tcardgen/template/template.png ./content/tw/posts/*.md
 
       - name: Build
         run: hugo --minify
