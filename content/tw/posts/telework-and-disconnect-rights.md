@@ -6,8 +6,6 @@ tags: ["法律"]
 draft: false
 ---
 
-:::info
-
 [遠距工作與離線權：比較法觀點 Telework and the Right to Disconnect: Comparative Perspective](https://www.facebook.com/SCHOOLOFLAWNYCU/posts/pfbid02FFrrdwz47hxG1oVZepdosK3UnBfSKfuPjyz6X7ZQQKuaa1s8MEmfHXAW2EwCD3cjl)
 
 TSMC 的工程師要跑去其他國家ㄌ
@@ -16,7 +14,7 @@ TSMC 的工程師要跑去其他國家ㄌ
 - 主持人：陳鋕雄院長（陽明交大科法學院）
 - 與談人：邱羽凡老師（陽明交大科法所）
 
-:::
+## 前言
 
 前幾天在 Facebook 上看到陽明交大科法所舉辦這場學術論壇，並邀請泰國朱拉隆功大學法學院 Panthip Pruksacholavit 副教授一起來探討「遠距工作與離線權」的不同觀點。不得不說講師們的觀點都非常有趣，而且完全命中目前實務面的問題 XD（我也是看著爸媽長大的呀～～
 
