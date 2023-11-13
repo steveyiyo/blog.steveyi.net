@@ -1,7 +1,7 @@
 ---
 title: "在 iptables 上設定 NAT"
 author: "SteveYi"
-categories: "科技"
+categories: ["科技"]
 date: 2021-03-08T13:20:00+08:00
 tags: ["Network"]
 draft: false

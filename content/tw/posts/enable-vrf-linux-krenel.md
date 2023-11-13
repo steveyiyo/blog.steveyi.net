@@ -1,7 +1,7 @@
 ---
 title: '在 Linux 中開啟 VRF 模組'
 author: "SteveYi"
-categories: "科技"
+categories: ["科技"]
 tags: ["網路"]
 date: 2021-07-06T02:26:41+08:00
 draft: false

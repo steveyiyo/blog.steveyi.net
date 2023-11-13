@@ -4,7 +4,7 @@ author: "SteveYi"
 date: Wed, 25 Nov 2020 02:25:44 +0000
 draft: false
 tags: ["免費資源", "生活小知識"]
-categories: "生活"
+categories: ["生活"]
 Author: 蘿蔔 & 小易
 ---
 

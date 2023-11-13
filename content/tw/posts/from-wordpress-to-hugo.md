@@ -1,7 +1,7 @@
 ---
 title: "將部落格從 WordPress 轉移到 Hugo"
 author: "SteveYi"
-categories: "科技"
+categories: ["科技"]
 tags: ["網站"]
 date: 2021-02-10T14:27:17+08:00
 draft: false

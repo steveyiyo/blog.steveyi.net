@@ -3,7 +3,7 @@ title: 'Backblaze B2 搭配 Cloudflare Workers 設定自訂網域名稱'
 author: "SteveYi"
 date: Wed, 26 Feb 2020 20:36:28 +0000
 draft: false
-categories: "科技"
+categories: ["科技"]
 tags: ["伺服器", "網站日誌", "CDN"]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: '使用傳統版 Gmail 加快老舊裝置和低速網路的郵件載入速度'
-categories: "科技"
+categories: ["科技"]
 date: Fri, 21 Aug 2020 15:32:52 +0000
 draft: false
 tags: ["G-Suite", "Google", "免費資源", "生活小知識"]

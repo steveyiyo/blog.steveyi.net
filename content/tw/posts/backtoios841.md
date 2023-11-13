@@ -4,7 +4,7 @@ author: "SteveYi"
 date: Mon, 30 Dec 2019 13:26:02 +0000
 draft: false
 tags: ["iOS"]
-categories: "科技"
+categories: ["科技"]
 Author: 蘿蔔
 ---
 

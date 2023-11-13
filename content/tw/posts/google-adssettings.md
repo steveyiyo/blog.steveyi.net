@@ -2,7 +2,7 @@
 title: 'Google 廣告 – 原來你在 Google 眼中的形象是這樣的…'
 date: Tue, 19 Jan 2021 13:00:00 +0000
 draft: false
-categories: "科技"
+categories: ["科技"]
 tags: ["Google", "生活小知識"]
 Author: 蘿蔔
 ---

@@ -3,7 +3,7 @@ title: '[2020最新] 各大串流平台免費會員比較'
 author: "SteveYi"
 date: Sun, 05 Jul 2020 12:51:26 +0000
 draft: false
-categories: "科技"
+categories: ["科技"]
 tags: ["Android", "iOS", "免費資源", "生活小知識"]
 Author: 蘿蔔
 ---

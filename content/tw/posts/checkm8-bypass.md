@@ -4,7 +4,7 @@ date: 2021-03-04T00:35:46+08:00
 tags: ["iOS"]
 draft: false
 Author: 蘿蔔
-categories: "科技"
+categories: ["科技"]
 ---
 
 作者：蘿蔔

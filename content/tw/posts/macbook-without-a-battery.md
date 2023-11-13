@@ -1,6 +1,6 @@
 ---
 title: '淺談 Mac 筆記型電腦的電池和效能的影響'
-categories: "科技"
+categories: ["科技"]
 date: Tue, 18 Aug 2020 13:16:25 +0000
 draft: false
 tags: ["生活小知識"]

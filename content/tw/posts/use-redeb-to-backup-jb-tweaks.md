@@ -1,6 +1,6 @@
 ---
 title: '利用 redeb 來備份已安裝插件的 deb 檔'
-categories: "科技"
+categories: ["科技"]
 date: Sat, 28 Nov 2020 04:39:14 +0000
 draft: false
 tags: ["iOS"]

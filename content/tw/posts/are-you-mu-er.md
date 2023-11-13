@@ -4,7 +4,7 @@ date: Wed, 25 Nov 2020 02:31:14 +0000
 draft: false
 tags: ["免費資源", "生活小知識"]
 Author: 蘿蔔
-categories: "生活"
+categories: ["生活"]
 ---
 
 這個網站會以隨機順序提供六組音樂，每組包含 128Kbps MP3/320Kbps MP3/ 未壓縮的 WAV 音檔，測驗看看你能不能聽出哪個是音質最好的音檔，選擇後會產生正確答案。  

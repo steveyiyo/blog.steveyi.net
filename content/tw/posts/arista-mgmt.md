@@ -1,7 +1,7 @@
 ---
 title: "在 Arista 上設定 OOB 網路"
 author: "SteveYi"
-categories: "科技"
+categories: ["科技"]
 tags: ["網路交換機"]
 date: 2022-07-05T02:58:47+08:00
 draft: false
