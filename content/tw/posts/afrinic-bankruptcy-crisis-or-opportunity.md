@@ -2,7 +2,7 @@
 title: "AFRINIC 破產是危機還是轉機 - 數百萬 IPv4 地址的爭議故事"
 author: "SteveYi"
 categories: "網路治理"
-tags: "法律"
+tags: ["法律"]
 date: 2023-10-27T04:17:04+08:00
 draft: false
 ---

@@ -1,8 +1,8 @@
 ---
 title: "連線與斷線：遠距工作與尋求平衡的離線權"
 date: 2023-11-13T16:03:15+08:00
-categories: "法律"
-tags: "法律"
+categories: "勞工"
+tags: ["法律"]
 draft: false
 ---
 
