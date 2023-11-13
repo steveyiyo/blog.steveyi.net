@@ -1,4 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>iOS on 小易的部落格</title><link>https://blog.steveyi.net/tags/ios/</link><description>Recent content in iOS on 小易的部落格</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Thu, 04 Mar 2021 00:35:46 +0800</lastBuildDate><atom:link href="https://blog.steveyi.net/tags/ios/index.xml" rel="self" type="application/rss+xml"/><item><title>使用 checkm8 Activation Lock 免費版，繞過 iOS 啟用鎖定</title><link>https://blog.steveyi.net/posts/checkm8-bypass/</link><pubDate>Thu, 04 Mar 2021 00:35:46 +0800</pubDate><guid>https://blog.steveyi.net/posts/checkm8-bypass/</guid><description>作者：蘿蔔
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>iOS on 小易的部落格</title><link>https://blog.steveyi.net/tags/ios/</link><description>Recent content in iOS on 小易的部落格</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Thu, 19 Jan 2023 19:00:47 +0800</lastBuildDate><atom:link href="https://blog.steveyi.net/tags/ios/index.xml" rel="self" type="application/rss+xml"/><item><title>如何將自己的 iOS 裝置升級 Beta 版本</title><link>https://blog.steveyi.net/posts/how-to-upgrade-ios-rc/</link><pubDate>Thu, 19 Jan 2023 19:00:47 +0800</pubDate><guid>https://blog.steveyi.net/posts/how-to-upgrade-ios-rc/</guid><description>最近恰好 iOS 16.3 RC 釋出了，以往 RC 版釋出就代表隔一週也會在釋出正式版本的更新了，而兩種版本沒有區別。
+正好趁著這個機會，我們來看看如何將自己的 iOS 裝置升級 RC / Beta 版本。
+取得測試資格的方法 基本上有兩種方法可以下載到 iOS Beta 版本的測試資格：
+Apple Beta Software Program Apple Developer Program Apple Beta Software Program Apple Beta Software Program 是 Apple 提供的公開測試計畫，只要你有 iOS 裝置及 Apple ID 就可以申請加入測試計畫。
+Apple Developer Program 這個則是提供給 iOS 開發者使用，需要付費 $99 USD 的年費才可以加入。比如說你有自己的 iOS App，想要測試自己的 App 在 iOS Beta 版本上是否有問題等等等。
+如何加入 Apple Beta Software Program 而由於第二種方式需要付費，所以我們這邊就以第一種方式為例。
+下載描述檔 進入網頁後，點擊右上角的 Enroll Your Devices，將描述檔下載下來。
+安裝描述檔 進入「設定」-&amp;gt;「一般」-&amp;gt;「描述檔」，找到剛剛下載的描述檔，並點擊右上角的「安裝」。 過程中可能需要輸入密碼，完成後需要重新啟動。</description></item><item><title>使用 checkm8 Activation Lock 免費版，繞過 iOS 啟用鎖定</title><link>https://blog.steveyi.net/posts/checkm8-bypass/</link><pubDate>Thu, 04 Mar 2021 00:35:46 +0800</pubDate><guid>https://blog.steveyi.net/posts/checkm8-bypass/</guid><description>作者：蘿蔔
 本文章同步發佈於「蘿蔔ㄉ部落格」
 [注意] 請勿用於商業或是非法用途。
 這個軟體不是筆者所撰寫，如果使用上產生爭議，筆者恕不負責。

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>技術 on 小易的部落格</title><link>https://blog.steveyi.net/tags/%E6%8A%80%E8%A1%93/</link><description>Recent content in 技術 on 小易的部落格</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Thu, 07 Apr 2022 15:36:43 +0800</lastBuildDate><atom:link href="https://blog.steveyi.net/tags/%E6%8A%80%E8%A1%93/index.xml" rel="self" type="application/rss+xml"/><item><title>在 Golang build 時，遇到動態連結庫遺失的問題</title><link>https://blog.steveyi.net/posts/dynamic-link-library-missing/</link><pubDate>Thu, 07 Apr 2022 15:36:43 +0800</pubDate><guid>https://blog.steveyi.net/posts/dynamic-link-library-missing/</guid><description>在進行 Golang build 時，遇到動態連結庫不存在的問題...</description></item><item><title>將任何 Tweet 置頂到自己的 Twitter 上</title><link>https://blog.steveyi.net/posts/pin-any-tweet-on-twitter/</link><pubDate>Wed, 07 Apr 2021 19:00:27 +0800</pubDate><guid>https://blog.steveyi.net/posts/pin-any-tweet-on-twitter/</guid><description>在今天，我滑 Twitter 時，發現了一篇有趣的推文&amp;hellip;
+於是我馬上就跟 @edisonlee55 分享這個趣事
+很明顯的發現，這個人將別人的推文轉推過來，並置頂在自己的個人頁面
+這看似很正常，但事實上「我們只能置頂自己發的推文」
+當我們點擊我們 retweet 的推文，我們沒有發現「置頂推文」的選項
+那麼&amp;hellip; 當然要一點偏方了！
+跟 @edisonlee55 進行快速的討論後，我們開始了實驗
+首先，我們將瀏覽器的開發者工具打開
+理論上，點擊右鍵就可以看見了！
+接著，我們先進入 Network 的地方
+在對我們想要進行 pin 的推文按個愛心
+好那，我們看到了一個 HTTP POST 到 create.json
+我們也看到了一個 &amp;ldquo;id&amp;rdquo;，這個 ID 則是 Tweet 的 ID。先將他複製下來，等等會用到
+接著，我們還需要複製 Cookie, x-csrf-token, Bearer Token(Authorization) 等值，我們可以在 Header 上看到
+注意！請記得要保存好，不要隨意洩露這些值
+接著，我們打開 Postman，選擇 POST
+URL 則為https://twitter.com/i/api/1.1/account/pin_tweet.json?tweet_mode=extended&amp;amp;id=&amp;lt;id&amp;gt;
+將 Header 與 Authorization 都設定好了後，我們點擊 Send
+我在第一次測試的時候，因為我沒有先 retweet 推文，所以系統 return 這個給我
+完成 retweet 後，我們再執行一次 POST。成功啦！
+接著，我們打開網站，刷新頁面。
+果然看到成功 pin 起來了</description></item></channel></rss>

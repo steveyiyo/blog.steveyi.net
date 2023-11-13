@@ -1,4 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>伺服器 on 小易的部落格</title><link>https://blog.steveyi.net/tags/%E4%BC%BA%E6%9C%8D%E5%99%A8/</link><description>Recent content in 伺服器 on 小易的部落格</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Fri, 20 Nov 2020 18:31:04 +0000</lastBuildDate><atom:link href="https://blog.steveyi.net/tags/%E4%BC%BA%E6%9C%8D%E5%99%A8/index.xml" rel="self" type="application/rss+xml"/><item><title>利用 WireGuard 建立大內網</title><link>https://blog.steveyi.net/posts/using-wireguard-to-make-intranet/</link><pubDate>Fri, 20 Nov 2020 18:31:04 +0000</pubDate><guid>https://blog.steveyi.net/posts/using-wireguard-to-make-intranet/</guid><description>Hi 大家好，今天來分享一下如何使用 WireGuard 建立大內網
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>伺服器 on 小易的部落格</title><link>https://blog.steveyi.net/tags/%E4%BC%BA%E6%9C%8D%E5%99%A8/</link><description>Recent content in 伺服器 on 小易的部落格</description><generator>Hugo -- gohugo.io</generator><language>tw</language><lastBuildDate>Mon, 12 Apr 2021 17:56:08 +0800</lastBuildDate><atom:link href="https://blog.steveyi.net/tags/%E4%BC%BA%E6%9C%8D%E5%99%A8/index.xml" rel="self" type="application/rss+xml"/><item><title>在 Linux 系統上自架 Minecraft 伺服器</title><link>https://blog.steveyi.net/posts/hosting-a-minecraft-server-on-linux/</link><pubDate>Mon, 12 Apr 2021 17:56:08 +0800</pubDate><guid>https://blog.steveyi.net/posts/hosting-a-minecraft-server-on-linux/</guid><description>最近剛好有朋友也想在 Linux 上架設 Minecraft Server，那這邊就稍微寫一下架設過程好了！
+環境 在這次的環境中，我使用了以下作業系統及套件
+Ubuntu 20.04 Server byobu openjdk-8-jdk spigot 1.16.5 更新系統 及 安裝套件 更新系統，我們輸入以下指令
+apt update -y apt upgrade -y 接著，安裝 Java 及 Byobu
+apt install openjdk-8-jdk byobu -y 部署 Minecraft 伺服器 首先，我們建立資料夾，來放置伺服器檔案
+mkdir /data mkdir /data/minecraft cd /data/minecraft 接著，我們下載 Minecraft Server 核心
+這邊使用的是 Spigot 1.16.5，我們直接使用 wget 來下載到伺服器裡面
+wget https://cdn.getbukkit.org/spigot/spigot-1.16.5.jar mv spigot-1.16.5.jar server.jar 完成之後，我們寫一個啟動腳本
+java -Xmx2048M -Xms1024M -jar server.jar nogui 就開啟你的 Minecraft 伺服器囉！</description></item><item><title>利用 WireGuard 建立大內網</title><link>https://blog.steveyi.net/posts/using-wireguard-to-make-intranet/</link><pubDate>Fri, 20 Nov 2020 18:31:04 +0000</pubDate><guid>https://blog.steveyi.net/posts/using-wireguard-to-make-intranet/</guid><description>Hi 大家好，今天來分享一下如何使用 WireGuard 建立大內網
 之前有與大家分享過 在 Linux 系統上安裝 Wireguard，那這次我們要利用 WireGuard 來建立大內網
 為什麼要建立大內網？ 為什麼筆者稱這次要建立「大內網」呢？
 因為筆者也許多不同地方的網路，想藉由這次機會，來把他們都加進同一個局域網 (LAN)

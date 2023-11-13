@@ -20,7 +20,7 @@ Backblaze 是什麼? Backblaze 是一家數據存儲提供商，提供兩種產�
 B2 Cloud Storage 是一種類似於 Amazon S3 的對象存儲服務，主打低價，並且搭配 Cloudflare CDN 的 egree 流量為免費！ Cloud Backup 則是無限空間的電腦備份服務。 如果有興趣了解更多內容的話，可以參考 Backblaze官網。
 需要運用到的資源 Cloudflare CDN Cloudflare DNS Cloudflare Workers Backblaze B2 教學開始 1.首先，進入 Cloudflare 後，點擊 + Add a Site 來新增一個網域
 2.新增完成之後，我們點擊右方的 Workers 來進入Cloudflare Workers
-接著我們點擊上方的 Create a Worker 來建立一個新的 Worker"><meta property="og:type" content="article"><meta property="og:url" content="https://blog.steveyi.net/posts/b2-cfworkers/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2020-02-26T20:36:28+00:00"><meta property="article:modified_time" content="2020-02-26T20:36:28+00:00"><meta property="og:site_name" content="小易的部落格"><meta name=twitter:card content="summary"><meta name=twitter:title content="Backblaze B2 搭配 Cloudflare Workers 設定自訂網域名稱"><meta name=twitter:description content="當初架設網站的時候，考量到了圖片的存儲以及流量的問題。
+接著我們點擊上方的 Create a Worker 來建立一個新的 Worker"><meta property="og:type" content="article"><meta property="og:url" content="https://blog.steveyi.net/posts/b2-cfworkers/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2020-02-26T20:36:28+00:00"><meta property="article:modified_time" content="2020-02-26T20:36:28+00:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="Backblaze B2 搭配 Cloudflare Workers 設定自訂網域名稱"><meta name=twitter:description content="當初架設網站的時候，考量到了圖片的存儲以及流量的問題。
 本來是將圖片跟網站放在同一個網站伺服器下的，但後來發現伺服器空間常常不足夠（因為系統會自動備份，導致空間不足）
 後來將圖片放在 OneDrive 商業版，並搭配 OneList 來使用，但畢竟是非官方的API，當API請求速率過快，圖片就載入不出來了．
 當初 OneDrive 失敗後，又將圖片放到 Google Drive 上，並搭配 rclone 使用，
