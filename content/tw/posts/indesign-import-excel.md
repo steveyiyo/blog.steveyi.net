@@ -2,7 +2,7 @@
 title: "在 Indesign 模板中導入並套用 Excel 資料"
 author: "SteveYi"
 categories: "生活"
-tags: Indesign
+tags: ["Indesign"]
 date: 2023-02-19T01:07:22+08:00
 draft: false
 ---

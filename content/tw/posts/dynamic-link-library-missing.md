@@ -4,7 +4,7 @@ author: "SteveYi"
 date: 2022-04-07T15:36:43+08:00
 description: "在進行 Golang build 時，遇到動態連結庫不存在的問題..."
 categories: "科技"
-tags: 技術
+tags: ["技術"]
 draft: false
 ---
 

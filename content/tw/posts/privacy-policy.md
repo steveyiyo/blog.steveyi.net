@@ -2,7 +2,7 @@
 title: '隱私權政策'
 author: "SteveYi"
 categories: "網站"
-tags: 小易的網站
+tags: ["小易的網站"]
 draft: false
 ---
 

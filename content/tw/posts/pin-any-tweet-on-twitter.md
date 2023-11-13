@@ -2,7 +2,7 @@
 title: "將任何 Tweet 置頂到自己的 Twitter 上"
 author: "SteveYi"
 categories: "科技"
-tags: 技術
+tags: ["技術"]
 date: 2021-04-07T19:00:27+08:00
 draft: false
 ---
