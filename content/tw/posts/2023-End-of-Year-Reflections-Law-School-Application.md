@@ -1,6 +1,9 @@
 ---
 title: "2023 年尾反思，為什麼我要申請百川法律？"
 date: 2023-12-31T22:02:33+08:00
+author: "SteveYi"
+categories: ["心得"]
+tags: ["法律", "公共政策"]
 draft: true
 ---
 
