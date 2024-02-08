@@ -59,7 +59,7 @@ address 寫自己家裡地址
 email 寫自己的電子郵箱地址
 註冊完成後，你會拿到一個 role 與 mnter，這邊要記住 primary key
 我們等等會用到
-建立好後，我們需要在回去 role，新增一個 &amp;ldquo;abuse-mailbox&amp;rdquo; 濫用投訴信箱，等等ORG object需要使用
+建立好後，我們需要再回去 role，新增一個 &amp;ldquo;abuse-mailbox&amp;rdquo; 濫用投訴信箱，等等ORG object需要使用
 完成後，我們回到 &amp;ldquo;Create an Object&amp;rdquo;（建立一個物件Object）的步驟
 這次選擇建立 Organisation
 完成後，我們點擊Submit
