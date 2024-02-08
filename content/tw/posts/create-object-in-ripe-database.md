@@ -35,7 +35,7 @@ email 寫自己的電子郵箱地址
 
 ![](https://static-a1.steveyi.net/media/blog/2020112108240373.png)
 
-建立好後，我們需要在回去 role，新增一個 "abuse-mailbox" 濫用投訴信箱，等等ORG object需要使用
+建立好後，我們需要再回去 role，新增一個 "abuse-mailbox" 濫用投訴信箱，等等ORG object需要使用
 
 ![](https://static-a1.steveyi.net/media/blog/2020112108270350.png)
 
