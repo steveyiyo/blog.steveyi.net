@@ -3,6 +3,7 @@ title: "在 Indesign 模板中導入並套用 Excel 資料"
 author: "SteveYi"
 categories: ["生活"]
 tags: ["Indesign"]
+summary: "這篇文章分享了如何在 Indesign 模板中導入 Excel 資料的過程，從準備 Excel 文件、導入資料、到最終輸出 PDF 格式，並提供導入 CSV 資料時出現亂碼的解決方法。"
 date: 2023-02-19T01:07:22+08:00
 draft: false
 ---

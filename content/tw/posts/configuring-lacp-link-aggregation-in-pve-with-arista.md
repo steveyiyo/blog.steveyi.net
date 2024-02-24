@@ -3,6 +3,7 @@ title: "PVE 搭配 Arista 設定 LACP 鏈路聚合"
 author: "SteveYi"
 date: 2023-02-07T02:39:05+08:00
 draft: false
+summary: "本文介紹在 PVE 搭配 Arista 設定 LACP 鏈路聚合的步驟及測速結果。"
 categories: ["科技"]
 tags: ["網路", "虛擬化"]
 ---

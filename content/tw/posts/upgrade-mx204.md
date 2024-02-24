@@ -3,6 +3,7 @@ title: "Juniper MX204 升級全過程"
 author: "SteveYi"
 categories: ["科技"]
 tags: ["網路"]
+summary: "文章詳述 Juniper MX204 升級過程，包含透過 USB 及網路。"
 date: 2023-05-16T17:53:38+08:00
 draft: false
 ---

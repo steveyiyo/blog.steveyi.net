@@ -3,6 +3,7 @@ title: 心得：法理學經典導讀 - "Theorie der juristischen Argumentation"
 author: "SteveYi"
 categories: ["心得"]
 tags: ["法律"]
+summary: "本文為筆者參與「法律論證理論」導讀活動後的心得。筆者分享了對 Alexy 的《法律論證理論》的理解與反思，探討了法律論證、正確性宣稱、可證成性、特案命題等關鍵概念。此外，筆者也提出了生成式 AI 與法律論證之間的關係及查證資訊的重要性。文末，作者簡介了 Alexy 的背景及其作品的影響力，並對法律論證的分析性、規範性、實用性進行了討論。"
 date: 2023-10-23T10:31:38+08:00
 draft: false
 ---
