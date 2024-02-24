@@ -7,13 +7,7 @@ author: "SteveYi"
 draft: false
 ---
 
-[遠距工作與離線權：比較法觀點 Telework and the Right to Disconnect: Comparative Perspective](https://www.facebook.com/SCHOOLOFLAWNYCU/posts/pfbid02FFrrdwz47hxG1oVZepdosK3UnBfSKfuPjyz6X7ZQQKuaa1s8MEmfHXAW2EwCD3cjl)
-
-TSMC 的工程師要跑去其他國家ㄌ
-
-- 主講人：Associate Professor Panthip Pruksacholavit（泰國朱拉隆功大學法學院）
-- 主持人：陳鋕雄院長（陽明交大科法學院）
-- 與談人：邱羽凡老師（陽明交大科法所）
+> [遠距工作與離線權：比較法觀點 Telework and the Right to Disconnect: Comparative Perspective](https://www.facebook.com/SCHOOLOFLAWNYCU/posts/pfbid02FFrrdwz47hxG1oVZepdosK3UnBfSKfuPjyz6X7ZQQKuaa1s8MEmfHXAW2EwCD3cjl)
 
 ## 前言
 

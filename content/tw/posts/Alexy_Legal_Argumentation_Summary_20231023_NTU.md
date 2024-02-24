@@ -1,5 +1,5 @@
 ---
-title: 心得：法理學經典導讀 - "Theorie der juristischen Argumentation" 《法律論證理論》 @ NTU 2023-10-23
+title: 心得：法理學經典導讀 - "Theorie der juristischen Argumentation" 《法律論證理論》
 author: "SteveYi"
 categories: ["心得"]
 tags: ["法律"]
@@ -9,7 +9,7 @@ draft: false
 
 很高興可以聽到 [王鵬翔老師](https://www.iias.sinica.edu.tw/member_post/13) 及 [程源中老師](https://scholar.nycu.edu.tw/zh/persons/yuan-chung-cheng) 帶大家導讀 Alexy 的法律論證理論，老師們的導讀方式非常有趣，非法律背景的我也可以聽懂一部分。
 
-趁著記憶猶新，趕快將心得記下來。而我為了重新確認內容有沒有錯誤，我又把 [直播紀錄](https://www.youtube.com/live/AEK2WslyW4o?si=9FEryH-HsiTbBQIg) 看了一次，老師們講得真好呀～～
+趁著記憶猶新，趕快將心得記下來。而我為了重新確認內容有沒有錯誤，我又把 [直播紀錄](https://www.youtube.com/live/AEK2WslyW4o?si=9FEryH-HsiTbBQIg) 看了一次，老師們講得真好呀！
 
 [Facebook 活動資訊](https://www.facebook.com/100069939456320/posts/pfbid0W75fbJ6JqusHVgrmppgG34Kat1XrfSPWWVGMx45pQkm6CEf5kNAT2LnMCAtzx21dl/?mibextid=cr9u03)
 
