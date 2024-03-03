@@ -63,7 +63,7 @@ sudo sysctl -p
 
 ```
 sudo sed -i "s/=no/=yes/g" /etc/frr/daemons
-service frr restart
+sudo service frr restart
 ```
 
 ### 進入 FRRouting 互動 Cli
