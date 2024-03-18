@@ -72,9 +72,9 @@ params:
   env: production
   title: "SteveYi's Blog"
   description: "酷小易的部落格，記錄著生活美好事物。"
-  keywords: [Hugo, Blog, PaperMod]
-  author: SteveYi
-  images: ["/images/me.png"]
+  keywords: [Blog, Technologic, Networking, Program, Law, Travel]
+  author: steveyiyo
+  images: ["./images/banner.webp"]
   defaultTheme: auto
   disableThemeToggle: false
 
