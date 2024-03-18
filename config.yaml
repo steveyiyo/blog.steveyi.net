@@ -1,18 +1,19 @@
-languageCode: "tw"
-baseUrl: "https://blog.steveyi.net/"
+baseURL: "https://blog.steveyi.net/"
 title: "SteveYi's Blog"
+languageCode: "tw"
 theme: "PaperMod"
-paginate: 10
 googleAnalytics: "G-CPGWT2M3VT"
 enableRobotsTXT: true
 ShowWordCount: true
-
 defaultContentLanguage: tw
 
-markup:
-  goldmark:
-    renderer:
-      unsafe: true # enable raw HTML in Markdown
+permalinks:
+  post: "/posts/:filename/"
+  categories: "/categories/:slug/"
+
+author:
+  name: "SteveYi"
+  homepage: https://blog.steveyi.net
 
 languages:
   tw:
@@ -51,51 +52,47 @@ languages:
 menu:
   main:
   - identifier: Home Page
-    name: Home
-    title: Home Page
+    name: 首頁
     url: /
     weight: 5
   - identifier: posts
-    name: Posts
-    title: Posts
+    name: 文章列表
     url: /posts/
     weight: 10
   - identifier: about
-    name: About
-    title: 關於小易
+    name: 關於小易
     url: /about/
     weight: 15
   - identifier: twitter
     name: Twitter
-    title: Twitter
-    url: https://twitter.com/cool_small_yi
+    url: https://twitter.com/steveyiyo
     weight: 20
 
 params:
-  author: "SteveYi"
-  email: jackcooku@steveyi.net # used for microformats
-  avatar: "/images/me.png" # used for microformats
+  env: production
+  title: "SteveYi's Blog"
   description: "酷小易的部落格，記錄著生活美好事物。"
-  dateFormat: "2006-01-02"
-  paginationSinglePost: true
-  style: auto
-  readMore: true
-  disableSummary: true
-  copyCodeButton: true # true by default
-  rssAsSocialIcon: true
-  # utteranc.es support
-  utterancesRepo: "" # mandatory
-  utterancesTheme: "" # optional
-  utterancesIssue: "" # optional
-  utterancesLabel: "" # optional
-  social:
-  - id: github
-    name: steveyiyo
-  - id: twitter
-    name: steveyiyo
-  - id: instagram
-    name: steveyiyo
-  - id: facebook
-    name: steveyigame
-  - id: telegram
-    name: steveyi
+  keywords: [Hugo, Blog, PaperMod]
+  author: SteveYi
+  images: ["/images/me.png"]
+  defaultTheme: auto
+  disableThemeToggle: false
+
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+
+  assets:
+    favicon: "/images/me.png"
+    favicon16x16: "/images/me.png"
+    favicon32x32: "/images/me.png"
+    apple_touch_icon: "/images/me.png"
+    safari_pinned_tab: "/images/me.png"
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
