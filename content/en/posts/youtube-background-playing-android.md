@@ -1,13 +1,11 @@
 ---
 title: 'Enjoy background playback on Android devices without subscribing to Youtube Music Premium (works for Youtube too!)'
-author: "SteveYi"
 date: 2020-06-19T15:58:18+00:00
 draft: false
 tags: ["Android", "Life Hacks"]
-Author: 蘿蔔
+author: 蘿蔔
 ---
-
-This guide is primarily demonstrated on an Android phone, although the same method can be applied to Android tablets.  
+This guide is primarily demonstrated on an Android phone, although the same method can be applied to Android tablets.
 For iOS/iPadOS users, a similar method can be used [as described in this post](https://blog.steveyi.net/youtube-background-playing-ios).
 
 ### Let's get started
@@ -24,7 +22,7 @@ Once the music starts playing, you can go back to your home screen, lock your sc
 
 ![](https://static-a1.steveyi.net/media/blog/2020061915505855.png)
 
-That's it!  
+That's it!
 From now on, just open Youtube Music on Chrome and switch to desktop site to listen to music with background playback. This method also works for Youtube too!
 
 The author has tested this method on several brands of Android phones and has not encountered any issues.
