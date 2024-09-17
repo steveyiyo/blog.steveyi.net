@@ -4,13 +4,16 @@ author: "SteveYi"
 draft: false
 ---
 
-我是游宗易，大家都叫我小易，你也可以稱呼我為 SteveYi。
+<meta http-equiv="refresh" content="0; url=https://steveyi.net/"/>'
+
+<!-- 我是游宗易，大家都叫我小易，你也可以稱呼我為 SteveYi。
 
 目前興趣是網路治理研究、網際網路技術及虛擬化設計等等。我在網路治理領域深入參與不少活動，曾出席過多場國內外研討會，如：APNIC 54/56, ICANN APAC-TWNIC Engagement Forum, TWIGF 台灣網路治理論壇等。此外，我對有興趣的領域非常熱情，無論是公共政策還是資訊領域，每場活動我都會花很多時間深入參與，我也在許多研討會中擔任講者。
 
 我同時也對網路工程及公共政策很感興趣，最近正在積極參與法學相關活動，往法律領域發展，成為擁有科技能力的法律人。如果想與更近一步交流，歡迎透過電子郵件聯絡我。
 
-<!--
+===
+
 從小學時期就很喜歡虛擬化技術，最初在家裡的電腦上安裝 [Virtual Box](https://www.virtualbox.org/) 及 [VMware Workstation](https://www.vmware.com/products/workstation-pro.html) 程式來虛擬系統使用  
 目前則在伺服器上使用 [PVE](https://pve.proxmox.com/) 來進行虛擬化
 
@@ -44,7 +47,7 @@ PS. 歡迎參考相關的 L3 路由演講紀錄 - [演講](#演講)
 
 所以，在這個網站中，你會看到我的實驗筆記記錄以及心得分享或是一些意想不到的內容唷～
 
--->
+===
 
 ## AWARD
 
@@ -94,4 +97,4 @@ PS. 歡迎參考相關的 L3 路由演講紀錄 - [演講](#演講)
 
 ### 與我聯繫
 
-Email: [info [at] steveyi [dot] net](mailto:info@steveyi.net)
+Email: [info [at] steveyi [dot] net](mailto:info@steveyi.net) -->

@@ -36,18 +36,40 @@ languages:
       - identifier: about
         name: 關於小易
         title: 關於小易
-        url: /about/
+        url: https://steveyi.net/
         weight: 15
-      - identifier: twitter
-        name: Twitter
-        title: Twitter
-        url: https://twitter.com/steveyiyo
+      - identifier: x
+        name: X (Twitter)
+        title: X (Twitter)
+        url: https://x.com/steveyiyo
         weight: 20
   en:
     contentDir: content/en
     title: SteveYi's Blog
     weight: 1
     languageName: English
+    menu:
+      main:
+      - identifier: Home Page
+        name: Home Page
+        title: Home Page
+        url: /
+        weight: 5
+      - identifier: posts
+        name: Articles
+        title: Articles
+        url: /posts/
+        weight: 10
+      - identifier: about
+        name: About
+        title: About
+        url: https://steveyi.net/
+        weight: 15
+      - identifier: x
+        name: X (Twitter)
+        title: X (Twitter)
+        url: https://x.com/steveyiyo
+        weight: 20
 
 menu:
   main:
@@ -61,11 +83,11 @@ menu:
     weight: 10
   - identifier: about
     name: 關於小易
-    url: /about/
+    url: https://steveyi.net/
     weight: 15
-  - identifier: twitter
-    name: Twitter
-    url: https://twitter.com/steveyiyo
+  - identifier: x
+    name: X (Twitter)
+    url: https://x.com/steveyiyo
     weight: 20
 
 params:

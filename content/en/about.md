@@ -4,6 +4,9 @@ author: "SteveYi"
 draft: false
 ---
 
+<meta http-equiv="refresh" content="0; url=https://steveyi.net/"/>'
+
+<!-- 
 Hello! I'm Tsung-Yi Yu, widely recognized as SteveYi or "小易".
 
 At the heart of my professional journey lies a deep fascination with internet governance research, cutting-edge internet technologies, and virtualization design. Over the years, my dedication has led me to immerse myself in pivotal events both locally and globally. I've been privileged to attend, and in many cases present at, significant conferences including APNIC 54/56, the ICANN APAC-TWNIC Engagement Forum, and the Taiwan Internet Governance Forum (TWIGF).
@@ -14,7 +17,8 @@ In tandem with my technological pursuits, I've recently branched out into the le
 
 If my journey resonates with you or if you'd like to explore potential collaborations, don't hesitate to reach out via email. Looking forward to connecting!
 
-<!--
+===
+
 Happy to see you! Welcome to SteveYi's Blog.
 
 ### whoami
@@ -62,7 +66,8 @@ All of the posts are released by Creative Commons Taiwan, and The work is licens
 More details please see the [Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](http://creativecommons.org/licenses/by-sa/4.0/)
 
 ![](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png)
--->
+
+===
 
 ## AWARDS
 
@@ -112,4 +117,4 @@ More details please see the [Attribution-ShareAlike 4.0 International (CC BY-SA 
 
 ### Contact Me
 
-Email: [info [at] steveyi [dot] net](mailto:info@steveyi.net)
+Email: [info [at] steveyi [dot] net](mailto:info@steveyi.net) -->
