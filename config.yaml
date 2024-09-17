@@ -36,7 +36,7 @@ languages:
       - identifier: about
         name: 關於小易
         title: 關於小易
-        url: https://steveyi.net/
+        url: https://steveyi.net/zh-tw/
         weight: 15
       - identifier: x
         name: X (Twitter)
@@ -83,7 +83,7 @@ menu:
     weight: 10
   - identifier: about
     name: 關於小易
-    url: https://steveyi.net/
+    url: https://steveyi.net/zh-tw/
     weight: 15
   - identifier: x
     name: X (Twitter)
